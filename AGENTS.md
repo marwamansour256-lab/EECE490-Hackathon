@@ -7,7 +7,7 @@ Build the Stories Profit Planner described in README.md: actionable preparation 
 **Latest protocol:** the primary model is `src/strict_model.py` and prediction CLI `src/predict_strict.py`: first 90 dates train, last 91 test; only transaction CSV inputs; inner validation within training; final parameters and all learned shares/economics frozen at March 31. No test lags or external predictors. Read EVALUATION.md. Earlier rolling/Bayesian results are supplemental and must not be described as strict half/half results. The model, artifact and 16 tests are complete locally; GitHub code publication is separate from the authorized ongoing Markdown pushes.
 
 - Codex teammate owns src/strict_model.py, src/predict_strict.py and the saved artifact, plus src/demand_model.py, src/profit_policy.py, src/recommend.py, src/intraday_model.py, src/bayesian_policy.py, src/adaptive_recommend.py, tests and generated numerical results. Read MODEL_CARD.md for which results belong to each protocol.
-- Claude Code teammate 1 owns external evidence, geographic exposure verification and event/forecast provenance.
+- Claude Code teammate 1 (Omar Al-Aghbari, confirmed) owns external evidence, geographic exposure verification and event/forecast provenance.
 - Claude Code teammate 2 owns the presentation/demo interface and pilot logging built on the established data contracts.
 - These are collaboration boundaries, not permission to overwrite another person's uncommitted work. Coordinate contract changes. Do not launch agents or services just because this file describes multiple teammates.
 
