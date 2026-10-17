@@ -112,6 +112,10 @@ footer { color: var(--ink2); font-size: 12px; padding-top: 8px; padding-bottom: 
         <div><label for="branch">Branch</label><select id="branch"></select></div>
         <div><label for="daypart">Time of day</label><select id="daypart"></select></div>
         <div><label for="cohort">Customer group</label><select id="cohort"></select></div>
+        <div><label for="mode">Offer rule</label><select id="mode">
+          <option value="unrestricted">Unrestricted (evaluated)</option>
+          <option value="complementary" title="Food after drinks, drinks after food">Complementary (food ↔ drink)</option>
+        </select></div>
       </div>
       <h3>Current basket</h3>
       <div class="toolbar" style="margin-bottom:8px">
@@ -198,6 +202,7 @@ footer { color: var(--ink2); font-size: 12px; padding-top: 8px; padding-bottom: 
 <!-- Generated data (missing files are reported on the page) -->
 <script src="recommendation_data.js"></script>
 <script src="wejha_data.js"></script>
+<script src="preparation_data.js"></script>
 <script>
 "use strict";
 const $ = (id) => document.getElementById(id);
@@ -231,8 +236,21 @@ $("status").textContent = [REC && REC.status, LAY && LAY.status].filter(Boolean)
 // ---------- Recommender ----------
 let basket = [], unavailable = new Set(), lastTop = [];
 
+const DRINK_CATEGORIES = new Set(["Hot Coffee", "Cold Coffee", "Cold Drinks", "Matcha & Tea"]);
+/** GROWTH_INTEGRATION.md complementary rule (same as complementary_exclusions in src/basket_recommender.py):
+ *  if every basket item is a drink, exclude all drinks; if every item is food, exclude all food;
+ *  empty or mixed basket excludes nothing. A business rule, not a learned preference. */
+function complementaryExclusions(data, items) {
+  const cat = Object.fromEntries((data.products || []).map((p) => [p.product, p.category]));
+  const group = (c) => (DRINK_CATEGORIES.has(c) ? "drink" : "food");
+  const groups = new Set(items.filter((p) => p in cat).map((p) => group(cat[p])));
+  if (groups.size !== 1) return new Set();
+  const g = [...groups][0];
+  return new Set(Object.keys(cat).filter((p) => group(cat[p]) === g));
+}
+
 /** Exact frontend ranking from WEJHA_BUILD_PLAN.md. Returns {rows, key, ctx, notes}. */
-function recommend(data, branch, daypart, cohort, items, unavail, k = 3) {
+function recommend(data, branch, daypart, cohort, items, unavail, k = 3, mode = "unrestricted") {
   const notes = [];
   let key = `${branch}|${daypart}|${cohort}`;
   let ctx = data.contexts[key];
@@ -257,6 +275,11 @@ function recommend(data, branch, daypart, cohort, items, unavail, k = 3) {
     }
   }
   const exclude = new Set([...items, ...unavail]);
+  if (mode === "complementary") {
+    const ex = complementaryExclusions(data, items);
+    ex.forEach((p) => exclude.add(p));
+    if (ex.size) notes.push(`Complementary rule: only ${DRINK_CATEGORIES.has((data.products.find((p) => p.product === items[0]) || {}).category) ? "food" : "drinks"} offered after this basket.`);
+  }
   const best = new Map();
   for (const r of cand) {
     if (exclude.has(r.product)) continue;
@@ -275,13 +298,14 @@ function productsByCategory(data) {
 }
 
 function renderRec() {
-  const b = $("branch").value, d = $("daypart").value, c = $("cohort").value;
-  store("ctx", { b, d, c, basket, unavailable: [...unavailable] });
+  const b = $("branch").value, d = $("daypart").value, c = $("cohort").value, mode = $("mode").value;
+  store("ctx", { b, d, c, mode, basket, unavailable: [...unavailable] });
   $("basket").innerHTML = basket.length
     ? basket.map((p, i) => `<span class="chip">${esc(p)}<button data-rm="${i}" aria-label="Remove ${esc(p)}">×</button></span>`).join("")
     : `<span class="muted">Empty basket: the most popular items for this context are shown.</span>`;
   $("unavail-count").textContent = unavailable.size ? `(${unavailable.size} marked)` : "";
-  const res = recommend(REC, b, d, c, basket, unavailable);
+  const res = recommend(REC, b, d, c, basket, unavailable, 3, mode);
+  if (mode === "complementary") res.notes.push(`The published Hit@3 (${pct(((REC.evaluation.test || []).find((r) => r.method === REC.evaluation.selected_method && r.strength === REC.evaluation.selected_strength) || {}).hit_at_3)}) belongs to unrestricted ranking; the complementary rule has not been evaluated separately.`);
   lastTop = res.rows;
   const ctx = res.ctx;
   $("ctx-note").innerHTML = `Context <b>${esc(res.key)}</b>` + (ctx && typeof ctx.training_orders === "number" ? ` · ${ctx.training_orders.toLocaleString()} training orders` : "") +
@@ -301,7 +325,28 @@ function renderRec() {
         <dt>Unit margin (Jan–Mar)</dt><dd>${usd(r.unit_margin_usd)}</dd>
         <dt>Ranking score</dt><dd>${num(r.score, 3)}</dd>
       </dl>
+      ${prepBlock(b, r)}
     </div>`).join("") : `<p class="muted">No eligible product: everything is in the basket or marked unavailable.</p>`;
+}
+
+/** Preparation for a recommended food item (window.STORIES_PREPARATION, GROWTH_INTEGRATION.md). */
+function prepBlock(branch, r) {
+  const P = window.STORIES_PREPARATION;
+  const head = `<h3 style="margin-top:12px">Stock for this offer</h3>`;
+  if (DRINK_CATEGORIES.has(r.category)) return head + `<p class="muted">Drink, made to order: no batch to prepare.</p>`;
+  if (!P) return head + `<p class="muted">Preparation data not generated (<code>python src/growth_plan.py --export-preparation</code>).</p>`;
+  const card = (P.cards || {})[`${branch}|${r.product}`];
+  if (!card) return head + `<p class="muted">No committed preparation card for ${esc(r.product)} at ${esc(branch)}. That means no batch instruction, not zero demand.</p>`;
+  if (card.preparation_applicable === false) return head + `<p class="muted">${esc(card.note || "Not a batch-prepared item.")}${typeof card.forecast_mean_units === "number" ? ` Demand reference: ${num(card.forecast_mean_units, 1)} units.` : ""}</p>`;
+  const t = card.at16_topup_by_remaining_stock || {};
+  const a = card.assumptions || {};
+  return head + `<dl class="kv">
+      <dt>Forecast demand (${esc(card.date)})</dt><dd>${num(card.forecast_mean_units, 1)} units</dd>
+      <dt>Prepare at opening</dt><dd><b>${esc(card.opening_prepare_units)}</b></dd>
+      <dt>One-batch comparator</dt><dd>${esc(card.one_batch_comparator_units ?? "–")}</dd>
+    </dl>
+    <p class="muted" style="margin:6px 0 2px">At 16:00, left on shelf → prepare more: ${Object.keys(t).map(Number).sort((x, y) => x - y).map((k) => `${k}→${t[k]}`).join(" · ") || "–"}</p>
+    <p class="muted">${esc(card.status || P.status)} · trained through ${esc(card.trained_through)} · no offer uplift added to the forecast${a.instant_replenishment ? " · assumes instant replenishment" : ""}${a.capacity_unconstrained ? ", unconstrained capacity" : ""}.</p>`;
 }
 
 function renderUnavail() {
@@ -326,11 +371,24 @@ if (!REC) {
     if ((REC.branches || []).includes(s.b)) $("branch").value = s.b;
     if ((REC.dayparts || []).includes(s.d)) $("daypart").value = s.d;
     if ((REC.cohorts || []).includes(s.c)) $("cohort").value = s.c;
+    if (s.mode === "complementary" || s.mode === "unrestricted") $("mode").value = s.mode;
     const known = new Set((REC.products || []).map((p) => p.product));
     basket = (s.basket || []).filter((p) => known.has(p));
     unavailable = new Set((s.unavailable || []).filter((p) => known.has(p)));
   }
-  ["branch", "daypart", "cohort"].forEach((id) => $(id).addEventListener("change", renderRec));
+  // Shareable state: wejha.html?branch=Harbour&daypart=morning&cohort=all&mode=complementary&item=Espresso&unavailable=...
+  {
+    const q = new URLSearchParams(location.search);
+    const known = new Set((REC.products || []).map((p) => p.product));
+    const setIf = (id, val, allowed) => { if (val && allowed.includes(val)) $(id).value = val; };
+    setIf("branch", q.get("branch"), REC.branches || []);
+    setIf("daypart", q.get("daypart"), REC.dayparts || []);
+    setIf("cohort", q.get("cohort"), REC.cohorts || []);
+    setIf("mode", q.get("mode"), ["unrestricted", "complementary"]);
+    if (q.getAll("item").length) basket = q.getAll("item").filter((p) => known.has(p));
+    if (q.getAll("unavailable").length) unavailable = new Set(q.getAll("unavailable").filter((p) => known.has(p)));
+  }
+  ["branch", "daypart", "cohort", "mode"].forEach((id) => $(id).addEventListener("change", renderRec));
   $("add-btn").addEventListener("click", () => { const p = $("add-item").value; if (p && !basket.includes(p)) { basket.push(p); renderRec(); } });
   $("clear-btn").addEventListener("click", () => { basket = []; renderRec(); });
   $("basket").addEventListener("click", (e) => { const i = e.target.dataset.rm; if (i != null) { basket.splice(+i, 1); renderRec(); } });

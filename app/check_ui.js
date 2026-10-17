@@ -82,8 +82,8 @@ if (W) {
 
 console.log("3. Page ranking rule (function taken from wejha.html)");
 // \r?\n: Windows checkouts (core.autocrlf) store the page with CRLF line endings
-const src = inlineScript("wejha.html").match(/function recommend\([\s\S]*?\r?\n}\r?\n/);
-ok(!!src, "recommend() found in wejha.html");
+const src = inlineScript("wejha.html").match(/const DRINK_CATEGORIES[\s\S]*?function recommend\([\s\S]*?\r?\n}\r?\n/);
+ok(!!src, "recommend() and the complementary rule found in wejha.html");
 const recommend = src ? new Function(src[0] + ";return recommend;")() : null;
 const queries = [];
 if (R && recommend) {
@@ -112,14 +112,43 @@ if (R && recommend) {
   ok(missing.key === `${R.branches[0]}|all|all` && missing.notes.length > 0, "absent context falls back to branch|all|all and says so");
   const unk = recommend(R, R.branches[0], "all", "all", ["__not_a_product__"], new Set());
   ok(unk.notes.some((n) => n.includes("baseline")), "unknown anchor falls back to baseline and says so");
+  // Complementary rule: drink-only basket -> no drinks offered; food-only -> no food; mixed -> unrestricted
+  const DRINK = new Set(["Hot Coffee", "Cold Coffee", "Cold Drinks", "Matcha & Tea"]);
+  const cat = Object.fromEntries(R.products.map((p) => [p.product, p.category]));
+  const drink = R.products.find((p) => DRINK.has(p.category)).product;
+  const food = R.products.find((p) => !DRINK.has(p.category)).product;
+  let compBad = 0;
+  for (const b of R.branches) {
+    const d = recommend(R, b, "all", "all", [drink], new Set(), 3, "complementary").rows;
+    const f = recommend(R, b, "all", "all", [food], new Set(), 3, "complementary").rows;
+    const m1 = recommend(R, b, "all", "all", [drink, food], new Set(), 3, "complementary").rows.map((r) => r.product);
+    const m2 = recommend(R, b, "all", "all", [drink, food], new Set(), 3, "unrestricted").rows.map((r) => r.product);
+    if (d.some((r) => DRINK.has(cat[r.product])) || f.some((r) => !DRINK.has(cat[r.product])) || JSON.stringify(m1) !== JSON.stringify(m2)) compBad++;
+  }
+  ok(compBad === 0, "complementary: food after drinks, drinks after food, mixed basket unchanged");
+  for (const q of queries.filter((_, i) => i % 5 === 2).slice(0, 12)) {
+    q.mode = "complementary";
+    q.top = recommend(R, q.b, q.d, q.c, q.items, new Set(q.un), 3, "complementary").rows.map((r) => r.product);
+  }
+}
+const PREP = (loadWindowScript("preparation_data.js") || {}).STORIES_PREPARATION;
+if (PREP) {
+  const cards = Object.entries(PREP.cards || {});
+  ok(cards.length > 0, `preparation_data.js has ${cards.length} cards`);
+  ok(cards.every(([k, c]) => k === `${c.branch}|${c.product}`), "preparation cards keyed branch|product");
+  ok(cards.every(([, c]) => c.preparation_applicable === false ||
+    (typeof c.forecast_mean_units === "number" && Number.isInteger(c.opening_prepare_units) && typeof c.at16_topup_by_remaining_stock === "object")),
+    "applicable cards have forecast, opening units and a 16:00 top-up table");
+  ok(cards.every(([, c]) => c.recommendation_uplift_added_to_forecast === false), "no offer uplift added to any forecast");
 }
 
 if (process.argv.includes("--cli") && R && recommend) {
   console.log("4. Page top-3 vs Python CLI");
   const py = process.env.PYTHON || "python";
   let agree = 0, tried = 0;
-  for (const q of queries.filter((_, i) => i % 5 === 0).slice(0, 24)) {
+  for (const q of queries.filter((x, i) => i % 5 === 0 || x.mode).slice(0, 30)) {
     const args = ["-X", "utf8", path.join(ROOT, "src", "basket_recommender.py"), "recommend", "--branch", q.b, "--daypart", q.d, "--cohort", q.c];
+    if (q.mode) args.push("--mode", q.mode);
     q.items.forEach((it) => args.push("--item", it));
     q.un.forEach((it) => args.push("--unavailable", it));
     let out;
@@ -133,7 +162,7 @@ if (process.argv.includes("--cli") && R && recommend) {
     } catch { cliTop = null; }
     tried++;
     if (cliTop && JSON.stringify(cliTop) === JSON.stringify(q.top)) agree++;
-    else console.log(`       differs: ${q.b}|${q.d}|${q.c} [${q.items}] -x[${q.un}] page=${JSON.stringify(q.top)} cli=${cliTop ? JSON.stringify(cliTop) : out.slice(0, 160)}`);
+    else console.log(`       differs (${q.mode || "unrestricted"}): ${q.b}|${q.d}|${q.c} [${q.items}] -x[${q.un}] page=${JSON.stringify(q.top)} cli=${cliTop ? JSON.stringify(cliTop) : out.slice(0, 160)}`);
   }
   ok(tried > 0 && agree === tried, `page and CLI agree on ${agree}/${tried} baskets`);
 }
