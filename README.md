@@ -145,6 +145,7 @@ src/pitch_visuals.py                Original pitch charts, subject to the audit
 src/external_analysis.py            External-driver analysis
 src/demand_model.py                 Forecast comparison and validation
 reports/methodology_audit.txt       Corrections to original claims
+reports/recommendations.md          Business recommendations and next actions (teammate 1)
 output/pdf/deep_analysis_report.pdf New findings, model and business decision plan
 reports/external_evidence.json     External source registry
 reports/figures/                    Saved charts
