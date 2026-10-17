@@ -330,6 +330,7 @@ footer { max-width: 1080px; margin: 24px auto; padding: 0 16px 32px; color: var(
 <!-- Generated data files (optional: the page still works if they are missing) -->
 <script src="why_data.js"></script>
 <script src="day_data.js"></script>
+<script src="preparation_data.js"></script>
 <script src="evidence_data.js"></script>
 <script>
 "use strict";
@@ -359,7 +360,16 @@ const BUILTIN = [
     event_adjustment: "None: exposure and predictive value unverified"
   }
 ];
-let cards = BUILTIN.slice();
+BUILTIN[0]._label = "Example (original v1 model, AGENTS.md) · Harbour · Turkey & Cheese Sandwich · 2026-06-30";
+BUILTIN[1]._label = "Example (earlier seasonal planner, AGENTS.md) · Harbour · Turkey & Cheese Sandwich · 2026-06-30";
+// Generated preparation cards (app/preparation_data.js from src/growth_plan.py --export-preparation) come first.
+const GENERATED = window.STORIES_PREPARATION && window.STORIES_PREPARATION.cards
+  ? Object.values(window.STORIES_PREPARATION.cards)
+      .sort((a, b) => (a.branch + a.product).localeCompare(b.branch + b.product))
+      .map((c) => ({ ...c, _label: `${c.branch} · ${c.product} · ${c.date} · ${c.method || "model"}`,
+        _source: `app/preparation_data.js (generated): ${window.STORIES_PREPARATION.status}` }))
+  : [];
+let cards = GENERATED.concat(BUILTIN);
 let current = cards[0];
 
 const $ = (id) => document.getElementById(id);
@@ -437,7 +447,7 @@ $("card-file").addEventListener("change", async (e) => {
     const ok = data.filter((c) => c && typeof c === "object" && ("opening_prepare_units" in c || "forecast_mean_units" in c));
     if (!ok.length) throw new Error("no decision cards found (need opening_prepare_units or forecast_mean_units)");
     ok.forEach((c) => { c._source = `Loaded from ${f.name}`; if (typeof c.prepare_at16_units === "number" && c.remaining != null) c._remaining = Number(c.remaining); });
-    cards = ok.concat(BUILTIN);
+    cards = ok.concat(GENERATED, BUILTIN);
     fillSelect(); current = cards[0]; $("card-select").value = "0"; renderCard();
   } catch (err) { alert("Could not read cards: " + err.message); }
 });
