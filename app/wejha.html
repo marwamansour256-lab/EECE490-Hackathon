@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Basket Growth Lab</title>
+<!--
+  Stories Basket Growth + Wejha Lab (Claude Code teammate 2 / Marwa). See WEJHA_BUILD_PLAN.md.
+  Open directly in a browser: no server, no network calls.
+  Reads generated local scripts (owned by the Codex teammate):
+    app/recommendation_data.js -> window.STORIES_RECOMMENDATIONS  (python src/basket_recommender.py train)
+    app/wejha_data.js          -> window.STORIES_WEJHA            (python src/wejha_layout.py)
+  The page never fits or recomputes model weights. Ranking follows the "Exact frontend ranking" rule
+  of the build plan. If a file is missing, the page says so instead of showing example numbers.
+-->
+<style>
+:root {
+  --bg: #fcfcfb; --surface: #ffffff; --ink: #0b0b0b; --ink2: #52514e; --line: #e6e5e0;
+  --accent: #2a78d6; --accent-soft: #e5effb; --warn: #b4521b; --warn-soft: #fbeee4;
+  --ok: #1b8a5f; --ok-soft: #e3f4ec; --bad: #c43c3c; --hl: #fff2c2;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141413; --surface: #1d1d1b; --ink: #f2f1ec; --ink2: #b0aea6; --line: #33322f;
+    --accent: #6da7ec; --accent-soft: #1c2a3b; --warn: #f0a26b; --warn-soft: #3a2a1f;
+    --ok: #5fcf9c; --ok-soft: #1a3329; --bad: #f07a7a; --hl: #4a4020;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141413; --surface: #1d1d1b; --ink: #f2f1ec; --ink2: #b0aea6; --line: #33322f;
+  --accent: #6da7ec; --accent-soft: #1c2a3b; --warn: #f0a26b; --warn-soft: #3a2a1f;
+  --ok: #5fcf9c; --ok-soft: #1a3329; --bad: #f07a7a; --hl: #4a4020;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink);
+  font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+header, main, footer { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+header { padding-top: 24px; }
+h1 { font-size: 24px; margin: 0 0 4px; }
+h2 { font-size: 17px; margin: 0 0 12px; }
+h3 { font-size: 13px; margin: 14px 0 6px; color: var(--ink2); text-transform: uppercase; letter-spacing: .04em; }
+p { margin: 0 0 8px; }
+a { color: var(--accent); }
+.sub { color: var(--ink2); margin-bottom: 12px; }
+nav { display: flex; gap: 4px; border-bottom: 1px solid var(--line); margin-bottom: 20px; flex-wrap: wrap; }
+nav button { border: 0; background: none; color: var(--ink2); padding: 10px 14px; font: inherit; cursor: pointer; border-bottom: 2px solid transparent; }
+nav button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); font-weight: 600; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px; margin-bottom: 16px; }
+.banner { background: var(--warn-soft); color: var(--warn); border-radius: 8px; padding: 10px 14px; margin-bottom: 16px; font-weight: 600; }
+.pending { background: var(--accent-soft); border-radius: 8px; padding: 14px; }
+.grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.row { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); margin-bottom: 12px; }
+label { display: block; font-size: 13px; color: var(--ink2); margin-bottom: 4px; }
+select, input { width: 100%; font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 7px 9px; }
+.btn { border: 1px solid var(--accent); background: var(--accent); color: #fff; border-radius: 6px; padding: 7px 13px; font: inherit; cursor: pointer; }
+.btn.ghost { background: transparent; color: var(--accent); }
+.toolbar { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; min-height: 34px; align-items: center; }
+.chip { display: inline-flex; align-items: center; gap: 6px; background: var(--accent-soft); border-radius: 999px; padding: 3px 4px 3px 12px; font-size: 14px; }
+.chip button { border: 0; background: transparent; color: var(--ink2); cursor: pointer; font-size: 16px; line-height: 1; padding: 2px 6px; }
+.chip.off { background: var(--warn-soft); }
+.rec { border: 1px solid var(--line); border-radius: 8px; padding: 14px; }
+.rec .name { font-size: 18px; font-weight: 600; }
+.rec .reason { margin: 6px 0 10px; }
+.kv { display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; font-size: 13px; }
+.kv dt { color: var(--ink2); }
+.kv dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; }
+.pill { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 12px; background: var(--line); color: var(--ink2); }
+.pill.ok { background: var(--ok-soft); color: var(--ok); }
+.pill.no { background: var(--warn-soft); color: var(--warn); }
+.muted { color: var(--ink2); font-size: 13px; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--ink2); font-weight: 600; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+tr.sel td { background: var(--hl); }
+.scroll { overflow-x: auto; }
+.shelf { display: flex; gap: 4px; overflow-x: auto; padding: 6px 0 10px; }
+.slot { flex: 0 0 auto; min-width: 92px; max-width: 120px; border: 1px solid var(--line); border-radius: 6px; padding: 6px; font-size: 12px; background: var(--bg); }
+.slot .n { color: var(--ink2); font-size: 11px; }
+.slot.hl { background: var(--hl); border-color: var(--warn); font-weight: 600; }
+.big { font-size: 30px; font-weight: 700; }
+.hidden { display: none; }
+details summary { cursor: pointer; color: var(--accent); }
+.checks { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 2px 12px; margin-top: 8px; font-size: 14px; }
+.checks label { display: flex; gap: 6px; align-items: center; color: var(--ink); font-size: 14px; margin: 0; }
+.checks input { width: auto; }
+footer { color: var(--ink2); font-size: 12px; padding-top: 8px; padding-bottom: 32px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Stories Basket Growth &amp; Wejha Lab</h1>
+  <p class="sub">Which add-on to offer with the current order, how to display it, and how to measure whether it makes money. <a href="planner.html">← Back to the prep planner</a></p>
+  <nav role="tablist">
+    <button role="tab" data-tab="rec" aria-selected="true">1 · Add-on recommender</button>
+    <button role="tab" data-tab="layout" aria-selected="false">2 · Wejha layouts</button>
+    <button role="tab" data-tab="money" aria-selected="false">3 · Profit scenario</button>
+    <button role="tab" data-tab="eval" aria-selected="false">4 · Model evaluation</button>
+  </nav>
+</header>
+
+<main>
+<div class="banner" id="status">Historical model; prospective sales uplift unmeasured</div>
+
+<!-- ============ RECOMMENDER ============ -->
+<section id="tab-rec">
+  <div class="pending hidden" id="rec-pending"></div>
+  <div id="rec-ui">
+    <div class="card">
+      <div class="row">
+        <div><label for="branch">Branch</label><select id="branch"></select></div>
+        <div><label for="daypart">Time of day</label><select id="daypart"></select></div>
+        <div><label for="cohort">Customer group</label><select id="cohort"></select></div>
+      </div>
+      <h3>Current basket</h3>
+      <div class="toolbar" style="margin-bottom:8px">
+        <div style="flex:1;min-width:220px"><select id="add-item" aria-label="Product to add"></select></div>
+        <button class="btn" id="add-btn">Add to basket</button>
+        <button class="btn ghost" id="clear-btn">Clear basket</button>
+      </div>
+      <div class="chips" id="basket"></div>
+      <details style="margin-top:12px">
+        <summary>Mark items unavailable (sold out / not on display) <span id="unavail-count" class="muted"></span></summary>
+        <div style="margin-top:8px"><input id="unavail-filter" placeholder="Filter products"></div>
+        <div class="checks" id="unavail"></div>
+      </details>
+    </div>
+
+    <div class="card">
+      <h2>Offer one of these</h2>
+      <p class="muted" id="ctx-note"></p>
+      <div class="grid" id="recs"></div>
+      <p class="muted" style="margin-top:12px">Probabilities are smoothed historical basket frequencies from Jan–Mar ("of past orders with this item, how many also had that one"). They are not the chance a customer accepts an offer, and lift near 1 means the pair is mostly two popular items, not a special affinity. Unit margin is a Jan–Mar branch estimate before discounts, waste and labour. No automatic discount is applied.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LAYOUTS ============ -->
+<section id="tab-layout" class="hidden">
+  <div class="pending hidden" id="lay-pending"></div>
+  <div id="lay-ui">
+    <div class="card">
+      <h2>Display alternatives for the same products</h2>
+      <p class="muted">Each row is the display, left to right, with equal-width slots (a demo assumption, not measured geometry). Click a pair below to highlight both items in every layout. The pair-distance score describes potential exposure under the "separate frequently paired items" idea. It is not sales, customer movement or dollars. The random order is a reference, not Stories' current layout.</p>
+      <div id="layouts"></div>
+    </div>
+    <div class="card">
+      <h2>Pairs that drive the score</h2>
+      <div class="scroll"><table id="pairs"></table></div>
+    </div>
+    <div class="grid">
+      <div class="card"><h2>Assumptions</h2><div id="assumptions"></div></div>
+      <div class="card"><h2>Pilot</h2><div id="pilot"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MONEY ============ -->
+<section id="tab-money" class="hidden">
+  <div class="card">
+    <h2>Profit scenario (editable, not a forecast)</h2>
+    <p class="muted">Incremental acceptance is the difference versus a control group that gets no offer, not the observed acceptance rate or model accuracy. It is unknown until a pilot measures it, so it defaults to 0%.</p>
+    <div class="row">
+      <div><label for="m-orders">Eligible orders in the period</label><input id="m-orders" type="number" min="0" step="1" value="0"></div>
+      <div><label for="m-acc">Incremental acceptance (%)</label><input id="m-acc" type="number" min="0" max="100" step="0.1" value="0"></div>
+      <div><label for="m-margin">Add-on unit margin (USD)</label><input id="m-margin" type="number" min="0" step="0.01" value="0"></div>
+      <div><label for="m-disc">Discount per accepted add-on (USD)</label><input id="m-disc" type="number" min="0" step="0.01" value="0"></div>
+    </div>
+    <div class="row">
+      <div><label for="m-waste">Incremental waste (USD)</label><input id="m-waste" type="number" min="0" step="1" value="0"></div>
+      <div><label for="m-labor">Extra labour (USD)</label><input id="m-labor" type="number" min="0" step="1" value="0"></div>
+      <div><label for="m-impl">Implementation cost (USD)</label><input id="m-impl" type="number" min="0" step="1" value="0"></div>
+    </div>
+    <div class="toolbar"><button class="btn ghost" id="m-fill">Fill margin from the top recommendation</button><span class="muted" id="m-fill-note"></span></div>
+    <div class="grid" style="margin-top:14px">
+      <div><div class="muted">Incremental gross contribution</div><div class="big" id="m-out">$0</div></div>
+      <div><div class="muted">Break-even incremental acceptance</div><div class="big" id="m-be">–</div></div>
+    </div>
+    <p class="muted" style="margin-top:10px" id="m-formula"></p>
+    <p class="muted">Test recommendations and layout separately before adding their gains. Compare the model's offer with a simple popular-item offer, in randomized branch-day blocks balanced by branch and weekday (see WEJHA_PILOT.md, teammate 1).</p>
+  </div>
+</section>
+
+<!-- ============ EVALUATION ============ -->
+<section id="tab-eval" class="hidden">
+  <div class="card">
+    <h2>How the recommender was tested</h2>
+    <p class="muted">Trained on Jan 1–Mar 31 and evaluated on Apr 1–Jun 30 by hiding one item from multi-product orders and checking whether it is recovered (basket completion). This is not a test of whether an offer causes an extra purchase.</p>
+    <div id="eval"></div>
+  </div>
+</section>
+</main>
+<footer>Historical model outputs and editable scenarios only. Not a live recommendation service. Gross contribution is not net profit.</footer>
+
+<!-- Generated data (missing files are reported on the page) -->
+<script src="recommendation_data.js"></script>
+<script src="wejha_data.js"></script>
+<script>
+"use strict";
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const num = (v, d = 2) => (typeof v === "number" && isFinite(v) ? v.toFixed(d) : "–");
+const pct = (v, d = 1) => (typeof v === "number" && isFinite(v) ? (100 * v).toFixed(d) + "%" : "–");
+const usd = (v) => (typeof v === "number" && isFinite(v) ? (v < 0 ? "−$" : "$") + Math.abs(v).toLocaleString(undefined, { maximumFractionDigits: 2 }) : "–");
+function store(k, v) { try { localStorage.setItem("wejha_" + k, JSON.stringify(v)); } catch (e) {} }
+function load(k, d) { try { const v = localStorage.getItem("wejha_" + k); return v ? JSON.parse(v) : d; } catch (e) { return d; } }
+const pill = (s) => {
+  const t = String(s || "unknown");
+  const cls = /support|strong|valid|pass/i.test(t) && !/weak|not|insufficient|fallback/i.test(t) ? "ok" : "no";
+  return `<span class="pill ${cls}">${esc(t)}</span>`;
+};
+
+// ---------- Tabs ----------
+const TABS = ["rec", "layout", "money", "eval"];
+function showTab(t) {
+  document.querySelectorAll("nav button").forEach((b) => b.setAttribute("aria-selected", b.dataset.tab === t));
+  TABS.forEach((x) => $("tab-" + x).classList.toggle("hidden", x !== t));
+  store("tab", t);
+}
+document.querySelectorAll("nav button").forEach((b) => b.addEventListener("click", () => showTab(b.dataset.tab)));
+{ const h = location.hash.replace("#", ""); showTab(TABS.includes(h) ? h : load("tab", "rec")); }
+
+const REC = window.STORIES_RECOMMENDATIONS;
+const LAY = window.STORIES_WEJHA;
+$("status").textContent = [REC && REC.status, LAY && LAY.status].filter(Boolean).join(" · ") ||
+  "Model data not generated yet: nothing on this page is a result until the Codex files exist.";
+
+// ---------- Recommender ----------
+let basket = [], unavailable = new Set(), lastTop = [];
+
+/** Exact frontend ranking from WEJHA_BUILD_PLAN.md. Returns {rows, key, ctx, notes}. */
+function recommend(data, branch, daypart, cohort, items, unavail, k = 3) {
+  const notes = [];
+  let key = `${branch}|${daypart}|${cohort}`;
+  let ctx = data.contexts[key];
+  if (!ctx) {
+    notes.push(`No training context for ${key}; fell back to ${branch}|all|all.`);
+    key = `${branch}|all|all`;
+    ctx = data.contexts[key];
+  }
+  if (!ctx) return { rows: [], key, ctx: null, notes: notes.concat(`No context ${key} in the data.`) };
+  if (ctx.fallback) notes.push(`Context pooling: ${ctx.fallback}`);
+  let cand = [];
+  if (!items.length) {
+    cand = (ctx.baseline || []).map((r) => ({ ...r, _anchor: null }));
+  } else {
+    for (const it of items) {
+      const list = (ctx.by_anchor || {})[it];
+      if (list) cand.push(...list.map((r) => ({ ...r, _anchor: it })));
+      else {
+        notes.push(`${it}: no pair evidence in this context; baseline used for it.`);
+        cand.push(...(ctx.baseline || []).map((r) => ({ ...r, _anchor: null, _anchorFallback: it })));
+      }
+    }
+  }
+  const exclude = new Set([...items, ...unavail]);
+  const best = new Map();
+  for (const r of cand) {
+    if (exclude.has(r.product)) continue;
+    const cur = best.get(r.product);
+    if (!cur || r.score > cur.score) best.set(r.product, r);
+  }
+  const rows = [...best.values()].sort((a, b) => (b.score - a.score) || String(a.product).localeCompare(String(b.product))).slice(0, k);
+  return { rows, key, ctx, notes };
+}
+
+function productsByCategory(data) {
+  const by = {};
+  (data.products || []).forEach((p) => { (by[p.category || "Other"] ||= []).push(p.product); });
+  Object.values(by).forEach((l) => l.sort());
+  return Object.keys(by).sort().map((c) => [c, by[c]]);
+}
+
+function renderRec() {
+  const b = $("branch").value, d = $("daypart").value, c = $("cohort").value;
+  store("ctx", { b, d, c, basket, unavailable: [...unavailable] });
+  $("basket").innerHTML = basket.length
+    ? basket.map((p, i) => `<span class="chip">${esc(p)}<button data-rm="${i}" aria-label="Remove ${esc(p)}">×</button></span>`).join("")
+    : `<span class="muted">Empty basket: the most popular items for this context are shown.</span>`;
+  $("unavail-count").textContent = unavailable.size ? `(${unavailable.size} marked)` : "";
+  const res = recommend(REC, b, d, c, basket, unavailable);
+  lastTop = res.rows;
+  const ctx = res.ctx;
+  $("ctx-note").innerHTML = `Context <b>${esc(res.key)}</b>` + (ctx && typeof ctx.training_orders === "number" ? ` · ${ctx.training_orders.toLocaleString()} training orders` : "") +
+    (res.notes.length ? `<br>${res.notes.map(esc).join("<br>")}` : "") +
+    (res.rows.length && res.rows.length < 3 ? `<br>Only ${res.rows.length} eligible candidate${res.rows.length === 1 ? "" : "s"} in the pair evidence for this basket; the rule does not pad with unrelated items.` : "");
+  $("recs").innerHTML = res.rows.length ? res.rows.map((r, i) => `
+    <div class="rec">
+      <div class="muted">#${i + 1} · ${esc(r.category)}</div>
+      <div class="name">${esc(r.product)}</div>
+      <div class="reason">${esc(r.reason)}</div>
+      <div style="margin-bottom:8px">${pill(r.evidence_status)} ${r._anchor ? `<span class="pill">with ${esc(r._anchor)}</span>` : r._anchorFallback ? `<span class="pill no">baseline (no pair data for ${esc(r._anchorFallback)})</span>` : `<span class="pill">popularity baseline</span>`}</div>
+      <dl class="kv">
+        <dt>${r._anchor ? `Also bought, in orders with ${esc(r._anchor)}` : "Share of orders containing it"}</dt><dd>${pct(r.conditional_probability)}</dd>
+        <dt>Bought in any order (baseline)</dt><dd>${pct(r.baseline_probability)}</dd>
+        <dt>Lift</dt><dd>${num(r.lift)}</dd>
+        <dt>Support (pair / anchor orders)</dt><dd>${r.pair_orders ?? "–"} / ${r.anchor_orders ?? "–"}</dd>
+        <dt>Unit margin (Jan–Mar)</dt><dd>${usd(r.unit_margin_usd)}</dd>
+        <dt>Ranking score</dt><dd>${num(r.score, 3)}</dd>
+      </dl>
+    </div>`).join("") : `<p class="muted">No eligible product: everything is in the basket or marked unavailable.</p>`;
+}
+
+function renderUnavail() {
+  const f = $("unavail-filter").value.toLowerCase();
+  $("unavail").innerHTML = productsByCategory(REC).map(([cat, list]) => list.filter((p) => !f || p.toLowerCase().includes(f) || cat.toLowerCase().includes(f))
+    .map((p) => `<label><input type="checkbox" data-un="${esc(p)}" ${unavailable.has(p) ? "checked" : ""}> ${esc(p)} <span class="muted">· ${esc(cat)}</span></label>`).join("")).join("");
+}
+
+if (!REC) {
+  $("rec-ui").classList.add("hidden");
+  $("rec-pending").classList.remove("hidden");
+  $("rec-pending").innerHTML = `<b>Recommendation data not generated yet.</b> The Codex teammate's <code>python src/basket_recommender.py train</code> writes <code>app/recommendation_data.js</code>. Reload this page after it exists. No example recommendations are shown in the meantime.`;
+} else {
+  if (REC.schema_version !== 1) $("status").textContent += ` · Warning: schema_version ${REC.schema_version} (page built for 1).`;
+  const opt = (l) => l.map((x) => `<option value="${esc(x)}">${esc(x)}</option>`).join("");
+  $("branch").innerHTML = opt(REC.branches || []);
+  $("daypart").innerHTML = opt(REC.dayparts || ["all"]);
+  $("cohort").innerHTML = opt(REC.cohorts || ["all"]);
+  $("add-item").innerHTML = productsByCategory(REC).map(([cat, list]) => `<optgroup label="${esc(cat)}">${opt(list)}</optgroup>`).join("");
+  const s = load("ctx", null);
+  if (s) {
+    if ((REC.branches || []).includes(s.b)) $("branch").value = s.b;
+    if ((REC.dayparts || []).includes(s.d)) $("daypart").value = s.d;
+    if ((REC.cohorts || []).includes(s.c)) $("cohort").value = s.c;
+    const known = new Set((REC.products || []).map((p) => p.product));
+    basket = (s.basket || []).filter((p) => known.has(p));
+    unavailable = new Set((s.unavailable || []).filter((p) => known.has(p)));
+  }
+  ["branch", "daypart", "cohort"].forEach((id) => $(id).addEventListener("change", renderRec));
+  $("add-btn").addEventListener("click", () => { const p = $("add-item").value; if (p && !basket.includes(p)) { basket.push(p); renderRec(); } });
+  $("clear-btn").addEventListener("click", () => { basket = []; renderRec(); });
+  $("basket").addEventListener("click", (e) => { const i = e.target.dataset.rm; if (i != null) { basket.splice(+i, 1); renderRec(); } });
+  $("unavail").addEventListener("change", (e) => { const p = e.target.dataset.un; if (p) { e.target.checked ? unavailable.add(p) : unavailable.delete(p); renderRec(); } });
+  $("unavail-filter").addEventListener("input", renderUnavail);
+  renderUnavail();
+  renderRec();
+}
+
+// ---------- Layouts ----------
+let selectedPair = null;
+function renderLayouts() {
+  const hl = new Set(selectedPair ? [selectedPair.item_a, selectedPair.item_b] : []);
+  $("layouts").innerHTML = (LAY.layouts || []).map((L) => {
+    const slots = L.slots || [];
+    let gap = "";
+    if (selectedPair) {
+      const a = slots.indexOf(selectedPair.item_a), b = slots.indexOf(selectedPair.item_b);
+      if (a >= 0 && b >= 0) gap = ` · selected pair is ${Math.abs(a - b)} slot${Math.abs(a - b) === 1 ? "" : "s"} apart (${pct(slots.length > 1 ? Math.abs(a - b) / (slots.length - 1) : 0, 0)} of the display)`;
+    }
+    return `<h3>${esc(L.name)} · weighted pair distance ${num(L.weighted_pair_distance, 3)}${esc(gap)}</h3>
+      <div class="shelf">${slots.map((p, i) => `<div class="slot${hl.has(p) ? " hl" : ""}"><div class="n">${i + 1}</div>${esc(p)}</div>`).join("")}</div>
+      <p class="muted">${esc(L.interpretation)}</p>`;
+  }).join("") || `<p class="muted">No layouts in the data.</p>`;
+  const P = (LAY.pairs || []).slice().sort((x, y) => (y.weight ?? 0) - (x.weight ?? 0));
+  $("pairs").innerHTML = "<tr><th>Item A</th><th>Item B</th><th class='num'>Orders with both (Jan–Mar)</th><th class='num'>Lift</th><th class='num'>Weight</th><th>Evidence</th></tr>" +
+    P.map((p, i) => `<tr data-pair="${i}" style="cursor:pointer" class="${selectedPair === p ? "sel" : ""}"><td>${esc(p.item_a)}</td><td>${esc(p.item_b)}</td><td class="num">${p.pair_orders ?? "–"}</td><td class="num">${num(p.lift)}</td><td class="num">${num(p.weight, 3)}</td><td>${pill(p.evidence_status)}</td></tr>`).join("");
+  $("pairs").onclick = (e) => { const tr = e.target.closest("tr[data-pair]"); if (!tr) return; const p = P[+tr.dataset.pair]; selectedPair = selectedPair === p ? null : p; renderLayouts(); };
+}
+function renderObj(o) {
+  if (o == null) return `<p class="muted">Not provided.</p>`;
+  if (Array.isArray(o)) return `<ul>${o.map((x) => `<li>${typeof x === "object" ? renderObj(x) : esc(x)}</li>`).join("")}</ul>`;
+  if (typeof o === "object") return `<table>${Object.entries(o).map(([k, v]) => `<tr><td class="muted">${esc(k.replace(/_/g, " "))}</td><td>${typeof v === "object" && v !== null ? renderObj(v) : typeof v === "number" ? esc(Number.isInteger(v) ? v : v.toFixed(4)) : esc(v)}</td></tr>`).join("")}</table>`;
+  return `<p>${esc(o)}</p>`;
+}
+if (!LAY) {
+  $("lay-ui").classList.add("hidden");
+  $("lay-pending").classList.remove("hidden");
+  $("lay-pending").innerHTML = `<b>Layout comparison not generated yet.</b> The Codex teammate's <code>python src/wejha_layout.py</code> writes <code>app/wejha_data.js</code>. No example layout is shown in the meantime.`;
+} else {
+  renderLayouts();
+  $("assumptions").innerHTML = renderObj(LAY.assumptions);
+  $("pilot").innerHTML = renderObj(LAY.pilot);
+}
+
+// ---------- Profit scenario ----------
+const MF = ["m-orders", "m-acc", "m-margin", "m-disc", "m-waste", "m-labor", "m-impl"];
+function v(id) { const x = parseFloat($(id).value); return isFinite(x) ? x : 0; }
+function renderMoney() {
+  const n = v("m-orders"), a = v("m-acc") / 100, m = v("m-margin"), d = v("m-disc"), w = v("m-waste"), l = v("m-labor"), im = v("m-impl");
+  const accepted = n * a;
+  const out = accepted * m - accepted * d - w - l - im;
+  $("m-out").textContent = usd(out);
+  const per = n * (m - d);
+  $("m-be").textContent = per > 0 ? pct((w + l + im) / per, 2) : "–";
+  $("m-formula").textContent = `${n.toLocaleString()} eligible orders × ${pct(a, 2)} incremental acceptance = ${accepted.toFixed(1)} extra add-ons; × (${usd(m)} margin − ${usd(d)} discount) − ${usd(w)} waste − ${usd(l)} labour − ${usd(im)} implementation = ${usd(out)}.`;
+  store("money", MF.map((id) => $(id).value));
+}
+{ const s = load("money", null); if (s) MF.forEach((id, i) => { if (s[i] != null) $(id).value = s[i]; }); }
+MF.forEach((id) => $(id).addEventListener("input", renderMoney));
+$("m-fill").addEventListener("click", () => {
+  const r = lastTop[0];
+  if (!r || typeof r.unit_margin_usd !== "number") { $("m-fill-note").textContent = "No recommendation with a unit margin is available yet."; return; }
+  $("m-margin").value = r.unit_margin_usd.toFixed(2);
+  $("m-fill-note").textContent = `${r.product}: Jan–Mar unit margin at ${$("branch").value}.`;
+  renderMoney();
+});
+renderMoney();
+
+// ---------- Evaluation ----------
+$("eval").innerHTML = REC && REC.evaluation && Object.keys(REC.evaluation).length
+  ? `<p class="muted">Selected method: <b>${esc(REC.selected_method)}</b> · trained through ${esc(REC.trained_through)}</p>` + renderObj(REC.evaluation)
+  : `<div class="pending"><b>Evaluation pending.</b> Metrics appear here when the Codex teammate's training run writes them (Hit@3, reciprocal rank and recovered gross margin, against popularity baselines). Nothing is filled in by hand.</div>`;
+</script>
+</body>
+</html>

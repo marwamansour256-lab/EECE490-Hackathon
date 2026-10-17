@@ -793,7 +793,7 @@
     "holiday_source": "notebooks/03_holidays.ipynb HOLIDAYS list",
     "event_list": "data/external/external_events.json (teammate 1), events: WAR-2026-04-08-STRIKES, CEASEFIRE-2026-04-17, AUB-COMMENCEMENT-2026-06-05, DST-2026-03-29, HOLIDAY-EID-AL-FITR-2026-GOV-CLOSURE",
     "quick_mode": false,
-    "numpy": "2.5.1",
-    "pandas": "3.0.3"
+    "numpy": "2.5.4",
+    "pandas": "3.0.6"
   }
 }

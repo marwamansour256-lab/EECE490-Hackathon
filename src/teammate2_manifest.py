@@ -38,9 +38,19 @@ INPUTS = ["data/stories_transactions.csv", "data/external/beirut_weather_2026H1.
 STATIC = ["app/planner.html", "src/pilot_report.py", "data/pilot/pilot_log_template.csv"]
 
 
+TEXT = {".csv", ".json", ".js", ".py", ".md", ".html", ".txt"}
+
+
 def sha(path):
+    """SHA-256 of the file; text files are hashed with LF line endings so the value does not
+    depend on git's autocrlf setting (Windows checkouts use CRLF)."""
     p = ROOT / path
-    return hashlib.sha256(p.read_bytes()).hexdigest() if p.exists() else None
+    if not p.exists():
+        return None
+    data = p.read_bytes()
+    if p.suffix in TEXT:
+        data = data.replace(b"\r\n", b"\n")
+    return hashlib.sha256(data).hexdigest()
 
 
 def version(mod):
