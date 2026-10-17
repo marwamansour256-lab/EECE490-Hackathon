@@ -117,12 +117,13 @@ External sources are cached and cited. The pipeline does not require querying li
 
 ### Demo interface and pilot log (Claude Code teammate 2, Marwa)
 
-`app/planner.html` is a single offline page. Open it in a browser; it needs no server or network. It has four tabs:
+`app/planner.html` is a single offline page. Open it in a browser; it needs no server or network. It has five tabs. Open `app/planner.html#day` (or `#why`, `#plan`, `#evidence`, `#pilot`) to start on a given tab.
 
 1. **Why:** the driver breakdowns from `src/why_drivers.py` (see "Why the numbers move" below), read from the generated `app/why_data.js`.
-2. **Today's plan:** the decision card's forecast, opening quantity, a remaining-at-16:00 input that returns the top-up quantity, the full lookup table, cost assumptions, event-adjustment status and a permanent "historical replay" banner. Its only built-in cards are the two checked examples quoted in AGENTS.md. Load `reports/decision_cards.json` or a JSON printed by `src/predict_strict.py` / `src/recommend.py` with **Load cards**. If a remaining-stock value is not in the card, the page shows the CLI command to run instead of guessing.
-3. **Evidence:** the held-out outside-factor results, read from the generated `app/evidence_data.js` (or load `reports/external_factor_test.json`). It also explains why outside events are review alerts, not forecast inputs.
-4. **Pilot log:** one row per branch, product and day, covering arm (planner / current / shadow), recommended vs actually prepared, remaining at 16:00, top-up, sold, left at close, sell-out time, price, cost and override reason. Rows stay in the browser until exported as CSV (schema: `data/pilot/pilot_log_template.csv`). The page shows waste %, sell-out rate, overrides and contribution per item-day by arm.
+2. **Day explorer:** pick any date from Jan 1 to Jun 30 and a branch (or all branches). The tab shows the day's orders against the frozen Jan-Mar model's expectation, with a Poisson z-score. It shows a traffic/basket/margin waterfall: a symmetric 3-factor Shapley split of gross profit against a reference built from expected orders and the Mar 4-31 basket and profit per item, which is accounting, not a cause. It also shows the day's time-of-day mix against the training mix for that weekday, observed weather at the three candidate locations, and events active that day with their verification status, branch exposure and source (from `data/external/external_events.json`, the holiday list and Ramadan). It ends with the ten most unusual days, alongside how many would be expected by chance (7 of 181 network days reach |z| ≥ 2, against about 8 expected). This is the interface task requested in EXTERNAL_CONTEXT.md. The data come from the **interim** `src/day_ledger.py` → `app/day_data.js` (and `reports/day_ledger.csv`), because the Codex daily dossiers are not yet published. Swap in their export once it is available; for June 24 the traffic part agrees closely (−$202 here vs −$200.22 in EXTERNAL_CONTEXT.md). Issued forecasts (the forecast-vs-observed comparison) need the Codex context cache and are not shown yet.
+3. **Today's plan:** the decision card's forecast, opening quantity, a remaining-at-16:00 input that returns the top-up quantity, the full lookup table, cost assumptions, event-adjustment status and a permanent "historical replay" banner. Its only built-in cards are the two checked examples quoted in AGENTS.md. Load `reports/decision_cards.json` or a JSON printed by `src/predict_strict.py` / `src/recommend.py` with **Load cards**. If a remaining-stock value is not in the card, the page shows the CLI command to run instead of guessing.
+4. **Evidence:** the held-out outside-factor results, read from the generated `app/evidence_data.js` (or load `reports/external_factor_test.json`). It also explains why outside events are review alerts, not forecast inputs.
+5. **Pilot log:** one row per branch, product and day, covering arm (planner / current / shadow), recommended vs actually prepared, remaining at 16:00, top-up, sold, left at close, sell-out time, price, cost and override reason. Rows stay in the browser until exported as CSV (schema: `data/pilot/pilot_log_template.csv`). The page shows waste %, sell-out rate, overrides and contribution per item-day by arm.
 
 `python src/pilot_report.py <exported.csv> [--json out.json]` produces the same summary. It adds planner-minus-current contribution per item-day with a 95% bootstrap interval over whole branch-days, and flags results with fewer than 20 branch-days per arm as not decision-grade. Unmet demand is not observed in a pilot, so service is reported as sell-out rate and time, never as a fill rate.
 
@@ -163,8 +164,8 @@ data/
   pilot/pilot_log_template.csv        Column schema for pilot logging (app/planner.html, src/pilot_report.py)
 
 app/
-  planner.html                        Offline demo: why, today's plan, 16:00 top-up, evidence, pilot log (teammate 2)
-  why_data.js / evidence_data.js      Generated by why_drivers.py / external_factor_test.py; do not edit
+  planner.html                        Offline demo: why, day explorer, today's plan, 16:00 top-up, evidence, pilot log (teammate 2)
+  why_data.js / evidence_data.js / day_data.js   Generated by why_drivers.py / external_factor_test.py / day_ledger.py; do not edit
 
 notebooks/
   README.md                           Index of notebooks 01-08 with status and caveats
@@ -180,6 +181,8 @@ src/
   why_drivers.py                      Why profit grows, why Garden earns less, why daily sales move, what Tuesday is
   correlation_scan.py                 Every pairwise association, measured in both halves, with shuffle tests
   metric_reconciliation.py            One definition per disputed number, every variant recomputed (teammate 2)
+  day_ledger.py                       Interim per-day, per-branch ledger for the Day explorer (teammate 2)
+  teammate2_manifest.py               Rebuilds teammate 2 outputs; writes versions and SHA-256 hashes to reports/teammate2_manifest.json
   external_analysis.py, demand_model.py, strict_model.py, ...   Model and analysis code (pending)
 
 reports/

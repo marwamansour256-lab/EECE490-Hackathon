@@ -84,6 +84,7 @@ tr.hit td { background: var(--accent-soft); font-weight: 600; }
 .bar.hot { background: var(--warn); }
 .bar-val { position: absolute; top: 2px; font-size: 12px; color: var(--ink2); white-space: nowrap; }
 .lead { font-size: 17px; }
+a { color: var(--accent); }
 footer { max-width: 1080px; margin: 24px auto; padding: 0 16px 32px; color: var(--ink2); font-size: 12px; }
 </style>
 </head>
@@ -93,9 +94,10 @@ footer { max-width: 1080px; margin: 24px auto; padding: 0 16px 32px; color: var(
   <p class="sub">How much of each fresh item to prepare at opening, and how much more to make at 16:00 based on what is left.</p>
   <nav role="tablist">
     <button role="tab" data-tab="why" aria-selected="true">1 · Why</button>
-    <button role="tab" data-tab="plan" aria-selected="false">2 · Today's plan</button>
-    <button role="tab" data-tab="evidence" aria-selected="false">3 · Evidence</button>
-    <button role="tab" data-tab="pilot" aria-selected="false">4 · Pilot log</button>
+    <button role="tab" data-tab="day" aria-selected="false">2 · Day explorer</button>
+    <button role="tab" data-tab="plan" aria-selected="false">3 · Today's plan</button>
+    <button role="tab" data-tab="evidence" aria-selected="false">4 · Evidence</button>
+    <button role="tab" data-tab="pilot" aria-selected="false">5 · Pilot log</button>
   </nav>
 </header>
 
@@ -119,7 +121,7 @@ footer { max-width: 1080px; margin: 24px auto; padding: 0 16px 32px; color: var(
     <h2>Why do daily sales go up and down?</h2>
     <p id="why-daily-lead"></p>
     <div id="why-daily"></div>
-    <p class="muted">Each model is fitted on Jan–Mar and scored on Apr–Jun, which it never saw. The ceiling is the most any model can explain, because individual customers arrive at random even when the expected rate is known. The gap between the last step and the ceiling is all the room left for weather, events or anything else.</p>
+    <p class="muted">Each model is fitted on Jan–Mar and scored on Apr–Jun, which it never saw. The ceiling assumes customers arrive at random around the expected rate (Poisson). It is a benchmark for daily order counts, not an absolute limit. Outside factors can still change other outcomes, such as the time of day or product mix (see EXTERNAL_CONTEXT.md).</p>
   </div>
   <div class="card">
     <h2>What is different about Tuesday?</h2>
@@ -128,6 +130,56 @@ footer { max-width: 1080px; margin: 24px auto; padding: 0 16px 32px; color: var(
     <p class="muted">The data cannot name the cause. A uniform lift points to something chain-wide (a calendar pattern, a standing offer, operations or how sales are recorded) rather than a type of customer or product. Ask Stories, then try to copy it on Saturdays (about 0.7× a normal weekday).</p>
   </div>
   <p class="muted">Source: <code>src/why_drivers.py</code> → <code>app/why_data.js</code>, <code>reports/why_drivers.json</code>. These are accounting breakdowns and held-out fits, not causal effects.</p>
+</section>
+
+<!-- ============ DAY EXPLORER ============ -->
+<section id="tab-day" class="hidden">
+  <div class="banner" id="day-banner">Historical record</div>
+  <div class="card">
+    <div class="row">
+      <div><label for="day-date">Date</label><input type="date" id="day-date" min="2026-01-01" max="2026-06-30" value="2026-06-24"></div>
+      <div><label for="day-branch">Branch</label><select id="day-branch"><option>All branches</option><option>Garden</option><option>Harbour</option><option>Uptown</option></select></div>
+      <div><label>&nbsp;</label><div class="toolbar"><button class="btn ghost" id="day-prev">← Previous day</button><button class="btn ghost" id="day-next">Next day →</button></div></div>
+    </div>
+    <p class="muted" id="day-source"></p>
+  </div>
+
+  <div class="grid">
+    <div class="card"><div class="label">Orders vs expected</div><div class="kpi" id="d-orders">–</div><div class="muted" id="d-orders-note"></div></div>
+    <div class="card"><div class="label">Recorded gross profit vs reference</div><div class="kpi" id="d-gp">–</div><div class="muted" id="d-gp-note"></div></div>
+    <div class="card"><div class="label">Unexplained demand</div><div class="kpi" id="d-unexp">–</div><div class="muted" id="d-unexp-note"></div></div>
+  </div>
+
+  <div class="card">
+    <h2>Where the profit gap comes from</h2>
+    <div id="d-bridge"></div>
+    <p class="muted">Gross profit = orders × items per order × gross profit per item. The gap from the reference is split exactly into these three parts (a Shapley split, which doesn't depend on order). This is accounting, not proof of a cause. Reference: orders expected by the model trained on Jan–Mar; basket and profit per item from Mar 4–31.</p>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>When people bought (menu timing)</h2>
+      <div id="d-timing"></div>
+      <p class="muted">Share of the day's orders by time of day (dark), against the training-period share for this branch and weekday (light).</p>
+    </div>
+    <div class="card">
+      <h2>Weather that day</h2>
+      <div class="scroll"><table id="d-weather"></table></div>
+      <p class="muted">Observed weather (Open-Meteo), not the forecast staff would have seen that morning. Branch locations are unverified, so all three candidate locations are shown. Issued forecasts are in the Codex context cache, which is not yet in the repo.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Events and their evidence status</h2>
+    <div id="d-events"></div>
+    <p class="muted">From teammate 1's event list (<code>data/external/external_events.json</code>), the holiday list and Ramadan. An event happening on a day doesn't show that it moved sales; branch exposure is unknown until Stories confirms branch locations.</p>
+  </div>
+
+  <div class="card">
+    <h2>Most unusual days for this branch</h2>
+    <div class="scroll"><table id="d-top"></table></div>
+    <p class="muted" id="d-top-note"></p>
+  </div>
 </section>
 
 <!-- ============ PLAN ============ -->
@@ -277,6 +329,7 @@ footer { max-width: 1080px; margin: 24px auto; padding: 0 16px 32px; color: var(
 
 <!-- Generated data files (optional: the page still works if they are missing) -->
 <script src="why_data.js"></script>
+<script src="day_data.js"></script>
 <script src="evidence_data.js"></script>
 <script>
 "use strict";
@@ -320,10 +373,10 @@ function load(key, dflt) { try { const v = localStorage.getItem(key); return v ?
 // ---------- Tabs ----------
 document.querySelectorAll("nav button").forEach((b) => b.addEventListener("click", () => {
   document.querySelectorAll("nav button").forEach((x) => x.setAttribute("aria-selected", x === b));
-  ["why", "plan", "evidence", "pilot"].forEach((t) => $("tab-" + t).classList.toggle("hidden", t !== b.dataset.tab));
+  ["why", "day", "plan", "evidence", "pilot"].forEach((t) => $("tab-" + t).classList.toggle("hidden", t !== b.dataset.tab));
   store("tab", b.dataset.tab);
 }));
-{ const t = load("tab", "why"); const btn = document.querySelector(`nav button[data-tab="${t}"]`); if (btn) btn.click(); }
+{ const h = location.hash.replace("#", ""); const t = ["why", "day", "plan", "evidence", "pilot"].includes(h) ? h : load("tab", "why"); const btn = document.querySelector(`nav button[data-tab="${t}"]`); if (btn) btn.click(); }
 
 // ---------- Cards ----------
 function cardLabel(c, i) {
@@ -442,7 +495,7 @@ function renderWhy(W) {
     { label: "Different product mix", a: -G.mix_effect_pts, fmt: pts },
     { label: "Total gap", a: -G.gap_pts, fmt: pts }], -G.gap_pts * 1.25);
   const D = W.daily_variation["Jan-Mar -> Apr-Jun"], last = D.steps[D.steps.length - 1];
-  $("why-daily-lead").innerHTML = `<span class="lead">On months it never saw, branch + growth + weekday explain <b>${pct(last.heldout_r2, 1)}</b> of daily ups and downs. The most any model could explain is <b>${pct(D.ceiling_r2_if_rest_is_noise, 1)}</b>, which leaves under <b>${pct(D.room_left_for_other_factors_r2 + 0.005, 0)}</b> for weather, events or anything else.</span>`;
+  $("why-daily-lead").innerHTML = `<span class="lead">On months it never saw, branch + growth + weekday explain <b>${pct(last.heldout_r2, 1)}</b> of daily ups and downs. If customers arrive at random around that expected level (a Poisson assumption), the most a daily model could explain is <b>${pct(D.ceiling_r2_if_rest_is_noise, 1)}</b>, which leaves under <b>${pct(D.room_left_for_other_factors_r2 + 0.005, 0)}</b> of daily order counts for weather, events or anything else.</span>`;
   $("why-daily").innerHTML = bars(D.steps.map((s) => ({ label: s.model, a: s.heldout_r2, fmt: (v) => pct(v, 1) }))
     .concat([{ label: "Ceiling (rest is chance)", a: D.ceiling_r2_if_rest_is_noise, hot: true, fmt: (v) => pct(v, 1) }]), 1.1);
   const T = W.tuesday;
@@ -453,6 +506,74 @@ function renderWhy(W) {
 }
 if (window.WHY_DATA) renderWhy(window.WHY_DATA);
 else { $("why-missing").textContent = "app/why_data.js not found. Run python src/why_drivers.py."; $("why-missing").classList.remove("hidden"); }
+
+// ---------- Day explorer (window.DAY_DATA from day_data.js) ----------
+const money = (v) => (v < 0 ? "−$" : "$") + Math.abs(v).toLocaleString(undefined, { maximumFractionDigits: 0 });
+const signed = (v) => (v >= 0 ? "+" : "−") + "$" + Math.abs(v).toLocaleString(undefined, { maximumFractionDigits: 0 });
+function dayRecord(d, b) { return window.DAY_DATA.records.find((r) => r.date === d && r.branch === b); }
+function renderDay() {
+  const D = window.DAY_DATA;
+  if (!D) { $("day-banner").textContent = "app/day_data.js not found. Run python src/day_ledger.py."; return; }
+  const d = $("day-date").value, b = $("day-branch").value;
+  const r = dayRecord(d, b);
+  if (!r) { $("day-banner").textContent = "No record for this date (data covers Jan 1 – Jun 30, 2026)."; return; }
+  const all = dayRecord(d, "All branches");
+  store("day", { d, b });
+  $("day-banner").textContent = `Historical record · ${r.weekday} ${r.date} · ${r.period} · ${D.meta.status}`;
+  $("day-source").textContent = `${D.meta.generator}. Expected orders: ${D.meta.expected_orders_model}.`;
+  const zTxt = r.z == null ? "" : Math.abs(r.z) < 2 ? "within normal day-to-day range" : (r.z > 0 ? "unusually busy" : "unusually quiet") + " (|z| ≥ 2)";
+  $("d-orders").innerHTML = `${r.orders} <small>vs ${r.expected_orders.toFixed(0)} expected</small>`;
+  $("d-orders-note").textContent = `${r.weekday}; ${zTxt}.`;
+  const gap = r.gross_profit - r.reference_gross_profit;
+  $("d-gp").innerHTML = `${money(r.gross_profit)} <small>${signed(gap)}</small>`;
+  $("d-gp-note").textContent = `Reference ${money(r.reference_gross_profit)} (expected orders × reference basket × reference profit per item).`;
+  $("d-unexp").innerHTML = `${r.unexplained_orders >= 0 ? "+" : "−"}${Math.abs(r.unexplained_orders).toFixed(0)} <small>orders (z ${r.z >= 0 ? "+" : ""}${r.z})</small>`;
+  $("d-unexp-note").textContent = "Orders the weekday + growth model did not expect. Under random arrivals, about 1 day in 20 lands at |z| ≥ 2 by chance.";
+  // bridge
+  const parts = [["Traffic (more or fewer orders)", r.bridge.traffic], ["Basket (items per order)", r.bridge.basket], ["Margin / mix (profit per item)", r.bridge.margin_mix]];
+  const maxAbs = Math.max(...parts.map((p) => Math.abs(p[1])), Math.abs(gap), 1);
+  const row = (label, v, strong) => {
+    const w = (50 * Math.abs(v)) / maxAbs;
+    const left = v >= 0 ? 50 : 50 - w;
+    return `<div class="bar-row"><div class="bar-label">${strong ? "<b>" + esc(label) + "</b>" : esc(label)}</div><div class="bar-track">
+      <div style="position:absolute;left:50%;top:-2px;bottom:-2px;border-left:1px solid var(--line)"></div>
+      <div class="bar ${v < 0 ? "hot" : ""}" style="left:${left}%;width:${Math.max(w, 0.4)}%;height:16px;top:3px"></div>
+      <span class="bar-val" style="${v >= 0 ? `left:calc(${50 + w}% + 6px)` : `right:calc(${50 + w}% + 6px)`};top:3px">${signed(v)}</span></div></div>`;
+  };
+  $("d-bridge").innerHTML = parts.map(([l, v]) => row(l, v)).join("") + row("Total gap vs reference", gap, true);
+  // timing
+  const dps = ["morning", "afternoon", "evening"];
+  $("d-timing").innerHTML = bars(dps.map((k) => ({ label: k[0].toUpperCase() + k.slice(1), a: r.daypart_share[k], b: r.daypart_share_ref[k] })), 0.8);
+  // weather
+  const wx = all.weather || {};
+  $("d-weather").innerHTML = "<tr><th>Candidate location</th><th class='num'>Max °C</th><th class='num'>Rain mm</th><th class='num'>Max wind km/h</th></tr>" +
+    Object.entries(wx).map(([loc, w]) => `<tr><td>${esc(loc)}</td><td class="num">${w.tmax}</td><td class="num">${w.rain_mm}</td><td class="num">${w.wind_max}</td></tr>`).join("");
+  // events
+  const ev = all.events || [];
+  const pill = (s) => (s === "event_verified" || /^calendar/.test(s || "")) ? "ok" : "no";
+  $("d-events").innerHTML = ev.length ? `<table><tr><th>Event</th><th>Status</th><th>Branch exposure</th><th>Mechanism</th><th>Source</th></tr>` +
+    ev.map((e) => `<tr><td>${esc(e.id)}</td><td><span class="pill ${pill(e.status)}">${esc(e.status)}</span></td><td>${esc(e.exposure ?? "unknown")}</td><td>${esc(e.mechanism ?? "")}</td><td>${e.source && /^https:\/\//.test(e.source) ? `<a href="${esc(e.source)}" target="_blank" rel="noopener noreferrer">link</a>` : "–"}</td></tr>`).join("") + "</table>"
+    : "<p class='muted'>No recorded event, holiday or Ramadan on this date.</p>";
+  // top unusual days for this branch
+  const rows = D.records.filter((x) => x.branch === b && x.z != null).sort((p, q) => Math.abs(q.z) - Math.abs(p.z));
+  const top = rows.slice(0, 10);
+  $("d-top").innerHTML = "<tr><th>Date</th><th>Weekday</th><th class='num'>Orders</th><th class='num'>Expected</th><th class='num'>z</th><th class='num'>GP vs ref</th><th></th></tr>" +
+    top.map((x) => `<tr${x.date === d ? ' class="hit"' : ""}><td>${x.date}</td><td>${x.weekday}</td><td class="num">${x.orders}</td><td class="num">${x.expected_orders.toFixed(0)}</td><td class="num">${x.z > 0 ? "+" : ""}${x.z}</td><td class="num">${signed(x.gross_profit - x.reference_gross_profit)}</td><td><button class="btn ghost" data-go="${x.date}" style="padding:2px 8px">Open</button></td></tr>`).join("");
+  const n2 = rows.filter((x) => Math.abs(x.z) >= 2).length;
+  $("d-top-note").textContent = `${n2} of ${rows.length} days have |z| ≥ 2; about ${Math.round(rows.length * 0.0455)} would be expected by chance alone if arrivals were random. A day at the top of this list is a lead to check, not an explained event.`;
+}
+function shiftDay(k) {
+  const t = new Date($("day-date").value + "T12:00:00Z"); t.setUTCDate(t.getUTCDate() + k);
+  const s = t.toISOString().slice(0, 10);
+  if (s >= "2026-01-01" && s <= "2026-06-30") { $("day-date").value = s; renderDay(); }
+}
+$("day-date").addEventListener("change", renderDay);
+$("day-branch").addEventListener("change", renderDay);
+$("day-prev").addEventListener("click", () => shiftDay(-1));
+$("day-next").addEventListener("click", () => shiftDay(1));
+$("d-top").addEventListener("click", (e) => { const g = e.target.dataset.go; if (g) { $("day-date").value = g; renderDay(); } });
+{ const s = load("day", null); if (s && s.d) { $("day-date").value = s.d; $("day-branch").value = s.b || "All branches"; } }
+renderDay();
 
 // ---------- Pilot log ----------
 const COLS = ["date", "branch", "product", "arm", "recommended_opening", "prepared_opening", "remaining_at_16",
