@@ -1,0 +1,430 @@
+{
+  "schema_version": 1,
+  "model": "Smoothed conditional basket-frequency model with margin-aware ranking and popularity fallback",
+  "train_dates": [
+    "2026-01-01",
+    "2026-03-31"
+  ],
+  "test_dates": [
+    "2026-04-01",
+    "2026-06-30"
+  ],
+  "validation_dates": [
+    "2026-03-11",
+    "2026-03-31"
+  ],
+  "selection_objective": "Mean recovered hidden-item training gross margin at rank<=3, equal weight per multi-item order",
+  "selected_method": "shrunk_pairs",
+  "selected_strength": 500,
+  "validation": [
+    {
+      "label": "training_validation",
+      "method": "popularity",
+      "strength": 100.0,
+      "orders": 1748,
+      "dates": 21,
+      "masked_items": 3662,
+      "unknown_targets": 0,
+      "hit_at_3": 0.1375858123569794,
+      "reciprocal_rank": 0.15223801574739965,
+      "recovered_margin_at_3_usd": 0.4759696063217278,
+      "hit_at_1": 0.05005720823798627,
+      "cohorts": {
+        "other_identified": {
+          "orders": 1067,
+          "hit_at_3": 0.14636051233989375,
+          "reciprocal_rank": 0.15676824300205713,
+          "recovered_margin_at_3_usd": 0.5026105099755849,
+          "hit_at_1": 0.0535770071852546
+        },
+        "regular": {
+          "orders": 16,
+          "hit_at_3": 0.12499999999999999,
+          "reciprocal_rank": 0.1494324444465255,
+          "recovered_margin_at_3_usd": 0.46978438449167226,
+          "hit_at_1": 0.0625
+        },
+        "unidentified": {
+          "orders": 665,
+          "hit_at_3": 0.1238095238095238,
+          "reciprocal_rank": 0.14503671749190264,
+          "recovered_margin_at_3_usd": 0.4333727933151344,
+          "hit_at_1": 0.04411027568922306
+        }
+      }
+    },
+    {
+      "label": "training_validation",
+      "method": "margin_popularity",
+      "strength": 100.0,
+      "orders": 1748,
+      "dates": 21,
+      "masked_items": 3662,
+      "unknown_targets": 0,
+      "hit_at_3": 0.13005339435545385,
+      "reciprocal_rank": 0.14509144561801765,
+      "recovered_margin_at_3_usd": 0.49694960399497073,
+      "hit_at_1": 0.04767353165522502,
+      "cohorts": {
+        "other_identified": {
+          "orders": 1067,
+          "hit_at_3": 0.13011558887847546,
+          "reciprocal_rank": 0.1449960448681544,
+          "recovered_margin_at_3_usd": 0.4991038537237095,
+          "hit_at_1": 0.04732895970009372
+        },
+        "regular": {
+          "orders": 16,
+          "hit_at_3": 0.16666666666666666,
+          "reciprocal_rank": 0.1966744867494725,
+          "recovered_margin_at_3_usd": 0.6250094233417111,
+          "hit_at_1": 0.12499999999999999
+        },
+        "unidentified": {
+          "orders": 665,
+          "hit_at_3": 0.12907268170426064,
+          "reciprocal_rank": 0.14400342147065043,
+          "recovered_margin_at_3_usd": 0.4904119474985617,
+          "hit_at_1": 0.046365914786967416
+        }
+      }
+    },
+    {
+      "label": "training_validation",
+      "method": "shrunk_pairs",
+      "strength": 20.0,
+      "orders": 1748,
+      "dates": 21,
+      "masked_items": 3662,
+      "unknown_targets": 0,
+      "hit_at_3": 0.10736079328756674,
+      "reciprocal_rank": 0.1306119632455059,
+      "recovered_margin_at_3_usd": 0.4128056203007608,
+      "hit_at_1": 0.04300152555301296,
+      "cohorts": {
+        "other_identified": {
+          "orders": 1067,
+          "hit_at_3": 0.10918462980318651,
+          "reciprocal_rank": 0.1309401480517991,
+          "recovered_margin_at_3_usd": 0.4146355318314911,
+          "hit_at_1": 0.04311152764761012
+        },
+        "regular": {
+          "orders": 16,
+          "hit_at_3": 0.16666666666666666,
+          "reciprocal_rank": 0.1732828471069753,
+          "recovered_margin_at_3_usd": 0.6364932006268667,
+          "hit_at_1": 0.08333333333333333
+        },
+        "unidentified": {
+          "orders": 665,
+          "hit_at_3": 0.10300751879699248,
+          "reciprocal_rank": 0.12905871914009487,
+          "recovered_margin_at_3_usd": 0.4044875497917279,
+          "hit_at_1": 0.04185463659147869
+        }
+      }
+    },
+    {
+      "label": "training_validation",
+      "method": "shrunk_pairs",
+      "strength": 100.0,
+      "orders": 1748,
+      "dates": 21,
+      "masked_items": 3662,
+      "unknown_targets": 0,
+      "hit_at_3": 0.1244279176201373,
+      "reciprocal_rank": 0.142352404757486,
+      "recovered_margin_at_3_usd": 0.4743439520686794,
+      "hit_at_1": 0.04919908466819222,
+      "cohorts": {
+        "other_identified": {
+          "orders": 1067,
+          "hit_at_3": 0.1296469853170884,
+          "reciprocal_rank": 0.14595914757177963,
+          "recovered_margin_at_3_usd": 0.48507754224627697,
+          "hit_at_1": 0.0535770071852546
+        },
+        "regular": {
+          "orders": 16,
+          "hit_at_3": 0.18749999999999997,
+          "reciprocal_rank": 0.19099883012333732,
+          "recovered_margin_at_3_usd": 0.7045381977913272,
+          "hit_at_1": 0.08333333333333333
+        },
+        "unidentified": {
+          "orders": 665,
+          "hit_at_3": 0.11453634085213031,
+          "reciprocal_rank": 0.13539490492484707,
+          "recovered_margin_at_3_usd": 0.45158327740543286,
+          "hit_at_1": 0.041353383458646614
+        }
+      }
+    },
+    {
+      "label": "training_validation",
+      "method": "shrunk_pairs",
+      "strength": 500.0,
+      "orders": 1748,
+      "dates": 21,
+      "masked_items": 3662,
+      "unknown_targets": 0,
+      "hit_at_3": 0.1337719298245614,
+      "reciprocal_rank": 0.1501091346069565,
+      "recovered_margin_at_3_usd": 0.5110607940413446,
+      "hit_at_1": 0.05339435545385203,
+      "cohorts": {
+        "other_identified": {
+          "orders": 1067,
+          "hit_at_3": 0.13558263042799126,
+          "reciprocal_rank": 0.15114169819363893,
+          "recovered_margin_at_3_usd": 0.5159120344809309,
+          "hit_at_1": 0.05545142143080288
+        },
+        "regular": {
+          "orders": 16,
+          "hit_at_3": 0.20833333333333331,
+          "reciprocal_rank": 0.20521321137563692,
+          "recovered_margin_at_3_usd": 0.7718656231644616,
+          "hit_at_1": 0.10416666666666666
+        },
+        "unidentified": {
+          "orders": 665,
+          "hit_at_3": 0.12907268170426064,
+          "reciprocal_rank": 0.1471265623132887,
+          "recovered_margin_at_3_usd": 0.4970019206353169,
+          "hit_at_1": 0.04887218045112782
+        }
+      }
+    }
+  ],
+  "test": [
+    {
+      "label": "chronological_test",
+      "method": "popularity",
+      "strength": 100.0,
+      "orders": 8801,
+      "dates": 91,
+      "masked_items": 18401,
+      "unknown_targets": 0,
+      "hit_at_3": 0.13744650229140626,
+      "reciprocal_rank": 0.15034464792636285,
+      "recovered_margin_at_3_usd": 0.47213519414333666,
+      "hit_at_1": 0.04654774078703177,
+      "cohorts": {
+        "other_identified": {
+          "orders": 5304,
+          "hit_at_3": 0.1397687280040221,
+          "reciprocal_rank": 0.15104611909153526,
+          "recovered_margin_at_3_usd": 0.48379639423284243,
+          "hit_at_1": 0.04622297637003519
+        },
+        "regular": {
+          "orders": 273,
+          "hit_at_3": 0.1288156288156288,
+          "reciprocal_rank": 0.14636267631813513,
+          "recovered_margin_at_3_usd": 0.43449381898206807,
+          "hit_at_1": 0.042735042735042736
+        },
+        "unidentified": {
+          "orders": 3224,
+          "hit_at_3": 0.1343569065343259,
+          "reciprocal_rank": 0.1495277977988726,
+          "recovered_margin_at_3_usd": 0.4561380136669991,
+          "hit_at_1": 0.047404880066170385
+        }
+      }
+    },
+    {
+      "label": "chronological_test",
+      "method": "margin_popularity",
+      "strength": 100.0,
+      "orders": 8801,
+      "dates": 91,
+      "masked_items": 18401,
+      "unknown_targets": 0,
+      "hit_at_3": 0.12898155512631138,
+      "reciprocal_rank": 0.1421824346767738,
+      "recovered_margin_at_3_usd": 0.49555230053479454,
+      "hit_at_1": 0.0418702420179525,
+      "cohorts": {
+        "other_identified": {
+          "orders": 5304,
+          "hit_at_3": 0.12917923579688284,
+          "reciprocal_rank": 0.14326888232099197,
+          "recovered_margin_at_3_usd": 0.49829696571107507,
+          "hit_at_1": 0.04232654600301659
+        },
+        "regular": {
+          "orders": 273,
+          "hit_at_3": 0.12454212454212454,
+          "reciprocal_rank": 0.14208213200218384,
+          "recovered_margin_at_3_usd": 0.48655678020781074,
+          "hit_at_1": 0.045177045177045176
+        },
+        "unidentified": {
+          "orders": 3224,
+          "hit_at_3": 0.1290322580645161,
+          "reciprocal_rank": 0.1404035464401827,
+          "recovered_margin_at_3_usd": 0.4917986010789242,
+          "hit_at_1": 0.04083953680727874
+        }
+      }
+    },
+    {
+      "label": "chronological_test",
+      "method": "shrunk_pairs",
+      "strength": 20.0,
+      "orders": 8801,
+      "dates": 91,
+      "masked_items": 18401,
+      "unknown_targets": 0,
+      "hit_at_3": 0.11292277392720523,
+      "reciprocal_rank": 0.13346951360454373,
+      "recovered_margin_at_3_usd": 0.43118037393455905,
+      "hit_at_1": 0.03993864333598455,
+      "cohorts": {
+        "other_identified": {
+          "orders": 5304,
+          "hit_at_3": 0.11415912518853695,
+          "reciprocal_rank": 0.13456947469975913,
+          "recovered_margin_at_3_usd": 0.44019973155207637,
+          "hit_at_1": 0.04100678733031674
+        },
+        "regular": {
+          "orders": 273,
+          "hit_at_3": 0.10927960927960928,
+          "reciprocal_rank": 0.1358151023651288,
+          "recovered_margin_at_3_usd": 0.4042602863705578,
+          "hit_at_1": 0.04212454212454213
+        },
+        "unidentified": {
+          "orders": 3224,
+          "hit_at_3": 0.11119727047146402,
+          "reciprocal_rank": 0.13146128178672048,
+          "recovered_margin_at_3_usd": 0.4186215994623696,
+          "hit_at_1": 0.03799627791563275
+        }
+      }
+    },
+    {
+      "label": "chronological_test",
+      "method": "shrunk_pairs",
+      "strength": 100.0,
+      "orders": 8801,
+      "dates": 91,
+      "masked_items": 18401,
+      "unknown_targets": 0,
+      "hit_at_3": 0.12420937014733176,
+      "reciprocal_rank": 0.14073775009995784,
+      "recovered_margin_at_3_usd": 0.4725843004327712,
+      "hit_at_1": 0.04221111237359391,
+      "cohorts": {
+        "other_identified": {
+          "orders": 5304,
+          "hit_at_3": 0.1241830065359477,
+          "reciprocal_rank": 0.14078868332272157,
+          "recovered_margin_at_3_usd": 0.47641317807637523,
+          "hit_at_1": 0.042295123177476114
+        },
+        "regular": {
+          "orders": 273,
+          "hit_at_3": 0.11904761904761904,
+          "reciprocal_rank": 0.1396320695562096,
+          "recovered_margin_at_3_usd": 0.4394549959737409,
+          "hit_at_1": 0.04456654456654457
+        },
+        "unidentified": {
+          "orders": 3224,
+          "hit_at_3": 0.12468982630272953,
+          "reciprocal_rank": 0.14074758290855094,
+          "recovered_margin_at_3_usd": 0.46909048315474366,
+          "hit_at_1": 0.04187344913151365
+        }
+      }
+    },
+    {
+      "label": "chronological_test",
+      "method": "shrunk_pairs",
+      "strength": 500.0,
+      "orders": 8801,
+      "dates": 91,
+      "masked_items": 18401,
+      "unknown_targets": 0,
+      "hit_at_3": 0.13290156421618754,
+      "reciprocal_rank": 0.1450639763104154,
+      "recovered_margin_at_3_usd": 0.5079859587909966,
+      "hit_at_1": 0.042987539294777104,
+      "cohorts": {
+        "other_identified": {
+          "orders": 5304,
+          "hit_at_3": 0.13251005530417292,
+          "reciprocal_rank": 0.14480591547217936,
+          "recovered_margin_at_3_usd": 0.5098113712370163,
+          "hit_at_1": 0.04194947209653092
+        },
+        "regular": {
+          "orders": 273,
+          "hit_at_3": 0.11782661782661782,
+          "reciprocal_rank": 0.13756234154330765,
+          "recovered_margin_at_3_usd": 0.4499856448376272,
+          "hit_at_1": 0.03724053724053724
+        },
+        "unidentified": {
+          "orders": 3224,
+          "hit_at_3": 0.1348221670802316,
+          "reciprocal_rank": 0.14612374708505074,
+          "recovered_margin_at_3_usd": 0.5098941778032735,
+          "hit_at_1": 0.04518196856906534
+        }
+      }
+    }
+  ],
+  "selected_vs_margin_baseline": {
+    "mean_delta_usd_per_completion_order": 0.012433658256202114,
+    "conditional_95pct_interval": [
+      0.0027677087169564922,
+      0.02513368588877372
+    ],
+    "interpretation": "Offline recovered-item margin proxy only; not incremental sales or randomized treatment evidence"
+  },
+  "selected_vs_popularity": {
+    "mean_delta_usd_per_completion_order": 0.03585076464765996,
+    "conditional_95pct_interval": [
+      0.022340499809613994,
+      0.05160885353554728
+    ],
+    "interpretation": "Offline recovered-item margin proxy only; not incremental sales or randomized treatment evidence"
+  },
+  "population": {
+    "train": {
+      "orders": 14792,
+      "identified_orders": 9417,
+      "regular_orders": 1195,
+      "regular_revenue_share_all_orders": 0.08051683899369096,
+      "regular_revenue_share_identified": 0.12688698995251246,
+      "unidentified_order_share": 0.3633720930232558,
+      "single_distinct_product_order_share": 0.5382639264467279
+    },
+    "test": {
+      "orders": 19095,
+      "identified_orders": 12117,
+      "regular_orders": 578,
+      "regular_revenue_share_all_orders": 0.030953878131561526,
+      "regular_revenue_share_identified": 0.048746328702266264,
+      "unidentified_order_share": 0.3654359780047133,
+      "single_distinct_product_order_share": 0.5390940036658811
+    }
+  },
+  "regular_customer_count": 183,
+  "regular_definition": ">=6 distinct training purchase dates",
+  "source_sha256": "8375e91c2bebf84261e2b92b67ebf76c42f1af434322a7f2ac2b7f1ab3bb5c71",
+  "caveats": [
+    "Dataset already explored; chronological isolation is computational, not a newly untouched confirmation set",
+    "Masked basket completion conditions on items already purchased and cannot estimate incremental upsell",
+    "No verified purchase sequence within orders",
+    "Unit economics fixed from Jan-Mar; availability is a manual scenario input",
+    "Aggregate regular-customer context is not individual personalization",
+    "No layout or customer movement outcomes observed"
+  ]
+}

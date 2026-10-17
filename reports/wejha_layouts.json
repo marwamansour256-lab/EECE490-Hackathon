@@ -1,0 +1,409 @@
+{
+  "schema_version": 1,
+  "status": "Layout hypothesis; incremental sales and customer paths unmeasured",
+  "trained_through": "2026-03-31",
+  "products": [
+    "Almond Croissant",
+    "Banana Bread",
+    "Blueberry Muffin",
+    "Butter Croissant",
+    "Chocolate Cookie",
+    "Chocolate Croissant",
+    "Cinnamon Roll",
+    "Pistachio Cookie"
+  ],
+  "pairs": [
+    {
+      "item_a": "Butter Croissant",
+      "item_b": "Chocolate Croissant",
+      "pair_orders": 20,
+      "anchor_a_orders": 915,
+      "anchor_b_orders": 594,
+      "expected_under_independence": 36.74351000540833,
+      "lift": 0.5443138120733748,
+      "evidence_status": "Training co-occurrence; no causal or multiple-testing-confirmed pair claim",
+      "weight": 20.0
+    },
+    {
+      "item_a": "Butter Croissant",
+      "item_b": "Chocolate Cookie",
+      "pair_orders": 18,
+      "anchor_a_orders": 915,
+      "anchor_b_orders": 711,
+      "expected_under_independence": 43.98086803677664,
+      "lift": 0.4092688662931452,
+      "evidence_status": "Training co-occurrence; no causal or multiple-testing-confirmed pair claim",
+      "weight": 18.0
+    },
+    {
+      "item_a": "Almond Croissant",
+      "item_b": "Butter Croissant",
+      "pair_orders": 15,
+      "anchor_a_orders": 490,
+      "anchor_b_orders": 915,
+      "expected_under_independence": 30.31030286641428,
+      "lift": 0.4948812311809969,
+      "evidence_status": "Training co-occurrence; no causal or multiple-testing-confirmed pair claim",
+      "weight": 15.0
+    },
+    {
+      "item_a": "Butter Croissant",
+      "item_b": "Pistachio Cookie",
+      "pair_orders": 14,
+      "anchor_a_orders": 915,
+      "anchor_b_orders": 563,
+      "expected_under_independence": 34.825919415900486,
+      "lift": 0.4019994370517039,
+      "evidence_status": "Training co-occurrence; no causal or multiple-testing-confirmed pair claim",
+      "weight": 14.0
+    },
+    {
+      "item_a": "Chocolate Croissant",
+      "item_b": "Cinnamon Roll",
+      "pair_orders": 11,
+      "anchor_a_orders": 594,
+      "anchor_b_orders": 625,
+      "expected_under_independence": 25.098025959978365,
+      "lift": 0.4382814814814815,
+      "evidence_status": "Training co-occurrence; no causal or multiple-testing-confirmed pair claim",
+      "weight": 11.0
+    },
+    {
+      "item_a": "Butter Croissant",
+      "item_b": "Cinnamon Roll",
+      "pair_orders": 10,
+      "anchor_a_orders": 915,
+      "anchor_b_orders": 625,
+      "expected_under_independence": 38.66110059491617,
+      "lift": 0.2586579234972677,
+      "evidence_status": "Training co-occurrence; no causal or multiple-testing-confirmed pair claim",
+      "weight": 10.0
+    },
+    {
+      "item_a": "Blueberry Muffin",
+      "item_b": "Butter Croissant",
+      "pair_orders": 10,
+      "anchor_a_orders": 382,
+      "anchor_b_orders": 915,
+      "expected_under_independence": 23.629664683612763,
+      "lift": 0.4231968643607129,
+      "evidence_status": "Training co-occurrence; no causal or multiple-testing-confirmed pair claim",
+      "weight": 10.0
+    },
+    {
+      "item_a": "Banana Bread",
+      "item_b": "Butter Croissant",
+      "pair_orders": 9,
+      "anchor_a_orders": 527,
+      "anchor_b_orders": 915,
+      "expected_under_independence": 32.599040021633314,
+      "lift": 0.2760817494634025,
+      "evidence_status": "Training co-occurrence; no causal or multiple-testing-confirmed pair claim",
+      "weight": 9.0
+    },
+    {
+      "item_a": "Cinnamon Roll",
+      "item_b": "Pistachio Cookie",
+      "pair_orders": 9,
+      "anchor_a_orders": 625,
+      "anchor_b_orders": 563,
+      "expected_under_independence": 23.7881963223364,
+      "lift": 0.3783388987566607,
+      "evidence_status": "Training co-occurrence; no causal or multiple-testing-confirmed pair claim",
+      "weight": 9.0
+    },
+    {
+      "item_a": "Blueberry Muffin",
+      "item_b": "Chocolate Cookie",
+      "pair_orders": 8,
+      "anchor_a_orders": 382,
+      "anchor_b_orders": 711,
+      "expected_under_independence": 18.361411573823688,
+      "lift": 0.4356963498059661,
+      "evidence_status": "Training co-occurrence; no causal or multiple-testing-confirmed pair claim",
+      "weight": 8.0
+    },
+    {
+      "item_a": "Chocolate Cookie",
+      "item_b": "Cinnamon Roll",
+      "pair_orders": 8,
+      "anchor_a_orders": 711,
+      "anchor_b_orders": 625,
+      "expected_under_independence": 30.041576527852893,
+      "lift": 0.2662976090014065,
+      "evidence_status": "Training co-occurrence; no causal or multiple-testing-confirmed pair claim",
+      "weight": 8.0
+    },
+    {
+      "item_a": "Banana Bread",
+      "item_b": "Cinnamon Roll",
+      "pair_orders": 8,
+      "anchor_a_orders": 527,
+      "anchor_b_orders": 625,
+      "expected_under_independence": 22.267103839913467,
+      "lift": 0.3592743833017077,
+      "evidence_status": "Training co-occurrence; no causal or multiple-testing-confirmed pair claim",
+      "weight": 8.0
+    },
+    {
+      "item_a": "Almond Croissant",
+      "item_b": "Cinnamon Roll",
+      "pair_orders": 8,
+      "anchor_a_orders": 490,
+      "anchor_b_orders": 625,
+      "expected_under_independence": 20.703758788534344,
+      "lift": 0.3864032653061224,
+      "evidence_status": "Training co-occurrence; no causal or multiple-testing-confirmed pair claim",
+      "weight": 8.0
+    },
+    {
+      "item_a": "Almond Croissant",
+      "item_b": "Chocolate Cookie",
+      "pair_orders": 7,
+      "anchor_a_orders": 490,
+      "anchor_b_orders": 711,
+      "expected_under_independence": 23.55259599783667,
+      "lift": 0.2972071529033554,
+      "evidence_status": "Training co-occurrence; no causal or multiple-testing-confirmed pair claim",
+      "weight": 7.0
+    },
+    {
+      "item_a": "Blueberry Muffin",
+      "item_b": "Pistachio Cookie",
+      "pair_orders": 7,
+      "anchor_a_orders": 382,
+      "anchor_b_orders": 563,
+      "expected_under_independence": 14.539345592212008,
+      "lift": 0.4814522053695145,
+      "evidence_status": "Training co-occurrence; no causal or multiple-testing-confirmed pair claim",
+      "weight": 7.0
+    },
+    {
+      "item_a": "Banana Bread",
+      "item_b": "Pistachio Cookie",
+      "pair_orders": 7,
+      "anchor_a_orders": 527,
+      "anchor_b_orders": 563,
+      "expected_under_independence": 20.05820713899405,
+      "lift": 0.3489843310268587,
+      "evidence_status": "Training co-occurrence; no causal or multiple-testing-confirmed pair claim",
+      "weight": 7.0
+    },
+    {
+      "item_a": "Almond Croissant",
+      "item_b": "Chocolate Croissant",
+      "pair_orders": 6,
+      "anchor_a_orders": 490,
+      "anchor_b_orders": 594,
+      "expected_under_independence": 19.67685235262304,
+      "lift": 0.3049268192125335,
+      "evidence_status": "Training co-occurrence; no causal or multiple-testing-confirmed pair claim",
+      "weight": 6.0
+    },
+    {
+      "item_a": "Blueberry Muffin",
+      "item_b": "Cinnamon Roll",
+      "pair_orders": 6,
+      "anchor_a_orders": 382,
+      "anchor_b_orders": 625,
+      "expected_under_independence": 16.14048134126555,
+      "lift": 0.3717361256544502,
+      "evidence_status": "Training co-occurrence; no causal or multiple-testing-confirmed pair claim",
+      "weight": 6.0
+    },
+    {
+      "item_a": "Banana Bread",
+      "item_b": "Chocolate Cookie",
+      "pair_orders": 6,
+      "anchor_a_orders": 527,
+      "anchor_b_orders": 711,
+      "expected_under_independence": 25.33105732828556,
+      "lift": 0.2368633856155773,
+      "evidence_status": "Training co-occurrence; no causal or multiple-testing-confirmed pair claim",
+      "weight": 6.0
+    },
+    {
+      "item_a": "Chocolate Croissant",
+      "item_b": "Pistachio Cookie",
+      "pair_orders": 6,
+      "anchor_a_orders": 594,
+      "anchor_b_orders": 563,
+      "expected_under_independence": 22.608301784748512,
+      "lift": 0.2653892387462547,
+      "evidence_status": "Training co-occurrence; no causal or multiple-testing-confirmed pair claim",
+      "weight": 6.0
+    },
+    {
+      "item_a": "Banana Bread",
+      "item_b": "Blueberry Muffin",
+      "pair_orders": 6,
+      "anchor_a_orders": 527,
+      "anchor_b_orders": 382,
+      "expected_under_independence": 13.60965386695511,
+      "lift": 0.4408635266300406,
+      "evidence_status": "Training co-occurrence; no causal or multiple-testing-confirmed pair claim",
+      "weight": 6.0
+    },
+    {
+      "item_a": "Chocolate Cookie",
+      "item_b": "Chocolate Croissant",
+      "pair_orders": 5,
+      "anchor_a_orders": 711,
+      "anchor_b_orders": 594,
+      "expected_under_independence": 28.55151433207139,
+      "lift": 0.1751220597915394,
+      "evidence_status": "Training co-occurrence; no causal or multiple-testing-confirmed pair claim",
+      "weight": 5.0
+    },
+    {
+      "item_a": "Banana Bread",
+      "item_b": "Chocolate Croissant",
+      "pair_orders": 5,
+      "anchor_a_orders": 527,
+      "anchor_b_orders": 594,
+      "expected_under_independence": 21.16265548945376,
+      "lift": 0.2362652457529118,
+      "evidence_status": "Training co-occurrence; no causal or multiple-testing-confirmed pair claim",
+      "weight": 5.0
+    },
+    {
+      "item_a": "Almond Croissant",
+      "item_b": "Blueberry Muffin",
+      "pair_orders": 5,
+      "anchor_a_orders": 490,
+      "anchor_b_orders": 382,
+      "expected_under_independence": 12.65413737155219,
+      "lift": 0.395127684581686,
+      "evidence_status": "Training co-occurrence; no causal or multiple-testing-confirmed pair claim",
+      "weight": 5.0
+    },
+    {
+      "item_a": "Almond Croissant",
+      "item_b": "Pistachio Cookie",
+      "pair_orders": 5,
+      "anchor_a_orders": 490,
+      "anchor_b_orders": 563,
+      "expected_under_independence": 18.649945916711737,
+      "lift": 0.2680972922028491,
+      "evidence_status": "Training co-occurrence; no causal or multiple-testing-confirmed pair claim",
+      "weight": 5.0
+    },
+    {
+      "item_a": "Chocolate Cookie",
+      "item_b": "Pistachio Cookie",
+      "pair_orders": 4,
+      "anchor_a_orders": 711,
+      "anchor_b_orders": 563,
+      "expected_under_independence": 27.061452136289887,
+      "lift": 0.1478117279093064,
+      "evidence_status": "Training co-occurrence; no causal or multiple-testing-confirmed pair claim",
+      "weight": 4.0
+    },
+    {
+      "item_a": "Almond Croissant",
+      "item_b": "Banana Bread",
+      "pair_orders": 4,
+      "anchor_a_orders": 490,
+      "anchor_b_orders": 527,
+      "expected_under_independence": 17.457409410492158,
+      "lift": 0.229129070983232,
+      "evidence_status": "Training co-occurrence; no causal or multiple-testing-confirmed pair claim",
+      "weight": 4.0
+    },
+    {
+      "item_a": "Blueberry Muffin",
+      "item_b": "Chocolate Croissant",
+      "pair_orders": 4,
+      "anchor_a_orders": 382,
+      "anchor_b_orders": 594,
+      "expected_under_independence": 15.339913466738778,
+      "lift": 0.2607576638990251,
+      "evidence_status": "Training co-occurrence; no causal or multiple-testing-confirmed pair claim",
+      "weight": 4.0
+    }
+  ],
+  "layouts": [
+    {
+      "name": "adjacent_pairs",
+      "slots": [
+        "Banana Bread",
+        "Pistachio Cookie",
+        "Cinnamon Roll",
+        "Chocolate Croissant",
+        "Butter Croissant",
+        "Almond Croissant",
+        "Chocolate Cookie",
+        "Blueberry Muffin"
+      ],
+      "weighted_pair_distance": 0.37291280148423017,
+      "interpretation": "Clusters frequent co-purchases: lower geometric distance; may reduce search or staff effort."
+    },
+    {
+      "name": "separated_pairs",
+      "slots": [
+        "Butter Croissant",
+        "Cinnamon Roll",
+        "Blueberry Muffin",
+        "Banana Bread",
+        "Almond Croissant",
+        "Pistachio Cookie",
+        "Chocolate Cookie",
+        "Chocolate Croissant"
+      ],
+      "weighted_pair_distance": 0.5108225108225108,
+      "interpretation": "Spreads frequent co-purchases across the display: higher hypothetical exposure, possibly more friction."
+    },
+    {
+      "name": "random_reference",
+      "slots": [
+        "Cinnamon Roll",
+        "Blueberry Muffin",
+        "Banana Bread",
+        "Chocolate Croissant",
+        "Pistachio Cookie",
+        "Almond Croissant",
+        "Butter Croissant",
+        "Chocolate Cookie"
+      ],
+      "weighted_pair_distance": 0.42486085343228197,
+      "interpretation": "Seeded feasible arrangement; not Stories' current layout and not a sales baseline."
+    }
+  ],
+  "optimization": {
+    "adjacent": "Exact enumeration within supplied slots and constraints",
+    "separated": "Exact enumeration within supplied slots and constraints"
+  },
+  "score_formula": "sum(pair_orders * abs(slot_a-slot_b)/(slots-1)) / sum(pair_orders)",
+  "random_reference": {
+    "draws": 1000,
+    "mean": 0.4296536796536796,
+    "p05": 0.39579468150896724,
+    "p95": 0.47619047619047605
+  },
+  "constraints": {
+    "fixed": {},
+    "zones": null,
+    "eligible_zones": null
+  },
+  "assumptions": [
+    "Equal-width one-dimensional display slots; actual geometry unknown",
+    "Default Bakery category is an ambient-display candidate set, pending food-safety confirmation",
+    "No drinks or chilled desserts placed into ambient pastry slots by default",
+    "Weights are training pair counts, not statistically confirmed affinity or incremental purchase probabilities",
+    "Staff-served counters may create visual exposure without any customer walking",
+    "No verified current arrangement, availability, refrigeration or allergen-separation constraints supplied"
+  ],
+  "pilot": {
+    "control": "Company-supplied current layout",
+    "treatment": "Separated candidate after physical feasibility check",
+    "primary_metric": "Incremental contribution per eligible order, after extra labor, discounts and waste",
+    "guardrails": [
+      "queue/service time",
+      "availability",
+      "waste",
+      "customer experience",
+      "safe storage/accessibility"
+    ],
+    "inference": "Randomize branch-day blocks balanced by branch/weekday; separate layout from recommendation experiments"
+  }
+}

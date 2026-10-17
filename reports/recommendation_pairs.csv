@@ -1,0 +1,979 @@
+item_a,item_b,pair_orders,anchor_a_orders,anchor_b_orders,expected_under_independence,lift,evidence_status
+Butter Croissant,Iced Matcha,50,915,1009,62.41448080043266,0.8010961456183963,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Cookie,Iced Matcha,46,711,1009,48.49912114656571,0.9484707951920758,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Classic Matcha,41,915,826,51.09451054624121,0.802434538694611,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Croissant,Iced Matcha,41,594,1009,40.51825310978907,1.0118896263593986,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Matcha,Pistachio Cookie,39,1009,563,38.40366414277988,1.0155280979180272,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cinnamon Roll,Classic Matcha,38,625,826,34.900621957815034,1.0888058111380146,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Iced Latte,36,915,1066,65.94037317468901,0.5459477747362594,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Cookie,Classic Matcha,35,711,826,39.702947539210385,0.8815466399675796,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Latte,Iced Matcha,33,1066,1009,72.71457544618713,0.45382923296336725,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Iced Matcha,31,742,1009,50.6137101135749,0.6124822687457091,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Iced Matcha,31,382,1009,26.057193077339104,1.1896906895531836,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Classic Matcha,Pistachio Cookie,31,826,563,31.438480259599785,0.9860527526782757,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Classic Matcha,29,742,826,41.43401838831801,0.6999079772618994,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cinnamon Roll,Iced Matcha,29,625,1009,42.63284207679827,0.6802267591674925,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Cookie,Iced Latte,29,711,1066,51.23891292590589,0.5659760979304048,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cinnamon Roll,Strawberry Matcha,27,625,586,24.760005408328826,1.0904682593856656,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Chai Latte,27,915,470,29.07314764737696,0.9286920125566794,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Croissant,Classic Matcha,26,594,826,33.16955110870741,0.7838514279192246,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Croissant,Iced Latte,25,594,1066,42.8071930773391,0.584013998648145,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Classic Matcha,25,527,826,29.428204434829638,0.8495251572471525,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Iced Matcha,25,490,1009,33.42414818820984,0.7479622175926863,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Strawberry Matcha,25,915,586,36.2486479177934,0.6896808966970664,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Iced Americano,24,915,624,38.599242833964304,0.6217738545607399,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Iced Latte,24,529,1066,38.122904272579774,0.6295428026259323,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Cappuccino,24,915,742,45.89845862628448,0.5228933763421855,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Flat White,24,915,548,33.8980530016225,0.7080052650472657,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Cookie,Strawberry Matcha,23,711,586,28.166982152514873,0.8165589013215055,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Cookie,Iced Americano,23,711,624,29.99351000540833,0.7668325579717985,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Cookie,Vanilla Latte,22,711,570,27.397917793401838,0.8029807288967848,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Classic Matcha,22,490,826,27.36208761492699,0.8040322182141622,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Cookie,Cold Brew,22,711,609,29.27251216873986,0.7515583176866459,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Pesto Sandwich,Still Water,21,462,492,15.366684694429422,1.3665927568366592,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Latte,Peach Iced Tea,21,1066,497,35.81679286100595,0.5863171524456307,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Spanish Latte,21,915,516,31.91860465116279,0.6579234972677596,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Latte,Vanilla Latte,20,1066,570,41.07760951865873,0.4868832493992956,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Iced Latte,20,527,1066,37.97877230935641,0.5266099661434507,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Croissant,Spanish Latte,20,594,516,20.72093023255814,0.9652076318742986,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Caramel Latte,20,915,449,27.774134667387777,0.7200944418075383,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Chocolate Croissant,20,915,594,36.74351000540833,0.5443138120733748,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Matcha,Strawberry Matcha,20,1009,586,39.97255273120606,0.5003433264442543,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Strawberry Matcha,20,527,586,20.877636560302868,0.9579628394350143,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Classic Matcha,Iced Matcha,20,826,1009,56.343564088696596,0.3549651202134782,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Classic Matcha,Iced Americano,20,826,624,34.84478096268253,0.5739740485503197,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cinnamon Roll,Vanilla Latte,20,625,570,24.083964305029745,0.8304280701754386,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Cinnamon Roll,19,470,625,19.858707409410492,0.9567591489361702,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cinnamon Roll,Iced Latte,19,625,1066,45.041238507301244,0.4218356472795497,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Cold Brew,19,915,609,37.67137641968632,0.5043617145369548,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Chocolate Cookie,19,742,711,35.66535965386696,0.532729802373939,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Spanish Latte,19,742,516,25.88372093023256,0.7340521114106019,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Fresh Orange Juice,Iced Americano,19,393,624,16.578691184424013,1.1460494552097606,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Frozen Yoghurt Cup,Iced Latte,19,488,1066,35.16819902650081,0.5402608187494233,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,Iced Latte,19,507,1066,36.53745267712277,0.5200143580862299,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Vanilla Latte,19,915,570,35.258923742563546,0.5388706739526412,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Pesto Sandwich,Classic Matcha,19,462,826,25.798539751216875,0.7364757921658648,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Latte,Pistachio Cookie,19,1066,563,40.57314764737696,0.4682900169621999,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Cappuccino,19,382,742,19.16197944835046,0.9915468311200801,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Pistachio Cookie,Strawberry Matcha,19,563,586,22.303812871822608,0.8518722834158791,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Croissant,Strawberry Matcha,19,594,586,23.531909140075715,0.8074143022948485,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Croissant,Vanilla Latte,19,594,570,22.88939967550027,0.8300785634118967,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Iced Latte,18,490,1066,35.312330989724174,0.5097369529425279,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Chocolate Croissant,18,742,594,29.796376419686318,0.6041003022135097,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Pesto Sandwich,Iced Latte,18,462,1066,33.29448350459708,0.5406301016057113,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Matcha,Lemonade,18,1009,451,30.76385884261763,0.5851021515891346,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Matcha,Vanilla Latte,18,1009,570,38.88115197404002,0.4629492462573679,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Matcha,Iced Mocha,18,1009,457,31.173134126554896,0.5774202852663013,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cold Brew,Iced Matcha,18,609,1009,41.541441319632234,0.4333022501916251,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Chocolate Cookie,18,915,711,43.980868036776634,0.4092688662931452,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Chocolate Cookie,18,470,711,22.591265548945376,0.7967681120387826,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Cookie,Spanish Latte,18,711,516,24.802325581395348,0.7257383966244726,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Latte,Turkey & Cheese Sandwich,17,1066,420,30.267712276906437,0.5616546055570446,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Cookie,Still Water,17,711,492,23.648729042725797,0.7188546990955141,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cold Brew,Iced Latte,17,609,1066,43.88818280151433,0.38734800383244455,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Iced Americano,17,490,624,20.670632774472686,0.8224228152799582,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Classic Matcha,Iced Latte,17,826,1066,59.52650081124932,0.28558708757137863,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Halloumi Wrap,Sparkling Water,17,418,462,13.055435370470525,1.3021396466372543,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Classic Matcha,Cold Brew,17,826,609,34.00716603569497,0.4998946393285543,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Egg Sandwich,Iced Latte,17,416,1066,29.97944835045971,0.5670551306104776,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Pesto Sandwich,Fresh Orange Juice,17,462,393,12.274607896160086,1.3849729574920415,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Sparkling Water,Turkey & Cheese Sandwich,17,462,420,13.117901568415359,1.2959389816532674,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,Classic Matcha,17,507,826,28.311384532179556,0.6004651584834114,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,Flat White,17,507,548,18.782855597620337,0.9050806950863098,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Pistachio Cookie,17,742,563,28.24134667387777,0.6019542975875293,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Iced Latte,17,742,1066,53.47295835586804,0.3179177012587045,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Americano,Iced Latte,17,624,1066,44.969172525689565,0.3780367537403184,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Cheesecake Slice,17,742,507,25.43226068144943,0.6684423462362504,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Latte,Strawberry Matcha,17,1066,586,42.230665224445644,0.40255108248115823,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Iced Matcha,17,470,1009,32.059897241752296,0.5302574700040066,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Pesto Sandwich,Peach Iced Tea,16,462,497,15.522850189291509,1.0307385438170147,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Cookie,Mint Tea,16,711,253,12.160830178474852,1.315699649216435,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Vanilla Latte,16,490,570,18.88182801514332,0.847375581811672,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Classic Matcha,Still Water,16,826,492,27.473769605191997,0.5823736687730073,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Croissant,Iced Americano,16,594,624,25.0578691184424,0.6385219718553052,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Banana Bread,16,456,527,16.246078961600865,0.9848530244016113,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cinnamon Roll,Spanish Latte,16,625,516,21.802325581395348,0.7338666666666667,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Butter Croissant,16,456,915,28.207138994050837,0.5672322883712012,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Egg Sandwich,16,742,416,20.86749594375338,0.7667426912709931,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Iced Mocha,16,915,457,28.268996755002703,0.5659910798627303,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Classic Matcha,Flat White,16,826,548,30.600865332612223,0.5228610310881745,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Flat White,Iced Latte,16,548,1066,39.49215792320173,0.40514372577751606,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Tuna Sandwich,Vanilla Latte,16,291,570,11.21349378042185,1.426852354253331,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Cinnamon Roll,16,456,625,19.267171444023795,0.8304280701754386,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Iced Latte,16,385,1066,27.745402920497565,0.5766721083794255,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Pesto Sandwich,Cold Brew,15,462,609,19.02095727420227,0.7886038427910349,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Strawberry Matcha,15,490,586,19.4118442401298,0.7727241067075294,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Frozen Yoghurt Cup,Iced Matcha,15,488,1009,33.28772309356409,0.45061658191034787,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Cinnamon Roll,15,742,625,31.35140616549486,0.47844743935309975,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Chocolate Croissant,15,470,594,18.873715521903733,0.7947560713518159,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Chocolate Cookie,15,449,711,21.58186857760952,0.6950278631370227,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Still Water,15,742,492,24.679826933477557,0.6077838406416409,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Iced Latte,15,470,1066,33.87101135749054,0.44285657259191247,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Butter Croissant,15,490,915,30.31030286641428,0.49488123118099697,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Iced Matcha,15,529,1009,36.08443753380205,0.4156916672443285,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Flat White,15,385,548,14.263115197404002,1.051663664802351,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cinnamon Roll,Iced Americano,15,625,624,26.365603028664143,0.5689230769230769,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Latte,Lemonade,15,1066,451,32.50175770686858,0.46151350137072916,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Cappuccino,15,529,742,26.53583017847485,0.56527343968939,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Cookie,Flat White,15,711,548,26.340454299621417,0.5694662601250423,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Croissant,Iced Mocha,15,594,457,18.351676581936182,0.817364012112371,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Latte,Tuna Sandwich,15,1066,291,20.97120064899946,0.715266629272161,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Spanish Latte,15,527,516,18.38372093023256,0.8159392789373814,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Chai Latte,15,382,470,12.137641968631693,1.2358248858193162,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Classic Matcha,Vanilla Latte,14,826,570,31.829367225527314,0.439845376152245,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Iced Americano,14,527,624,22.231476473769604,0.6297377511798764,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Salad Bowl,Iced Latte,14,210,1066,15.133856138453218,0.9250781738586616,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Chicken Pesto Sandwich,14,527,462,16.459843158464036,0.8505548847104824,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Iced Matcha,14,527,1009,35.9480124391563,0.38945129508051823,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Croissant,Flat White,14,594,548,22.005949161709033,0.6361915996952493,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Croissant,Cold Brew,14,594,609,24.45551649540292,0.5724679747668253,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Chicken Pesto Sandwich,14,742,462,23.1749594375338,0.6041003022135097,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Pistachio Cookie,14,915,563,34.825919415900486,0.4019994370517039,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Pistachio Cookie,Spanish Latte,14,563,516,19.63953488372093,0.7128478389579633,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Brownie,14,527,529,18.846876690102757,0.7428286516753174,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Classic Matcha,14,470,826,26.245267712276906,0.5334294987378291,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Matcha,Peach Iced Tea,14,1009,497,33.90163601946998,0.412959421544131,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Classic Matcha,Halloumi Wrap,14,826,418,23.341535965386697,0.5997891492985159,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Halloumi Wrap,Iced Latte,14,418,1066,30.12358031368307,0.46475219260841855,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Matcha,Tiramisu Cup,14,1009,420,28.649269875608436,0.4886686488272217,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Americano,Spanish Latte,14,624,516,21.767441860465116,0.6431623931623932,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Iced Matcha,14,449,1009,30.627433747971878,0.45710653119695566,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Americano,Vanilla Latte,14,624,570,24.045429962141696,0.5822312190733244,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Halloumi Wrap,Still Water,14,418,492,13.903190914007572,1.0069630839849069,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Americano,Iced Matcha,14,624,1009,42.56462952947539,0.3289115905567838,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Halloumi Wrap,Spanish Latte,14,418,516,14.581395348837209,0.9601275917065392,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Chicken Pesto Sandwich,14,385,462,12.024743104380747,1.1642660369933098,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Halloumi Wrap,14,529,418,14.94875608436993,0.9365327737629001,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Turkey & Cheese Sandwich,14,915,420,25.98025959978367,0.5388706739526411,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Strawberry Matcha,14,529,586,20.95686857760952,0.6680387362336045,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Coffee Frappe,Iced Latte,14,394,1066,28.393996755002703,0.493061970838373,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Cappuccino,14,490,742,24.579502433747972,0.5695802849441663,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Spanish Latte,Strawberry Matcha,13,516,586,20.441860465116278,0.6359499431171787,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Cookie,Halloumi Wrap,13,711,418,20.091806381828015,0.6470299261771614,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Latte,Mint Tea,13,1066,253,18.232693347755543,0.713004916610431,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Classic Matcha,Tiramisu Cup,13,826,420,23.453217955651702,0.5542949383143088,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Latte,Still Water,13,1066,492,35.45646295294754,0.3666468372000793,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Halloumi Wrap,Peach Iced Tea,13,418,497,14.04448350459708,0.9256303370462006,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Peach Iced Tea,Turkey & Cheese Sandwich,13,497,420,14.111681990265009,0.9212225735364568,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cold Brew,Pistachio Cookie,13,609,563,23.179218496484587,0.5608472089760752,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Chocolate Croissant,13,456,594,18.311519740400215,0.7099356134443855,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Egg Sandwich,13,529,416,14.877230935640886,0.8738185255198488,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Cold Brew,13,527,609,21.697065981611683,0.5991593522837388,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Latte,Iced Mocha,13,1066,457,32.93415359653867,0.39472701072743765,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Halloumi Wrap,Strawberry Matcha,13,418,586,16.55949161709032,0.7850482551398664,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Iced Latte,13,456,1066,32.862087614926985,0.39559264013692774,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Sparkling Water,13,742,462,23.1749594375338,0.5609502806268305,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Cookie,Turkey & Cheese Sandwich,13,711,420,20.187939426717143,0.6439488312906034,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Halloumi Wrap,13,742,418,20.967820443482964,0.6199976785875495,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Lemonade,Turkey & Cheese Sandwich,13,451,420,12.805570578691185,1.015183190792947,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cinnamon Roll,Iced Mocha,13,625,457,19.30942401297999,0.6732463894967178,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Fresh Orange Juice,13,742,393,19.71376419686317,0.6594377344773427,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,English Breakfast Tea,13,915,194,12.00040562466198,1.08329671567799,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Pesto Sandwich,Iced Matcha,13,462,1009,31.514196863169282,0.41251249576323906,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Chai Latte,13,490,470,15.569226608977825,0.8349804602692141,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Matcha,Sparkling Water,13,1009,462,31.514196863169282,0.41251249576323906,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Peach Iced Tea,13,915,497,30.74330719307734,0.4228562632626359,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Cappuccino,13,527,742,26.43550567874527,0.4917628646102385,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,Iced Matcha,13,507,1009,34.583761492698756,0.3758989606363244,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Latte,Tiramisu Cup,13,1066,420,30.267712276906437,0.4295005807200929,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Latte,Sparkling Water,13,1066,462,33.29448350459708,0.3904550733819026,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Lemonade,13,449,451,13.689764737696052,0.9496145659978568,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Lemonade,13,742,451,22.62317468902109,0.5746319947884605,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cinnamon Roll,Flat White,13,625,548,23.15440778799351,0.5614481751824818,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Iced Americano,13,382,624,16.114656571119525,0.806719022687609,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Fresh Orange Juice,Iced Latte,13,393,1066,28.32193077339102,0.4590082542046795,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cold Brew,Still Water,13,609,492,20.25608436992969,0.6417824769380699,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Egg Sandwich,Still Water,13,416,492,13.836668469442943,0.9395325203252032,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,Iced Americano,13,507,624,21.387777176852353,0.6078238001314924,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Fresh Orange Juice,Frozen Yoghurt Cup,13,393,488,12.965386695511087,1.0026696700454678,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Classic Matcha,Peach Iced Tea,13,826,497,27.752974580854517,0.4684182577304018,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cold Brew,Tiramisu Cup,12,609,420,17.291779340183883,0.6939713816561107,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Classic Matcha,Egg Sandwich,12,826,416,23.22985397512169,0.5165766436952878,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Iced Latte,12,449,1066,32.357625743645215,0.37085539263821626,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Pesto Sandwich,Pistachio Cookie,12,462,563,17.584234721471066,0.6824294710617979,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Iced Americano,12,742,624,31.30124391563007,0.3833713456354966,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Coffee Frappe,12,742,394,19.76392644672796,0.6071668012095174,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Chocolate Cookie,12,456,711,21.91833423472147,0.5474868606114442,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Coffee Frappe,12,915,394,24.371957815035156,0.4923691437130731,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Flat White,Strawberry Matcha,12,548,586,21.709572742022715,0.5527515507834883,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Lemonade,Still Water,12,451,492,15.00081124932396,0.799956735709264,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Chicken Pesto Sandwich,12,915,462,28.578285559762033,0.4198992264566035,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Egg Sandwich,Frozen Yoghurt Cup,12,416,488,13.724175229853975,0.8743694829760403,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Butter Croissant,12,529,915,32.72275554353705,0.3667172828411169,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cold Brew,Vanilla Latte,12,609,570,23.467414818820984,0.511347333851871,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Classic Matcha,Iced Mocha,12,826,457,25.519334775554352,0.4702316931668265,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Classic Matcha,Lemonade,12,826,451,25.18428880475933,0.4764875471779151,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Cheesecake Slice,12,529,507,18.13162520281233,0.6618270489144417,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Iced Mocha,12,742,457,22.924148188209845,0.5234654697517502,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Mocha,Pistachio Cookie,12,457,563,17.393929150892376,0.6898958766532836,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Fresh Orange Juice,Turkey & Cheese Sandwich,12,393,420,11.158734451054624,1.0753907669938205,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Cheesecake Slice,12,470,507,16.109383450513793,0.744907465693063,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Classic Matcha,12,382,826,21.33126014061655,0.562554669573926,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Still Water,Turkey & Cheese Sandwich,12,492,420,13.969713358572202,0.8590011614401858,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Iced Mocha,12,527,457,16.281706327744725,0.7370234887206807,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cold Brew,Sparkling Water,12,609,462,19.02095727420227,0.630883074232828,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Flat White,Frozen Yoghurt Cup,12,548,488,18.078961600865334,0.6637549359818116,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Spanish Latte,12,449,516,15.662790697674419,0.7661469933184855,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cinnamon Roll,Espresso,12,625,283,11.957477014602487,1.003556183745583,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Pesto Sandwich,Turkey & Cheese Sandwich,11,462,420,13.117901568415359,0.8385487528344672,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Pesto Sandwich,Sparkling Water,11,462,462,14.429691725256896,0.7623170480313337,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Cookie,Sparkling Water,11,711,462,22.206733369388857,0.4953452548389258,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Pesto Sandwich,Spanish Latte,11,462,516,16.11627906976744,0.6825396825396826,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Classic Matcha,Strawberry Matcha,11,826,586,32.722823147647375,0.3361568147823716,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Peach Iced Tea,Vanilla Latte,11,497,570,19.151568415359655,0.5743654911927706,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Flat White,11,449,548,16.634126554894536,0.6612911091964301,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Matcha,Still Water,11,1009,492,33.5605732828556,0.3277655571402096,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Mocha,Peach Iced Tea,11,457,497,15.354853975121687,0.7163858424067381,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cinnamon Roll,Frozen Yoghurt Cup,11,625,488,20.619253650621957,0.5334819672131148,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Halloumi Wrap,Iced Mocha,11,418,457,12.914142779881017,0.851779338938155,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Latte,Spanish Latte,11,1066,516,37.18604651162791,0.2958098811757348,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Still Water,11,456,492,15.167117360735533,0.7252531735843674,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Vanilla Latte,11,742,570,28.592482422931315,0.38471650825176146,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Cookie,Tiramisu Cup,11,711,420,20.187939426717143,0.5448797803228184,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Espresso,Vanilla Latte,11,283,570,10.905219037317469,1.008691339656562,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Cold Brew,11,490,609,20.173742563547865,0.5452632284440869,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cold Brew,Spanish Latte,11,609,516,21.24418604651163,0.5177887246852764,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Vanilla Latte,11,470,570,18.11114115738237,0.6073609555804405,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Egg Sandwich,Vanilla Latte,11,416,570,16.0302866414278,0.6862010796221322,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Fresh Orange Juice,Spanish Latte,11,393,516,13.709302325581396,0.8023748939779474,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Cinnamon Roll,11,449,625,18.97140346133045,0.5798200445434298,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cinnamon Roll,Coffee Frappe,11,625,394,16.64751216873986,0.6607593908629442,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Mocha,Still Water,11,457,492,15.200378583017848,0.7236661863336358,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Croissant,Cinnamon Roll,11,594,625,25.098025959978365,0.4382814814814815,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cold Brew,Frozen Yoghurt Cup,11,609,488,20.091400757166035,0.5474979138065628,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Caramel Latte,11,529,449,16.057395889670094,0.685042585708211,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Chocolate Cookie,11,529,711,25.42719037317469,0.4326077650956213,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Cookie,Peach Iced Tea,11,711,497,23.88906165494862,0.4604617861882972,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Cookie,Lemonade,11,711,451,21.67800162249865,0.507426846420363,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Still Water,11,915,492,30.43401838831801,0.3614376471633569,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Flat White,Tiramisu Cup,11,548,420,15.559762033531639,0.7069516857838025,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Lemonade,Strawberry Matcha,11,451,586,17.866819902650082,0.6156663614417713,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Coffee Frappe,Iced Matcha,11,394,1009,26.87574364521363,0.4092910002867593,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Flat White,Spanish Latte,11,548,516,19.11627906976744,0.5754257907542579,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Flat White,Vanilla Latte,11,548,570,21.116819902650082,0.5209117684722756,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Flat White,Turkey & Cheese Sandwich,11,548,420,15.559762033531639,0.7069516857838025,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Pistachio Cookie,Vanilla Latte,11,563,570,21.694835045970795,0.5070331245520551,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Classic Matcha,Sparkling Water,10,826,462,25.798539751216875,0.3876188379820341,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Caramel Latte,10,490,449,14.873580313683071,0.6723330757692833,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Pistachio Cookie,Sparkling Water,10,563,462,17.584234721471066,0.5686912258848316,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Flat White,Pistachio Cookie,10,548,563,20.857490535424553,0.4794440626985259,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Mint Tea,10,915,253,15.650013520822066,0.6389770837383096,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Iced Americano,10,385,624,16.241211465657113,0.6157176157176157,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Mint Tea,10,490,253,8.380881557598702,1.1931919012664354,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Lemonade,Vanilla Latte,10,451,570,17.378988642509466,0.5754074765628039,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Cold Brew,10,742,609,30.548810167658193,0.32734499134722206,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Caramel Latte,10,742,449,22.52285018929151,0.4439935406023568,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Butter Croissant,10,385,915,23.815237966468363,0.4198992264566035,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Frozen Yoghurt Cup,10,529,488,17.452136289886425,0.5729957544392451,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Iced Mocha,10,529,457,16.343496484586264,0.6118641754187124,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Cinnamon Roll,10,915,625,38.66110059491617,0.25865792349726774,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Flat White,10,742,548,27.488912925905893,0.3637830287052158,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Iced Matcha,10,456,1009,31.104921579232016,0.32149253212317214,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Turkey & Cheese Sandwich,10,742,420,21.06814494321255,0.47465023745347196,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Espresso,10,915,283,17.505746349378043,0.5712409971229412,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cold Brew,Flat White,10,609,548,22.561654948620877,0.4432298970431364,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Strawberry Matcha,10,742,586,29.395078420767984,0.34019300295300037,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Mocha,Turkey & Cheese Sandwich,10,457,420,12.975932936722552,0.7706574971345213,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Pistachio Cookie,10,449,563,17.089440237966468,0.5851566734048824,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cold Brew,Iced Americano,10,609,624,25.69064359113034,0.38924676855711343,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Flat White,10,382,548,14.151974040021633,0.7066152023541101,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Matcha,Turkey & Cheese Sandwich,10,1009,420,28.649269875608436,0.34904903487658695,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Classic Matcha,10,529,826,29.539886425094647,0.3385253367631375,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Americano,Still Water,10,624,492,20.755002704164415,0.48181154888471955,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Egg Sandwich,Iced Americano,10,416,624,17.548945375878855,0.5698348126232741,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,Frozen Yoghurt Cup,10,507,488,16.726338561384534,0.5978594755391728,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Salad Bowl,Cold Brew,10,210,609,8.645889670091941,1.1566189694268512,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Flat White,Iced Matcha,10,548,1009,37.380475932936726,0.2675193332995739,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Vanilla Latte,10,382,570,14.720118983234181,0.6793423348948286,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Sparkling Water,10,456,462,14.242293131422391,0.7021341231867547,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Sparkling Water,10,470,462,14.679556517036236,0.681219489730128,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,Lemonade,10,507,451,15.458153055705788,0.646907813887176,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Mint Tea,10,527,253,9.013723634396971,1.1094194148397598,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Caramel Latte,10,527,449,15.996687398593835,0.6251294252883278,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Still Water,Strawberry Matcha,10,492,586,19.49107625743645,0.5130553012014762,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Flat White,10,456,548,16.893455922120065,0.5919451914457677,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Flat White,10,490,548,18.15305570578691,0.5508714434678981,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Butter Croissant,10,382,915,23.629664683612763,0.42319686436071297,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Cheesecake Slice,10,382,507,13.093158464034614,0.7637576546154878,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cold Brew,Lemonade,10,609,451,18.568077339102217,0.5385587219060727,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Matcha,Mint Tea,10,1009,253,17.257774472687938,0.5794489907042155,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Classic Matcha,Fresh Orange Juice,10,826,393,21.945511087074095,0.45567405381094084,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Classic Matcha,Frozen Yoghurt Cup,10,826,488,27.25040562466198,0.3669670146469257,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Frozen Yoghurt Cup,Still Water,10,488,492,16.231476473769604,0.6160868985739039,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Halloumi Wrap,Lemonade,10,418,451,12.744591671173607,0.784646558949278,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Still Water,10,449,492,14.93428880475933,0.6696000144856682,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Fresh Orange Juice,Tuna Sandwich,10,393,291,7.731408869659275,1.293425321126588,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Granola Yoghurt,Iced Latte,10,242,1066,17.439967550027042,0.5733955623090878,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,Coffee Frappe,10,507,394,13.504461871281775,0.7404960001601938,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Peach Iced Tea,10,742,497,24.930638182801513,0.4011128767212439,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Matcha,Spanish Latte,10,1009,516,35.19767441860465,0.2841096795507103,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Mocha,Vanilla Latte,10,457,570,17.61019469983775,0.5678528926254367,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Americano,Lemonade,10,624,451,19.025419145484044,0.5256125987833306,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Spanish Latte,Sparkling Water,9,516,462,16.11627906976744,0.5584415584415585,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Lemonade,9,915,451,27.89785018929151,0.32260550325324416,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Iced Matcha,9,385,1009,26.261830719307735,0.3427026887879217,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Flat White,Peach Iced Tea,9,548,497,18.412385073012437,0.4888014216686984,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Vanilla Latte,9,529,570,20.384667387777178,0.44150830763108145,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cold Brew,Egg Sandwich,9,609,416,17.127095727420226,0.5254831375521031,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Chocolate Cookie,9,385,711,18.50561114115738,0.486338977478218,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Americano,9,490,456,15.105462412114656,0.5958109559613319,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Coffee Frappe,Cold Brew,9,394,609,16.22133585722012,0.5548248355880073,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Tiramisu Cup,Vanilla Latte,9,420,570,16.18442401297999,0.5560902255639097,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Classic Matcha,Coffee Frappe,9,826,394,22.001352082206598,0.4090657686114969,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Croissant,Halloumi Wrap,9,594,418,16.785559762033532,0.53617514861534,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,Vanilla Latte,9,507,570,19.53691184424013,0.46066645904702586,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Fresh Orange Juice,Peach Iced Tea,9,393,497,13.204502433747972,0.6815856973904495,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Cookie,English Breakfast Tea,9,711,194,9.324905354245539,0.9651572491191439,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Chai Latte,9,527,470,16.744862087614926,0.5374782994872623,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Egg Sandwich,Turkey & Cheese Sandwich,9,416,420,11.811790156841536,0.7619505494505495,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Lemonade,9,527,451,16.06794213088156,0.5601215094434884,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Butter Croissant,9,527,915,32.599040021633314,0.2760817494634025,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Egg Sandwich,Sparkling Water,9,416,462,12.99296917252569,0.6926823176823177,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Salad Bowl,Sparkling Water,9,210,462,6.5589507842076795,1.3721706864564007,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Strawberry Matcha,9,456,586,18.06489994591671,0.49820370037722295,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Espresso,Iced Latte,9,283,1066,20.394672796106004,0.4412917083778068,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Peach Iced Tea,Spanish Latte,9,497,516,17.337209302325583,0.5191146881287726,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Cookie,Tuna Sandwich,9,711,291,13.987358031368307,0.6434381660794293,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Iced Mocha,9,382,457,11.80191995673337,0.7625877851226414,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Latte,Soup of the Day,9,1066,179,12.899810708491076,0.6976846562621192,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Frozen Yoghurt Cup,Peach Iced Tea,9,488,497,16.39643050297458,0.5488999571197678,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Frozen Yoghurt Cup,Spanish Latte,9,488,516,17.023255813953487,0.528688524590164,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Strawberry Matcha,9,449,586,17.787587885343427,0.5059707959287609,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Frozen Yoghurt Cup,Tuna Sandwich,9,488,291,9.600324499729583,0.9374683116444145,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Cheesecake Slice,9,915,507,31.361884802596,0.286972548258803,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Iced Mocha,9,456,457,14.088155759870201,0.6388345042036162,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Coffee Frappe,Tiramisu Cup,9,394,420,11.187128177393186,0.8044960116026105,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Sparkling Water,9,385,462,12.024743104380747,0.7484567380671276,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Croissant,English Breakfast Tea,9,594,194,7.790427257977285,1.155263980006248,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cinnamon Roll,Pistachio Cookie,9,625,563,23.788196322336397,0.37833889875666077,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Croissant,Egg Sandwich,9,594,416,16.7052460789616,0.5387529137529138,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cinnamon Roll,Cold Brew,9,625,609,25.731814494321256,0.3497615763546798,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Blueberry Muffin,9,456,382,11.776095186587344,0.7642601267566823,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Pesto Sandwich,Lemonade,9,462,451,14.086127636560303,0.6389264837158407,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Soup of the Day,Sparkling Water,9,179,462,5.590724716062737,1.6098091852281795,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,Cold Brew,9,507,609,20.873647917793402,0.4311656513248025,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Strawberry Matcha,9,382,586,15.133315305570578,0.5947143648482033,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Frozen Yoghurt Cup,Pistachio Cookie,9,488,563,18.57382368848026,0.4845528928748216,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Iced Latte,9,382,1066,27.52920497566252,0.3269255326463857,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Americano,Sparkling Water,9,624,462,19.489453758788535,0.4617882117882118,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Pistachio Cookie,9,470,563,17.88872363439697,0.5031102377083254,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Strawberry Matcha,Tiramisu Cup,9,586,420,16.63872363439697,0.5409068746952707,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Pesto Sandwich,Strawberry Matcha,9,462,586,18.30259599783667,0.491733522450246,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Classic Matcha,9,456,826,25.46349378042185,0.35344717726519687,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,Fresh Orange Juice,9,507,393,13.47018658734451,0.6681421925109535,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,Spanish Latte,9,507,516,17.686046511627907,0.5088757396449705,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Pesto Sandwich,Cinnamon Roll,9,462,625,19.520686857760953,0.4610493506493506,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Americano,Peach Iced Tea,9,624,497,20.965927528393728,0.4292679151834081,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Iced Mocha,9,385,457,11.894605191995673,0.7566455426411663,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Peach Iced Tea,9,449,497,15.086060032449973,0.5965772362459837,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Chocolate Croissant,9,449,594,18.03042184964846,0.49915637443477084,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Egg Sandwich,Iced Matcha,9,416,1009,28.37641968631693,0.31716474803689865,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Lemonade,9,529,451,16.128921038399135,0.5580038477820763,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Cold Brew,9,449,609,18.48573553272039,0.48686188245361883,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Egg Sandwich,Halloumi Wrap,9,416,418,11.755543537047053,0.7655962458594037,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Pesto Sandwich,Egg Sandwich,8,462,416,12.99296917252569,0.6157176157176157,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Lemonade,Tiramisu Cup,8,451,420,12.805570578691185,0.6247281174110442,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Flat White,Tuna Sandwich,8,548,291,10.780692266089778,0.7420673740186119,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Salad Bowl,Classic Matcha,8,210,826,11.726608977825851,0.6822091548483801,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Pesto Sandwich,Vanilla Latte,8,462,570,17.80286641427799,0.449365838839523,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Cheesecake Slice,8,490,507,16.794889129259058,0.47633538622549615,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Caramel Latte,8,456,449,13.841535965386695,0.5779705388192083,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Quinoa Bowl,Sparkling Water,8,195,462,6.090454299621417,1.3135309135309137,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Still Water,8,529,492,17.59518658734451,0.4546698018965067,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cinnamon Roll,Egg Sandwich,8,625,416,17.577068685776094,0.45513846153846155,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Peach Iced Tea,8,385,497,12.935708491076257,0.6184431262902088,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cold Brew,Fresh Orange Juice,8,609,393,16.180164954029205,0.4944325365488829,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Croissant,Espresso,8,594,283,11.364386154678204,0.7039535520100891,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Cookie,Fresh Orange Juice,8,711,393,18.8901433207139,0.42350128657984487,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Frozen Yoghurt Cup,8,742,488,24.479177934018388,0.32680836021386594,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Iced Americano,8,529,624,22.31584640346133,0.3584896514953226,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Halloumi Wrap,8,915,418,25.856544077879935,0.30939943002065523,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Quinoa Bowl,8,742,195,9.781638723634398,0.8178588706890593,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Fresh Orange Juice,8,385,393,10.22883991346674,0.7821023759955057,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Peach Iced Tea,8,490,497,16.46362898864251,0.48591959922802125,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Lemonade,Spanish Latte,8,451,516,15.732558139534884,0.50849963045085,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cinnamon Roll,Mint Tea,8,625,253,10.689899945916713,0.7483699604743083,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Lemonade,Tuna Sandwich,8,451,291,8.872431043807463,0.9016694478097546,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Tiramisu Cup,8,529,420,15.020281233098972,0.5326131965073364,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Iced Americano,8,470,624,19.826933477555436,0.4034915439170758,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Americano,Tuna Sandwich,8,624,291,12.275824770146025,0.6516873733368579,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Americano,Turkey & Cheese Sandwich,8,624,420,17.717685235262305,0.4515262515262515,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Egg Sandwich,Flat White,8,416,548,15.41157382368848,0.5190903986524424,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Americano,Strawberry Matcha,8,624,586,24.7203893996755,0.3236194976809311,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Cookie,Iced Mocha,8,711,457,21.966400757166035,0.3641925724855121,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cold Brew,Turkey & Cheese Sandwich,8,609,420,17.291779340183883,0.4626475877707405,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Egg Sandwich,Granola Yoghurt,8,416,242,6.805840995132504,1.17546090273363,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Frozen Yoghurt Cup,Iced Americano,8,488,624,20.58626284478096,0.3886086591004624,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cold Brew,Iced Mocha,8,609,457,18.8151027582477,0.4251903432466324,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Frozen Yoghurt Cup,Strawberry Matcha,8,488,586,19.332612222823148,0.4138085380182398,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Egg Sandwich,8,449,416,12.627366143861547,0.6335446290902861,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Chai Latte,8,449,470,14.266495402920498,0.5607543951097,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Coffee Frappe,8,529,394,14.090454299621417,0.5677602602362469,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Cheesecake Slice,8,449,507,15.38960248783126,0.5198314905356194,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Flat White,8,529,548,19.597890751757706,0.408207194403433,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Mint Tea,8,742,253,12.69104921579232,0.6303655327445319,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Spanish Latte,8,382,516,13.325581395348838,0.600349040139616,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Latte,Quinoa Bowl,8,1066,195,14.052866414277988,0.5692788762207149,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Lemonade,8,456,451,13.903190914007572,0.5754074765628039,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Sparkling Water,8,449,462,14.023661438615468,0.5704644279254524,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Coffee Frappe,8,470,394,12.518929150892374,0.6390322929042013,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Frozen Yoghurt Cup,Turkey & Cheese Sandwich,8,488,420,13.856138453217955,0.5773614363778299,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cold Brew,Strawberry Matcha,8,609,586,24.126149269875608,0.3315904212691314,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,Pistachio Cookie,8,507,563,19.296984856679288,0.41457253863320265,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Peach Iced Tea,Strawberry Matcha,8,497,586,19.689156300703083,0.4063150232452737,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Peach Iced Tea,Still Water,8,497,492,16.53082747431044,0.48394431630433005,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Peach Iced Tea,Quinoa Bowl,8,497,195,6.551852352623039,1.2210287365216943,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Peach Iced Tea,8,456,497,15.321254732287723,0.5221504465388824,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Chocolate Cookie,8,382,711,18.361411573823688,0.4356963498059661,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Peach Iced Tea,Tuna Sandwich,8,497,291,9.777379664683613,0.818215132720723,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Cookie,Cinnamon Roll,8,711,625,30.041576527852893,0.2662976090014065,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Salad Bowl,Still Water,8,210,492,6.984856679286101,1.1453348819202478,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Croissant,Mint Tea,8,594,253,10.159680908599244,0.7874263052128664,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Cinnamon Roll,8,527,625,22.267103839913467,0.35927438330170774,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Turkey & Cheese Sandwich,8,470,420,13.34505137912385,0.5994731509625126,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,Iced Mocha,8,507,457,15.663804759329368,0.5107315957341205,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,Peach Iced Tea,8,507,497,17.034816116819904,0.46962643712372854,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,Strawberry Matcha,8,507,586,20.085316387236343,0.3983009202226845,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,Egg Sandwich,8,507,416,14.258518117901568,0.5610681231983007,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,Still Water,8,507,492,16.863439697133586,0.4743990635172624,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Still Water,Tuna Sandwich,8,492,291,9.679015684153596,0.8265303271589418,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Cinnamon Roll,8,490,625,20.703758788534344,0.3864032653061224,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Flat White,Halloumi Wrap,8,548,418,15.48566792861006,0.5166067125344882,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Flat White,Lemonade,8,548,451,16.708220659816117,0.47880622137342804,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Croissant,Frozen Yoghurt Cup,8,594,488,19.59653866955111,0.40823535905503117,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Still Water,8,490,492,16.297998918334233,0.4908578065372491,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Classic Matcha,Turkey & Cheese Sandwich,8,826,420,23.453217955651702,0.34110457742419004,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Coffee Frappe,Pistachio Cookie,8,394,563,14.996078961600865,0.5334727844848572,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Spanish Latte,Vanilla Latte,7,516,570,19.88372093023256,0.35204678362573094,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Iced Mocha,7,490,457,15.138588426176312,0.4623944982807127,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Still Water,Vanilla Latte,7,492,570,18.958896700919414,0.36921979746113254,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Strawberry Matcha,Tuna Sandwich,7,586,291,11.528258518117902,0.6072035935869017,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Frozen Yoghurt Cup,7,490,488,16.165494862087616,0.43302107728337236,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,Sparkling Water,7,507,462,15.835181179015684,0.4420536728229036,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,Tuna Sandwich,7,507,291,9.974107625743645,0.701817171285847,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Fresh Orange Juice,Halloumi Wrap,7,393,418,11.105597620335317,0.630312770127957,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Chocolate Cookie,7,490,711,23.55259599783667,0.2972071529033554,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Chicken Pesto Sandwich,7,490,462,15.304218496484586,0.45739022881880026,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Pesto Sandwich,Chocolate Cookie,7,462,711,22.206733369388857,0.3152197076247709,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Flat White,Iced Americano,7,548,624,23.11736073553272,0.3028027325472581,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Pesto Sandwich,Tiramisu Cup,7,462,420,13.117901568415359,0.5336219336219337,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Pesto Sandwich,Chicken Salad Bowl,7,462,210,6.5589507842076795,1.0672438672438673,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+English Breakfast Tea,Iced Matcha,7,194,1009,13.233234180638183,0.5289712178026627,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Tuna Sandwich,7,470,291,9.246214169821526,0.7570666081743072,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Still Water,7,470,492,15.63277447268794,0.44777720117626707,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Spanish Latte,7,470,516,16.3953488372093,0.4269503546099291,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Espresso,Iced Matcha,7,283,1009,19.304150892374256,0.3626163118505885,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Espresso,Flat White,7,283,548,10.484315846403462,0.6676639756519047,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Salad Bowl,Flat White,7,210,548,7.7798810167658194,0.8997566909975669,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Fresh Orange Juice,Sparkling Water,7,393,462,12.274607896160086,0.5702829824967229,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Fresh Orange Juice,Still Water,7,393,492,13.071660356949703,0.5355096299054594,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Fresh Orange Juice,Quinoa Bowl,7,393,195,5.180840995132504,1.351131989299928,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Fresh Orange Juice,Pistachio Cookie,7,393,563,14.958017847485127,0.4679764438960675,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,Chocolate Croissant,7,507,594,20.35951865873445,0.3438195233067028,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,Cinnamon Roll,7,507,625,21.422052460789615,0.3267660749506903,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Egg Sandwich,Lemonade,7,416,451,12.683612763656031,0.551893228722497,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+English Breakfast Tea,Pistachio Cookie,7,194,563,7.3838561384532175,0.9480141363461574,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,Granola Yoghurt,7,507,242,8.294618712817739,0.8439206481164524,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,Halloumi Wrap,7,507,418,14.327068685776096,0.48858563838320923,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Egg Sandwich,Strawberry Matcha,7,416,586,16.48025959978367,0.42475059070622206,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Matcha,Quinoa Bowl,7,1009,195,13.30144672796106,0.5262585448908541,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Chicken Salad Bowl,7,527,210,7.481746890210925,0.9356103731815307,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Fresh Orange Juice,7,915,393,24.31010005408329,0.28794616165408304,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Cold Brew,7,529,609,21.77940778799351,0.32140451513373747,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Chicken Pesto Sandwich,7,529,462,16.52230935640887,0.4236695881308358,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Quinoa Bowl,7,915,195,12.062263385613845,0.5803222642566905,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Granola Yoghurt,7,742,242,12.139264467279611,0.5766411975674411,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Chai Latte,7,742,470,23.576257436452135,0.29690887193898036,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Tuna Sandwich,7,915,291,18.00060843699297,0.38887574408953485,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Tiramisu Cup,7,915,420,25.98025959978367,0.26943533697632055,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Turkey & Cheese Sandwich,7,529,420,15.020281233098972,0.4660365469439194,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Sparkling Water,7,529,462,16.52230935640887,0.4236695881308358,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Tiramisu Cup,7,742,420,21.06814494321255,0.33225516621743034,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Granola Yoghurt,Vanilla Latte,7,242,570,9.325310978907517,0.750645208061476,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Iced Mocha,7,449,457,13.871890210924825,0.5046176039143635,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Americano,Iced Mocha,7,624,457,19.278528934559223,0.36309824384222633,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Halloumi Wrap,Iced Matcha,7,418,1009,28.512844780962684,0.245503388166786,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Halloumi Wrap,Iced Americano,7,418,624,17.63331530557058,0.3969758311863575,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Frozen Yoghurt Cup,7,470,488,15.505678745267712,0.4514475061039414,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Frozen Yoghurt Cup,Iced Mocha,7,488,457,15.076798269334775,0.464289557699896,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Frozen Yoghurt Cup,Lemonade,7,488,451,14.878853434288805,0.47046635891098104,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Strawberry Matcha,Vanilla Latte,7,586,570,22.58112493239589,0.3099934135680498,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Brownie,7,456,529,16.307733910221742,0.4292441879746625,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Soup of the Day,Still Water,7,179,492,5.953758788534343,1.1757278466639414,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,English Breakfast Tea,7,490,194,6.42644672796106,1.0892488954344626,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Classic Matcha,Granola Yoghurt,7,826,242,13.513520822065981,0.5179997198487183,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Peach Iced Tea,Sparkling Water,7,497,462,15.522850189291509,0.4509481129199439,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Spanish Latte,7,490,516,17.093023255813954,0.4095238095238095,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Turkey & Cheese Sandwich,Vanilla Latte,7,420,570,16.18442401297999,0.43251461988304096,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Coffee Frappe,Peach Iced Tea,7,394,497,13.238101676581936,0.5287767212411525,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Coffee Frappe,Iced Americano,7,394,624,16.620876149269876,0.42115710009111024,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Coffee Frappe,Flat White,7,394,548,14.596538669551109,0.47956574900885546,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Tiramisu Cup,Tuna Sandwich,7,420,291,8.262574364521363,0.8471935853379152,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Cappuccino,7,456,742,22.87398593834505,0.3060244952002648,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Iced Americano,7,456,624,19.23634396971336,0.36389451192082767,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Vanilla Latte,7,456,570,17.571660356949703,0.39836872883964297,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Cappuccino,7,385,742,19.312466197944836,0.3624601813281058,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Coffee Frappe,7,385,394,10.254867495943753,0.682602676511306,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cold Brew,Halloumi Wrap,7,609,418,17.209437533802056,0.40675356101853377,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Coffee Frappe,Vanilla Latte,7,394,570,15.182531097890752,0.46105619378395224,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cold Brew,Granola Yoghurt,7,609,242,9.963358572201189,0.7025743326683767,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Coffee Frappe,Turkey & Cheese Sandwich,7,394,420,11.187128177393186,0.6257191201353638,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,English Breakfast Tea,7,527,194,6.91170903190914,1.012774115299595,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cold Brew,Peach Iced Tea,7,609,497,20.461938885884262,0.3420985684220264,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Peach Iced Tea,7,527,497,17.70680097349919,0.39532832669642143,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Caramel Latte,7,382,449,11.59532179556517,0.6036917408085449,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Pistachio Cookie,7,382,563,14.539345592212007,0.4814522053695145,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Espresso,7,527,283,10.082544618712818,0.6942691815127966,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Halloumi Wrap,7,527,418,14.892239048134126,0.4700434889189508,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Americano,Pistachio Cookie,7,624,563,23.75013520822066,0.29473516418454254,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Cold Brew,7,382,609,15.727285018929152,0.4450863573448877,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Americano,Quinoa Bowl,7,624,195,8.226068144943213,0.8509533201840894,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Pistachio Cookie,7,529,563,20.134329367225526,0.3476649195673999,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Brownie,7,382,529,13.66130340724716,0.5123962034461941,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Pistachio Cookie,7,527,563,20.05820713899405,0.3489843310268587,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Pistachio Cookie,7,456,563,17.355868036776634,0.40332180362095293,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Spanish Latte,7,456,516,15.906976744186046,0.44005847953216376,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Sparkling Water,7,490,462,15.304218496484586,0.45739022881880026,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Chicken Salad Bowl,7,456,210,6.473769605191996,1.0812865497076023,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Halloumi Wrap,7,456,418,12.885884261763115,0.5432300847813313,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cinnamon Roll,Tuna Sandwich,7,625,291,12.295497566252028,0.569314089347079,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Still Water,7,385,492,12.805570578691185,0.5466371027346637,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Spanish Latte,7,385,516,13.430232558139535,0.5212121212121212,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cinnamon Roll,Peach Iced Tea,7,625,497,20.99952677122769,0.33334084507042255,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Turkey & Cheese Sandwich,7,385,420,10.931584640346133,0.6403463203463203,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Tiramisu Cup,7,385,420,10.931584640346133,0.6403463203463203,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Mocha,Sparkling Water,7,457,462,14.273526230394808,0.4904184072674226,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Mocha,Strawberry Matcha,7,457,586,18.104515954570036,0.386643863750084,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Lemonade,Pistachio Cookie,7,451,563,17.165562466197944,0.4077932205125378,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Coffee Frappe,Still Water,7,394,492,13.104921579232018,0.5341504684082373,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Pesto Sandwich,Espresso,6,462,283,8.838967009194159,0.6788123537240145,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Sparkling Water,Strawberry Matcha,6,462,586,18.30259599783667,0.327822348300164,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Sparkling Water,Still Water,6,462,492,15.366684694429422,0.39045507338190266,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Flat White,Still Water,6,548,492,18.22714981070849,0.32917927719423185,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Spanish Latte,Tiramisu Cup,6,516,420,14.651162790697674,0.40952380952380957,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Egg Sandwich,Mint Tea,6,416,253,7.1151974040021635,0.843265430221952,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Fresh Orange Juice,Strawberry Matcha,6,393,586,15.569091400757166,0.3853789438032462,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Flat White,Fresh Orange Juice,6,548,393,14.55949161709032,0.41210230122025965,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Espresso,Lemonade,6,283,451,8.628515413737155,0.6953687525953319,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Salad Bowl,Egg Sandwich,6,210,416,5.905895078420768,1.0159340659340659,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Salad Bowl,Peach Iced Tea,6,210,497,7.055840995132504,0.850359298649037,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Espresso,Strawberry Matcha,6,283,586,11.211330448891292,0.5351728795571582,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,Mint Tea,6,507,253,8.671646836127637,0.6919100965923708,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Chocolate Croissant,6,490,594,19.67685235262304,0.3049268192125335,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,English Breakfast Tea,6,507,194,6.649405083829097,0.9023363630818032,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Fresh Orange Juice,Lemonade,6,393,451,11.982355327203894,0.5007362773141958,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Fresh Orange Juice,Iced Matcha,6,393,1009,26.807531097890752,0.22381770175292595,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Cookie,Espresso,6,711,283,13.60282585181179,0.4410848205632837,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Egg Sandwich,Pistachio Cookie,6,416,563,15.833423472147107,0.3789452110944118,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Cookie,Coffee Frappe,6,711,394,18.938209843158464,0.31681980766347534,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Salad Bowl,Tiramisu Cup,6,210,420,5.962682531097891,1.0062585034013605,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Still Water,6,527,492,17.52866414277988,0.3422964779932429,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Chicken Pesto Sandwich,6,382,462,11.931043807463494,0.5028897803766914,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Egg Sandwich,6,382,416,10.743104380746349,0.5584977849375755,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Halloumi Wrap,6,382,418,10.7947539210384,0.5558255467321326,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Quinoa Bowl,6,529,195,6.973702001081666,0.8603751635887742,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Coffee Frappe,6,382,394,10.174959437533802,0.5896829404417041,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Peach Iced Tea,6,382,497,12.834910762574365,0.46747500711072715,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Cinnamon Roll,6,382,625,16.14048134126555,0.37173612565445024,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Chocolate Cookie,6,527,711,25.33105732828556,0.23686338561557738,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Cheesecake Slice,6,527,507,18.063074634937806,0.332169363259715,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Americano,Tiramisu Cup,6,624,420,17.717685235262305,0.3386446886446886,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Egg Sandwich,Fresh Orange Juice,6,416,393,11.052460789616008,0.5428655314151498,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Soup of the Day,6,915,179,11.072539210383992,0.541881124645114,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Granola Yoghurt,Still Water,6,242,492,8.049215792320172,0.7454142310018143,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Frozen Yoghurt Cup,Tiramisu Cup,6,488,420,13.856138453217955,0.43302107728337236,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Iced Americano,6,449,624,18.94104921579232,0.3167723145451431,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Vanilla Latte,6,449,570,17.301919956733368,0.34678232329152503,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Classic Matcha,6,449,826,25.07260681449432,0.23930499307042283,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Egg Sandwich,Iced Mocha,6,416,457,12.852352623039481,0.4668405992257196,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Frozen Yoghurt Cup,6,915,488,30.186587344510546,0.1987637731792529,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Tuna Sandwich,6,529,291,10.406909140075717,0.5765400580749518,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Sparkling Water,6,915,462,28.578285559762033,0.20994961322830175,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Croissant,Fresh Orange Juice,6,594,393,15.781638723634398,0.3801886549978153,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Spanish Latte,6,529,516,18.453488372093023,0.32514177693761814,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Croissant,Pistachio Cookie,6,594,563,22.608301784748512,0.26538923874625475,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Flat White,6,527,548,19.52379664683613,0.30731727586254654,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Coffee Frappe,6,527,394,14.03718226068145,0.4274362110981612,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Egg Sandwich,6,527,416,14.820984315846404,0.4048314114727777,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cinnamon Roll,Halloumi Wrap,6,625,418,17.66157382368848,0.3397205741626794,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Matcha,Tuna Sandwich,6,1009,291,19.849851270957274,0.3022692673158072,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Lemonade,Sparkling Water,6,451,462,14.086127636560303,0.4259509891438938,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Mint Tea,Turkey & Cheese Sandwich,6,253,420,7.18361276365603,0.8352343308865048,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Turkey & Cheese Sandwich,6,456,420,12.947539210383992,0.4634085213032581,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Coffee Frappe,Spanish Latte,6,394,516,13.744186046511627,0.43654822335025384,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Croissant,Tiramisu Cup,6,594,420,16.865873445105464,0.3557479557479557,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Blueberry Muffin,6,527,382,13.60965386695511,0.44086352663004064,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Lemonade,Peach Iced Tea,6,451,497,15.153258518117902,0.3959544406126337,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Vanilla Latte,6,385,570,14.835722011898323,0.40442925495557075,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Lemonade,6,385,451,11.738439697133586,0.5111411869726725,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Classic Matcha,6,385,826,21.49878312601406,0.2790855633470646,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cinnamon Roll,Still Water,6,625,492,20.788263926446728,0.28862439024390246,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Halloumi Wrap,6,385,418,10.879529475392104,0.5514944385757783,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Mint Tea,Strawberry Matcha,6,253,586,10.022850189291509,0.598632114287256,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Pistachio Cookie,Still Water,6,563,492,18.726068144943213,0.3204089589741368,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Espresso,6,456,283,8.724175229853975,0.6877440952203832,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Classic Matcha,Tuna Sandwich,6,826,291,16.24972958355868,0.36923691370659745,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Tiramisu Cup,6,490,420,13.912925905895078,0.43125364431486884,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Mint Tea,Peach Iced Tea,6,253,497,8.50060843699297,0.7058318289181731,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Mint Tea,Pistachio Cookie,6,253,563,9.629461871281775,0.6230877779259894,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Classic Matcha,Espresso,6,826,283,15.803001622498648,0.3796747063202115,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Peach Iced Tea,Soup of the Day,6,497,179,6.01426446727961,0.9976282274653508,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Coffee Frappe,6,456,394,12.146024878312602,0.49398877905423455,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Soup of the Day,Spanish Latte,6,179,516,6.244186046511628,0.9608938547486033,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Quinoa Bowl,Still Water,6,195,492,6.4859383450513795,0.9250781738586616,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Tuna Sandwich,6,490,291,9.63967009194159,0.6224279402482643,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Pistachio Cookie,Turkey & Cheese Sandwich,6,563,420,15.98566792861006,0.37533620908398885,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Avocado Toast,6,490,385,12.753515413737155,0.47045852107076597,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Tiramisu Cup,Turkey & Cheese Sandwich,6,420,420,11.925365062195782,0.5031292517006802,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Quinoa Bowl,Vanilla Latte,5,195,570,7.514196863169281,0.6654071075123706,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Pistachio Cookie,Tiramisu Cup,5,563,420,15.98566792861006,0.3127801742366574,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Pistachio Cookie,Tuna Sandwich,5,563,291,11.075784207679828,0.45143530302197965,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Cold Brew,5,456,609,18.773931855056787,0.26632673638118287,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Classic Matcha,Quinoa Bowl,5,826,195,10.88899405083829,0.4591792388402558,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Coffee Frappe,Mint Tea,5,394,253,6.738912925905895,0.74195943099055,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cinnamon Roll,Granola Yoghurt,5,625,242,10.225121687398595,0.48899173553719005,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Cookie,Frozen Yoghurt Cup,5,711,488,23.45646295294754,0.21316086786101313,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Croissant,Coffee Frappe,5,594,394,15.821795565170362,0.31601975764412316,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Cookie,Quinoa Bowl,5,711,195,9.372971876690103,0.5334487359803816,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Salad Bowl,Strawberry Matcha,5,210,586,8.319361817198486,0.6010076385503007,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Croissant,Turkey & Cheese Sandwich,5,594,420,16.865873445105464,0.29645662978996307,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cinnamon Roll,English Breakfast Tea,5,625,194,8.196998377501352,0.609979381443299,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Croissant,Peach Iced Tea,5,594,497,19.957950243374796,0.25052672939996884,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Cheesecake Slice,5,456,507,15.629529475392104,0.3199072632271013,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Cookie,Egg Sandwich,5,711,416,19.995673336938886,0.25005409499080383,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Cookie,Chocolate Croissant,5,711,594,28.55151433207139,0.17512205979153941,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Salad Bowl,Turkey & Cheese Sandwich,5,210,420,5.962682531097891,0.8385487528344671,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Salad Bowl,Iced Matcha,5,210,1009,14.324634937804218,0.34904903487658695,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Salad Bowl,Frozen Yoghurt Cup,5,210,488,6.928069226608978,0.7217017954722873,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Mint Tea,Vanilla Latte,5,253,570,9.74918875067604,0.5128631856320643,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Brownie,5,385,529,13.768591130340726,0.3631453612550021,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Banana Bread,5,385,527,13.716535965386695,0.3645235220187782,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+English Breakfast Tea,Iced Latte,5,194,1066,13.980800432666307,0.3576333146360805,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+English Breakfast Tea,Sparkling Water,5,194,462,6.059221200649,0.82518855714732,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+English Breakfast Tea,Vanilla Latte,5,194,570,7.475662520281233,0.6688370410562489,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Caramel Latte,5,385,449,11.686384532179556,0.42784832094408937,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Cheesecake Slice,5,385,507,13.195984315846404,0.37890314813391734,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Peach Iced Tea,Pistachio Cookie,5,497,563,18.916373715521903,0.264321274002809,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Espresso,Peach Iced Tea,5,283,497,9.508585722011897,0.5258405557017014,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Flat White,Iced Mocha,5,548,457,16.930502974580854,0.2953249532814771,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Egg Sandwich,5,385,416,10.827474310438074,0.46178821178821183,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Tiramisu Cup,5,456,420,12.947539210383992,0.3861737677527151,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Mint Tea,Tiramisu Cup,5,253,420,7.18361276365603,0.6960286090720873,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Mocha,Spanish Latte,5,457,516,15.94186046511628,0.3136396790663749,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Mocha,Tiramisu Cup,5,457,420,12.975932936722552,0.3853287485672606,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Lemonade,Quinoa Bowl,5,451,195,5.945443482963764,0.8409801580533288,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Quinoa Bowl,5,385,195,5.075378583017847,0.9851481851481853,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Pistachio Cookie,5,385,563,14.65352893455922,0.3412147355308989,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Flat White,Sparkling Water,5,548,462,17.115738236884802,0.2921287957784308,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Fresh Orange Juice,Granola Yoghurt,5,393,242,6.429556517036236,0.7776586124955313,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Cold Brew,5,470,609,19.350324499729584,0.25839359955280716,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Turkey & Cheese Sandwich,5,527,420,14.96349378042185,0.3341465618505467,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Granola Yoghurt,Turkey & Cheese Sandwich,5,242,420,6.871281773931855,0.7276662731208186,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Halloumi Wrap,Pistachio Cookie,5,418,563,15.909545700378583,0.314276730094249,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,Tiramisu Cup,5,507,420,14.395619253650622,0.34732788578942425,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,Turkey & Cheese Sandwich,5,507,420,14.395619253650622,0.34732788578942425,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Frozen Yoghurt Cup,Halloumi Wrap,5,488,418,13.790156841535966,0.3625774570554553,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Mocha,Quinoa Bowl,5,457,195,6.024540292049757,0.8299388430679459,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Halloumi Wrap,5,470,418,13.281503515413737,0.37646340221928126,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Fresh Orange Juice,5,470,393,12.487155219037318,0.4004114557955714,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Peach Iced Tea,5,470,497,15.791644131963224,0.31662314311400314,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Fresh Orange Juice,Vanilla Latte,5,393,570,15.143996755002703,0.330163831971787,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,Chocolate Cookie,5,507,711,24.369726879394268,0.2051725907616852,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Strawberry Matcha,5,470,586,18.619524067063278,0.2685353278629003,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Tiramisu Cup,5,470,420,13.34505137912385,0.3746707193515704,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,Chicken Salad Bowl,5,507,210,7.197809626825311,0.6946557715788485,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Pesto Sandwich,Granola Yoghurt,5,462,242,7.55840995132504,0.6615147937461987,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Pesto Sandwich,Halloumi Wrap,5,462,418,13.055435370470525,0.3829822490109571,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Pesto Sandwich,Iced Americano,5,462,624,19.489453758788535,0.25654900654900653,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Pesto Sandwich,Iced Mocha,5,462,457,14.273526230394808,0.3502988623338733,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Granola Yoghurt,5,449,242,7.34572742022715,0.6806677833201421,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Frozen Yoghurt Cup,5,449,488,14.812871822606814,0.33754426959728356,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Halloumi Wrap,Tuna Sandwich,5,418,291,8.223228772309357,0.6080336736874989,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Chicken Salad Bowl,5,742,210,10.534072471606274,0.47465023745347196,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Chicken Pesto Sandwich,5,449,462,14.023661438615468,0.3565402674534078,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Espresso,5,382,283,7.30840995132504,0.6841433407951455,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Fresh Orange Juice,5,382,393,10.149134667387777,0.4926528382825094,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Chocolate Croissant,5,527,594,21.16265548945376,0.2362652457529118,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Halloumi Wrap,5,449,418,12.688074634937804,0.39407082192218756,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Matcha,Soup of the Day,5,1009,179,12.210045970795024,0.4094988677323087,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Vanilla Latte,5,527,570,20.30759870200108,0.24621325610040282,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Frozen Yoghurt Cup,5,527,488,17.386154678204434,0.28758515569104426,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Americano,Soup of the Day,5,624,179,7.55110870740941,0.6621544191376594,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Peach Iced Tea,5,529,497,17.77399945916712,0.28130978688767766,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Chicken Salad Bowl,5,529,210,7.510140616549486,0.6657664956341706,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Granola Yoghurt,5,382,242,6.24959437533802,0.8000519233265545,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Soup of the Day,Vanilla Latte,5,179,570,6.897647376960519,0.7248848377928061,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Coffee Frappe,Iced Mocha,5,394,457,12.172660897782585,0.4107565340057093,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Blueberry Muffin,5,490,382,12.65413737155219,0.39512768458168607,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Sparkling Water,Vanilla Latte,5,462,570,17.80286641427799,0.2808536492747019,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Coffee Frappe,5,490,394,13.05164954029205,0.383093338858386,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Brownie,5,490,529,17.523661438615466,0.28532849812893024,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Pistachio Cookie,5,490,563,18.649945916711737,0.26809729220284917,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Halloumi Wrap,5,490,418,13.846673877771769,0.3610975490674739,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Sparkling Water,Tiramisu Cup,5,462,420,13.117901568415359,0.3811585240156669,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Spanish Latte,Still Water,5,516,492,17.162790697674417,0.2913279132791328,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,English Breakfast Tea,5,742,194,9.731476473769606,0.5137966487898408,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Chocolate Croissant,5,529,594,21.24296917252569,0.23537199340601986,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Egg Sandwich,5,915,416,25.732828555976205,0.19430432955023116,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Espresso,5,742,283,14.195916711736073,0.35221395712095094,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Chicken Salad Bowl,5,915,210,12.990129799891834,0.3849076242518865,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Fresh Orange Juice,5,529,393,14.054691725256896,0.3557530892701674,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,Soup of the Day,4,507,179,6.135275824770146,0.651967428074003,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Lemonade,Mint Tea,4,451,253,7.713831800973499,0.5185490302621316,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Cinnamon Roll,4,385,625,16.267239048134126,0.245892987012987,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Espresso,Spanish Latte,4,283,516,9.872093023255815,0.40518256772673733,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Pesto Sandwich,Soup of the Day,4,462,179,5.590724716062737,0.715470748990302,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Espresso,Still Water,4,283,492,9.412925905895078,0.42494757103048064,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Salad Bowl,Chocolate Cookie,4,210,711,10.093969713358572,0.3962762038711406,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Espresso,Iced Americano,4,283,624,11.938345051379123,0.3350548156201867,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Cold Brew,4,385,609,15.850797728501894,0.2523532296931312,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Frozen Yoghurt Cup,4,385,488,12.701460248783127,0.3149244198424526,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Espresso,4,385,283,7.365805840995132,0.5430498829792116,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Tuna Sandwich,4,456,291,8.97079502433748,0.4458913607041659,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Classic Matcha,Spanish Latte,4,826,516,28.813953488372093,0.13882163034705408,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Croissant,Still Water,4,594,492,19.75716603569497,0.2024581861980236,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Croissant,Sparkling Water,4,594,462,18.55246078961601,0.21560482166542771,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Croissant,Quinoa Bowl,4,594,195,7.83058409951325,0.5108175774842442,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Chicken Pesto Sandwich,4,456,462,14.242293131422391,0.2808536492747019,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Egg Sandwich,Spanish Latte,4,416,516,14.511627906976743,0.27564102564102566,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Cookie,Pistachio Cookie,4,711,563,27.061452136289887,0.14781172790930644,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Cookie,Granola Yoghurt,4,711,242,11.632098431584641,0.34387604468156824,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Egg Sandwich,Peach Iced Tea,4,416,497,13.977285018929152,0.2861786101222721,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Classic Matcha,Mint Tea,4,826,253,14.127771768523527,0.2831302816564423,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cinnamon Roll,Fresh Orange Juice,4,625,393,16.60525959978367,0.24088753180661576,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Coffee Frappe,Tuna Sandwich,4,394,291,7.751081665765279,0.5160570062972073,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Croissant,Lemonade,4,594,451,18.11073553272039,0.22086347585238936,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Croissant,Granola Yoghurt,4,594,242,9.717955651703624,0.4116092049976347,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Quinoa Bowl,Turkey & Cheese Sandwich,4,195,420,5.53677663601947,0.7224420024420025,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Soup of the Day,4,490,179,5.929556517036236,0.6745867061908563,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cold Brew,Espresso,4,609,283,11.651365603028664,0.34330739728570847,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Turkey & Cheese Sandwich,4,490,420,13.912925905895078,0.2875024295432459,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Egg Sandwich,4,456,416,12.824229313142238,0.3119095816464238,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Quinoa Bowl,Tiramisu Cup,4,195,420,5.53677663601947,0.7224420024420025,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Tuna Sandwich,Turkey & Cheese Sandwich,4,291,420,8.262574364521363,0.4841106201930944,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Still Water,Tiramisu Cup,4,492,420,13.969713358572202,0.28633372048006195,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Spanish Latte,Tuna Sandwich,4,516,291,10.151162790697674,0.39404352806414666,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Lemonade,4,490,451,14.939832341806381,0.2677406217475904,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Butter Croissant,Granola Yoghurt,4,915,242,14.969578150351541,0.2672085986542022,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Granola Yoghurt,4,490,242,8.016495402920498,0.49897115871141845,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Egg Sandwich,4,490,416,13.780421849648459,0.2902668759811617,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Fresh Orange Juice,4,490,393,13.018523526230394,0.30725450485537725,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Banana Bread,4,490,527,17.457409410492158,0.229129070983232,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Coffee Frappe,Lemonade,4,394,451,12.012844780962682,0.33297691537136875,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,English Breakfast Tea,4,529,194,6.937939426717144,0.5765400580749518,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Espresso,4,529,283,10.120808545159546,0.39522534016445454,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Mint Tea,4,382,253,6.5336668469442944,0.612213645675972,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Still Water,4,382,492,12.70578691184424,0.3148171795854084,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Soup of the Day,Strawberry Matcha,4,179,586,7.091265548945376,0.5640742082483269,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,English Breakfast Tea,4,449,194,5.888723634396971,0.679264344591647,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Pesto Sandwich,Coffee Frappe,4,462,394,12.305840995132504,0.3250488935768123,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Mocha,Mint Tea,4,457,253,7.816454840454299,0.5117409467138323,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Quinoa Bowl,4,527,195,6.947336398053001,0.5757602296501727,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Cinnamon Roll,4,529,625,22.35160897782585,0.17895803402646504,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Mocha,Lemonade,4,457,451,13.93368036776636,0.2870741896199547,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Tuna Sandwich,4,527,291,10.36756354786371,0.3858187105903219,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Turkey & Cheese Sandwich,4,449,420,12.748783126014061,0.31375543535899886,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Espresso,4,470,283,8.99202271498107,0.44483873392977974,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Chocolate Croissant,4,382,594,15.339913466738778,0.26075766389902516,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Americano,Mint Tea,4,624,253,10.672796106003245,0.37478463565420084,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Fresh Orange Juice,4,449,393,11.929218496484586,0.3353111522920598,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Mint Tea,4,470,253,8.038804759329368,0.4975864098898326,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Pesto Sandwich,Frozen Yoghurt Cup,4,462,488,15.241752298539751,0.2624370165353772,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Pesto Sandwich,Flat White,4,462,548,17.115738236884802,0.23370303662274466,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Flat White,4,470,548,17.41211465657112,0.22972511259512346,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Fresh Orange Juice,Tiramisu Cup,4,393,420,11.158734451054624,0.3584635889979402,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Peach Iced Tea,Tiramisu Cup,4,497,420,14.111681990265009,0.283453099549679,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+English Breakfast Tea,Iced Americano,4,194,624,8.18388318009735,0.4887655300026434,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+English Breakfast Tea,Spanish Latte,4,194,516,6.767441860465116,0.5910652920962199,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+English Breakfast Tea,Still Water,4,194,492,6.452677122769065,0.6198977453692063,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Tuna Sandwich,4,449,291,8.833085451595457,0.4528428963944313,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Chai Latte,4,385,470,12.232963764196864,0.32698535507046145,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Granola Yoghurt,4,456,242,7.460248783126014,0.53617514861534,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Salad Bowl,Lemonade,4,210,451,6.4027852893455925,0.6247281174110442,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Espresso,Frozen Yoghurt Cup,4,283,488,9.336398053001622,0.4284307478422059,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Coffee Frappe,Egg Sandwich,4,394,416,11.080584099513251,0.36099180007809445,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Coffee Frappe,Quinoa Bowl,4,394,195,5.194023796646836,0.7701158401666016,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cinnamon Roll,Quinoa Bowl,4,625,195,8.239250946457545,0.4854810256410256,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Egg Sandwich,English Breakfast Tea,4,416,194,5.4559221200648995,0.7331482950039652,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Egg Sandwich,Espresso,4,416,283,7.958896700919416,0.5025822234302799,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cinnamon Roll,Soup of the Day,4,625,179,7.5632098431584645,0.5288759776536313,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cinnamon Roll,Sparkling Water,4,625,462,19.520686857760953,0.2049108225108225,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Granola Yoghurt,Spanish Latte,4,242,516,8.44186046511628,0.47382920110192833,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Pesto Sandwich,Chocolate Croissant,4,462,594,18.55246078961601,0.21560482166542771,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Frozen Yoghurt Cup,Granola Yoghurt,4,488,242,7.983775013520822,0.5010161224766292,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Tiramisu Cup,4,527,420,14.96349378042185,0.26731724948043734,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Granola Yoghurt,Peach Iced Tea,4,242,497,8.131016765819362,0.49194339591266606,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Soup of the Day,4,449,179,5.43340995132504,0.7361859377138521,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Quinoa Bowl,3,490,195,6.459572742022715,0.4644270015698587,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Classic Matcha,Soup of the Day,3,826,179,9.995538128718225,0.3001339158899996,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Classic Matcha,English Breakfast Tea,3,826,194,10.833153055705788,0.27692768527994804,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Avocado Toast,3,456,385,11.868577609518658,0.25276828434723175,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Coffee Frappe,Strawberry Matcha,3,394,586,15.608707409410492,0.19220041232826873,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Croissant,Tuna Sandwich,3,594,291,11.685640886965928,0.2567253288902773,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Egg Sandwich,Tuna Sandwich,3,416,291,8.18388318009735,0.36657414750198253,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+English Breakfast Tea,Fresh Orange Juice,3,194,393,5.15427257977285,0.5820413945069647,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+English Breakfast Tea,Granola Yoghurt,3,194,242,3.1738777717685234,0.9452159836414757,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Egg Sandwich,Soup of the Day,3,416,179,5.034072471606273,0.5959389772238934,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Flat White,Mint Tea,3,548,253,9.372904272579772,0.32007155015723726,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Flat White,Soup of the Day,3,548,179,6.631422390481341,0.4523916323451454,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Soup of the Day,3,385,179,4.658937263385614,0.6439236740912719,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Strawberry Matcha,3,385,586,15.252163331530557,0.1966934089800984,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Chocolate Croissant,3,385,594,15.460383991346674,0.19404433949888494,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Espresso,Tuna Sandwich,3,283,291,5.567401297998918,0.538851043677826,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Salad Bowl,Soup of the Day,3,210,179,2.541238507301244,1.1805267358339984,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Salad Bowl,Mint Tea,3,210,253,3.591806381828015,0.8352343308865048,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Salad Bowl,Chocolate Croissant,3,210,594,8.432936722552732,0.3557479557479557,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Espresso,Pistachio Cookie,3,283,563,10.771295294753921,0.2785180350093203,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Salad Bowl,Espresso,3,210,283,4.017712276906436,0.7466935890964159,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Pesto Sandwich,Quinoa Bowl,3,462,195,6.090454299621417,0.49257409257409257,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Espresso,Tiramisu Cup,3,283,420,8.035424553812872,0.37334679454820796,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Granola Yoghurt,3,385,242,6.298674959437534,0.4762906514972631,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Mint Tea,Quinoa Bowl,3,253,195,3.3352487831260142,0.899483125570082,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,English Breakfast Tea,3,385,194,5.049351000540833,0.5941357611460705,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+English Breakfast Tea,Mint Tea,3,194,253,3.3181449432125474,0.9041196365266289,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+English Breakfast Tea,Strawberry Matcha,3,194,586,7.685505678745268,0.3903451673058654,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+English Breakfast Tea,Tiramisu Cup,3,194,420,5.5083829096809085,0.5446244477172313,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Mint Tea,Still Water,3,253,492,8.415089237425635,0.3565024583052155,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Mint Tea,Spanish Latte,3,253,516,8.825581395348838,0.33992094861660077,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Soup of the Day,3,456,179,5.518117901568416,0.5436636283446045,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Frozen Yoghurt Cup,3,456,488,15.043807463493781,0.1994176013805004,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Fresh Orange Juice,3,456,393,12.115197404002163,0.24762287397884022,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cold Brew,Tuna Sandwich,3,609,291,11.980732828555976,0.25040204492746265,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Coffee Frappe,Sparkling Water,3,394,462,12.305840995132504,0.24378667018260927,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cinnamon Roll,Turkey & Cheese Sandwich,3,625,420,17.746078961600865,0.16905142857142857,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Fresh Orange Juice,Iced Mocha,3,393,457,12.141765819361817,0.247081029615648,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Frozen Yoghurt Cup,Sparkling Water,3,488,462,15.241752298539751,0.1968277624015329,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,Chicken Pesto Sandwich,3,507,462,15.835181179015684,0.18945157406695867,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Salad Bowl,Coffee Frappe,3,210,394,5.593564088696593,0.5363306744017404,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Lemonade,3,470,451,14.33004326663061,0.20935037977072227,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Mint Tea,3,449,253,7.679624121146566,0.3906441191228641,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Quinoa Bowl,3,449,195,5.9190778799351005,0.5068357032722288,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Halloumi Wrap,Mint Tea,3,418,253,7.149405083829097,0.4196153336989617,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Granola Yoghurt,Tiramisu Cup,3,242,420,6.871281773931855,0.4365997638724911,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Granola Yoghurt,Lemonade,3,242,451,7.378447809626826,0.40658958054644406,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Granola Yoghurt,Iced Mocha,3,242,457,7.476608977825852,0.4012514241278912,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Granola Yoghurt,Iced Americano,3,242,624,10.208761492698756,0.2938652256834075,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Granola Yoghurt,Halloumi Wrap,3,242,418,6.83856138453218,0.43868875795800544,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Granola Yoghurt,Pistachio Cookie,3,242,563,9.210789616008654,0.325704974824949,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Granola Yoghurt,Mint Tea,3,242,253,4.139129259058951,0.7247901218436612,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Chicken Pesto Sandwich,3,470,462,14.679556517036236,0.20436584691903842,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Granola Yoghurt,Quinoa Bowl,3,242,195,3.190237966468361,0.940368722186904,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Fresh Orange Juice,3,527,393,14.001554894537588,0.21426191752248794,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Frozen Yoghurt Cup,Soup of the Day,3,488,179,5.9053542455381285,0.5080135543547944,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Quinoa Bowl,3,470,195,6.195916711736073,0.48418985270049103,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,English Breakfast Tea,3,470,194,6.164142779881017,0.4866856766834832,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Mint Tea,3,529,253,9.047931314223904,0.33156750375456717,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Turkey & Cheese Sandwich,3,382,420,10.846403461330448,0.2765893792071803,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Tiramisu Cup,3,382,420,10.846403461330448,0.2765893792071803,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Halloumi Wrap,Quinoa Bowl,3,418,195,5.510411032990806,0.544423997055576,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Espresso,3,449,283,8.590251487290427,0.3492330817600164,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Tuna Sandwich,3,742,291,14.597214710654407,0.2055186595159363,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Chicken Salad Bowl,3,449,210,6.3743915630070305,0.4706331530384983,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Sparkling Water,3,527,462,16.459843158464036,0.18226176100938907,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Halloumi Wrap,Vanilla Latte,3,418,570,16.107355327203894,0.18625031478217074,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Egg Sandwich,3,470,416,13.217955651703624,0.22696399345335513,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Spanish Latte,Turkey & Cheese Sandwich,3,516,420,14.651162790697674,0.20476190476190478,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Granola Yoghurt,3,529,242,8.65454299621417,0.34663875392522925,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Coffee Frappe,Frozen Yoghurt Cup,3,394,488,12.998377501352083,0.23079803611550304,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Coffee Frappe,Halloumi Wrap,3,394,418,11.133856138453218,0.2694484249386734,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Espresso,3,490,283,9.37466197944835,0.32001153818417827,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Coffee Frappe,Fresh Orange Juice,3,394,393,10.467955651703624,0.2865889099856628,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Coffee Frappe,Espresso,2,394,283,7.537993510005409,0.26532259511040157,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Sparkling Water,Tuna Sandwich,2,462,291,9.0888318009735,0.220050281905952,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Coffee Frappe,Granola Yoghurt,2,394,242,6.445916711736073,0.31027394386877544,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Iced Mocha,2,470,457,14.520686857760952,0.13773453140276548,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Tiramisu Cup,2,449,420,12.748783126014061,0.15687771767949943,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Quinoa Bowl,2,382,195,5.035830178474852,0.3971539804000537,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Soup of the Day,2,382,179,4.622633856138453,0.43265377753078477,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Frozen Yoghurt Cup,2,382,488,12.60248783126014,0.15869882413526737,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,English Breakfast Tea,2,382,194,5.010005408328826,0.3992011658660334,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Tuna Sandwich,2,382,291,7.5150081124932395,0.2661341105773556,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Sparkling Water,2,382,462,11.931043807463494,0.16762992679223046,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Caramel Latte,Coffee Frappe,2,449,394,11.959572742022715,0.1672300543791618,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cappuccino,Soup of the Day,2,742,179,8.97904272579773,0.2227408935535846,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Halloumi Wrap,Tiramisu Cup,2,418,420,11.868577609518658,0.16851218956482117,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Granola Yoghurt,Iced Matcha,2,242,1009,16.50743645213629,0.12115751623815414,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Granola Yoghurt,Tuna Sandwich,2,242,291,4.760816657652786,0.42009599272954473,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Granola Yoghurt,Strawberry Matcha,2,242,586,9.587074094104922,0.2086142216455589,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Granola Yoghurt,Sparkling Water,2,242,462,7.55840995132504,0.2646059174984795,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Halloumi Wrap,Turkey & Cheese Sandwich,2,418,420,11.868577609518658,0.16851218956482117,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Chicken Salad Bowl,2,470,210,6.672525689561925,0.2997365754812563,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Mocha,Soup of the Day,2,457,179,5.530219037317469,0.36164932826424456,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Espresso,Soup of the Day,2,283,179,3.4246214169821525,0.5840061590698226,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Espresso,Quinoa Bowl,2,283,195,3.730732828555976,0.5360877049922986,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+English Breakfast Tea,Lemonade,2,194,451,5.914954029204976,0.33812604292865794,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Iced Mocha,Tuna Sandwich,2,457,291,8.990467820443483,0.22245783422439788,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Espresso,Sparkling Water,2,283,462,8.838967009194159,0.2262707845746715,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Espresso,Turkey & Cheese Sandwich,2,283,420,8.035424553812872,0.24889786303213865,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Mint Tea,2,385,253,6.584978366684695,0.3037215748678199,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Tuna Sandwich,2,385,291,7.574026500811249,0.2640603382871424,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Pesto Sandwich,Mint Tea,2,462,253,7.901974040021633,0.25310131238984995,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,Quinoa Bowl,2,507,195,6.68368036776636,0.299236332372427,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Pesto Sandwich,English Breakfast Tea,2,462,194,6.059221200649,0.330075422858928,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Fresh Orange Juice,Soup of the Day,2,393,179,4.755746349378042,0.4205438753607119,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cheesecake Slice,Espresso,2,507,283,9.699905354245539,0.20618757884319178,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Frozen Yoghurt Cup,Vanilla Latte,2,488,570,18.804759329367226,0.10635605406960023,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Quinoa Bowl,Soup of the Day,2,195,179,2.359721471065441,0.847557656496204,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Quinoa Bowl,Spanish Latte,2,195,516,6.8023255813953485,0.294017094017094,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chocolate Cookie,Soup of the Day,2,711,179,8.603907517577069,0.23245252182385343,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+English Breakfast Tea,Halloumi Wrap,2,194,418,5.4821525148729044,0.3648202042124994,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cinnamon Roll,Tiramisu Cup,2,625,420,17.746078961600865,0.11270095238095237,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Salad Bowl,Spanish Latte,2,210,516,7.325581395348837,0.27301587301587305,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Coffee Frappe,English Breakfast Tea,2,394,194,5.167387777176852,0.38704275472290545,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Coffee Frappe,Soup of the Day,2,394,179,4.7678474851270956,0.4194765051186797,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Quinoa Bowl,Strawberry Matcha,2,195,586,7.725121687398594,0.2588955981447449,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Salad Bowl,Vanilla Latte,2,210,570,8.092212006489994,0.24715121136173768,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Chai Latte,2,456,470,14.488912925905895,0.13803658081373646,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Egg Sandwich,Tiramisu Cup,2,416,420,11.811790156841536,0.16932234432234433,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+English Breakfast Tea,Flat White,2,194,548,7.187128177393186,0.27827526525697943,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+English Breakfast Tea,Espresso,2,194,283,3.711600865332612,0.538851043677826,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Salad Bowl,Fresh Orange Juice,2,210,393,5.579367225527312,0.3584635889979402,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Pesto Sandwich,Tuna Sandwich,2,462,291,9.0888318009735,0.220050281905952,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+English Breakfast Tea,Tuna Sandwich,2,194,291,3.8165224445646295,0.5240372692811847,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Mint Tea,Tuna Sandwich,2,253,291,4.977217414818821,0.4018309495673906,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Mint Tea,Sparkling Water,2,253,462,7.901974040021633,0.25310131238984995,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Salad Bowl,Halloumi Wrap,2,210,418,5.934288804759329,0.33702437912964234,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cold Brew,Mint Tea,2,609,253,10.416238507301244,0.1920078921578172,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cinnamon Roll,Lemonade,2,625,451,19.055908599242834,0.10495432372505543,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Egg Sandwich,Quinoa Bowl,2,416,195,5.4840454299621415,0.3646942800788955,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Espresso,Halloumi Wrap,2,283,418,7.997160627366144,0.25008876189832113,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Brownie,Soup of the Day,1,529,179,6.401500811249324,0.1562133676906992,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Lemonade,1,382,451,11.64697133585722,0.08585923079602048,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Soup of the Day,Tiramisu Cup,1,179,420,5.082477014602488,0.19675445597233307,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Soup of the Day,Turkey & Cheese Sandwich,1,179,420,5.082477014602488,0.19675445597233307,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Almond Croissant,Chicken Salad Bowl,1,490,210,6.956462952947539,0.14375121477162295,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Strawberry Matcha,Turkey & Cheese Sandwich,1,586,420,16.63872363439697,0.06010076385503007,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Granola Yoghurt,Soup of the Day,1,242,179,2.9284748512709573,0.3414746756544623,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Halloumi Wrap,Soup of the Day,1,418,179,5.058274743104381,0.19769586485258347,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Frozen Yoghurt Cup,Quinoa Bowl,1,488,195,6.433207138994051,0.15544346364018494,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Soup of the Day,1,470,179,5.687533802055165,0.1758231308688934,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chai Latte,Granola Yoghurt,1,470,242,7.689291508923742,0.13005099349393354,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Soup of the Day,1,527,179,6.377298539751217,0.15680620779578727,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Blueberry Muffin,Chicken Salad Bowl,1,382,210,5.423201730665224,0.1843929194714535,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Banana Bread,Granola Yoghurt,1,527,242,8.621822606814494,0.11598475700597488,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Salad Bowl,Iced Americano,1,210,624,8.858842617631153,0.11288156288156287,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Salad Bowl,Granola Yoghurt,1,210,242,3.4356408869659276,0.29106650924832744,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Flat White,Quinoa Bowl,1,548,195,7.224175229853975,0.138424106307318,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Lemonade,Soup of the Day,1,451,179,5.457612222823148,0.18323031376580906,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Salad Bowl,Quinoa Bowl,1,210,195,2.768388318009735,0.36122100122100126,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Fresh Orange Juice,Mint Tea,1,393,253,6.721809085992429,0.1487694736947973,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Espresso,Mint Tea,1,283,253,4.8403866955110875,0.20659506417687395,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Espresso,Iced Mocha,1,283,457,8.743307193077339,0.11437319745459326,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Salad Bowl,Cinnamon Roll,1,210,625,8.873039480800433,0.11270095238095237,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Flat White,Granola Yoghurt,1,548,242,8.965386695511087,0.1115400856608554,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+English Breakfast Tea,Peach Iced Tea,1,194,497,6.518253109789075,0.15341533738513555,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Blueberry Muffin,1,385,382,9.942536506219579,0.10057795607533827,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+English Breakfast Tea,Frozen Yoghurt Cup,1,194,488,6.400216333153056,0.1562447186074024,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Espresso,Granola Yoghurt,1,283,242,4.629935100054083,0.21598574891218644,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Avocado Toast,Chicken Salad Bowl,1,385,210,5.465792320173066,0.1829560915275201,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Mint Tea,1,456,253,7.799351000540833,0.1282157964080161,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,Quinoa Bowl,1,456,195,6.011357490535424,0.1663517768780927,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Pistachio Cookie,Quinoa Bowl,1,563,195,7.4219172525689565,0.13473607505579085,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+English Breakfast Tea,Turkey & Cheese Sandwich,1,194,420,5.5083829096809085,0.1815414825724104,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Pistachio Cookie,Soup of the Day,1,563,179,6.812939426717144,0.1467795231054705,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Espresso,Fresh Orange Juice,1,283,393,7.518861546782045,0.13299885810877637,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Chicken Salad Bowl,Tuna Sandwich,1,210,291,4.131287182260682,0.2420553100965472,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cold Brew,Soup of the Day,1,609,179,7.369591671173607,0.13569272825678144,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cold Brew,Quinoa Bowl,1,609,195,8.028326122228231,0.1245589659382763,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Cold Brew,English Breakfast Tea,1,609,194,7.987155219037318,0.12520102246373133,Training co-occurrence; no causal or multiple-testing-confirmed pair claim
+Americano,English Breakfast Tea,1,456,194,5.980530016224987,0.16720926026406221,Training co-occurrence; no causal or multiple-testing-confirmed pair claim

@@ -4,11 +4,25 @@
 
 | Start immediately | Owner | Deliverable and status |
 |---|---|---|
-| Model and backend | Codex teammate | Train/evaluate basket completion against popularity and margin baselines; generate offline recommendation/layout data; publish checked existing model work. **Implementation in progress; no new results claimed yet.** |
+| Model and backend | Codex teammate | **Implemented:** frozen basket recommender, five candidate comparisons, offline recommendation data, constrained layout optimizer and generated comparisons; all 32 tests pass. |
 | Offline interface | Claude Code teammate 2 / Marwa | New `app/wejha.html`, linked from the existing planner. Load `window.STORIES_RECOMMENDATIONS` and `window.STORIES_WEJHA`; contracts are in the build plan. Own these UI files. |
 | Business validation and experiment | Claude Code teammate 1 / Omar | New `WEJHA_PILOT.md`, separate `data/pilot/basket_pilot_template.csv`, and `reports/wejha_business_review.md`. Check browsing/service feasibility, pair evidence, margin assumptions and controlled profit measurement. Own these files. |
 
 **Sync rule:** the latest user instruction authorizes ongoing pushes of code, generated artifacts and documentation. Each owner pulls safely, preserves others' work and pushes usable milestones. Planned filenames are not evidence of a completed implementation. Existing preparation cards, pilot schemas, baseline results and the newly pulled Day Explorer remain supported.
+
+**Run the integrated demo:** open [`app/wejha.html`](app/wejha.html) in a browser for basket recommendations, availability controls, three display arrangements and an editable incremental-profit scenario. [`app/planner.html`](app/planner.html) links to it and retains preparation planning and the every-day diagnostic. Both pages work offline with the committed generated scripts.
+
+```bash
+pip install -r requirements.txt
+python src/basket_recommender.py recommend --branch Harbour --item "Butter Croissant" --daypart morning
+python src/basket_recommender.py train
+python src/wejha_layout.py
+python -m unittest discover -s tests -v
+```
+
+**Trained recommendation model:** empirical-Bayes shrinkage of conditional item co-purchases toward pooled popularity, with branch/daypart/aggregate regular-customer contexts and unit-margin ranking. March validation selects strength 500; all parameters/economics freeze on March 31. In **8,801 April–June multi-product orders**, the recovered-item margin@3 proxy is **$0.5080/order versus $0.4956** for margin-weighted popularity, a **2.51% relative gain**. The paired seven-day block interval for the difference is **$0.0028–$0.0251/order**. This metric rewards recovering an item that was already bought; it is **not additional sales or company profit**. Hit@3 is **13.29%**, versus **12.90%** for the margin baseline and **13.74%** for plain popularity. [Full evaluation](reports/recommendation_evaluation.md), [generated results and cohort denominators](reports/recommendation_results.json).
+
+**Wejha Lab:** exact enumeration of all arrangements of eight bakery candidates compares adjacent, separated and random-reference layouts. Weighted pair distance is **0.373 / 0.511 / 0.425** respectively. These are geometric exposure scores; higher distance is the user's testable mechanism, not proven sales uplift. Fixed positions and compatible storage zones are supported through a constraints JSON. Real counter dimensions, current placement and customer paths are unobserved. [Layouts and assumptions](reports/wejha_layouts.json). The frozen six-training-date regular cohort accounts for **3.10% of test revenue**; this specific definition does not support the premise that most revenue comes from loyal customers.
 
 **Scope correction from the user:** outside weather, calendar, access and other context are allowed as features. Training and test **sales targets must remain Stories' own sales**. The earlier transaction-only restriction was an assistant misunderstanding. The transaction-only model below is now the control. See [EXTERNAL_CONTEXT.md](EXTERNAL_CONTEXT.md) for the expanded research, external models and every-day evidence ledger.
 
