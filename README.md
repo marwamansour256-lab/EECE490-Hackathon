@@ -13,7 +13,8 @@ EECE490-Hackathon/
 │   ├── 02_war_impact.ipynb         # before / during / after the 2026 Lebanon war, by branch
 │   ├── 03_holidays.ipynb           # public holidays and Ramadan, by branch
 │   ├── 04_regular_customers.ipynb  # who comes regularly, their value, and who is at risk
-│   └── 05_weather.ipynb            # weather and seasons (winter, spring, summer), by branch
+│   ├── 05_weather.ipynb            # weather and seasons (winter, spring, summer), by branch
+│   └── 06_regulars_products.ipynb  # what regular customers buy vs other customers
 ├── src/
 │   ├── eda_visuals.py              # script that draws the key-finding charts
 │   └── pitch_visuals.py            # charts backing the pitch
@@ -77,6 +78,16 @@ Identified customers are split by visits per month since their first visit: **Re
 ## Weather and seasons (notebook 05)
 
 The notebook treats all three branches as being in the North and uses daily **Batroun** weather (`data/external/batroun_weather_2026H1.json`). It then repeats the key tests with **Jabal** weather (Broummana, about 630 m, `broummana_weather_2026H1.json`) and the earlier Beirut weather, in case some branches are in the mountains. All weather comes from the [Open-Meteo archive](https://open-meteo.com/). The period is split into winter (Jan–Feb), spring (Mar–May) and summer (Jun), with a full section for each branch (Harbour, Garden, Uptown) and a side-by-side comparison. The weather swung for real: in Batroun about 18°C → 20°C → 28°C maximum, with 33 → 37 → 0 rainy days; the Jabal was about 2.5–4°C colder by day and up to 7°C colder at night. **Sales don't react at any branch, whichever location's weather is used.** After removing growth and weekday, every season is within about 2% of expected. Temperature, rain and wind correlate with leftover demand between −0.12 and +0.13. Rainy days are within about 3% of dry days. The iced share of drinks stays at about 57% in every season, even though June was about 10°C warmer than January, which is the clearest sign the data was generated without weather. Seasons and the rainy-day threshold are parameters at the top of the notebook.
+
+## What regular customers buy (notebook 06)
+
+Uses the same segments as notebook 04 and checks each result against a shuffle test (customers randomly relabeled 300 times) so chance differences aren't mistaken for real ones.
+
+- **Regulars buy what everyone buys:** category mix within about 1 point of other customers, and only 1 of 45 products outside the chance range. A slight pastry lean (bakery +1.3 points) is too small to act on.
+- **No product depends on regulars:** every product gets 23–29% of its revenue from them.
+- **No reliable gateway product:** the first purchase barely predicts becoming a regular (41 of 45 products within chance; cold drinks and Chocolate Croissant slightly higher, a weak lead).
+- **No "usual":** a regular's favorite product is in 24% of their orders, the same as random; they try about 11 products in 9 visits.
+- **They don't trade up on their own:** order value and mix are flat from the 1st to the 7th+ visit. Their favorite pairing is matcha or iced latte + pastry, the same at every branch.
 
 ## The pitch: demand is a habit, so fix the price list
 
