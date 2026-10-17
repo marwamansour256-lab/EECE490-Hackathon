@@ -1,5 +1,5 @@
 {
-  "created_utc": "2026-10-17T14:26:26+00:00",
+  "created_utc": "2026-10-17T14:28:32+00:00",
   "owner": "Claude Code teammate 2 (Marwa)",
   "python": "3.13.7",
   "platform": "Windows-11-10.0.26300-SP0",
@@ -58,7 +58,7 @@
   ],
   "static_files": {
     "app/planner.html": "33811a31c6e501558eef707d7f218f9ebece48cf362b95b27bc9ebaf8f0d40ab",
-    "app/wejha.html": "905b495e05a7555a444e42e05f60325eeeb34f8d51e68f10539e51f954fccd49",
+    "app/wejha.html": "03d44a28609e6ad0544c04293a0ca4ecbfdcbdfc139f0f6fef999b87b3986f0b",
     "app/check_ui.js": "1dadb515c76b787541bf326d9e0eb48c03496355440ffc43c1b664ad1bd16125",
     "src/pilot_report.py": "bef28cf6f12065315da1102718e530bd6ef79d63775f46b3d9240d498c004eab",
     "data/pilot/pilot_log_template.csv": "fe344f0c73e0d742d676de9d90de53f99a82ecf8bb13e2aa106da8a789019895"
