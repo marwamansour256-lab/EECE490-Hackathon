@@ -35,7 +35,7 @@ STEPS = [
 INPUTS = ["data/stories_transactions.csv", "data/external/beirut_weather_2026H1.json",
           "data/external/batroun_weather_2026H1.json", "data/external/broummana_weather_2026H1.json",
           "data/external/external_events.json"]
-STATIC = ["app/planner.html", "src/pilot_report.py", "data/pilot/pilot_log_template.csv"]
+STATIC = ["app/planner.html", "app/wejha.html", "app/check_ui.js", "src/pilot_report.py", "data/pilot/pilot_log_template.csv"]
 
 
 TEXT = {".csv", ".json", ".js", ".py", ".md", ".html", ".txt"}

@@ -147,7 +147,9 @@ footer { color: var(--ink2); font-size: 12px; padding-top: 8px; padding-bottom: 
     </div>
     <div class="card">
       <h2>Pairs that drive the score</h2>
+      <p class="muted" id="pairs-note"></p>
       <div class="scroll"><table id="pairs"></table></div>
+      <button class="btn ghost" id="pairs-more" style="margin-top:8px"></button>
     </div>
     <div class="grid">
       <div class="card"><h2>Assumptions</h2><div id="assumptions"></div></div>
@@ -202,7 +204,7 @@ const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const num = (v, d = 2) => (typeof v === "number" && isFinite(v) ? v.toFixed(d) : "–");
 const pct = (v, d = 1) => (typeof v === "number" && isFinite(v) ? (100 * v).toFixed(d) + "%" : "–");
-const usd = (v) => (typeof v === "number" && isFinite(v) ? (v < 0 ? "−$" : "$") + Math.abs(v).toLocaleString(undefined, { maximumFractionDigits: 2 }) : "–");
+const usd = (v) => (typeof v === "number" && isFinite(v) ? (v < 0 ? "−$" : "$") + Math.abs(v).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : "–");
 function store(k, v) { try { localStorage.setItem("wejha_" + k, JSON.stringify(v)); } catch (e) {} }
 function load(k, d) { try { const v = localStorage.getItem("wejha_" + k); return v ? JSON.parse(v) : d; } catch (e) { return d; } }
 const pill = (s) => {
@@ -339,7 +341,7 @@ if (!REC) {
 }
 
 // ---------- Layouts ----------
-let selectedPair = null;
+let selectedPair = null, showAllPairs = false;
 function renderLayouts() {
   const hl = new Set(selectedPair ? [selectedPair.item_a, selectedPair.item_b] : []);
   $("layouts").innerHTML = (LAY.layouts || []).map((L) => {
@@ -354,8 +356,13 @@ function renderLayouts() {
       <p class="muted">${esc(L.interpretation)}</p>`;
   }).join("") || `<p class="muted">No layouts in the data.</p>`;
   const P = (LAY.pairs || []).slice().sort((x, y) => (y.weight ?? 0) - (x.weight ?? 0));
+  const below = P.filter((p) => typeof p.lift === "number" && p.lift < 1).length;
+  $("pairs-note").innerHTML = P.length ? `${below} of ${P.length} display pairs have lift below 1: they are bought together <b>less</b> often than chance, so "frequently paired" here means two popular items, not a special affinity.` : "";
+  const shown = showAllPairs ? P : P.slice(0, 15);
+  $("pairs-more").textContent = P.length > 15 ? (showAllPairs ? "Show top 15" : `Show all ${P.length} pairs`) : "";
+  $("pairs-more").style.display = P.length > 15 ? "" : "none";
   $("pairs").innerHTML = "<tr><th>Item A</th><th>Item B</th><th class='num'>Orders with both (Jan–Mar)</th><th class='num'>Lift</th><th class='num'>Weight</th><th>Evidence</th></tr>" +
-    P.map((p, i) => `<tr data-pair="${i}" style="cursor:pointer" class="${selectedPair === p ? "sel" : ""}"><td>${esc(p.item_a)}</td><td>${esc(p.item_b)}</td><td class="num">${p.pair_orders ?? "–"}</td><td class="num">${num(p.lift)}</td><td class="num">${num(p.weight, 3)}</td><td>${pill(p.evidence_status)}</td></tr>`).join("");
+    shown.map((p, i) => `<tr data-pair="${i}" style="cursor:pointer" class="${selectedPair === p ? "sel" : ""}"><td>${esc(p.item_a)}</td><td>${esc(p.item_b)}</td><td class="num">${p.pair_orders ?? "–"}</td><td class="num">${num(p.lift)}</td><td class="num">${num(p.weight, 3)}</td><td>${pill(p.evidence_status)}</td></tr>`).join("");
   $("pairs").onclick = (e) => { const tr = e.target.closest("tr[data-pair]"); if (!tr) return; const p = P[+tr.dataset.pair]; selectedPair = selectedPair === p ? null : p; renderLayouts(); };
 }
 function renderObj(o) {
@@ -370,6 +377,7 @@ if (!LAY) {
   $("lay-pending").innerHTML = `<b>Layout comparison not generated yet.</b> The Codex teammate's <code>python src/wejha_layout.py</code> writes <code>app/wejha_data.js</code>. No example layout is shown in the meantime.`;
 } else {
   renderLayouts();
+  $("pairs-more").addEventListener("click", () => { showAllPairs = !showAllPairs; renderLayouts(); });
   $("assumptions").innerHTML = renderObj(LAY.assumptions);
   $("pilot").innerHTML = renderObj(LAY.pilot);
 }
@@ -399,8 +407,35 @@ $("m-fill").addEventListener("click", () => {
 renderMoney();
 
 // ---------- Evaluation ----------
+function metricTable(rows, selMethod, selStrength) {
+  if (!Array.isArray(rows) || !rows.length) return "";
+  return `<div class="scroll"><table><tr><th>Method</th><th class="num">Strength</th><th class="num">Orders</th><th class="num">Hit@3</th><th class="num">Hit@1</th><th class="num">Reciprocal rank</th><th class="num">Recovered margin@3 / order</th></tr>` +
+    rows.map((r) => `<tr class="${r.method === selMethod && r.strength === selStrength ? "sel" : ""}"><td>${esc(r.method)}${r.method === selMethod && r.strength === selStrength ? " <span class='pill ok'>selected</span>" : ""}</td><td class="num">${esc(r.strength)}</td><td class="num">${(r.orders ?? 0).toLocaleString()}</td><td class="num">${pct(r.hit_at_3)}</td><td class="num">${pct(r.hit_at_1)}</td><td class="num">${num(r.reciprocal_rank, 3)}</td><td class="num">${usd(r.recovered_margin_at_3_usd)}</td></tr>`).join("") + "</table></div>";
+}
+function renderEval(E) {
+  const sm = E.selected_method, ss = E.selected_strength;
+  const test = E.test || [], val = E.validation || [];
+  const sel = test.find((r) => r.method === sm && r.strength === ss);
+  const pop = test.find((r) => r.method === "popularity");
+  let lead = "";
+  if (sel && pop) {
+    const hitCmp = sel.hit_at_3 >= pop.hit_at_3 ? "at least as often as" : "slightly less often than";
+    const mCmp = sel.recovered_margin_at_3_usd >= pop.recovered_margin_at_3_usd ? "more" : "less";
+    lead = `<p class="lead" style="font-size:16px">On Apr–Jun orders it never saw, the selected <b>${esc(sm)}</b> model finds the hidden item ${hitCmp} plain popularity (Hit@3 ${pct(sel.hit_at_3)} vs ${pct(pop.hit_at_3)}), but recovers <b>${mCmp} margin</b> (${usd(sel.recovered_margin_at_3_usd)} vs ${usd(pop.recovered_margin_at_3_usd)} per order). It trades a little accuracy for higher-margin suggestions.</p>`;
+  }
+  const cmp = [["vs popularity", E.selected_vs_popularity], ["vs margin-weighted popularity", E.selected_vs_margin_baseline]]
+    .filter(([, c]) => c).map(([lab, c]) => `<tr><td>${esc(lab)}</td><td class="num">${usd(c.mean_delta_usd_per_completion_order)}</td><td class="num">${Array.isArray(c.conditional_95pct_interval) ? usd(c.conditional_95pct_interval[0]) + " to " + usd(c.conditional_95pct_interval[1]) : "–"}</td><td class="muted">${esc(c.interpretation)}</td></tr>`).join("");
+  const popn = (E.population || {}).test || (E.population || {}).train;
+  return `<p class="muted">Selected on Mar 11–31 training validation · trained through ${esc(REC.trained_through)} · ${esc(E.selection_objective)}</p>` + lead +
+    `<h3>Test: Apr 1 – Jun 30 (frozen)</h3>` + metricTable(test, sm, ss) +
+    (cmp ? `<h3>Selected model's extra recovered margin per order</h3><div class="scroll"><table><tr><th>Comparison</th><th class="num">Mean difference</th><th class="num">95% interval</th><th>Meaning</th></tr>${cmp}</table></div>` : "") +
+    `<h3>Validation used for the choice (last 21 training dates)</h3>` + metricTable(val, sm, ss) +
+    (popn ? `<p class="muted" style="margin-top:8px">Test population: ${(popn.orders ?? 0).toLocaleString()} orders · ${pct(popn.single_distinct_product_order_share)} contain one product · ${pct(popn.unidentified_order_share)} unidentified. Regular customers: ${esc(E.regular_customer_count)} (${esc(E.regular_definition)}).</p>` : "") +
+    (Array.isArray(E.caveats) ? `<h3>Caveats</h3><ul>${E.caveats.map((c) => `<li>${esc(c)}</li>`).join("")}</ul>` : "") +
+    `<details style="margin-top:10px"><summary>All evaluation fields</summary>${renderObj(E)}</details>`;
+}
 $("eval").innerHTML = REC && REC.evaluation && Object.keys(REC.evaluation).length
-  ? `<p class="muted">Selected method: <b>${esc(REC.selected_method)}</b> · trained through ${esc(REC.trained_through)}</p>` + renderObj(REC.evaluation)
+  ? renderEval(REC.evaluation)
   : `<div class="pending"><b>Evaluation pending.</b> Metrics appear here when the Codex teammate's training run writes them (Hit@3, reciprocal rank and recovered gross margin, against popularity baselines). Nothing is filled in by hand.</div>`;
 </script>
 </body>
