@@ -156,3 +156,58 @@ Teammate2's offline demo, pilot log, metric reconciliation and independent facto
 - **Interface teammate:** extend the existing offline app with a day selector, traffic/basket/margin waterfall, weather/forecast comparison, menu timing, source/evidence status and unexplained demand. Keep historical and live/scenario labels visible and preserve the pilot log contract.
 
 The next business validation is a prospective company pilot using actual preparation, waste, stockouts, labor and verified branch conditions. Further model choices must not be selected by repeatedly searching April-June test outcomes. New associations and models here were designed after the dataset had been explored; all are exploratory.
+
+# Moved from README: earlier outside-factor checks
+
+These sections were in the README before it was shortened. They cover the event dossiers, war/holiday/weather notes and the held-out factor test (`src/external_factor_test.py`).
+
+## What deeper external research found
+
+We screened 2,224 rolling day/branch/daypart comparisons, investigated 18 date dossiers and recorded verified events separately from proposed mechanisms. Most eye-catching days do not survive the approximate multiple-testing screen. Only **Harbour on May 1** is flagged: 149 orders versus about 100 expected, approximately +49%, adjusted q = 0.023. A single Labour Day cannot establish a repeatable causal uplift.
+
+| Date | Forecast-adjusted sales fingerprint | External evidence and decision |
+|---|---|---|
+| Feb 14 | Network orders -18.5%; Harbour -28.9%, Uptown +1.5% | ISF announced downtown road closures. Check branch access before interpreting this as Valentine's demand. Locations are anonymized, so exposure is unresolved. |
+| Mar 28 | Network +24.1%; morning -13.8%, midday +40.2% | Conflict reporting does not explain a positive sales day by itself. The clock change starts the following day and cannot explain this daytime spike. |
+| May 23 | Network -7.9%; evening -16.5% | A verified morning waterfront race did not yield an automatic network sales increase. Event presence alone is a poor boost rule. |
+| June 5 | Network +11.3%; evening +14.5% | AUB's 19:30 graduation is temporally compatible; Haigazian also held graduation. Catchment exposure and incremental demand remain unproven. |
+| June 24 | Network -15.4%; morning -27.5%; Uptown -39.4% | Reuters documented displacement-related waterfront changes. This is a candidate mechanism, not a verified cause at an anonymous branch. |
+
+Source URLs, publication/known-at dates and explicit counterchecks are in the [event registry](data/external/outlier_event_registry.json) and [outlier dossiers](reports/outlier_dossiers.json). The [research and pilot specification](reports/deeper_research_and_build_plan.txt) explains additional checks on airport arrivals, exchange rates, fuel, seasons and holidays. Official monthly USD exchange rates are constant in the window; monthly airport arrivals are too coarse and too few to explain individual days. Do not manufacture daily predictors from them.
+
+![Branch and time-of-day fingerprints for investigated events](reports/figures/outlier_mechanism_fingerprints.png)
+
+Across the original external-driver models, calendar and available weather features **did not beat internal history on held-out overall forecast accuracy**. The strongest exploratory product lead is reduced sandwich demand over four Muslim holiday closure episodes, around 4 units/day across the network; four episodes cannot establish a universal religious effect. Annual seasonality is unidentified from January-June. War effects cannot be geographically attributed without the real branch map.
+
+## War, holidays and weather
+
+**War comparisons:** the sourced definitions for the new analysis use escalation on **March 2, 2026** and the temporary ceasefire effective **April 17, 2026, local time**; continuing hostilities mean there is no clean post-war period. See the [UN/UNHCR source registry](reports/external_evidence.json). Notebook 02 instead uses March 1-April 15, while the pitch script uses March 2-April 16. Their boundaries and interpretation are inconsistent. The original pre-war trend projection has no uncertainty bounds or geographically matched exposure measures. Its near-zero aggregate deviation does not establish that the war had no effect, and a later Garden shortfall does not rule out delayed effects.
+
+*Date reconciliation (teammate 1, 2026-10-17):* the US-announced 10-day cessation of hostilities took effect at 17:00 EST on April 16, which is **00:00 on April 17 in Beirut**, so the last full day of the war period in Beirut time is **April 16**; escalation began on **March 2** ([UN News, 17 April](https://news.un.org/en/story/2026/04/1167318), [Al Jazeera, 17 April](https://www.aljazeera.com/news/2026/4/17/celebrations-in-lebanon-as-10-day-ceasefire-with-israel-begins), [Wikipedia: 2026 Israel–Lebanon ceasefire](https://en.wikipedia.org/wiki/2026_Israel%E2%80%93Lebanon_ceasefire)). Re-running notebook 02's trend-adjusted comparison with March 2–April 16 instead of March 1–April 15 (all rows kept) leaves the picture unchanged: orders vs the pre-war trend are +2.8% during the war period (was +2.6%), Harbour +5.4% (+4.5%), Garden −2.9% (−2.0%), Uptown +8.9% (+8.7%); after the ceasefire Garden is −8.2% (−6.7%). The notebook itself is kept as original work; use March 2–April 16 for new analysis. The same caveats on exposure and causality apply.
+
+**Holidays:** notebook 03 adjusts for weekday and trend, but its single-day bands are approximate and comparisons across holidays and branches are not corrected for multiple testing. Harbour's apparent Labour Day and St Maroun increases are exploratory leads. They do not establish a repeatable Christian-versus-Muslim holiday effect. Dates with uncertain observance need sensitivity checks, and calendar associations cannot identify customers' religions.
+
+**Weather:** the pitch fits weekday plus trend to the full January-June sample and reports an in-sample R-squared near 93%. Its small correlations between residual demand and Beirut weather do not establish that weather is irrelevant. Predictive usefulness requires time-ordered held-out comparisons and branch/category interactions. Historical realized weather supports retrospective analysis; operational forecasts must use information available at the decision time.
+
+## Held-out test of outside factors (`src/external_factor_test.py`)
+
+This checks whether an outside factor predicts sales on days the model never saw. In-sample correlations are not enough.
+
+- **Factors:** temperature, rain, rainy-day flag and wind at Beirut, Batroun and Broummana; public holidays (the notebook 03 list); Ramadan; the war period (March 2-April 16); 11 Beirut strike days; and five short events from teammate 1's event list (`data/external/external_events.json`): the April 8 strikes, the first ceasefire day, AUB commencement (June 5-6), the March 29 clock change and the Eid al-Fitr closure (March 20-23).
+- **Targets:** each factor is tested only on targets with a plausible mechanism (orders, iced/hot drink units, takeaway orders, evening orders), giving 39 tests.
+- **Gain:** the baseline is a transactions-only Poisson model of branch × weekday + branch growth, fitted on Jan-Mar and scored on Apr-Jun (the EVALUATION.md split), then the reverse. Gain is the reduction in held-out Poisson deviance when the factor is added.
+- **Placebo:** the gain must beat versions of the factor shifted to the wrong dates (154 circular shifts of 14-167 days), with a Holm correction across all 39 tests.
+- **Positive control:** a known drop is planted in the real counts, and we record how often the test detects it.
+
+| Result | Value |
+|---|---|
+| Tests passing (gain in both directions, Holm p < 0.05) | **0 of 39** |
+| Strongest candidate | Broummana max temperature → orders: +2.2% / +1.7% held-out gain, raw p 0.006 / 0.019, **Holm p 0.75** |
+| War period → orders | −16.5% held-out gain forward (it hurts the forecast), +1.8% reverse; not supported |
+| Planted drop detected (rainy days, holidays) | −20%: 100% · −10%: 38-51% · −5%: 0% |
+| Planted drop detected (11 strike days) | −20%: 100% · −10%: 1% |
+| Event-list factors (5 events, 6 tests) | Not testable by this rule: each event's days fall in one half only, so it can't be scored on unseen flagged days. The in-sample screen with a false-discovery correction is in notebook 09 |
+
+**Interpretation:** none of these factors passes this particular two-direction/Holm rule. The planted controls show high detection for the specified 20% scenarios, not a guarantee of power against every real 20% effect; smaller, local, menu or timing effects remain possible. The strongest single result disappears after correcting for 39 tests. The expanded [context research](EXTERNAL_CONTEXT.md) tests different mechanisms and keeps its associations and forward predictive comparisons separate from this stronger pass rule.
+
+**Limits:** weather is realized weather, so this is a retrospective test with perfect weather knowledge. Branch locations are unverified. Conflict dates were chosen after the fact. Factor effects are shared across branches, with no branch interactions. Passing would show predictive association, not causation. None of these factors enter the strict model. Outputs: `reports/external_factor_test.{csv,json}` and `reports/figures/external_factor_holdout.png`. Run `python src/external_factor_test.py`, or add `--quick` for a quick run. The external-evidence teammate can add a factor by adding one daily series to `factors` and its targets to `PLAN`.
