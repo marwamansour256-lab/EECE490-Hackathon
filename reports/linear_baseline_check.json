@@ -1,0 +1,128 @@
+{
+  "question": "Does linear regression beat the Poisson preparation model on the same frozen split?",
+  "level": "branch x category x day",
+  "train": "2026-01-01 to 2026-03-31",
+  "test": "2026-04-01 to 2026-06-30",
+  "selection": "alpha chosen by Poisson deviance on the last 21 training dates; April-June scored once",
+  "results": {
+    "linear_counts": {
+      "selected_alpha": 0.01,
+      "test": {
+        "wape_pct": 26.651202904001902,
+        "mae_units": 3.297286389401098,
+        "bias_pct": 0.22763468821323907,
+        "poisson_deviance": 1.5201836602893875
+      }
+    },
+    "linear_log": {
+      "selected_alpha": 0.01,
+      "test": {
+        "wape_pct": 25.74773022519323,
+        "mae_units": 3.185508764287439,
+        "bias_pct": -0.9359815145063979,
+        "poisson_deviance": 1.4737738264584834
+      }
+    },
+    "poisson (original)": {
+      "selected_alpha": 0.001,
+      "test": {
+        "wape_pct": 25.207654591328055,
+        "mae_units": 3.11869061565808,
+        "bias_pct": 3.654540500688182,
+        "poisson_deviance": 1.3803785370111645
+      }
+    },
+    "poisson v2 (selected)": {
+      "selected_alpha": 0.001,
+      "calibration": 0.9417094549137961,
+      "test": {
+        "wape_pct": 24.73676293114075,
+        "mae_units": 3.06043190712583,
+        "bias_pct": -2.387539165756931,
+        "poisson_deviance": 1.3714135294319945
+      }
+    }
+  },
+  "tuning": [
+    {
+      "method": "linear_counts",
+      "alpha": 0.01,
+      "wape_pct": 27.558974509024935,
+      "mae_units": 2.91094706057408,
+      "bias_pct": 5.014633776996095,
+      "poisson_deviance": 1.4643134806795055
+    },
+    {
+      "method": "linear_counts",
+      "alpha": 0.1,
+      "wape_pct": 27.56569935968174,
+      "mae_units": 2.9116573803374592,
+      "bias_pct": 5.0154885431567156,
+      "poisson_deviance": 1.4648049088698398
+    },
+    {
+      "method": "linear_counts",
+      "alpha": 1.0,
+      "wape_pct": 27.650323993761795,
+      "mae_units": 2.9205959505932872,
+      "bias_pct": 5.023915400184708,
+      "poisson_deviance": 1.4723610222623609
+    },
+    {
+      "method": "linear_counts",
+      "alpha": 10.0,
+      "wape_pct": 29.139372920712486,
+      "mae_units": 3.0778783848703184,
+      "bias_pct": 5.103888569766991,
+      "poisson_deviance": 2.01022221579596
+    },
+    {
+      "method": "linear_counts",
+      "alpha": 100.0,
+      "wape_pct": 36.5566900953141,
+      "mae_units": 3.861340687492701,
+      "bias_pct": 6.053725670271927,
+      "poisson_deviance": 8.89935816678585
+    },
+    {
+      "method": "linear_log",
+      "alpha": 0.01,
+      "wape_pct": 27.1931926334502,
+      "mae_units": 2.872310946767782,
+      "bias_pct": 0.8714532393019038,
+      "poisson_deviance": 1.421067049732136
+    },
+    {
+      "method": "linear_log",
+      "alpha": 0.1,
+      "wape_pct": 27.203195860958644,
+      "mae_units": 2.873367548699847,
+      "bias_pct": 0.9297498526488944,
+      "poisson_deviance": 1.4218305406883447
+    },
+    {
+      "method": "linear_log",
+      "alpha": 1.0,
+      "wape_pct": 27.325045477651713,
+      "mae_units": 2.886238048777004,
+      "bias_pct": 1.4936313827699177,
+      "poisson_deviance": 1.4311815576376
+    },
+    {
+      "method": "linear_log",
+      "alpha": 10.0,
+      "wape_pct": 29.27149911840604,
+      "mae_units": 3.091834360143453,
+      "bias_pct": 5.619332621286997,
+      "poisson_deviance": 1.6020304586747334
+    },
+    {
+      "method": "linear_log",
+      "alpha": 100.0,
+      "wape_pct": 37.30861686024937,
+      "mae_units": 3.9407637808824245,
+      "bias_pct": 10.771458160760497,
+      "poisson_deviance": 2.5038894090528436
+    }
+  ]
+}
