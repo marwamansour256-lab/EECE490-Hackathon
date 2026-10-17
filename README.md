@@ -113,6 +113,7 @@ notebooks/04_regular_customers.ipynb Original customer descriptions and targetin
 notebooks/05_weather.ipynb           Team weather and season analysis by branch
 notebooks/06_regulars_products.ipynb Team product-mix and regular-customer shuffle checks
 notebooks/07_discounts.ipynb         Team discount and placebo-window comparisons
+notebooks/08_lebanon_prices.ipynb    Lebanon CPI 2026 vs the café's recorded prices and costs
 src/eda_visuals.py                  Original descriptive charts
 src/pitch_visuals.py                Original pitch charts, subject to the audit
 src/external_analysis.py            External-driver analysis
@@ -200,3 +201,11 @@ Notebook 05 now uses Batroun weather under the team's North-region assumption an
 Notebook 06 compares regular-customer product choices with 300 label shuffles. Most reported differences are small. Its first-observed-purchase and customer segmentation limits still apply; this does not establish that a future targeted offer cannot work.
 
 Notebook 07 compares discount exposure, order composition, later returns and Harbour's two promotion windows against control branches and placebo windows. It reports little detected promotion lift. A uniform observed discount rate does not establish randomized assignment, and failure to detect lift is not proof of zero effect. Its roughly $4,400 annualized discount expenditure is a scenario, not guaranteed recoverable profit. Use these results to design a controlled offer test before eliminating discounts or claiming frequency rewards will increase profit.
+
+## Lebanon prices vs recorded prices and costs (notebook 08)
+
+Notebook 08 compares Lebanon's 2026 consumer price index with the café's recorded prices and costs. CPI figures come from the Central Administration of Statistics via Credit Libanais, BLOMINVEST and Trading Economics, with source links, retrieval date and derived-vs-published flags in `data/external/lebanon_cpi_2026H1.json`. All transaction rows are kept.
+
+- **Lebanon:** CPI rose about **+9.8% from January to June 2026** (+4.91% in March and +3.04% in April, then flat). Year-on-year inflation peaked at 20.0% in April; food was +18–19% and restaurants and hotels +16% year-on-year by April. USD/LBP stayed near 89,500.
+- **Recorded data:** **none of the 135 branch-product combinations changes its list price or its unit cost** in six months, so the menu became about 9% cheaper in real terms by June.
+- **Implication:** the recorded unit costs are probably standard costs rather than monthly invoice costs. If real ingredient costs rose 10% from March, March–June gross profit would be about $9k lower than recorded (about $17k at +18%), with Garden the most exposed. These are scenarios, not measurements; company cost data is needed. The notebook does not estimate price elasticity or attribute demand changes to inflation.

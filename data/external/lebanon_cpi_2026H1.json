@@ -1,0 +1,41 @@
+{
+  "description": "Lebanon consumer price index (CPI), Central Administration of Statistics (CAS), as reported by Lebanese bank research units and Trading Economics. December 2008 = 100 base as published. Values marked 'derived' are calculated here from published monthly changes, not published directly.",
+  "retrieved": "2026-10-17",
+  "retrieved_by": "Omar (Claude Code), for notebooks/08_lebanon_prices.ipynb",
+  "monthly": [
+    {"month": "2026-01", "cpi_index": 7917.7, "index_status": "derived: Feb index / 1.0190", "mom_pct": -0.08, "yoy_pct": null,
+     "sources": ["https://economics.creditlibanais.com/Article/213181"]},
+    {"month": "2026-02", "cpi_index": 8068.09, "index_status": "published", "mom_pct": 1.90, "yoy_pct": 12.27,
+     "components_yoy_pct": {"food_and_non_alcoholic_beverages": 16.03, "restaurants_and_hotels": 7.87, "transportation": 6.03, "water_electricity_gas_other_fuels": 6.22},
+     "regional_mom_pct": {"North": 1.78, "Mount Lebanon": 1.69, "Beirut": 2.42},
+     "sources": ["https://economics.creditlibanais.com/Article/213181"], "published": "2026-03-26"},
+    {"month": "2026-03", "cpi_index": 8464.2, "index_status": "derived: Feb index x 1.0491", "mom_pct": 4.91, "yoy_pct": 17.3,
+     "components_yoy_pct": {"food_and_non_alcoholic_beverages": 19.4, "restaurants_and_hotels": 11.3, "transportation": 24.8, "housing_and_utilities": 20.3},
+     "note": "Largest monthly rise since October 2023. Component values from Trading Economics' April release ('April vs March').",
+     "sources": ["https://economics.creditlibanais.com/Article/213277", "https://tradingeconomics.com/lebanon/inflation-cpi/news/552692"]},
+    {"month": "2026-04", "cpi_index": 8721.39, "index_status": "published", "mom_pct": 3.04, "yoy_pct": 20.02,
+     "components_yoy_pct": {"food_and_non_alcoholic_beverages": 17.97, "restaurants_and_hotels": 15.98, "transportation": 33.27, "water_electricity_gas_other_fuels": 41.39},
+     "regional_mom_pct": {"North": 2.54, "Mount Lebanon": 2.71, "Beirut": 2.02},
+     "sources": ["https://economics.creditlibanais.com/Article/213277", "https://tradingeconomics.com/lebanon/inflation-cpi/news/552692"], "published": "2026-05-21"},
+    {"month": "2026-05", "cpi_index": 8763.25, "index_status": "derived: Apr index x 1.0048", "mom_pct": 0.48, "yoy_pct": 19.04,
+     "components_yoy_pct": {"transportation": 37.82},
+     "sources": ["https://blog.blominvestbank.com/lebanons-inflation-rate-increased-by-19-04-yoy-by-may-2026/", "https://economics.creditlibanais.com/Article/213331"], "published": "2026-06-24"},
+    {"month": "2026-06", "cpi_index": 8697.5, "index_status": "derived: May index x 0.9925", "mom_pct": -0.75, "yoy_pct": 17.25,
+     "components_yoy_pct": {"transportation": 29.36},
+     "sources": ["https://blog.blominvestbank.com/lebanons-inflation-rate-increased-by-17-25-yoy-by-june-2026/"], "published": "2026-07-28"}
+  ],
+  "context": {
+    "exchange_rate": "USD/LBP held near 89,500 throughout H1 2026 (Trading Economics: 89,502 on 2026-04-03, roughly flat over 12 months; BLOMINVEST: 89,700 in late February 2026). Lira inflation therefore translates almost one-for-one into USD terms.",
+    "exchange_rate_sources": ["https://tradingeconomics.com/lebanon/currency", "https://blog.blominvestbank.com/"],
+    "reported_input_costs": [
+      {"item": "flour (bakery bag)", "change": "about $20 to $25-40 in March 2026", "type": "anecdotal, one baker", "source": "https://today.lorientlejour.com/article/1497179/were-tired-we-just-want-peace-from-flour-to-fuel-war-pressures-beiruts-supermarkets.html"},
+      {"item": "bread", "change": "+5,000 LBP per bag set by the Ministry of Economy (March 2026), citing fuel and flour transport costs", "type": "official price decision as reported in news", "source": "https://today.lorientlejour.com/article/1497179/were-tired-we-just-want-peace-from-flour-to-fuel-war-pressures-beiruts-supermarkets.html"},
+      {"item": "gasoline / diesel", "change": "about +80% / +85% (date range not specified)", "type": "NGO report", "source": "https://www.anera.org/blog/food-prices-surge-in-lebanon-war-inflation-and-the-growing-threat-to-food-security/"}
+    ]
+  },
+  "caveats": [
+    "CPI is national (with regional splits); branch locations are not confirmed, so no branch-level exposure is implied.",
+    "Component definitions differ slightly between sources (Credit Libanais 'water, electricity, gas & other fuels' vs Trading Economics 'housing and utilities').",
+    "May and June component values for food and restaurants were not published in the retrieved texts."
+  ]
+}
