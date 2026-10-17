@@ -8,6 +8,7 @@ import subprocess
 from datetime import datetime, timezone
 import numpy as np
 import pandas as pd
+from provenance import matches_recorded_sha256
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -35,7 +36,7 @@ def main():
     raw = ROOT/'data/stories_transactions.csv'
     raw_hash = hashlib.sha256(raw.read_bytes()).hexdigest()
     prior = json.loads((ROOT/'reports/run_manifest.json').read_text(encoding='utf-8'))
-    assert raw_hash == prior['input_sha256']['data/stories_transactions.csv'], 'Raw input changed'
+    assert matches_recorded_sha256(raw,prior['input_sha256']['data/stories_transactions.csv']), 'Raw input changed beyond Git line-ending conversion'
     paths = ['data/stories_transactions.csv', 'data/external/outlier_event_registry.json',
              'data/external/macro_context_audit.json', 'src/profit_policy.py', 'src/outlier_forensics.py',
              'src/recommend.py', 'src/demand_model.py', 'reports/two_stage_replay.csv',

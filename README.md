@@ -1,10 +1,10 @@
 # Stories Profit Planner | EECE490 Hackathon
 
-**Current submission sprint: Basket Growth + Wejha Lab.** We are extending the planner with a trained add-on recommender and a display-layout experiment based on items bought together. The user's idea is to separate paired display items so customers encounter more of the counter. The system will compare this candidate with alternatives; placement-induced sales growth requires a pilot. [Read the shared build instructions and exact interface contracts](WEJHA_BUILD_PLAN.md) before starting work.
+**A working sales and preparation decision system for Stories Coffee.** Basket Growth recommends relevant add-ons, Wejha Lab compares product-display arrangements, and the preparation model turns demand into opening batches and replenishment actions. The display experiment separates paired products so customers may encounter more of the counter; placement-induced sales growth still requires a pilot. Source code, trained artifacts and generated offline demo data are committed. [Submission quickstart](SUBMISSION.md), [shared team contract](WEJHA_BUILD_PLAN.md).
 
 | Start immediately | Owner | Deliverable and status |
 |---|---|---|
-| Model and backend | Codex teammate | **Implemented:** frozen basket recommender, five candidate comparisons, offline recommendation data, constrained layout optimizer and generated comparisons; all 32 tests pass. |
+| Model and backend | Codex teammate | **Implemented and published:** frozen basket recommender, five candidate comparisons, offer/preparation integration, external-context models, constrained layout optimizer and generated comparisons; all 38 tests pass. |
 | Offline interface | Claude Code teammate 2 / Marwa | New `app/wejha.html`, linked from the existing planner. Load `window.STORIES_RECOMMENDATIONS` and `window.STORIES_WEJHA`; contracts are in the build plan. Own these UI files. |
 | Business validation and experiment | Claude Code teammate 1 / Omar | New `WEJHA_PILOT.md`, separate `data/pilot/basket_pilot_template.csv`, and `reports/wejha_business_review.md`. Check browsing/service feasibility, pair evidence, margin assumptions and controlled profit measurement. Own these files. |
 
@@ -12,10 +12,11 @@
 
 **Run the integrated demo:** open [`app/wejha.html`](app/wejha.html) in a browser for basket recommendations, availability controls, three display arrangements and an editable incremental-profit scenario. [`app/planner.html`](app/planner.html) links to it and retains preparation planning and the every-day diagnostic. Both pages work offline with the committed generated scripts.
 
-**Offer → stock → profit integration is implemented:** `python src/growth_plan.py --branch Harbour --item Espresso --daypart morning --output reports/growth_demo.json` produces complementary food offers, the frozen preparation plan for each food item, an explicit zero-default incremental-profit scenario, and a separately labeled retrospective daily diagnostic. It loads committed artifacts and adds no invented offer uplift to demand. `python src/growth_plan.py --export-preparation` produces 57 historical perishable cards in `app/preparation_data.js`. [Integration contract and optional UI additions](GROWTH_INTEGRATION.md). **36 total tests pass.** The complementary filter is a business rule; the evaluation numbers below belong to unrestricted ranking.
+**Offer → stock → profit integration is implemented:** `python src/growth_plan.py --branch Harbour --item Espresso --daypart morning --output reports/growth_demo.json` produces complementary food offers, the frozen preparation plan for each food item, an explicit zero-default incremental-profit scenario, and a separately labeled retrospective daily diagnostic. It loads committed artifacts and adds no invented offer uplift to demand. `python src/growth_plan.py --export-preparation` produces 57 historical perishable cards in `app/preparation_data.js`. [Integration contract and optional UI additions](GROWTH_INTEGRATION.md). **38 total tests pass.** The complementary filter is a business rule; the evaluation numbers below belong to unrestricted ranking.
 
 ```bash
 pip install -r requirements.txt
+python src/verify_submission.py
 python src/basket_recommender.py recommend --branch Harbour --item "Butter Croissant" --daypart morning
 python src/basket_recommender.py train
 python src/wejha_layout.py
@@ -26,13 +27,13 @@ python -m unittest discover -s tests -v
 
 **Wejha Lab:** exact enumeration of all arrangements of eight bakery candidates compares adjacent, separated and random-reference layouts. Weighted pair distance is **0.373 / 0.511 / 0.425** respectively. These are geometric exposure scores; higher distance is the user's testable mechanism, not proven sales uplift. Fixed positions and compatible storage zones are supported through a constraints JSON. Real counter dimensions, current placement and customer paths are unobserved. [Layouts and assumptions](reports/wejha_layouts.json). The frozen six-training-date regular cohort accounts for **3.10% of test revenue**; this specific definition does not support the premise that most revenue comes from loyal customers.
 
-**Scope correction from the user:** outside weather, calendar, access and other context are allowed as features. Training and test **sales targets must remain Stories' own sales**. The earlier transaction-only restriction was an assistant misunderstanding. The transaction-only model below is now the control. See [EXTERNAL_CONTEXT.md](EXTERNAL_CONTEXT.md) for the expanded research, external models and every-day evidence ledger.
+**Data scope:** outside weather, calendar, access and other context are allowed as features. Training and test **sales targets remain Stories' own sales**. The transaction-only model below is the control. See [EXTERNAL_CONTEXT.md](EXTERNAL_CONTEXT.md) for expanded research, external models and the every-day evidence ledger.
 
-The new working-copy implementation adds nine cached hourly weather/forecast/air-quality streams, six months of IODA internet reachability, 73 daily context columns plus the separate internet audit, **2,337 exploratory test rows** and **724 day/branch dossiers covering all 181 dates**. A separate externally conditioned order-count head improves test WAPE from **9.46% to 9.27%**; daily product-volume gains are not established, and improved item forecast error did not improve simulated profit. **23 tests pass.** No external sales dataset is used. [Source reconciliation](reports/source_reconciliation.md) supplies primary URLs missing from the teammate event registry.
+The published external-context implementation includes nine cached hourly weather/forecast/air-quality streams, six months of IODA internet reachability, 73 daily context columns plus the separate internet audit, **2,337 exploratory test rows** and **724 day/branch dossiers covering all 181 dates**. A separate externally conditioned order-count head improves test WAPE from **9.46% to 9.27%**; daily product-volume gains are not established, and improved item forecast error did not improve simulated profit. No external sales dataset is used. [Source reconciliation](reports/source_reconciliation.md) supplies primary URLs missing from the teammate event registry.
 
 Analysis of January-June 2026 transactions from three anonymized branches: Harbour, Garden and Uptown. The goal is to identify decisions that improve gross profit, validate external demand signals, and distinguish measured results from business assumptions.
 
-**Team synchronization, October 17:** all task-related code, trained artifacts and documentation may now be published continuously under the user's latest instruction. The existing demand, inventory and external-context implementations, saved models and generated audit artifacts have passed 23 tests plus three artifact-verification scripts and are included in the implementation milestone. New recommendation/layout files remain pending until their own milestone. The **frozen chronological half/half model using only transactions** is the control. External-context heads remain available, and earlier rolling/Bayesian comparisons remain separate experiments. Read [WEJHA_BUILD_PLAN.md](WEJHA_BUILD_PLAN.md), [EXTERNAL_CONTEXT.md](EXTERNAL_CONTEXT.md), [EVALUATION.md](EVALUATION.md) and [MODEL_CARD.md](MODEL_CARD.md) for the applicable protocols and results.
+**Published implementation:** demand, inventory, external-context, recommendation and layout code, saved models, browser assets and numerical audits are in the repository. `python src/verify_submission.py` runs all 38 tests and four artifact-verification scripts. Browser script/schema/ranking checks are recorded in `reports/ui_contract_qa.json`; a visual browser review was unavailable in the Codex session. The **frozen chronological half/half transaction-only model** remains the control, and earlier rolling/Bayesian comparisons remain separate experiments. [Evaluation protocols](EVALUATION.md), [model card](MODEL_CARD.md).
 
 ## Transaction-only control: chronological half/half
 
@@ -58,7 +59,7 @@ python src/predict_strict.py --date 2026-06-30 --branch Harbour --product "Turke
 python -m unittest discover -s tests -v
 ```
 
-Training saves a reusable artifact at `models/strict_half_model.joblib`; prediction loads that artifact without reading transaction or external data. The example forecasts about **4.04 Turkey & Cheese Sandwiches at Harbour**, prepares **4 at opening**, and prepares **4 more at 16:00 if none remain**, under stated low replenishment costs. This second-batch example is a decision-model scenario; the table above evaluates the simpler one-batch policy. Test predictions, finance and metadata are in `reports/strict_half_predictions.csv`, `reports/strict_half_finance.csv` and `reports/strict_half_results.json` once code/artifacts are published.
+Training saves a reusable artifact at `models/strict_half_model.joblib`; prediction loads that artifact without reading transaction or external data. The example forecasts about **4.04 Turkey & Cheese Sandwiches at Harbour**, prepares **4 at opening**, and prepares **4 more at 16:00 if none remain**, under stated low replenishment costs. This second-batch example is a decision-model scenario; the table above evaluates the simpler one-batch policy. Committed test predictions, finance and metadata are in `reports/strict_half_predictions.csv`, `reports/strict_half_finance.csv` and `reports/strict_half_results.json`.
 
 ## Business application and supplemental experiments
 
@@ -122,7 +123,7 @@ Across the original external-driver models, calendar and available weather featu
 | Claude Code teammate 1 (Omar Al-Aghbari) | External evidence and branch exposure; confirm event timing, coordinates and weather provenance | Every usable feature has a source, known-at time, geography and future validation; unresolved events remain alerts |
 | Claude Code teammate 2 | Presentation/demo interface and pilot logging using the existing JSON/CSV contracts | Show opening plan, remaining-stock input, replenishment action, cost sensitivity, service and evidence; never present historical cards as live recommendations |
 
-**Implemented in the working copy:** primary trained half/half model and saved artifact; forecast baselines; external research; outlier dossiers; two-stage optimizer; six cost/service scenarios; supplemental intraday Gamma-Poisson/NB comparisons and stockout-censored decisions; CLI demos; decision JSON; 16 mathematical/accounting/boundary tests. **Still needed for live operation:** verified operational inputs, UI integration, capacity/lead-time handling and a controlled prospective pilot. Full team names must be added before submission; this repository does not establish all three identities.
+**Implemented and committed:** trained half/half model and saved artifact; forecast baselines; external-context traffic/volume/mix models; every-day dossiers; two-stage optimizer; cost/service scenarios; supplemental intraday Gamma-Poisson/NB comparisons; basket recommender; display optimizer; CLI integration; offline UI and decision data; 38 tests plus artifact/frontend checks. **Still needed for live operation:** verified operational inputs, capacity/lead-time handling and a controlled prospective profit pilot. Full team names must be confirmed before submission; this repository does not establish all three identities.
 
 Start the company pilot with shadow decisions and measured preparation, waste, stockouts and batch labor. Then randomize eligible branch-days within branch and weekday between current practice and the planner, after safety and service rules are agreed. Choose the duration using baseline profit variance and a business-relevant minimum detectable gain; do not claim three branches automatically provide sufficient power. Evaluate incremental contribution after waste and extra labor, customer fulfillment and overrides. Freeze the policy before the pilot. The [build plan](reports/deeper_research_and_build_plan.txt) gives the data contract and demo narrative; [AGENTS.md](AGENTS.md) is the shared work contract for all three contributors.
 
@@ -171,7 +172,7 @@ python src/build_analysis_report.py
 
 ## Project structure
 
-Files marked *(pending)* are described here but not yet published to GitHub.
+The implementation files listed below are committed. New basket/layout/integration files are documented in [SUBMISSION.md](SUBMISSION.md).
 
 ```text
 Documentation (repo root)
@@ -186,7 +187,7 @@ data/
   external/README.md                  Source, location, period and retrieval date of every external file
   external/*_weather_2026H1.json      Open-Meteo daily weather: Beirut, Batroun (North), Broummana (Jabal)
   external/lebanon_cpi_2026H1.json    Lebanon CPI Jan-Jun 2026 with sources
-  external/outlier_event_registry.json  Event registry (pending)
+  external/outlier_event_registry.json  Event registry
   pilot/pilot_log_template.csv        Column schema for pilot logging (app/planner.html, src/pilot_report.py)
 
 app/
@@ -209,7 +210,7 @@ src/
   metric_reconciliation.py            One definition per disputed number, every variant recomputed (teammate 2)
   day_ledger.py                       Interim per-day, per-branch ledger for the Day explorer (teammate 2)
   teammate2_manifest.py               Rebuilds teammate 2 outputs; writes versions and SHA-256 hashes to reports/teammate2_manifest.json
-  external_analysis.py, demand_model.py, strict_model.py, ...   Model and analysis code (pending)
+  external_analysis.py, demand_model.py, strict_model.py, ...   Model and analysis code
 
 reports/
   figures/                            Saved charts (1_ to 9_ from eda_visuals.py, pitch_* from pitch_visuals.py,
@@ -218,10 +219,10 @@ reports/
   why_drivers.json                    Driver breakdowns behind the demo's Why tab
   metric_reconciliation.md / .json    Proposed single definitions for disputed numbers, with all variants
   correlation_scan_pairs.csv / .json  All order-level association pairs by half, plus structural findings
-  methodology_audit.txt               Corrections to original claims (pending)
-  external_evidence.json              External source registry (pending)
+  methodology_audit.txt               Corrections to original claims
+  external_evidence.json              External source registry
 
-output/pdf/deep_analysis_report.pdf   First-stage analysis report (pending)
+output/pdf/deep_analysis_report.pdf   First-stage analysis report
 ```
 
 To reproduce the team's original visualizations:

@@ -63,7 +63,7 @@ python -m unittest discover -s tests -v
 - `reports/strict_half_manifest.json`: package versions, artifact/input/source hashes and reconciliation checks.
 - `reports/figures/strict_half_profit_service.png`: presentation figure showing accuracy and the service/profit tradeoff.
 
-These implementation artifacts are in the Codex working copy; Markdown publication precedes separate code publication. Tests verify that changing test labels does not change the frozen model/baseline predictions and check economics, mathematical inference and inventory accounting. Independent verification reconciles all **36,855** item-day-method records, category-to-item forecast sums, stock/demand/cash accounting, fixed test-period economics and predictions freshly produced from the saved model.
+These implementation artifacts are committed to GitHub, including the preparation-model source and saved joblib artifact. Tests verify that changing test labels does not change the frozen model/baseline predictions and check economics, mathematical inference and inventory accounting. Independent verification reconciles all **36,855** item-day-method records, category-to-item forecast sums, stock/demand/cash accounting, fixed test-period economics and predictions freshly produced from the saved model. `python src/verify_submission.py` runs all 38 tests and four artifact checks. Text-source provenance accepts only Git LF/CRLF conversion; binary models require exact bytes.
 
 ## Interpretation limits
 

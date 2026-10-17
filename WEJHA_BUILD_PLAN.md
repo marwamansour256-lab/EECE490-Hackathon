@@ -1,6 +1,6 @@
 # Basket growth and the Stories “wejha” experiment
 
-**Priority handoff, October 17.** Read this before starting new work. The user has asked for a working recommendation system connected to the preparation/evidence tools, plus a front-display layout experiment, with roughly one hour to submission. Publish reviewable milestones immediately. The contracts below are planned interfaces until their implementation commit lands; do not invent model results while building against them.
+**Priority handoff, October 17.** The recommender, trained artifact, layout engine, offline UI and offer-to-preparation CLI are now implemented and published. Read [SUBMISSION.md](SUBMISSION.md) for working commands and [GROWTH_INTEGRATION.md](GROWTH_INTEGRATION.md) for complementary filtering and the prep-card export. The interface contracts below are implemented; company-confirmed geometry/operations and prospective profit measurement remain open. Continue publishing usable milestones immediately and preserve teammate work.
 
 ## What we are building
 

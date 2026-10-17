@@ -8,6 +8,7 @@ import subprocess
 import numpy as np
 import pandas as pd
 import joblib
+from provenance import matches_recorded_sha256
 
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -19,7 +20,7 @@ def main():
     for r in source['records']:
         assert r['status']=='ok' and r['hourly_count']==4752
         assert all(v['null_count']==0 for v in r['fields'].values())
-        assert hashlib.sha256((cache/(r['name']+'.json')).read_bytes()).hexdigest()==r['sha256']
+        assert matches_recorded_sha256(cache/(r['name']+'.json'),r['sha256'])
     context=pd.read_csv(cache/'daily_features.csv')
     assert len(context)==543 and not context.duplicated(['Date','region']).any()
     assert set(context.region)=={'beirut','batroun','broummana'}
@@ -68,7 +69,7 @@ def main():
     assert internet.reachability_min_drop_proxy_pct.isna().any()
     raw_hash=hashlib.sha256((ROOT/'data/stories_transactions.csv').read_bytes()).hexdigest()
     old=json.loads((ROOT/'reports/run_manifest.json').read_text(encoding='utf-8'))
-    assert raw_hash==old['input_sha256']['data/stories_transactions.csv']
+    assert matches_recorded_sha256(ROOT/'data/stories_transactions.csv',old['input_sha256']['data/stories_transactions.csv'])
     paths=['data/stories_transactions.csv','data/external/context_v2/manifest.json','data/external/context_v2/internet_manifest.json',
         'data/external/external_events.json','src/context_features.py','src/context_model.py','src/context_mix_model.py',
         'src/context_associations.py','src/context_robustness.py','src/day_explanations.py','src/internet_checks.py',

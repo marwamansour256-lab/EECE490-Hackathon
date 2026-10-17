@@ -10,6 +10,7 @@ import joblib
 import numpy as np
 import pandas as pd
 from strict_model import features
+from provenance import matches_recorded_sha256
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -19,7 +20,8 @@ def main():
     artifact = joblib.load(ROOT/'models/strict_half_model.joblib')
     raw = ROOT/'data/stories_transactions.csv'
     raw_hash = hashlib.sha256(raw.read_bytes()).hexdigest()
-    assert raw_hash == result['input_sha256'] == artifact['input_sha256']
+    assert result['input_sha256'] == artifact['input_sha256']
+    assert matches_recorded_sha256(raw,result['input_sha256'])
     assert result['input_files'] == ['data/stories_transactions.csv'] and result['external_model_inputs'] is False
     assert result['train']['end'] == artifact['train_end'] == '2026-03-31'
     assert result['test']['start'] == '2026-04-01' and result['test']['days'] == 91

@@ -1,0 +1,33 @@
+{
+  "verified_at_utc": "2026-10-17T14:23:01.097536+00:00",
+  "packages": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.6",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0"
+  },
+  "hash_convention": "SHA256 of LF-normalized text; binary bytes unchanged",
+  "sha256": {
+    "src/basket_recommender.py": "631ea8565aa51445e8c194c47b5f1f779e47d86465e9840f86750342c292ec7d",
+    "src/wejha_layout.py": "f12dd4a4ec5f14eb9ce05eeb7bb2806647dedacadec7a6ed08226e23046f63c8",
+    "src/growth_plan.py": "74d45242fa2d68766737458db38664ddfa66b92ac38b25e96ffd6c19cf6d2cc0",
+    "data/stories_transactions.csv": "f1672e728c28295b2b802d878fd38a158ba039827b429355e8438ee0463237a1",
+    "models/basket_recommender.json": "5b1d6fa5907d30f0c42b9e09e6fc7eaff97e55322718803c1c20cce42baaac42",
+    "app/recommendation_data.js": "d6ebaa19e6c249906bc06875cb0552e1b3b923f8e023d8a109bafe325ac6e607",
+    "app/wejha_data.js": "388048c9fc2de2dc8bb045a310630f8f16e2e8f9614d1fa0a19523d9507a6f33",
+    "app/preparation_data.js": "415cb9d8890b181df3230a605188bef7f8cebccdd18023dbe5bc6f5289dcf7b3",
+    "reports/recommendation_results.json": "a440ff102e29a3e0c564549ebbe11d0116d15098e9b21bdc99d9b93236284dde",
+    "reports/wejha_layouts.json": "26643daf1b1445d669c68b1c33ce6749668d79b0108f5c656892833c2a6a9b35",
+    "reports/growth_demo.json": "d0ef74a6e1712dc70a3c508114bd2863f2f4e751fd1c837648c4cde388fe0127"
+  },
+  "checks_passed": [
+    "Training-only selection and frozen Jan-Mar artifact metadata",
+    "All24 contexts/45 products satisfy ranking, support, probability and exclusion constraints",
+    "Browser payload equals saved model; no customer identifiers exported",
+    "8801 held-out multi-product order metrics and training-defined cohort reconcile",
+    "Display constraints, distances and browser payload reconcile",
+    "57 preparation cards reconcile and no assumed recommendation uplift enters demand",
+    "Integrated offer/prep products agree; default incremental-profit scenario is zero"
+  ]
+}
