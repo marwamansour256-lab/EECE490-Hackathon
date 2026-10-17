@@ -1,0 +1,41 @@
+series,variant,feature,coefficient_units,p_value
+All branches / all categories,linear_trend,ramadan,6.536857410037222,0.2181798751543923
+All branches / all categories,linear_trend,escalation_phase,10.654271912911039,0.2697811021817903
+All branches / all categories,linear_trend,post_truce_phase,2.1995452329529335,0.8900190748759522
+All branches / all categories,linear_trend,christian,1.8380507568994136,0.8262969283369908
+All branches / all categories,linear_trend,muslim,-13.044401121736428,0.22385423586904452
+All branches / all categories,ramadan_feb19,ramadan,7.847562139636066,0.13834950362231524
+All branches / all categories,ramadan_feb19,escalation_phase,14.483029488499035,0.1208229525642814
+All branches / all categories,ramadan_feb19,post_truce_phase,0.5946480587177186,0.9654383098329573
+All branches / all categories,ramadan_feb19,christian,1.297808648269392,0.882967192621163
+All branches / all categories,ramadan_feb19,muslim,-14.454828417424048,0.173494992461092
+Garden / all categories,linear_trend,ramadan,-0.648712437338727,0.7221904093552189
+Garden / all categories,linear_trend,escalation_phase,0.16114740871416328,0.9563407624051485
+Garden / all categories,linear_trend,post_truce_phase,-6.349049493227892,0.2137437561083667
+Garden / all categories,linear_trend,christian,-2.6132743092864907,0.274311499052035
+Garden / all categories,linear_trend,muslim,-5.2002555086586915,0.33358954984622236
+Garden / all categories,ramadan_feb19,ramadan,-0.05054762599301789,0.9788644673577795
+Garden / all categories,ramadan_feb19,escalation_phase,0.6859485680815814,0.8191986315953023
+Garden / all categories,ramadan_feb19,post_truce_phase,-6.367799789568817,0.19962164008762162
+Garden / all categories,ramadan_feb19,christian,-2.4668948598333253,0.3027871559655424
+Garden / all categories,ramadan_feb19,muslim,-5.263037263610041,0.3185680914264415
+Harbour / all categories,linear_trend,ramadan,7.1479183493527545,0.07227527331951476
+Harbour / all categories,linear_trend,escalation_phase,6.450636414112371,0.3143944803134664
+Harbour / all categories,linear_trend,post_truce_phase,12.319515714031143,0.16818616332037617
+Harbour / all categories,linear_trend,christian,7.069518211065544,0.33121847610466193
+Harbour / all categories,linear_trend,muslim,-7.817249355930859,0.016872794206111163
+Harbour / all categories,ramadan_feb19,ramadan,7.85615721224514,0.03943750341237052
+Harbour / all categories,ramadan_feb19,escalation_phase,8.419336854748185,0.1783433514784274
+Harbour / all categories,ramadan_feb19,post_truce_phase,11.203803540615185,0.15152852576371195
+Harbour / all categories,ramadan_feb19,christian,6.732380849937613,0.3737090112884306
+Harbour / all categories,ramadan_feb19,muslim,-8.647934267717437,0.013864807398806144
+Uptown / all categories,linear_trend,ramadan,-1.7426191178851334,0.47414056125086634
+Uptown / all categories,linear_trend,escalation_phase,2.405489915832688,0.47390019432346997
+Uptown / all categories,linear_trend,post_truce_phase,-5.226990870191099,0.39174446861742174
+Uptown / all categories,linear_trend,christian,-2.4505600697074033,0.4670732829584997
+Uptown / all categories,linear_trend,muslim,0.3075084126630012,0.9504892657199109
+Uptown / all categories,ramadan_feb19,ramadan,-2.088531506662152,0.4106517013352924
+Uptown / all categories,ramadan_feb19,escalation_phase,3.435354888049341,0.2700993345669285
+Uptown / all categories,ramadan_feb19,post_truce_phase,-5.6023299566431595,0.33291671946773693
+Uptown / all categories,ramadan_feb19,christian,-2.8117899458774875,0.4023357845428168
+Uptown / all categories,ramadan_feb19,muslim,-0.10307233479878418,0.9834127608631061

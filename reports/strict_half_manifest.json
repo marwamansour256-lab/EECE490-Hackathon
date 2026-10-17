@@ -1,0 +1,30 @@
+{
+  "verified_at_utc": "2026-10-17T14:06:14.017841+00:00",
+  "base_commit": "5774aabf7420989950120216df1f61737ff4cfda",
+  "python": "3.11.9",
+  "packages": {
+    "pandas": "3.0.6",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0"
+  },
+  "sha256": {
+    "data/stories_transactions.csv": "8375e91c2bebf84261e2b92b67ebf76c42f1af434322a7f2ac2b7f1ab3bb5c71",
+    "src/strict_model.py": "fa5ef32723974c1442fb9719dbfbeb09bfc02ad86db945c1150f0197c1259763",
+    "src/predict_strict.py": "774d92bbffec37029105164adde6a918da20d7c3c7a3c793935bc18ce62610da",
+    "models/strict_half_model.joblib": "d02b2fe22d3d26176d861db7b4b7c73a69854fe8bd22554cb060d36baa265192",
+    "reports/strict_half_results.json": "7cb98ac8508e034e96a92b417166500c74e18adbfa06caff6e21793ad8c64e23",
+    "reports/strict_half_predictions.csv": "8bbf1fe03475e406723a1c466a8097d8a1546273d99731368c2c2d8d011220a8",
+    "tests/test_strict_model.py": "52538c797d6dd145f97b7c9901f03b8f0325c5b03c7ac1e0bb756bc5aca0f4fe"
+  },
+  "checks_passed": [
+    "Single transaction CSV raw input; no external predictive files",
+    "Frozen March 31 artifact and disjoint April-June test dates",
+    "36855 unique item-day-method predictions; 91 dates and 135 branch-items per method",
+    "Category-to-item forecasts reconcile; serialized model reproduces saved forecasts",
+    "Demand, stock and contribution reconcile for every saved record",
+    "Item shares, price, cost and intraday proportions remain constant through testing"
+  ],
+  "evaluation_status": "Dataset already explored before this protocol was requested. This is a clean computational boundary, not a newly untouched test set."
+}

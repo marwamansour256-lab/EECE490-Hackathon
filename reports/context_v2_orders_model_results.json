@@ -1,0 +1,246 @@
+{
+  "sales_target": "Only Stories orders; no external sales labels",
+  "protocol": "Jan-Mar frozen coefficients; March11-31 training-only selection; Apr-Jun chronological retrospective test.",
+  "baseline_validation": {
+    "wape_pct": 11.19197093233967,
+    "mae_units": 6.617474876661154,
+    "bias_pct": 5.930032532974954,
+    "poisson_deviance": 1.0977748401059875
+  },
+  "baseline_test": {
+    "wape_pct": 9.464396376173534,
+    "mae_units": 6.619877245532368,
+    "bias_pct": 1.552496386360078,
+    "poisson_deviance": 1.0768872329427837
+  },
+  "selected_by_region": {
+    "beirut": {
+      "selected_method": "beirut / month_cycle",
+      "best_external": "beirut / month_cycle",
+      "validation": {
+        "region": "beirut",
+        "family": "month_cycle",
+        "alpha": 0.01,
+        "wape_pct": 9.826841634980793,
+        "mae_units": 5.810315093698962,
+        "bias_pct": 3.1229615014491254,
+        "poisson_deviance": 0.8820637800911799
+      }
+    },
+    "batroun": {
+      "selected_method": "batroun / month_cycle",
+      "best_external": "batroun / month_cycle",
+      "validation": {
+        "region": "batroun",
+        "family": "month_cycle",
+        "alpha": 0.01,
+        "wape_pct": 9.826841634980793,
+        "mae_units": 5.810315093698962,
+        "bias_pct": 3.1229615014491254,
+        "poisson_deviance": 0.8820637800911799
+      }
+    },
+    "broummana": {
+      "selected_method": "broummana / month_cycle",
+      "best_external": "broummana / month_cycle",
+      "validation": {
+        "region": "broummana",
+        "family": "month_cycle",
+        "alpha": 0.01,
+        "wape_pct": 9.826841634980793,
+        "mae_units": 5.810315093698962,
+        "bias_pct": 3.1229615014491254,
+        "poisson_deviance": 0.8820637800911799
+      }
+    }
+  },
+  "metrics": [
+    {
+      "method": "beirut / calendar",
+      "eligible_day_ahead": true,
+      "wape_pct": 12.338705159087088,
+      "mae_units": 8.630314103031793,
+      "bias_pct": 8.647092776134945,
+      "poisson_deviance": 1.6133797077003622
+    },
+    {
+      "method": "beirut / month_cycle",
+      "eligible_day_ahead": true,
+      "wape_pct": 9.26584842473277,
+      "mae_units": 6.481002771804844,
+      "bias_pct": 1.5499823475991241,
+      "poisson_deviance": 1.063244592612811
+    },
+    {
+      "method": "beirut / religious_menu",
+      "eligible_day_ahead": true,
+      "wape_pct": 9.403474150457491,
+      "mae_units": 6.577265161281531,
+      "bias_pct": 1.3763083867760895,
+      "poisson_deviance": 1.0727853585058607
+    },
+    {
+      "method": "beirut / issued_weather_only",
+      "eligible_day_ahead": true,
+      "wape_pct": 9.572285738422012,
+      "mae_units": 6.695340519236935,
+      "bias_pct": 2.025246781782511,
+      "poisson_deviance": 1.092601224217273
+    },
+    {
+      "method": "beirut / public_disruption",
+      "eligible_day_ahead": true,
+      "wape_pct": 9.483014400177586,
+      "mae_units": 6.632899632651685,
+      "bias_pct": 1.63764053312167,
+      "poisson_deviance": 1.0787572558031544
+    },
+    {
+      "method": "beirut / calendar_issued_weather",
+      "eligible_day_ahead": true,
+      "wape_pct": 10.574755984135034,
+      "mae_units": 7.396518883408735,
+      "bias_pct": 5.500456145402794,
+      "poisson_deviance": 1.3048577794740346
+    },
+    {
+      "method": "beirut / observed_oracle",
+      "eligible_day_ahead": false,
+      "wape_pct": 10.361477729569964,
+      "mae_units": 7.247341291067343,
+      "bias_pct": 4.957537317387049,
+      "poisson_deviance": 1.28414030847882
+    },
+    {
+      "method": "batroun / calendar",
+      "eligible_day_ahead": true,
+      "wape_pct": 12.3400457540855,
+      "mae_units": 8.631251782940023,
+      "bias_pct": 8.649178480194152,
+      "poisson_deviance": 1.613628461480227
+    },
+    {
+      "method": "batroun / month_cycle",
+      "eligible_day_ahead": true,
+      "wape_pct": 9.26584842473277,
+      "mae_units": 6.481002771804844,
+      "bias_pct": 1.5499823475991241,
+      "poisson_deviance": 1.063244592612811
+    },
+    {
+      "method": "batroun / religious_menu",
+      "eligible_day_ahead": true,
+      "wape_pct": 9.403474150457491,
+      "mae_units": 6.577265161281531,
+      "bias_pct": 1.3763083867760895,
+      "poisson_deviance": 1.0727853585058607
+    },
+    {
+      "method": "batroun / issued_weather_only",
+      "eligible_day_ahead": true,
+      "wape_pct": 9.49551083129174,
+      "mae_units": 6.641640268260652,
+      "bias_pct": 1.6750439885876298,
+      "poisson_deviance": 1.0802675861029065
+    },
+    {
+      "method": "batroun / public_disruption",
+      "eligible_day_ahead": true,
+      "wape_pct": 9.483014400177586,
+      "mae_units": 6.632899632651685,
+      "bias_pct": 1.63764053312167,
+      "poisson_deviance": 1.0787572558031544
+    },
+    {
+      "method": "batroun / calendar_issued_weather",
+      "eligible_day_ahead": true,
+      "wape_pct": 10.112478116897858,
+      "mae_units": 7.0731783751708655,
+      "bias_pct": 4.208903133759097,
+      "poisson_deviance": 1.2110594718272358
+    },
+    {
+      "method": "batroun / observed_oracle",
+      "eligible_day_ahead": false,
+      "wape_pct": 10.511089078098017,
+      "mae_units": 7.351987030999328,
+      "bias_pct": 5.269431591588331,
+      "poisson_deviance": 1.2943534698583776
+    },
+    {
+      "method": "broummana / calendar",
+      "eligible_day_ahead": true,
+      "wape_pct": 12.338705159087088,
+      "mae_units": 8.630314103031793,
+      "bias_pct": 8.647092776134945,
+      "poisson_deviance": 1.6133797077003622
+    },
+    {
+      "method": "broummana / month_cycle",
+      "eligible_day_ahead": true,
+      "wape_pct": 9.26584842473277,
+      "mae_units": 6.481002771804844,
+      "bias_pct": 1.5499823475991241,
+      "poisson_deviance": 1.063244592612811
+    },
+    {
+      "method": "broummana / religious_menu",
+      "eligible_day_ahead": true,
+      "wape_pct": 9.403474150457491,
+      "mae_units": 6.577265161281531,
+      "bias_pct": 1.3763083867760895,
+      "poisson_deviance": 1.0727853585058607
+    },
+    {
+      "method": "broummana / issued_weather_only",
+      "eligible_day_ahead": true,
+      "wape_pct": 9.572285738422009,
+      "mae_units": 6.695340519236933,
+      "bias_pct": 2.02524678178251,
+      "poisson_deviance": 1.092601224217273
+    },
+    {
+      "method": "broummana / public_disruption",
+      "eligible_day_ahead": true,
+      "wape_pct": 9.483014400177586,
+      "mae_units": 6.632899632651685,
+      "bias_pct": 1.63764053312167,
+      "poisson_deviance": 1.0787572558031544
+    },
+    {
+      "method": "broummana / calendar_issued_weather",
+      "eligible_day_ahead": true,
+      "wape_pct": 10.574755984135024,
+      "mae_units": 7.396518883408728,
+      "bias_pct": 5.500456145402781,
+      "poisson_deviance": 1.3048577794740315
+    },
+    {
+      "method": "broummana / observed_oracle",
+      "eligible_day_ahead": false,
+      "wape_pct": 10.367075192090649,
+      "mae_units": 7.251256439302964,
+      "bias_pct": 4.971101660572616,
+      "poisson_deviance": 1.2849101648250734
+    },
+    {
+      "method": "internal_baseline",
+      "eligible_day_ahead": true,
+      "wape_pct": 9.464396376173534,
+      "mae_units": 6.619877245532368,
+      "bias_pct": 1.552496386360078,
+      "poisson_deviance": 1.0768872329427837
+    }
+  ],
+  "source_manifest": "data/external/context_v2/manifest.json",
+  "caveats": [
+    "Observed oracle is retrospective, not a deployable day-ahead model.",
+    "Three proxy regions are not verified branch mappings. Region results are geography sensitivity, not location identification.",
+    "External signals are feature inputs; all train/test sales targets are Stories.",
+    "Forecast lead-time archive is separate from realized weather; provider ingestion latency and branch exposure remain unverified.",
+    "Previously explored dataset and post-selection hypothesis design mean test results are exploratory.",
+    "Calendar/observed-context feature contributions explain the model adjustment, not a causal decomposition of actual sales.",
+    "Maronite/Orthodox/Muslim calendars do not identify individual or branch religion.",
+    "Promotion schedule is observed in the dataset; historic campaign announcement timing is unverified."
+  ]
+}

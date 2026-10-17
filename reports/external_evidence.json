@@ -1,0 +1,432 @@
+{
+  "researched_on": "2026-10-17",
+  "dataset_window": [
+    "2026-01-01",
+    "2026-06-30"
+  ],
+  "method": "Searched with the user-requested search-service connector. Primary sources preferred. Event dates and publication dates are separate. Sources establish external events, not their causal effect on anonymized cafe transactions. The assignment describes real transaction data with replaced IDs; SYN prefixes do not establish synthetic generation.",
+  "critical_corrections": [
+    "The renewed Lebanon escalation began on 2026-03-02, not March 1.",
+    "The temporary ceasefire took effect on 2026-04-17 local time. This is a regime change, not an end-of-war or normal-business indicator; hostilities and displacement persisted afterwards.",
+    "The 2026 Easter dates differ: Western April 5 and Eastern April 12; actual holiday and school closure windows extend around these Sundays.",
+    "Ramadan began February 18 under Dar el Fatwa's declaration; some authorities began February 19. Run a one-day sensitivity check. Do not infer individual religion from purchases or branch names.",
+    "Official Eid al-Fitr public-sector closure was extended through March 23; Eid al-Adha closure was May 27-29. Cafe opening hours need separate verification.",
+    "A single Beirut weather grid cannot establish weather at anonymized Harbour, Garden and Uptown. Public brand listings do not provide a defensible mapping from those labels to real branches.",
+    "Six months includes winter, spring and early summer only. It cannot identify repeatable annual seasonality or prove the effect of a holiday observed once.",
+    "Historical realized weather is suitable for explanatory analysis but gives an optimistic backtest for next-day decisions; use forecasts actually available at decision time."
+  ],
+  "sources": [
+    {
+      "id": "war_onset_un",
+      "title": "UN Humanitarian Coordinator briefing",
+      "url": "https://lebanon.un.org/en/312364-statement-un-humanitarian-coordinator-imran-riza-un-geneva-press-briefing",
+      "publisher": "United Nations in Lebanon",
+      "publication_date": "2026-03-17",
+      "event_dates": [
+        "2026-03-02"
+      ],
+      "verified_fact": "Renewed escalation began March 2; pre-existing displacement and economic strain preceded it. Schools and the public university were affected by shelter use.",
+      "feature": "escalation_regime; education disruption; lagged displacement reports",
+      "limitation": "Country-level event, not equal exposure at every store. Report information is only available on/after publication.",
+      "availability_class": "unanticipated event/report; exclude future dates and values from ex-ante backtests; lag to actual availability"
+    },
+    {
+      "id": "april8_shock_un",
+      "title": "Secretary-General statement on Lebanon",
+      "url": "https://www.un.org/sg/en/content/sg/statements/2026-04-08/statement-attributable-the-spokesperson-for-the-secretary-general-lebanon",
+      "publisher": "United Nations",
+      "publication_date": "2026-04-08",
+      "event_dates": [
+        "2026-04-08"
+      ],
+      "verified_fact": "Large-scale strikes occurred across Lebanon on April 8, causing civilian casualties and infrastructure damage.",
+      "feature": "same-day shock in explanatory analysis; lagged shock for next-day prediction",
+      "limitation": "Do not feed an unanticipated future strike into an ex-ante forecast. Casualty counts change as reports are revised.",
+      "availability_class": "unanticipated event/report; exclude future dates and values from ex-ante backtests; lag to actual availability"
+    },
+    {
+      "id": "mourning_april9",
+      "title": "Memo 8 of April 8, national mourning",
+      "url": "https://www.pcm.gov.lb/arabic/subpg.aspx?pageid=27055",
+      "publisher": "Lebanese Presidency of the Council of Ministers",
+      "publication_date": "2026-04-08",
+      "event_dates": [
+        "2026-04-09"
+      ],
+      "verified_fact": "April 9 was declared a national day of mourning.",
+      "feature": "mourning/public activity disruption",
+      "limitation": "Near Easter and April 8 strikes, so independent attribution is weak. Store closure is not established.",
+      "availability_class": "announced calendar/operational change; usable only after announcement was available"
+    },
+    {
+      "id": "ceasefire_unhcr",
+      "title": "Protection Sector Sitrep 5, March 2 to April 17",
+      "url": "https://data.unhcr.org/en/documents/details/122090",
+      "publisher": "UNHCR operational data portal / protection sector",
+      "publication_date": "2026-04-17",
+      "upload_date": "2026-04-20",
+      "event_dates": [
+        "2026-04-17"
+      ],
+      "verified_fact": "Temporary ten-day ceasefire began April 17; access constraints, insecurity and displacement continued.",
+      "feature": "post_ceasefire_regime, distinct from normal operations",
+      "limitation": "The document was uploaded April 20; historical features need publication/availability timestamps.",
+      "availability_class": "unanticipated event/report; exclude future dates and values from ex-ante backtests; lag to actual availability"
+    },
+    {
+      "id": "continued_displacement",
+      "title": "Despite announced ceasefire, more people forced to flee",
+      "url": "https://www.unhcr.org/lb/news/briefing-notes/unhcr-despite-announced-ceasefire-more-people-are-forced-flee-their-homes",
+      "publisher": "UNHCR",
+      "publication_date": "2026-05-05",
+      "event_dates": [
+        "2026-05-05"
+      ],
+      "verified_fact": "Displacement continued after the ceasefire; Beirut had been quieter while the south and parts of Bekaa remained affected.",
+      "feature": "district-specific exposure and lagged displacement flows",
+      "limitation": "National war dummy masks geographic differences. Receiving areas and directly affected areas may experience opposite demand changes.",
+      "availability_class": "unanticipated event/report; exclude future dates and values from ex-ante backtests; lag to actual availability"
+    },
+    {
+      "id": "displacement_destinations",
+      "title": "Almost 700,000 displaced in a week across Lebanon",
+      "url": "https://www.unhcr.org/news/briefing-notes/unhcr-almost-700-000-displaced-week-across-lebanon-crisis-deepens",
+      "publisher": "UNHCR",
+      "publication_date": "2026-03-10",
+      "event_dates": [
+        "2026-03-10"
+      ],
+      "verified_fact": "People sought safety in Beirut, Mount Lebanon, northern districts and parts of Bekaa.",
+      "feature": "lagged district inbound displacement, subject to verified data access",
+      "limitation": "Do not infer individual displacement or vulnerability from customer behavior. Aggregate counts can be revised and mix registrations with actual presence.",
+      "availability_class": "unanticipated event/report; exclude future dates and values from ex-ante backtests; lag to actual availability"
+    },
+    {
+      "id": "conflict_geography",
+      "title": "OCHA Lebanon Flash Update 17",
+      "url": "https://unsco.unmissions.org/sites/default/files/2026-04/2026.04.13_OCHA_Lebanon_Flash_Update%20No%2017.pdf",
+      "publisher": "OCHA",
+      "publication_date": "2026-04-13",
+      "event_dates": [
+        "2026-04-13"
+      ],
+      "verified_fact": "Report includes geographic incident and displacement-order context, with activity in the south, parts of Bekaa and Beirut's southern suburbs.",
+      "feature": "branch distance to incidents, road access, evacuation-order exposure after geocoding",
+      "limitation": "A cumulative map is not a daily incident series. Need dated observations and trustworthy branch coordinates.",
+      "availability_class": "unanticipated event/report; exclude future dates and values from ex-ante backtests; lag to actual availability"
+    },
+    {
+      "id": "official_holidays_bdl",
+      "title": "Official banking holidays 2026",
+      "url": "https://www.bdl.gov.lb/bankingholidays.php",
+      "publisher": "Banque du Liban",
+      "publication_date": null,
+      "event_dates": [
+        "2026-01-01",
+        "2026-01-06",
+        "2026-02-09",
+        "2026-03-20",
+        "2026-03-25",
+        "2026-04-03",
+        "2026-04-05",
+        "2026-04-06",
+        "2026-04-10",
+        "2026-04-12",
+        "2026-04-13",
+        "2026-05-01",
+        "2026-05-25",
+        "2026-05-27",
+        "2026-06-16",
+        "2026-06-26"
+      ],
+      "verified_fact": "Provides 2026 public/banking calendar, Western Easter April 5 observed April 6, Eastern Easter April 12 observed April 13; lunar holidays marked subject to change.",
+      "feature": "separate holiday identities, Western/Eastern Easter windows and lead/lag days",
+      "limitation": "Bank/public-sector closure does not imply cafe closure. Use final government memos for lunar dates and expanded closure windows.",
+      "availability_class": "planned schedule can be known in advance; retain version/announcement date and respect later revisions"
+    },
+    {
+      "id": "ramadan_official",
+      "title": "Dar el Fatwa declaration of Ramadan 1447",
+      "url": "https://www.darelfatwa.gov.lb/%D8%A8%D9%8A%D8%A7%D9%86-%D8%B5%D8%A7%D8%AF%D8%B1-%D8%B9%D9%86-%D9%85%D9%81%D8%AA%D9%8A-%D8%A7%D9%84%D8%AC%D9%85%D9%87%D9%88%D8%B1%D9%8A%D8%A9-%D8%A7%D9%84%D9%84%D8%A8%D9%86%D8%A7%D9%86%D9%8A%D8%A9-7/",
+      "publisher": "Dar el Fatwa, Lebanon",
+      "publication_date": "2026-02-17",
+      "event_dates": [
+        "2026-02-18"
+      ],
+      "verified_fact": "Declaration sets first day of Ramadan as February 18.",
+      "feature": "Ramadan × minutes relative to local sunset × category × branch",
+      "limitation": "Observed start can differ by authority. Almost all of March Ramadan overlaps escalation; a simple before/after estimate is confounded.",
+      "availability_class": "announced calendar/operational change; usable only after announcement was available"
+    },
+    {
+      "id": "ramadan_alternative_start",
+      "title": "Supreme Shia Islamic Council declaration reported by LBCI",
+      "url": "https://www.lbcgroup.tv/news/lebanon/906246/lbci-lebanon-articles/ar",
+      "publisher": "LBCI reporting the council declaration",
+      "publication_date": "2026-02-18",
+      "event_dates": [
+        "2026-02-19"
+      ],
+      "verified_fact": "Council declaration sets Ramadan start as February 19.",
+      "feature": "one-day calendar sensitivity",
+      "limitation": "Secondary reporting of declaration. Not a basis for classifying customer religion.",
+      "availability_class": "announced calendar/operational change; usable only after announcement was available",
+      "publication_date_note": "Date inferred from declaration wording; exact page timestamp not independently opened/verified."
+    },
+    {
+      "id": "eid_fitr_public_closure",
+      "title": "Memo 6 of March 19, Eid al-Fitr closure",
+      "url": "https://www.pcm.gov.lb/arabic/subpg.aspx?pageid=26983",
+      "publisher": "Lebanese Presidency of the Council of Ministers",
+      "publication_date": "2026-03-19",
+      "event_dates": [
+        "2026-03-20",
+        "2026-03-21",
+        "2026-03-22",
+        "2026-03-23"
+      ],
+      "verified_fact": "Public institutions and municipalities close from the first day of Eid through Monday March 23 inclusive.",
+      "feature": "public-sector Eid closure window, separate from religious date",
+      "limitation": "Memo defines first day using religious declarations rather than restating Gregorian date. March 20 first day supported by BDL and final Dar el Fatwa declaration reported separately.",
+      "availability_class": "announced calendar/operational change; usable only after announcement was available"
+    },
+    {
+      "id": "eid_fitr_confirmed",
+      "title": "Dar el Fatwa: Friday first day of Eid al-Fitr",
+      "url": "https://www.aljoumhouria.com/api/mobile/news/802608",
+      "publisher": "Al Joumhouria reporting Dar el Fatwa declaration",
+      "publication_date": "2026-03-18",
+      "event_dates": [
+        "2026-03-20"
+      ],
+      "verified_fact": "Reported declaration sets March 20 as first day of Eid, with March 19 completing Ramadan.",
+      "feature": "end of Ramadan and Eid event",
+      "limitation": "Secondary reporting; other authorities may differ by one day.",
+      "availability_class": "announced calendar/operational change; usable only after announcement was available",
+      "publication_date_note": "Date inferred from declaration wording; exact page timestamp not independently opened/verified."
+    },
+    {
+      "id": "eid_adha_public_closure",
+      "title": "Memo 12 of May 18, Eid al-Adha closure",
+      "url": "https://www.pcm.gov.lb/arabic/subpg.aspx?pageid=27162",
+      "publisher": "Lebanese Presidency of the Council of Ministers",
+      "publication_date": "2026-05-18",
+      "event_dates": [
+        "2026-05-27",
+        "2026-05-28",
+        "2026-05-29"
+      ],
+      "verified_fact": "Public-sector closure May 27 through May 29 inclusive.",
+      "feature": "Eid al-Adha closure window plus lead/lag days",
+      "limitation": "Only one event in the dataset; school and cafe hours may differ.",
+      "availability_class": "announced calendar/operational change; usable only after announcement was available"
+    },
+    {
+      "id": "hijri_new_year",
+      "title": "Memo 13 of June 9, Hijri New Year closure",
+      "url": "https://www.pcm.gov.lb/arabic/subpg.aspx?pageid=27222",
+      "publisher": "Lebanese Presidency of the Council of Ministers",
+      "publication_date": "2026-06-09",
+      "event_dates": [
+        "2026-06-16"
+      ],
+      "verified_fact": "Public institutions close Tuesday June 16 for Hijri New Year.",
+      "feature": "Hijri New Year holiday",
+      "limitation": "Overrides tentative June 17 found in some university calendars.",
+      "availability_class": "announced calendar/operational change; usable only after announcement was available"
+    },
+    {
+      "id": "ashoura",
+      "title": "Memo 15 of June 22, Ashoura closure",
+      "url": "https://www.pcm.gov.lb/arabic/subpg.aspx?pageid=27249",
+      "publisher": "Lebanese Presidency of the Council of Ministers",
+      "publication_date": "2026-06-22",
+      "event_dates": [
+        "2026-06-26"
+      ],
+      "verified_fact": "Public institutions close Friday June 26 for Ashoura.",
+      "feature": "Ashoura and local road/attendance effects if separately verified",
+      "limitation": "Do not assume uniform effects across neighborhoods.",
+      "availability_class": "announced calendar/operational change; usable only after announcement was available"
+    },
+    {
+      "id": "school_easter_windows",
+      "title": "Education Ministry Easter vacation announcement",
+      "url": "https://mehe.gov.lb/ar/media-center/news/%D9%88%D8%B2%D9%8A%D8%B1%D8%A9-%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D9%8A%D8%A9-%D8%AA%D8%AD%D8%AF%D8%AF-%D8%B9%D8%B7%D9%84%D8%A9-%D8%B9%D9%8A%D8%AF-%D8%A7%D9%84%D9%81%D8%B5%D8%AD-%D9%84%D9%84%D9%85%D8%AF%D8%A7%D8%B1%D8%B3-%D9%88%D8%A7%D9%84%D9%85%D9%87%D9%86%D9%8A%D8%A7%D8%AA",
+      "publisher": "Lebanese Ministry of Education and Higher Education",
+      "publication_date": "2026-03-27",
+      "event_dates": [
+        "2026-04-02",
+        "2026-04-06"
+      ],
+      "verified_fact": "Western Easter school vacation starts April 2 and runs through April 6.",
+      "feature": "school vacation rather than single holiday date",
+      "limitation": "School-specific exposure requires catchment and attendance verification.",
+      "availability_class": "announced calendar/operational change; usable only after announcement was available"
+    },
+    {
+      "id": "brand_locations",
+      "title": "Stories Coffee official brand website",
+      "url": "https://storiescoffee.com/",
+      "publisher": "Stories Coffee",
+      "publication_date": null,
+      "event_dates": [],
+      "verified_fact": "Lebanese chain describes 22 locations in its 2025 timeline; surfaced location names include Beirut neighborhoods and towns across Lebanon.",
+      "feature": "branch mapping must be supplied by company",
+      "limitation": "No verified mapping to anonymized Harbour, Garden and Uptown. Current location lists do not establish which stores existed or operated on every historical day.",
+      "availability_class": "current contextual lookup; historical operating status and alias mapping unverified"
+    },
+    {
+      "id": "brand_location_links",
+      "title": "Stories Coffee Lebanon official social link hub",
+      "url": "https://linktr.ee/storiescoffeelb",
+      "publisher": "Stories Coffee Lebanon account",
+      "publication_date": null,
+      "event_dates": [],
+      "verified_fact": "Lists branches including Bir Hassan, Tyre, Bliss Street, Kraytem, Zalka, Antelias and others.",
+      "feature": "candidate address registry after company confirms aliases",
+      "limitation": "Cannot assign aliases using neighborhood stereotypes, religion or apparent branch-name similarity.",
+      "availability_class": "current contextual lookup; historical operating status and alias mapping unverified"
+    },
+    {
+      "id": "weather_reanalysis",
+      "title": "Historical Weather API documentation",
+      "url": "https://open-meteo.com/en/docs/historical-weather-api",
+      "publisher": "Open-Meteo",
+      "publication_date": null,
+      "event_dates": [],
+      "verified_fact": "Historical weather products include gridded reanalysis and model datasets.",
+      "feature": "hourly temperature, precipitation, wind, humidity, apparent temperature and local sunrise/sunset",
+      "limitation": "Record dataset/model, retrieval date, timezone, query coordinates and returned grid coordinates. Existing repository weather JSON is one grid at about 33.848858,35.529266 and lacks explicit model provenance.",
+      "availability_class": "retrospective realized/reanalysis weather; explanation or oracle benchmark only"
+    },
+    {
+      "id": "weather_forecast_asof",
+      "title": "Previous Model Runs API documentation",
+      "url": "https://open-meteo.com/en/docs/previous-runs-api",
+      "publisher": "Open-Meteo",
+      "publication_date": null,
+      "event_dates": [],
+      "verified_fact": "Supports weather variables at fixed forecast lead-time offsets of one to seven days; most models archived from January 2024.",
+      "feature": "next-day weather forecast available before preparation decision",
+      "limitation": "Do not substitute realized weather or a stitched same-day analysis for a day-ahead forecast in a deployment performance claim.",
+      "availability_class": "forecast known before target only when archived issuance time precedes decision cutoff"
+    },
+    {
+      "id": "lau_calendar",
+      "title": "LAU academic calendar 2025-2026",
+      "url": "https://www.lau.edu.lb/calendar/20252026/",
+      "publisher": "Lebanese American University",
+      "publication_date": null,
+      "event_dates": [
+        "2026-01-14",
+        "2026-04-30",
+        "2026-05-04",
+        "2026-05-14",
+        "2026-06-08",
+        "2026-06-12",
+        "2026-06-13"
+      ],
+      "verified_fact": "Spring classes January 14-April 30, final exams May 4-14, summer starts June 8; Beirut commencement June 12-13.",
+      "feature": "campus class/exam/commencement windows weighted by actual nearby branch catchment",
+      "limitation": "Planned calendar does not capture war-related online teaching. Calendar has some tentative lunar holiday dates that differ from final government declarations.",
+      "availability_class": "planned schedule can be known in advance; retain version/announcement date and respect later revisions"
+    },
+    {
+      "id": "aub_calendar",
+      "title": "AUB university calendar 2025-2026",
+      "url": "https://www.aub.edu.lb/Registrar/Documents/calendars/calendar2025-26.pdf",
+      "publisher": "American University of Beirut",
+      "publication_date": null,
+      "revision_date": "2026-06-25",
+      "event_dates": [
+        "2026-01-12",
+        "2026-05-04",
+        "2026-05-08",
+        "2026-05-17",
+        "2026-06-01",
+        "2026-06-05",
+        "2026-06-06"
+      ],
+      "verified_fact": "Spring starts January 12, classes end May 4, finals May 8-17, summer starts June 1, commencement June 5-6.",
+      "feature": "campus attendance/exam/commencement windows",
+      "limitation": "Retrieved PDF includes June 25 revisions. Strict backtests must use calendar versions available at the time and actual teaching modality.",
+      "availability_class": "planned schedule can be known in advance; retain version/announcement date and respect later revisions"
+    },
+    {
+      "id": "lau_online_march",
+      "title": "LAU academic update March 23-27",
+      "url": "https://www.lau.edu.lb/about/governance/provost/news-updates/2026/academic-update-march-2327-2026.php",
+      "publisher": "LAU Office of the Provost",
+      "publication_date": null,
+      "event_dates": [
+        "2026-03-23",
+        "2026-03-27"
+      ],
+      "verified_fact": "Beirut campus lecture-based classes continued primarily online during the stated week.",
+      "feature": "actual campus modality, not merely term-in-session",
+      "limitation": "One weekly update does not establish modality throughout the entire semester; gather successive updates.",
+      "availability_class": "announced calendar/operational change; usable only after announcement was available"
+    },
+    {
+      "id": "world_cup_schedule",
+      "title": "Updated World Cup 2026 schedule and kick-off times",
+      "url": "https://vod.fifa.com/organisation/media-releases/updated-world-cup-2026-match-schedule-venues-kick-off-times-104-matches",
+      "publisher": "FIFA",
+      "publication_date": null,
+      "event_dates": [
+        "2026-06-11"
+      ],
+      "verified_fact": "Opening match scheduled June 11 at 13:00 Mexico City local time.",
+      "feature": "Lebanon-local kickoff windows, branch screens, reservations and evening category demand",
+      "limitation": "Only 20 tournament days overlap the CSV. Confirm actual screening and convert with timezone libraries; a tournament flag alone is confounded with June trend.",
+      "availability_class": "planned schedule can be known in advance; retain version/announcement date and respect later revisions"
+    }
+  ],
+  "candidate_tests_and_actions": [
+    {
+      "driver": "Weather",
+      "test": "Within-month temperature/rain anomalies after weekday and trend control; branch/category interactions; rolling holdout ablation.",
+      "action_if_validated": "Change pastry preparation, iced-drink ingredients and staffing by predicted demand distribution; test takeaway offers during rain.",
+      "minimum_additional_data": "Branch coordinates, opening hours, stockouts, forecast archive and waste."
+    },
+    {
+      "driver": "Ramadan and holidays",
+      "test": "Local-sunset-relative daypart shifts, separate Western/Eastern and civic holidays, one-day lunar sensitivity, leave-one-event-out robustness.",
+      "action_if_validated": "Move preparation and staffing to observed evening window; test seasonal bundles on incremental gross profit.",
+      "minimum_additional_data": "Accurate store hours, at least another comparable year, campaign logs; no customer religion needed."
+    },
+    {
+      "driver": "War, access and displacement",
+      "test": "Geocoded branch exposure and access logs; lagged local incidents; compare disrupted and receiving areas only if pre-trends and controls are credible.",
+      "action_if_validated": "Adjust operating plans and replenish available branches; override automated forecasts when access changes.",
+      "minimum_additional_data": "Alias/address mapping, closures, delivery reach, dated local incident/displacement data."
+    },
+    {
+      "driver": "University attendance",
+      "test": "Class/exam/online/holiday periods interacted with verified campus catchment and daypart.",
+      "action_if_validated": "Study-period snack/coffee prep and staffing; avoid overstock when classes move online.",
+      "minimum_additional_data": "Catchment mapping and historical modality announcements."
+    },
+    {
+      "driver": "World Cup and events",
+      "test": "Kickoff windows at screening branches versus nonscreening controls; control weekday/time/trend and run placebo windows.",
+      "action_if_validated": "Reservation-based staffing and snack bundles evaluated on gross profit per seat-hour.",
+      "minimum_additional_data": "Actual branch screening calendar, reservations, seat capacity, event promotions."
+    },
+    {
+      "driver": "Pay cycle and local operations",
+      "test": "Month-end/first-week indicators as hypotheses, verified payroll dates where relevant; compare promotion availability and POS outages before news explanations.",
+      "action_if_validated": "Schedule profitable offers and inventory using validated demand changes.",
+      "minimum_additional_data": "Company campaign, loyalty, delivery-app availability, stockout, operating-hour and outage logs. No external fact or current effect asserted."
+    }
+  ],
+  "causal_and_model_rules": [
+    "A news event on a high-sales date is a hypothesis, not an explanation. Compare the residual against a pre-event calendar/trend baseline.",
+    "Register the feature families and action rules before scanning residual peaks; control false discoveries across branch/category/event tests.",
+    "Use date-blocked uncertainty or temporal holdouts because branches share the same 181 weather/calendar days; 543 branch-days are not 543 independent external shocks.",
+    "Separate retrospective explanations from features available before each forecast origin, and retain known_at timestamps for event feeds.",
+    "Profit optimization needs unit contribution margins, waste/salvage, lead times, stockouts and capacity; transaction sales alone do not reveal uncensored demand.",
+    "A valid null result should remove an external feature from the model. The assignment describes real data with replaced transaction IDs; SYN prefixes do not prove synthetic generation. Unusual regularity should trigger provenance checks rather than a claim that the data is artificial."
+  ]
+}

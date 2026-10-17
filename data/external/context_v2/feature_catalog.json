@@ -1,0 +1,112 @@
+{
+  "researched_on": "2026-10-17",
+  "sales_target": "Stories transactions only",
+  "sources": {
+    "maronite_rules": {
+      "url": "https://bkerki.org/news-article/%D8%A7%D9%84%D8%B5%D9%88%D9%85-%D8%A7%D9%84%D9%83%D8%A8%D9%8A%D8%B1-%D8%B5%D9%84%D8%A7%D8%A9-%D9%88%D8%B5%D8%AF%D9%82%D8%A9-%D9%88%D8%B5%D9%8A%D8%A7%D9%85-%D8%B1%D8%B3%D8%A7%D9%84/",
+      "published_at": "2026-02-09",
+      "fact": "Pastoral guidance specifies fasting until noon, weekday exceptions, Holy Week, Friday abstinence and June21-28 Apostles abstinence; observance is unknown."
+    },
+    "maronite_start": {
+      "url": "https://bkerki.org/calendar/15-2-2026/",
+      "published_at": "2026-02-15",
+      "fact": "Entry into Lent on Feb15, followed by Ash Monday Feb16; Western Easter April5."
+    },
+    "orthodox_calendar": {
+      "url": "https://www.goarch.org/chapel/paschalion",
+      "published_at": null,
+      "fact": "Great Lent begins Feb23 and Pascha is April12; not proof of local observance."
+    },
+    "school_security": {
+      "url": "https://mehe.gov.lb/ar/media-center/news/%D8%A8%D9%8A%D8%A7%D9%86-%D8%B5%D8%A7%D8%AF%D8%B1-%D8%B9%D9%86-%D9%88%D8%B2%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D9%8A%D8%A9-%D9%88%D8%A7%D9%84%D8%AA%D8%B9%D9%84%D9%8A%D9%85-%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%8A",
+      "published_at": "2026-03-02",
+      "fact": "National school closure announced March2. Publication hour is unknown; do not backdate it to opening."
+    },
+    "school_remote": {
+      "url": "https://www.mehe.gov.lb/ar/media-center/news/%D8%A7%D9%84%D9%88%D8%B2%D9%8A%D8%B1%D8%A9-%D9%83%D8%B1%D8%A7%D9%85%D9%8A-%D8%A3%D8%B5%D8%AF%D8%B1%D8%AA-%D8%AA%D8%B9%D9%85%D9%8A%D9%85%D8%A7-%D8%AD%D9%88%D9%84-%D8%B6%D9%85%D8%A7%D9%86-%D8%A7%D8%B3%D8%AA%D9%85%D8%B1%D8%A7%D8%B1%D9%8A%D8%A9-%D8%A7%D9%84%D8%AA%D8%B9%D9%84%D9%8A%D9%85-%D9%81%D9%8A-%D8%B8%D9%84-%D8%A7%D9%84%D8%B8%D8%B1%D9%88%D9%81-%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%AB%D9%86%D8%A7%D8%A6%D9%8A%D8%A9",
+      "published_at": "2026-03-09",
+      "fact": "Public-school remote learning from March10 in the following weeks; private-school arrangements vary. Seven-day transition window is a research specification, not the full closure duration."
+    },
+    "weather": {
+      "url": "https://open-meteo.com/en/docs/historical-weather-api",
+      "published_at": null,
+      "fact": "Explicit ERA5 hourly reanalysis via Open-Meteo, explanatory observed stream."
+    },
+    "issued_weather": {
+      "url": "https://open-meteo.com/en/docs/previous-runs-api",
+      "published_at": null,
+      "fact": "ECMWF IFS0.25 fixed previous_day1 lead, distinct from observed weather; earliest data availability/ingestion latency still requires operational verification."
+    },
+    "air": {
+      "url": "https://open-meteo.com/en/docs/air-quality-api",
+      "published_at": null,
+      "fact": "CAMS global atmospheric-composition archive via Open-Meteo; model-based exposure proxy, not a street monitor or vintage-guaranteed issued air forecast."
+    },
+    "displacement": {
+      "url": "https://dtm.iom.int/lebanon",
+      "published_at": null,
+      "fact": "Regional IOM displacement datasets identified but direct access returned403; not joined or interpolated into daily features."
+    },
+    "calendar": {
+      "url": "https://www.bdl.gov.lb/bankingholidays.php",
+      "published_at": null,
+      "fact": "Public holiday dates; does not establish cafe closures."
+    },
+    "prior_calendar": {
+      "url": "reports/external_evidence.json",
+      "published_at": null,
+      "fact": "Previously sourced Ramadan, Eid, Christian holidays and conflict dates; source-specific known-at controls apply."
+    }
+  },
+  "calendar_predictors": [
+    "ramadan",
+    "maronite_noon_fast",
+    "maronite_abstinence_calendar",
+    "orthodox_lent",
+    "fasting_overlap",
+    "muslim_holiday",
+    "christian_holiday",
+    "civic_holiday",
+    "month_position_sin",
+    "month_position_cos",
+    "bridge_day",
+    "daylight_hours",
+    "escalation_known",
+    "school_remote_transition_7d"
+  ],
+  "issued_weather_predictors": [
+    "forecast_temp_max",
+    "forecast_rain_sum",
+    "forecast_wind_max",
+    "forecast_morning_rain",
+    "forecast_evening_rain",
+    "forecast_rain_weekend"
+  ],
+  "observed_explanatory_features": [
+    "heat_anomaly_7d",
+    "apparent_mean",
+    "humidity_mean",
+    "rain_sum",
+    "rain_morning",
+    "rain_evening",
+    "rain_after_dry_spell",
+    "rain_following_day",
+    "wind_max",
+    "solar_mean",
+    "dust_mean",
+    "pm25_mean",
+    "aerosol_mean",
+    "dust_change_1d",
+    "rain_dust_washout",
+    "rain_forecast_surprise",
+    "temperature_forecast_surprise"
+  ],
+  "known_at_limits": [
+    "Lunar observance uses previously sourced declarations; calendars cannot identify religion.",
+    "Date-only announcements are conservatively excluded from same-day forecast changes.",
+    "Holiday eve/after and one-off news events are explanation-only here unless original announcement vintage is verified.",
+    "Archived previous_day1 weather is fixed-lead data, not a specific issuance timestamp; operational ingestion latency is not reconstructed.",
+    "Actual weather, air quality, forecast errors and retrospective regime labels are never presented as day-ahead inputs.",
+    "Geography is a three-region sensitivity analysis, not discovered branch locations."
+  ]
+}

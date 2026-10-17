@@ -1,0 +1,98 @@
+{
+  "source": "Georgia Tech IODA active-probing national reachability",
+  "documentation": "https://api.ioda.inetintel.cc.gatech.edu/v2/",
+  "retrieved_at_utc": "2026-10-17T13:38:33.530463+00:00",
+  "records": [
+    {
+      "month": 1,
+      "status": "downloaded_requires_coverage_check",
+      "url": "https://api.ioda.inetintel.cc.gatech.edu/v2/signals/raw/country/LB?from=1767225600&until=1769904000&datasource=ping-slash24&maxPoints=800",
+      "sha256": "8916146a036c663ccd58d2de4bfcc3a946009212ae229bcd08fc96c697fb4e18",
+      "top_level_keys": [
+        "type",
+        "metadata",
+        "requestParameters",
+        "error",
+        "perf",
+        "data",
+        "copyright"
+      ]
+    },
+    {
+      "month": 2,
+      "status": "downloaded_requires_coverage_check",
+      "url": "https://api.ioda.inetintel.cc.gatech.edu/v2/signals/raw/country/LB?from=1769904000&until=1772323200&datasource=ping-slash24&maxPoints=800",
+      "sha256": "f04068a82508d1a92c632a4ea98f8d5104aefa9f121eaebf08314165abe57884",
+      "top_level_keys": [
+        "type",
+        "metadata",
+        "requestParameters",
+        "error",
+        "perf",
+        "data",
+        "copyright"
+      ]
+    },
+    {
+      "month": 3,
+      "status": "downloaded_requires_coverage_check",
+      "url": "https://api.ioda.inetintel.cc.gatech.edu/v2/signals/raw/country/LB?from=1772323200&until=1775001600&datasource=ping-slash24&maxPoints=800",
+      "sha256": "2ac20ad6417b60b9ed28de740aaffbc91b8eb5b81c393d04487942fe13fe6257",
+      "top_level_keys": [
+        "type",
+        "metadata",
+        "requestParameters",
+        "error",
+        "perf",
+        "data",
+        "copyright"
+      ]
+    },
+    {
+      "month": 4,
+      "status": "downloaded_requires_coverage_check",
+      "url": "https://api.ioda.inetintel.cc.gatech.edu/v2/signals/raw/country/LB?from=1775001600&until=1777593600&datasource=ping-slash24&maxPoints=800",
+      "sha256": "6e2887385926f603e4c5fa3ad9bd8e248e03137f6cc323c950872126b52abb59",
+      "top_level_keys": [
+        "type",
+        "metadata",
+        "requestParameters",
+        "error",
+        "perf",
+        "data",
+        "copyright"
+      ]
+    },
+    {
+      "month": 5,
+      "status": "downloaded_requires_coverage_check",
+      "url": "https://api.ioda.inetintel.cc.gatech.edu/v2/signals/raw/country/LB?from=1777593600&until=1780272000&datasource=ping-slash24&maxPoints=800",
+      "sha256": "78cbbf40f61947899158492b12a2c8756cccbcb622dd897ea14bfee4e4e3ea73",
+      "top_level_keys": [
+        "type",
+        "metadata",
+        "requestParameters",
+        "error",
+        "perf",
+        "data",
+        "copyright"
+      ]
+    },
+    {
+      "month": 6,
+      "status": "downloaded_requires_coverage_check",
+      "url": "https://api.ioda.inetintel.cc.gatech.edu/v2/signals/raw/country/LB?from=1780272000&until=1782864000&datasource=ping-slash24&maxPoints=800",
+      "sha256": "4ca0b4b4e22d7f7cfacdeef94da266bcc09f3b9a392a1071a95a21ba9a5263d1",
+      "top_level_keys": [
+        "type",
+        "metadata",
+        "requestParameters",
+        "error",
+        "perf",
+        "data",
+        "copyright"
+      ]
+    }
+  ],
+  "limitation": "Research context only. Missing samples are not outages. National reachability is not proof of POS downtime or local network exposure."
+}

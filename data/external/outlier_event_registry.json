@@ -1,0 +1,104 @@
+[
+  {
+    "id": "hariri_access",
+    "date": "2026-02-14",
+    "known_at": "2026-02-13",
+    "family": "Road access / commemoration",
+    "fact": "ISF announced downtown street closures, with several restrictions from 06:00. Valentine date overlaps.",
+    "url": "https://isf.gov.lb/ar/news/%D8%AA%D8%AF%D8%A7%D8%A8%D9%8A%D8%B1-%D8%B3%D9%8A%D8%B1-%D9%81%D9%8A-%D9%88%D8%B3%D8%B7-%D8%A8%D9%8A%D8%B1%D9%88%D8%AA-%D8%AA%D8%B2%D8%A7%D9%85%D9%86%D9%8B%D8%A7-%D9%85%D8%B9-%D8%A5%D8%AD%D9%8A%D8%A7/",
+    "mechanism": "Access disruption should be stronger in exposed downtown stores, with a compatible time profile.",
+    "missing": "Verified branch coordinates, road access and opening-hour logs."
+  },
+  {
+    "id": "feb21_strikes",
+    "date": "2026-02-21",
+    "known_at": "2026-02-21",
+    "family": "Conflict before March escalation",
+    "fact": "Reporting describes overnight strikes in eastern Lebanon. A national March2-only indicator misses prior disruption.",
+    "url": "https://amp.dw.com/en/israel-says-it-hit-hezbollah-sites-in-eastern-lebanon/a-76068525",
+    "mechanism": "Requires local exposure; also first Ramadan Saturday.",
+    "missing": "Coordinates and exposure; cannot separate Ramadan and conflict on one date."
+  },
+  {
+    "id": "march28_conflict",
+    "date": "2026-03-28",
+    "known_at": "2026-03-28",
+    "family": "Conflict / displacement",
+    "fact": "Reuters footage documents damage after a night strike in Beirut southern suburbs.",
+    "url": "https://www.reutersconnect.com/item/building-damaged-following-an-israeli-night-strike-in-beiruts-southern-suburbs/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX1ZBODIzOTI4MDMyMDI2UlAx",
+    "mechanism": "Direct disruption and demand redistribution can have opposite signs.",
+    "missing": "Alias mapping, closure logs, local incident times; positive sales do not prove displacement inflow."
+  },
+  {
+    "id": "dst",
+    "date": "2026-03-29",
+    "known_at": "2026-03-16",
+    "family": "Clock change / daylight / Palm Sunday",
+    "fact": "Government memo advances clocks one hour at midnight March28/29.",
+    "url": "https://pcm.gov.lb/arabic/subpg.aspx?pageid=26984",
+    "mechanism": "Clock effects should shift the hour profile. They cannot explain a March28 daytime spike that preceded the change.",
+    "missing": "Timestamp/timezone semantics; religious event also overlaps."
+  },
+  {
+    "id": "good_friday",
+    "date": "2026-04-03",
+    "known_at": null,
+    "family": "Religious calendar / school closure",
+    "fact": "Western Good Friday is on the official holiday calendar.",
+    "url": "https://www.bdl.gov.lb/bankingholidays.php",
+    "mechanism": "Holiday footfall or meal timing, not an assumed customer religion.",
+    "missing": "School/store catchments and hours; event occurs once."
+  },
+  {
+    "id": "labour",
+    "date": "2026-05-01",
+    "known_at": null,
+    "family": "Civic holiday",
+    "fact": "Labour Day is on the official 2026 calendar.",
+    "url": "https://www.bdl.gov.lb/bankingholidays.php",
+    "mechanism": "Leisure/commuting mix may shift; inspect branches and dayparts.",
+    "missing": "Opening hours and verified branch catchments."
+  },
+  {
+    "id": "may13_access",
+    "date": "2026-05-14",
+    "known_at": "2026-05-13",
+    "family": "Transport disruption / conflict",
+    "fact": "Reuters reported strikes on cars on May13, including a highway south of Beirut; May14 sales decline follows this.",
+    "url": "https://au.marketscreener.com/news/israeli-airstrikes-kill-eight-people-on-highway-south-of-beirut-lebanon-s-health-ministry-says-ce7f5bdfd08ef022",
+    "mechanism": "Next-day access or confidence effect requires route exposure and timing.",
+    "missing": "No route-to-store link; no separate estimate of exam vs conflict cause."
+  },
+  {
+    "id": "one_run",
+    "date": "2026-05-23",
+    "known_at": "2026-05-22",
+    "family": "Sport event / road closures",
+    "fact": "ISF announces One Run Global waterfront race from 06:30 to 12:00, May23.",
+    "url": "https://isf.gov.lb/ar/news/%D8%AA%D8%AF%D8%A7%D8%A8%D9%8A%D8%B1-%D8%B3%D9%8A%D8%B1-%D9%8A%D9%88%D9%85-%D8%BA%D8%AF-%D8%A7%D9%84%D8%B3%D8%A8%D8%AA-%D8%A8%D9%85%D9%86%D8%A7%D8%B3%D8%A8%D8%A9-%D8%A5%D9%82%D8%A7%D9%85%D8%A9-%D9%85/",
+    "mechanism": "Morning increase near runners or decrease behind blocked roads; useful non-peak event comparison.",
+    "missing": "Branch distances and route exposure; includes both possible directions."
+  },
+  {
+    "id": "aub_graduation",
+    "date": "2026-06-05",
+    "known_at": null,
+    "family": "Graduation / family visits",
+    "fact": "AUB graduate ceremony was scheduled for 19:30 June5; guests were invited from18:30.",
+    "url": "https://www.aub.edu.lb/commencement/Pages/graduate-ceremony.aspx",
+    "additional_source": "https://www.haigazian.edu.lb/2026/06/08/class-of-2026-bids-farewell-to-haigazian-university-president-haidostian-you-are-what-you-count-in-life/",
+    "additional_fact": "Haigazian also held commencement June5, reported June8; retrospective evidence only.",
+    "mechanism": "Near-campus evening sales should rise more than morning sales if graduation is the driver.",
+    "missing": "Campus-to-branch mapping, event exposure and announcement vintage."
+  },
+  {
+    "id": "return_flows",
+    "date": "2026-06-24",
+    "known_at": "2026-06-24",
+    "family": "Population movement / waterfront access",
+    "fact": "Reuters footage records instructions to dismantle Beirut waterfront tents on June24.",
+    "url": "https://www.reutersconnect.com/item/displaced-families-told-to-dismantle-beirut-tents-as-governor-says-shelters-secured/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX1ZBMTk4MzI0MDYyMDI2UlAx",
+    "mechanism": "Receiving-area demand may change; this is not a uniform national war effect.",
+    "missing": "No verified branch exposure; neither customers nor movement can be inferred from IDs."
+  }
+]

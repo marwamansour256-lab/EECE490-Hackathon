@@ -1,0 +1,459 @@
+{
+  "model": "Two-stage stochastic dynamic program with Poisson stage demand and expected-fill constraints",
+  "replay_period": "June 2026",
+  "decision_times": [
+    "before opening",
+    "16:00 after early sales"
+  ],
+  "configs": [
+    {
+      "name": "free_flexibility",
+      "setup": 0.0,
+      "premium": 0.0,
+      "salvage_fraction": 0.0,
+      "fill_floor": 0.9
+    },
+    {
+      "name": "base_costed",
+      "setup": 0.25,
+      "premium": 0.1,
+      "salvage_fraction": 0.0,
+      "fill_floor": 0.9
+    },
+    {
+      "name": "cost_stress",
+      "setup": 1.0,
+      "premium": 0.25,
+      "salvage_fraction": 0.0,
+      "fill_floor": 0.9
+    },
+    {
+      "name": "high_cost",
+      "setup": 3.0,
+      "premium": 0.5,
+      "salvage_fraction": 0.0,
+      "fill_floor": 0.9
+    },
+    {
+      "name": "half_cost_salvage",
+      "setup": 0.25,
+      "premium": 0.1,
+      "salvage_fraction": 0.5,
+      "fill_floor": 0.9
+    },
+    {
+      "name": "no_service_floor",
+      "setup": 0.25,
+      "premium": 0.1,
+      "salvage_fraction": 0.0,
+      "fill_floor": 0.0
+    }
+  ],
+  "summary": [
+    {
+      "scenario": "base_costed",
+      "forecast": "internal",
+      "actual": 4657.0,
+      "opening_units": 5717,
+      "replenished_units": 1506,
+      "replenishment_executed": 917,
+      "sold_units": 4373.0,
+      "unsold_units": 2850.0,
+      "unmet_units": 284.0,
+      "contribution": 5192.478841210622,
+      "one_batch_units": 7297,
+      "one_batch_sold": 4289.0,
+      "one_batch_unsold": 3008.0,
+      "one_batch_unmet": 368.0,
+      "one_batch_contribution": 4783.805990652151,
+      "incremental_contribution": 408.67285055847117,
+      "fill_rate_pct": 93.90165342495169,
+      "one_batch_fill_rate_pct": 92.0979171140219,
+      "break_even_extra_branch_day_cost": 4.54080945064968
+    },
+    {
+      "scenario": "base_costed",
+      "forecast": "strong_baseline",
+      "actual": 4657.0,
+      "opening_units": 5592,
+      "replenished_units": 1522,
+      "replenishment_executed": 920,
+      "sold_units": 4351.0,
+      "unsold_units": 2763.0,
+      "unmet_units": 306.0,
+      "contribution": 5341.649799455534,
+      "one_batch_units": 7082,
+      "one_batch_sold": 4223.0,
+      "one_batch_unsold": 2859.0,
+      "one_batch_unmet": 434.0,
+      "one_batch_contribution": 4930.915837912332,
+      "incremental_contribution": 410.7339615432018,
+      "fill_rate_pct": 93.42924629589865,
+      "one_batch_fill_rate_pct": 90.6806957268628,
+      "break_even_extra_branch_day_cost": 4.563710683813354
+    },
+    {
+      "scenario": "cost_stress",
+      "forecast": "internal",
+      "actual": 4657.0,
+      "opening_units": 6140,
+      "replenished_units": 1254,
+      "replenishment_executed": 818,
+      "sold_units": 4398.0,
+      "unsold_units": 2996.0,
+      "unmet_units": 259.0,
+      "contribution": 4273.623660377736,
+      "one_batch_units": 7297,
+      "one_batch_sold": 4289.0,
+      "one_batch_unsold": 3008.0,
+      "one_batch_unmet": 368.0,
+      "one_batch_contribution": 4783.805990652151,
+      "incremental_contribution": -510.1823302744152,
+      "fill_rate_pct": 94.43847970796651,
+      "one_batch_fill_rate_pct": 92.0979171140219,
+      "break_even_extra_branch_day_cost": -5.668692558604613
+    },
+    {
+      "scenario": "cost_stress",
+      "forecast": "strong_baseline",
+      "actual": 4657.0,
+      "opening_units": 6001,
+      "replenished_units": 1276,
+      "replenishment_executed": 825,
+      "sold_units": 4381.0,
+      "unsold_units": 2896.0,
+      "unmet_units": 276.0,
+      "contribution": 4444.42573692471,
+      "one_batch_units": 7082,
+      "one_batch_sold": 4223.0,
+      "one_batch_unsold": 2859.0,
+      "one_batch_unmet": 434.0,
+      "one_batch_contribution": 4930.915837912332,
+      "incremental_contribution": -486.4901009876228,
+      "fill_rate_pct": 94.07343783551643,
+      "one_batch_fill_rate_pct": 90.6806957268628,
+      "break_even_extra_branch_day_cost": -5.405445566529142
+    },
+    {
+      "scenario": "free_flexibility",
+      "forecast": "internal",
+      "actual": 4657.0,
+      "opening_units": 5532,
+      "replenished_units": 1646,
+      "replenishment_executed": 963,
+      "sold_units": 4358.0,
+      "unsold_units": 2820.0,
+      "unmet_units": 299.0,
+      "contribution": 5566.899014122665,
+      "one_batch_units": 7297,
+      "one_batch_sold": 4289.0,
+      "one_batch_unsold": 3008.0,
+      "one_batch_unmet": 368.0,
+      "one_batch_contribution": 4783.805990652151,
+      "incremental_contribution": 783.0930234705145,
+      "fill_rate_pct": 93.57955765514279,
+      "one_batch_fill_rate_pct": 92.0979171140219,
+      "break_even_extra_branch_day_cost": 8.701033594116828
+    },
+    {
+      "scenario": "free_flexibility",
+      "forecast": "strong_baseline",
+      "actual": 4657.0,
+      "opening_units": 5429,
+      "replenished_units": 1641,
+      "replenishment_executed": 957,
+      "sold_units": 4337.0,
+      "unsold_units": 2733.0,
+      "unmet_units": 320.0,
+      "contribution": 5740.151207744716,
+      "one_batch_units": 7082,
+      "one_batch_sold": 4223.0,
+      "one_batch_unsold": 2859.0,
+      "one_batch_unmet": 434.0,
+      "one_batch_contribution": 4930.915837912332,
+      "incremental_contribution": 809.235369832384,
+      "fill_rate_pct": 93.12862357741035,
+      "one_batch_fill_rate_pct": 90.6806957268628,
+      "break_even_extra_branch_day_cost": 8.99150410924871
+    },
+    {
+      "scenario": "half_cost_salvage",
+      "forecast": "internal",
+      "actual": 4657.0,
+      "opening_units": 6089,
+      "replenished_units": 1276,
+      "replenishment_executed": 827,
+      "sold_units": 4397.0,
+      "unsold_units": 2968.0,
+      "unmet_units": 260.0,
+      "contribution": 9444.250442969007,
+      "one_batch_units": 7383,
+      "one_batch_sold": 4306.0,
+      "one_batch_unsold": 3077.0,
+      "one_batch_unmet": 351.0,
+      "one_batch_contribution": 9272.950850261639,
+      "incremental_contribution": 171.29959270736808,
+      "fill_rate_pct": 94.41700665664591,
+      "one_batch_fill_rate_pct": 92.46295898647197,
+      "break_even_extra_branch_day_cost": 1.9033288078596453
+    },
+    {
+      "scenario": "half_cost_salvage",
+      "forecast": "strong_baseline",
+      "actual": 4657.0,
+      "opening_units": 5942,
+      "replenished_units": 1306,
+      "replenishment_executed": 837,
+      "sold_units": 4379.0,
+      "unsold_units": 2869.0,
+      "unmet_units": 278.0,
+      "contribution": 9511.014392108547,
+      "one_batch_units": 7150,
+      "one_batch_sold": 4245.0,
+      "one_batch_unsold": 2905.0,
+      "one_batch_unmet": 412.0,
+      "one_batch_contribution": 9279.60290302596,
+      "incremental_contribution": 231.41148908258694,
+      "fill_rate_pct": 94.03049173287525,
+      "one_batch_fill_rate_pct": 91.15310285591582,
+      "break_even_extra_branch_day_cost": 2.5712387675842994
+    },
+    {
+      "scenario": "high_cost",
+      "forecast": "internal",
+      "actual": 4657.0,
+      "opening_units": 7032,
+      "replenished_units": 777,
+      "replenishment_executed": 528,
+      "sold_units": 4443.0,
+      "unsold_units": 3366.0,
+      "unmet_units": 214.0,
+      "contribution": 2785.7188992424353,
+      "one_batch_units": 7297,
+      "one_batch_sold": 4289.0,
+      "one_batch_unsold": 3008.0,
+      "one_batch_unmet": 368.0,
+      "one_batch_contribution": 4783.805990652151,
+      "incremental_contribution": -1998.0870914097154,
+      "fill_rate_pct": 95.40476701739317,
+      "one_batch_fill_rate_pct": 92.0979171140219,
+      "break_even_extra_branch_day_cost": -22.20096768233017
+    },
+    {
+      "scenario": "high_cost",
+      "forecast": "strong_baseline",
+      "actual": 4657.0,
+      "opening_units": 6875,
+      "replenished_units": 814,
+      "replenishment_executed": 554,
+      "sold_units": 4432.0,
+      "unsold_units": 3257.0,
+      "unmet_units": 225.0,
+      "contribution": 2869.2390027239594,
+      "one_batch_units": 7082,
+      "one_batch_sold": 4223.0,
+      "one_batch_unsold": 2859.0,
+      "one_batch_unmet": 434.0,
+      "one_batch_contribution": 4930.915837912332,
+      "incremental_contribution": -2061.676835188373,
+      "fill_rate_pct": 95.16856345286665,
+      "one_batch_fill_rate_pct": 90.6806957268628,
+      "break_even_extra_branch_day_cost": -22.907520390981922
+    },
+    {
+      "scenario": "no_service_floor",
+      "forecast": "internal",
+      "actual": 4657.0,
+      "opening_units": 4207,
+      "replenished_units": 606,
+      "replenishment_executed": 423,
+      "sold_units": 3645.0,
+      "unsold_units": 1168.0,
+      "unmet_units": 1012.0,
+      "contribution": 8547.06429119695,
+      "one_batch_units": 4686,
+      "one_batch_sold": 3478.0,
+      "one_batch_unsold": 1208.0,
+      "one_batch_unmet": 1179.0,
+      "one_batch_contribution": 8119.865247189876,
+      "incremental_contribution": 427.19904400707344,
+      "fill_rate_pct": 78.26927206356024,
+      "one_batch_fill_rate_pct": 74.68327249302126,
+      "break_even_extra_branch_day_cost": 4.746656044523038
+    },
+    {
+      "scenario": "no_service_floor",
+      "forecast": "strong_baseline",
+      "actual": 4657.0,
+      "opening_units": 4035,
+      "replenished_units": 597,
+      "replenishment_executed": 418,
+      "sold_units": 3557.0,
+      "unsold_units": 1075.0,
+      "unmet_units": 1100.0,
+      "contribution": 8456.651749215904,
+      "one_batch_units": 4492,
+      "one_batch_sold": 3373.0,
+      "one_batch_unsold": 1119.0,
+      "one_batch_unmet": 1284.0,
+      "one_batch_contribution": 7940.6620345054,
+      "incremental_contribution": 515.989714710504,
+      "fill_rate_pct": 76.37964354734808,
+      "one_batch_fill_rate_pct": 72.42860210435903,
+      "break_even_extra_branch_day_cost": 5.733219052338933
+    }
+  ],
+  "gain_attribution": [
+    {
+      "scenario": "free_flexibility",
+      "forecast_gain_at_one_batch": -147.1098472601807,
+      "operational_flexibility_gain_using_baseline": 809.235369832384,
+      "forecast_gain_at_two_batches": -173.25219362205098,
+      "combined_gain_over_baseline_one_batch": 635.9831762103331
+    },
+    {
+      "scenario": "base_costed",
+      "forecast_gain_at_one_batch": -147.1098472601807,
+      "operational_flexibility_gain_using_baseline": 410.7339615432018,
+      "forecast_gain_at_two_batches": -149.17095824491207,
+      "combined_gain_over_baseline_one_batch": 261.5630032982899
+    },
+    {
+      "scenario": "cost_stress",
+      "forecast_gain_at_one_batch": -147.1098472601807,
+      "operational_flexibility_gain_using_baseline": -486.4901009876228,
+      "forecast_gain_at_two_batches": -170.8020765469737,
+      "combined_gain_over_baseline_one_batch": -657.2921775345958
+    },
+    {
+      "scenario": "high_cost",
+      "forecast_gain_at_one_batch": -147.1098472601807,
+      "operational_flexibility_gain_using_baseline": -2061.676835188373,
+      "forecast_gain_at_two_batches": -83.52010348152407,
+      "combined_gain_over_baseline_one_batch": -2145.1969386698966
+    },
+    {
+      "scenario": "half_cost_salvage",
+      "forecast_gain_at_one_batch": -6.652052764320615,
+      "operational_flexibility_gain_using_baseline": 231.41148908258694,
+      "forecast_gain_at_two_batches": -66.76394913954027,
+      "combined_gain_over_baseline_one_batch": 164.64753994304738
+    },
+    {
+      "scenario": "no_service_floor",
+      "forecast_gain_at_one_batch": 179.20321268447606,
+      "operational_flexibility_gain_using_baseline": 515.989714710504,
+      "forecast_gain_at_two_batches": 90.41254198104616,
+      "combined_gain_over_baseline_one_batch": 606.4022566915501
+    }
+  ],
+  "conditional_block_intervals": [
+    {
+      "scenario": "base_costed",
+      "forecast": "internal",
+      "interval_95": [
+        169.01476170199462,
+        647.9771134538138
+      ]
+    },
+    {
+      "scenario": "base_costed",
+      "forecast": "strong_baseline",
+      "interval_95": [
+        177.81804874326582,
+        619.3950280618176
+      ]
+    },
+    {
+      "scenario": "cost_stress",
+      "forecast": "internal",
+      "interval_95": [
+        -778.1219407707385,
+        -247.9440741753455
+      ]
+    },
+    {
+      "scenario": "cost_stress",
+      "forecast": "strong_baseline",
+      "interval_95": [
+        -743.9150660270758,
+        -231.2397243933366
+      ]
+    },
+    {
+      "scenario": "free_flexibility",
+      "forecast": "internal",
+      "interval_95": [
+        547.2184759884685,
+        999.7096097902098
+      ]
+    },
+    {
+      "scenario": "free_flexibility",
+      "forecast": "strong_baseline",
+      "interval_95": [
+        576.4942424393608,
+        1018.635708737505
+      ]
+    },
+    {
+      "scenario": "half_cost_salvage",
+      "forecast": "internal",
+      "interval_95": [
+        -34.4670924718172,
+        376.8725983537393
+      ]
+    },
+    {
+      "scenario": "half_cost_salvage",
+      "forecast": "strong_baseline",
+      "interval_95": [
+        52.497463803517626,
+        394.2880116331229
+      ]
+    },
+    {
+      "scenario": "high_cost",
+      "forecast": "internal",
+      "interval_95": [
+        -2245.808187393804,
+        -1737.5381512434926
+      ]
+    },
+    {
+      "scenario": "high_cost",
+      "forecast": "strong_baseline",
+      "interval_95": [
+        -2330.780015983681,
+        -1776.8061134308687
+      ]
+    },
+    {
+      "scenario": "no_service_floor",
+      "forecast": "internal",
+      "interval_95": [
+        219.60309477227068,
+        607.9967155515385
+      ]
+    },
+    {
+      "scenario": "no_service_floor",
+      "forecast": "strong_baseline",
+      "interval_95": [
+        285.85513865359377,
+        696.5668589113673
+      ]
+    }
+  ],
+  "assumptions": [
+    "This new policy was developed after June had already been examined; June is a retrospective replay, not an untouched confirmation set.",
+    "Sales are treated as uncensored demand. Preparation, stockouts, waste, lead time and the company current policy are unavailable.",
+    "A second batch is instantly available at16:00; initial leftovers can carry to the late period; all remaining stock expires at close except stated salvage.",
+    "Early and late demand are conditionally independent Poisson variables; only remaining stock, not unobserved lost sales, determines late action.",
+    "Except the no_service_floor scenario, the constraint is 90% forecast EXPECTED unit fill in each stage for two-stage and over the whole day for one-batch. These differ in timing; report realized fill alongside contribution. This is not 90% stockout-free days or guaranteed actual fulfillment.",
+    "Setup is incremental USD per SKU with a second batch; premium is incremental USD per second-batch unit. These are scenario inputs, not measured company costs.",
+    "No total labor/capacity constraint is supplied. Break-even extra branch-day overhead is reported; no unqualified rollout recommendation.",
+    "Both forecasts get the same decision rules and costs; report how much value comes from operational flexibility versus forecasting.",
+    "External events require verified exposure and known_at timestamps before numerical adjustment; unresolved events are review alerts only."
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "verified_at_utc": "2026-10-17T14:06:13.803761+00:00",
+  "base_commit": "5774aabf7420989950120216df1f61737ff4cfda",
+  "packages": {
+    "pandas": "3.0.6",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.1",
+    "statsmodels": "0.15.0",
+    "joblib": "1.6.0"
+  },
+  "sha256": {
+    "data/stories_transactions.csv": "8375e91c2bebf84261e2b92b67ebf76c42f1af434322a7f2ac2b7f1ab3bb5c71",
+    "data/external/context_v2/manifest.json": "f6466b1e3d856c4b9450d9ee9cf53c67dbf0dca4e7fa3ce6081a67ca61157b36",
+    "data/external/context_v2/internet_manifest.json": "933a4e76037dce1a45934fddfdd72e8ab546548464f04bc2c4c9b7d3f02788c6",
+    "data/external/external_events.json": "17596ea5ac3b4c36a09dbe540a30ad5cd31684e17259083af7900a83e87319d3",
+    "src/context_features.py": "079dd718acd98995361970e1f04235e0ad45c180fd666ab7db26d06de690eefb",
+    "src/context_model.py": "db6a57f2362b5d6dab69a414d0fda877a94012242bc540e7f022b76e11965224",
+    "src/context_mix_model.py": "774254784fc0b63c1b51858efb699ced51b1d10731b5e3bff1fffccc9e97202b",
+    "src/context_associations.py": "25ef3764fced8669afdb7401e1a1547c6486fcf02d5c5b9ae6aeeb6aa021e434",
+    "src/context_robustness.py": "f00d3f9cf98a67a8de15d692a52dd09ac68afed4bbf97d9a881feaf7fa05f18a",
+    "src/day_explanations.py": "b516159023947c4b190cd06f4ae5111d62fe98aa91d91d4b74ecbd4d93f22b33",
+    "src/internet_checks.py": "ffe9987ab4b8b4845aa188fa6beec729e25991411a38860a72f22bbd1373cfd0",
+    "reports/context_v2_model_results.json": "05088009f4263d8309833c55c61653aff30f003023181207f87d5850a187418a",
+    "reports/context_v2_orders_model_results.json": "ab291147d811e12a904508596d6c57cdce59412057fcaad1f4907b5bb378ce7e",
+    "reports/context_v2_mix_results.json": "3eed4c1d58dac4f9af2f591749a9fc5b92d59cd368b73c83f2cd07d4b3886160",
+    "reports/context_v2_all_associations.csv": "855b99435255235902f707987ee1c78f46291d7361d68ecb52a7c262896e1863",
+    "reports/daily_why_ledger.json": "9f4de69173d567ec97281afe7a49b9e7a549d798b539633de40230e914f396c3",
+    "models/context_v2_model.joblib": "9f0fcdd86c177be91182522ef474ca58b1aabb499461fe3e029481d4e935066a",
+    "models/context_v2_orders_model.joblib": "a30a05ef168d321e88525b9dcd13d4c8cabd463718158303a3bb0709e5d08797",
+    "models/context_v2_mix_model.joblib": "696ef73a60398fabf6a770fbf32285d117936faadbaa187c920dfe1cab9d39bc"
+  },
+  "checks_passed": [
+    "Nine complete cached hourly streams and543 unique region/date feature rows",
+    "All category-volume and order-traffic decompositions reconcile to predictions",
+    "Predictive models exclude observed target-day weather, air and forecast surprises",
+    "49140 item/day/method forecasts conserve category volumes, stocks, demand and cash",
+    "724 unique daily scope dossiers reconcile financial bridges and explicitly unexplained demand",
+    "Global2337-row search correction includes the added internet hypotheses",
+    "Internet coverage tracked separately; unavailable antecedent signal not turned into an outage",
+    "Raw Stories transaction hash unchanged; no external sales labels"
+  ],
+  "evaluation_status": "Exploratory extension designed after inspecting the dataset; not new independent confirmation or measured company ROI"
+}

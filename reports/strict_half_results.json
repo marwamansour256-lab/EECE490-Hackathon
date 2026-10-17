@@ -1,0 +1,222 @@
+{
+  "protocol": "Frozen chronological half/half, entire test period predicted at the training cutoff",
+  "input_files": [
+    "data/stories_transactions.csv"
+  ],
+  "external_model_inputs": false,
+  "train": {
+    "start": "2026-01-01",
+    "end": "2026-03-31",
+    "days": 90,
+    "rows": 22395
+  },
+  "test": {
+    "start": "2026-04-01",
+    "end": "2026-06-30",
+    "days": 91,
+    "rows": 28782
+  },
+  "inner_validation": {
+    "start": "2026-03-11",
+    "end": "2026-03-31",
+    "days": 21
+  },
+  "chosen_alpha": 0.001,
+  "selected_method_on_inner_validation": "regularized_poisson",
+  "tuning": [
+    {
+      "method": "regularized_poisson",
+      "alpha": 0.0,
+      "wape_pct": 28.043654290647883,
+      "mae_units": 2.9621418967670223,
+      "bias_pct": 6.186826667746655,
+      "poisson_deviance": 1.4203449306954485
+    },
+    {
+      "method": "regularized_poisson",
+      "alpha": 0.001,
+      "wape_pct": 28.044675188903366,
+      "mae_units": 2.9622497302705866,
+      "bias_pct": 6.189865120504687,
+      "poisson_deviance": 1.4200496399308502
+    },
+    {
+      "method": "regularized_poisson",
+      "alpha": 0.01,
+      "wape_pct": 28.20252011783834,
+      "mae_units": 2.9789222748806665,
+      "bias_pct": 6.3582112854164645,
+      "poisson_deviance": 1.4394440429212974
+    },
+    {
+      "method": "regularized_poisson",
+      "alpha": 0.1,
+      "wape_pct": 31.047355291544985,
+      "mae_units": 3.2794111259446725,
+      "bias_pct": 8.733618496927148,
+      "poisson_deviance": 1.7502855438111413
+    },
+    {
+      "method": "regularized_poisson",
+      "alpha": 1.0,
+      "wape_pct": 39.10899369757273,
+      "mae_units": 4.130930568867074,
+      "bias_pct": 13.38640978925432,
+      "poisson_deviance": 2.5339500487224176
+    },
+    {
+      "method": "seasonal_frozen",
+      "alpha": null,
+      "wape_pct": 29.08665887460344,
+      "mae_units": 3.072310405643739,
+      "bias_pct": -4.274503255969277,
+      "poisson_deviance": 1.7102146178614845
+    },
+    {
+      "method": "seasonal_growth",
+      "alpha": null,
+      "wape_pct": 30.521290444122087,
+      "mae_units": 3.223844946558151,
+      "bias_pct": 4.682771182272978,
+      "poisson_deviance": 1.7039878280866114
+    }
+  ],
+  "metrics": [
+    {
+      "method": "regularized_poisson",
+      "level": "branch_category",
+      "wape_pct": 25.207654591328055,
+      "mae_units": 3.11869061565808,
+      "bias_pct": 3.654540500688182,
+      "poisson_deviance": 1.3803785370111645
+    },
+    {
+      "method": "regularized_poisson",
+      "level": "all_sku",
+      "wape_pct": 53.26777508990504,
+      "mae_units": 1.318057653384561,
+      "bias_pct": 3.654540500688182,
+      "poisson_deviance": 1.3070645711981446
+    },
+    {
+      "method": "regularized_poisson",
+      "level": "perishable_sku",
+      "wape_pct": 52.03184682515006,
+      "mae_units": 1.2811851699456653,
+      "bias_pct": -0.5512124387801899,
+      "poisson_deviance": 1.261845802588761
+    },
+    {
+      "method": "seasonal_frozen",
+      "level": "branch_category",
+      "wape_pct": 28.21813935127311,
+      "mae_units": 3.491147741147741,
+      "bias_pct": -13.666195144417395,
+      "poisson_deviance": 1.8410858098635134
+    },
+    {
+      "method": "seasonal_frozen",
+      "level": "all_sku",
+      "wape_pct": 53.57538482808966,
+      "mae_units": 1.3256691477446232,
+      "bias_pct": -13.666195144417395,
+      "poisson_deviance": 1.3992060257686143
+    },
+    {
+      "method": "seasonal_frozen",
+      "level": "perishable_sku",
+      "wape_pct": 53.75209252275095,
+      "mae_units": 1.3235429452488436,
+      "bias_pct": -15.416536172878171,
+      "poisson_deviance": 1.3967547383116172
+    },
+    {
+      "method": "seasonal_growth",
+      "level": "branch_category",
+      "wape_pct": 26.6435425585962,
+      "mae_units": 3.2963386515922153,
+      "bias_pct": 3.54942851457313,
+      "poisson_deviance": 1.5462558814620304
+    },
+    {
+      "method": "seasonal_growth",
+      "level": "all_sku",
+      "wape_pct": 53.967883460258015,
+      "mae_units": 1.3353811326210199,
+      "bias_pct": 3.5494285145731306,
+      "poisson_deviance": 1.3402400400883179
+    },
+    {
+      "method": "seasonal_growth",
+      "level": "perishable_sku",
+      "wape_pct": 53.577517134975444,
+      "mae_units": 1.3192443586811382,
+      "bias_pct": 1.450056043894822,
+      "poisson_deviance": 1.3194575958306183
+    }
+  ],
+  "perishable_one_batch_scenario": [
+    {
+      "method": "regularized_poisson",
+      "actual": 12772.0,
+      "prepare_units": 20691,
+      "sold_units": 11762.0,
+      "unsold_units": 8929.0,
+      "unmet_units": 1010.0,
+      "simulated_contribution": 10934.289261754184,
+      "fill_rate_pct": 92.09207641716254
+    },
+    {
+      "method": "seasonal_frozen",
+      "actual": 12772.0,
+      "prepare_units": 18720,
+      "sold_units": 11267.0,
+      "unsold_units": 7453.0,
+      "unmet_units": 1505.0,
+      "simulated_contribution": 13409.515348769939,
+      "fill_rate_pct": 88.21641089884122
+    },
+    {
+      "method": "seasonal_growth",
+      "actual": 12772.0,
+      "prepare_units": 20944,
+      "sold_units": 11775.0,
+      "unsold_units": 9169.0,
+      "unmet_units": 997.0,
+      "simulated_contribution": 9915.154618699115,
+      "fill_rate_pct": 92.19386157218916
+    }
+  ],
+  "conditional_contribution_uncertainty": [
+    {
+      "comparison": "regularized_poisson minus seasonal_growth",
+      "contribution_difference_usd": 1019.1346430550693,
+      "conditional_circular_7day_block_interval_95": [
+        770.0849008836911,
+        1276.292430963794
+      ],
+      "warning": "Retrospective uncertainty conditional on fixed forecasts and hypothetical inventory costs; not future ROI or uncertainty over missing operations."
+    },
+    {
+      "comparison": "regularized_poisson minus seasonal_frozen",
+      "contribution_difference_usd": -2475.2260870157565,
+      "conditional_circular_7day_block_interval_95": [
+        -3055.170112898271,
+        -1824.3969858835833
+      ],
+      "warning": "Retrospective uncertainty conditional on fixed forecasts and hypothetical inventory costs; not future ROI or uncertainty over missing operations."
+    }
+  ],
+  "feature_contract": [
+    "Only branch/category/product identifiers and dates from the transaction file.",
+    "Date-derived weekdays and trend; item shares, costs, prices and early shares frozen from training.",
+    "No test sales lags, no test-period refits, no weather, holidays, conflict, news or external files."
+  ],
+  "limitation": "Dataset already explored before this protocol was requested. This is a clean computational boundary, not a newly untouched test set.",
+  "financial_assumptions": [
+    "Sales treated as demand; zero salvage; unit costs/paid prices from training only; no capacity, substitution or labor costs.",
+    "Single-batch 90% expected unit-fill floor; demand Poisson; hypothetical preparation, not measured current practice."
+  ],
+  "artifact": "models/strict_half_model.joblib",
+  "input_sha256": "8375e91c2bebf84261e2b92b67ebf76c42f1af434322a7f2ac2b7f1ab3bb5c71"
+}

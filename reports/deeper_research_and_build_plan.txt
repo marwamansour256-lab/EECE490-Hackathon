@@ -1,0 +1,269 @@
+STORIES PROFIT PLANNER: RESEARCH, MODEL AND SUBMISSION PLAN
+Research date: 2026-10-17. Dataset: January-June 2026.
+
+UPDATED AFTER USER CLARIFICATION: EXTERNAL FEATURES ARE ALLOWED
+The earlier restriction on external predictors was an assistant misunderstanding.
+Only sales targets must remain Stories' sales. External weather, calendars,
+events and other context may be features, with source and forecast-time checks.
+The transaction-only model is now a CONTROL, not a limit on the research.
+
+CURRENT IMPLEMENTED EXTENSION
+- Nine hourly source streams: explicit ERA5 weather, ECMWF prior forecasts and
+  CAMS air context for three geographic scenarios. No branch location inferred.
+- 73 daily context columns across181 dates x3 regions.
+- 2310 core mechanism-test rows plus27 internet hypotheses: clock-relative fasting, overlapping calendars,
+  meat/fish and dairy/plant menu proxies, rain timing/surprise, thermal novelty,
+  dust/haze, coast/mountain contrast, monthly cycles and school transitions.
+- Across the2337-row global union,41 rows survive BH,11 survive BY; these are correlated hypotheses/regions,
+  not41 independent causes. Jan-Mar fitting and Apr-Jun evaluation remain
+  separated; newly designed analyses on the previously explored data are
+  exploratory, not fresh confirmation.
+- Separate traffic, category-volume and item-mix experts. Traffic WAPE improves
+  from9.4644% to9.2658% with the training-selected month-cycle expert. Daily unit
+  prediction does not improve materially. Item prediction improves, but its
+  preparation simulation earns less than the original financial control.
+- 724 day/scope dossiers cover all181 dates and three branches plus the network.
+  Each separates exact traffic/basket/unit-margin arithmetic, model adjustment,
+  external evidence, counterchecks, possible actions and unexplained demand.
+-23 tests pass. Independent verification reconciles49140 item forecasts and724
+  complete daily/scope dossiers. Code/model artifacts are in the working copy; Markdown publication
+  precedes separate code publication.
+
+NEW DECISION-RELEVANT FINDINGS
+Month edges: about8.82 additional adjusted network orders/day; direction stable
+when any month is omitted. Actual payroll dates are unknown. This is a monthly
+cycle association, not proof that salaries caused purchases.
+Rain surprise: about1.03 percentage points lower evening order share per10mm
+observed rain above archived prior prediction, for the Beirut proxy. This is
+retrospective; a future operational test must use observations actually available
+before the late-batch decision. It is not a pre-opening predictor.
+Fasting overlap: lower meat-to-tuna mix during Feb23-Mar19, with alternative
+count-model support but only one overlap episode and conflict confounding.
+BH q~.0068, BY q~.0567 in the main test. No customer religion is inferred.
+The apparently positive hot-coffee/rain-surprise result has a strong future-rain
+negative control; do not present it as a trustworthy mechanism.
+Internet reachability adds a measurement alternative: low recorded sales might
+reflect capture/connectivity, not only customers staying away. Two Harbour
+associations survive globalBH, none surviveBY. National IODA probing is not POS
+status. Check actual store connectivity/offline receipts before attributing sales.
+
+RUN THE EVERY-DAY INTERFACE
+python src/explain_day.py --date 2026-06-24 --branch "All branches"
+Full current documentation: EXTERNAL_CONTEXT.md.
+Data: reports/daily_why_ledger.json and .csv.
+Forecasts: reports/context_v2_*; source cache: data/external/context_v2/.
+
+The following sections preserve the earlier investigation and first-stage plan.
+Their claims about external-feature performance refer to those earlier models,
+not a prohibition on external predictors or an exhaustive conclusion.
+
+THE PROPOSAL
+Build a preparation decision engine with an evidence-linked event review layer.
+Before opening, choose a batch for each branch/item. At 16:00, enter actual remaining
+stock and receive a second-batch quantity. Charge the extra preparation work and
+compare contribution and customer fulfillment. A manager can change the costs and
+see when the proposed intervention stops making money.
+
+The decision engine and CLI are implemented. A live operational feed and frontend
+are not. The innovation in this submission is the auditable business decision and
+its validation, not a claim that dynamic programming is a newly invented algorithm.
+Inventory dynamic programming background (primary teaching source):
+https://ocw.mit.edu/courses/6-231-dynamic-programming-and-stochastic-control-fall-2015/resources/mit6_231f15_lec4/
+
+WHY NOT JUST ADD MORE CORRELATIONS?
+The external-feature forecasting variants did not beat internal history overall.
+One-off holidays, six months of weather/trend confounding and anonymous branches
+make confident causal explanations impossible. Searching enough headlines after
+choosing a sales spike will usually produce a plausible story. The implementation
+therefore retains unsupported dates as unresolved and tests whether the proposed
+mechanism matches the branch and time-of-day pattern.
+
+New outlier audit: 2,224 comparisons = 4 scopes x 4 dayparts x 139 dates after
+42 initial training days. Each forecast uses earlier observations only. Screened
+Poisson/overdispersed count tails receive BH adjustment across all comparisons.
+The approximate probabilities omit model-parameter uncertainty. Only Harbour
+May 1 survives q<0.05 (149 versus ~100 orders; q~0.023). This is a screening result,
+not proof of a Labour Day effect. All other large residuals require caution.
+18 selected date dossiers include positive extremes, negative extremes and
+event-first non-extreme comparisons; they are not independent confirmation tests.
+
+EXTERNAL MECHANISMS THAT WERE INVESTIGATED
+1. Physical access, not just celebration. ISF's February 13 notice establishes
+   February 14 downtown closures. Harbour orders are 28.9% below rolling expected
+   demand while Uptown is 1.5% above. Without branch coordinates, one cannot label
+   Harbour downtown or assign the decline to access. Obtain road/entrance and
+   opening-hours exposure. If verified, the action is a smaller opening batch or
+   a delivery-access review, not an automatic Valentine's promotion.
+   Exact Arabic source URL: data/external/outlier_event_registry.json, hariri_access.
+
+2. Events can obstruct as well as attract. ISF announced the May 23 morning
+   waterfront race on May 22. Network sales were down 7.9%, and evening orders
+   were down more than morning orders. This contradicts a simple rule that a
+   nearby sports event should automatically increase all-day preparation.
+   Source: the same registry, one_run. Route-to-branch exposure is still missing.
+
+3. Graduation is an hour-specific hypothesis. AUB lists June 5 at 19:30, with
+   guests from 18:30. That day has +14.5% evening versus +4.7% morning orders.
+   This is temporally compatible, but other June events and catchments matter.
+   Haigazian's June 8 report also confirms its June 5 commencement. The latter
+   article could not have been a June 5 forecast input. No numerical uplift is
+   applied. Collect announcements before the event and campus distances, then
+   evaluate future event days against comparable non-event days.
+   https://www.aub.edu.lb/commencement/Pages/graduate-ceremony.aspx
+   https://www.haigazian.edu.lb/2026/06/08/class-of-2026-bids-farewell-to-haigazian-university-president-haidostian-you-are-what-you-count-in-life/
+
+4. Clock changes provide a timing falsification check. Government memo March 16
+   schedules the clock advance at midnight March 28/29. It cannot explain the
+   March 28 daytime spike. POS timezone semantics must be established before
+   treating changes in recorded hour as changes in behavior.
+   https://pcm.gov.lb/arabic/subpg.aspx?pageid=26984
+
+5. War is a spatial and operational exposure, not one national dummy. Conflict
+   was reported before the March 2 escalation and after the April 17 temporary
+   ceasefire. June 24 waterfront displacement reporting coincides with a decline
+   concentrated in Uptown and morning sales. This does not identify customer
+   movement or a causal effect. A receiving area may gain customers while an
+   inaccessible area loses them. Required features: local incident timing,
+   distance, affected access routes, store closure hours and displacement-zone
+   exposure, joined only after alias mapping. Do not reverse-engineer identities.
+   Sources: external_evidence.json and outlier_event_registry.json.
+
+6. Airport traffic is a macro context check. Banque du Liban's airport-arrival
+   series reports Jan 235,497; Feb 209,351; Mar 48,994; Apr 72,454; May 186,829.
+   The retrieved series supplies five monthly values, not a daily tourism signal.
+   The March collapse alongside growing aggregate cafe transactions warns against
+   assuming all businesses track tourism. It does not show that tourism has no
+   effect. June is absent from this retrieved series. Publication vintage is not
+   established, so these values are not used in operational forecasting.
+   https://www.bdl.gov.lb/keyfiguressub.php?code=3&docId=9&filecode=323
+
+7. Official exchange rates cannot explain daily variation here. The BDL monthly
+   USD averages are 89,500 LBP for every month January-June. A constant regressor
+   supplies no identifying variation. This says nothing about unobserved parallel
+   rates, household liquidity or actual transaction currency.
+   https://www.bdl.gov.lb/economicandfinancialdatasub.php?code=9&docId=161&filecode=90
+
+8. Fuel and cost-of-living shocks remain unqualified. Searches yielded isolated
+   fuel announcements, not a verified vintage-aware daily sequence matched to
+   branch transport exposure. A May 15 announcement cannot explain May 14 sales
+   without separate evidence of anticipation. Do not fill missing dates with
+   guessed prices. Monthly CPI copied across days does not create daily evidence.
+
+9. Weather and seasons: actual Beirut weather is a geographic proxy. The original
+   team weather notebook and context models include category and branch checks.
+   The new forecasting comparison distinguishes lagged weather from realized
+   future-weather oracle features. Neither tested external family wins overall.
+   Temperature, elapsed time, school calendar and conflict overlap in six months;
+   a winter/spring/early-summer table is descriptive, not annual seasonal learning.
+
+10. Holiday effects differ by item. Across four Muslim closure episodes (nine
+    dates), sandwich demand is about four units/day lower across the network in
+    adjusted exploratory models. Leaving out one episode keeps the direction;
+    four event blocks give a two-sided sign-test p=0.125. Turkey & Cheese and
+    Chicken Pesto show negative estimates, while Tuna does not follow that sign.
+    These product comparisons were selected after inspecting the same data.
+    They motivate item-specific holiday review, not automatic religious targeting
+    or a validated forecast multiplier. Christian and Muslim holiday windows
+    overlap different seasons, weekdays and conflict periods; no head-to-head
+    causal religious ranking is identified.
+    See holiday_robustness.json and external_evidence.json for exact sources/results.
+
+11. Unobserved operational alternatives: POS outage, changed opening hours,
+    product stockouts, a paid campaign, delivery-app ranking, competitor closure,
+    local construction, power/internet interruption and group orders can produce
+    outliers. No records establish their occurrence at the anonymized branches.
+    These are specific fields to obtain, not explanations asserted as facts.
+
+MODEL SPECIFICATION
+Forecast candidate A: pooled regularized Poisson regression with branch/category,
+weekday interactions, trend, lag-1, lag-7, past 7/28-day history and matching-weekday
+features; category forecasts are allocated using prior item shares. Original
+training is Jan-Mar, selection Apr-May and rolling June evaluation with weekly
+refits. Candidate B: four matching weekdays with the same item allocation.
+Original category WAPE: A 23.21%, B 24.79%. This accuracy win is not a profit win.
+
+Optimizer: daily mean mu is split into early/late means using earlier 56-day
+branch/category intraday shares, shrunk toward prior category shares. Demand is
+conditionally independent Poisson by stage. The opening decision q0 maximizes
+expected contribution including the optimal later decision q1(remaining stock).
+Revenue is price times fulfilled demand; subtract ingredient costs, a fixed cost
+per SKU second batch and extra cost per replenished unit; add stated salvage.
+Default expected unit-fill floor is 90% for each stage, versus a daily 90% floor
+for the one-batch comparator. The timing constraints differ and are disclosed.
+No claim is made of 90% stockout-free days. No-service-floor is a stress scenario.
+Prices/costs are quantity-weighted Jan-Mar branch-item economics, not future
+realized item margins. The late action uses remaining stock, never future demand.
+
+BUSINESS RESULT AND ITS LIMITS
+With B, $0.25 per SKU replenishment, $0.10 per replenished unit and zero salvage:
+one batch $4,930.92 contribution, two stages $5,341.65, difference $410.73.
+Fulfillment 90.68% -> 93.43%; unsold 2,859 -> 2,763; unmet 434 -> 306 units.
+920 SKU second batches means 10.2 per branch-day. Remaining cost headroom is
+$4.56 per branch-day. At $1 setup + $0.25/unit, difference is -$486.49.
+The original regression A earns $149.17 less than B under the same low-cost
+two-stage policy. Its combined gain over B's one-batch plan is only $261.56.
+The contribution improvement primarily comes from operational flexibility.
+
+Breakdown for B in the low-cost case: sandwiches +$229.04, bakery +$139.38,
+breakfast +$112.59, desserts -$70.28. These are exploratory category results;
+choosing only winners after observing June would overstate future performance.
+Prioritize verifying sandwich preparation feasibility; do not silently remove
+dessert losses from the main result. If the company already makes to order or
+replenishes continuously, these assumed inventory benefits may be negligible.
+
+The replay treats recorded sales as demand and assumes immediate second-batch
+availability, same-day carryover and no capacity restriction. Actual stockouts,
+waste, batch labor and company policy are missing. The very large simulated
+unsold quantities are model outputs, not evidence the company wastes that amount.
+June was already examined when the policy was developed. All new policy results
+are retrospective; intervals do not repair post-selection or missing data.
+
+EXTERNAL ALERT CONTRACT AND FUTURE MODEL EXTENSION
+For every event: event_id, source_url, published_at with timezone, event_start/end,
+geometry or affected route, relevant branches, exposure evidence, mechanism,
+expected affected hours/items, confidence status and analyst decision. Date-only
+known_at fields in the current registry do not establish availability before that
+day's opening. Unknown publication time means retrospective-only until resolved.
+
+After enough exposed and unexposed future events accumulate, fit shrinkage
+interactions for event exposure x branch x daypart/category. Compare the same
+baseline and profit policy on a new future period. Estimate treatment effects
+only with a defensible comparison design and parallel-trend/overlap checks.
+With only three anonymous branches and one episode, do not call a national
+before/after war comparison causal. Until validated, events trigger review only.
+
+BUILD AND SUBMIT
+1. Run src/recommend.py to demonstrate a specific branch/item opening plan.
+2. Enter remaining stock at 16:00 and show the replenishment action.
+3. Change setup/premium and show that additional preparation can destroy value.
+4. Show one outlier fingerprint with a verified source and an unresolved exposure
+   field. Explain what evidence would change the decision.
+5. Show both forecasts under the same policy. Explain why lower prediction error
+   is insufficient when service and perishable costs matter.
+6. Finish the demo interface by consuming decision_cards.json, not reimplementing
+   inventory math in another language. Clearly label historical/scenario results.
+7. Add all three full team names, retain source links and commit the scripts,
+   tests, documented inputs and outputs through the team's agreed Git workflow.
+   No repository push is performed by this analysis task.
+
+PROSPECTIVE PILOT AND REQUIRED COMPANY FIELDS
+First shadow the planner while measuring: branch coordinates/timezone/open hours;
+product shelf life; batch time, minimum batch and lead time; capacity by shift;
+opening stock, prepared and replenished quantity/time; stockout intervals;
+discarded quantity/reason; salvage; paid price, ingredient cost and extra labor;
+current manager rule and overrides; promotions and closure/access exposure.
+
+Then freeze the policy and eligible products, choose a business-relevant minimum
+profit improvement, estimate required branch-day count from observed variance,
+and randomize within branch and weekday to planner versus existing practice.
+Account for carryover, shared labor and substitution; if these make branch-day
+assignment unsuitable, revise the experimental unit before starting. Three
+branches alone do not guarantee enough power. Set service and safety guardrails.
+
+Primary outcome: incremental contribution after actual waste and incremental
+labor/transport, using assignment-based comparison and uncertainty clustered by
+the assignment unit with serial dependence handled. Secondary: fulfillment,
+stockout minutes, discard units, labor minutes and manager override frequency.
+Scale only if the business-relevant profit gain and service guardrails pass.
+If costs exceed headroom or existing operations already capture the benefit,
+reject this intervention instead of presenting simulated dollars as company ROI.

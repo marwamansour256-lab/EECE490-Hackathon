@@ -1,0 +1,1014 @@
+{
+  "raw_rows_retained": 51177,
+  "selection": {
+    "category_model_selected_on_Apr_May_WAPE": "internal",
+    "preparation_model_selected_on_Apr_May_perishable_SKU_WAPE": "internal",
+    "selected_regularization_by_family": {
+      "internal": 0.1,
+      "calendar": 0.1,
+      "calendar_lag_weather": 0.1,
+      "oracle_actual_weather_conflict": 0.1
+    },
+    "hyperparameter_validation": [
+      {
+        "family": "internal",
+        "alpha": 0.1,
+        "wape_pct": 25.345382624486234,
+        "mae_units": 2.9834300725009997,
+        "bias_pct": -1.099537290032967
+      },
+      {
+        "family": "internal",
+        "alpha": 1.0,
+        "wape_pct": 26.191439084603296,
+        "mae_units": 3.083020215745016,
+        "bias_pct": -0.23227428981147097
+      },
+      {
+        "family": "internal",
+        "alpha": 10.0,
+        "wape_pct": 29.111257791606366,
+        "mae_units": 3.426714965427278,
+        "bias_pct": 0.30054046994128647
+      },
+      {
+        "family": "calendar",
+        "alpha": 0.1,
+        "wape_pct": 26.327585256810977,
+        "mae_units": 3.0990461164164813,
+        "bias_pct": -0.22319284942333842
+      },
+      {
+        "family": "calendar",
+        "alpha": 1.0,
+        "wape_pct": 27.139969706450298,
+        "mae_units": 3.194672693982708,
+        "bias_pct": 0.9996747479109873
+      },
+      {
+        "family": "calendar",
+        "alpha": 10.0,
+        "wape_pct": 29.812783543952555,
+        "mae_units": 3.509292256020693,
+        "bias_pct": 0.5962718515316829
+      },
+      {
+        "family": "calendar_lag_weather",
+        "alpha": 0.1,
+        "wape_pct": 26.653161504419995,
+        "mae_units": 3.137370018738254,
+        "bias_pct": 0.47646463296244174
+      },
+      {
+        "family": "calendar_lag_weather",
+        "alpha": 1.0,
+        "wape_pct": 27.455492627428352,
+        "mae_units": 3.231813209277192,
+        "bias_pct": 1.355933730857323
+      },
+      {
+        "family": "calendar_lag_weather",
+        "alpha": 10.0,
+        "wape_pct": 30.30846094868974,
+        "mae_units": 3.5676389338934302,
+        "bias_pct": 0.3429077401473097
+      },
+      {
+        "family": "oracle_actual_weather_conflict",
+        "alpha": 0.1,
+        "wape_pct": 26.459531706830948,
+        "mae_units": 3.114577663632857,
+        "bias_pct": -4.462182080731197
+      },
+      {
+        "family": "oracle_actual_weather_conflict",
+        "alpha": 1.0,
+        "wape_pct": 27.385837015774353,
+        "mae_units": 3.223613978292759,
+        "bias_pct": -2.371858997902784
+      },
+      {
+        "family": "oracle_actual_weather_conflict",
+        "alpha": 10.0,
+        "wape_pct": 30.37491944771858,
+        "mae_units": 3.575461829586643,
+        "bias_pct": -0.8967972530797073
+      }
+    ]
+  },
+  "protocol": {
+    "initial_training": "2026-01-01 through 2026-03-31 (first 28 days establish lags)",
+    "validation": "2026-04-01 through 2026-05-31",
+    "held_out_final_test": "2026-06-01 through 2026-06-30",
+    "horizon": "one day ahead after previous-day sales and weather summaries are available",
+    "refit": "expanding training set every 7 days beginning April 1; daily sales lags updated; no target-day sales in features",
+    "selection": "regularization and winner chosen using April-May only; June metrics never select a model",
+    "model": "L2-regularized pooled Poisson GLM, branch-category and weekday interactions, category linear trends, lag1/7 and rolling7/28 and four previous same-weekday sales",
+    "sku_allocation": "category forecast multiplied by previous28-day SKU unit share with +1 pseudocount; direct SKU seasonal baselines also evaluated",
+    "weather": "Beirut gridded proxy; branch locations unknown; previous-day realized/reanalysis values are NOT issued forecasts and archive revisions/availability are unverified",
+    "oracle": "target-day actual weather and retrospective March2-Apr16 / post-April17 event periods; excluded from deployable model selection",
+    "holiday_dates": "Ramadan Feb18-Mar19 (Feb17 declaration), Fitr Mar20-23 (Mar19 memo), Adha May27-29 (May18 memo), Hijri June16 (June9 memo), Ashura June26 (June22 memo); eve flags obey previous-day announcement cutoff",
+    "holiday_availability_limit": "Announcement dates are verified, but intraday timestamps are not. Assumes announcements were available by local end of announcement day. Cafe closures are not implied."
+  },
+  "overall_metrics": [
+    {
+      "period": "validation_Apr_May",
+      "level": "branch_category_day",
+      "scope": "all",
+      "method": "last_weekday",
+      "wape_pct": 33.46572445453139,
+      "mae_units": 3.9392835458409228,
+      "bias_pct": -1.3204724815598081
+    },
+    {
+      "period": "validation_Apr_May",
+      "level": "branch_category_day",
+      "scope": "all",
+      "method": "four_weekdays",
+      "wape_pct": 26.844019188115748,
+      "mae_units": 3.1598360655737703,
+      "bias_pct": -4.3779336668901845
+    },
+    {
+      "period": "validation_Apr_May",
+      "level": "branch_category_day",
+      "scope": "all",
+      "method": "internal",
+      "wape_pct": 25.345382624486234,
+      "mae_units": 2.9834300725009997,
+      "bias_pct": -1.099537290032967
+    },
+    {
+      "period": "validation_Apr_May",
+      "level": "branch_category_day",
+      "scope": "all",
+      "method": "calendar",
+      "wape_pct": 26.327585256810977,
+      "mae_units": 3.0990461164164813,
+      "bias_pct": -0.22319284942333842
+    },
+    {
+      "period": "validation_Apr_May",
+      "level": "branch_category_day",
+      "scope": "all",
+      "method": "calendar_lag_weather",
+      "wape_pct": 26.653161504419995,
+      "mae_units": 3.137370018738254,
+      "bias_pct": 0.47646463296244174
+    },
+    {
+      "period": "validation_Apr_May",
+      "level": "branch_category_day",
+      "scope": "all",
+      "method": "oracle_actual_weather_conflict",
+      "wape_pct": 26.459531706830948,
+      "mae_units": 3.114577663632857,
+      "bias_pct": -4.462182080731197
+    },
+    {
+      "period": "test_June",
+      "level": "branch_category_day",
+      "scope": "all",
+      "method": "last_weekday",
+      "wape_pct": 31.36863136863137,
+      "mae_units": 4.264197530864197,
+      "bias_pct": -1.2169648533284896
+    },
+    {
+      "period": "test_June",
+      "level": "branch_category_day",
+      "scope": "all",
+      "method": "four_weekdays",
+      "wape_pct": 24.793388429752067,
+      "mae_units": 3.3703703703703702,
+      "bias_pct": -4.454636272818091
+    },
+    {
+      "period": "test_June",
+      "level": "branch_category_day",
+      "scope": "all",
+      "method": "internal",
+      "wape_pct": 23.20775029850082,
+      "mae_units": 3.1548214634171914,
+      "bias_pct": -0.47063559476591943
+    },
+    {
+      "period": "test_June",
+      "level": "branch_category_day",
+      "scope": "all",
+      "method": "calendar",
+      "wape_pct": 23.52504325478031,
+      "mae_units": 3.197953719486247,
+      "bias_pct": -0.8198364151829522
+    },
+    {
+      "period": "test_June",
+      "level": "branch_category_day",
+      "scope": "all",
+      "method": "calendar_lag_weather",
+      "wape_pct": 23.481822703685562,
+      "mae_units": 3.192078392472614,
+      "bias_pct": -0.5320905569593275
+    },
+    {
+      "period": "test_June",
+      "level": "branch_category_day",
+      "scope": "all",
+      "method": "oracle_actual_weather_conflict",
+      "wape_pct": 23.47639526518051,
+      "mae_units": 3.1913405958629952,
+      "bias_pct": -1.2420766302084993
+    },
+    {
+      "period": "validation_Apr_May",
+      "level": "branch_sku_day",
+      "scope": "all",
+      "method": "direct_sku_last_weekday",
+      "wape_pct": 72.1411254964667,
+      "mae_units": 1.698360655737705,
+      "bias_pct": -1.3204724815598081
+    },
+    {
+      "period": "validation_Apr_May",
+      "level": "branch_sku_day",
+      "scope": "all",
+      "method": "direct_sku_four_weekdays",
+      "wape_pct": 58.17687109919018,
+      "mae_units": 1.369611414693382,
+      "bias_pct": -4.3779336668901845
+    },
+    {
+      "period": "validation_Apr_May",
+      "level": "branch_sku_day",
+      "scope": "all",
+      "method": "last_weekday",
+      "wape_pct": 58.17247930368987,
+      "mae_units": 1.3695080221744207,
+      "bias_pct": -1.3204724815598086
+    },
+    {
+      "period": "validation_Apr_May",
+      "level": "branch_sku_day",
+      "scope": "all",
+      "method": "four_weekdays",
+      "wape_pct": 54.23375540620998,
+      "mae_units": 1.2767818045661117,
+      "bias_pct": -4.3779336668901845
+    },
+    {
+      "period": "validation_Apr_May",
+      "level": "branch_sku_day",
+      "scope": "all",
+      "method": "internal",
+      "wape_pct": 53.66607146456867,
+      "mae_units": 1.2634172768471073,
+      "bias_pct": -1.099537290032967
+    },
+    {
+      "period": "validation_Apr_May",
+      "level": "branch_sku_day",
+      "scope": "all",
+      "method": "calendar",
+      "wape_pct": 54.21048660856367,
+      "mae_units": 1.2762340059261978,
+      "bias_pct": -0.22319284942333842
+    },
+    {
+      "period": "validation_Apr_May",
+      "level": "branch_sku_day",
+      "scope": "all",
+      "method": "calendar_lag_weather",
+      "wape_pct": 54.41535314888447,
+      "mae_units": 1.28105701456882,
+      "bias_pct": 0.47646463296244135
+    },
+    {
+      "period": "validation_Apr_May",
+      "level": "branch_sku_day",
+      "scope": "all",
+      "method": "oracle_actual_weather_conflict",
+      "wape_pct": 53.97842053340506,
+      "mae_units": 1.2707706604506666,
+      "bias_pct": -4.462182080731197
+    },
+    {
+      "period": "test_June",
+      "level": "branch_sku_day",
+      "scope": "all",
+      "method": "direct_sku_last_weekday",
+      "wape_pct": 66.67877576968486,
+      "mae_units": 1.8128395061728395,
+      "bias_pct": -1.2169648533284896
+    },
+    {
+      "period": "test_June",
+      "level": "branch_sku_day",
+      "scope": "all",
+      "method": "direct_sku_four_weekdays",
+      "wape_pct": 54.88602306784125,
+      "mae_units": 1.4922222222222221,
+      "bias_pct": -4.454636272818091
+    },
+    {
+      "period": "test_June",
+      "level": "branch_sku_day",
+      "scope": "all",
+      "method": "last_weekday",
+      "wape_pct": 54.43568329797162,
+      "mae_units": 1.4799785402320134,
+      "bias_pct": -1.2169648533284902
+    },
+    {
+      "period": "test_June",
+      "level": "branch_sku_day",
+      "scope": "all",
+      "method": "four_weekdays",
+      "wape_pct": 50.95391537346888,
+      "mae_units": 1.3853174374747306,
+      "bias_pct": -4.454636272818091
+    },
+    {
+      "period": "test_June",
+      "level": "branch_sku_day",
+      "scope": "all",
+      "method": "internal",
+      "wape_pct": 50.234261976457375,
+      "mae_units": 1.365751749685857,
+      "bias_pct": -0.4706355947659195
+    },
+    {
+      "period": "test_June",
+      "level": "branch_sku_day",
+      "scope": "all",
+      "method": "calendar",
+      "wape_pct": 50.40928623489094,
+      "mae_units": 1.3705102487219363,
+      "bias_pct": -0.8198364151829522
+    },
+    {
+      "period": "test_June",
+      "level": "branch_sku_day",
+      "scope": "all",
+      "method": "calendar_lag_weather",
+      "wape_pct": 50.431831062571895,
+      "mae_units": 1.3711231897036522,
+      "bias_pct": -0.5320905569593277
+    },
+    {
+      "period": "test_June",
+      "level": "branch_sku_day",
+      "scope": "all",
+      "method": "oracle_actual_weather_conflict",
+      "wape_pct": 50.43937402906509,
+      "mae_units": 1.371328265269224,
+      "bias_pct": -1.2420766302084987
+    }
+  ],
+  "incremental_external_error_uncertainty": {
+    "calendar_minus_internal": {
+      "observed_daily_absolute_error_difference_units": 1.1645709138644917,
+      "moving_block_95pct_interval_units": [
+        -0.1493378912465996,
+        3.4850404724069888
+      ],
+      "negative_means_improvement": true,
+      "warning": "Only 30 test days; this uncertainty interval is descriptive and does not establish causality."
+    },
+    "calendar_lag_weather_minus_internal": {
+      "observed_daily_absolute_error_difference_units": 1.0059370844964077,
+      "moving_block_95pct_interval_units": [
+        -0.5410777918321827,
+        3.543556177957777
+      ],
+      "negative_means_improvement": true,
+      "warning": "Only 30 test days; this uncertainty interval is descriptive and does not establish causality."
+    },
+    "oracle_actual_weather_conflict_minus_internal": {
+      "observed_daily_absolute_error_difference_units": 0.9860165760366986,
+      "moving_block_95pct_interval_units": [
+        -0.26834854246266704,
+        3.0517908015127304
+      ],
+      "negative_means_improvement": true,
+      "warning": "Only 30 test days; this uncertainty interval is descriptive and does not establish causality."
+    }
+  },
+  "financial_difference_uncertainty_zero_salvage": {
+    "internal_minus_four_weekdays": {
+      "june_simulated_contribution_difference_usd": 179.20321268447654,
+      "circular_7day_block_95pct_interval_total_usd": [
+        45.177134994070634,
+        294.9418785588694
+      ],
+      "bootstrap_repetitions": 2000,
+      "positive_means_improvement": true,
+      "warning": "Exploratory 30-day uncertainty conditional on fixed models and assumed economics; not causal uplift, not uncertainty over stockouts/costs/capacity or future months."
+    },
+    "internal_minus_direct_sku_four_weekdays": {
+      "june_simulated_contribution_difference_usd": 707.2039998183858,
+      "circular_7day_block_95pct_interval_total_usd": [
+        525.0606767825958,
+        879.3253391877214
+      ],
+      "bootstrap_repetitions": 2000,
+      "positive_means_improvement": true,
+      "warning": "Exploratory 30-day uncertainty conditional on fixed models and assumed economics; not causal uplift, not uncertainty over stockouts/costs/capacity or future months."
+    }
+  },
+  "poisson_interval_diagnostics_perishables": [
+    {
+      "period": "validation_Apr_May",
+      "method": "direct_sku_last_weekday",
+      "nominal_central_coverage_pct": 80.0,
+      "observed_coverage_pct": 66.75294794362956,
+      "average_interval_width_units": 3.197871728501582
+    },
+    {
+      "period": "validation_Apr_May",
+      "method": "direct_sku_four_weekdays",
+      "nominal_central_coverage_pct": 80.0,
+      "observed_coverage_pct": 83.77911993097497,
+      "average_interval_width_units": 3.550474547023296
+    },
+    {
+      "period": "validation_Apr_May",
+      "method": "last_weekday",
+      "nominal_central_coverage_pct": 80.0,
+      "observed_coverage_pct": 83.60655737704919,
+      "average_interval_width_units": 3.5916019557089447
+    },
+    {
+      "period": "validation_Apr_May",
+      "method": "four_weekdays",
+      "nominal_central_coverage_pct": 80.0,
+      "observed_coverage_pct": 87.86310037388554,
+      "average_interval_width_units": 3.5887259131435147
+    },
+    {
+      "period": "validation_Apr_May",
+      "method": "internal",
+      "nominal_central_coverage_pct": 80.0,
+      "observed_coverage_pct": 89.09979867702043,
+      "average_interval_width_units": 3.654012079378775
+    },
+    {
+      "period": "validation_Apr_May",
+      "method": "calendar",
+      "nominal_central_coverage_pct": 80.0,
+      "observed_coverage_pct": 88.89847569744033,
+      "average_interval_width_units": 3.667241875179753
+    },
+    {
+      "period": "validation_Apr_May",
+      "method": "calendar_lag_weather",
+      "nominal_central_coverage_pct": 80.0,
+      "observed_coverage_pct": 89.09979867702043,
+      "average_interval_width_units": 3.6914006327293643
+    },
+    {
+      "period": "validation_Apr_May",
+      "method": "oracle_actual_weather_conflict",
+      "nominal_central_coverage_pct": 80.0,
+      "observed_coverage_pct": 88.69715271786023,
+      "average_interval_width_units": 3.6059821685360944
+    },
+    {
+      "period": "test_June",
+      "method": "direct_sku_last_weekday",
+      "nominal_central_coverage_pct": 80.0,
+      "observed_coverage_pct": 66.84210526315789,
+      "average_interval_width_units": 3.508771929824561
+    },
+    {
+      "period": "test_June",
+      "method": "direct_sku_four_weekdays",
+      "nominal_central_coverage_pct": 80.0,
+      "observed_coverage_pct": 83.15789473684211,
+      "average_interval_width_units": 3.9023391812865498
+    },
+    {
+      "period": "test_June",
+      "method": "last_weekday",
+      "nominal_central_coverage_pct": 80.0,
+      "observed_coverage_pct": 83.21637426900584,
+      "average_interval_width_units": 3.889473684210526
+    },
+    {
+      "period": "test_June",
+      "method": "four_weekdays",
+      "nominal_central_coverage_pct": 80.0,
+      "observed_coverage_pct": 86.78362573099415,
+      "average_interval_width_units": 3.8970760233918127
+    },
+    {
+      "period": "test_June",
+      "method": "internal",
+      "nominal_central_coverage_pct": 80.0,
+      "observed_coverage_pct": 87.953216374269,
+      "average_interval_width_units": 3.9947368421052634
+    },
+    {
+      "period": "test_June",
+      "method": "calendar",
+      "nominal_central_coverage_pct": 80.0,
+      "observed_coverage_pct": 87.71929824561403,
+      "average_interval_width_units": 3.990643274853801
+    },
+    {
+      "period": "test_June",
+      "method": "calendar_lag_weather",
+      "nominal_central_coverage_pct": 80.0,
+      "observed_coverage_pct": 87.77777777777777,
+      "average_interval_width_units": 4.000584795321638
+    },
+    {
+      "period": "test_June",
+      "method": "oracle_actual_weather_conflict",
+      "nominal_central_coverage_pct": 80.0,
+      "observed_coverage_pct": 87.54385964912281,
+      "average_interval_width_units": 3.993567251461988
+    }
+  ],
+  "financial_results_all_perishables": [
+    {
+      "period": "validation_Apr_May",
+      "method": "direct_sku_last_weekday",
+      "policy": "cost_aware_poisson_quantile",
+      "salvage_fraction_of_cost": 0.0,
+      "scope": "all_perishables",
+      "prepared_units": 7957.0,
+      "sold_units": 4993.0,
+      "unsold_units": 2964.0,
+      "unmet_units": 3122.0,
+      "simulated_contribution_usd": 8206.009181652531,
+      "perfect_information_contribution_usd": 26058.92165213627
+    },
+    {
+      "period": "validation_Apr_May",
+      "method": "direct_sku_last_weekday",
+      "policy": "cost_aware_poisson_quantile",
+      "salvage_fraction_of_cost": 0.5,
+      "scope": "all_perishables",
+      "prepared_units": 10124.0,
+      "sold_units": 5666.0,
+      "unsold_units": 4458.0,
+      "unmet_units": 2449.0,
+      "simulated_contribution_usd": 12066.211317973939,
+      "perfect_information_contribution_usd": 26058.92165213627
+    },
+    {
+      "period": "validation_Apr_May",
+      "method": "direct_sku_four_weekdays",
+      "policy": "cost_aware_poisson_quantile",
+      "salvage_fraction_of_cost": 0.0,
+      "scope": "all_perishables",
+      "prepared_units": 7715.0,
+      "sold_units": 5503.0,
+      "unsold_units": 2212.0,
+      "unmet_units": 2612.0,
+      "simulated_contribution_usd": 11824.930538457296,
+      "perfect_information_contribution_usd": 26058.92165213627
+    },
+    {
+      "period": "validation_Apr_May",
+      "method": "direct_sku_four_weekdays",
+      "policy": "round_forecast_mean",
+      "salvage_fraction_of_cost": 0.0,
+      "scope": "all_perishables",
+      "prepared_units": 7662.0,
+      "sold_units": 5541.0,
+      "unsold_units": 2121.0,
+      "unmet_units": 2574.0,
+      "simulated_contribution_usd": 11246.373437327142,
+      "perfect_information_contribution_usd": 26058.92165213627
+    },
+    {
+      "period": "validation_Apr_May",
+      "method": "direct_sku_four_weekdays",
+      "policy": "cost_aware_poisson_quantile",
+      "salvage_fraction_of_cost": 0.5,
+      "scope": "all_perishables",
+      "prepared_units": 9897.0,
+      "sold_units": 6351.0,
+      "unsold_units": 3546.0,
+      "unmet_units": 1764.0,
+      "simulated_contribution_usd": 15594.094271417862,
+      "perfect_information_contribution_usd": 26058.92165213627
+    },
+    {
+      "period": "validation_Apr_May",
+      "method": "direct_sku_four_weekdays",
+      "policy": "round_forecast_mean",
+      "salvage_fraction_of_cost": 0.5,
+      "scope": "all_perishables",
+      "prepared_units": 7662.0,
+      "sold_units": 5541.0,
+      "unsold_units": 2121.0,
+      "unmet_units": 2574.0,
+      "simulated_contribution_usd": 14405.123437327144,
+      "perfect_information_contribution_usd": 26058.92165213627
+    },
+    {
+      "period": "validation_Apr_May",
+      "method": "last_weekday",
+      "policy": "cost_aware_poisson_quantile",
+      "salvage_fraction_of_cost": 0.0,
+      "scope": "all_perishables",
+      "prepared_units": 7990.0,
+      "sold_units": 5643.0,
+      "unsold_units": 2347.0,
+      "unmet_units": 2472.0,
+      "simulated_contribution_usd": 11900.060346735514,
+      "perfect_information_contribution_usd": 26058.92165213627
+    },
+    {
+      "period": "validation_Apr_May",
+      "method": "last_weekday",
+      "policy": "cost_aware_poisson_quantile",
+      "salvage_fraction_of_cost": 0.5,
+      "scope": "all_perishables",
+      "prepared_units": 10260.0,
+      "sold_units": 6458.0,
+      "unsold_units": 3802.0,
+      "unmet_units": 1657.0,
+      "simulated_contribution_usd": 15509.287489974673,
+      "perfect_information_contribution_usd": 26058.92165213627
+    },
+    {
+      "period": "validation_Apr_May",
+      "method": "four_weekdays",
+      "policy": "cost_aware_poisson_quantile",
+      "salvage_fraction_of_cost": 0.0,
+      "scope": "all_perishables",
+      "prepared_units": 7774.0,
+      "sold_units": 5716.0,
+      "unsold_units": 2058.0,
+      "unmet_units": 2399.0,
+      "simulated_contribution_usd": 12940.636102424494,
+      "perfect_information_contribution_usd": 26058.92165213627
+    },
+    {
+      "period": "validation_Apr_May",
+      "method": "four_weekdays",
+      "policy": "cost_aware_poisson_quantile",
+      "salvage_fraction_of_cost": 0.5,
+      "scope": "all_perishables",
+      "prepared_units": 9944.0,
+      "sold_units": 6562.0,
+      "unsold_units": 3382.0,
+      "unmet_units": 1553.0,
+      "simulated_contribution_usd": 16488.769196732814,
+      "perfect_information_contribution_usd": 26058.92165213627
+    },
+    {
+      "period": "validation_Apr_May",
+      "method": "internal",
+      "policy": "cost_aware_poisson_quantile",
+      "salvage_fraction_of_cost": 0.0,
+      "scope": "all_perishables",
+      "prepared_units": 8006.0,
+      "sold_units": 5850.0,
+      "unsold_units": 2156.0,
+      "unmet_units": 2265.0,
+      "simulated_contribution_usd": 13196.599011944905,
+      "perfect_information_contribution_usd": 26058.92165213627
+    },
+    {
+      "period": "validation_Apr_May",
+      "method": "internal",
+      "policy": "cost_aware_poisson_quantile",
+      "salvage_fraction_of_cost": 0.5,
+      "scope": "all_perishables",
+      "prepared_units": 10193.0,
+      "sold_units": 6684.0,
+      "unsold_units": 3509.0,
+      "unmet_units": 1431.0,
+      "simulated_contribution_usd": 16840.59107257403,
+      "perfect_information_contribution_usd": 26058.92165213627
+    },
+    {
+      "period": "validation_Apr_May",
+      "method": "calendar",
+      "policy": "cost_aware_poisson_quantile",
+      "salvage_fraction_of_cost": 0.0,
+      "scope": "all_perishables",
+      "prepared_units": 8090.0,
+      "sold_units": 5872.0,
+      "unsold_units": 2218.0,
+      "unmet_units": 2243.0,
+      "simulated_contribution_usd": 13112.846504322903,
+      "perfect_information_contribution_usd": 26058.92165213627
+    },
+    {
+      "period": "validation_Apr_May",
+      "method": "calendar",
+      "policy": "cost_aware_poisson_quantile",
+      "salvage_fraction_of_cost": 0.5,
+      "scope": "all_perishables",
+      "prepared_units": 10257.0,
+      "sold_units": 6669.0,
+      "unsold_units": 3588.0,
+      "unmet_units": 1446.0,
+      "simulated_contribution_usd": 16656.78182446176,
+      "perfect_information_contribution_usd": 26058.92165213627
+    },
+    {
+      "period": "validation_Apr_May",
+      "method": "calendar_lag_weather",
+      "policy": "cost_aware_poisson_quantile",
+      "salvage_fraction_of_cost": 0.0,
+      "scope": "all_perishables",
+      "prepared_units": 8125.0,
+      "sold_units": 5891.0,
+      "unsold_units": 2234.0,
+      "unmet_units": 2224.0,
+      "simulated_contribution_usd": 13110.557717169751,
+      "perfect_information_contribution_usd": 26058.92165213627
+    },
+    {
+      "period": "validation_Apr_May",
+      "method": "calendar_lag_weather",
+      "policy": "cost_aware_poisson_quantile",
+      "salvage_fraction_of_cost": 0.5,
+      "scope": "all_perishables",
+      "prepared_units": 10311.0,
+      "sold_units": 6689.0,
+      "unsold_units": 3622.0,
+      "unmet_units": 1426.0,
+      "simulated_contribution_usd": 16657.659411248795,
+      "perfect_information_contribution_usd": 26058.92165213627
+    },
+    {
+      "period": "validation_Apr_May",
+      "method": "oracle_actual_weather_conflict",
+      "policy": "cost_aware_poisson_quantile",
+      "salvage_fraction_of_cost": 0.0,
+      "scope": "all_perishables",
+      "prepared_units": 7820.0,
+      "sold_units": 5743.0,
+      "unsold_units": 2077.0,
+      "unmet_units": 2372.0,
+      "simulated_contribution_usd": 13066.535070443992,
+      "perfect_information_contribution_usd": 26058.92165213627
+    },
+    {
+      "period": "validation_Apr_May",
+      "method": "oracle_actual_weather_conflict",
+      "policy": "cost_aware_poisson_quantile",
+      "salvage_fraction_of_cost": 0.5,
+      "scope": "all_perishables",
+      "prepared_units": 9949.0,
+      "sold_units": 6583.0,
+      "unsold_units": 3366.0,
+      "unmet_units": 1532.0,
+      "simulated_contribution_usd": 16657.206789703854,
+      "perfect_information_contribution_usd": 26058.92165213627
+    },
+    {
+      "period": "test_June",
+      "method": "direct_sku_last_weekday",
+      "policy": "cost_aware_poisson_quantile",
+      "salvage_fraction_of_cost": 0.0,
+      "scope": "all_perishables",
+      "prepared_units": 4601.0,
+      "sold_units": 3047.0,
+      "unsold_units": 1554.0,
+      "unmet_units": 1610.0,
+      "simulated_contribution_usd": 5728.239426458855,
+      "perfect_information_contribution_usd": 14971.093414084546
+    },
+    {
+      "period": "test_June",
+      "method": "direct_sku_last_weekday",
+      "policy": "cost_aware_poisson_quantile",
+      "salvage_fraction_of_cost": 0.5,
+      "scope": "all_perishables",
+      "prepared_units": 5764.0,
+      "sold_units": 3422.0,
+      "unsold_units": 2342.0,
+      "unmet_units": 1235.0,
+      "simulated_contribution_usd": 7834.865129402502,
+      "perfect_information_contribution_usd": 14971.093414084546
+    },
+    {
+      "period": "test_June",
+      "method": "direct_sku_four_weekdays",
+      "policy": "cost_aware_poisson_quantile",
+      "salvage_fraction_of_cost": 0.0,
+      "scope": "all_perishables",
+      "prepared_units": 4481.0,
+      "sold_units": 3269.0,
+      "unsold_units": 1212.0,
+      "unmet_units": 1388.0,
+      "simulated_contribution_usd": 7412.66124737149,
+      "perfect_information_contribution_usd": 14971.093414084546
+    },
+    {
+      "period": "test_June",
+      "method": "direct_sku_four_weekdays",
+      "policy": "round_forecast_mean",
+      "salvage_fraction_of_cost": 0.0,
+      "scope": "all_perishables",
+      "prepared_units": 4473.0,
+      "sold_units": 3303.0,
+      "unsold_units": 1170.0,
+      "unmet_units": 1354.0,
+      "simulated_contribution_usd": 7129.665347088097,
+      "perfect_information_contribution_usd": 14971.093414084546
+    },
+    {
+      "period": "test_June",
+      "method": "direct_sku_four_weekdays",
+      "policy": "cost_aware_poisson_quantile",
+      "salvage_fraction_of_cost": 0.5,
+      "scope": "all_perishables",
+      "prepared_units": 5629.0,
+      "sold_units": 3717.0,
+      "unsold_units": 1912.0,
+      "unmet_units": 940.0,
+      "simulated_contribution_usd": 9423.441877265019,
+      "perfect_information_contribution_usd": 14971.093414084546
+    },
+    {
+      "period": "test_June",
+      "method": "direct_sku_four_weekdays",
+      "policy": "round_forecast_mean",
+      "salvage_fraction_of_cost": 0.5,
+      "scope": "all_perishables",
+      "prepared_units": 4473.0,
+      "sold_units": 3303.0,
+      "unsold_units": 1170.0,
+      "unmet_units": 1354.0,
+      "simulated_contribution_usd": 8840.620347088097,
+      "perfect_information_contribution_usd": 14971.093414084546
+    },
+    {
+      "period": "test_June",
+      "method": "last_weekday",
+      "policy": "cost_aware_poisson_quantile",
+      "salvage_fraction_of_cost": 0.0,
+      "scope": "all_perishables",
+      "prepared_units": 4622.0,
+      "sold_units": 3346.0,
+      "unsold_units": 1276.0,
+      "unmet_units": 1311.0,
+      "simulated_contribution_usd": 7340.145062040618,
+      "perfect_information_contribution_usd": 14971.093414084546
+    },
+    {
+      "period": "test_June",
+      "method": "last_weekday",
+      "policy": "cost_aware_poisson_quantile",
+      "salvage_fraction_of_cost": 0.5,
+      "scope": "all_perishables",
+      "prepared_units": 5814.0,
+      "sold_units": 3819.0,
+      "unsold_units": 1995.0,
+      "unmet_units": 838.0,
+      "simulated_contribution_usd": 9550.691550365735,
+      "perfect_information_contribution_usd": 14971.093414084546
+    },
+    {
+      "period": "test_June",
+      "method": "four_weekdays",
+      "policy": "cost_aware_poisson_quantile",
+      "salvage_fraction_of_cost": 0.0,
+      "scope": "all_perishables",
+      "prepared_units": 4492.0,
+      "sold_units": 3373.0,
+      "unsold_units": 1119.0,
+      "unmet_units": 1284.0,
+      "simulated_contribution_usd": 7940.662034505398,
+      "perfect_information_contribution_usd": 14971.093414084546
+    },
+    {
+      "period": "test_June",
+      "method": "four_weekdays",
+      "policy": "cost_aware_poisson_quantile",
+      "salvage_fraction_of_cost": 0.5,
+      "scope": "all_perishables",
+      "prepared_units": 5672.0,
+      "sold_units": 3866.0,
+      "unsold_units": 1806.0,
+      "unmet_units": 791.0,
+      "simulated_contribution_usd": 10028.303802214185,
+      "perfect_information_contribution_usd": 14971.093414084546
+    },
+    {
+      "period": "test_June",
+      "method": "internal",
+      "policy": "cost_aware_poisson_quantile",
+      "salvage_fraction_of_cost": 0.0,
+      "scope": "all_perishables",
+      "prepared_units": 4686.0,
+      "sold_units": 3478.0,
+      "unsold_units": 1208.0,
+      "unmet_units": 1179.0,
+      "simulated_contribution_usd": 8119.865247189876,
+      "perfect_information_contribution_usd": 14971.093414084546
+    },
+    {
+      "period": "test_June",
+      "method": "internal",
+      "policy": "cost_aware_poisson_quantile",
+      "salvage_fraction_of_cost": 0.5,
+      "scope": "all_perishables",
+      "prepared_units": 5886.0,
+      "sold_units": 3927.0,
+      "unsold_units": 1959.0,
+      "unmet_units": 730.0,
+      "simulated_contribution_usd": 10053.682716728925,
+      "perfect_information_contribution_usd": 14971.093414084546
+    },
+    {
+      "period": "test_June",
+      "method": "calendar",
+      "policy": "cost_aware_poisson_quantile",
+      "salvage_fraction_of_cost": 0.0,
+      "scope": "all_perishables",
+      "prepared_units": 4666.0,
+      "sold_units": 3468.0,
+      "unsold_units": 1198.0,
+      "unmet_units": 1189.0,
+      "simulated_contribution_usd": 8118.773017729882,
+      "perfect_information_contribution_usd": 14971.093414084546
+    },
+    {
+      "period": "test_June",
+      "method": "calendar",
+      "policy": "cost_aware_poisson_quantile",
+      "salvage_fraction_of_cost": 0.5,
+      "scope": "all_perishables",
+      "prepared_units": 5870.0,
+      "sold_units": 3920.0,
+      "unsold_units": 1950.0,
+      "unmet_units": 737.0,
+      "simulated_contribution_usd": 10039.911035589452,
+      "perfect_information_contribution_usd": 14971.093414084546
+    },
+    {
+      "period": "test_June",
+      "method": "calendar_lag_weather",
+      "policy": "cost_aware_poisson_quantile",
+      "salvage_fraction_of_cost": 0.0,
+      "scope": "all_perishables",
+      "prepared_units": 4670.0,
+      "sold_units": 3470.0,
+      "unsold_units": 1200.0,
+      "unmet_units": 1187.0,
+      "simulated_contribution_usd": 8089.138339710258,
+      "perfect_information_contribution_usd": 14971.093414084546
+    },
+    {
+      "period": "test_June",
+      "method": "calendar_lag_weather",
+      "policy": "cost_aware_poisson_quantile",
+      "salvage_fraction_of_cost": 0.5,
+      "scope": "all_perishables",
+      "prepared_units": 5898.0,
+      "sold_units": 3934.0,
+      "unsold_units": 1964.0,
+      "unmet_units": 723.0,
+      "simulated_contribution_usd": 10070.094538165977,
+      "perfect_information_contribution_usd": 14971.093414084546
+    },
+    {
+      "period": "test_June",
+      "method": "oracle_actual_weather_conflict",
+      "policy": "cost_aware_poisson_quantile",
+      "salvage_fraction_of_cost": 0.0,
+      "scope": "all_perishables",
+      "prepared_units": 4675.0,
+      "sold_units": 3464.0,
+      "unsold_units": 1211.0,
+      "unmet_units": 1193.0,
+      "simulated_contribution_usd": 8075.585622154427,
+      "perfect_information_contribution_usd": 14971.093414084546
+    },
+    {
+      "period": "test_June",
+      "method": "oracle_actual_weather_conflict",
+      "policy": "cost_aware_poisson_quantile",
+      "salvage_fraction_of_cost": 0.5,
+      "scope": "all_perishables",
+      "prepared_units": 5865.0,
+      "sold_units": 3914.0,
+      "unsold_units": 1951.0,
+      "unmet_units": 743.0,
+      "simulated_contribution_usd": 10035.218298336544,
+      "perfect_information_contribution_usd": 14971.093414084546
+    }
+  ],
+  "financial_assumptions": [
+    "These are counterfactual scenario calculations, not measured savings or causal company uplift.",
+    "Recorded units are treated as uncensored demand; actual stockouts, opening inventories, carryover and waste are unknown.",
+    "Each SKU is prepared once before demand, with no replenishment, capacity constraints, substitution or unmet-demand carryover.",
+    "Branch-SKU selling price and unit cost are quantity-weighted Jan-March revenue/cost per unit; labor, rent and delivery commissions are excluded.",
+    "Demand is assumed Poisson around each predicted mean; quantile calibration is reported and this distribution is not guaranteed.",
+    "The common newsvendor critical fractile is (price-cost)/(price-salvage); all compared forecasts use the SAME decision rule.",
+    "Salvage scenarios equal 0% or 50% of unit cost per unsold unit; all prepared units incur unit cost.",
+    "Bakery, Sandwiches, Breakfast and Desserts are assumed perishable planning categories; actual shelf lives and production batches are unavailable.",
+    "Perfect information is an unattainable upper bound, not a proposed forecast.",
+    "Religious calendar flags describe dates only and make no inference about customer religion."
+  ]
+}

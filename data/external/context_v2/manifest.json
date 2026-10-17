@@ -1,0 +1,298 @@
+{
+  "retrieved_at_utc": "2026-10-17T13:07:55.069120+00:00",
+  "documentation": [
+    "https://open-meteo.com/en/docs/historical-weather-api",
+    "https://open-meteo.com/en/docs/previous-runs-api",
+    "https://open-meteo.com/en/docs/air-quality-api"
+  ],
+  "sales_target": "Only data/stories_transactions.csv; no external sales targets",
+  "geography": "Three alternative proxy regions. No branch is assigned a region without company confirmation.",
+  "attribution": "Weather: ERA5/ECMWF via Open-Meteo. Air quality: CAMS global atmospheric composition via Open-Meteo.",
+  "records": [
+    {
+      "name": "beirut_observed",
+      "status": "ok",
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=33.89&longitude=35.5&start_date=2025-12-15&end_date=2026-06-30&timezone=UTC&timeformat=unixtime&models=era5&hourly=temperature_2m%2Crelative_humidity_2m%2Capparent_temperature%2Cprecipitation%2Cwind_speed_10m%2Cshortwave_radiation%2Ccloud_cover&daily=sunrise%2Csunset%2Cdaylight_duration",
+      "purpose": "Explanatory ERA5 reanalysis and astronomical clock; geography scenario, not verified branch exposure",
+      "reused_cache": false,
+      "sha256": "8c955ed67a879ad982e1f8484ad33f03041b6ee4786a73eb567a99e0ca049c51",
+      "hourly_count": 4752,
+      "returned_latitude": 33.75,
+      "returned_longitude": 35.5,
+      "fields": {
+        "temperature_2m": {
+          "count": 4752,
+          "null_count": 0
+        },
+        "relative_humidity_2m": {
+          "count": 4752,
+          "null_count": 0
+        },
+        "apparent_temperature": {
+          "count": 4752,
+          "null_count": 0
+        },
+        "precipitation": {
+          "count": 4752,
+          "null_count": 0
+        },
+        "wind_speed_10m": {
+          "count": 4752,
+          "null_count": 0
+        },
+        "shortwave_radiation": {
+          "count": 4752,
+          "null_count": 0
+        },
+        "cloud_cover": {
+          "count": 4752,
+          "null_count": 0
+        }
+      }
+    },
+    {
+      "name": "beirut_issued_weather",
+      "status": "ok",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=33.89&longitude=35.5&start_date=2025-12-15&end_date=2026-06-30&timezone=UTC&timeformat=unixtime&models=ecmwf_ifs025&hourly=temperature_2m_previous_day1%2Cprecipitation_previous_day1%2Cwind_speed_10m_previous_day1",
+      "purpose": "Fixed 24-hour-lead archived predictions; check coverage and publication semantics before operational use",
+      "reused_cache": false,
+      "sha256": "c4627061d31d99a522b12b009df417b08bf5533a18aed9be02131ad9d3b1ffa6",
+      "hourly_count": 4752,
+      "returned_latitude": 33.75,
+      "returned_longitude": 35.5,
+      "fields": {
+        "temperature_2m_previous_day1": {
+          "count": 4752,
+          "null_count": 0
+        },
+        "precipitation_previous_day1": {
+          "count": 4752,
+          "null_count": 0
+        },
+        "wind_speed_10m_previous_day1": {
+          "count": 4752,
+          "null_count": 0
+        }
+      }
+    },
+    {
+      "name": "beirut_air",
+      "status": "ok",
+      "url": "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=33.89&longitude=35.5&start_date=2025-12-15&end_date=2026-06-30&timezone=UTC&timeformat=unixtime&domains=cams_global&hourly=pm10%2Cpm2_5%2Cdust%2Caerosol_optical_depth",
+      "purpose": "CAMS global atmospheric-composition archive via Open-Meteo; retrospective context, not issued day-ahead air-quality forecasts",
+      "reused_cache": false,
+      "sha256": "71d9922eb30a506b0be808c674d6af05a557b06c2e3f2fa1a6c7af41372663c3",
+      "hourly_count": 4752,
+      "returned_latitude": 33.9,
+      "returned_longitude": 35.5,
+      "fields": {
+        "pm10": {
+          "count": 4752,
+          "null_count": 0
+        },
+        "pm2_5": {
+          "count": 4752,
+          "null_count": 0
+        },
+        "dust": {
+          "count": 4752,
+          "null_count": 0
+        },
+        "aerosol_optical_depth": {
+          "count": 4752,
+          "null_count": 0
+        }
+      }
+    },
+    {
+      "name": "batroun_observed",
+      "status": "ok",
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=34.2553&longitude=35.6581&start_date=2025-12-15&end_date=2026-06-30&timezone=UTC&timeformat=unixtime&models=era5&hourly=temperature_2m%2Crelative_humidity_2m%2Capparent_temperature%2Cprecipitation%2Cwind_speed_10m%2Cshortwave_radiation%2Ccloud_cover&daily=sunrise%2Csunset%2Cdaylight_duration",
+      "purpose": "Explanatory ERA5 reanalysis and astronomical clock; geography scenario, not verified branch exposure",
+      "reused_cache": false,
+      "sha256": "3d6005ddfcd36cf701b1a728913eeae2255183f4d0b98c03868deb2a18fe79a6",
+      "hourly_count": 4752,
+      "returned_latitude": 34.25,
+      "returned_longitude": 35.75,
+      "fields": {
+        "temperature_2m": {
+          "count": 4752,
+          "null_count": 0
+        },
+        "relative_humidity_2m": {
+          "count": 4752,
+          "null_count": 0
+        },
+        "apparent_temperature": {
+          "count": 4752,
+          "null_count": 0
+        },
+        "precipitation": {
+          "count": 4752,
+          "null_count": 0
+        },
+        "wind_speed_10m": {
+          "count": 4752,
+          "null_count": 0
+        },
+        "shortwave_radiation": {
+          "count": 4752,
+          "null_count": 0
+        },
+        "cloud_cover": {
+          "count": 4752,
+          "null_count": 0
+        }
+      }
+    },
+    {
+      "name": "batroun_issued_weather",
+      "status": "ok",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=34.2553&longitude=35.6581&start_date=2025-12-15&end_date=2026-06-30&timezone=UTC&timeformat=unixtime&models=ecmwf_ifs025&hourly=temperature_2m_previous_day1%2Cprecipitation_previous_day1%2Cwind_speed_10m_previous_day1",
+      "purpose": "Fixed 24-hour-lead archived predictions; check coverage and publication semantics before operational use",
+      "reused_cache": false,
+      "sha256": "3be31d43b2a49870c972f7f654a38a0256c5d9d637fc7772d9aba183f9e60d00",
+      "hourly_count": 4752,
+      "returned_latitude": 34.25,
+      "returned_longitude": 35.75,
+      "fields": {
+        "temperature_2m_previous_day1": {
+          "count": 4752,
+          "null_count": 0
+        },
+        "precipitation_previous_day1": {
+          "count": 4752,
+          "null_count": 0
+        },
+        "wind_speed_10m_previous_day1": {
+          "count": 4752,
+          "null_count": 0
+        }
+      }
+    },
+    {
+      "name": "batroun_air",
+      "status": "ok",
+      "url": "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=34.2553&longitude=35.6581&start_date=2025-12-15&end_date=2026-06-30&timezone=UTC&timeformat=unixtime&domains=cams_global&hourly=pm10%2Cpm2_5%2Cdust%2Caerosol_optical_depth",
+      "purpose": "CAMS global atmospheric-composition archive via Open-Meteo; retrospective context, not issued day-ahead air-quality forecasts",
+      "reused_cache": false,
+      "sha256": "eb29535c1512745105c37c510523060dddb6ca9d51e5eb641a31b7dd7c37931f",
+      "hourly_count": 4752,
+      "returned_latitude": 34.300003,
+      "returned_longitude": 35.699997,
+      "fields": {
+        "pm10": {
+          "count": 4752,
+          "null_count": 0
+        },
+        "pm2_5": {
+          "count": 4752,
+          "null_count": 0
+        },
+        "dust": {
+          "count": 4752,
+          "null_count": 0
+        },
+        "aerosol_optical_depth": {
+          "count": 4752,
+          "null_count": 0
+        }
+      }
+    },
+    {
+      "name": "broummana_observed",
+      "status": "ok",
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=33.8828&longitude=35.6206&start_date=2025-12-15&end_date=2026-06-30&timezone=UTC&timeformat=unixtime&models=era5&hourly=temperature_2m%2Crelative_humidity_2m%2Capparent_temperature%2Cprecipitation%2Cwind_speed_10m%2Cshortwave_radiation%2Ccloud_cover&daily=sunrise%2Csunset%2Cdaylight_duration",
+      "purpose": "Explanatory ERA5 reanalysis and astronomical clock; geography scenario, not verified branch exposure",
+      "reused_cache": false,
+      "sha256": "65563d5f67f149d78ab392813c215954dbe11f444b21aa046afe193d7e0a0bdb",
+      "hourly_count": 4752,
+      "returned_latitude": 33.75,
+      "returned_longitude": 35.5,
+      "fields": {
+        "temperature_2m": {
+          "count": 4752,
+          "null_count": 0
+        },
+        "relative_humidity_2m": {
+          "count": 4752,
+          "null_count": 0
+        },
+        "apparent_temperature": {
+          "count": 4752,
+          "null_count": 0
+        },
+        "precipitation": {
+          "count": 4752,
+          "null_count": 0
+        },
+        "wind_speed_10m": {
+          "count": 4752,
+          "null_count": 0
+        },
+        "shortwave_radiation": {
+          "count": 4752,
+          "null_count": 0
+        },
+        "cloud_cover": {
+          "count": 4752,
+          "null_count": 0
+        }
+      }
+    },
+    {
+      "name": "broummana_issued_weather",
+      "status": "ok",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=33.8828&longitude=35.6206&start_date=2025-12-15&end_date=2026-06-30&timezone=UTC&timeformat=unixtime&models=ecmwf_ifs025&hourly=temperature_2m_previous_day1%2Cprecipitation_previous_day1%2Cwind_speed_10m_previous_day1",
+      "purpose": "Fixed 24-hour-lead archived predictions; check coverage and publication semantics before operational use",
+      "reused_cache": false,
+      "sha256": "495a234ae8ea6cfae9e1841a45247e6b6a17e7b2201ec0ceb213d4d6f02769a0",
+      "hourly_count": 4752,
+      "returned_latitude": 33.75,
+      "returned_longitude": 35.5,
+      "fields": {
+        "temperature_2m_previous_day1": {
+          "count": 4752,
+          "null_count": 0
+        },
+        "precipitation_previous_day1": {
+          "count": 4752,
+          "null_count": 0
+        },
+        "wind_speed_10m_previous_day1": {
+          "count": 4752,
+          "null_count": 0
+        }
+      }
+    },
+    {
+      "name": "broummana_air",
+      "status": "ok",
+      "url": "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=33.8828&longitude=35.6206&start_date=2025-12-15&end_date=2026-06-30&timezone=UTC&timeformat=unixtime&domains=cams_global&hourly=pm10%2Cpm2_5%2Cdust%2Caerosol_optical_depth",
+      "purpose": "CAMS global atmospheric-composition archive via Open-Meteo; retrospective context, not issued day-ahead air-quality forecasts",
+      "reused_cache": false,
+      "sha256": "55210760ea96dbaa93cc945943d5863ab16edfeeb52b3f91e273dd4519a1d077",
+      "hourly_count": 4752,
+      "returned_latitude": 33.9,
+      "returned_longitude": 35.600006,
+      "fields": {
+        "pm10": {
+          "count": 4752,
+          "null_count": 0
+        },
+        "pm2_5": {
+          "count": 4752,
+          "null_count": 0
+        },
+        "dust": {
+          "count": 4752,
+          "null_count": 0
+        },
+        "aerosol_optical_depth": {
+          "count": 4752,
+          "null_count": 0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+STORIES HACKATHON: METHODOLOGY AUDIT OF ORIGINAL TEAM ANALYSIS
+Date: 17 October 2026
+Scope: README.md, src/pitch_visuals.py, notebooks 02/03/04.
+Notebook cell references are zero-based. Original scripts/notebooks were preserved.
+
+AUTHORITATIVE FRAMING
+The hackathon PDF explicitly describes real transaction data with replacement
+identifiers. SYN- transaction IDs do not demonstrate synthetic transactions.
+This corrects the original assertions rather than substituting another inferred
+generation story. Proceed under the brief's stated provenance with documented
+assumptions. Missing operational fields are a deployment data contract, not a
+prerequisite for completing the hackathon.
+
+1. FINANCIAL SCENARIOS ARE NOT FORECASTS; ELASTICITY IS NOT IDENTIFIED
+References: pitch_visuals.py lines 375-419; original README lines 82-104.
+All 135 branch-product combinations have one list price over Jan-Jun. Price is
+confounded with branch; ordinary list-price elasticity is not identified. Small
+nonrandomized discounts do not establish that a permanent increase retains volume.
+The approximately $65k annual total doubles six months, assumes unchanged demand,
+assumes 10% add-on acceptance, and treats recorded cost differences and discounts
+as recoverable profit. These are headroom scenarios, not realized savings, annual
+forecasts, net profit or ROI. Show demand/cost/acceptance sensitivity and test
+incremental gross profit in a controlled pilot. Conditional break-even formulas
+do not estimate how customers actually respond. Account for interactions,
+substitution, capacity and implementation costs when combining actions.
+
+2. ACQUISITION IS CONFUSED WITH FIRST APPEARANCE
+References: pitch_visuals.py lines 199-231; notebook 04 cells 25-26 and 30.
+The observation window starts January 1. First observed is not newly acquired;
+January includes existing customers. Falling first-seen counts can occur as a
+stable customer pool becomes observed. Withdraw acquisition-collapse claims.
+Use first-seen terminology unless registration or earlier history exists.
+The 91% statistic is overlap between two selected two-month windows, not a
+generally calibrated retention probability.
+
+3. IN-SAMPLE MODEL FIT IS PRESENTED AS PREDICTIVE/CAUSAL EVIDENCE
+References: pitch_visuals.py lines 109-120 and 140.
+The 93% R-squared fits and evaluates the same 181 days. Event dates are included
+in the training sample, and trend can absorb seasonal variation. Small residual
+weather correlations do not prove no external response, price insensitivity or
+habit. Use rolling-origin held-out predictions, calendar/lag baselines, external
+feature ablation and uncertainty. Jointly adjusted retrospective associations
+still need separate causal identification. Historical realized future weather is
+not a deployable forecast-time input; label retrospective oracle comparisons.
+
+4. EXACT-ROW DELETION IS AN UNRESOLVED LINE-SEMANTICS ASSUMPTION
+References: pitch_visuals.py line 72; notebooks 02/03/04 cell 2.
+No unique line ID distinguishes duplicate imports from repeated identical items
+in one order. There are 132 repeated excess rows affecting 132 orders.
+Raw: 51,177 rows; 54,087 units; 33,887 orders; revenue $305,925.14;
+gross profit $179,430.49.
+After exact deduplication: 51,045 rows; 53,955 units; 33,887 orders;
+revenue $305,183.71; gross profit $178,994.28.
+Deletion removes $741.43 revenue and $436.21 gross profit. Order counts are
+unaffected. Preserve raw data and present sensitivity pending deployed data
+contract confirmation. Unidentified customers are not necessarily walk-ins.
+
+5. HOLIDAY BANDS AND MULTIPLE COMPARISONS OVERSTATE UNUSUAL EVENTS
+References: notebook 03 cells 4, 6, 9-11 and 21.
+The symmetric percentage band +/- (exp(1.96*sd)-1) is not the asymmetric band
+implied by symmetric log residuals: exp(-1.96*sd)-1 to exp(1.96*sd)-1. The method
+also omits prediction leverage, parameter uncertainty and residual dependence.
+There are 17 holidays across four series plus type/product/behavior comparisons.
+Harbour's five exceptions are exploratory, not multiplicity-corrected findings.
+Use held-out residual bands or blocked resampling, predefined test families and
+false-discovery control. One occurrence per holiday cannot establish repeatable
+annual effects. Public calendar categories do not identify customer religion.
+
+6. WAR DATES CONFLICT; CAUSAL INTERPRETATION IS UNSUPPORTED
+References: notebook 02 cells 0, 2, 9, 11-12 and 21;
+pitch_visuals.py lines 93-102.
+Notebook: March 1-April 15, with April 16 boundary. Pitch: March 2-April 16,
+with April 17 truce. The new analysis uses UN/UNHCR-sourced escalation on
+March 2 and temporary ceasefire effective April 17 local time. See
+reports/external_evidence.json. Continuing hostilities mean no clean postwar
+period; maintain sensitivity to dates and exposure definitions.
+The pre-war-only trend fit is preferable to full-sample fitting for a descriptive
+counterfactual, but extrapolates about two months without intervals, alternative
+trends, unaffected controls or geographic exposure. Exponentiating predicted log
+orders also needs attention to mean retransformation bias. Near-zero deviation
+does not demonstrate no war effect. A Garden gap that grows later does not rule
+out lagged effects. Avoid war-resilience claims from these comparisons.
+
+7. BRANCH ALIASES DO NOT ESTABLISH GEOGRAPHY OR EXTERNAL EXPOSURE
+References: pitch_visuals.py lines 34-37; notebook 02 cell 21.
+Harbour/Garden/Uptown do not establish actual regions or branch coordinates.
+Beirut weather is a proxy scenario until mapping is established. Regional conflict
+exposure cannot be assigned from these names. Operational deployment requires
+locations, hours/closures, access disruption and location-specific exposure.
+
+8. UNADJUSTED PROMOTION AVERAGES ARE NOT INCREMENTAL PROFIT
+References: pitch_visuals.py lines 283-330.
+Eight-day promo windows and fourteen-day comparison windows have different weekday
+composition; trend, Ramadan, war and holidays overlap. Plotting other branches is
+not an adjusted difference-in-differences estimate. Use branch-category-day panels,
+weekday/trend adjustment, pretrend checks, uncertainty and basket-wide profit.
+Advertising exposure is unknown. Similar raw units/day is a descriptive result;
+price cuts buying no volume is not established.
+
+9. CHURN HEURISTIC CAN EXCLUDE PREVIOUSLY VALUABLE LAPSED CUSTOMERS
+References: notebook 04 cells 2, 28-30.
+Whole-period regularity includes the eventual lapse. Previously frequent customers
+can become Occasional and leave the target pool. Median completed visit gaps omit
+the current censored gap. Freeze segments at historical cutoffs, evaluate later
+return/nonreturn, and calibrate outreach on incremental profit. The flagged group's
+historical $12k spend is not forecast loss or recoverable value. Claims that they
+are the cheapest customers to recover require response/cost evidence.
+
+10. FAVORITE-SHARE COMPARISONS DO NOT RULE OUT PERSONALIZATION
+References: pitch_visuals.py lines 333-370.
+One favorite-product statistic versus one random-menu simulation is not a test
+of recommendation effectiveness. Context, sparse histories and uncertainty matter.
+Compare contextual suggestions against a global popular-item baseline on held-out
+data and then in a randomized conversion/profit pilot.
+
+11. JANUARY-JUNE IS NOT ANNUAL SEASONALITY
+Six months contain one winter-to-summer transition and cannot separate repeated
+seasonality from trend and coincident events. Describe observed monthly differences,
+test identifiable weather variation, and do not forecast autumn or double six-month
+benefits as an established annual return.
+
+RECOMMENDED HACKATHON APPROACH
+Build and validate a branch/category demand forecast that tests external context
+against calendar and lag baselines. Retain external features only with credible
+validation; allow an honest no-improvement result. Convert forecasts to decisions
+using explicit understock/overstock or promotion economics, with uncertainty and
+abstention. Without availability, waste and operating-cost records, profit uplift
+is a simulation requiring a pilot, not measured business value. See
+reports/deep_analysis_report.pdf, src/external_analysis.py and src/demand_model.py.
+
+BEFORE LIVE DEPLOYMENT (NOT A BLOCKER FOR HACKATHON ANALYSIS)
+Establish branch geography/timezones, line semantics, opening/closure calendars,
+availability and stockouts, waste/ingredient and labor costs, promotion exposure,
+customer registration dates, and archived information available at decision time.

@@ -1,0 +1,82 @@
+season_window,Branch,Category,units,revenue,profit,units_per_day
+early_summer_Jun,Garden,Bakery,719,2911.7200000000003,1415.93,23.966666666666665
+early_summer_Jun,Garden,Breakfast,174,1482.49,600.6700000000001,5.8
+early_summer_Jun,Garden,Cold Coffee,530,2789.7,1577.52,17.666666666666668
+early_summer_Jun,Garden,Cold Drinks,342,1330.55,701.46,11.4
+early_summer_Jun,Garden,Desserts,394,2389.83,853.41,13.133333333333333
+early_summer_Jun,Garden,Hot Coffee,548,2531.5,1444.01,18.266666666666666
+early_summer_Jun,Garden,Matcha & Tea,493,3040.33,1522.25,16.433333333333334
+early_summer_Jun,Garden,Meals,107,1128.8,434.57,3.566666666666667
+early_summer_Jun,Garden,Sandwiches,257,2530.44,864.91,8.566666666666666
+early_summer_Jun,Harbour,Bakery,1253,5387.18,3526.8,41.766666666666666
+early_summer_Jun,Harbour,Breakfast,231,2071.11,1246.34,7.7
+early_summer_Jun,Harbour,Cold Coffee,841,4618.91,3293.21,28.033333333333335
+early_summer_Jun,Harbour,Cold Drinks,527,2152.07,1469.7,17.566666666666666
+early_summer_Jun,Harbour,Desserts,443,2818.47,1610.0,14.766666666666667
+early_summer_Jun,Harbour,Hot Coffee,874,4208.41,3004.85,29.133333333333333
+early_summer_Jun,Harbour,Matcha & Tea,752,4868.76,3238.94,25.066666666666666
+early_summer_Jun,Harbour,Meals,158,1761.68,1036.31,5.266666666666667
+early_summer_Jun,Harbour,Sandwiches,360,3703.81,2078.36,12.0
+early_summer_Jun,Uptown,Bakery,425,1637.8700000000001,1048.69,14.166666666666666
+early_summer_Jun,Uptown,Breakfast,79,643.46,375.71,2.6333333333333333
+early_summer_Jun,Uptown,Cold Coffee,285,1444.77,1000.16,9.5
+early_summer_Jun,Uptown,Cold Drinks,205,733.48,490.38,6.833333333333333
+early_summer_Jun,Uptown,Desserts,134,786.75,433.89,4.466666666666667
+early_summer_Jun,Uptown,Hot Coffee,324,1425.36,998.01,10.8
+early_summer_Jun,Uptown,Matcha & Tea,313,1903.05,1224.93,10.433333333333334
+early_summer_Jun,Uptown,Meals,55,563.56,319.22,1.8333333333333333
+early_summer_Jun,Uptown,Sandwiches,188,1778.03,964.76,6.266666666666667
+spring_Mar-May,Garden,Bakery,1975,7942.35,3880.52,21.467391304347824
+spring_Mar-May,Garden,Breakfast,426,3614.19,1460.52,4.630434782608695
+spring_Mar-May,Garden,Cold Coffee,1274,6684.5,3786.81,13.847826086956522
+spring_Mar-May,Garden,Cold Drinks,926,3627.65,1938.48,10.065217391304348
+spring_Mar-May,Garden,Desserts,1014,6136.13,2183.81,11.021739130434783
+spring_Mar-May,Garden,Hot Coffee,1453,6692.5599999999995,3816.2000000000003,15.793478260869565
+spring_Mar-May,Garden,Matcha & Tea,1439,8950.57,4446.91,15.641304347826088
+spring_Mar-May,Garden,Meals,273,2890.46,1104.52,2.967391304347826
+spring_Mar-May,Garden,Sandwiches,587,5778.65,1992.74,6.380434782608695
+spring_Mar-May,Harbour,Bakery,2992,12686.0,8351.62,32.52173913043478
+spring_Mar-May,Harbour,Breakfast,611,5461.4800000000005,3289.65,6.641304347826087
+spring_Mar-May,Harbour,Cold Coffee,2052,11016.03,7789.74,22.304347826086957
+spring_Mar-May,Harbour,Cold Drinks,1392,5528.2699999999995,3787.68,15.130434782608695
+spring_Mar-May,Harbour,Desserts,1058,6550.13,3661.07,11.5
+spring_Mar-May,Harbour,Hot Coffee,2237,10588.56,7577.87,24.315217391304348
+spring_Mar-May,Harbour,Matcha & Tea,2082,13492.869999999999,8996.39,22.630434782608695
+spring_Mar-May,Harbour,Meals,376,4139.57,2443.17,4.086956521739131
+spring_Mar-May,Harbour,Sandwiches,892,9228.05,5184.69,9.695652173913043
+spring_Mar-May,Uptown,Bakery,1099,4227.49,2711.73,11.945652173913043
+spring_Mar-May,Uptown,Breakfast,258,2107.52,1221.08,2.8043478260869565
+spring_Mar-May,Uptown,Cold Coffee,720,3628.22,2529.0,7.826086956521739
+spring_Mar-May,Uptown,Cold Drinks,580,2100.77,1413.15,6.304347826086956
+spring_Mar-May,Uptown,Desserts,377,2212.7200000000003,1216.54,4.0978260869565215
+spring_Mar-May,Uptown,Hot Coffee,840,3622.81,2545.28,9.130434782608695
+spring_Mar-May,Uptown,Matcha & Tea,770,4549.59,2962.5,8.369565217391305
+spring_Mar-May,Uptown,Meals,158,1635.24,928.32,1.7173913043478262
+spring_Mar-May,Uptown,Sandwiches,554,5241.25,2830.67,6.021739130434782
+winter_Jan-Feb,Garden,Bakery,1031,4185.5,2033.01,17.47457627118644
+winter_Jan-Feb,Garden,Breakfast,239,2040.1499999999999,819.0400000000001,4.0508474576271185
+winter_Jan-Feb,Garden,Cold Coffee,663,3508.32,1978.49,11.23728813559322
+winter_Jan-Feb,Garden,Cold Drinks,541,2071.67,1107.8700000000001,9.169491525423728
+winter_Jan-Feb,Garden,Desserts,548,3337.86,1191.13,9.288135593220339
+winter_Jan-Feb,Garden,Hot Coffee,757,3456.59,1970.8100000000002,12.830508474576272
+winter_Jan-Feb,Garden,Matcha & Tea,677,4221.21,2099.57,11.474576271186441
+winter_Jan-Feb,Garden,Meals,120,1253.11,481.57000000000005,2.0338983050847457
+winter_Jan-Feb,Garden,Sandwiches,326,3221.72,1087.76,5.52542372881356
+winter_Jan-Feb,Harbour,Bakery,1603,6790.900000000001,4466.59,27.16949152542373
+winter_Jan-Feb,Harbour,Breakfast,329,2924.4500000000003,1765.48,5.576271186440678
+winter_Jan-Feb,Harbour,Cold Coffee,984,5466.82,3879.68,16.677966101694917
+winter_Jan-Feb,Harbour,Cold Drinks,707,2857.98,1963.9,11.983050847457626
+winter_Jan-Feb,Harbour,Desserts,522,3363.35,1921.02,8.847457627118644
+winter_Jan-Feb,Harbour,Hot Coffee,1121,5388.0,3845.96,19.0
+winter_Jan-Feb,Harbour,Matcha & Tea,1073,6909.099999999999,4611.98,18.1864406779661
+winter_Jan-Feb,Harbour,Meals,172,1856.06,1094.43,2.9152542372881354
+winter_Jan-Feb,Harbour,Sandwiches,451,4645.5599999999995,2618.5099999999998,7.6440677966101696
+winter_Jan-Feb,Uptown,Bakery,584,2257.73,1448.87,9.898305084745763
+winter_Jan-Feb,Uptown,Breakfast,128,1047.08,611.02,2.169491525423729
+winter_Jan-Feb,Uptown,Cold Coffee,396,2022.06,1402.11,6.711864406779661
+winter_Jan-Feb,Uptown,Cold Drinks,270,969.74,644.52,4.576271186440678
+winter_Jan-Feb,Uptown,Desserts,201,1181.8300000000002,649.63,3.406779661016949
+winter_Jan-Feb,Uptown,Hot Coffee,441,1942.32,1360.69,7.47457627118644
+winter_Jan-Feb,Uptown,Matcha & Tea,399,2371.56,1541.49,6.762711864406779
+winter_Jan-Feb,Uptown,Meals,85,883.15,503.15,1.4406779661016949
+winter_Jan-Feb,Uptown,Sandwiches,293,2775.6,1506.56,4.966101694915254

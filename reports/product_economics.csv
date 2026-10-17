@@ -1,0 +1,136 @@
+Branch,Product,Category,units,revenue,gross_profit,price,cost
+Garden,Almond Croissant,Bakery,377,1818.1699999999998,788.96,4.85,2.73
+Garden,Americano,Hot Coffee,341,1069.49,718.26,3.15,1.03
+Garden,Avocado Toast,Breakfast,305,2860.43,1036.53,9.45,5.98
+Garden,Banana Bread,Bakery,416,1839.51,903.5100000000001,4.45,2.25
+Garden,Blueberry Muffin,Bakery,319,1253.79,657.26,3.95,1.87
+Garden,Brownie,Desserts,554,2834.71,956.65,5.15,3.39
+Garden,Butter Croissant,Bakery,687,2495.73,1375.92,3.65,1.63
+Garden,Cappuccino,Hot Coffee,517,2084.02,1256.8200000000002,4.05,1.6
+Garden,Caramel Latte,Hot Coffee,370,2111.52,1123.6200000000001,5.75,2.67
+Garden,Chai Latte,Matcha & Tea,382,1997.17,1187.33,5.25,2.12
+Garden,Cheesecake Slice,Desserts,465,3118.64,1072.64,6.75,4.4
+Garden,Chicken Pesto Sandwich,Sandwiches,354,3779.81,1163.75,10.75,7.39
+Garden,Chicken Salad Bowl,Meals,179,2216.0499999999997,769.73,12.45,8.08
+Garden,Chocolate Cookie,Bakery,537,1684.4199999999998,986.32,3.15,1.3
+Garden,Chocolate Croissant,Bakery,514,2170.33,1008.6899999999999,4.25,2.26
+Garden,Cinnamon Roll,Bakery,457,2343.34,880.9399999999999,5.15,3.2
+Garden,Classic Matcha,Matcha & Tea,650,4170.08,2057.58,6.45,3.25
+Garden,Coffee Frappe,Cold Coffee,322,2101.94,936.3000000000001,6.55,3.62
+Garden,Cold Brew,Cold Coffee,461,2361.9100000000003,1596.65,5.15,1.66
+Garden,Egg Sandwich,Breakfast,346,2806.92,1267.22,8.15,4.45
+Garden,English Breakfast Tea,Matcha & Tea,135,462.33000000000004,351.63,3.45,0.82
+Garden,Espresso,Hot Coffee,213,562.02,363.93,2.65,0.93
+Garden,Flat White,Hot Coffee,445,1924.31,1136.66,4.35,1.77
+Garden,Fresh Orange Juice,Cold Drinks,337,1924.62,903.5100000000001,5.75,3.03
+Garden,Frozen Yoghurt Cup,Desserts,485,2968.11,1100.86,6.15,3.85
+Garden,Granola Yoghurt,Breakfast,188,1469.48,576.48,7.85,4.75
+Garden,Halloumi Wrap,Sandwiches,288,2852.71,1147.75,9.95,5.92
+Garden,Iced Americano,Cold Coffee,508,1944.39,1319.55,3.85,1.23
+Garden,Iced Latte,Cold Coffee,814,4323.099999999999,2393.92,5.35,2.37
+Garden,Iced Matcha,Matcha & Tea,766,5218.16,2468.22,6.85,3.59
+Garden,Iced Mocha,Cold Coffee,362,2251.18,1096.4,6.25,3.19
+Garden,Lemonade,Cold Drinks,357,1651.3000000000002,1055.11,4.65,1.67
+Garden,Mint Tea,Matcha & Tea,196,709.86,533.46,3.65,0.9
+Garden,Peach Iced Tea,Cold Drinks,411,1822.2,1148.16,4.45,1.64
+Garden,Pistachio Cookie,Bakery,418,1434.28,727.86,3.45,1.69
+Garden,Quinoa Bowl,Meals,172,1994.52,783.6400000000001,11.65,7.04
+Garden,Soup of the Day,Meals,149,1061.8,467.29,7.15,3.99
+Garden,Spanish Latte,Hot Coffee,412,2435.4700000000003,1269.51,5.95,2.83
+Garden,Sparkling Water,Cold Drinks,336,918.33,269.84999999999997,2.75,1.93
+Garden,Still Water,Cold Drinks,368,713.42,371.18,1.95,0.93
+Garden,Strawberry Matcha,Matcha & Tea,480,3654.51,1470.51,7.65,4.55
+Garden,Tiramisu Cup,Desserts,452,2942.36,1098.2,6.55,4.08
+Garden,Tuna Sandwich,Sandwiches,211,1856.6899999999998,732.06,8.85,5.33
+Garden,Turkey & Cheese Sandwich,Sandwiches,317,3041.6,901.85,9.65,6.75
+Garden,Vanilla Latte,Hot Coffee,460,2493.82,1362.22,5.45,2.46
+Harbour,Almond Croissant,Bakery,618,3132.36,1951.98,5.09,1.91
+Harbour,Americano,Hot Coffee,566,1859.27,1451.75,3.31,0.72
+Harbour,Avocado Toast,Breakfast,425,4194.22,2417.7200000000003,9.92,4.18
+Harbour,Banana Bread,Bakery,624,2900.0,1920.3200000000002,4.67,1.57
+Harbour,Blueberry Muffin,Bakery,461,1902.89,1298.98,4.15,1.31
+Harbour,Brownie,Desserts,587,3114.11,1722.92,5.41,2.37
+Harbour,Butter Croissant,Bakery,1157,4403.13,3084.15,3.83,1.14
+Harbour,Cappuccino,Hot Coffee,840,3552.8,2612.0,4.25,1.12
+Harbour,Caramel Latte,Hot Coffee,515,3092.0,2128.95,6.04,1.87
+Harbour,Chai Latte,Matcha & Tea,518,2832.73,2066.09,5.51,1.48
+Harbour,Cheesecake Slice,Desserts,561,3896.42,2168.54,7.09,3.08
+Harbour,Chicken Pesto Sandwich,Sandwiches,489,5493.69,2965.56,11.29,5.17
+Harbour,Chicken Salad Bowl,Meals,262,3402.07,1921.77,13.07,5.65
+Harbour,Chocolate Cookie,Bakery,802,2641.75,1911.9299999999998,3.31,0.91
+Harbour,Chocolate Croissant,Bakery,758,3359.58,2161.94,4.46,1.58
+Harbour,Cinnamon Roll,Bakery,777,4183.59,2443.11,5.41,2.24
+Harbour,Classic Matcha,Matcha & Tea,964,6487.54,4299.26,6.77,2.27
+Harbour,Coffee Frappe,Cold Coffee,458,3103.58,1944.84,6.88,2.53
+Harbour,Cold Brew,Cold Coffee,773,4109.03,3212.35,5.41,1.16
+Harbour,Egg Sandwich,Breakfast,465,3958.0400000000004,2511.89,8.56,3.11
+Harbour,English Breakfast Tea,Matcha & Tea,258,930.0,782.9399999999999,3.62,0.57
+Harbour,Espresso,Hot Coffee,350,964.8799999999999,737.38,2.78,0.65
+Harbour,Flat White,Hot Coffee,656,2975.4300000000003,2161.9900000000002,4.57,1.24
+Harbour,Fresh Orange Juice,Cold Drinks,486,2918.02,1887.7,6.04,2.12
+Harbour,Frozen Yoghurt Cup,Desserts,456,2887.16,1660.52,6.46,2.69
+Harbour,Granola Yoghurt,Breakfast,281,2304.78,1371.86,8.24,3.32
+Harbour,Halloumi Wrap,Sandwiches,408,4242.61,2553.49,10.45,4.14
+Harbour,Iced Americano,Cold Coffee,767,3037.75,2378.13,4.04,0.86
+Harbour,Iced Latte,Cold Coffee,1344,7404.7300000000005,5173.69,5.62,1.66
+Harbour,Iced Matcha,Matcha & Tea,1121,8012.47,5198.759999999999,7.19,2.51
+Harbour,Iced Mocha,Cold Coffee,535,3446.6699999999996,2253.62,6.56,2.23
+Harbour,Lemonade,Cold Drinks,501,2431.65,1845.48,4.88,1.17
+Harbour,Mint Tea,Matcha & Tea,321,1221.45,1019.22,3.83,0.63
+Harbour,Peach Iced Tea,Cold Drinks,541,2517.08,1894.93,4.67,1.15
+Harbour,Pistachio Cookie,Bakery,651,2340.78,1572.6,3.62,1.18
+Harbour,Quinoa Bowl,Meals,218,2662.48,1589.9199999999998,12.23,4.92
+Harbour,Soup of the Day,Meals,226,1692.76,1062.22,7.51,2.79
+Harbour,Spanish Latte,Hot Coffee,613,3808.57,2594.83,6.25,1.98
+Harbour,Sparkling Water,Cold Drinks,521,1494.38,791.03,2.89,1.35
+Harbour,Still Water,Cold Drinks,577,1177.1899999999998,802.14,2.05,0.65
+Harbour,Strawberry Matcha,Matcha & Tea,725,5786.54,3481.04,8.03,3.18
+Harbour,Tiramisu Cup,Desserts,419,2834.2599999999998,1640.1100000000001,6.88,2.85
+Harbour,Tuna Sandwich,Sandwiches,329,3042.4599999999996,1815.29,9.29,3.73
+Harbour,Turkey & Cheese Sandwich,Sandwiches,477,4798.660000000001,2547.2200000000003,10.13,4.72
+Harbour,Vanilla Latte,Hot Coffee,692,3932.02,2741.78,5.72,1.72
+Uptown,Almond Croissant,Bakery,189,877.9200000000001,532.05,4.66,1.83
+Uptown,Americano,Hot Coffee,218,655.36,504.94,3.02,0.69
+Uptown,Avocado Toast,Breakfast,175,1571.8,870.05,9.07,4.01
+Uptown,Banana Bread,Bakery,218,925.2799999999999,596.0999999999999,4.27,1.51
+Uptown,Blueberry Muffin,Bakery,150,565.84,376.84,3.79,1.26
+Uptown,Brownie,Desserts,180,884.3000000000001,473.90000000000003,4.94,2.28
+Uptown,Butter Croissant,Bakery,394,1372.0,942.5400000000001,3.5,1.09
+Uptown,Cappuccino,Hot Coffee,324,1249.44,899.52,3.89,1.08
+Uptown,Caramel Latte,Hot Coffee,214,1179.08,793.88,5.52,1.8
+Uptown,Chai Latte,Matcha & Tea,223,1117.92,801.26,5.04,1.42
+Uptown,Cheesecake Slice,Desserts,190,1225.3500000000001,662.95,6.48,2.96
+Uptown,Chicken Pesto Sandwich,Sandwiches,303,3110.48,1607.6000000000001,10.32,4.96
+Uptown,Chicken Salad Bowl,Meals,111,1324.07,722.45,11.95,5.42
+Uptown,Chocolate Cookie,Bakery,328,985.16,699.8,3.02,0.87
+Uptown,Chocolate Croissant,Bakery,286,1161.55,726.83,4.08,1.52
+Uptown,Cinnamon Roll,Bakery,281,1376.3700000000001,772.22,4.94,2.15
+Uptown,Classic Matcha,Matcha & Tea,349,2147.29,1386.47,6.19,2.18
+Uptown,Coffee Frappe,Cold Coffee,178,1110.8,678.26,6.29,2.43
+Uptown,Cold Brew,Cold Coffee,264,1296.7700000000002,1003.73,4.94,1.11
+Uptown,Egg Sandwich,Breakfast,183,1422.48,875.3100000000001,7.82,2.99
+Uptown,English Breakfast Tea,Matcha & Tea,80,264.14,220.14,3.31,0.55
+Uptown,Espresso,Hot Coffee,124,313.45,236.57,2.54,0.62
+Uptown,Flat White,Hot Coffee,271,1129.84,807.35,4.18,1.19
+Uptown,Fresh Orange Juice,Cold Drinks,180,984.2499999999999,617.05,5.52,2.04
+Uptown,Frozen Yoghurt Cup,Desserts,179,1050.79,588.97,5.9,2.58
+Uptown,Granola Yoghurt,Breakfast,107,803.78,462.45,7.54,3.19
+Uptown,Halloumi Wrap,Sandwiches,275,2613.9,1522.15,9.55,3.97
+Uptown,Iced Americano,Cold Coffee,271,992.71,767.78,3.7,0.83
+Uptown,Iced Latte,Cold Coffee,471,2403.5699999999997,1654.6799999999998,5.14,1.59
+Uptown,Iced Matcha,Matcha & Tea,435,2843.82,1795.47,6.58,2.41
+Uptown,Iced Mocha,Cold Coffee,217,1291.2,826.8199999999999,6.0,2.14
+Uptown,Lemonade,Cold Drinks,184,814.35,608.27,4.46,1.12
+Uptown,Mint Tea,Matcha & Tea,114,397.25,328.84999999999997,3.5,0.6
+Uptown,Peach Iced Tea,Cold Drinks,235,998.2899999999998,739.79,4.27,1.1
+Uptown,Pistachio Cookie,Bakery,262,858.97,562.9100000000001,3.31,1.13
+Uptown,Quinoa Bowl,Meals,112,1245.44,716.8,11.18,4.72
+Uptown,Soup of the Day,Meals,75,512.44,311.44,6.86,2.68
+Uptown,Spanish Latte,Hot Coffee,210,1193.97,794.97,5.71,1.9
+Uptown,Sparkling Water,Cold Drinks,208,546.0,275.6,2.64,1.3
+Uptown,Still Water,Cold Drinks,248,461.1,307.34,1.87,0.62
+Uptown,Strawberry Matcha,Matcha & Tea,281,2053.7799999999997,1196.73,7.34,3.05
+Uptown,Tiramisu Cup,Desserts,163,1020.86,574.24,6.29,2.74
+Uptown,Tuna Sandwich,Sandwiches,181,1534.25,886.27,8.5,3.58
+Uptown,Turkey & Cheese Sandwich,Sandwiches,276,2536.25,1285.97,9.26,4.53
+Uptown,Vanilla Latte,Hot Coffee,244,1269.3500000000001,866.75,5.23,1.65

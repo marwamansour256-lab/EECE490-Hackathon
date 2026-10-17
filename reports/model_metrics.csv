@@ -1,0 +1,1085 @@
+period,level,scope,method,wape_pct,mae_units,bias_pct
+validation_Apr_May,branch_category_day,all,last_weekday,33.46572445453139,3.9392835458409228,-1.3204724815598081
+validation_Apr_May,branch_category_day,Branch:Garden,last_weekday,31.57151819322459,3.6666666666666665,-1.458594730238394
+validation_Apr_May,branch_category_day,Branch:Harbour,last_weekday,29.498619077968982,5.058287795992714,-1.7314637773528787
+validation_Apr_May,branch_category_day,Branch:Uptown,last_weekday,47.206005004170144,3.092896174863388,0.0
+validation_Apr_May,branch_category_day,Category:Bakery,last_weekday,27.138079311992357,6.2076502732240435,-2.2933588150979456
+validation_Apr_May,branch_category_day,Category:Breakfast,last_weekday,52.457142857142856,2.5081967213114753,-2.6285714285714286
+validation_Apr_May,branch_category_day,Category:Cold Coffee,last_weekday,30.339539978094194,4.540983606557377,-0.25556772544724354
+validation_Apr_May,branch_category_day,Category:Cold Drinks,last_weekday,36.597677940434124,3.9617486338797816,-2.2715800100959114
+validation_Apr_May,branch_category_day,Category:Desserts,last_weekday,36.80048661800487,3.3060109289617485,-0.18248175182481752
+validation_Apr_May,branch_category_day,Category:Hot Coffee,last_weekday,28.9226787447428,4.885245901639344,-1.552895503073439
+validation_Apr_May,branch_category_day,Category:Matcha & Tea,last_weekday,30.55746730901583,4.852459016393443,-0.8947006194081212
+validation_Apr_May,branch_category_day,Category:Meals,last_weekday,66.12612612612612,2.0054644808743167,0.18018018018018017
+validation_Apr_May,branch_category_day,Category:Sandwiches,last_weekday,41.347517730496456,3.185792349726776,-0.6382978723404256
+validation_Apr_May,branch_category_day,all,four_weekdays,26.844019188115748,3.1598360655737703,-4.3779336668901845
+validation_Apr_May,branch_category_day,Branch:Garden,four_weekdays,25.34896486825596,2.9439890710382515,-4.324811794228356
+validation_Apr_May,branch_category_day,Branch:Harbour,four_weekdays,23.255258126195027,3.987704918032787,-4.995219885277247
+validation_Apr_May,branch_category_day,Branch:Uptown,four_weekdays,38.88657214345288,2.547814207650273,-2.8565471226021684
+validation_Apr_May,branch_category_day,Category:Bakery,four_weekdays,19.887720974677496,4.549180327868853,-5.8886765408504536
+validation_Apr_May,branch_category_day,Category:Breakfast,four_weekdays,44.82857142857143,2.1434426229508197,-5.285714285714286
+validation_Apr_May,branch_category_day,Category:Cold Coffee,four_weekdays,25.711938663745894,3.848360655737705,-3.221978824388463
+validation_Apr_May,branch_category_day,Category:Cold Drinks,four_weekdays,28.24331145885916,3.057377049180328,-4.593639575971731
+validation_Apr_May,branch_category_day,Category:Desserts,four_weekdays,30.094282238442823,2.703551912568306,-1.9312652068126521
+validation_Apr_May,branch_category_day,Category:Hot Coffee,four_weekdays,24.538984147525074,4.144808743169399,-5.548366224522808
+validation_Apr_May,branch_category_day,Category:Matcha & Tea,four_weekdays,23.66655196145905,3.7581967213114753,-2.4346180316586374
+validation_Apr_May,branch_category_day,Category:Meals,four_weekdays,55.31531531531532,1.6775956284153006,-5.8558558558558556
+validation_Apr_May,branch_category_day,Category:Sandwiches,four_weekdays,33.173758865248224,2.5560109289617485,-4.9822695035460995
+validation_Apr_May,branch_category_day,all,internal,25.345382624486234,2.9834300725009997,-1.099537290032967
+validation_Apr_May,branch_category_day,Branch:Garden,internal,24.37622127869448,2.8310161543343533,-1.1949785623087499
+validation_Apr_May,branch_category_day,Branch:Harbour,internal,22.067037463385045,3.7839542929017633,-1.9789364061169463
+validation_Apr_May,branch_category_day,Branch:Uptown,internal,35.64332927096241,2.335319770266881,1.3711874335825367
+validation_Apr_May,branch_category_day,Category:Bakery,internal,18.821099091175334,4.305197857686336,-0.7889758353519699
+validation_Apr_May,branch_category_day,Category:Breakfast,internal,41.813968676830235,1.999301780995981,-9.406811285489853
+validation_Apr_May,branch_category_day,Category:Cold Coffee,internal,23.54941736563507,3.5246914843975112,2.1695781756307713
+validation_Apr_May,branch_category_day,Category:Cold Drinks,internal,27.27542403975415,2.952601913811638,-3.1244216045716486
+validation_Apr_May,branch_category_day,Category:Desserts,internal,27.78800310895914,2.4963648694605913,-0.9097727740901349
+validation_Apr_May,branch_category_day,Category:Hot Coffee,internal,23.068212540228604,3.896384970592711,-1.0258624535305205
+validation_Apr_May,branch_category_day,Category:Matcha & Tea,internal,22.942751863497055,3.6432588478318273,2.3812711200495498
+validation_Apr_May,branch_category_day,Category:Meals,internal,53.83895987945269,1.632820914376844,-13.089279834941946
+validation_Apr_May,branch_category_day,Category:Sandwiches,internal,31.152155066955068,2.4002480133555544,-3.2091690969380147
+validation_Apr_May,branch_category_day,all,calendar,26.327585256810977,3.0990461164164813,-0.22319284942333842
+validation_Apr_May,branch_category_day,Branch:Garden,calendar,25.014632768289324,2.9051602646741843,-0.3282340213630712
+validation_Apr_May,branch_category_day,Branch:Harbour,calendar,23.453102088514843,4.021630292555168,-1.2018538143407478
+validation_Apr_May,branch_category_day,Branch:Uptown,calendar,36.177952121741185,2.370347792020092,2.5243347669292406
+validation_Apr_May,branch_category_day,Category:Bakery,calendar,20.041628208107017,4.5843855562369376,-0.23653546827929417
+validation_Apr_May,branch_category_day,Category:Breakfast,calendar,41.97102873886264,2.0068114834155635,-10.751539544526187
+validation_Apr_May,branch_category_day,Category:Cold Coffee,calendar,24.80321998638693,3.712350794683815,5.719584294501075
+validation_Apr_May,branch_category_day,Category:Cold Drinks,calendar,28.067574485019616,3.038353281684364,-2.556002507391276
+validation_Apr_May,branch_category_day,Category:Desserts,calendar,28.096290513133233,2.5240601969175427,0.2255695883876243
+validation_Apr_May,branch_category_day,Category:Hot Coffee,calendar,25.128382778429312,4.244362358913935,-1.2689072919409496
+validation_Apr_May,branch_category_day,Category:Matcha & Tea,calendar,23.202311016370416,3.6844762739657066,2.6131159579345837
+validation_Apr_May,branch_category_day,Category:Meals,calendar,55.439048289546385,1.6813481858305053,-12.864464317070176
+validation_Apr_May,branch_category_day,Category:Sandwiches,calendar,31.347081251510165,2.4152669160999634,-1.0172956434700546
+validation_Apr_May,branch_category_day,all,calendar_lag_weather,26.653161504419995,3.137370018738254,0.47646463296244174
+validation_Apr_May,branch_category_day,Branch:Garden,calendar_lag_weather,25.253438083923854,2.9328947399471494,0.39971587896258287
+validation_Apr_May,branch_category_day,Branch:Harbour,calendar_lag_weather,23.765493023301122,4.075197656126717,-0.9082934566076859
+validation_Apr_May,branch_category_day,Branch:Uptown,calendar_lag_weather,36.69184585536146,2.404017660140896,4.236671113561909
+validation_Apr_May,branch_category_day,Category:Bakery,calendar_lag_weather,20.422138942838103,4.6714247876896335,-0.7771887009283318
+validation_Apr_May,branch_category_day,Category:Breakfast,calendar_lag_weather,41.79219336768525,1.9982606118428738,-8.468776393489277
+validation_Apr_May,branch_category_day,Category:Cold Coffee,calendar_lag_weather,25.26987084499459,3.7821954231934525,7.277837872718575
+validation_Apr_May,branch_category_day,Category:Cold Drinks,calendar_lag_weather,28.474453137786693,3.082398451691554,-2.2003954168797613
+validation_Apr_May,branch_category_day,Category:Desserts,calendar_lag_weather,28.722864707287233,2.580349157310394,2.0547182333436314
+validation_Apr_May,branch_category_day,Category:Hot Coffee,calendar_lag_weather,25.366323566588118,4.284552248323709,-1.0534569674875134
+validation_Apr_May,branch_category_day,Category:Matcha & Tea,calendar_lag_weather,23.04355396271656,3.6592660008554274,2.2138048134077684
+validation_Apr_May,branch_category_day,Category:Meals,calendar_lag_weather,56.93916461154049,1.7268435169073755,-5.629081883397373
+validation_Apr_May,branch_category_day,Category:Sandwiches,calendar_lag_weather,31.811369834174887,2.4510399708298682,0.6346091074497509
+validation_Apr_May,branch_category_day,all,oracle_actual_weather_conflict,26.459531706830948,3.114577663632857,-4.462182080731197
+validation_Apr_May,branch_category_day,Branch:Garden,oracle_actual_weather_conflict,24.93198374051171,2.895561536056515,-4.563599739451033
+validation_Apr_May,branch_category_day,Branch:Harbour,oracle_actual_weather_conflict,23.919369154566045,4.101583628799357,-5.847614403743371
+validation_Apr_May,branch_category_day,Branch:Uptown,oracle_actual_weather_conflict,35.8153104391838,2.3465878260426978,-0.6564831980972561
+validation_Apr_May,branch_category_day,Category:Bakery,oracle_actual_weather_conflict,19.76985701677481,4.522219752580293,-4.518764653809039
+validation_Apr_May,branch_category_day,Category:Breakfast,oracle_actual_weather_conflict,41.891894205103185,2.003027728386081,-8.04667699224388
+validation_Apr_May,branch_category_day,Category:Cold Coffee,oracle_actual_weather_conflict,24.174616056039508,3.618266304780995,-3.1245266959798226
+validation_Apr_May,branch_category_day,Category:Cold Drinks,oracle_actual_weather_conflict,28.024869025659992,3.033730357367893,-4.7203078827173535
+validation_Apr_May,branch_category_day,Category:Desserts,oracle_actual_weather_conflict,28.948319287087447,2.600603109725233,-4.785527802488281
+validation_Apr_May,branch_category_day,Category:Hot Coffee,oracle_actual_weather_conflict,25.573182678675817,4.319492221846281,-6.815618862128567
+validation_Apr_May,branch_category_day,Category:Matcha & Tea,oracle_actual_weather_conflict,23.51632668611831,3.734341275948623,-0.7613403381105975
+validation_Apr_May,branch_category_day,Category:Meals,oracle_actual_weather_conflict,56.83473033236455,1.7236762477848266,-14.019071136422637
+validation_Apr_May,branch_category_day,Category:Sandwiches,oracle_actual_weather_conflict,32.13326817676697,2.475841974275488,-2.635034851582818
+test_June,branch_category_day,all,last_weekday,31.36863136863137,4.264197530864197,-1.2169648533284896
+test_June,branch_category_day,Branch:Garden,last_weekday,32.210998877665546,4.2518518518518515,-0.05611672278338945
+test_June,branch_category_day,Branch:Harbour,last_weekday,27.578599007170435,5.555555555555555,-1.69148740577312
+test_June,branch_category_day,Branch:Uptown,last_weekday,40.1394422310757,2.9851851851851854,-1.9920318725099602
+test_June,branch_category_day,Category:Bakery,last_weekday,19.899874843554443,5.3,-0.8760951188986232
+test_June,branch_category_day,Category:Breakfast,last_weekday,44.83471074380165,2.411111111111111,1.859504132231405
+test_June,branch_category_day,Category:Cold Coffee,last_weekday,29.045893719806763,5.344444444444444,-1.5096618357487923
+test_June,branch_category_day,Category:Cold Drinks,last_weekday,35.1024208566108,4.188888888888889,-3.258845437616387
+test_June,branch_category_day,Category:Desserts,last_weekday,35.324407826982494,3.811111111111111,-1.544799176107106
+test_June,branch_category_day,Category:Hot Coffee,last_weekday,32.24513172966781,6.2555555555555555,0.6300114547537228
+test_June,branch_category_day,Category:Matcha & Tea,last_weekday,30.102695763799744,5.211111111111111,-0.834403080872914
+test_June,branch_category_day,Category:Meals,last_weekday,59.6875,2.1222222222222222,-5.3125
+test_June,branch_category_day,Category:Sandwiches,last_weekday,41.73913043478261,3.7333333333333334,-3.4782608695652173
+test_June,branch_category_day,all,four_weekdays,24.793388429752067,3.3703703703703702,-4.454636272818091
+test_June,branch_category_day,Branch:Garden,four_weekdays,26.031144781144782,3.436111111111111,-3.388047138047138
+test_June,branch_category_day,Branch:Harbour,four_weekdays,21.047067475638904,4.239814814814815,-5.235337378194521
+test_June,branch_category_day,Branch:Uptown,four_weekdays,32.74402390438247,2.435185185185185,-4.233067729083666
+test_June,branch_category_day,Category:Bakery,four_weekdays,17.146433041301627,4.566666666666666,-4.276178556528994
+test_June,branch_category_day,Category:Breakfast,four_weekdays,34.400826446280995,1.85,1.962809917355372
+test_June,branch_category_day,Category:Cold Coffee,four_weekdays,22.327898550724637,4.108333333333333,-7.231280193236715
+test_June,branch_category_day,Category:Cold Drinks,four_weekdays,28.584729981378025,3.411111111111111,-5.400372439478585
+test_June,branch_category_day,Category:Desserts,four_weekdays,26.441812564366632,2.852777777777778,-8.522142121524201
+test_June,branch_category_day,Category:Hot Coffee,four_weekdays,24.842497136311568,4.819444444444445,-1.9616265750286368
+test_June,branch_category_day,Category:Matcha & Tea,four_weekdays,24.117458279845955,4.175,-3.3536585365853657
+test_June,branch_category_day,Category:Meals,four_weekdays,44.609375,1.586111111111111,-4.921875
+test_June,branch_category_day,Category:Sandwiches,four_weekdays,33.13664596273292,2.963888888888889,-4.316770186335404
+test_June,branch_category_day,all,internal,23.20775029850082,3.1548214634171914,-0.47063559476591943
+test_June,branch_category_day,Branch:Garden,internal,24.05039112452586,3.1746516284374136,-0.10719858799878575
+test_June,branch_category_day,Branch:Harbour,internal,19.77175375184715,3.982909950233209,-0.8118917065716503
+test_June,branch_category_day,Branch:Uptown,internal,31.019111510301634,2.3069028115809513,-0.19135148122343562
+test_June,branch_category_day,Category:Bakery,internal,15.452985261296345,4.115645074591927,1.8461823338002166
+test_June,branch_category_day,Category:Breakfast,internal,32.132722184990136,1.7280263930594697,-0.8088443287674607
+test_June,branch_category_day,Category:Cold Coffee,internal,20.970612564054537,3.858592711786035,-0.7713074419144138
+test_June,branch_category_day,Category:Cold Drinks,internal,26.12611830606218,3.1177167845234206,-3.2410265811948737
+test_June,branch_category_day,Category:Desserts,internal,24.603140629993533,2.65440550574708,-4.874320211785805
+test_June,branch_category_day,Category:Hot Coffee,internal,24.070050465545442,4.669589790315816,3.6314443863795915
+test_June,branch_category_day,Category:Matcha & Tea,internal,22.52439084847469,3.899222326880397,-0.20382480082552373
+test_June,branch_category_day,Category:Meals,internal,44.28200379949235,1.5744712462041726,-11.615670208144564
+test_June,branch_category_day,Category:Sandwiches,internal,31.032931725239305,2.7757233376464043,-2.5227363076173495
+test_June,branch_category_day,all,calendar,23.52504325478031,3.197953719486247,-0.8198364151829522
+test_June,branch_category_day,Branch:Garden,calendar,24.544821325937423,3.2399164150237394,-0.42934485209371903
+test_June,branch_category_day,Branch:Harbour,calendar,19.900594090243764,4.008864120623549,-1.299447844280285
+test_June,branch_category_day,Branch:Uptown,calendar,31.532458573659934,2.34508062281145,-0.21381319207022023
+test_June,branch_category_day,Category:Bakery,calendar,15.872478722858192,4.227370166521232,1.1367564985200458
+test_June,branch_category_day,Category:Breakfast,calendar,32.231188523762,1.7333216939445344,0.4737372582526098
+test_June,branch_category_day,Category:Cold Coffee,calendar,20.449029434024403,3.7626214158604903,-0.2305858706498299
+test_June,branch_category_day,Category:Cold Drinks,calendar,26.815479448144558,3.199980547478584,-5.227600572399945
+test_June,branch_category_day,Category:Desserts,calendar,25.38379629921746,2.7386295785044616,-5.887877274911982
+test_June,branch_category_day,Category:Hot Coffee,calendar,25.163044195015292,4.881630573832966,3.640846993053462
+test_June,branch_category_day,Category:Matcha & Tea,calendar,22.289598529702985,3.8585771676974723,-0.9745698215605528
+test_June,branch_category_day,Category:Meals,calendar,44.753381872173996,1.5912313554550754,-10.667809465500268
+test_June,branch_category_day,Category:Sandwiches,calendar,31.172656875444243,2.788220976081402,-2.1027713241652464
+test_June,branch_category_day,all,calendar_lag_weather,23.481822703685562,3.192078392472614,-0.5320905569593275
+test_June,branch_category_day,Branch:Garden,calendar_lag_weather,24.507924058542976,3.2350459757276724,0.009320486699509157
+test_June,branch_category_day,Branch:Harbour,calendar_lag_weather,19.80124184410508,3.988850162595834,-1.4954786979179462
+test_June,branch_category_day,Branch:Uptown,calendar_lag_weather,31.630056800571243,2.3523390390943355,1.116454831025649
+test_June,branch_category_day,Category:Bakery,calendar_lag_weather,15.950545513611207,4.248161955125118,0.5437546586670473
+test_June,branch_category_day,Category:Breakfast,calendar_lag_weather,32.62749270187071,1.754634051967269,4.113554755455427
+test_June,branch_category_day,Category:Cold Coffee,calendar_lag_weather,20.498692397045836,3.7717594010564337,0.5575784899287237
+test_June,branch_category_day,Category:Cold Drinks,calendar_lag_weather,26.930492091339016,3.213705389566456,-5.749241792830196
+test_June,branch_category_day,Category:Desserts,calendar_lag_weather,24.99730255434956,2.696931197808158,-4.8088708582044735
+test_June,branch_category_day,Category:Hot Coffee,calendar_lag_weather,25.046810561085422,4.859081248850572,3.6304723921966198
+test_June,branch_category_day,Category:Matcha & Tea,calendar_lag_weather,22.19343015934541,3.841929354251128,-1.466778906047698
+test_June,branch_category_day,Category:Meals,calendar_lag_weather,43.95796641854686,1.5629499171038885,-5.042474184044213
+test_June,branch_category_day,Category:Sandwiches,calendar_lag_weather,31.075748010832932,2.779553016524501,-2.077530129079657
+test_June,branch_category_day,all,oracle_actual_weather_conflict,23.47639526518051,3.1913405958629952,-1.2420766302084993
+test_June,branch_category_day,Branch:Garden,oracle_actual_weather_conflict,24.588548768665873,3.2456884374638952,-0.7425317797941434
+test_June,branch_category_day,Branch:Harbour,oracle_actual_weather_conflict,19.676059379365828,3.9636328505322496,-2.2073324023173417
+test_June,branch_category_day,Branch:Uptown,oracle_actual_weather_conflict,31.79627165787185,2.3647004995928396,0.48583586860785055
+test_June,branch_category_day,Category:Bakery,oracle_actual_weather_conflict,15.712654376124478,4.184803615507819,2.776218515684076
+test_June,branch_category_day,Category:Breakfast,oracle_actual_weather_conflict,32.675624083150815,1.7572224506938883,1.4348940113447393
+test_June,branch_category_day,Category:Cold Coffee,oracle_actual_weather_conflict,20.21198387357826,3.7190050327383997,-2.15962986707346
+test_June,branch_category_day,Category:Cold Drinks,oracle_actual_weather_conflict,26.779045144775065,3.1956327206098245,-4.563052227041207
+test_June,branch_category_day,Category:Desserts,oracle_actual_weather_conflict,25.916779044544377,2.7961324946947324,-7.112877304542231
+test_June,branch_category_day,Category:Hot Coffee,oracle_actual_weather_conflict,25.00544843363155,4.851056996124521,3.0560494617140415
+test_June,branch_category_day,Category:Matcha & Tea,oracle_actual_weather_conflict,22.208388630389145,3.844518831794032,-3.0058382058815383
+test_June,branch_category_day,Category:Meals,oracle_actual_weather_conflict,44.32644239587046,1.5760512851865052,-7.677221830265924
+test_June,branch_category_day,Category:Sandwiches,oracle_actual_weather_conflict,31.27798437112433,2.7976419354172317,-4.767672911911978
+validation_Apr_May,branch_sku_day,all,direct_sku_last_weekday,72.1411254964667,1.698360655737705,-1.3204724815598081
+validation_Apr_May,branch_sku_day,Branch:Garden,direct_sku_last_weekday,73.8237139272271,1.7147540983606557,-1.458594730238394
+validation_Apr_May,branch_sku_day,Branch:Harbour,direct_sku_last_weekday,61.66347992351817,2.1147540983606556,-1.7314637773528787
+validation_Apr_May,branch_sku_day,Branch:Uptown,direct_sku_last_weekday,96.58048373644704,1.2655737704918033,0.0
+validation_Apr_May,branch_sku_day,Category:Bakery,direct_sku_last_weekday,66.98518872431916,1.9153005464480874,-2.2933588150979456
+validation_Apr_May,branch_sku_day,Category:Breakfast,direct_sku_last_weekday,83.54285714285714,1.331511839708561,-2.6285714285714286
+validation_Apr_May,branch_sku_day,Category:Cold Coffee,direct_sku_last_weekday,63.70938298649142,1.907103825136612,-0.25556772544724354
+validation_Apr_May,branch_sku_day,Category:Cold Drinks,direct_sku_last_weekday,75.36597677940433,1.6316939890710382,-2.2715800100959114
+validation_Apr_May,branch_sku_day,Category:Desserts,direct_sku_last_weekday,73.17518248175182,1.6434426229508197,-0.18248175182481752
+validation_Apr_May,branch_sku_day,Category:Hot Coffee,direct_sku_last_weekday,73.37431252021999,1.7704918032786885,-1.552895503073439
+validation_Apr_May,branch_sku_day,Category:Matcha & Tea,direct_sku_last_weekday,67.8596008258775,1.795992714025501,-0.8947006194081212
+validation_Apr_May,branch_sku_day,Category:Meals,direct_sku_last_weekday,108.28828828828829,1.0947176684881603,0.18018018018018017
+validation_Apr_May,branch_sku_day,Category:Sandwiches,direct_sku_last_weekday,82.90780141843972,1.5969945355191257,-0.6382978723404256
+validation_Apr_May,branch_sku_day,Product:Almond Croissant,direct_sku_last_weekday,69.90291262135922,1.5737704918032787,-4.854368932038835
+validation_Apr_May,branch_sku_day,Product:Americano,direct_sku_last_weekday,66.89814814814815,1.5792349726775956,-2.0833333333333335
+validation_Apr_May,branch_sku_day,Product:Avocado Toast,direct_sku_last_weekday,79.8076923076923,1.360655737704918,-6.730769230769231
+validation_Apr_May,branch_sku_day,Product:Banana Bread,direct_sku_last_weekday,76.52370203160271,1.8524590163934427,-1.580135440180587
+validation_Apr_May,branch_sku_day,Product:Blueberry Muffin,direct_sku_last_weekday,70.09063444108762,1.2677595628415301,-2.416918429003021
+validation_Apr_May,branch_sku_day,Product:Brownie,direct_sku_last_weekday,68.0327868852459,1.814207650273224,-0.4098360655737705
+validation_Apr_May,branch_sku_day,Product:Butter Croissant,direct_sku_last_weekday,57.125154894671624,2.519125683060109,-0.6195786864931846
+validation_Apr_May,branch_sku_day,Product:Cappuccino,direct_sku_last_weekday,72.43816254416961,2.240437158469945,-0.35335689045936397
+validation_Apr_May,branch_sku_day,Product:Caramel Latte,direct_sku_last_weekday,74.86910994764398,1.5628415300546448,-2.094240837696335
+validation_Apr_May,branch_sku_day,Product:Chai Latte,direct_sku_last_weekday,78.57142857142857,1.7431693989071038,1.7241379310344827
+validation_Apr_May,branch_sku_day,Product:Cheesecake Slice,direct_sku_last_weekday,70.70938215102974,1.6885245901639345,-2.059496567505721
+validation_Apr_May,branch_sku_day,Product:Chicken Pesto Sandwich,direct_sku_last_weekday,66.903073286052,1.546448087431694,-2.600472813238771
+validation_Apr_May,branch_sku_day,Product:Chicken Salad Bowl,direct_sku_last_weekday,99.00990099009901,1.092896174863388,2.9702970297029703
+validation_Apr_May,branch_sku_day,Product:Chocolate Cookie,direct_sku_last_weekday,60.29654036243822,2.0,-4.283360790774299
+validation_Apr_May,branch_sku_day,Product:Chocolate Croissant,direct_sku_last_weekday,63.6986301369863,2.0327868852459017,-2.3972602739726026
+validation_Apr_May,branch_sku_day,Product:Cinnamon Roll,direct_sku_last_weekday,73.35834896810506,2.1366120218579234,-2.8142589118198873
+validation_Apr_May,branch_sku_day,Product:Classic Matcha,direct_sku_last_weekday,55.61643835616438,2.2185792349726774,-1.36986301369863
+validation_Apr_May,branch_sku_day,Product:Coffee Frappe,direct_sku_last_weekday,91.6923076923077,1.6284153005464481,0.6153846153846154
+validation_Apr_May,branch_sku_day,Product:Cold Brew,direct_sku_last_weekday,61.56716417910448,1.8032786885245902,-0.373134328358209
+validation_Apr_May,branch_sku_day,Product:Egg Sandwich,direct_sku_last_weekday,79.82708933717579,1.5136612021857923,-1.440922190201729
+validation_Apr_May,branch_sku_day,Product:English Breakfast Tea,direct_sku_last_weekday,104.6242774566474,0.9890710382513661,-2.8901734104046244
+validation_Apr_May,branch_sku_day,Product:Espresso,direct_sku_last_weekday,94.37751004016064,1.284153005464481,6.024096385542169
+validation_Apr_May,branch_sku_day,Product:Flat White,direct_sku_last_weekday,64.24361493123772,1.7868852459016393,-6.090373280943026
+validation_Apr_May,branch_sku_day,Product:Fresh Orange Juice,direct_sku_last_weekday,72.34042553191489,1.4863387978142077,-3.1914893617021276
+validation_Apr_May,branch_sku_day,Product:Frozen Yoghurt Cup,direct_sku_last_weekday,75.81521739130434,1.5245901639344261,3.532608695652174
+validation_Apr_May,branch_sku_day,Product:Granola Yoghurt,direct_sku_last_weekday,94.9074074074074,1.1202185792349726,1.3888888888888888
+validation_Apr_May,branch_sku_day,Product:Halloumi Wrap,direct_sku_last_weekday,90.6158357771261,1.6885245901639345,-2.6392961876832843
+validation_Apr_May,branch_sku_day,Product:Iced Americano,direct_sku_last_weekday,69.27374301675978,2.0327868852459017,0.37243947858473
+validation_Apr_May,branch_sku_day,Product:Iced Latte,direct_sku_last_weekday,46.9493278179938,2.480874316939891,-2.0682523267838677
+validation_Apr_May,branch_sku_day,Product:Iced Matcha,direct_sku_last_weekday,54.76772616136919,2.448087431693989,-0.24449877750611246
+validation_Apr_May,branch_sku_day,Product:Iced Mocha,direct_sku_last_weekday,77.80748663101605,1.5901639344262295,2.9411764705882355
+validation_Apr_May,branch_sku_day,Product:Lemonade,direct_sku_last_weekday,81.23249299719888,1.5846994535519126,-1.680672268907563
+validation_Apr_May,branch_sku_day,Product:Mint Tea,direct_sku_last_weekday,104.29184549356223,1.3278688524590163,-2.1459227467811157
+validation_Apr_May,branch_sku_day,Product:Peach Iced Tea,direct_sku_last_weekday,78.71853546910755,1.8797814207650274,-2.745995423340961
+validation_Apr_May,branch_sku_day,Product:Pistachio Cookie,direct_sku_last_weekday,75.69296375266525,1.9398907103825136,-0.21321961620469082
+validation_Apr_May,branch_sku_day,Product:Quinoa Bowl,direct_sku_last_weekday,110.16042780748663,1.1256830601092895,0.0
+validation_Apr_May,branch_sku_day,Product:Soup of the Day,direct_sku_last_weekday,117.46987951807229,1.0655737704918034,-3.0120481927710845
+validation_Apr_May,branch_sku_day,Product:Spanish Latte,direct_sku_last_weekday,74.77876106194691,1.8469945355191257,-3.5398230088495577
+validation_Apr_May,branch_sku_day,Product:Sparkling Water,direct_sku_last_weekday,74.4,1.5245901639344261,-3.466666666666667
+validation_Apr_May,branch_sku_day,Product:Still Water,direct_sku_last_weekday,70.64220183486239,1.6830601092896176,-0.45871559633027525
+validation_Apr_May,branch_sku_day,Product:Strawberry Matcha,direct_sku_last_weekday,68.68131868131869,2.0491803278688523,-2.0146520146520146
+validation_Apr_May,branch_sku_day,Product:Tiramisu Cup,direct_sku_last_weekday,80.62678062678063,1.546448087431694,-1.4245014245014245
+validation_Apr_May,branch_sku_day,Product:Tuna Sandwich,direct_sku_last_weekday,93.67588932806323,1.2950819672131149,-1.976284584980237
+validation_Apr_May,branch_sku_day,Product:Turkey & Cheese Sandwich,direct_sku_last_weekday,86.51399491094148,1.8579234972677596,4.071246819338422
+validation_Apr_May,branch_sku_day,Product:Vanilla Latte,direct_sku_last_weekday,76.44710578842316,2.092896174863388,0.5988023952095808
+validation_Apr_May,branch_sku_day,all,direct_sku_four_weekdays,58.17687109919018,1.369611414693382,-4.3779336668901845
+validation_Apr_May,branch_sku_day,Branch:Garden,direct_sku_four_weekdays,58.84959222082811,1.3669398907103825,-4.324811794228356
+validation_Apr_May,branch_sku_day,Branch:Harbour,direct_sku_four_weekdays,49.4555980454642,1.6960837887067395,-4.995219885277247
+validation_Apr_May,branch_sku_day,Branch:Uptown,direct_sku_four_weekdays,79.80956352515986,1.0458105646630236,-2.8565471226021684
+validation_Apr_May,branch_sku_day,Category:Bakery,direct_sku_four_weekdays,51.83946488294314,1.4822404371584699,-5.8886765408504536
+validation_Apr_May,branch_sku_day,Category:Breakfast,direct_sku_four_weekdays,71.68571428571428,1.1425318761384335,-5.285714285714286
+validation_Apr_May,branch_sku_day,Category:Cold Coffee,direct_sku_four_weekdays,52.51004016064257,1.5718579234972678,-3.221978824388463
+validation_Apr_May,branch_sku_day,Category:Cold Drinks,direct_sku_four_weekdays,60.44926804644119,1.3087431693989071,-4.593639575971731
+validation_Apr_May,branch_sku_day,Category:Desserts,direct_sku_four_weekdays,61.17700729927007,1.3739754098360655,-1.9312652068126521
+validation_Apr_May,branch_sku_day,Category:Hot Coffee,direct_sku_four_weekdays,58.31446133937237,1.407103825136612,-5.548366224522808
+validation_Apr_May,branch_sku_day,Category:Matcha & Tea,direct_sku_four_weekdays,54.86063317274604,1.4519581056466302,-2.4346180316586374
+validation_Apr_May,branch_sku_day,Category:Meals,direct_sku_four_weekdays,91.53153153153153,0.9253187613843351,-5.8558558558558556
+validation_Apr_May,branch_sku_day,Category:Sandwiches,direct_sku_four_weekdays,66.32978723404256,1.2776639344262295,-4.9822695035460995
+validation_Apr_May,branch_sku_day,Product:Almond Croissant,direct_sku_four_weekdays,58.19174757281554,1.3101092896174864,-6.978155339805825
+validation_Apr_May,branch_sku_day,Product:Americano,direct_sku_four_weekdays,60.06944444444444,1.4180327868852458,-4.62962962962963
+validation_Apr_May,branch_sku_day,Product:Avocado Toast,direct_sku_four_weekdays,69.95192307692308,1.1926229508196722,-5.528846153846154
+validation_Apr_May,branch_sku_day,Product:Banana Bread,direct_sku_four_weekdays,58.12641083521445,1.407103825136612,-2.708803611738149
+validation_Apr_May,branch_sku_day,Product:Blueberry Muffin,direct_sku_four_weekdays,59.894259818731115,1.0833333333333333,-8.987915407854985
+validation_Apr_May,branch_sku_day,Product:Brownie,direct_sku_four_weekdays,57.58196721311475,1.53551912568306,-1.639344262295082
+validation_Apr_May,branch_sku_day,Product:Butter Croissant,direct_sku_four_weekdays,42.317224287484514,1.866120218579235,-5.5762081784386615
+validation_Apr_May,branch_sku_day,Product:Cappuccino,direct_sku_four_weekdays,54.99116607773852,1.7008196721311475,-0.9275618374558304
+validation_Apr_May,branch_sku_day,Product:Caramel Latte,direct_sku_four_weekdays,55.56282722513089,1.1598360655737705,-3.468586387434555
+validation_Apr_May,branch_sku_day,Product:Chai Latte,direct_sku_four_weekdays,63.54679802955665,1.4098360655737705,2.832512315270936
+validation_Apr_May,branch_sku_day,Product:Cheesecake Slice,direct_sku_four_weekdays,53.83295194508009,1.28551912568306,-5.778032036613272
+validation_Apr_May,branch_sku_day,Product:Chicken Pesto Sandwich,direct_sku_four_weekdays,51.30023640661938,1.185792349726776,-7.5650118203309695
+validation_Apr_May,branch_sku_day,Product:Chicken Salad Bowl,direct_sku_four_weekdays,90.34653465346534,0.9972677595628415,-3.9603960396039604
+validation_Apr_May,branch_sku_day,Product:Chocolate Cookie,direct_sku_four_weekdays,46.08731466227348,1.528688524590164,-6.0543657331136735
+validation_Apr_May,branch_sku_day,Product:Chocolate Croissant,direct_sku_four_weekdays,48.715753424657535,1.5546448087431695,-7.791095890410959
+validation_Apr_May,branch_sku_day,Product:Cinnamon Roll,direct_sku_four_weekdays,54.59662288930581,1.5901639344262295,-7.786116322701688
+validation_Apr_May,branch_sku_day,Product:Classic Matcha,direct_sku_four_weekdays,44.417808219178085,1.7718579234972678,-5.582191780821918
+validation_Apr_May,branch_sku_day,Product:Coffee Frappe,direct_sku_four_weekdays,75.23076923076923,1.3360655737704918,-2.6153846153846154
+validation_Apr_May,branch_sku_day,Product:Cold Brew,direct_sku_four_weekdays,49.76679104477612,1.4576502732240437,-0.5130597014925373
+validation_Apr_May,branch_sku_day,Product:Egg Sandwich,direct_sku_four_weekdays,67.0749279538905,1.2718579234972678,-5.69164265129683
+validation_Apr_May,branch_sku_day,Product:English Breakfast Tea,direct_sku_four_weekdays,98.26589595375722,0.9289617486338798,0.28901734104046245
+validation_Apr_May,branch_sku_day,Product:Espresso,direct_sku_four_weekdays,78.6144578313253,1.069672131147541,3.3132530120481927
+validation_Apr_May,branch_sku_day,Product:Flat White,direct_sku_four_weekdays,54.66601178781925,1.5204918032786885,-14.390962671905697
+validation_Apr_May,branch_sku_day,Product:Fresh Orange Juice,direct_sku_four_weekdays,59.70744680851064,1.226775956284153,-7.047872340425532
+validation_Apr_May,branch_sku_day,Product:Frozen Yoghurt Cup,direct_sku_four_weekdays,63.45108695652174,1.2759562841530054,-0.1358695652173913
+validation_Apr_May,branch_sku_day,Product:Granola Yoghurt,direct_sku_four_weekdays,81.59722222222223,0.9631147540983607,-4.282407407407407
+validation_Apr_May,branch_sku_day,Product:Halloumi Wrap,direct_sku_four_weekdays,74.56011730205279,1.389344262295082,-5.058651026392962
+validation_Apr_May,branch_sku_day,Product:Iced Americano,direct_sku_four_weekdays,54.74860335195531,1.6065573770491803,-3.165735567970205
+validation_Apr_May,branch_sku_day,Product:Iced Latte,direct_sku_four_weekdays,39.83971044467425,2.1051912568306013,-5.351602895553257
+validation_Apr_May,branch_sku_day,Product:Iced Matcha,direct_sku_four_weekdays,42.940097799511,1.919398907103825,-1.558679706601467
+validation_Apr_May,branch_sku_day,Product:Iced Mocha,direct_sku_four_weekdays,66.2433155080214,1.3538251366120218,-2.2058823529411766
+validation_Apr_May,branch_sku_day,Product:Lemonade,direct_sku_four_weekdays,70.30812324929973,1.3715846994535519,-1.9607843137254901
+validation_Apr_May,branch_sku_day,Product:Mint Tea,direct_sku_four_weekdays,84.2274678111588,1.0724043715846994,-6.330472103004292
+validation_Apr_May,branch_sku_day,Product:Peach Iced Tea,direct_sku_four_weekdays,59.153318077803206,1.4125683060109289,-6.521739130434782
+validation_Apr_May,branch_sku_day,Product:Pistachio Cookie,direct_sku_four_weekdays,59.22174840085288,1.5177595628415301,-1.5458422174840085
+validation_Apr_May,branch_sku_day,Product:Quinoa Bowl,direct_sku_four_weekdays,90.64171122994652,0.9262295081967213,-4.278074866310161
+validation_Apr_May,branch_sku_day,Product:Soup of the Day,direct_sku_four_weekdays,93.97590361445783,0.8524590163934426,-9.939759036144578
+validation_Apr_May,branch_sku_day,Product:Spanish Latte,direct_sku_four_weekdays,56.415929203539825,1.3934426229508197,-10.176991150442477
+validation_Apr_May,branch_sku_day,Product:Sparkling Water,direct_sku_four_weekdays,58.6,1.2008196721311475,-4.733333333333333
+validation_Apr_May,branch_sku_day,Product:Still Water,direct_sku_four_weekdays,55.90596330275229,1.3319672131147542,-2.580275229357798
+validation_Apr_May,branch_sku_day,Product:Strawberry Matcha,direct_sku_four_weekdays,53.937728937728934,1.6092896174863387,-2.6556776556776556
+validation_Apr_May,branch_sku_day,Product:Tiramisu Cup,direct_sku_four_weekdays,72.93447293447294,1.3989071038251366,0.5698005698005698
+validation_Apr_May,branch_sku_day,Product:Tuna Sandwich,direct_sku_four_weekdays,71.93675889328063,0.994535519125683,-8.102766798418973
+validation_Apr_May,branch_sku_day,Product:Turkey & Cheese Sandwich,direct_sku_four_weekdays,71.7557251908397,1.540983606557377,-0.1272264631043257
+validation_Apr_May,branch_sku_day,Product:Vanilla Latte,direct_sku_four_weekdays,57.98403193612774,1.5874316939890711,-4.391217564870259
+validation_Apr_May,branch_sku_day,all,last_weekday,58.17247930368987,1.3695080221744207,-1.3204724815598086
+validation_Apr_May,branch_sku_day,Branch:Garden,last_weekday,58.841128634210314,1.36674330117204,-1.458594730238394
+validation_Apr_May,branch_sku_day,Branch:Harbour,last_weekday,49.36159861576951,1.6928600705604886,-1.7314637773528787
+validation_Apr_May,branch_sku_day,Branch:Uptown,last_weekday,80.04690873507262,1.048920694790733,0.0
+validation_Apr_May,branch_sku_day,Category:Bakery,last_weekday,52.02105235399046,1.487432548864782,-2.293358815097945
+validation_Apr_May,branch_sku_day,Category:Breakfast,last_weekday,71.25641032059552,1.135689599827342,-2.6285714285714277
+validation_Apr_May,branch_sku_day,Category:Cold Coffee,last_weekday,51.772178285165765,1.549770451618241,-0.25556772544724377
+validation_Apr_May,branch_sku_day,Category:Cold Drinks,last_weekday,62.124972595367844,1.345022630725942,-2.2715800100959123
+validation_Apr_May,branch_sku_day,Category:Desserts,last_weekday,60.57611742837781,1.3604800143750426,-0.18248175182481868
+validation_Apr_May,branch_sku_day,Category:Hot Coffee,last_weekday,57.18785879834614,1.3799193719413576,-1.5528955030734384
+validation_Apr_May,branch_sku_day,Category:Matcha & Tea,last_weekday,54.359987366223194,1.4387078623519545,-0.8947006194081216
+validation_Apr_May,branch_sku_day,Category:Meals,last_weekday,93.34106483008587,0.9436118575719064,0.18018018018018017
+validation_Apr_May,branch_sku_day,Category:Sandwiches,last_weekday,68.56566111839302,1.3207319969526528,-0.6382978723404258
+validation_Apr_May,branch_sku_day,Product:Almond Croissant,last_weekday,58.67317977177903,1.320948091036774,-2.9347043797396197
+validation_Apr_May,branch_sku_day,Product:Americano,last_weekday,53.96607847790289,1.2739533280029536,-1.61313865890626
+validation_Apr_May,branch_sku_day,Product:Avocado Toast,last_weekday,66.78463608473844,1.138623303739803,-3.733309097708001
+validation_Apr_May,branch_sku_day,Product:Banana Bread,last_weekday,59.07198513877365,1.4299939571845204,1.0232351873783785
+validation_Apr_May,branch_sku_day,Product:Blueberry Muffin,last_weekday,58.69416123921068,1.061626632250204,-4.637071438803124
+validation_Apr_May,branch_sku_day,Product:Brownie,last_weekday,56.18877360830092,1.4983672962213577,-0.4711420652186789
+validation_Apr_May,branch_sku_day,Product:Butter Croissant,last_weekday,46.477973835100606,2.049602452728207,-2.2337256418839475
+validation_Apr_May,branch_sku_day,Product:Cappuccino,last_weekday,54.29957223150706,1.6794293925154642,2.724034264653022
+validation_Apr_May,branch_sku_day,Product:Caramel Latte,last_weekday,59.14690640398422,1.234651270290818,0.8613519155041607
+validation_Apr_May,branch_sku_day,Product:Chai Latte,last_weekday,63.54399284556914,1.4097738303443208,3.344669312577231
+validation_Apr_May,branch_sku_day,Product:Cheesecake Slice,last_weekday,56.01763164869764,1.337688799479829,-3.524373247874721
+validation_Apr_May,branch_sku_day,Product:Chicken Pesto Sandwich,last_weekday,56.83464585745999,1.3137188632625998,-3.075114752175754
+validation_Apr_May,branch_sku_day,Product:Chicken Salad Bowl,last_weekday,85.66639924490516,0.9456072484956746,1.2006145959375436
+validation_Apr_May,branch_sku_day,Product:Chocolate Cookie,last_weekday,47.17854103163255,1.5648838473333857,-3.03053114478258
+validation_Apr_May,branch_sku_day,Product:Chocolate Croissant,last_weekday,45.58972997919895,1.4548853720137807,-3.493740590942257
+validation_Apr_May,branch_sku_day,Product:Cinnamon Roll,last_weekday,53.993136564010165,1.5725869829845582,-4.439867337961655
+validation_Apr_May,branch_sku_day,Product:Classic Matcha,last_weekday,44.458353531629186,1.7734753048136231,-3.7175434510510463
+validation_Apr_May,branch_sku_day,Product:Coffee Frappe,last_weekday,71.25728187145972,1.2654981753128094,1.2341431870767552
+validation_Apr_May,branch_sku_day,Product:Cold Brew,last_weekday,52.668266683440926,1.5426333848264666,2.2200710054631947
+validation_Apr_May,branch_sku_day,Product:Egg Sandwich,last_weekday,68.73745791635417,1.3033823987417978,-3.68483489527035
+validation_Apr_May,branch_sku_day,Product:English Breakfast Tea,last_weekday,95.48575774780032,0.9026795677797518,3.388070356284595
+validation_Apr_May,branch_sku_day,Product:Espresso,last_weekday,76.31974996441721,1.03844905689289,7.75691479518858
+validation_Apr_May,branch_sku_day,Product:Flat White,last_weekday,51.62142015858784,1.4358088994929623,-10.2494585467389
+validation_Apr_May,branch_sku_day,Product:Fresh Orange Juice,last_weekday,61.41780048886649,1.2619176493887323,-4.049919668836426
+validation_Apr_May,branch_sku_day,Product:Frozen Yoghurt Cup,last_weekday,61.373500176712895,1.2341774898923685,2.3745625994075796
+validation_Apr_May,branch_sku_day,Product:Granola Yoghurt,last_weekday,81.76229016253608,0.9650630970004258,0.6640284589986474
+validation_Apr_May,branch_sku_day,Product:Halloumi Wrap,last_weekday,76.01762608476896,1.4165033057325804,-1.107009920390445
+validation_Apr_May,branch_sku_day,Product:Iced Americano,last_weekday,53.94679338133614,1.5830288549605198,-0.4871257012705004
+validation_Apr_May,branch_sku_day,Product:Iced Latte,last_weekday,39.77422788416443,2.1017310581413664,-2.6871395237994466
+validation_Apr_May,branch_sku_day,Product:Iced Matcha,last_weekday,43.57591006834595,1.9478193680823488,-0.550847229562017
+validation_Apr_May,branch_sku_day,Product:Iced Mocha,last_weekday,61.454765675817534,1.2559607848500416,1.5213792148879821
+validation_Apr_May,branch_sku_day,Product:Lemonade,last_weekday,67.9784331956664,1.3261366475875902,0.18338045075264695
+validation_Apr_May,branch_sku_day,Product:Mint Tea,last_weekday,79.02426644938703,1.0061559608036708,-2.921644574102724
+validation_Apr_May,branch_sku_day,Product:Peach Iced Tea,last_weekday,62.69296720573003,1.497094353492023,-3.5638182237247986
+validation_Apr_May,branch_sku_day,Product:Pistachio Cookie,last_weekday,56.38011708652217,1.4449330553868251,1.5770116350003127
+validation_Apr_May,branch_sku_day,Product:Quinoa Bowl,last_weekday,94.92078711690566,0.9699555842000741,1.32983651632459
+validation_Apr_May,branch_sku_day,Product:Soup of the Day,last_weekday,100.90054905039432,0.9152727400199704,-2.356648053807724
+validation_Apr_May,branch_sku_day,Product:Spanish Latte,last_weekday,57.61840209350231,1.4231430462438823,-5.694620179572068
+validation_Apr_May,branch_sku_day,Product:Sparkling Water,last_weekday,62.463255013304945,1.2799847338791999,-3.0546429665268064
+validation_Apr_May,branch_sku_day,Product:Still Water,last_weekday,57.081719673999174,1.359979769282166,-0.7793975899562159
+validation_Apr_May,branch_sku_day,Product:Strawberry Matcha,last_weekday,53.36974268108171,1.5923431422880114,-1.2800896954737422
+validation_Apr_May,branch_sku_day,Product:Tiramisu Cup,last_weekday,71.51527759513122,1.3716864719066153,1.6986592608717337
+validation_Apr_May,branch_sku_day,Product:Tuna Sandwich,last_weekday,78.99148122387255,1.0920680191059977,-2.6143378689202916
+validation_Apr_May,branch_sku_day,Product:Turkey & Cheese Sandwich,last_weekday,68.0144318948667,1.4606377997094324,3.6633369054969944
+validation_Apr_May,branch_sku_day,Product:Vanilla Latte,last_weekday,57.49343546058831,1.5740006101505324,-0.22852891699396388
+validation_Apr_May,branch_sku_day,all,four_weekdays,54.23375540620998,1.2767818045661117,-4.3779336668901845
+validation_Apr_May,branch_sku_day,Branch:Garden,four_weekdays,54.99543990142471,1.2774168481292676,-4.324811794228356
+validation_Apr_May,branch_sku_day,Branch:Harbour,four_weekdays,45.79649745736338,1.570594634111544,-4.995219885277247
+validation_Apr_May,branch_sku_day,Branch:Uptown,four_weekdays,74.96543346819296,0.9823339314575229,-2.8565471226021684
+validation_Apr_May,branch_sku_day,Category:Bakery,four_weekdays,48.298759214934755,1.3810014076073558,-5.8886765408504536
+validation_Apr_May,branch_sku_day,Category:Breakfast,four_weekdays,66.96243987378644,1.067252001631387,-5.2857142857142865
+validation_Apr_May,branch_sku_day,Category:Cold Coffee,four_weekdays,49.082067959157534,1.4692435425151091,-3.2219788243884615
+validation_Apr_May,branch_sku_day,Category:Cold Drinks,four_weekdays,57.06347363685563,1.23543979535094,-4.593639575971731
+validation_Apr_May,branch_sku_day,Category:Desserts,four_weekdays,56.01387834450097,1.258016611999448,-1.9312652068126526
+validation_Apr_May,branch_sku_day,Category:Hot Coffee,four_weekdays,54.024010749422104,1.3035770275289906,-5.548366224522808
+validation_Apr_May,branch_sku_day,Category:Matcha & Tea,four_weekdays,50.8800941270522,1.346607955675899,-2.4346180316586365
+validation_Apr_May,branch_sku_day,Category:Meals,four_weekdays,86.0303127829055,0.8697053478053287,-5.8558558558558556
+validation_Apr_May,branch_sku_day,Category:Sandwiches,four_weekdays,62.76676548199983,1.2090319580549147,-4.9822695035460995
+validation_Apr_May,branch_sku_day,Product:Almond Croissant,four_weekdays,55.55902844411269,1.2508371431133567,-6.342506437918175
+validation_Apr_May,branch_sku_day,Product:Americano,four_weekdays,53.179583188324244,1.2553868818227363,-5.29656272521259
+validation_Apr_May,branch_sku_day,Product:Avocado Toast,four_weekdays,64.18925673090723,1.0943742131171068,-6.171818292572104
+validation_Apr_May,branch_sku_day,Product:Banana Bread,four_weekdays,55.05884308916169,1.3328452179507448,-2.8566281522986157
+validation_Apr_May,branch_sku_day,Product:Blueberry Muffin,four_weekdays,55.05906929502597,0.9958771550083932,-8.0377235308264
+validation_Apr_May,branch_sku_day,Product:Brownie,four_weekdays,49.94243119919564,1.3317981653118836,-2.142067673234538
+validation_Apr_May,branch_sku_day,Product:Butter Croissant,four_weekdays,41.073266773511875,1.8112637314876547,-5.904466039345918
+validation_Apr_May,branch_sku_day,Product:Cappuccino,four_weekdays,49.17298862261063,1.5208694841747332,-1.7079906192432281
+validation_Apr_May,branch_sku_day,Product:Caramel Latte,four_weekdays,53.2949477674607,1.1124956309928955,-3.325733805298893
+validation_Apr_May,branch_sku_day,Product:Chai Latte,four_weekdays,57.327894251169056,1.271864757703532,1.884792388585742
+validation_Apr_May,branch_sku_day,Product:Cheesecake Slice,four_weekdays,51.13164296519252,1.221012457693395,-5.359487409237783
+validation_Apr_May,branch_sku_day,Product:Chicken Pesto Sandwich,four_weekdays,50.13674419387533,1.1588985133338396,-7.444051380378423
+validation_Apr_May,branch_sku_day,Product:Chicken Salad Bowl,four_weekdays,83.51155161927566,0.9218214987482886,-4.022283195139455
+validation_Apr_May,branch_sku_day,Product:Chocolate Cookie,four_weekdays,43.07309549955261,1.428708686788439,-6.6498404353739025
+validation_Apr_May,branch_sku_day,Product:Chocolate Croissant,four_weekdays,44.08295438859975,1.406800293056954,-7.149151291754622
+validation_Apr_May,branch_sku_day,Product:Cinnamon Roll,four_weekdays,50.41754385603901,1.4684454030201526,-7.613828176641396
+validation_Apr_May,branch_sku_day,Product:Classic Matcha,four_weekdays,41.97771759329428,1.6745209750330505,-5.200957053680492
+validation_Apr_May,branch_sku_day,Product:Coffee Frappe,four_weekdays,69.45396419476836,1.233472041710367,-1.8943704003869253
+validation_Apr_May,branch_sku_day,Product:Cold Brew,four_weekdays,48.41198904261105,1.4179686408109027,-0.887125542189365
+validation_Apr_May,branch_sku_day,Product:Egg Sandwich,four_weekdays,62.10565402855447,1.177631800432153,-6.09544533253831
+validation_Apr_May,branch_sku_day,Product:English Breakfast Tea,four_weekdays,95.59372187667383,0.9037002122767526,1.3097033357420156
+validation_Apr_May,branch_sku_day,Product:Espresso,four_weekdays,73.71456800199539,1.0030014990435439,3.3131417419828413
+validation_Apr_May,branch_sku_day,Product:Flat White,four_weekdays,49.47821167402733,1.376197253665569,-13.588443561829193
+validation_Apr_May,branch_sku_day,Product:Fresh Orange Juice,four_weekdays,56.15672139887409,1.153821160982331,-6.420437628570405
+validation_Apr_May,branch_sku_day,Product:Frozen Yoghurt Cup,four_weekdays,58.300344639551824,1.1723785151560149,0.29534801056777094
+validation_Apr_May,branch_sku_day,Product:Granola Yoghurt,four_weekdays,78.77048537783187,0.9297499913449009,-2.704968344105138
+validation_Apr_May,branch_sku_day,Product:Halloumi Wrap,four_weekdays,71.83634908808752,1.338589892843598,-5.28539979833926
+validation_Apr_May,branch_sku_day,Product:Iced Americano,four_weekdays,51.99065008830545,1.5256272730830616,-3.3551082526331997
+validation_Apr_May,branch_sku_day,Product:Iced Latte,four_weekdays,37.056852856331005,1.958140803938365,-5.460405834518317
+validation_Apr_May,branch_sku_day,Product:Iced Matcha,four_weekdays,39.50404565028725,1.7658092536576488,-2.2402582625823
+validation_Apr_May,branch_sku_day,Product:Iced Mocha,four_weekdays,59.25525091043086,1.2110089530328494,-1.743114319832907
+validation_Apr_May,branch_sku_day,Product:Lemonade,four_weekdays,64.1852653730043,1.2521387835061495,-2.034847166623625
+validation_Apr_May,branch_sku_day,Product:Mint Tea,four_weekdays,77.95210898807176,0.9925049942197114,-3.935888921869429
+validation_Apr_May,branch_sku_day,Product:Peach Iced Tea,four_weekdays,58.35138074917519,1.3934182178901398,-6.10454508711283
+validation_Apr_May,branch_sku_day,Product:Pistachio Cookie,four_weekdays,52.802079822871384,1.3532336304331518,-2.2948455796315788
+validation_Apr_May,branch_sku_day,Product:Quinoa Bowl,four_weekdays,86.96287228193854,0.8886370009137983,-4.931805261555281
+validation_Apr_May,branch_sku_day,Product:Soup of the Day,four_weekdays,88.04477741383347,0.7986575437538992,-9.128019341391525
+validation_Apr_May,branch_sku_day,Product:Spanish Latte,four_weekdays,55.92947790430053,1.3814275416799913,-9.62941325088977
+validation_Apr_May,branch_sku_day,Product:Sparkling Water,four_weekdays,54.809530411770325,1.1231461149952935,-5.3868651507879175
+validation_Apr_May,branch_sku_day,Product:Still Water,four_weekdays,52.66180504281741,1.2546746993807865,-2.916776097612659
+validation_Apr_May,branch_sku_day,Product:Strawberry Matcha,four_weekdays,49.31104396211352,1.4712475411646984,-2.78482117229766
+validation_Apr_May,branch_sku_day,Product:Tiramisu Cup,four_weekdays,68.13633837609095,1.3068773098364985,0.2955468788787021
+validation_Apr_May,branch_sku_day,Product:Tuna Sandwich,four_weekdays,69.50782192659234,0.9609551337392275,-6.860957538188958
+validation_Apr_May,branch_sku_day,Product:Turkey & Cheese Sandwich,four_weekdays,64.1517113209791,1.377684292302994,-0.8601085946677725
+validation_Apr_May,branch_sku_day,Product:Vanilla Latte,four_weekdays,53.90138621600684,1.475660901323466,-4.352677904137342
+validation_Apr_May,branch_sku_day,all,internal,53.66607146456867,1.2634172768471073,-1.099537290032967
+validation_Apr_May,branch_sku_day,Branch:Garden,internal,54.59753820021302,1.2681745120748933,-1.1949785623087499
+validation_Apr_May,branch_sku_day,Branch:Harbour,internal,45.28151334632588,1.5529332118117005,-1.9789364061169463
+validation_Apr_May,branch_sku_day,Branch:Uptown,internal,73.95887052452679,0.969144106654728,1.3711874335825363
+validation_Apr_May,branch_sku_day,Category:Bakery,internal,48.098683761468195,1.3752806709392478,-0.7889758353519706
+validation_Apr_May,branch_sku_day,Category:Breakfast,internal,64.90297628644169,1.034428128426894,-9.406811285489859
+validation_Apr_May,branch_sku_day,Category:Cold Coffee,internal,48.11828005287217,1.4403931045335179,2.16957817563077
+validation_Apr_May,branch_sku_day,Category:Cold Drinks,internal,56.81636644943,1.23008985722755,-3.1244216045716486
+validation_Apr_May,branch_sku_day,Category:Desserts,internal,54.83940759587062,1.23163915420234,-0.9097727740901362
+validation_Apr_May,branch_sku_day,Category:Hot Coffee,internal,53.794333616956294,1.298035013349039,-1.0258624535305205
+validation_Apr_May,branch_sku_day,Category:Matcha & Tea,internal,50.76560782434819,1.3435779265715466,2.3812711200495498
+validation_Apr_May,branch_sku_day,Category:Meals,internal,83.7992431476847,0.8471508187061021,-13.089279834941948
+validation_Apr_May,branch_sku_day,Category:Sandwiches,internal,62.03974072636088,1.1950277926799022,-3.2091690969380164
+validation_Apr_May,branch_sku_day,Product:Almond Croissant,internal,54.87842115695369,1.2355141812385202,-1.3773812978492659
+validation_Apr_May,branch_sku_day,Product:Americano,internal,53.53414873827716,1.263756953821625,-0.8184890302762744
+validation_Apr_May,branch_sku_day,Product:Avocado Toast,internal,62.39092538274555,1.0637141376730388,-10.25125953235452
+validation_Apr_May,branch_sku_day,Product:Banana Bread,internal,55.72154106220029,1.3488875787188375,2.428401258408071
+validation_Apr_May,branch_sku_day,Product:Blueberry Muffin,internal,55.15641699016176,0.9976379247947291,-3.0547319704203657
+validation_Apr_May,branch_sku_day,Product:Brownie,internal,50.28017947644998,1.3408047860386663,-1.147096834835104
+validation_Apr_May,branch_sku_day,Product:Butter Croissant,internal,39.76352354925233,1.7535062024178487,-0.7685131610407587
+validation_Apr_May,branch_sku_day,Product:Cappuccino,internal,49.412831925964106,1.5282875885298188,3.030796644542599
+validation_Apr_May,branch_sku_day,Product:Caramel Latte,internal,52.535234108635315,1.0966371272950102,1.2694893569530985
+validation_Apr_May,branch_sku_day,Product:Chai Latte,internal,58.57453397284279,1.2995224477035066,6.995286526942925
+validation_Apr_May,branch_sku_day,Product:Cheesecake Slice,internal,49.710737088149116,1.1870815359301181,-4.3817686456397125
+validation_Apr_May,branch_sku_day,Product:Chicken Pesto Sandwich,internal,49.09587267100901,1.1348390240347985,-5.668927237950357
+validation_Apr_May,branch_sku_day,Product:Chicken Salad Bowl,internal,80.30181202172993,0.8863915862507893,-11.408197274491023
+validation_Apr_May,branch_sku_day,Product:Chocolate Cookie,internal,43.97354542589285,1.458576069591091,-1.5405162253933125
+validation_Apr_May,branch_sku_day,Product:Chocolate Croissant,internal,43.30340514666827,1.3819228746259162,-2.047699778106488
+validation_Apr_May,branch_sku_day,Product:Cinnamon Roll,internal,49.81246198320561,1.4508219801665898,-2.7615352753373354
+validation_Apr_May,branch_sku_day,Product:Classic Matcha,internal,41.5814179434271,1.6587123004755073,-0.5994172502883203
+validation_Apr_May,branch_sku_day,Product:Coffee Frappe,internal,68.16624835307961,1.2106027712978618,3.6294006051343994
+validation_Apr_May,branch_sku_day,Product:Cold Brew,internal,47.66555293262455,1.3961058126714077,4.716225083697258
+validation_Apr_May,branch_sku_day,Product:Egg Sandwich,internal,61.03611263213178,1.1573514253196573,-10.267789694359692
+validation_Apr_May,branch_sku_day,Product:English Breakfast Tea,internal,96.21061633014153,0.909532056017185,6.216314592809409
+validation_Apr_May,branch_sku_day,Product:Espresso,internal,74.55719929177555,1.0144668100356344,8.284465998644485
+validation_Apr_May,branch_sku_day,Product:Flat White,internal,47.82834317746999,1.330307468706679,-9.508668472638792
+validation_Apr_May,branch_sku_day,Product:Fresh Orange Juice,internal,57.095683858889096,1.1731135044230765,-4.870957053385282
+validation_Apr_May,branch_sku_day,Product:Frozen Yoghurt Cup,internal,58.004379457827504,1.1664268656000285,1.6022047218179623
+validation_Apr_May,branch_sku_day,Product:Granola Yoghurt,internal,74.74353911050987,0.8822188222879853,-6.803906836880555
+validation_Apr_May,branch_sku_day,Product:Halloumi Wrap,internal,70.54536651895559,1.314533878850484,-3.6558103025914384
+validation_Apr_May,branch_sku_day,Product:Iced Americano,internal,50.06047538597829,1.4689877203426418,2.0252691415004476
+validation_Apr_May,branch_sku_day,Product:Iced Latte,internal,36.36368546162507,1.9215127782181112,-0.27067058649205306
+validation_Apr_May,branch_sku_day,Product:Iced Matcha,internal,38.61243685280439,1.7259548276280872,2.64606307113497
+validation_Apr_May,branch_sku_day,Product:Iced Mocha,internal,58.949312445233886,1.204756440137567,3.7678922718565357
+validation_Apr_May,branch_sku_day,Product:Lemonade,internal,62.22801353590788,1.213956329634924,-0.6013098645458257
+validation_Apr_May,branch_sku_day,Product:Mint Tea,internal,77.4302702631888,0.9858608181050815,0.6626567203277095
+validation_Apr_May,branch_sku_day,Product:Peach Iced Tea,internal,58.57580748361854,1.398777479253623,-4.594100116305239
+validation_Apr_May,branch_sku_day,Product:Pistachio Cookie,internal,53.666156874362976,1.37537855596045,3.0345441676066818
+validation_Apr_May,branch_sku_day,Product:Quinoa Bowl,internal,85.06547786266111,0.8692483257004169,-12.173752050943598
+validation_Apr_May,branch_sku_day,Product:Soup of the Day,internal,86.62873227866221,0.7858125441670999,-16.166282080838197
+validation_Apr_May,branch_sku_day,Product:Spanish Latte,internal,55.92929428556407,1.3814230063975388,-5.193456658880218
+validation_Apr_May,branch_sku_day,Product:Sparkling Water,internal,53.73643257929202,1.1011564053133611,-4.014917507536376
+validation_Apr_May,branch_sku_day,Product:Still Water,internal,53.02994010432017,1.2634455675127647,-1.445219974287109
+validation_Apr_May,branch_sku_day,Product:Strawberry Matcha,internal,49.66757784587613,1.4818851094999108,2.0570716209795785
+validation_Apr_May,branch_sku_day,Product:Tiramisu Cup,internal,64.24517024245587,1.232243429240547,1.1092261404868746
+validation_Apr_May,branch_sku_day,Product:Tuna Sandwich,internal,68.90884178666178,0.9526741514767995,-5.098112764108207
+validation_Apr_May,branch_sku_day,Product:Turkey & Cheese Sandwich,internal,64.16939778458715,1.3780641163575273,1.0419380088383112
+validation_Apr_May,branch_sku_day,Product:Vanilla Latte,internal,53.74451165154194,1.4713661386569679,0.2131601013450029
+validation_Apr_May,branch_sku_day,all,calendar,54.21048660856367,1.2762340059261978,-0.22319284942333842
+validation_Apr_May,branch_sku_day,Branch:Garden,calendar,55.07451023598934,1.279253469088044,-0.32823402136307206
+validation_Apr_May,branch_sku_day,Branch:Harbour,calendar,45.93341174118214,1.575290120697591,-1.2018538143407478
+validation_Apr_May,branch_sku_day,Branch:Uptown,calendar,74.34153141063861,0.9741584279929584,2.5243347669292406
+validation_Apr_May,branch_sku_day,Category:Bakery,calendar,48.75815558271431,1.3941368802543859,-0.23653546827929417
+validation_Apr_May,branch_sku_day,Category:Breakfast,calendar,65.2196304333342,1.0394749841378403,-10.751539544526187
+validation_Apr_May,branch_sku_day,Category:Cold Coffee,calendar,48.83915538508897,1.4619720939864338,5.719584294501074
+validation_Apr_May,branch_sku_day,Category:Cold Drinks,calendar,57.07343958641673,1.235655560881875,-2.5560025073912764
+validation_Apr_May,branch_sku_day,Category:Desserts,calendar,55.17878260628255,1.2392611831247065,0.2255695883876232
+validation_Apr_May,branch_sku_day,Category:Hot Coffee,calendar,54.87553827196744,1.3241240343376375,-1.268907291940951
+validation_Apr_May,branch_sku_day,Category:Matcha & Tea,calendar,50.76042951369301,1.3434408758359917,2.6131159579345833
+validation_Apr_May,branch_sku_day,Category:Meals,calendar,84.879846789139,0.8580749538792739,-12.864464317070178
+validation_Apr_May,branch_sku_day,Category:Sandwiches,calendar,62.428813491645485,1.2025222270931712,-1.0172956434700566
+validation_Apr_May,branch_sku_day,Product:Almond Croissant,calendar,55.27722538783582,1.2444927245785988,-0.8538791433280287
+validation_Apr_May,branch_sku_day,Product:Americano,calendar,54.399453880010206,1.2841838292986016,-0.9575602185117215
+validation_Apr_May,branch_sku_day,Product:Avocado Toast,calendar,63.01057100080567,1.0742785875547196,-11.710186881759233
+validation_Apr_May,branch_sku_day,Product:Banana Bread,calendar,56.095403196974424,1.3579379025278506,3.106544618877776
+validation_Apr_May,branch_sku_day,Product:Blueberry Muffin,calendar,55.64263631203922,1.0064323835674855,-2.592624598426592
+validation_Apr_May,branch_sku_day,Product:Brownie,calendar,51.0541063073709,1.3614428348632241,0.093853983879295
+validation_Apr_May,branch_sku_day,Product:Butter Croissant,calendar,40.70708668159883,1.7951157897295222,-0.23107515987740557
+validation_Apr_May,branch_sku_day,Product:Cappuccino,calendar,49.77596878004102,1.5395190343990828,2.6651898888052075
+validation_Apr_May,branch_sku_day,Product:Caramel Latte,calendar,54.330698442282554,1.1341162188498326,1.0375061615917633
+validation_Apr_May,branch_sku_day,Product:Chai Latte,calendar,58.48965541792135,1.2976393497090748,7.24144074218665
+validation_Apr_May,branch_sku_day,Product:Cheesecake Slice,calendar,50.15913720311364,1.197789232664517,-3.476558694388325
+validation_Apr_May,branch_sku_day,Product:Chicken Pesto Sandwich,calendar,49.88939882125255,1.1531811858682965,-3.632632209257932
+validation_Apr_May,branch_sku_day,Product:Chicken Salad Bowl,calendar,82.09455917556646,0.9061803799707335,-11.091828771499177
+validation_Apr_May,branch_sku_day,Product:Chocolate Cookie,calendar,45.27543585281714,1.5017589924950823,-1.040794301599066
+validation_Apr_May,branch_sku_day,Product:Chocolate Croissant,calendar,43.23119931944326,1.3796186012325065,-1.4915677907820961
+validation_Apr_May,branch_sku_day,Product:Cinnamon Roll,calendar,50.68041858384717,1.4761018090268054,-2.196650343201655
+validation_Apr_May,branch_sku_day,Product:Classic Matcha,calendar,41.77634733491385,1.666488172376345,-0.4120135307976795
+validation_Apr_May,branch_sku_day,Product:Coffee Frappe,calendar,70.21235213701289,1.2469406800289173,7.281765160665852
+validation_Apr_May,branch_sku_day,Product:Cold Brew,calendar,48.687937307913366,1.4260510599476264,8.42181493344712
+validation_Apr_May,branch_sku_day,Product:Egg Sandwich,calendar,60.49220163418337,1.1470379216973567,-11.509540182184683
+validation_Apr_May,branch_sku_day,Product:English Breakfast Tea,calendar,96.31141456537776,0.9104849573666858,6.385162333028674
+validation_Apr_May,branch_sku_day,Product:Espresso,calendar,76.6286766623341,1.0426524857333983,8.321799764914754
+validation_Apr_May,branch_sku_day,Product:Flat White,calendar,49.404306978927494,1.3741416531297321,-9.843390484015886
+validation_Apr_May,branch_sku_day,Product:Fresh Orange Juice,calendar,57.005204752246186,1.1712544801554408,-4.764451549400224
+validation_Apr_May,branch_sku_day,Product:Frozen Yoghurt Cup,calendar,58.57832570638852,1.1779685169372118,2.8298734348046772
+validation_Apr_May,branch_sku_day,Product:Granola Yoghurt,calendar,76.00502087895569,0.8971084431614443,-8.149112736728917
+validation_Apr_May,branch_sku_day,Product:Halloumi Wrap,calendar,71.37923299021806,1.3300720464297464,-1.353556285571175
+validation_Apr_May,branch_sku_day,Product:Iced Americano,calendar,51.066285534075405,1.4985024771474587,5.569976215271351
+validation_Apr_May,branch_sku_day,Product:Iced Latte,calendar,36.102213293652916,1.9076961887957582,3.150824893323219
+validation_Apr_May,branch_sku_day,Product:Iced Matcha,calendar,38.517573003799214,1.7217144654157244,2.895235545594412
+validation_Apr_May,branch_sku_day,Product:Iced Mocha,calendar,60.21727853322747,1.2306700640124086,7.34585561938534
+validation_Apr_May,branch_sku_day,Product:Lemonade,calendar,60.764008231924485,1.1853962261637727,0.16993082296530634
+validation_Apr_May,branch_sku_day,Product:Mint Tea,calendar,77.18310196636462,0.982713811921473,0.9549929763281386
+validation_Apr_May,branch_sku_day,Product:Peach Iced Tea,calendar,59.13230462440703,1.412066509336933,-4.115004530716702
+validation_Apr_May,branch_sku_day,Product:Pistachio Cookie,calendar,54.300541900753565,1.3916368388772362,3.6327297027404994
+validation_Apr_May,branch_sku_day,Product:Quinoa Bowl,calendar,85.71433755076785,0.8758787498357152,-12.01510047660443
+validation_Apr_May,branch_sku_day,Product:Soup of the Day,calendar,87.329113810326,0.7921657318313725,-15.97834033136197
+validation_Apr_May,branch_sku_day,Product:Spanish Latte,calendar,56.32226059297346,1.3911290594548635,-5.55026433496714
+validation_Apr_May,branch_sku_day,Product:Sparkling Water,calendar,55.00546591605469,1.1271611868043994,-3.1304321549475285
+validation_Apr_May,branch_sku_day,Product:Still Water,calendar,53.82547948546691,1.282399401948829,-0.8268427760039607
+validation_Apr_May,branch_sku_day,Product:Strawberry Matcha,calendar,49.658172742761266,1.4816044982266474,2.3058805613878746
+validation_Apr_May,branch_sku_day,Product:Tiramisu Cup,calendar,63.598711991509646,1.2198441480338733,2.2874597852300074
+validation_Apr_May,branch_sku_day,Product:Tuna Sandwich,calendar,70.00354252053495,0.9678085386718766,-3.1363226314117605
+validation_Apr_May,branch_sku_day,Product:Turkey & Cheese Sandwich,calendar,63.2829430393654,1.3590271374027652,3.453610397837844
+validation_Apr_May,branch_sku_day,Product:Vanilla Latte,calendar,54.90460091579345,1.5031259594979518,0.0669178413597678
+validation_Apr_May,branch_sku_day,all,calendar_lag_weather,54.41535314888447,1.28105701456882,0.47646463296244135
+validation_Apr_May,branch_sku_day,Branch:Garden,calendar_lag_weather,55.23362090591121,1.2829492418801087,0.3997158789625815
+validation_Apr_May,branch_sku_day,Branch:Harbour,calendar_lag_weather,46.08462033051891,1.580475831663042,-0.9082934566076861
+validation_Apr_May,branch_sku_day,Branch:Uptown,calendar_lag_weather,74.76793683898487,0.9797459701633099,4.236671113561907
+validation_Apr_May,branch_sku_day,Category:Bakery,calendar_lag_weather,48.86643800723551,1.3972329883762828,-0.7771887009283321
+validation_Apr_May,branch_sku_day,Category:Breakfast,calendar_lag_weather,65.08545620866896,1.0373365060580206,-8.468776393489277
+validation_Apr_May,branch_sku_day,Category:Cold Coffee,calendar_lag_weather,49.40011966932257,1.4787642379702135,7.277837872718575
+validation_Apr_May,branch_sku_day,Category:Cold Drinks,calendar_lag_weather,57.22336455664638,1.2389014774504534,-2.2003954168797617
+validation_Apr_May,branch_sku_day,Category:Desserts,calendar_lag_weather,55.554227384880065,1.2476933035620605,2.054718233343632
+validation_Apr_May,branch_sku_day,Category:Hot Coffee,calendar_lag_weather,55.03128697422267,1.3278821860837022,-1.0534569674875143
+validation_Apr_May,branch_sku_day,Category:Matcha & Tea,calendar_lag_weather,50.648550091715755,1.3404798412251913,2.213804813407768
+validation_Apr_May,branch_sku_day,Category:Meals,calendar_lag_weather,86.13191753993128,0.8707324997206167,-5.629081883397371
+validation_Apr_May,branch_sku_day,Category:Sandwiches,calendar_lag_weather,62.665671061210176,1.207084647490524,0.6346091074497493
+validation_Apr_May,branch_sku_day,Product:Almond Croissant,calendar_lag_weather,55.38310186658539,1.2468763917504473,-1.3948554951374486
+validation_Apr_May,branch_sku_day,Product:Americano,calendar_lag_weather,54.52212071659186,1.2870795710146274,-0.734351136964124
+validation_Apr_May,branch_sku_day,Product:Avocado Toast,calendar_lag_weather,63.02927903129923,1.0745975441401836,-9.412688633952362
+validation_Apr_May,branch_sku_day,Product:Banana Bread,calendar_lag_weather,56.43212649413525,1.3660891823443668,2.568890171056125
+validation_Apr_May,branch_sku_day,Product:Blueberry Muffin,calendar_lag_weather,55.659861415384036,1.0067439414476567,-3.170665974048255
+validation_Apr_May,branch_sku_day,Product:Brownie,calendar_lag_weather,51.10665641751574,1.362844171133753,1.9246973361586566
+validation_Apr_May,branch_sku_day,Product:Butter Croissant,calendar_lag_weather,40.983766794445316,1.8073169291320965,-0.7757870867609363
+validation_Apr_May,branch_sku_day,Product:Cappuccino,calendar_lag_weather,49.9245259430305,1.5441137532106701,2.852399395109865
+validation_Apr_May,branch_sku_day,Product:Caramel Latte,calendar_lag_weather,54.516576789458924,1.1379963023810549,1.2881831208942456
+validation_Apr_May,branch_sku_day,Product:Chai Latte,calendar_lag_weather,58.24226847953174,1.2921508744639283,6.8891121316997905
+validation_Apr_May,branch_sku_day,Product:Cheesecake Slice,calendar_lag_weather,50.57349382880262,1.2076839783162157,-1.824016890474672
+validation_Apr_May,branch_sku_day,Product:Chicken Pesto Sandwich,calendar_lag_weather,49.61475061044655,1.1468327600119612,-2.0485123251140975
+validation_Apr_May,branch_sku_day,Product:Chicken Salad Bowl,calendar_lag_weather,83.92213346512709,0.9263536043691624,-3.6015570844826645
+validation_Apr_May,branch_sku_day,Product:Chocolate Cookie,calendar_lag_weather,45.21020220379204,1.4995952315684027,-1.5884487093427282
+validation_Apr_May,branch_sku_day,Product:Chocolate Croissant,calendar_lag_weather,43.362125380374216,1.3837967880950024,-2.0396912783331045
+validation_Apr_May,branch_sku_day,Product:Cinnamon Roll,calendar_lag_weather,50.790763764805504,1.4793156877946085,-2.681336048561652
+validation_Apr_May,branch_sku_day,Product:Classic Matcha,calendar_lag_weather,41.505025172689884,1.6556649385827111,-0.8434065399953663
+validation_Apr_May,branch_sku_day,Product:Coffee Frappe,calendar_lag_weather,70.5453402097287,1.2528544026317938,8.9408693730087
+validation_Apr_May,branch_sku_day,Product:Cold Brew,calendar_lag_weather,48.80069956441773,1.4293538233075356,10.009040521458461
+validation_Apr_May,branch_sku_day,Product:Egg Sandwich,calendar_lag_weather,60.08165686249248,1.1392532749336006,-9.276935492537188
+validation_Apr_May,branch_sku_day,Product:English Breakfast Tea,calendar_lag_weather,96.11486725127595,0.9086268871295485,5.918380821760353
+validation_Apr_May,branch_sku_day,Product:Espresso,calendar_lag_weather,77.01179085972747,1.0478653510421934,8.629121752022414
+validation_Apr_May,branch_sku_day,Product:Flat White,calendar_lag_weather,49.43205842806989,1.3749135376987744,-9.675177113290475
+validation_Apr_May,branch_sku_day,Product:Fresh Orange Juice,calendar_lag_weather,57.1424233287242,1.1740738345136774,-4.373202808975691
+validation_Apr_May,branch_sku_day,Product:Frozen Yoghurt Cup,calendar_lag_weather,59.41634876463813,1.1948205653216848,4.77503783155773
+validation_Apr_May,branch_sku_day,Product:Granola Yoghurt,calendar_lag_weather,76.09400089599573,0.8981586991002776,-5.807054974998034
+validation_Apr_May,branch_sku_day,Product:Halloumi Wrap,calendar_lag_weather,72.20888842323416,1.345531746028571,0.34075764552653853
+validation_Apr_May,branch_sku_day,Product:Iced Americano,calendar_lag_weather,51.94372461500473,1.5242502796862045,7.142197367769662
+validation_Apr_May,branch_sku_day,Product:Iced Latte,calendar_lag_weather,36.95850124563602,1.9529437543459032,4.617771037724289
+validation_Apr_May,branch_sku_day,Product:Iced Matcha,calendar_lag_weather,38.7318271226602,1.731291507450057,2.4902403048315356
+validation_Apr_May,branch_sku_day,Product:Iced Mocha,calendar_lag_weather,60.400712344377595,1.2344189298796295,8.990976170253788
+validation_Apr_May,branch_sku_day,Product:Lemonade,calendar_lag_weather,60.86565732656217,1.187379216698508,0.5295817871501445
+validation_Apr_May,branch_sku_day,Product:Mint Tea,calendar_lag_weather,77.31189360685796,0.9843536180545304,0.6501757759717167
+validation_Apr_May,branch_sku_day,Product:Peach Iced Tea,calendar_lag_weather,59.12457892075948,1.411882021222508,-3.766034531729138
+validation_Apr_May,branch_sku_day,Product:Pistachio Cookie,calendar_lag_weather,54.16369832465161,1.3881297548776834,3.077656758123126
+validation_Apr_May,branch_sku_day,Product:Quinoa Bowl,calendar_lag_weather,86.90128198551825,0.888007635589722,-4.76272716738651
+validation_Apr_May,branch_sku_day,Product:Soup of the Day,calendar_lag_weather,87.954238213339,0.7978362592029657,-9.072264662161242
+validation_Apr_May,branch_sku_day,Product:Spanish Latte,calendar_lag_weather,56.49093717459728,1.3952952788479764,-5.36281774140594
+validation_Apr_May,branch_sku_day,Product:Sparkling Water,calendar_lag_weather,55.279060430609775,1.1327676317747906,-2.8393268311757347
+validation_Apr_May,branch_sku_day,Product:Still Water,calendar_lag_weather,54.07753600844712,1.2884046830427838,-0.44315392344040383
+validation_Apr_May,branch_sku_day,Product:Strawberry Matcha,calendar_lag_weather,49.295749737303666,1.4707912216703716,1.9040963904236792
+validation_Apr_May,branch_sku_day,Product:Tiramisu Cup,calendar_lag_weather,63.88965339151448,1.225424499476589,4.21249554044357
+validation_Apr_May,branch_sku_day,Product:Tuna Sandwich,calendar_lag_weather,70.3870575471283,0.9731106863072927,-1.6167370549347166
+validation_Apr_May,branch_sku_day,Product:Turkey & Cheese Sandwich,calendar_lag_weather,63.4615780568477,1.3628633976142703,5.2268592183240274
+validation_Apr_May,branch_sku_day,Product:Vanilla Latte,calendar_lag_weather,55.07940240229203,1.507911508390618,0.3083186594362565
+validation_Apr_May,branch_sku_day,all,oracle_actual_weather_conflict,53.97842053340506,1.2707706604506666,-4.462182080731197
+validation_Apr_May,branch_sku_day,Branch:Garden,oracle_actual_weather_conflict,54.59135154084433,1.2680308102893385,-4.563599739451033
+validation_Apr_May,branch_sku_day,Branch:Harbour,oracle_actual_weather_conflict,45.946544994827214,1.5757405267078448,-5.847614403743371
+validation_Apr_May,branch_sku_day,Branch:Uptown,oracle_actual_weather_conflict,73.9128181471774,0.9685406443548166,-0.6564831980972569
+validation_Apr_May,branch_sku_day,Category:Bakery,oracle_actual_weather_conflict,48.55430466545389,1.388308192142008,-4.518764653809038
+validation_Apr_May,branch_sku_day,Category:Breakfast,oracle_actual_weather_conflict,64.99626944449807,1.0359150412374465,-8.046676992243881
+validation_Apr_May,branch_sku_day,Category:Cold Coffee,oracle_actual_weather_conflict,48.20994867615143,1.4431371521746312,-3.124526695979824
+validation_Apr_May,branch_sku_day,Category:Cold Drinks,oracle_actual_weather_conflict,56.87784947934696,1.2314209816238944,-4.720307882717354
+validation_Apr_May,branch_sku_day,Category:Desserts,oracle_actual_weather_conflict,54.943958963346326,1.233987275078434,-4.785527802488281
+validation_Apr_May,branch_sku_day,Category:Hot Coffee,oracle_actual_weather_conflict,54.4697562243779,1.3143326814172687,-6.815618862128567
+validation_Apr_May,branch_sku_day,Category:Matcha & Tea,oracle_actual_weather_conflict,50.57272746664518,1.3384730967037424,-0.7613403381105976
+validation_Apr_May,branch_sku_day,Category:Meals,oracle_actual_weather_conflict,86.07427386517521,0.8701497631178915,-14.01907113642264
+validation_Apr_May,branch_sku_day,Category:Sandwiches,oracle_actual_weather_conflict,62.55890886985568,1.205028162657056,-2.6350348515828195
+validation_Apr_May,branch_sku_day,Product:Almond Croissant,oracle_actual_weather_conflict,54.68745140488684,1.2312147529406217,-5.18887273209174
+validation_Apr_May,branch_sku_day,Product:Americano,oracle_actual_weather_conflict,53.64389638255108,1.266347717883173,-6.515738913808449
+validation_Apr_May,branch_sku_day,Product:Avocado Toast,oracle_actual_weather_conflict,62.771069154444014,1.070195277387242,-9.092747395008924
+validation_Apr_May,branch_sku_day,Product:Banana Bread,oracle_actual_weather_conflict,55.66940206367942,1.3476254160770482,-1.3621295646077147
+validation_Apr_May,branch_sku_day,Product:Blueberry Muffin,oracle_actual_weather_conflict,55.66392865150809,1.0068175073032335,-6.752775660063865
+validation_Apr_May,branch_sku_day,Product:Brownie,oracle_actual_weather_conflict,50.728594866387326,1.3527625297703287,-5.013385447866048
+validation_Apr_May,branch_sku_day,Product:Butter Croissant,oracle_actual_weather_conflict,40.60863644002926,1.7907742954701429,-4.481378281459055
+validation_Apr_May,branch_sku_day,Product:Cappuccino,oracle_actual_weather_conflict,49.335346009448855,1.5258910295818608,-3.038902782455619
+validation_Apr_May,branch_sku_day,Product:Caramel Latte,oracle_actual_weather_conflict,53.57418583066584,1.1183245348259208,-4.6068468355602015
+validation_Apr_May,branch_sku_day,Product:Chai Latte,oracle_actual_weather_conflict,57.580391509350555,1.2774666094424223,3.761190777826078
+validation_Apr_May,branch_sku_day,Product:Cheesecake Slice,oracle_actual_weather_conflict,50.62069547450675,1.2088111432983306,-8.18124625511924
+validation_Apr_May,branch_sku_day,Product:Chicken Pesto Sandwich,oracle_actual_weather_conflict,50.336663991240265,1.1635196102893242,-5.074155315738658
+validation_Apr_May,branch_sku_day,Product:Chicken Salad Bowl,oracle_actual_weather_conflict,83.36815126335567,0.9202386095736528,-12.215028884719864
+validation_Apr_May,branch_sku_day,Product:Chocolate Cookie,oracle_actual_weather_conflict,45.03376550598869,1.4937429323571112,-5.204854134140472
+validation_Apr_May,branch_sku_day,Product:Chocolate Croissant,oracle_actual_weather_conflict,43.012660006373025,1.3726444504766038,-5.714828541504155
+validation_Apr_May,branch_sku_day,Product:Cinnamon Roll,oracle_actual_weather_conflict,50.876745678843626,1.4818199697717842,-6.466822171968246
+validation_Apr_May,branch_sku_day,Product:Classic Matcha,oracle_actual_weather_conflict,42.06195400151072,1.6778812251968758,-3.7121508244323356
+validation_Apr_May,branch_sku_day,Product:Coffee Frappe,oracle_actual_weather_conflict,69.02325129245514,1.2258227688550776,-1.7266737581925795
+validation_Apr_May,branch_sku_day,Product:Cold Brew,oracle_actual_weather_conflict,47.6349606111044,1.395209775276063,-0.6783447418022259
+validation_Apr_May,branch_sku_day,Product:Egg Sandwich,oracle_actual_weather_conflict,59.97582789331141,1.1372465726218066,-8.788094833865964
+validation_Apr_May,branch_sku_day,Product:English Breakfast Tea,oracle_actual_weather_conflict,94.9053493645753,0.897192646998444,2.9014092989779297
+validation_Apr_May,branch_sku_day,Product:Espresso,oracle_actual_weather_conflict,74.94042845369519,1.0196812396158528,2.1125263108102184
+validation_Apr_May,branch_sku_day,Product:Flat White,oracle_actual_weather_conflict,49.61797413660441,1.3800846358214014,-14.890615632898056
+validation_Apr_May,branch_sku_day,Product:Fresh Orange Juice,oracle_actual_weather_conflict,57.25873321068318,1.1764635894654032,-6.659114781301314
+validation_Apr_May,branch_sku_day,Product:Frozen Yoghurt Cup,oracle_actual_weather_conflict,57.415947062110135,1.1545939081342367,-2.354703840739011
+validation_Apr_May,branch_sku_day,Product:Granola Yoghurt,oracle_actual_weather_conflict,76.27569402208437,0.9003032737032908,-5.344612377866293
+validation_Apr_May,branch_sku_day,Product:Halloumi Wrap,oracle_actual_weather_conflict,70.64686149630606,1.3164251240568505,-3.1508206067665077
+validation_Apr_May,branch_sku_day,Product:Iced Americano,oracle_actual_weather_conflict,50.84893000900978,1.4921243396086474,-3.284199909787747
+validation_Apr_May,branch_sku_day,Product:Iced Latte,oracle_actual_weather_conflict,36.36447164636381,1.9215543214226123,-5.464689534336478
+validation_Apr_May,branch_sku_day,Product:Iced Matcha,oracle_actual_weather_conflict,38.50035116393798,1.7209446585847685,-0.5099192857550422
+validation_Apr_May,branch_sku_day,Product:Iced Mocha,oracle_actual_weather_conflict,57.785653394403234,1.1809745557107547,-1.5650982246277
+validation_Apr_May,branch_sku_day,Product:Lemonade,oracle_actual_weather_conflict,60.79871404543623,1.186073274001133,-2.2064676816025686
+validation_Apr_May,branch_sku_day,Product:Mint Tea,oracle_actual_weather_conflict,76.62157593827577,0.9755643275201231,-2.273817473627146
+validation_Apr_May,branch_sku_day,Product:Peach Iced Tea,oracle_actual_weather_conflict,59.35128059233838,1.4172956075875338,-6.21021459614627
+validation_Apr_May,branch_sku_day,Product:Pistachio Cookie,oracle_actual_weather_conflict,53.91773921776798,1.3818262127395182,-0.8082011005591861
+validation_Apr_May,branch_sku_day,Product:Quinoa Bowl,oracle_actual_weather_conflict,87.22018066697649,0.8912663270341313,-13.232742824726415
+validation_Apr_May,branch_sku_day,Product:Soup of the Day,oracle_actual_weather_conflict,88.076395513553,0.7989443527458906,-17.100155046851285
+validation_Apr_May,branch_sku_day,Product:Spanish Latte,oracle_actual_weather_conflict,55.878534181080624,1.3801692595545596,-10.88536162590226
+validation_Apr_May,branch_sku_day,Product:Sparkling Water,oracle_actual_weather_conflict,54.14514740886117,1.1095317091979748,-5.415451772515222
+validation_Apr_May,branch_sku_day,Product:Still Water,oracle_actual_weather_conflict,53.210218623793395,1.2677407278674273,-3.015448629248943
+validation_Apr_May,branch_sku_day,Product:Strawberry Matcha,oracle_actual_weather_conflict,49.66436036333465,1.4817891124798206,-1.0708035496915966
+validation_Apr_May,branch_sku_day,Product:Tiramisu Cup,oracle_actual_weather_conflict,63.595446722872815,1.2197815191108392,-2.789572597871904
+validation_Apr_May,branch_sku_day,Product:Tuna Sandwich,oracle_actual_weather_conflict,70.21574025726851,0.9707422013709799,-4.833095296111297
+validation_Apr_May,branch_sku_day,Product:Turkey & Cheese Sandwich,oracle_actual_weather_conflict,63.7671516103628,1.36942571491107,1.8528536759521996
+validation_Apr_May,branch_sku_day,Product:Vanilla Latte,oracle_actual_weather_conflict,55.14949192270944,1.509830352638111,-5.586739451814541
+test_June,branch_sku_day,all,direct_sku_last_weekday,66.67877576968486,1.8128395061728395,-1.2169648533284896
+test_June,branch_sku_day,Branch:Garden,direct_sku_last_weekday,67.95735129068463,1.7940740740740742,-0.05611672278338945
+test_June,branch_sku_day,Branch:Harbour,direct_sku_last_weekday,56.73837102408531,2.285925925925926,-1.69148740577312
+test_June,branch_sku_day,Branch:Uptown,direct_sku_last_weekday,91.33466135458167,1.3585185185185185,-1.9920318725099602
+test_June,branch_sku_day,Category:Bakery,direct_sku_last_weekday,60.6174384647476,2.0180555555555557,-0.8760951188986232
+test_June,branch_sku_day,Category:Breakfast,direct_sku_last_weekday,82.85123966942149,1.4851851851851852,1.859504132231405
+test_June,branch_sku_day,Category:Cold Coffee,direct_sku_last_weekday,57.789855072463766,2.1266666666666665,-1.5096618357487923
+test_June,branch_sku_day,Category:Cold Drinks,direct_sku_last_weekday,74.39478584729981,1.7755555555555556,-3.258845437616387
+test_June,branch_sku_day,Category:Desserts,direct_sku_last_weekday,66.22039134912461,1.7861111111111112,-1.544799176107106
+test_June,branch_sku_day,Category:Hot Coffee,direct_sku_last_weekday,64.08934707903781,1.776190476190476,0.6300114547537228
+test_June,branch_sku_day,Category:Matcha & Tea,direct_sku_last_weekday,68.22849807445444,1.9685185185185186,-0.834403080872914
+test_June,branch_sku_day,Category:Meals,direct_sku_last_weekday,96.5625,1.1444444444444444,-5.3125
+test_June,branch_sku_day,Category:Sandwiches,direct_sku_last_weekday,74.28571428571429,1.6611111111111112,-3.4782608695652173
+test_June,branch_sku_day,Product:Almond Croissant,direct_sku_last_weekday,53.75494071146245,1.511111111111111,-2.3715415019762847
+test_June,branch_sku_day,Product:Americano,direct_sku_last_weekday,72.98578199052133,1.711111111111111,6.6350710900473935
+test_June,branch_sku_day,Product:Avocado Toast,direct_sku_last_weekday,80.55555555555556,1.6111111111111112,-0.5555555555555556
+test_June,branch_sku_day,Product:Banana Bread,direct_sku_last_weekday,65.77946768060836,1.9222222222222223,1.1406844106463878
+test_June,branch_sku_day,Product:Blueberry Muffin,direct_sku_last_weekday,81.28342245989305,1.6888888888888889,-3.2085561497326203
+test_June,branch_sku_day,Product:Brownie,direct_sku_last_weekday,65.34296028880867,2.011111111111111,1.8050541516245486
+test_June,branch_sku_day,Product:Butter Croissant,direct_sku_last_weekday,51.31004366812227,2.611111111111111,-3.2751091703056767
+test_June,branch_sku_day,Product:Cappuccino,direct_sku_last_weekday,54.0785498489426,1.988888888888889,-1.5105740181268883
+test_June,branch_sku_day,Product:Caramel Latte,direct_sku_last_weekday,60.4,1.6777777777777778,-5.2
+test_June,branch_sku_day,Product:Chai Latte,direct_sku_last_weekday,68.69158878504673,1.6333333333333333,-4.205607476635514
+test_June,branch_sku_day,Product:Cheesecake Slice,direct_sku_last_weekday,58.333333333333336,1.4777777777777779,-0.43859649122807015
+test_June,branch_sku_day,Product:Chicken Pesto Sandwich,direct_sku_last_weekday,75.53648068669528,1.9555555555555555,1.7167381974248928
+test_June,branch_sku_day,Product:Chicken Salad Bowl,direct_sku_last_weekday,85.24590163934427,1.1555555555555554,-9.836065573770492
+test_June,branch_sku_day,Product:Chocolate Cookie,direct_sku_last_weekday,64.45182724252491,2.1555555555555554,7.973421926910299
+test_June,branch_sku_day,Product:Chocolate Croissant,direct_sku_last_weekday,61.40350877192982,2.3333333333333335,-0.5847953216374269
+test_June,branch_sku_day,Product:Cinnamon Roll,direct_sku_last_weekday,52.77777777777778,1.9,-3.3950617283950617
+test_June,branch_sku_day,Product:Classic Matcha,direct_sku_last_weekday,63.63636363636363,2.566666666666667,-0.8264462809917356
+test_June,branch_sku_day,Product:Coffee Frappe,direct_sku_last_weekday,69.66824644549763,1.6333333333333333,-1.4218009478672986
+test_June,branch_sku_day,Product:Cold Brew,direct_sku_last_weekday,59.682539682539684,2.088888888888889,1.2698412698412698
+test_June,branch_sku_day,Product:Egg Sandwich,direct_sku_last_weekday,68.34170854271356,1.511111111111111,3.0150753768844223
+test_June,branch_sku_day,Product:English Breakfast Tea,direct_sku_last_weekday,108.42105263157895,1.1444444444444444,3.1578947368421053
+test_June,branch_sku_day,Product:Espresso,direct_sku_last_weekday,98.55072463768116,1.511111111111111,-5.797101449275362
+test_June,branch_sku_day,Product:Flat White,direct_sku_last_weekday,56.690140845070424,1.788888888888889,4.577464788732394
+test_June,branch_sku_day,Product:Fresh Orange Juice,direct_sku_last_weekday,69.86301369863014,1.7,-5.936073059360731
+test_June,branch_sku_day,Product:Frozen Yoghurt Cup,direct_sku_last_weekday,64.65517241379311,1.6666666666666667,-3.4482758620689653
+test_June,branch_sku_day,Product:Granola Yoghurt,direct_sku_last_weekday,114.28571428571429,1.3333333333333333,3.8095238095238093
+test_June,branch_sku_day,Product:Halloumi Wrap,direct_sku_last_weekday,70.1657458563536,1.4111111111111112,3.867403314917127
+test_June,branch_sku_day,Product:Iced Americano,direct_sku_last_weekday,50.985915492957744,2.011111111111111,-2.535211267605634
+test_June,branch_sku_day,Product:Iced Latte,direct_sku_last_weekday,52.98651252408478,3.0555555555555554,-1.348747591522158
+test_June,branch_sku_day,Product:Iced Matcha,direct_sku_last_weekday,66.5893271461717,3.188888888888889,3.480278422273782
+test_June,branch_sku_day,Product:Iced Mocha,direct_sku_last_weekday,64.84375,1.8444444444444446,-3.90625
+test_June,branch_sku_day,Product:Lemonade,direct_sku_last_weekday,80.0,1.7333333333333334,-3.076923076923077
+test_June,branch_sku_day,Product:Mint Tea,direct_sku_last_weekday,81.25,1.1555555555555554,0.0
+test_June,branch_sku_day,Product:Peach Iced Tea,direct_sku_last_weekday,66.5158371040724,1.6333333333333333,-4.97737556561086
+test_June,branch_sku_day,Product:Pistachio Cookie,direct_sku_last_weekday,67.65799256505576,2.022222222222222,-2.973977695167286
+test_June,branch_sku_day,Product:Quinoa Bowl,direct_sku_last_weekday,86.66666666666667,1.011111111111111,-12.380952380952381
+test_June,branch_sku_day,Product:Soup of the Day,direct_sku_last_weekday,122.58064516129032,1.2666666666666666,8.602150537634408
+test_June,branch_sku_day,Product:Spanish Latte,direct_sku_last_weekday,72.5,1.9333333333333333,5.833333333333333
+test_June,branch_sku_day,Product:Sparkling Water,direct_sku_last_weekday,83.49514563106796,1.9111111111111112,2.912621359223301
+test_June,branch_sku_day,Product:Still Water,direct_sku_last_weekday,73.39055793991416,1.9,-4.721030042918455
+test_June,branch_sku_day,Product:Strawberry Matcha,direct_sku_last_weekday,58.40978593272171,2.1222222222222222,-5.81039755351682
+test_June,branch_sku_day,Product:Tiramisu Cup,direct_sku_last_weekday,76.4957264957265,1.988888888888889,-4.700854700854701
+test_June,branch_sku_day,Product:Tuna Sandwich,direct_sku_last_weekday,90.1840490797546,1.6333333333333333,-7.975460122699387
+test_June,branch_sku_day,Product:Turkey & Cheese Sandwich,direct_sku_last_weekday,64.91228070175438,1.6444444444444444,-11.403508771929825
+test_June,branch_sku_day,Product:Vanilla Latte,direct_sku_last_weekday,56.16438356164384,1.8222222222222222,-1.36986301369863
+test_June,branch_sku_day,all,direct_sku_four_weekdays,54.88602306784125,1.4922222222222221,-4.454636272818091
+test_June,branch_sku_day,Branch:Garden,direct_sku_four_weekdays,55.28198653198653,1.4594444444444445,-3.388047138047138
+test_June,branch_sku_day,Branch:Harbour,direct_sku_four_weekdays,46.71355028497886,1.882037037037037,-5.235337378194521
+test_June,branch_sku_day,Branch:Uptown,direct_sku_four_weekdays,76.31972111553785,1.135185185185185,-4.233067729083666
+test_June,branch_sku_day,Category:Bakery,direct_sku_four_weekdays,50.187734668335416,1.6708333333333334,-4.276178556528994
+test_June,branch_sku_day,Category:Breakfast,direct_sku_four_weekdays,66.21900826446281,1.1870370370370371,1.962809917355372
+test_June,branch_sku_day,Category:Cold Coffee,direct_sku_four_weekdays,47.02596618357488,1.7305555555555556,-7.231280193236715
+test_June,branch_sku_day,Category:Cold Drinks,direct_sku_four_weekdays,59.21787709497207,1.4133333333333333,-5.400372439478585
+test_June,branch_sku_day,Category:Desserts,direct_sku_four_weekdays,52.90937178166838,1.4270833333333333,-8.522142121524201
+test_June,branch_sku_day,Category:Hot Coffee,direct_sku_four_weekdays,54.309851088201604,1.5051587301587301,-1.9616265750286368
+test_June,branch_sku_day,Category:Matcha & Tea,direct_sku_four_weekdays,55.98523748395379,1.6152777777777778,-3.3536585365853657
+test_June,branch_sku_day,Category:Meals,direct_sku_four_weekdays,85.078125,1.0083333333333333,-4.921875
+test_June,branch_sku_day,Category:Sandwiches,direct_sku_four_weekdays,61.95652173913044,1.3854166666666667,-4.316770186335404
+test_June,branch_sku_day,Product:Almond Croissant,direct_sku_four_weekdays,52.66798418972332,1.4805555555555556,-11.561264822134387
+test_June,branch_sku_day,Product:Americano,direct_sku_four_weekdays,56.63507109004739,1.3277777777777777,6.398104265402844
+test_June,branch_sku_day,Product:Avocado Toast,direct_sku_four_weekdays,62.083333333333336,1.2416666666666667,0.6944444444444444
+test_June,branch_sku_day,Product:Banana Bread,direct_sku_four_weekdays,55.893536121673,1.6333333333333333,-4.3726235741444865
+test_June,branch_sku_day,Product:Blueberry Muffin,direct_sku_four_weekdays,66.31016042780749,1.3777777777777778,1.0695187165775402
+test_June,branch_sku_day,Product:Brownie,direct_sku_four_weekdays,44.855595667870034,1.3805555555555555,-5.866425992779783
+test_June,branch_sku_day,Product:Butter Croissant,direct_sku_four_weekdays,40.775109170305676,2.075,-4.093886462882096
+test_June,branch_sku_day,Product:Cappuccino,direct_sku_four_weekdays,45.39274924471299,1.6694444444444445,-5.664652567975831
+test_June,branch_sku_day,Product:Caramel Latte,direct_sku_four_weekdays,54.0,1.5,-12.0
+test_June,branch_sku_day,Product:Chai Latte,direct_sku_four_weekdays,56.6588785046729,1.3472222222222223,-5.0233644859813085
+test_June,branch_sku_day,Product:Cheesecake Slice,direct_sku_four_weekdays,52.083333333333336,1.3194444444444444,0.32894736842105265
+test_June,branch_sku_day,Product:Chicken Pesto Sandwich,direct_sku_four_weekdays,66.52360515021459,1.7222222222222223,-2.1459227467811157
+test_June,branch_sku_day,Product:Chicken Salad Bowl,direct_sku_four_weekdays,78.07377049180327,1.0583333333333333,-7.581967213114754
+test_June,branch_sku_day,Product:Chocolate Cookie,direct_sku_four_weekdays,56.06312292358804,1.875,5.5647840531561465
+test_June,branch_sku_day,Product:Chocolate Croissant,direct_sku_four_weekdays,48.17251461988304,1.8305555555555555,-2.997076023391813
+test_June,branch_sku_day,Product:Cinnamon Roll,direct_sku_four_weekdays,40.58641975308642,1.461111111111111,-7.716049382716049
+test_June,branch_sku_day,Product:Classic Matcha,direct_sku_four_weekdays,52.06611570247934,2.1,2.479338842975207
+test_June,branch_sku_day,Product:Coffee Frappe,direct_sku_four_weekdays,57.22748815165877,1.3416666666666666,-9.834123222748815
+test_June,branch_sku_day,Product:Cold Brew,direct_sku_four_weekdays,46.82539682539682,1.6388888888888888,-7.4603174603174605
+test_June,branch_sku_day,Product:Egg Sandwich,direct_sku_four_weekdays,55.02512562814071,1.2166666666666666,-1.256281407035176
+test_June,branch_sku_day,Product:English Breakfast Tea,direct_sku_four_weekdays,89.73684210526316,0.9472222222222222,-7.105263157894737
+test_June,branch_sku_day,Product:Espresso,direct_sku_four_weekdays,76.26811594202898,1.1694444444444445,-9.601449275362318
+test_June,branch_sku_day,Product:Flat White,direct_sku_four_weekdays,51.76056338028169,1.6333333333333333,2.992957746478873
+test_June,branch_sku_day,Product:Fresh Orange Juice,direct_sku_four_weekdays,58.9041095890411,1.4333333333333333,-12.785388127853881
+test_June,branch_sku_day,Product:Frozen Yoghurt Cup,direct_sku_four_weekdays,54.0948275862069,1.3944444444444444,-11.206896551724139
+test_June,branch_sku_day,Product:Granola Yoghurt,direct_sku_four_weekdays,94.52380952380952,1.1027777777777779,10.238095238095237
+test_June,branch_sku_day,Product:Halloumi Wrap,direct_sku_four_weekdays,62.430939226519335,1.2555555555555555,7.734806629834254
+test_June,branch_sku_day,Product:Iced Americano,direct_sku_four_weekdays,42.394366197183096,1.6722222222222223,-9.71830985915493
+test_June,branch_sku_day,Product:Iced Latte,direct_sku_four_weekdays,44.7495183044316,2.5805555555555557,-2.9383429672447012
+test_June,branch_sku_day,Product:Iced Matcha,direct_sku_four_weekdays,49.071925754060324,2.35,-0.23201856148491878
+test_June,branch_sku_day,Product:Iced Mocha,direct_sku_four_weekdays,49.90234375,1.4194444444444445,-10.05859375
+test_June,branch_sku_day,Product:Lemonade,direct_sku_four_weekdays,63.07692307692308,1.3666666666666667,-5.128205128205129
+test_June,branch_sku_day,Product:Mint Tea,direct_sku_four_weekdays,76.5625,1.0888888888888888,-2.734375
+test_June,branch_sku_day,Product:Peach Iced Tea,direct_sku_four_weekdays,53.39366515837104,1.3111111111111111,-0.6787330316742082
+test_June,branch_sku_day,Product:Pistachio Cookie,direct_sku_four_weekdays,54.646840148698885,1.6333333333333333,-9.851301115241636
+test_June,branch_sku_day,Product:Quinoa Bowl,direct_sku_four_weekdays,82.14285714285714,0.9583333333333334,-11.19047619047619
+test_June,branch_sku_day,Product:Soup of the Day,direct_sku_four_weekdays,97.58064516129032,1.0083333333333333,5.645161290322581
+test_June,branch_sku_day,Product:Spanish Latte,direct_sku_four_weekdays,61.458333333333336,1.6388888888888888,9.583333333333334
+test_June,branch_sku_day,Product:Sparkling Water,direct_sku_four_weekdays,58.13106796116505,1.3305555555555555,-1.8203883495145632
+test_June,branch_sku_day,Product:Still Water,direct_sku_four_weekdays,62.76824034334764,1.625,-6.330472103004292
+test_June,branch_sku_day,Product:Strawberry Matcha,direct_sku_four_weekdays,51.14678899082569,1.8583333333333334,-12.003058103975535
+test_June,branch_sku_day,Product:Tiramisu Cup,direct_sku_four_weekdays,62.072649572649574,1.613888888888889,-17.628205128205128
+test_June,branch_sku_day,Product:Tuna Sandwich,direct_sku_four_weekdays,69.01840490797547,1.25,-9.50920245398773
+test_June,branch_sku_day,Product:Turkey & Cheese Sandwich,direct_sku_four_weekdays,51.8640350877193,1.3138888888888889,-12.390350877192983
+test_June,branch_sku_day,Product:Vanilla Latte,direct_sku_four_weekdays,49.22945205479452,1.5972222222222223,-5.907534246575342
+test_June,branch_sku_day,all,last_weekday,54.43568329797162,1.4799785402320134,-1.2169648533284902
+test_June,branch_sku_day,Branch:Garden,last_weekday,55.561509939712295,1.4668238624084047,-0.056116722783390645
+test_June,branch_sku_day,Branch:Harbour,last_weekday,45.68194544952659,1.8404748244442601,-1.6914874057731204
+test_June,branch_sku_day,Branch:Uptown,last_weekday,76.14839943668115,1.1326369338433757,-1.9920318725099597
+test_June,branch_sku_day,Category:Bakery,last_weekday,46.41585960334445,1.5452613259613424,-0.876095118898624
+test_June,branch_sku_day,Category:Breakfast,last_weekday,70.24381641289496,1.2591854497718948,1.859504132231405
+test_June,branch_sku_day,Category:Cold Coffee,last_weekday,47.30757067498114,1.7409186008393058,-1.5096618357487914
+test_June,branch_sku_day,Category:Cold Drinks,last_weekday,57.72160112896832,1.3776222136113772,-3.258845437616387
+test_June,branch_sku_day,Category:Desserts,last_weekday,54.340651907095676,1.4656881389386083,-1.5447991761071065
+test_June,branch_sku_day,Category:Hot Coffee,last_weekday,54.92279149850857,1.5221459358158091,0.6300114547537234
+test_June,branch_sku_day,Category:Matcha & Tea,last_weekday,55.10793407176091,1.5899659497000647,-0.8344030808729148
+test_June,branch_sku_day,Category:Meals,last_weekday,87.8096620586921,1.040707105880795,-5.3125
+test_June,branch_sku_day,Category:Sandwiches,last_weekday,63.581278794852274,1.4217480397182245,-3.4782608695652173
+test_June,branch_sku_day,Product:Almond Croissant,last_weekday,44.97481861214094,1.2642921232079622,-6.582137929970577
+test_June,branch_sku_day,Product:Americano,last_weekday,57.180139394172755,1.3405566013522723,8.479432392632587
+test_June,branch_sku_day,Product:Avocado Toast,last_weekday,66.1018242452069,1.322036484904138,0.806597409430263
+test_June,branch_sku_day,Product:Banana Bread,last_weekday,54.2945812758886,1.5866083195065224,-0.8631177670067853
+test_June,branch_sku_day,Product:Blueberry Muffin,last_weekday,63.12591515933625,1.3116162371995421,4.018720040309975
+test_June,branch_sku_day,Product:Brownie,last_weekday,49.968217100476316,1.5379106818702155,0.8385945522266732
+test_June,branch_sku_day,Product:Butter Croissant,last_weekday,37.82386821284151,1.9248146268312678,-0.9404429654247822
+test_June,branch_sku_day,Product:Cappuccino,last_weekday,46.9758971302273,1.7276691055672484,-3.4151511304587743
+test_June,branch_sku_day,Product:Caramel Latte,last_weekday,55.33091024510463,1.5369697290306843,-8.82866033641838
+test_June,branch_sku_day,Product:Chai Latte,last_weekday,55.20111911679742,1.3125599434438497,-1.692933587652888
+test_June,branch_sku_day,Product:Cheesecake Slice,last_weekday,50.45335104134959,1.2781515597141897,6.137811149199041
+test_June,branch_sku_day,Product:Chicken Pesto Sandwich,last_weekday,69.0906692450757,1.7886806593447377,-1.7927406995221384
+test_June,branch_sku_day,Product:Chicken Salad Bowl,last_weekday,80.27521371207504,1.0881751192081284,-9.378119420637313
+test_June,branch_sku_day,Product:Chocolate Cookie,last_weekday,49.65243947925289,1.6605982536950135,8.15710061050357
+test_June,branch_sku_day,Product:Chocolate Croissant,last_weekday,47.794156128672036,1.8161779328895373,0.29298573364928404
+test_June,branch_sku_day,Product:Cinnamon Roll,last_weekday,37.23959120907561,1.340625283526722,-4.195063216663917
+test_June,branch_sku_day,Product:Classic Matcha,last_weekday,50.479163416374405,2.0359929244604342,3.0167348928619875
+test_June,branch_sku_day,Product:Coffee Frappe,last_weekday,55.04121837306452,1.290410786301846,-1.9022489576471153
+test_June,branch_sku_day,Product:Cold Brew,last_weekday,48.303448732633896,1.6906207056421863,-1.4288384771830818
+test_June,branch_sku_day,Product:Egg Sandwich,last_weekday,61.68591259036642,1.3639440672758798,-1.13477336422707
+test_June,branch_sku_day,Product:English Breakfast Tea,last_weekday,81.48929284215569,0.86016475777831,-0.4526754228378818
+test_June,branch_sku_day,Product:Espresso,last_weekday,78.7539802782299,1.2075610309328584,-2.8115683270612966
+test_June,branch_sku_day,Product:Flat White,last_weekday,54.92047490551861,1.733046097018587,4.69442646216244
+test_June,branch_sku_day,Product:Fresh Orange Juice,last_weekday,57.27736281792612,1.3937491619028688,-8.711904746060165
+test_June,branch_sku_day,Product:Frozen Yoghurt Cup,last_weekday,55.88453082267721,1.440579016762346,-3.4584216981710814
+test_June,branch_sku_day,Product:Granola Yoghurt,last_weekday,93.56363975448568,1.0915757971356663,9.339355864607047
+test_June,branch_sku_day,Product:Halloumi Wrap,last_weekday,64.78929804901935,1.3029847718747227,7.786624599471195
+test_June,branch_sku_day,Product:Iced Americano,last_weekday,39.90006372155465,1.5738358467946556,-4.426449129542053
+test_June,branch_sku_day,Product:Iced Latte,last_weekday,47.26289741192919,2.725493750754583,1.6074891793309654
+test_June,branch_sku_day,Product:Iced Matcha,last_weekday,50.977625968029095,2.441261865802282,1.938406877855263
+test_June,branch_sku_day,Product:Iced Mocha,last_weekday,50.070653251286444,1.424231914703259,-3.5603077840200337
+test_June,branch_sku_day,Product:Lemonade,last_weekday,65.26078514720996,1.4139836781895492,-4.0466486251892935
+test_June,branch_sku_day,Product:Mint Tea,last_weekday,73.96099836933787,1.0518897545861385,0.5730472267402489
+test_June,branch_sku_day,Product:Peach Iced Tea,last_weekday,49.177809844981134,1.207588441748981,-0.5247218899344164
+test_June,branch_sku_day,Product:Pistachio Cookie,last_weekday,48.75918393125477,1.4573578308341704,-6.411839490106305
+test_June,branch_sku_day,Product:Quinoa Bowl,last_weekday,83.69838079638446,0.976481109291152,-11.078647751414112
+test_June,branch_sku_day,Product:Soup of the Day,last_weekday,102.33533120739727,1.0574650891431052,6.531060034583161
+test_June,branch_sku_day,Product:Spanish Latte,last_weekday,59.04761661413623,1.5746031097102995,11.1099133671165
+test_June,branch_sku_day,Product:Sparkling Water,last_weekday,60.560168293516114,1.3861549631627021,1.0434265412983608
+test_June,branch_sku_day,Product:Still Water,last_weekday,57.423662693025996,1.4866348230527842,-3.87115325550587
+test_June,branch_sku_day,Product:Strawberry Matcha,last_weekday,50.58513170998273,1.8379264521293726,-8.864178050642067
+test_June,branch_sku_day,Product:Tiramisu Cup,last_weekday,61.773511438757005,1.606111297407682,-9.954520508583245
+test_June,branch_sku_day,Product:Tuna Sandwich,last_weekday,62.39178553294275,1.129984560207741,-6.672436912351317
+test_June,branch_sku_day,Product:Turkey & Cheese Sandwich,last_weekday,57.84245397811959,1.4653421674456963,-11.859926547378787
+test_June,branch_sku_day,Product:Vanilla Latte,last_weekday,47.29980443112477,1.5346158770987146,-3.2985617150228106
+test_June,branch_sku_day,all,four_weekdays,50.95391537346888,1.3853174374747306,-4.454636272818091
+test_June,branch_sku_day,Branch:Garden,four_weekdays,51.692463654095995,1.3646810404681342,-3.388047138047138
+test_June,branch_sku_day,Branch:Harbour,four_weekdays,42.83878712203303,1.725927134494353,-5.235337378194521
+test_June,branch_sku_day,Branch:Uptown,four_weekdays,71.62423234926797,1.0653441374617043,-4.233067729083666
+test_June,branch_sku_day,Category:Bakery,four_weekdays,45.275346391697646,1.5072917402902675,-4.276178556528994
+test_June,branch_sku_day,Category:Breakfast,four_weekdays,63.97590855160207,1.1468273977398296,1.9628099173553726
+test_June,branch_sku_day,Category:Cold Coffee,four_weekdays,43.72576544436475,1.6091081683526227,-7.231280193236715
+test_June,branch_sku_day,Category:Cold Drinks,four_weekdays,54.27500326841985,1.2953634113396204,-5.400372439478585
+test_June,branch_sku_day,Category:Desserts,four_weekdays,49.477662745616485,1.3345225146109334,-8.522142121524201
+test_June,branch_sku_day,Category:Hot Coffee,four_weekdays,51.20173930495157,1.4190196321658006,-1.9616265750286368
+test_June,branch_sku_day,Category:Matcha & Tea,four_weekdays,51.443166313194766,1.4842306132584713,-3.3536585365853657
+test_June,branch_sku_day,Category:Meals,four_weekdays,81.69388312231185,0.9682237999681403,-4.921874999999998
+test_June,branch_sku_day,Category:Sandwiches,four_weekdays,58.54838879963225,1.30920702732511,-4.316770186335405
+test_June,branch_sku_day,Product:Almond Croissant,four_weekdays,46.17066990156926,1.2979088316774472,-9.819909281709005
+test_June,branch_sku_day,Product:Americano,four_weekdays,53.46376774948437,1.2534283327934668,5.48425247345965
+test_June,branch_sku_day,Product:Avocado Toast,four_weekdays,59.66550585674117,1.1933101171348235,1.2299033543528484
+test_June,branch_sku_day,Product:Banana Bread,four_weekdays,52.23760911565767,1.5264990219353296,-4.28089979897465
+test_June,branch_sku_day,Product:Blueberry Muffin,four_weekdays,62.06555494434505,1.2895843082880585,0.473101176912701
+test_June,branch_sku_day,Product:Brownie,four_weekdays,43.799017035061986,1.348036413190241,-6.229267414841202
+test_June,branch_sku_day,Product:Butter Croissant,four_weekdays,35.56753898720998,1.8099925395713525,-4.408282872193133
+test_June,branch_sku_day,Product:Cappuccino,four_weekdays,45.86513934928814,1.6868179027349306,-5.979658683089654
+test_June,branch_sku_day,Product:Caramel Latte,four_weekdays,47.647755284934455,1.3235487579148462,-10.927471642729023
+test_June,branch_sku_day,Product:Chai Latte,four_weekdays,53.69436918508595,1.2767327784009326,-4.298849370954958
+test_June,branch_sku_day,Product:Cheesecake Slice,four_weekdays,47.16372871124317,1.194814460684827,-1.2079259852497737
+test_June,branch_sku_day,Product:Chicken Pesto Sandwich,four_weekdays,62.352573201683875,1.6142388395547047,-2.5909084474444097
+test_June,branch_sku_day,Product:Chicken Salad Bowl,four_weekdays,78.62859198187792,1.0658542468654562,-8.704570760734212
+test_June,branch_sku_day,Product:Chocolate Cookie,four_weekdays,48.14604860278013,1.610217847715202,4.537272452748597
+test_June,branch_sku_day,Product:Chocolate Croissant,four_weekdays,43.85348954164552,1.6664326025825298,-3.2373709272744238
+test_June,branch_sku_day,Product:Cinnamon Roll,four_weekdays,37.41570379481452,1.3469653366133227,-7.523739921630021
+test_June,branch_sku_day,Product:Classic Matcha,four_weekdays,45.402231807070386,1.8312233495518389,0.22590159596442091
+test_June,branch_sku_day,Product:Coffee Frappe,four_weekdays,52.04726241699794,1.2202191522207295,-7.469247737236078
+test_June,branch_sku_day,Product:Cold Brew,four_weekdays,42.68711689489759,1.4940490913214157,-7.240722851693011
+test_June,branch_sku_day,Product:Egg Sandwich,four_weekdays,55.776904998181195,1.2332893438486732,-1.1623592190357113
+test_June,branch_sku_day,Product:English Breakfast Tea,four_weekdays,78.81389274967987,0.8319244234688431,-2.7365237417179635
+test_June,branch_sku_day,Product:Espresso,four_weekdays,72.55132109771048,1.112453590164894,-5.914897619306096
+test_June,branch_sku_day,Product:Flat White,four_weekdays,50.69219853930714,1.5996204872403588,2.1087825488372465
+test_June,branch_sku_day,Product:Fresh Orange Juice,four_weekdays,52.943411445523715,1.2882896785077438,-11.393332778879016
+test_June,branch_sku_day,Product:Frozen Yoghurt Cup,four_weekdays,50.77375653988954,1.3088346130282638,-10.229669864570289
+test_June,branch_sku_day,Product:Granola Yoghurt,four_weekdays,86.9042341916565,1.0138827322359925,9.142160769567566
+test_June,branch_sku_day,Product:Halloumi Wrap,four_weekdays,57.32387736805412,1.152846867068644,6.494723269779536
+test_June,branch_sku_day,Product:Iced Americano,four_weekdays,38.56206342726528,1.5210591685199082,-9.771370798697928
+test_June,branch_sku_day,Product:Iced Latte,four_weekdays,42.702493482591244,2.4625104574960948,-4.4622716843672725
+test_June,branch_sku_day,Product:Iced Matcha,four_weekdays,45.803942371010244,2.1934999068783796,-0.5568621149480889
+test_June,branch_sku_day,Product:Iced Mocha,four_weekdays,47.3801826165808,1.347702972204965,-9.114864810294959
+test_June,branch_sku_day,Product:Lemonade,four_weekdays,59.71763663013412,1.2938821269862393,-6.104846839512563
+test_June,branch_sku_day,Product:Mint Tea,four_weekdays,70.22382959922807,0.9987389098556881,-1.6115714495206233
+test_June,branch_sku_day,Product:Peach Iced Tea,four_weekdays,49.87763545762809,1.2247730484595343,-2.202498231889003
+test_June,branch_sku_day,Product:Pistachio Cookie,four_weekdays,50.544984778624865,1.5107334339388987,-9.40523823701434
+test_June,branch_sku_day,Product:Quinoa Bowl,four_weekdays,74.59903025784813,0.8703220196748948,-10.787874952756205
+test_June,branch_sku_day,Product:Soup of the Day,four_weekdays,93.72533548684547,0.9684951333640699,6.66327422418253
+test_June,branch_sku_day,Product:Spanish Latte,four_weekdays,55.19716972687958,1.4719245260501221,8.34116176737012
+test_June,branch_sku_day,Product:Sparkling Water,four_weekdays,55.12197427391554,1.2616807444918445,-1.0304565309245979
+test_June,branch_sku_day,Product:Still Water,four_weekdays,54.39366147757366,1.4081914582527402,-6.074630184989737
+test_June,branch_sku_day,Product:Strawberry Matcha,four_weekdays,48.80543976316914,1.7732643113951452,-11.256238658734715
+test_June,branch_sku_day,Product:Tiramisu Cup,four_weekdays,57.16940659770779,1.4864045715404024,-16.67009569603304
+test_June,branch_sku_day,Product:Tuna Sandwich,four_weekdays,63.95839657319106,1.1583576268255715,-7.107960629995092
+test_June,branch_sku_day,Product:Turkey & Cheese Sandwich,four_weekdays,51.76518852045474,1.31138477585152,-12.667831845992758
+test_June,branch_sku_day,Product:Vanilla Latte,four_weekdays,45.78114539163656,1.4853438282619862,-5.669724430443223
+test_June,branch_sku_day,all,internal,50.234261976457375,1.365751749685857,-0.4706355947659195
+test_June,branch_sku_day,Branch:Garden,internal,51.18152591977734,1.3511922842821218,-0.10719858799878605
+test_June,branch_sku_day,Branch:Harbour,internal,41.9488790503632,1.690073727073522,-0.8118917065716507
+test_June,branch_sku_day,Branch:Uptown,internal,70.99529237537857,1.055989237701927,-0.1913514812234364
+test_June,branch_sku_day,Category:Bakery,internal,44.777726149173915,1.4907251330495817,1.8461823338002155
+test_June,branch_sku_day,Category:Breakfast,internal,63.51155799720908,1.1385034840981183,-0.8088443287674576
+test_June,branch_sku_day,Category:Cold Coffee,internal,43.204253956999395,1.5899165456175777,-0.7713074419144141
+test_June,branch_sku_day,Category:Cold Drinks,internal,52.896054667578795,1.2624525047328805,-3.2410265811948746
+test_June,branch_sku_day,Category:Desserts,internal,48.36830364367219,1.3046006343890473,-4.874320211785806
+test_June,branch_sku_day,Category:Hot Coffee,internal,50.71617977830112,1.4055626967129167,3.6314443863795915
+test_June,branch_sku_day,Category:Matcha & Tea,internal,50.891765456592594,1.4683216774328012,-0.20382480082552384
+test_June,branch_sku_day,Category:Meals,internal,78.87254524525927,0.9347857214252951,-11.61567020814456
+test_June,branch_sku_day,Category:Sandwiches,internal,57.95824834286799,1.2960108310002425,-2.522736307617349
+test_June,branch_sku_day,Product:Almond Croissant,internal,45.907323696001725,1.2905058772320483,-3.925687178505758
+test_June,branch_sku_day,Product:Americano,internal,53.61765219076888,1.257036068028026,11.57835480477751
+test_June,branch_sku_day,Product:Avocado Toast,internal,58.69425802875019,1.1738851605750038,-1.5969328525085154
+test_June,branch_sku_day,Product:Banana Bread,internal,53.12402751452147,1.5524021373687942,1.8829298134605539
+test_June,branch_sku_day,Product:Blueberry Muffin,internal,62.60979013008326,1.3008923060361743,7.010397116214267
+test_June,branch_sku_day,Product:Brownie,internal,42.27446841531204,1.3011141945601596,-2.4929283734492826
+test_June,branch_sku_day,Product:Butter Croissant,internal,34.613171000810596,1.7614258131523615,1.7073311542418117
+test_June,branch_sku_day,Product:Cappuccino,internal,44.39266823185797,1.6326636871938875,-0.5838241216085002
+test_June,branch_sku_day,Product:Caramel Latte,internal,48.22808294620657,1.33966897072796,-5.964377816414801
+test_June,branch_sku_day,Product:Chai Latte,internal,53.08689877939573,1.2622884820878542,-1.2162242097770533
+test_June,branch_sku_day,Product:Cheesecake Slice,internal,44.58946770247323,1.129599848462655,2.6632827219787774
+test_June,branch_sku_day,Product:Chicken Pesto Sandwich,internal,61.39759635026266,1.5895155499568,-0.8603067646703009
+test_June,branch_sku_day,Product:Chicken Salad Bowl,internal,80.05076757467137,1.0851326271233233,-15.142442023281241
+test_June,branch_sku_day,Product:Chocolate Cookie,internal,47.09645420474125,1.5751147461807906,11.161416362286673
+test_June,branch_sku_day,Product:Chocolate Croissant,internal,43.40338325527036,1.6493285637002737,2.9149761748803074
+test_June,branch_sku_day,Product:Cinnamon Roll,internal,36.27503931877043,1.3059014154757353,-1.6091681670103302
+test_June,branch_sku_day,Product:Classic Matcha,internal,45.36287247794782,1.8296358566105622,3.504283616249213
+test_June,branch_sku_day,Product:Coffee Frappe,internal,51.96330462939114,1.2182508085335035,-1.10228454782258
+test_June,branch_sku_day,Product:Cold Brew,internal,41.82083461147564,1.4637292114016476,-0.7450750420050933
+test_June,branch_sku_day,Product:Egg Sandwich,internal,56.971218456166696,1.259696941419686,-3.8436681259726653
+test_June,branch_sku_day,Product:English Breakfast Tea,internal,78.40685999026479,0.8276279665639061,0.45109263502699354
+test_June,branch_sku_day,Product:Espresso,internal,72.08044324573201,1.1052334631012242,-0.49650314039205035
+test_June,branch_sku_day,Product:Flat White,internal,48.74539386345571,1.5381879841357136,7.924607841811063
+test_June,branch_sku_day,Product:Fresh Orange Juice,internal,50.5969760852442,1.2311930847409422,-9.137859613008407
+test_June,branch_sku_day,Product:Frozen Yoghurt Cup,internal,49.50599601485843,1.2761545639385727,-6.7175388078928915
+test_June,branch_sku_day,Product:Granola Yoghurt,internal,84.1652871685427,0.9819283502996649,6.293878241872793
+test_June,branch_sku_day,Product:Halloumi Wrap,internal,56.400075636849984,1.1342681878077607,8.626464259307424
+test_June,branch_sku_day,Product:Iced Americano,internal,37.45779618079915,1.4775019604648554,-3.5697830308498633
+test_June,branch_sku_day,Product:Iced Latte,internal,42.389494046918884,2.444460823372322,2.2467025908145875
+test_June,branch_sku_day,Product:Iced Matcha,internal,45.74214871513287,2.19054067735803,2.712540549448386
+test_June,branch_sku_day,Product:Iced Mocha,internal,47.307653589218845,1.3456399243155583,-2.7686332604264488
+test_June,branch_sku_day,Product:Lemonade,internal,58.85172182680086,1.2751206395806853,-3.9596572449833345
+test_June,branch_sku_day,Product:Mint Tea,internal,67.4958441100531,0.9599408940096441,1.606551115929026
+test_June,branch_sku_day,Product:Peach Iced Tea,internal,48.26854662165954,1.1852609781540842,-0.07756154457924197
+test_June,branch_sku_day,Product:Pistachio Cookie,internal,49.859003149644124,1.4902302052504741,-3.7351384787356006
+test_June,branch_sku_day,Product:Quinoa Bowl,internal,69.33412413786678,0.8088981149417792,-16.22131473103114
+test_June,branch_sku_day,Product:Soup of the Day,internal,88.09610537523704,0.9103264222107827,-1.7892311076094491
+test_June,branch_sku_day,Product:Spanish Latte,internal,55.44444566047513,1.4785185509460035,14.504420488833409
+test_June,branch_sku_day,Product:Sparkling Water,internal,54.359677864831006,1.2442326266839099,1.083486939956389
+test_June,branch_sku_day,Product:Still Water,internal,53.16779721263102,1.376455194504781,-3.921010036316335
+test_June,branch_sku_day,Product:Strawberry Matcha,internal,47.887051044958085,1.7398961879668102,-8.400426090125615
+test_June,branch_sku_day,Product:Tiramisu Cup,internal,58.135920407492364,1.5115339305948015,-13.210184715293057
+test_June,branch_sku_day,Product:Tuna Sandwich,internal,62.11114372234712,1.12490182519362,-5.429556294259931
+test_June,branch_sku_day,Product:Turkey & Cheese Sandwich,internal,52.71149056747854,1.3353577610427898,-10.994401782605527
+test_June,branch_sku_day,Product:Vanilla Latte,internal,45.85161430040552,1.4876301528576013,-0.27850286936106833
+test_June,branch_sku_day,all,calendar,50.40928623489094,1.3705102487219363,-0.8198364151829522
+test_June,branch_sku_day,Branch:Garden,calendar,51.35469255675917,1.3557638834984422,-0.42934485209371875
+test_June,branch_sku_day,Branch:Harbour,calendar,42.11364052447102,1.6967117837970216,-1.2994478442802846
+test_June,branch_sku_day,Branch:Uptown,calendar,71.20141217504806,1.0590550788703446,-0.2138131920702197
+test_June,branch_sku_day,Category:Bakery,calendar,44.76909703278833,1.490437855383245,1.1367564985200458
+test_June,branch_sku_day,Category:Breakfast,calendar,64.26920046154217,1.1520849267920892,0.4737372582526097
+test_June,branch_sku_day,Category:Cold Coffee,calendar,43.13277667685104,1.5872861817081179,-0.23058587064983035
+test_June,branch_sku_day,Category:Cold Drinks,calendar,53.72911015131694,1.2823347622780976,-5.227600572399944
+test_June,branch_sku_day,Category:Desserts,calendar,48.55314066418827,1.3095860995813002,-5.887877274911982
+test_June,branch_sku_day,Category:Hot Coffee,calendar,51.24579257985975,1.420240537213256,3.640846993053462
+test_June,branch_sku_day,Category:Matcha & Tea,calendar,50.71163171292194,1.463124485346896,-0.9745698215605527
+test_June,branch_sku_day,Category:Meals,calendar,79.34500467456131,0.9403852405873934,-10.667809465500271
+test_June,branch_sku_day,Category:Sandwiches,calendar,57.74722050691978,1.2912920141130673,-2.1027713241652464
+test_June,branch_sku_day,Product:Almond Croissant,calendar,45.801553537399734,1.2875325605513481,-4.592414589489235
+test_June,branch_sku_day,Product:Americano,calendar,54.33629303084252,1.2738842032786413,11.584902144407204
+test_June,branch_sku_day,Product:Avocado Toast,calendar,59.29846855797762,1.1859693711595525,-0.3121432322650957
+test_June,branch_sku_day,Product:Banana Bread,calendar,53.166423908538285,1.5536410542161743,1.181692275358421
+test_June,branch_sku_day,Product:Blueberry Muffin,calendar,62.59853935376007,1.3006585399059036,6.230530275817158
+test_June,branch_sku_day,Product:Brownie,calendar,42.28378945532277,1.3014010754582674,-3.5507659609106836
+test_June,branch_sku_day,Product:Butter Croissant,calendar,34.805284232879174,1.7712022420731848,0.9857233359351487
+test_June,branch_sku_day,Product:Cappuccino,calendar,45.191829384899016,1.6620550584890639,-0.5820707298928557
+test_June,branch_sku_day,Product:Caramel Latte,calendar,48.40032620457722,1.3444535056827005,-5.945886450364175
+test_June,branch_sku_day,Product:Chai Latte,calendar,53.109806107340766,1.2628331674412139,-1.9662918229261743
+test_June,branch_sku_day,Product:Cheesecake Slice,calendar,44.81336686857212,1.1352719606704937,1.5611296807672876
+test_June,branch_sku_day,Product:Chicken Pesto Sandwich,calendar,59.42320936452966,1.53840086465949,-0.4251240340699067
+test_June,branch_sku_day,Product:Chicken Salad Bowl,calendar,80.59867939945975,1.0925598763037878,-14.322332239566425
+test_June,branch_sku_day,Product:Chocolate Cookie,calendar,47.09998131374749,1.5752327083819995,10.39387586862146
+test_June,branch_sku_day,Product:Chocolate Croissant,calendar,43.342769892657444,1.6470252559209828,2.2064878882283323
+test_June,branch_sku_day,Product:Cinnamon Roll,calendar,36.00379699353846,1.2961366917673844,-2.2946096686956317
+test_June,branch_sku_day,Product:Classic Matcha,calendar,45.19349012908641,1.822804101873152,2.6984622861386196
+test_June,branch_sku_day,Product:Coffee Frappe,calendar,52.2299986615908,1.2245033019550733,-0.5533094508999613
+test_June,branch_sku_day,Product:Cold Brew,calendar,41.745667944283035,1.461098378049906,-0.20143090931889834
+test_June,branch_sku_day,Product:Egg Sandwich,calendar,57.9364416141822,1.2810390979135842,-2.6265958280813826
+test_June,branch_sku_day,Product:English Breakfast Tea,calendar,78.47415460261098,0.8283382985831159,-0.32093448751783366
+test_June,branch_sku_day,Product:Espresso,calendar,71.16249245788369,1.0911582176875498,-0.5371472434652738
+test_June,branch_sku_day,Product:Flat White,calendar,49.715408777518896,1.5687973436461518,7.940466826697458
+test_June,branch_sku_day,Product:Fresh Orange Juice,calendar,51.44786320537807,1.2518980046641999,-11.019326194329551
+test_June,branch_sku_day,Product:Frozen Yoghurt Cup,calendar,49.443130828065634,1.2745340391234696,-7.7079354289811945
+test_June,branch_sku_day,Product:Granola Yoghurt,calendar,84.79254096883983,0.9892463113031313,7.696830329430249
+test_June,branch_sku_day,Product:Halloumi Wrap,calendar,57.064164453061245,1.1476237517782317,9.129366686850146
+test_June,branch_sku_day,Product:Iced Americano,calendar,37.42497840673356,1.4762074815989346,-3.0563537063314965
+test_June,branch_sku_day,Product:Iced Latte,calendar,42.12464967886423,2.4291881314811707,2.8074644764148102
+test_June,branch_sku_day,Product:Iced Matcha,calendar,45.54351690240079,2.181028420548304,1.9087118825223517
+test_June,branch_sku_day,Product:Iced Mocha,calendar,47.30040054335763,1.345433615455506,-2.2410924559858545
+test_June,branch_sku_day,Product:Lemonade,calendar,58.87406549775891,1.2756047524514431,-5.964181834358047
+test_June,branch_sku_day,Product:Mint Tea,calendar,67.08384268443375,0.9540813181786133,0.8149478200882114
+test_June,branch_sku_day,Product:Peach Iced Tea,calendar,49.91434261551857,1.2256744131144006,-2.1554636297306926
+test_June,branch_sku_day,Product:Pistachio Cookie,calendar,49.920684432122044,1.4920737902489811,-4.388071603471409
+test_June,branch_sku_day,Product:Quinoa Bowl,calendar,69.21663777825445,0.8075274407463019,-15.24249441496527
+test_June,branch_sku_day,Product:Soup of the Day,calendar,89.13565206891195,0.9210684047120902,-0.7087374425981617
+test_June,branch_sku_day,Product:Spanish Latte,calendar,55.83437954014378,1.4889167877371674,14.525130088426469
+test_June,branch_sku_day,Product:Sparkling Water,calendar,55.760136260023316,1.2762875632849782,-0.9283161183537647
+test_June,branch_sku_day,Product:Still Water,calendar,53.390050218365694,1.3822090778754674,-5.882422909648887
+test_June,branch_sku_day,Product:Strawberry Matcha,calendar,47.60536528780671,1.7296616054569771,-9.093622347944004
+test_June,branch_sku_day,Product:Tiramisu Cup,calendar,58.73605088742194,1.5271373230729703,-14.107962437857175
+test_June,branch_sku_day,Product:Tuna Sandwich,calendar,62.84224255538795,1.1381428373920264,-4.988513830654164
+test_June,branch_sku_day,Product:Turkey & Cheese Sandwich,calendar,52.93423431404687,1.3410006026225207,-10.670897508499923
+test_June,branch_sku_day,Product:Vanilla Latte,calendar,46.615643136108446,1.5124186439715184,-0.2580683521206115
+test_June,branch_sku_day,all,calendar_lag_weather,50.431831062571895,1.3711231897036522,-0.5320905569593277
+test_June,branch_sku_day,Branch:Garden,calendar_lag_weather,51.350354351506155,1.3556493548797623,0.009320486699508758
+test_June,branch_sku_day,Branch:Harbour,calendar_lag_weather,42.08732308780414,1.6956514835153091,-1.4954786979179462
+test_June,branch_sku_day,Branch:Uptown,calendar_lag_weather,71.40402323040064,1.0620687307158851,1.1164548310256488
+test_June,branch_sku_day,Category:Bakery,calendar_lag_weather,44.73368228860284,1.4892588395247364,0.5437546586670471
+test_June,branch_sku_day,Category:Breakfast,calendar_lag_weather,64.97472732481181,1.1647321490818117,4.113554755455428
+test_June,branch_sku_day,Category:Cold Coffee,calendar_lag_weather,43.160829290418185,1.588318517887389,0.5575784899287234
+test_June,branch_sku_day,Category:Cold Drinks,calendar_lag_weather,53.67640701774552,1.2810769141568596,-5.749241792830195
+test_June,branch_sku_day,Category:Desserts,calendar_lag_weather,48.43515290888085,1.3064037076256474,-4.8088708582044735
+test_June,branch_sku_day,Category:Hot Coffee,calendar_lag_weather,51.24450994361567,1.42020498986592,3.63047239219662
+test_June,branch_sku_day,Category:Matcha & Tea,calendar_lag_weather,50.65714027918879,1.4615523065736322,-1.4667789060476988
+test_June,branch_sku_day,Category:Meals,calendar_lag_weather,80.00053581425881,0.9481544985393637,-5.042474184044213
+test_June,branch_sku_day,Category:Sandwiches,calendar_lag_weather,57.73943983277365,1.2911180295939662,-2.0775301290796575
+test_June,branch_sku_day,Product:Almond Croissant,calendar_lag_weather,45.700777874251465,1.2846996446872911,-5.190451552637475
+test_June,branch_sku_day,Product:Americano,calendar_lag_weather,54.20232944734649,1.27074350148779,11.524704357403092
+test_June,branch_sku_day,Product:Avocado Toast,calendar_lag_weather,60.06122480473074,1.2012244960946148,3.3194472835605255
+test_June,branch_sku_day,Product:Banana Bread,calendar_lag_weather,53.30669633417452,1.5577401262097665,0.6027585441196152
+test_June,branch_sku_day,Product:Blueberry Muffin,calendar_lag_weather,62.4859481236268,1.298319144346468,5.5676123713496795
+test_June,branch_sku_day,Product:Brownie,calendar_lag_weather,42.078225000289116,1.2950742583422317,-2.4610882862903014
+test_June,branch_sku_day,Product:Butter Croissant,calendar_lag_weather,34.727498865469116,1.767243831153873,0.3756514246173343
+test_June,branch_sku_day,Product:Cappuccino,calendar_lag_weather,45.21175745569327,1.6627879686482745,-0.572862252345593
+test_June,branch_sku_day,Product:Caramel Latte,calendar_lag_weather,48.42395577341184,1.3451098825947734,-5.923399580770365
+test_June,branch_sku_day,Product:Chai Latte,calendar_lag_weather,53.16082681982382,1.2640463266046995,-2.4197777492442496
+test_June,branch_sku_day,Product:Cheesecake Slice,calendar_lag_weather,44.70631169462489,1.1325598962638306,2.7620249072205936
+test_June,branch_sku_day,Product:Chicken Pesto Sandwich,calendar_lag_weather,59.37410868054233,1.5371297025073736,-0.424777250441335
+test_June,branch_sku_day,Product:Chicken Salad Bowl,calendar_lag_weather,80.587989830888,1.0924149732631485,-8.97236464605775
+test_June,branch_sku_day,Product:Chocolate Cookie,calendar_lag_weather,46.92896767480951,1.5695132522352961,9.769514122206083
+test_June,branch_sku_day,Product:Chocolate Croissant,calendar_lag_weather,43.343315727910415,1.6470459976605958,1.6171605711187782
+test_June,branch_sku_day,Product:Cinnamon Roll,calendar_lag_weather,36.009085268226436,1.2963270696561517,-2.863192733363574
+test_June,branch_sku_day,Product:Classic Matcha,calendar_lag_weather,45.10537450470376,1.8192501050230516,2.1974891758501123
+test_June,branch_sku_day,Product:Coffee Frappe,calendar_lag_weather,52.08921307936168,1.2212026621939236,0.25493957628469216
+test_June,branch_sku_day,Product:Cold Brew,calendar_lag_weather,41.65410063088906,1.457893522081117,0.5236521194986453
+test_June,branch_sku_day,Product:Egg Sandwich,calendar_lag_weather,58.5331665939105,1.2942333502431322,0.8509091808141429
+test_June,branch_sku_day,Product:English Breakfast Tea,calendar_lag_weather,78.63406459012413,0.8300262373401992,-0.8240319454085278
+test_June,branch_sku_day,Product:Espresso,calendar_lag_weather,71.10960117138634,1.0903472179612572,-0.6191609314594057
+test_June,branch_sku_day,Product:Flat White,calendar_lag_weather,49.69775008087111,1.5682401136630437,7.9519457729982514
+test_June,branch_sku_day,Product:Fresh Orange Juice,calendar_lag_weather,51.37908781354981,1.2502244701297118,-11.535976621103082
+test_June,branch_sku_day,Product:Frozen Yoghurt Cup,calendar_lag_weather,49.49478274551557,1.2758655107732901,-6.638543422092244
+test_June,branch_sku_day,Product:Granola Yoghurt,calendar_lag_weather,85.60616579208755,0.998738600907688,11.65837203445255
+test_June,branch_sku_day,Product:Halloumi Wrap,calendar_lag_weather,57.09361323254959,1.1482159994546086,9.199282364350465
+test_June,branch_sku_day,Product:Iced Americano,calendar_lag_weather,37.55982823738249,1.4815265582523094,-2.293585495941388
+test_June,branch_sku_day,Product:Iced Latte,calendar_lag_weather,42.400675099540344,2.4451055974068265,3.642373735346577
+test_June,branch_sku_day,Product:Iced Matcha,calendar_lag_weather,45.414193383209955,2.1748352609070545,1.3742012939874608
+test_June,branch_sku_day,Product:Iced Mocha,calendar_lag_weather,46.96397752158171,1.3358642495027686,-1.4514133066478816
+test_June,branch_sku_day,Product:Lemonade,calendar_lag_weather,58.6789177393964,1.2713765510202553,-6.454407715330498
+test_June,branch_sku_day,Product:Mint Tea,calendar_lag_weather,66.84583655772114,0.9506963421542562,0.30100519455265196
+test_June,branch_sku_day,Product:Peach Iced Tea,calendar_lag_weather,49.63375429320407,1.2187844109775665,-2.7039533145180124
+test_June,branch_sku_day,Product:Pistachio Cookie,calendar_lag_weather,49.957750380059686,1.4931816502484505,-4.911417932621755
+test_June,branch_sku_day,Product:Quinoa Bowl,calendar_lag_weather,69.99717871530606,0.8166337516785708,-9.722150854760704
+test_June,branch_sku_day,Product:Soup of the Day,calendar_lag_weather,90.5240100654553,0.9354147706763715,5.396371910481407
+test_June,branch_sku_day,Product:Spanish Latte,calendar_lag_weather,55.97948917730882,1.4927863780615687,14.545914800552408
+test_June,branch_sku_day,Product:Sparkling Water,calendar_lag_weather,55.72966356041076,1.275590077049402,-1.4575564915920924
+test_June,branch_sku_day,Product:Still Water,calendar_lag_weather,53.66816117796686,1.3894090616073642,-6.402862580309683
+test_June,branch_sku_day,Product:Strawberry Matcha,calendar_lag_weather,47.627327543464176,1.7304595674125318,-9.534018519618229
+test_June,branch_sku_day,Product:Tiramisu Cup,calendar_lag_weather,58.542890966278364,1.5221151651232374,-13.15081945698729
+test_June,branch_sku_day,Product:Tuna Sandwich,calendar_lag_weather,62.82490529019263,1.137828840255711,-4.9488042164048265
+test_June,branch_sku_day,Product:Turkey & Cheese Sandwich,calendar_lag_weather,52.945956953612054,1.341297576158172,-10.666024891358514
+test_June,branch_sku_day,Product:Vanilla Latte,calendar_lag_weather,46.58485890343351,1.5114198666447318,-0.2957824145221044
+test_June,branch_sku_day,all,oracle_actual_weather_conflict,50.43937402906509,1.371328265269224,-1.2420766302084987
+test_June,branch_sku_day,Branch:Garden,oracle_actual_weather_conflict,51.4346122903497,1.3578737644652321,-0.7425317797941441
+test_June,branch_sku_day,Branch:Harbour,oracle_actual_weather_conflict,42.043080308180144,1.6938689910829021,-2.2073324023173417
+test_June,branch_sku_day,Branch:Uptown,oracle_actual_weather_conflict,71.41567501744899,1.0622420402595378,0.48583586860785105
+test_June,branch_sku_day,Category:Bakery,oracle_actual_weather_conflict,44.88381105885432,1.4942568765010251,2.776218515684076
+test_June,branch_sku_day,Category:Breakfast,oracle_actual_weather_conflict,64.69554687016648,1.1597275809318734,1.43489401134474
+test_June,branch_sku_day,Category:Cold Coffee,oracle_actual_weather_conflict,42.951416004768454,1.580612108975479,-2.1596298670734604
+test_June,branch_sku_day,Category:Cold Drinks,oracle_actual_weather_conflict,53.80516592473673,1.2841499600703832,-4.563052227041205
+test_June,branch_sku_day,Category:Desserts,oracle_actual_weather_conflict,48.81289329081831,1.3165922051495718,-7.112877304542231
+test_June,branch_sku_day,Category:Hot Coffee,oracle_actual_weather_conflict,51.22119676801859,1.4195588818565152,3.0560494617140415
+test_June,branch_sku_day,Category:Matcha & Tea,oracle_actual_weather_conflict,50.620379907865534,1.4604917017861945,-3.0058382058815383
+test_June,branch_sku_day,Category:Meals,oracle_actual_weather_conflict,79.75045763636822,0.9451906090236234,-7.677221830265919
+test_June,branch_sku_day,Category:Sandwiches,oracle_actual_weather_conflict,57.58793447366477,1.2877302014250038,-4.76767291191198
+test_June,branch_sku_day,Product:Almond Croissant,oracle_actual_weather_conflict,45.88656225691312,1.2899222501110021,-3.101870905613719
+test_June,branch_sku_day,Product:Americano,oracle_actual_weather_conflict,54.1299083294726,1.2690456286131908,10.88896690948592
+test_June,branch_sku_day,Product:Avocado Toast,oracle_actual_weather_conflict,59.538855006743496,1.19077710013487,0.6407164475883835
+test_June,branch_sku_day,Product:Banana Bread,oracle_actual_weather_conflict,53.36587749742973,1.5594695313137799,2.8190458630223234
+test_June,branch_sku_day,Product:Blueberry Muffin,oracle_actual_weather_conflict,62.72148683786179,1.3032131154089062,7.913452762463967
+test_June,branch_sku_day,Product:Brownie,oracle_actual_weather_conflict,42.4467440415923,1.3064164555023408,-4.837083594024466
+test_June,branch_sku_day,Product:Butter Croissant,oracle_actual_weather_conflict,34.81355038843168,1.7716228975446342,2.6192158809065385
+test_June,branch_sku_day,Product:Cappuccino,oracle_actual_weather_conflict,45.22393094522182,1.6632356825409358,-1.1136609646249331
+test_June,branch_sku_day,Product:Caramel Latte,oracle_actual_weather_conflict,48.46065115633815,1.3461291987871709,-6.425005755586052
+test_June,branch_sku_day,Product:Chai Latte,oracle_actual_weather_conflict,52.96608523666759,1.259415804516318,-3.9508797930957447
+test_June,branch_sku_day,Product:Cheesecake Slice,oracle_actual_weather_conflict,45.12479031957035,1.1431613547624488,0.2301592157089266
+test_June,branch_sku_day,Product:Chicken Pesto Sandwich,oracle_actual_weather_conflict,59.022895147081755,1.528037174363339,-3.1657455313066047
+test_June,branch_sku_day,Product:Chicken Salad Bowl,oracle_actual_weather_conflict,80.74167975646381,1.0944983255876204,-11.487333184272808
+test_June,branch_sku_day,Product:Chocolate Cookie,oracle_actual_weather_conflict,47.328422166458445,1.5828727857893325,12.21096896187214
+test_June,branch_sku_day,Product:Chocolate Croissant,oracle_actual_weather_conflict,43.461188990342,1.651525181632996,3.8824431282112055
+test_June,branch_sku_day,Product:Cinnamon Roll,oracle_actual_weather_conflict,35.98655819352466,1.2955160949668876,-0.7098294115642494
+test_June,branch_sku_day,Product:Classic Matcha,oracle_actual_weather_conflict,45.10773901454226,1.819345473586538,0.5557398370081519
+test_June,branch_sku_day,Product:Coffee Frappe,oracle_actual_weather_conflict,51.904086826161695,1.2168624800355687,-2.4328261852364683
+test_June,branch_sku_day,Product:Cold Brew,oracle_actual_weather_conflict,41.63041834571195,1.4570646420999185,-2.175544173534362
+test_June,branch_sku_day,Product:Egg Sandwich,oracle_actual_weather_conflict,58.50971783860659,1.2937148722091902,-1.7334957730527085
+test_June,branch_sku_day,Product:English Breakfast Tea,oracle_actual_weather_conflict,78.82838847363774,0.8320774338883984,-2.3167609598081214
+test_June,branch_sku_day,Product:Espresso,oracle_actual_weather_conflict,71.13702435386392,1.0907677067592467,-1.1676717366891567
+test_June,branch_sku_day,Product:Flat White,oracle_actual_weather_conflict,49.685630731519765,1.5678576808612905,7.34813649968971
+test_June,branch_sku_day,Product:Fresh Orange Juice,oracle_actual_weather_conflict,51.13176192730121,1.244206206897663,-10.471168286969087
+test_June,branch_sku_day,Product:Frozen Yoghurt Cup,oracle_actual_weather_conflict,49.76196667340204,1.2827529186921416,-8.891024834287702
+test_June,branch_sku_day,Product:Granola Yoghurt,oracle_actual_weather_conflict,85.25920889584798,0.9946907704515597,8.801194283451744
+test_June,branch_sku_day,Product:Halloumi Wrap,oracle_actual_weather_conflict,56.84928728495286,1.143302333175163,6.183045690586453
+test_June,branch_sku_day,Product:Iced Americano,oracle_actual_weather_conflict,37.641211762123646,1.484736686172655,-4.915192361852468
+test_June,branch_sku_day,Product:Iced Latte,oracle_actual_weather_conflict,41.708372600164,2.4051828199427905,0.791275396524977
+test_June,branch_sku_day,Product:Iced Matcha,oracle_actual_weather_conflict,45.31947487245319,2.170299296669703,-0.1993506706218084
+test_June,branch_sku_day,Product:Iced Mocha,oracle_actual_weather_conflict,47.08173925639906,1.339213916626462,-4.07618344712605
+test_June,branch_sku_day,Product:Lemonade,oracle_actual_weather_conflict,58.98529283792872,1.278014678155122,-5.299993877997166
+test_June,branch_sku_day,Product:Mint Tea,oracle_actual_weather_conflict,66.16149090707776,0.940963426233995,-1.2836638320767302
+test_June,branch_sku_day,Product:Peach Iced Tea,oracle_actual_weather_conflict,50.123871881511924,1.230819520646015,-1.4197640715301356
+test_June,branch_sku_day,Product:Pistachio Cookie,oracle_actual_weather_conflict,50.182968019204274,1.499913155240661,-2.8058325606719596
+test_June,branch_sku_day,Product:Quinoa Bowl,oracle_actual_weather_conflict,69.84748376884349,0.8148873106365073,-12.21750773243072
+test_June,branch_sku_day,Product:Soup of the Day,oracle_actual_weather_conflict,89.63092169484601,0.9261861908467423,2.4471180075420813
+test_June,branch_sku_day,Product:Spanish Latte,oracle_actual_weather_conflict,55.846308378278096,1.489234890087416,13.89781204106681
+test_June,branch_sku_day,Product:Sparkling Water,oracle_actual_weather_conflict,55.80809805753198,1.2773853555390653,-0.22981517706797946
+test_June,branch_sku_day,Product:Still Water,oracle_actual_weather_conflict,53.70350365676593,1.3903240391140514,-5.205680877692768
+test_June,branch_sku_day,Product:Strawberry Matcha,oracle_actual_weather_conflict,47.913269059327064,1.7408487758222166,-10.914433667123284
+test_June,branch_sku_day,Product:Tiramisu Cup,oracle_actual_weather_conflict,59.00146506312909,1.5340380916413563,-15.198676268344515
+test_June,branch_sku_day,Product:Tuna Sandwich,oracle_actual_weather_conflict,62.641787583983344,1.1345123751321429,-7.559413906232556
+test_June,branch_sku_day,Product:Turkey & Cheese Sandwich,oracle_actual_weather_conflict,53.0948259090541,1.3450689230293706,-13.102213984977835
+test_June,branch_sku_day,Product:Vanilla Latte,oracle_actual_weather_conflict,46.56086461683977,1.510641385346357,-0.8494636837885424

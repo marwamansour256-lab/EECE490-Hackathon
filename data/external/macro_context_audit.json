@@ -1,0 +1,25 @@
+{
+  "retrieved_on": "2026-10-17",
+  "operational_feature_status": "Excluded: no verified historical publication vintage or sufficient daily variation",
+  "sources": [
+    {
+      "series": "Official USD/LBP period average",
+      "publisher": "Banque du Liban",
+      "url": "https://www.bdl.gov.lb/economicandfinancialdatasub.php?code=9&docId=161&filecode=90",
+      "known_at": null,
+      "frequency": "monthly",
+      "observations": {"2026-01": 89500, "2026-02": 89500, "2026-03": 89500, "2026-04": 89500, "2026-05": 89500, "2026-06": 89500},
+      "decision": "Constant in this window; cannot identify daily sales variation. No inference about parallel exchange rates."
+    },
+    {
+      "series": "Flow of Passengers B.I.A. - Arrival",
+      "publisher": "Banque du Liban, source Beirut International Airport",
+      "url": "https://www.bdl.gov.lb/keyfiguressub.php?code=3&docId=9&filecode=323",
+      "known_at": null,
+      "frequency": "monthly",
+      "seasonally_adjusted": false,
+      "observations": {"2026-01": 235497, "2026-02": 209351, "2026-03": 48994, "2026-04": 72454, "2026-05": 186829},
+      "decision": "Five monthly observations in the retrieved 2026 window, June absent. Context only; do not copy values across dates and treat them as independent daily evidence."
+    }
+  ]
+}

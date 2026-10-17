@@ -1,0 +1,331 @@
+{
+  "leave_month_out": [
+    {
+      "region": "beirut",
+      "outcome": "network_orders",
+      "feature": "month_edge_hypothesis",
+      "omitted_month": 1,
+      "coefficient_per_sd": 3.8624039238775563,
+      "ci_low": 2.3292634676635466,
+      "ci_high": 5.395544380091566,
+      "p_value": 7.905329798123661e-07,
+      "feature_sd": 0.40134003725439077,
+      "n_days": 150
+    },
+    {
+      "region": "beirut",
+      "outcome": "network_orders",
+      "feature": "month_edge_hypothesis",
+      "omitted_month": 2,
+      "coefficient_per_sd": 3.8247301308622905,
+      "ci_low": 2.4170361500931468,
+      "ci_high": 5.232424111631435,
+      "p_value": 1.0080997683482561e-07,
+      "feature_sd": 0.3983324373562299,
+      "n_days": 153
+    },
+    {
+      "region": "beirut",
+      "outcome": "network_orders",
+      "feature": "month_edge_hypothesis",
+      "omitted_month": 3,
+      "coefficient_per_sd": 3.653372712085771,
+      "ci_low": 2.1580614265886933,
+      "ci_high": 5.1486839975828484,
+      "p_value": 1.6793134373365729e-06,
+      "feature_sd": 0.40134003725439077,
+      "n_days": 150
+    },
+    {
+      "region": "beirut",
+      "outcome": "network_orders",
+      "feature": "month_edge_hypothesis",
+      "omitted_month": 4,
+      "coefficient_per_sd": 2.8360879993325465,
+      "ci_low": 1.3582271160270853,
+      "ci_high": 4.313948882638008,
+      "p_value": 0.0001690544130380507,
+      "feature_sd": 0.40033098888576146,
+      "n_days": 151
+    },
+    {
+      "region": "beirut",
+      "outcome": "network_orders",
+      "feature": "month_edge_hypothesis",
+      "omitted_month": 5,
+      "coefficient_per_sd": 3.7900565838016362,
+      "ci_low": 2.193661182736199,
+      "ci_high": 5.386451984867073,
+      "p_value": 3.26795830397456e-06,
+      "feature_sd": 0.40134003725439077,
+      "n_days": 150
+    },
+    {
+      "region": "beirut",
+      "outcome": "network_orders",
+      "feature": "month_edge_hypothesis",
+      "omitted_month": 6,
+      "coefficient_per_sd": 3.415139965340511,
+      "ci_low": 1.8489256327549626,
+      "ci_high": 4.981354297926059,
+      "p_value": 1.9224402965808604e-05,
+      "feature_sd": 0.40033098888576146,
+      "n_days": 151
+    },
+    {
+      "region": "beirut",
+      "outcome": "meat_to_tuna_log_ratio",
+      "feature": "triple_calendar_overlap",
+      "omitted_month": 1,
+      "coefficient_per_sd": -0.33055357480801134,
+      "ci_low": -0.4914651991431232,
+      "ci_high": -0.16964195047289948,
+      "p_value": 5.666943049123767e-05,
+      "feature_sd": 0.37392650224713153,
+      "n_days": 150
+    },
+    {
+      "region": "beirut",
+      "outcome": "meat_to_tuna_log_ratio",
+      "feature": "triple_calendar_overlap",
+      "omitted_month": 3,
+      "coefficient_per_sd": -0.21343777825221266,
+      "ci_low": -0.31776267471015873,
+      "ci_high": -0.10911288179426659,
+      "p_value": 6.0749508752412625e-05,
+      "feature_sd": 0.19661566092456975,
+      "n_days": 150
+    },
+    {
+      "region": "beirut",
+      "outcome": "meat_to_tuna_log_ratio",
+      "feature": "triple_calendar_overlap",
+      "omitted_month": 4,
+      "coefficient_per_sd": -0.38243434784331704,
+      "ci_low": -0.5743134633144391,
+      "ci_high": -0.19055523237219496,
+      "p_value": 9.367942460379121e-05,
+      "feature_sd": 0.37292472120002884,
+      "n_days": 151
+    },
+    {
+      "region": "beirut",
+      "outcome": "meat_to_tuna_log_ratio",
+      "feature": "triple_calendar_overlap",
+      "omitted_month": 5,
+      "coefficient_per_sd": -0.2735988895141462,
+      "ci_low": -0.4152530308863973,
+      "ci_high": -0.13194474814189502,
+      "p_value": 0.00015334663565159568,
+      "feature_sd": 0.37392650224713153,
+      "n_days": 150
+    },
+    {
+      "region": "beirut",
+      "outcome": "meat_to_tuna_log_ratio",
+      "feature": "triple_calendar_overlap",
+      "omitted_month": 6,
+      "coefficient_per_sd": -0.27717666611050845,
+      "ci_low": -0.42058798712776746,
+      "ci_high": -0.13376534509324947,
+      "p_value": 0.00015180435775300068,
+      "feature_sd": 0.37292472120002884,
+      "n_days": 151
+    },
+    {
+      "region": "beirut",
+      "outcome": "evening_order_share_pp",
+      "feature": "rain_forecast_surprise",
+      "omitted_month": 1,
+      "coefficient_per_sd": -0.5960298479748936,
+      "ci_low": -0.9173428807601198,
+      "ci_high": -0.2747168151896673,
+      "p_value": 0.00027722934687161513,
+      "feature_sd": 5.140226102496609,
+      "n_days": 150
+    },
+    {
+      "region": "beirut",
+      "outcome": "evening_order_share_pp",
+      "feature": "rain_forecast_surprise",
+      "omitted_month": 2,
+      "coefficient_per_sd": -0.7247558195458302,
+      "ci_low": -0.9555106623634546,
+      "ci_high": -0.49400097672820587,
+      "p_value": 7.4669538430054e-10,
+      "feature_sd": 6.243488730732823,
+      "n_days": 153
+    },
+    {
+      "region": "beirut",
+      "outcome": "evening_order_share_pp",
+      "feature": "rain_forecast_surprise",
+      "omitted_month": 3,
+      "coefficient_per_sd": -0.7277925491159283,
+      "ci_low": -1.0659035748303225,
+      "ci_high": -0.38968152340153406,
+      "p_value": 2.4552746100642407e-05,
+      "feature_sd": 7.0312981671231105,
+      "n_days": 150
+    },
+    {
+      "region": "beirut",
+      "outcome": "evening_order_share_pp",
+      "feature": "rain_forecast_surprise",
+      "omitted_month": 4,
+      "coefficient_per_sd": -0.6896394809914945,
+      "ci_low": -0.9927150726786782,
+      "ci_high": -0.38656388930431085,
+      "p_value": 8.202098954280376e-06,
+      "feature_sd": 7.0376052644859,
+      "n_days": 151
+    },
+    {
+      "region": "beirut",
+      "outcome": "evening_order_share_pp",
+      "feature": "rain_forecast_surprise",
+      "omitted_month": 5,
+      "coefficient_per_sd": -0.57536881318558,
+      "ci_low": -0.8631130329689811,
+      "ci_high": -0.2876245934021789,
+      "p_value": 8.88753915191767e-05,
+      "feature_sd": 6.21864559370722,
+      "n_days": 150
+    },
+    {
+      "region": "beirut",
+      "outcome": "evening_order_share_pp",
+      "feature": "rain_forecast_surprise",
+      "omitted_month": 6,
+      "coefficient_per_sd": -0.7411603408818751,
+      "ci_low": -1.0670495621229366,
+      "ci_high": -0.4152711196408136,
+      "p_value": 8.292534320469722e-06,
+      "feature_sd": 7.088741065212123,
+      "n_days": 151
+    },
+    {
+      "region": "batroun",
+      "outcome": "sunset_after_share_of_4h_window_pp",
+      "feature": "rain_sum",
+      "omitted_month": 1,
+      "coefficient_per_sd": 0.9883271613358535,
+      "ci_low": 0.40899732968722646,
+      "ci_high": 1.5676569929844806,
+      "p_value": 0.0008267912008681664,
+      "feature_sd": 6.465343714856189,
+      "n_days": 150
+    },
+    {
+      "region": "batroun",
+      "outcome": "sunset_after_share_of_4h_window_pp",
+      "feature": "rain_sum",
+      "omitted_month": 2,
+      "coefficient_per_sd": 1.8668268060277378,
+      "ci_low": 0.8065680113933245,
+      "ci_high": 2.927085600662151,
+      "p_value": 0.0005585912463119748,
+      "feature_sd": 8.546597371199079,
+      "n_days": 153
+    },
+    {
+      "region": "batroun",
+      "outcome": "sunset_after_share_of_4h_window_pp",
+      "feature": "rain_sum",
+      "omitted_month": 3,
+      "coefficient_per_sd": 1.9565205620687987,
+      "ci_low": 1.0099066071130902,
+      "ci_high": 2.9031345170245073,
+      "p_value": 5.100457204363069e-05,
+      "feature_sd": 8.985151584324473,
+      "n_days": 150
+    },
+    {
+      "region": "batroun",
+      "outcome": "sunset_after_share_of_4h_window_pp",
+      "feature": "rain_sum",
+      "omitted_month": 4,
+      "coefficient_per_sd": 1.9890263655950795,
+      "ci_low": 1.0639039082479536,
+      "ci_high": 2.9141488229422055,
+      "p_value": 2.509425474932139e-05,
+      "feature_sd": 9.365844762946923,
+      "n_days": 151
+    },
+    {
+      "region": "batroun",
+      "outcome": "sunset_after_share_of_4h_window_pp",
+      "feature": "rain_sum",
+      "omitted_month": 5,
+      "coefficient_per_sd": 2.2645285148324668,
+      "ci_low": 1.453068446663571,
+      "ci_high": 3.0759885830013625,
+      "p_value": 4.509509607577419e-08,
+      "feature_sd": 9.102488019392101,
+      "n_days": 150
+    },
+    {
+      "region": "batroun",
+      "outcome": "sunset_after_share_of_4h_window_pp",
+      "feature": "rain_sum",
+      "omitted_month": 6,
+      "coefficient_per_sd": 1.9768662401974724,
+      "ci_low": 1.1222328673585613,
+      "ci_high": 2.8314996130363834,
+      "p_value": 5.798011787619399e-06,
+      "feature_sd": 9.345153127462247,
+      "n_days": 151
+    }
+  ],
+  "menu_substitution_sensitivity": [
+    {
+      "specification": "log_ratio_smoothing_0.25",
+      "coefficient_per_sd": -0.2943242075392755,
+      "ci_low": -0.4524723751456344,
+      "ci_high": -0.13617603993291666,
+      "p_value": 0.00026467792098554255,
+      "feature_sd": 0.3459845960441243,
+      "n_days": 181
+    },
+    {
+      "specification": "log_ratio_smoothing_0.5",
+      "coefficient_per_sd": -0.2866999073774232,
+      "ci_low": -0.42320842267656267,
+      "ci_high": -0.1501913920782837,
+      "p_value": 3.848625899863281e-05,
+      "feature_sd": 0.3459845960441243,
+      "n_days": 181
+    },
+    {
+      "specification": "log_ratio_smoothing_1.0",
+      "coefficient_per_sd": -0.27235217880289564,
+      "ci_low": -0.38766502195555175,
+      "ci_high": -0.15703933565023956,
+      "p_value": 3.671695301773184e-06,
+      "feature_sd": 0.3459845960441243,
+      "n_days": 181
+    },
+    {
+      "specification": "log_ratio_smoothing_2.0",
+      "coefficient_per_sd": -0.24770023684407613,
+      "ci_low": -0.3420354218565822,
+      "ci_high": -0.15336505183157004,
+      "p_value": 2.6557870164684447e-07,
+      "feature_sd": 0.3459845960441243,
+      "n_days": 181
+    },
+    {
+      "specification": "binomial_meat_vs_tuna_count",
+      "log_odds_coefficient": -1.149184358776769,
+      "odds_ratio": 0.3168951367341586,
+      "p_value": 9.681146587796757e-10,
+      "status": "post_selection_sensitivity_not_new_validation"
+    }
+  ],
+  "caveats": [
+    "These are selected follow-up analyses on the same sample, not independent confirmation.",
+    "Dropping a month can eliminate an event or alter confounding; missing estimates are not evidence of robustness.",
+    "Calendar groups describe possible behavior, not the faith or observance of any customer.",
+    "Rain forecast surprise based on reanalysis is only retrospectively observed, not an input known before opening."
+  ]
+}

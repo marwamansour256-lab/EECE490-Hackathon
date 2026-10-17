@@ -1,0 +1,1170 @@
+{
+  "status": "POST_SELECTION_EXPLORATORY_SENSITIVITY_NOT_NEW_INDEPENDENT_VALIDATION",
+  "raw_lines_preserved": true,
+  "dates": 181,
+  "muslim_event_blocks": 4,
+  "muslim_exposed_days": 9,
+  "model_sensitivity": [
+    {
+      "analysis": "model_sensitivity",
+      "series": "All branches / Sandwiches",
+      "specification": "weekday_linear",
+      "n_days": 181,
+      "event_days": 9,
+      "coefficient_units_per_day": -4.101260789511424,
+      "ci_low": -5.300995203249337,
+      "ci_high": -2.9015263757735115,
+      "p_value_unadjusted": 2.0829728522779e-11
+    },
+    {
+      "analysis": "model_sensitivity",
+      "series": "All branches / Sandwiches",
+      "specification": "weekday_quadratic",
+      "n_days": 181,
+      "event_days": 9,
+      "coefficient_units_per_day": -4.081162281046919,
+      "ci_low": -5.256815124701049,
+      "ci_high": -2.905509437392789,
+      "p_value_unadjusted": 1.0188036786310211e-11
+    },
+    {
+      "analysis": "model_sensitivity",
+      "series": "All branches / Sandwiches",
+      "specification": "full_context_linear",
+      "n_days": 181,
+      "event_days": 9,
+      "coefficient_units_per_day": -3.957230470060184,
+      "ci_low": -5.467007608045965,
+      "ci_high": -2.447453332074403,
+      "p_value_unadjusted": 2.7886008204961626e-07
+    },
+    {
+      "analysis": "model_sensitivity",
+      "series": "All branches / Sandwiches",
+      "specification": "full_context_quadratic",
+      "n_days": 181,
+      "event_days": 9,
+      "coefficient_units_per_day": -4.0630667034025985,
+      "ci_low": -5.6688311710785975,
+      "ci_high": -2.4573022357265994,
+      "p_value_unadjusted": 7.074839416450834e-07
+    }
+  ],
+  "omitted_entire_event": [
+    {
+      "analysis": "omit_entire_event",
+      "series": "All branches / Sandwiches",
+      "specification": "weekday_linear",
+      "event": "Eid al-Fitr",
+      "n_days": 177,
+      "event_days": 5,
+      "coefficient_units_per_day": -3.84345595514629,
+      "ci_low": -5.367111110102293,
+      "ci_high": -2.3198008001902872,
+      "p_value_unadjusted": 7.651400855323604e-07,
+      "omitted_actual_daily": 14.25,
+      "omitted_baseline_daily": 18.652868675125887,
+      "omitted_observed_minus_baseline": -4.402868675125888,
+      "omitted_prediction_error_with_effect": -0.5594127199795986
+    },
+    {
+      "analysis": "omit_entire_event",
+      "series": "All branches / Sandwiches",
+      "specification": "weekday_linear",
+      "event": "Eid al-Adha",
+      "n_days": 178,
+      "event_days": 6,
+      "coefficient_units_per_day": -4.240850241019499,
+      "ci_low": -5.681684420593868,
+      "ci_high": -2.800016061445129,
+      "p_value_unadjusted": 7.982828135985152e-09,
+      "omitted_actual_daily": 21.333333333333332,
+      "omitted_baseline_daily": 25.19584778703562,
+      "omitted_observed_minus_baseline": -3.862514453702287,
+      "omitted_prediction_error_with_effect": 0.378335787317211
+    },
+    {
+      "analysis": "omit_entire_event",
+      "series": "All branches / Sandwiches",
+      "specification": "weekday_linear",
+      "event": "Hijri New Year",
+      "n_days": 180,
+      "event_days": 8,
+      "coefficient_units_per_day": -4.0313578996233685,
+      "ci_low": -5.325965075046065,
+      "ci_high": -2.7367507242006717,
+      "p_value_unadjusted": 1.0393054426400836e-09,
+      "omitted_actual_daily": 32.0,
+      "omitted_baseline_daily": 36.658509810339176,
+      "omitted_observed_minus_baseline": -4.658509810339176,
+      "omitted_prediction_error_with_effect": -0.6271519107158099
+    },
+    {
+      "analysis": "omit_entire_event",
+      "series": "All branches / Sandwiches",
+      "specification": "weekday_linear",
+      "event": "Ashoura",
+      "n_days": 180,
+      "event_days": 8,
+      "coefficient_units_per_day": -4.218684152365926,
+      "ci_low": -5.379204249767715,
+      "ci_high": -3.058164054964137,
+      "p_value_unadjusted": 1.0423491960574515e-12,
+      "omitted_actual_daily": 24.0,
+      "omitted_baseline_daily": 27.054493515443873,
+      "omitted_observed_minus_baseline": -3.0544935154438733,
+      "omitted_prediction_error_with_effect": 1.1641906369220507
+    },
+    {
+      "analysis": "omit_entire_event",
+      "series": "All branches / Sandwiches",
+      "specification": "weekday_quadratic",
+      "event": "Eid al-Fitr",
+      "n_days": 177,
+      "event_days": 5,
+      "coefficient_units_per_day": -4.001380230875903,
+      "ci_low": -5.674518045030128,
+      "ci_high": -2.328242416721679,
+      "p_value_unadjusted": 2.7678270007040454e-06,
+      "omitted_actual_daily": 14.25,
+      "omitted_baseline_daily": 18.4248365544964,
+      "omitted_observed_minus_baseline": -4.1748365544964,
+      "omitted_prediction_error_with_effect": -0.173456323620496
+    },
+    {
+      "analysis": "omit_entire_event",
+      "series": "All branches / Sandwiches",
+      "specification": "weekday_quadratic",
+      "event": "Eid al-Adha",
+      "n_days": 178,
+      "event_days": 6,
+      "coefficient_units_per_day": -4.190522023806519,
+      "ci_low": -5.62502988944441,
+      "ci_high": -2.756014158168628,
+      "p_value_unadjusted": 1.0313062227769738e-08,
+      "omitted_actual_daily": 21.333333333333332,
+      "omitted_baseline_daily": 25.238056681687187,
+      "omitted_observed_minus_baseline": -3.9047233483538584,
+      "omitted_prediction_error_with_effect": 0.2857986754526607
+    },
+    {
+      "analysis": "omit_entire_event",
+      "series": "All branches / Sandwiches",
+      "specification": "weekday_quadratic",
+      "event": "Hijri New Year",
+      "n_days": 180,
+      "event_days": 8,
+      "coefficient_units_per_day": -3.974911140736353,
+      "ci_low": -5.2359119415531366,
+      "ci_high": -2.713910339919569,
+      "p_value_unadjusted": 6.484712129616615e-10,
+      "omitted_actual_daily": 32.0,
+      "omitted_baseline_daily": 36.92183870210487,
+      "omitted_observed_minus_baseline": -4.921838702104871,
+      "omitted_prediction_error_with_effect": -0.9469275613685184
+    },
+    {
+      "analysis": "omit_entire_event",
+      "series": "All branches / Sandwiches",
+      "specification": "weekday_quadratic",
+      "event": "Ashoura",
+      "n_days": 180,
+      "event_days": 8,
+      "coefficient_units_per_day": -4.155779242723153,
+      "ci_low": -5.316097694794951,
+      "ci_high": -2.9954607906513533,
+      "p_value_unadjusted": 2.222214560442118e-12,
+      "omitted_actual_daily": 24.0,
+      "omitted_baseline_daily": 27.42400402899826,
+      "omitted_observed_minus_baseline": -3.4240040289982616,
+      "omitted_prediction_error_with_effect": 0.731775213724891
+    },
+    {
+      "analysis": "omit_entire_event",
+      "series": "All branches / Sandwiches",
+      "specification": "full_context_linear",
+      "event": "Eid al-Fitr",
+      "n_days": 177,
+      "event_days": 5,
+      "coefficient_units_per_day": -4.244843669976251,
+      "ci_low": -6.122413587563773,
+      "ci_high": -2.367273752388729,
+      "p_value_unadjusted": 9.37441811829254e-06,
+      "omitted_actual_daily": 14.25,
+      "omitted_baseline_daily": 17.736124979106126,
+      "omitted_observed_minus_baseline": -3.4861249791061253,
+      "omitted_prediction_error_with_effect": 0.7587186908701264
+    },
+    {
+      "analysis": "omit_entire_event",
+      "series": "All branches / Sandwiches",
+      "specification": "full_context_linear",
+      "event": "Eid al-Adha",
+      "n_days": 178,
+      "event_days": 6,
+      "coefficient_units_per_day": -3.6271167136477054,
+      "ci_low": -5.7716027742269755,
+      "ci_high": -1.4826306530684352,
+      "p_value_unadjusted": 0.0009163596488015735,
+      "omitted_actual_daily": 21.333333333333332,
+      "omitted_baseline_daily": 25.981371948661366,
+      "omitted_observed_minus_baseline": -4.648038615328033,
+      "omitted_prediction_error_with_effect": -1.020921901680327
+    },
+    {
+      "analysis": "omit_entire_event",
+      "series": "All branches / Sandwiches",
+      "specification": "full_context_linear",
+      "event": "Hijri New Year",
+      "n_days": 180,
+      "event_days": 8,
+      "coefficient_units_per_day": -3.880221709646391,
+      "ci_low": -5.597182965889882,
+      "ci_high": -2.1632604534029,
+      "p_value_unadjusted": 9.449903199941025e-06,
+      "omitted_actual_daily": 32.0,
+      "omitted_baseline_daily": 36.50373590656139,
+      "omitted_observed_minus_baseline": -4.5037359065613884,
+      "omitted_prediction_error_with_effect": -0.6235141969149964
+    },
+    {
+      "analysis": "omit_entire_event",
+      "series": "All branches / Sandwiches",
+      "specification": "full_context_linear",
+      "event": "Ashoura",
+      "n_days": 180,
+      "event_days": 8,
+      "coefficient_units_per_day": -4.0870072732895135,
+      "ci_low": -5.637451187403004,
+      "ci_high": -2.5365633591760237,
+      "p_value_unadjusted": 2.385029193908751e-07,
+      "omitted_actual_daily": 24.0,
+      "omitted_baseline_daily": 26.85438127445386,
+      "omitted_observed_minus_baseline": -2.8543812744538606,
+      "omitted_prediction_error_with_effect": 1.2326259988356512
+    },
+    {
+      "analysis": "omit_entire_event",
+      "series": "All branches / Sandwiches",
+      "specification": "full_context_quadratic",
+      "event": "Eid al-Fitr",
+      "n_days": 177,
+      "event_days": 5,
+      "coefficient_units_per_day": -4.438399086172714,
+      "ci_low": -6.488490689170584,
+      "ci_high": -2.3883074831748434,
+      "p_value_unadjusted": 2.202812647901436e-05,
+      "omitted_actual_daily": 14.25,
+      "omitted_baseline_daily": 17.70963887705426,
+      "omitted_observed_minus_baseline": -3.459638877054263,
+      "omitted_prediction_error_with_effect": 0.9787602091184495
+    },
+    {
+      "analysis": "omit_entire_event",
+      "series": "All branches / Sandwiches",
+      "specification": "full_context_quadratic",
+      "event": "Eid al-Adha",
+      "n_days": 178,
+      "event_days": 6,
+      "coefficient_units_per_day": -3.6294395272638713,
+      "ci_low": -5.77721351835666,
+      "ci_high": -1.4816655361710818,
+      "p_value_unadjusted": 0.0009260945652531409,
+      "omitted_actual_daily": 21.333333333333332,
+      "omitted_baseline_daily": 26.32658374784354,
+      "omitted_observed_minus_baseline": -4.993250414510206,
+      "omitted_prediction_error_with_effect": -1.3638108872463341
+    },
+    {
+      "analysis": "omit_entire_event",
+      "series": "All branches / Sandwiches",
+      "specification": "full_context_quadratic",
+      "event": "Hijri New Year",
+      "n_days": 180,
+      "event_days": 8,
+      "coefficient_units_per_day": -4.032473918202746,
+      "ci_low": -5.8801655664172925,
+      "ci_high": -2.1847822699882,
+      "p_value_unadjusted": 1.890027532195486e-05,
+      "omitted_actual_daily": 32.0,
+      "omitted_baseline_daily": 36.27423911337064,
+      "omitted_observed_minus_baseline": -4.2742391133706406,
+      "omitted_prediction_error_with_effect": -0.2417651951678863
+    },
+    {
+      "analysis": "omit_entire_event",
+      "series": "All branches / Sandwiches",
+      "specification": "full_context_quadratic",
+      "event": "Ashoura",
+      "n_days": 180,
+      "event_days": 8,
+      "coefficient_units_per_day": -4.164715016524918,
+      "ci_low": -5.802824531310321,
+      "ci_high": -2.526605501739514,
+      "p_value_unadjusted": 6.260758550017904e-07,
+      "omitted_actual_daily": 24.0,
+      "omitted_baseline_daily": 27.17995727922058,
+      "omitted_observed_minus_baseline": -3.179957279220581,
+      "omitted_prediction_error_with_effect": 0.9847577373043421
+    }
+  ],
+  "off_all_muslim_events": [
+    {
+      "analysis": "fit_off_all_muslim_events",
+      "series": "All branches / Sandwiches",
+      "specification": "weekday_linear",
+      "event": "Eid al-Fitr",
+      "n_days": 172,
+      "event_days": 4,
+      "actual_units": 57.0,
+      "expected_units": 74.6455417558642,
+      "coefficient_units_per_day": -4.41138543896605,
+      "deviation_pct_of_expected": -23.639110040323285
+    },
+    {
+      "analysis": "fit_off_all_muslim_events",
+      "series": "All branches / Sandwiches",
+      "specification": "weekday_linear",
+      "event": "Eid al-Adha",
+      "n_days": 172,
+      "event_days": 3,
+      "actual_units": 64.0,
+      "expected_units": 75.51190390051067,
+      "coefficient_units_per_day": -3.837301300170226,
+      "deviation_pct_of_expected": -15.245151169381154
+    },
+    {
+      "analysis": "fit_off_all_muslim_events",
+      "series": "All branches / Sandwiches",
+      "specification": "weekday_linear",
+      "event": "Hijri New Year",
+      "n_days": 172,
+      "event_days": 1,
+      "actual_units": 32.0,
+      "expected_units": 36.639779851004505,
+      "coefficient_units_per_day": -4.639779851004505,
+      "deviation_pct_of_expected": -12.663230701363782
+    },
+    {
+      "analysis": "fit_off_all_muslim_events",
+      "series": "All branches / Sandwiches",
+      "specification": "weekday_linear",
+      "event": "Ashoura",
+      "n_days": 172,
+      "event_days": 1,
+      "actual_units": 24.0,
+      "expected_units": 27.097389854597587,
+      "coefficient_units_per_day": -3.097389854597587,
+      "deviation_pct_of_expected": -11.430583798727223
+    },
+    {
+      "analysis": "fit_off_all_muslim_events",
+      "series": "All branches / Sandwiches",
+      "specification": "weekday_quadratic",
+      "event": "Eid al-Fitr",
+      "n_days": 172,
+      "event_days": 4,
+      "actual_units": 57.0,
+      "expected_units": 73.73844176136294,
+      "coefficient_units_per_day": -4.1846104403407365,
+      "deviation_pct_of_expected": -22.69974976625212
+    },
+    {
+      "analysis": "fit_off_all_muslim_events",
+      "series": "All branches / Sandwiches",
+      "specification": "weekday_quadratic",
+      "event": "Eid al-Adha",
+      "n_days": 172,
+      "event_days": 3,
+      "actual_units": 64.0,
+      "expected_units": 75.67249144805446,
+      "coefficient_units_per_day": -3.890830482684818,
+      "deviation_pct_of_expected": -15.42501274200423
+    },
+    {
+      "analysis": "fit_off_all_muslim_events",
+      "series": "All branches / Sandwiches",
+      "specification": "weekday_quadratic",
+      "event": "Hijri New Year",
+      "n_days": 172,
+      "event_days": 1,
+      "actual_units": 32.0,
+      "expected_units": 36.89717264601296,
+      "coefficient_units_per_day": -4.897172646012962,
+      "deviation_pct_of_expected": -13.27248755072874
+    },
+    {
+      "analysis": "fit_off_all_muslim_events",
+      "series": "All branches / Sandwiches",
+      "specification": "weekday_quadratic",
+      "event": "Ashoura",
+      "n_days": 172,
+      "event_days": 1,
+      "actual_units": 24.0,
+      "expected_units": 27.479971352831814,
+      "coefficient_units_per_day": -3.4799713528318144,
+      "deviation_pct_of_expected": -12.663664412711274
+    },
+    {
+      "analysis": "fit_off_all_muslim_events",
+      "series": "All branches / Sandwiches",
+      "specification": "full_context_linear",
+      "event": "Eid al-Fitr",
+      "n_days": 172,
+      "event_days": 4,
+      "actual_units": 57.0,
+      "expected_units": 71.03456617595256,
+      "coefficient_units_per_day": -3.508641543988141,
+      "deviation_pct_of_expected": -19.757375784049913
+    },
+    {
+      "analysis": "fit_off_all_muslim_events",
+      "series": "All branches / Sandwiches",
+      "specification": "full_context_linear",
+      "event": "Eid al-Adha",
+      "n_days": 172,
+      "event_days": 3,
+      "actual_units": 64.0,
+      "expected_units": 77.91174353691571,
+      "coefficient_units_per_day": -4.637247845638573,
+      "deviation_pct_of_expected": -17.855772320541284
+    },
+    {
+      "analysis": "fit_off_all_muslim_events",
+      "series": "All branches / Sandwiches",
+      "specification": "full_context_linear",
+      "event": "Hijri New Year",
+      "n_days": 172,
+      "event_days": 1,
+      "actual_units": 32.0,
+      "expected_units": 36.42888115250111,
+      "coefficient_units_per_day": -4.428881152501113,
+      "deviation_pct_of_expected": -12.15760960091149
+    },
+    {
+      "analysis": "fit_off_all_muslim_events",
+      "series": "All branches / Sandwiches",
+      "specification": "full_context_linear",
+      "event": "Ashoura",
+      "n_days": 172,
+      "event_days": 1,
+      "actual_units": 24.0,
+      "expected_units": 26.9127298979879,
+      "coefficient_units_per_day": -2.9127298979879015,
+      "deviation_pct_of_expected": -10.822870474413183
+    },
+    {
+      "analysis": "fit_off_all_muslim_events",
+      "series": "All branches / Sandwiches",
+      "specification": "full_context_quadratic",
+      "event": "Eid al-Fitr",
+      "n_days": 172,
+      "event_days": 4,
+      "actual_units": 57.0,
+      "expected_units": 70.96266842252285,
+      "coefficient_units_per_day": -3.4906671056307115,
+      "deviation_pct_of_expected": -19.676075791551316
+    },
+    {
+      "analysis": "fit_off_all_muslim_events",
+      "series": "All branches / Sandwiches",
+      "specification": "full_context_quadratic",
+      "event": "Eid al-Adha",
+      "n_days": 172,
+      "event_days": 3,
+      "actual_units": 64.0,
+      "expected_units": 78.87619795493019,
+      "coefficient_units_per_day": -4.958732651643396,
+      "deviation_pct_of_expected": -18.860186394164735
+    },
+    {
+      "analysis": "fit_off_all_muslim_events",
+      "series": "All branches / Sandwiches",
+      "specification": "full_context_quadratic",
+      "event": "Hijri New Year",
+      "n_days": 172,
+      "event_days": 1,
+      "actual_units": 32.0,
+      "expected_units": 36.19482725909604,
+      "coefficient_units_per_day": -4.194827259096037,
+      "deviation_pct_of_expected": -11.589576679197567
+    },
+    {
+      "analysis": "fit_off_all_muslim_events",
+      "series": "All branches / Sandwiches",
+      "specification": "full_context_quadratic",
+      "event": "Ashoura",
+      "n_days": 172,
+      "event_days": 1,
+      "actual_units": 24.0,
+      "expected_units": 27.254967565856504,
+      "coefficient_units_per_day": -3.2549675658565036,
+      "deviation_pct_of_expected": -11.942658005339712
+    }
+  ],
+  "off_event_daily_predictions": [
+    {
+      "specification": "weekday_linear",
+      "date": "2026-03-20",
+      "actual_units": 17,
+      "expected_units": 21.195773275004456,
+      "deviation_units": -4.195773275004456
+    },
+    {
+      "specification": "weekday_linear",
+      "date": "2026-03-21",
+      "actual_units": 11,
+      "expected_units": 15.462391295416703,
+      "deviation_units": -4.462391295416703
+    },
+    {
+      "specification": "weekday_linear",
+      "date": "2026-03-22",
+      "actual_units": 20,
+      "expected_units": 18.215429133260557,
+      "deviation_units": 1.7845708667394433
+    },
+    {
+      "specification": "weekday_linear",
+      "date": "2026-03-23",
+      "actual_units": 9,
+      "expected_units": 19.771948052182484,
+      "deviation_units": -10.771948052182484
+    },
+    {
+      "specification": "weekday_linear",
+      "date": "2026-05-27",
+      "actual_units": 23,
+      "expected_units": 25.134240885539526,
+      "deviation_units": -2.1342408855395263
+    },
+    {
+      "specification": "weekday_linear",
+      "date": "2026-05-28",
+      "actual_units": 21,
+      "expected_units": 24.966449325971602,
+      "deviation_units": -3.9664493259716025
+    },
+    {
+      "specification": "weekday_linear",
+      "date": "2026-05-29",
+      "actual_units": 20,
+      "expected_units": 25.41121368899955,
+      "deviation_units": -5.411213688999549
+    },
+    {
+      "specification": "weekday_linear",
+      "date": "2026-06-16",
+      "actual_units": 32,
+      "expected_units": 36.639779851004505,
+      "deviation_units": -4.639779851004505
+    },
+    {
+      "specification": "weekday_linear",
+      "date": "2026-06-26",
+      "actual_units": 24,
+      "expected_units": 27.097389854597587,
+      "deviation_units": -3.097389854597587
+    },
+    {
+      "specification": "weekday_quadratic",
+      "date": "2026-03-20",
+      "actual_units": 17,
+      "expected_units": 20.983353149472478,
+      "deviation_units": -3.983353149472478
+    },
+    {
+      "specification": "weekday_quadratic",
+      "date": "2026-03-21",
+      "actual_units": 11,
+      "expected_units": 15.242071605467103,
+      "deviation_units": -4.242071605467103
+    },
+    {
+      "specification": "weekday_quadratic",
+      "date": "2026-03-22",
+      "actual_units": 20,
+      "expected_units": 17.981969190349805,
+      "deviation_units": 2.0180308096501953
+    },
+    {
+      "specification": "weekday_quadratic",
+      "date": "2026-03-23",
+      "actual_units": 9,
+      "expected_units": 19.53104781607356,
+      "deviation_units": -10.53104781607356
+    },
+    {
+      "specification": "weekday_quadratic",
+      "date": "2026-05-27",
+      "actual_units": 23,
+      "expected_units": 25.187302328981836,
+      "deviation_units": -2.1873023289818363
+    },
+    {
+      "specification": "weekday_quadratic",
+      "date": "2026-05-28",
+      "actual_units": 21,
+      "expected_units": 25.01757816559818,
+      "deviation_units": -4.017578165598181
+    },
+    {
+      "specification": "weekday_quadratic",
+      "date": "2026-05-29",
+      "actual_units": 20,
+      "expected_units": 25.467610953474438,
+      "deviation_units": -5.467610953474438
+    },
+    {
+      "specification": "weekday_quadratic",
+      "date": "2026-06-16",
+      "actual_units": 32,
+      "expected_units": 36.89717264601296,
+      "deviation_units": -4.897172646012962
+    },
+    {
+      "specification": "weekday_quadratic",
+      "date": "2026-06-26",
+      "actual_units": 24,
+      "expected_units": 27.479971352831814,
+      "deviation_units": -3.4799713528318144
+    },
+    {
+      "specification": "full_context_linear",
+      "date": "2026-03-20",
+      "actual_units": 17,
+      "expected_units": 20.30120095361547,
+      "deviation_units": -3.3012009536154707
+    },
+    {
+      "specification": "full_context_linear",
+      "date": "2026-03-21",
+      "actual_units": 11,
+      "expected_units": 14.923406847993204,
+      "deviation_units": -3.9234068479932045
+    },
+    {
+      "specification": "full_context_linear",
+      "date": "2026-03-22",
+      "actual_units": 20,
+      "expected_units": 17.18174835872377,
+      "deviation_units": 2.8182516412762304
+    },
+    {
+      "specification": "full_context_linear",
+      "date": "2026-03-23",
+      "actual_units": 9,
+      "expected_units": 18.62821001562012,
+      "deviation_units": -9.62821001562012
+    },
+    {
+      "specification": "full_context_linear",
+      "date": "2026-05-27",
+      "actual_units": 23,
+      "expected_units": 25.351422521398817,
+      "deviation_units": -2.351422521398817
+    },
+    {
+      "specification": "full_context_linear",
+      "date": "2026-05-28",
+      "actual_units": 21,
+      "expected_units": 26.155357723534454,
+      "deviation_units": -5.155357723534454
+    },
+    {
+      "specification": "full_context_linear",
+      "date": "2026-05-29",
+      "actual_units": 20,
+      "expected_units": 26.404963291982448,
+      "deviation_units": -6.4049632919824475
+    },
+    {
+      "specification": "full_context_linear",
+      "date": "2026-06-16",
+      "actual_units": 32,
+      "expected_units": 36.42888115250111,
+      "deviation_units": -4.428881152501113
+    },
+    {
+      "specification": "full_context_linear",
+      "date": "2026-06-26",
+      "actual_units": 24,
+      "expected_units": 26.9127298979879,
+      "deviation_units": -2.9127298979879015
+    },
+    {
+      "specification": "full_context_quadratic",
+      "date": "2026-03-20",
+      "actual_units": 17,
+      "expected_units": 20.209064056956297,
+      "deviation_units": -3.209064056956297
+    },
+    {
+      "specification": "full_context_quadratic",
+      "date": "2026-03-21",
+      "actual_units": 11,
+      "expected_units": 15.0327288188955,
+      "deviation_units": -4.0327288188954995
+    },
+    {
+      "specification": "full_context_quadratic",
+      "date": "2026-03-22",
+      "actual_units": 20,
+      "expected_units": 17.215361467548767,
+      "deviation_units": 2.7846385324512326
+    },
+    {
+      "specification": "full_context_quadratic",
+      "date": "2026-03-23",
+      "actual_units": 9,
+      "expected_units": 18.505514079122282,
+      "deviation_units": -9.505514079122282
+    },
+    {
+      "specification": "full_context_quadratic",
+      "date": "2026-05-27",
+      "actual_units": 23,
+      "expected_units": 25.474778372530018,
+      "deviation_units": -2.474778372530018
+    },
+    {
+      "specification": "full_context_quadratic",
+      "date": "2026-05-28",
+      "actual_units": 21,
+      "expected_units": 26.476750758856618,
+      "deviation_units": -5.4767507588566176
+    },
+    {
+      "specification": "full_context_quadratic",
+      "date": "2026-05-29",
+      "actual_units": 20,
+      "expected_units": 26.924668823543552,
+      "deviation_units": -6.924668823543552
+    },
+    {
+      "specification": "full_context_quadratic",
+      "date": "2026-06-16",
+      "actual_units": 32,
+      "expected_units": 36.19482725909604,
+      "deviation_units": -4.194827259096037
+    },
+    {
+      "specification": "full_context_quadratic",
+      "date": "2026-06-26",
+      "actual_units": 24,
+      "expected_units": 27.254967565856504,
+      "deviation_units": -3.2549675658565036
+    }
+  ],
+  "branch_and_item_effects": [
+    {
+      "analysis": "branch_or_item",
+      "series": "All branches / Sandwiches",
+      "specification": "full_context_quadratic",
+      "mean_daily_units": 21.591160220994475,
+      "coefficient_units_per_day": -4.0630667034025985,
+      "ci_low": -5.6688311710785975,
+      "ci_high": -2.4573022357265994,
+      "p_value_unadjusted": 7.074839416450834e-07,
+      "effect_pct_of_mean": -18.81819532538051
+    },
+    {
+      "analysis": "branch_or_item",
+      "series": "Garden / Sandwiches",
+      "specification": "full_context_quadratic",
+      "mean_daily_units": 6.464088397790055,
+      "coefficient_units_per_day": -1.115188122835577,
+      "ci_low": -3.0570041300234063,
+      "ci_high": 0.8266278843522525,
+      "p_value_unadjusted": 0.26033040646233063,
+      "effect_pct_of_mean": -17.252055575490548
+    },
+    {
+      "analysis": "branch_or_item",
+      "series": "Harbour / Sandwiches",
+      "specification": "full_context_quadratic",
+      "mean_daily_units": 9.408839779005525,
+      "coefficient_units_per_day": -1.9496383629861778,
+      "ci_low": -4.689931367335972,
+      "ci_high": 0.7906546413636164,
+      "p_value_unadjusted": 0.1631796224023433,
+      "effect_pct_of_mean": -20.721347251937647
+    },
+    {
+      "analysis": "branch_or_item",
+      "series": "Uptown / Sandwiches",
+      "specification": "full_context_quadratic",
+      "mean_daily_units": 5.718232044198895,
+      "coefficient_units_per_day": -0.9982402175808428,
+      "ci_low": -2.3152125786396445,
+      "ci_high": 0.31873214347795875,
+      "p_value_unadjusted": 0.13738078816377025,
+      "effect_pct_of_mean": -17.45714776638962
+    },
+    {
+      "analysis": "branch_or_item",
+      "series": "All branches / Chicken Pesto Sandwich",
+      "specification": "full_context_quadratic",
+      "mean_daily_units": 6.331491712707182,
+      "coefficient_units_per_day": -1.2938073774039398,
+      "ci_low": -3.522699698400874,
+      "ci_high": 0.9350849435929942,
+      "p_value_unadjusted": 0.255244823463492,
+      "effect_pct_of_mean": -20.43447952095228
+    },
+    {
+      "analysis": "branch_or_item",
+      "series": "All branches / Halloumi Wrap",
+      "specification": "full_context_quadratic",
+      "mean_daily_units": 5.3646408839779,
+      "coefficient_units_per_day": -0.8669762247483027,
+      "ci_low": -2.281874718418698,
+      "ci_high": 0.5479222689220927,
+      "p_value_unadjusted": 0.22976516038235117,
+      "effect_pct_of_mean": -16.1609368361939
+    },
+    {
+      "analysis": "branch_or_item",
+      "series": "All branches / Tuna Sandwich",
+      "specification": "full_context_quadratic",
+      "mean_daily_units": 3.983425414364641,
+      "coefficient_units_per_day": 0.5664139379462172,
+      "ci_low": -0.7680230070388689,
+      "ci_high": 1.9008508829313033,
+      "p_value_unadjusted": 0.40545150663205587,
+      "effect_pct_of_mean": 14.21926806772057
+    },
+    {
+      "analysis": "branch_or_item",
+      "series": "All branches / Turkey & Cheese Sandwich",
+      "specification": "full_context_quadratic",
+      "mean_daily_units": 5.911602209944752,
+      "coefficient_units_per_day": -2.468697039196573,
+      "ci_low": -3.848270233266314,
+      "ci_high": -1.0891238451268317,
+      "p_value_unadjusted": 0.00045270288357030034,
+      "effect_pct_of_mean": -41.760202251829874
+    }
+  ],
+  "calendar_definition_sensitivity": [
+    {
+      "analysis": "holiday_definition",
+      "series": "All branches / Sandwiches",
+      "definition": "public_closure_9days",
+      "specification": "weekday_linear",
+      "event_days": 9,
+      "coefficient_units_per_day": -4.101260789511424,
+      "ci_low": -5.300995203249337,
+      "ci_high": -2.9015263757735115,
+      "p_value_unadjusted": 2.0829728522779e-11
+    },
+    {
+      "analysis": "holiday_definition",
+      "series": "All branches / Sandwiches",
+      "definition": "public_closure_9days",
+      "specification": "weekday_quadratic",
+      "event_days": 9,
+      "coefficient_units_per_day": -4.081162281046919,
+      "ci_low": -5.256815124701049,
+      "ci_high": -2.905509437392789,
+      "p_value_unadjusted": 1.0188036786310211e-11
+    },
+    {
+      "analysis": "holiday_definition",
+      "series": "All branches / Sandwiches",
+      "definition": "public_closure_9days",
+      "specification": "full_context_quadratic",
+      "event_days": 9,
+      "coefficient_units_per_day": -4.0630667034025985,
+      "ci_low": -5.6688311710785975,
+      "ci_high": -2.4573022357265994,
+      "p_value_unadjusted": 7.074839416450834e-07
+    },
+    {
+      "analysis": "holiday_definition",
+      "series": "All branches / Sandwiches",
+      "definition": "first_religious_day_4days",
+      "specification": "weekday_linear",
+      "event_days": 4,
+      "coefficient_units_per_day": -3.349446043015023,
+      "ci_low": -5.024076750184367,
+      "ci_high": -1.6748153358456794,
+      "p_value_unadjusted": 8.849605384260185e-05
+    },
+    {
+      "analysis": "holiday_definition",
+      "series": "All branches / Sandwiches",
+      "definition": "first_religious_day_4days",
+      "specification": "weekday_quadratic",
+      "event_days": 4,
+      "coefficient_units_per_day": -3.504120799239091,
+      "ci_low": -5.244944210748588,
+      "ci_high": -1.763297387729594,
+      "p_value_unadjusted": 7.972307130591024e-05
+    },
+    {
+      "analysis": "holiday_definition",
+      "series": "All branches / Sandwiches",
+      "definition": "first_religious_day_4days",
+      "specification": "full_context_quadratic",
+      "event_days": 4,
+      "coefficient_units_per_day": -3.0407373503218915,
+      "ci_low": -4.619161756444951,
+      "ci_high": -1.4623129441988323,
+      "p_value_unadjusted": 0.0001595270365966651
+    },
+    {
+      "analysis": "holiday_definition",
+      "series": "All branches / Sandwiches",
+      "definition": "eid_two_days_6days",
+      "specification": "weekday_linear",
+      "event_days": 6,
+      "coefficient_units_per_day": -3.6570271720797156,
+      "ci_low": -4.8373102508734025,
+      "ci_high": -2.476744093286029,
+      "p_value_unadjusted": 1.2568671890203379e-09
+    },
+    {
+      "analysis": "holiday_definition",
+      "series": "All branches / Sandwiches",
+      "definition": "eid_two_days_6days",
+      "specification": "weekday_quadratic",
+      "event_days": 6,
+      "coefficient_units_per_day": -3.714544420935189,
+      "ci_low": -4.866665377893427,
+      "ci_high": -2.562423463976951,
+      "p_value_unadjusted": 2.6308250830931826e-10
+    },
+    {
+      "analysis": "holiday_definition",
+      "series": "All branches / Sandwiches",
+      "definition": "eid_two_days_6days",
+      "specification": "full_context_quadratic",
+      "event_days": 6,
+      "coefficient_units_per_day": -3.580085349494657,
+      "ci_low": -4.842411422553781,
+      "ci_high": -2.3177592764355333,
+      "p_value_unadjusted": 2.7185750738161787e-08
+    }
+  ],
+  "weekday_matched": [
+    {
+      "analysis": "weekday_matched_local_linear_28days",
+      "series": "All branches / Sandwiches",
+      "date": "2026-03-20",
+      "n_controls": 6,
+      "earlier_controls": 4,
+      "later_controls": 2,
+      "actual_units": 17,
+      "expected_units": 20.766536964980553,
+      "coefficient_units_per_day": -3.7665369649805527
+    },
+    {
+      "analysis": "weekday_matched_local_linear_28days",
+      "series": "All branches / Sandwiches",
+      "date": "2026-03-21",
+      "n_controls": 8,
+      "earlier_controls": 4,
+      "later_controls": 4,
+      "actual_units": 11,
+      "expected_units": 17.999999999999996,
+      "coefficient_units_per_day": -6.9999999999999964
+    },
+    {
+      "analysis": "weekday_matched_local_linear_28days",
+      "series": "All branches / Sandwiches",
+      "date": "2026-03-22",
+      "n_controls": 6,
+      "earlier_controls": 4,
+      "later_controls": 2,
+      "actual_units": 20,
+      "expected_units": 16.747081712062265,
+      "coefficient_units_per_day": 3.252918287937735
+    },
+    {
+      "analysis": "weekday_matched_local_linear_28days",
+      "series": "All branches / Sandwiches",
+      "date": "2026-03-23",
+      "n_controls": 6,
+      "earlier_controls": 4,
+      "later_controls": 2,
+      "actual_units": 9,
+      "expected_units": 19.957198443579774,
+      "coefficient_units_per_day": -10.957198443579774
+    },
+    {
+      "analysis": "weekday_matched_local_linear_28days",
+      "series": "All branches / Sandwiches",
+      "date": "2026-05-27",
+      "n_controls": 8,
+      "earlier_controls": 4,
+      "later_controls": 4,
+      "actual_units": 23,
+      "expected_units": 24.499999999999993,
+      "coefficient_units_per_day": -1.499999999999993
+    },
+    {
+      "analysis": "weekday_matched_local_linear_28days",
+      "series": "All branches / Sandwiches",
+      "date": "2026-05-28",
+      "n_controls": 8,
+      "earlier_controls": 4,
+      "later_controls": 4,
+      "actual_units": 21,
+      "expected_units": 26.999999999999993,
+      "coefficient_units_per_day": -5.999999999999993
+    },
+    {
+      "analysis": "weekday_matched_local_linear_28days",
+      "series": "All branches / Sandwiches",
+      "date": "2026-05-29",
+      "n_controls": 6,
+      "earlier_controls": 3,
+      "later_controls": 3,
+      "actual_units": 20,
+      "expected_units": 24.333333333333343,
+      "coefficient_units_per_day": -4.333333333333343
+    },
+    {
+      "analysis": "weekday_matched_local_linear_28days",
+      "series": "All branches / Sandwiches",
+      "date": "2026-06-16",
+      "n_controls": 6,
+      "earlier_controls": 4,
+      "later_controls": 2,
+      "actual_units": 32,
+      "expected_units": 44.52173913043478,
+      "coefficient_units_per_day": -12.521739130434781
+    },
+    {
+      "analysis": "weekday_matched_local_linear_28days",
+      "series": "All branches / Sandwiches",
+      "date": "2026-06-26",
+      "n_controls": 3,
+      "earlier_controls": 3,
+      "later_controls": 0,
+      "actual_units": 24,
+      "expected_units": 13.333333333333332,
+      "coefficient_units_per_day": 10.666666666666668
+    }
+  ],
+  "weekday_matched_summary": {
+    "mean_daily_deviation_units": -3.573246990858225,
+    "total_deviation_units": -32.15922291772402
+  },
+  "formal_religious_calendar_contrasts": [
+    {
+      "analysis": "muslim_minus_christian_contrast",
+      "series": "All branches / Sandwiches",
+      "specification": "weekday_linear",
+      "coefficient_units_per_day": -4.226051615878803,
+      "ci_low": -5.885460715628751,
+      "ci_high": -2.566642516128855,
+      "p_value_unadjusted": 5.991808313287884e-07,
+      "muslim_coefficient": -4.101260789511424,
+      "christian_coefficient": 0.12479082636737884
+    },
+    {
+      "analysis": "muslim_minus_christian_contrast",
+      "series": "All branches / Sandwiches",
+      "specification": "weekday_quadratic",
+      "coefficient_units_per_day": -4.34962557462919,
+      "ci_low": -6.0655362603051355,
+      "ci_high": -2.6337148889532442,
+      "p_value_unadjusted": 6.755247765843708e-07,
+      "muslim_coefficient": -4.081162281046919,
+      "christian_coefficient": 0.268463293582271
+    },
+    {
+      "analysis": "muslim_minus_christian_contrast",
+      "series": "All branches / Sandwiches",
+      "specification": "full_context_linear",
+      "coefficient_units_per_day": -5.101042249887575,
+      "ci_low": -7.222740481100264,
+      "ci_high": -2.9793440186748863,
+      "p_value_unadjusted": 2.450608356993601e-06,
+      "muslim_coefficient": -3.957230470060184,
+      "christian_coefficient": 1.1438117798273908
+    },
+    {
+      "analysis": "muslim_minus_christian_contrast",
+      "series": "All branches / Sandwiches",
+      "specification": "full_context_quadratic",
+      "coefficient_units_per_day": -5.1959830269923035,
+      "ci_low": -7.3834461534869416,
+      "ci_high": -3.008519900497666,
+      "p_value_unadjusted": 3.23048411461592e-06,
+      "muslim_coefficient": -4.0630667034025985,
+      "christian_coefficient": 1.132916323589705
+    },
+    {
+      "analysis": "muslim_minus_christian_contrast",
+      "series": "All branches / all categories",
+      "specification": "weekday_linear",
+      "coefficient_units_per_day": -16.662018178042274,
+      "ci_low": -44.60546310371663,
+      "ci_high": 11.281426747632082,
+      "p_value_unadjusted": 0.24253243395139112,
+      "muslim_coefficient": -14.838137472648464,
+      "christian_coefficient": 1.8238807053938082
+    },
+    {
+      "analysis": "muslim_minus_christian_contrast",
+      "series": "All branches / all categories",
+      "specification": "weekday_quadratic",
+      "coefficient_units_per_day": -17.63193955717435,
+      "ci_low": -44.86181388721816,
+      "ci_high": 9.597934772869465,
+      "p_value_unadjusted": 0.2043984200105382,
+      "muslim_coefficient": -14.680386007489242,
+      "christian_coefficient": 2.9515535496851055
+    },
+    {
+      "analysis": "muslim_minus_christian_contrast",
+      "series": "All branches / all categories",
+      "specification": "full_context_linear",
+      "coefficient_units_per_day": -14.88245187863567,
+      "ci_low": -42.25864233349169,
+      "ci_high": 12.493738576220352,
+      "p_value_unadjusted": 0.28665404171124853,
+      "muslim_coefficient": -13.044401121736486,
+      "christian_coefficient": 1.8380507568991844
+    },
+    {
+      "analysis": "muslim_minus_christian_contrast",
+      "series": "All branches / all categories",
+      "specification": "full_context_quadratic",
+      "coefficient_units_per_day": -15.896525716318315,
+      "ci_low": -43.17125482769185,
+      "ci_high": 11.378203395055216,
+      "p_value_unadjusted": 0.253318756016206,
+      "muslim_coefficient": -14.203217306189778,
+      "christian_coefficient": 1.6933084101285372
+    }
+  ],
+  "four_event_descriptive_uncertainty": {
+    "definition": "Equal event-weight off-event residuals, full-context quadratic. Heuristic only: four blocks and shared baseline; not an independent test.",
+    "negative_events": 4,
+    "event_mean_daily_deviation": -3.974798645556662,
+    "t3_interval_low": -5.196722257784462,
+    "t3_interval_high": -2.7528750333288627,
+    "two_sided_sign_test_p_unadjusted": 0.125
+  },
+  "theoretical_waste_scenario": {
+    "weighted_sandwich_cost_usd": 5.059915557830092,
+    "estimated_fewer_sold_units_per_holiday_day": 4.0630667034025985,
+    "nine_day_units": 36.567600330623385,
+    "nine_day_ingredient_cost_usd": 185.02896982543407,
+    "rounded_4_units_times_9_cost_usd": 182.1569600818833,
+    "assumptions": "Every forecast reduction would otherwise be prepared and discarded, no salvage, no stockout/sales penalty, historical product/branch cost mix applies. No waste, inventory or censoring data: these are scenario dollars, not measured savings or annual ROI."
+  },
+  "limitations": [
+    "Hypothesis was chosen from the full January-June discovery search, including June. All sensitivity analyses reuse those observations.",
+    "HAC lag7 intervals account approximately for time dependence, not selection or reliable inference from four holiday blocks; subgroup/calendar p-values are unadjusted exploratory diagnostics.",
+    "All coefficients are conditional associations. Public closure may change working schedules, opening hours, stock availability, promotions, travel or product substitution.",
+    "The four event blocks occur once and overlap different regimes. Christian and Muslim are calendar categories, never observed or inferred customer religions.",
+    "Omitted-event refits remove every row in that event; local comparisons and off-event fits use future observations and are retrospective sensitivity checks, not forecasting validation.",
+    "Local matching has fewer later controls near the June dataset boundary; results cannot establish repeatable annual seasonality.",
+    "Demand is censored by availability: fewer recorded sales could reflect fewer sandwiches offered. Do not reduce production operationally without stockout and waste logs."
+  ]
+}

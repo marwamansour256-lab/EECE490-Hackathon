@@ -1,0 +1,1082 @@
+{
+  "research_date": "2026-10-17",
+  "protocol": "All four scopes x four dayparts x139 dates, forecasts fit only earlier dates. News selected after anomalies is post-selection exploratory.",
+  "comparisons": 2224,
+  "approx_bh_flags": 1,
+  "cases": [
+    {
+      "date": "2026-02-14",
+      "orders": 99.0,
+      "expected_orders": 121.46235294353653,
+      "residual_pct": -18.49326346738769,
+      "approx_q_bh": 1.0,
+      "profit_gap": -83.88266587192993,
+      "branches": [
+        {
+          "Branch": "Garden",
+          "orders": 33.0,
+          "expected_orders": 38.6480415575003,
+          "residual_pct": -14.614043376809093,
+          "profit_gap": -23.728846929738694
+        },
+        {
+          "Branch": "Harbour",
+          "orders": 42.0,
+          "expected_orders": 59.11313741733894,
+          "residual_pct": -28.949803994533628,
+          "profit_gap": -63.121066206811065
+        },
+        {
+          "Branch": "Uptown",
+          "orders": 24.0,
+          "expected_orders": 23.651956326439667,
+          "residual_pct": 1.471521715822166,
+          "profit_gap": 0.10815628520370524
+        }
+      ],
+      "dayparts": [
+        {
+          "daypart": "before12",
+          "orders": 20.0,
+          "expected_orders": 24.925111690793056,
+          "residual_pct": -19.75963739657911
+        },
+        {
+          "daypart": "12to18",
+          "orders": 29.0,
+          "expected_orders": 35.06342444042062,
+          "residual_pct": -17.292733203294286
+        },
+        {
+          "daypart": "18plus",
+          "orders": 50.0,
+          "expected_orders": 61.628014802418406,
+          "residual_pct": -18.868066478691926
+        }
+      ],
+      "external_candidates": [
+        {
+          "id": "hariri_access",
+          "date": "2026-02-14",
+          "known_at": "2026-02-13",
+          "family": "Road access / commemoration",
+          "fact": "ISF announced downtown street closures, with several restrictions from 06:00. Valentine date overlaps.",
+          "url": "https://isf.gov.lb/ar/news/%D8%AA%D8%AF%D8%A7%D8%A8%D9%8A%D8%B1-%D8%B3%D9%8A%D8%B1-%D9%81%D9%8A-%D9%88%D8%B3%D8%B7-%D8%A8%D9%8A%D8%B1%D9%88%D8%AA-%D8%AA%D8%B2%D8%A7%D9%85%D9%86%D9%8B%D8%A7-%D9%85%D8%B9-%D8%A5%D8%AD%D9%8A%D8%A7/",
+          "mechanism": "Access disruption should be stronger in exposed downtown stores, with a compatible time profile.",
+          "missing": "Verified branch coordinates, road access and opening-hour logs."
+        }
+      ],
+      "attribution_status": "unresolved: event occurrence is verified; sales cause is not identified"
+    },
+    {
+      "date": "2026-02-15",
+      "orders": 124.0,
+      "expected_orders": 143.4942712590462,
+      "residual_pct": -13.585400370342127,
+      "approx_q_bh": 1.0,
+      "profit_gap": -33.18919808278872,
+      "branches": [
+        {
+          "Branch": "Garden",
+          "orders": 38.0,
+          "expected_orders": 47.27059179114118,
+          "residual_pct": -19.61175318494436,
+          "profit_gap": -28.04546080799838
+        },
+        {
+          "Branch": "Harbour",
+          "orders": 58.0,
+          "expected_orders": 70.91383951718855,
+          "residual_pct": -18.2106054405056,
+          "profit_gap": -61.53637493118174
+        },
+        {
+          "Branch": "Uptown",
+          "orders": 28.0,
+          "expected_orders": 25.296794092872446,
+          "residual_pct": 10.685962407739247,
+          "profit_gap": 54.18773995085499
+        }
+      ],
+      "dayparts": [
+        {
+          "daypart": "before12",
+          "orders": 29.0,
+          "expected_orders": 27.958317538665938,
+          "residual_pct": 3.725841012762765
+        },
+        {
+          "daypart": "12to18",
+          "orders": 41.0,
+          "expected_orders": 43.70242621986292,
+          "residual_pct": -6.183698374701807
+        },
+        {
+          "daypart": "18plus",
+          "orders": 54.0,
+          "expected_orders": 71.7063288643253,
+          "residual_pct": -24.692839732218385
+        }
+      ],
+      "external_candidates": [],
+      "attribution_status": "unresolved: event occurrence is verified; sales cause is not identified"
+    },
+    {
+      "date": "2026-02-21",
+      "orders": 95.0,
+      "expected_orders": 117.268177636847,
+      "residual_pct": -18.989105216426662,
+      "approx_q_bh": 1.0,
+      "profit_gap": -104.38766269276289,
+      "branches": [
+        {
+          "Branch": "Garden",
+          "orders": 27.0,
+          "expected_orders": 37.502467869816485,
+          "residual_pct": -28.004737998240635,
+          "profit_gap": -44.72813932457949
+        },
+        {
+          "Branch": "Harbour",
+          "orders": 52.0,
+          "expected_orders": 55.94223794588426,
+          "residual_pct": -7.04697933196341,
+          "profit_gap": -27.176124422679834
+        },
+        {
+          "Branch": "Uptown",
+          "orders": 16.0,
+          "expected_orders": 23.792208087325566,
+          "residual_pct": -32.751092537210035,
+          "profit_gap": -33.6027945769555
+        }
+      ],
+      "dayparts": [
+        {
+          "daypart": "before12",
+          "orders": 15.0,
+          "expected_orders": 24.147785731752762,
+          "residual_pct": -37.88250332089051
+        },
+        {
+          "daypart": "12to18",
+          "orders": 31.0,
+          "expected_orders": 34.73252508781697,
+          "residual_pct": -10.74648352914086
+        },
+        {
+          "daypart": "18plus",
+          "orders": 49.0,
+          "expected_orders": 58.51061277734244,
+          "residual_pct": -16.254508927353626
+        }
+      ],
+      "external_candidates": [
+        {
+          "id": "feb21_strikes",
+          "date": "2026-02-21",
+          "known_at": "2026-02-21",
+          "family": "Conflict before March escalation",
+          "fact": "Reporting describes overnight strikes in eastern Lebanon. A national March2-only indicator misses prior disruption.",
+          "url": "https://amp.dw.com/en/israel-says-it-hit-hezbollah-sites-in-eastern-lebanon/a-76068525",
+          "mechanism": "Requires local exposure; also first Ramadan Saturday.",
+          "missing": "Coordinates and exposure; cannot separate Ramadan and conflict on one date."
+        }
+      ],
+      "attribution_status": "unresolved: event occurrence is verified; sales cause is not identified"
+    },
+    {
+      "date": "2026-02-22",
+      "orders": 157.0,
+      "expected_orders": 139.6303914338859,
+      "residual_pct": 12.439704843439102,
+      "approx_q_bh": 1.0,
+      "profit_gap": 98.31079657517785,
+      "branches": [
+        {
+          "Branch": "Garden",
+          "orders": 59.0,
+          "expected_orders": 45.25528957606514,
+          "residual_pct": 30.371500332204793,
+          "profit_gap": 61.4674136148667
+        },
+        {
+          "Branch": "Harbour",
+          "orders": 76.0,
+          "expected_orders": 68.98509928726591,
+          "residual_pct": 10.168718730870886,
+          "profit_gap": 59.923181808967115
+        },
+        {
+          "Branch": "Uptown",
+          "orders": 22.0,
+          "expected_orders": 25.397044027491972,
+          "residual_pct": -13.375745712039233,
+          "profit_gap": -24.363703297517333
+        }
+      ],
+      "dayparts": [
+        {
+          "daypart": "before12",
+          "orders": 25.0,
+          "expected_orders": 27.92731467166038,
+          "residual_pct": -10.48190528189562
+        },
+        {
+          "daypart": "12to18",
+          "orders": 54.0,
+          "expected_orders": 44.13887913830625,
+          "residual_pct": 22.341122054310848
+        },
+        {
+          "daypart": "18plus",
+          "orders": 78.0,
+          "expected_orders": 67.52904041238877,
+          "residual_pct": 15.505861661393094
+        }
+      ],
+      "external_candidates": [],
+      "attribution_status": "unresolved: event occurrence is verified; sales cause is not identified"
+    },
+    {
+      "date": "2026-03-03",
+      "orders": 303.0,
+      "expected_orders": 257.32689928442215,
+      "residual_pct": 17.74905804351825,
+      "approx_q_bh": 0.9865642592490407,
+      "profit_gap": 204.64177705398743,
+      "branches": [
+        {
+          "Branch": "Garden",
+          "orders": 99.0,
+          "expected_orders": 88.84440779206795,
+          "residual_pct": 11.4307613279389,
+          "profit_gap": 20.515652726004816
+        },
+        {
+          "Branch": "Harbour",
+          "orders": 140.0,
+          "expected_orders": 121.08126796361475,
+          "residual_pct": 15.62482153892737,
+          "profit_gap": 112.74620850116094
+        },
+        {
+          "Branch": "Uptown",
+          "orders": 64.0,
+          "expected_orders": 47.437895421089685,
+          "residual_pct": 34.91323641551607,
+          "profit_gap": 73.50558417461798
+        }
+      ],
+      "dayparts": [
+        {
+          "daypart": "before12",
+          "orders": 46.0,
+          "expected_orders": 48.04552234729559,
+          "residual_pct": -4.2574671839544
+        },
+        {
+          "daypart": "12to18",
+          "orders": 91.0,
+          "expected_orders": 76.375649892539,
+          "residual_pct": 19.147922312985276
+        },
+        {
+          "daypart": "18plus",
+          "orders": 166.0,
+          "expected_orders": 132.9147145196993,
+          "residual_pct": 24.89211642206637
+        }
+      ],
+      "external_candidates": [],
+      "attribution_status": "unresolved: event occurrence is verified; sales cause is not identified"
+    },
+    {
+      "date": "2026-03-06",
+      "orders": 213.0,
+      "expected_orders": 178.52587683625293,
+      "residual_pct": 19.31043486506292,
+      "approx_q_bh": 0.9884140304164767,
+      "profit_gap": 205.0440122153691,
+      "branches": [
+        {
+          "Branch": "Garden",
+          "orders": 67.0,
+          "expected_orders": 60.99236673832203,
+          "residual_pct": 9.849811677996945,
+          "profit_gap": 26.006677067237348
+        },
+        {
+          "Branch": "Harbour",
+          "orders": 109.0,
+          "expected_orders": 83.5944673335396,
+          "residual_pct": 30.391404451556635,
+          "profit_gap": 174.94117149797364
+        },
+        {
+          "Branch": "Uptown",
+          "orders": 37.0,
+          "expected_orders": 33.959020434875804,
+          "residual_pct": 8.954850658769642,
+          "profit_gap": 6.934423004000649
+        }
+      ],
+      "dayparts": [
+        {
+          "daypart": "before12",
+          "orders": 37.0,
+          "expected_orders": 34.78218417888135,
+          "residual_pct": 6.376298307526174
+        },
+        {
+          "daypart": "12to18",
+          "orders": 66.0,
+          "expected_orders": 50.73537697999274,
+          "residual_pct": 30.086744060316704
+        },
+        {
+          "daypart": "18plus",
+          "orders": 110.0,
+          "expected_orders": 93.23137652720577,
+          "residual_pct": 17.986030129997065
+        }
+      ],
+      "external_candidates": [],
+      "attribution_status": "unresolved: event occurrence is verified; sales cause is not identified"
+    },
+    {
+      "date": "2026-03-20",
+      "orders": 161.0,
+      "expected_orders": 191.0059478729538,
+      "residual_pct": -15.709431149710607,
+      "approx_q_bh": 0.9884140304164767,
+      "profit_gap": -183.27516441490673,
+      "branches": [
+        {
+          "Branch": "Garden",
+          "orders": 46.0,
+          "expected_orders": 63.934237538234825,
+          "residual_pct": -28.051069706602117,
+          "profit_gap": -91.22140076674896
+        },
+        {
+          "Branch": "Harbour",
+          "orders": 80.0,
+          "expected_orders": 92.15553332410032,
+          "residual_pct": -13.190237075999246,
+          "profit_gap": -90.82170182070121
+        },
+        {
+          "Branch": "Uptown",
+          "orders": 35.0,
+          "expected_orders": 34.916083161716095,
+          "residual_pct": 0.24033863676873324,
+          "profit_gap": -0.44250931526457293
+        }
+      ],
+      "dayparts": [
+        {
+          "daypart": "before12",
+          "orders": 32.0,
+          "expected_orders": 36.21033239541788,
+          "residual_pct": -11.62743370991718
+        },
+        {
+          "daypart": "12to18",
+          "orders": 45.0,
+          "expected_orders": 56.64879440209455,
+          "residual_pct": -20.563181485224767
+        },
+        {
+          "daypart": "18plus",
+          "orders": 84.0,
+          "expected_orders": 98.19215683109954,
+          "residual_pct": -14.453452586352178
+        }
+      ],
+      "external_candidates": [],
+      "attribution_status": "unresolved: event occurrence is verified; sales cause is not identified"
+    },
+    {
+      "date": "2026-03-21",
+      "orders": 104.0,
+      "expected_orders": 124.45933777298062,
+      "residual_pct": -16.438571937687286,
+      "approx_q_bh": 1.0,
+      "profit_gap": -119.73326346894464,
+      "branches": [
+        {
+          "Branch": "Garden",
+          "orders": 39.0,
+          "expected_orders": 38.342414538327816,
+          "residual_pct": 1.7150340415177823,
+          "profit_gap": 3.0469063853614102
+        },
+        {
+          "Branch": "Harbour",
+          "orders": 50.0,
+          "expected_orders": 60.22630607420106,
+          "residual_pct": -16.979799593888213,
+          "profit_gap": -70.21188807143926
+        },
+        {
+          "Branch": "Uptown",
+          "orders": 15.0,
+          "expected_orders": 25.931376491134035,
+          "residual_pct": -42.155018245450584,
+          "profit_gap": -56.100300669152034
+        }
+      ],
+      "dayparts": [
+        {
+          "daypart": "before12",
+          "orders": 17.0,
+          "expected_orders": 24.306067826834656,
+          "residual_pct": -30.058616962997732
+        },
+        {
+          "daypart": "12to18",
+          "orders": 30.0,
+          "expected_orders": 38.4458685907584,
+          "residual_pct": -21.968208549692157
+        },
+        {
+          "daypart": "18plus",
+          "orders": 57.0,
+          "expected_orders": 61.70647642015176,
+          "residual_pct": -7.627200082056129
+        }
+      ],
+      "external_candidates": [],
+      "attribution_status": "unresolved: event occurrence is verified; sales cause is not identified"
+    },
+    {
+      "date": "2026-03-22",
+      "orders": 131.0,
+      "expected_orders": 152.80253886246703,
+      "residual_pct": -14.268440187430942,
+      "approx_q_bh": 1.0,
+      "profit_gap": -120.72836764151225,
+      "branches": [
+        {
+          "Branch": "Garden",
+          "orders": 47.0,
+          "expected_orders": 50.365593147958954,
+          "residual_pct": -6.682326043638276,
+          "profit_gap": -4.060361393662646
+        },
+        {
+          "Branch": "Harbour",
+          "orders": 58.0,
+          "expected_orders": 75.73266368773076,
+          "residual_pct": -23.41481577994936,
+          "profit_gap": -134.1162950867796
+        },
+        {
+          "Branch": "Uptown",
+          "orders": 26.0,
+          "expected_orders": 26.728784535766057,
+          "residual_pct": -2.7265906341190416,
+          "profit_gap": 16.614362862668912
+        }
+      ],
+      "dayparts": [
+        {
+          "daypart": "before12",
+          "orders": 20.0,
+          "expected_orders": 28.96687128261298,
+          "residual_pct": -30.95560854718624
+        },
+        {
+          "daypart": "12to18",
+          "orders": 40.0,
+          "expected_orders": 48.164689796914125,
+          "residual_pct": -16.951608805829434
+        },
+        {
+          "daypart": "18plus",
+          "orders": 71.0,
+          "expected_orders": 75.608320635149,
+          "residual_pct": -6.09499139305929
+        }
+      ],
+      "external_candidates": [],
+      "attribution_status": "unresolved: event occurrence is verified; sales cause is not identified"
+    },
+    {
+      "date": "2026-03-28",
+      "orders": 153.0,
+      "expected_orders": 123.25681084894072,
+      "residual_pct": 24.131071497145506,
+      "approx_q_bh": 0.9884140304164767,
+      "profit_gap": 119.26387884811186,
+      "branches": [
+        {
+          "Branch": "Garden",
+          "orders": 54.0,
+          "expected_orders": 38.90824028887911,
+          "residual_pct": 38.788080877136146,
+          "profit_gap": 85.34297426743308
+        },
+        {
+          "Branch": "Harbour",
+          "orders": 73.0,
+          "expected_orders": 59.12024033002541,
+          "residual_pct": 23.47717058065726,
+          "profit_gap": 27.24362511099673
+        },
+        {
+          "Branch": "Uptown",
+          "orders": 26.0,
+          "expected_orders": 25.252206838111523,
+          "residual_pct": 2.9612982607123417,
+          "profit_gap": 4.652758761568151
+        }
+      ],
+      "dayparts": [
+        {
+          "daypart": "before12",
+          "orders": 20.0,
+          "expected_orders": 23.207693449531906,
+          "residual_pct": -13.821681402796216
+        },
+        {
+          "daypart": "12to18",
+          "orders": 53.0,
+          "expected_orders": 37.79472638477131,
+          "residual_pct": 40.231204376056496
+        },
+        {
+          "daypart": "18plus",
+          "orders": 80.0,
+          "expected_orders": 62.24488569746949,
+          "residual_pct": 28.524615482187833
+        }
+      ],
+      "external_candidates": [
+        {
+          "id": "march28_conflict",
+          "date": "2026-03-28",
+          "known_at": "2026-03-28",
+          "family": "Conflict / displacement",
+          "fact": "Reuters footage documents damage after a night strike in Beirut southern suburbs.",
+          "url": "https://www.reutersconnect.com/item/building-damaged-following-an-israeli-night-strike-in-beiruts-southern-suburbs/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX1ZBODIzOTI4MDMyMDI2UlAx",
+          "mechanism": "Direct disruption and demand redistribution can have opposite signs.",
+          "missing": "Alias mapping, closure logs, local incident times; positive sales do not prove displacement inflow."
+        }
+      ],
+      "attribution_status": "unresolved: event occurrence is verified; sales cause is not identified"
+    },
+    {
+      "date": "2026-03-29",
+      "orders": 171.0,
+      "expected_orders": 153.1712633663564,
+      "residual_pct": 11.639739884498201,
+      "approx_q_bh": 1.0,
+      "profit_gap": 141.27518689294925,
+      "branches": [
+        {
+          "Branch": "Garden",
+          "orders": 53.0,
+          "expected_orders": 51.15702418615255,
+          "residual_pct": 3.6025860439832247,
+          "profit_gap": 13.483428123964103
+        },
+        {
+          "Branch": "Harbour",
+          "orders": 87.0,
+          "expected_orders": 74.63708012180328,
+          "residual_pct": 16.564045455718745,
+          "profit_gap": 96.3263625391765
+        },
+        {
+          "Branch": "Uptown",
+          "orders": 31.0,
+          "expected_orders": 27.362026160740935,
+          "residual_pct": 13.29570338792685,
+          "profit_gap": 32.45091331320478
+        }
+      ],
+      "dayparts": [
+        {
+          "daypart": "before12",
+          "orders": 33.0,
+          "expected_orders": 27.75375411462579,
+          "residual_pct": 18.902833338173597
+        },
+        {
+          "daypart": "12to18",
+          "orders": 56.0,
+          "expected_orders": 48.314805731336925,
+          "residual_pct": 15.906499368740024
+        },
+        {
+          "daypart": "18plus",
+          "orders": 82.0,
+          "expected_orders": 77.05734849748463,
+          "residual_pct": 6.414250683277434
+        }
+      ],
+      "external_candidates": [
+        {
+          "id": "dst",
+          "date": "2026-03-29",
+          "known_at": "2026-03-16",
+          "family": "Clock change / daylight / Palm Sunday",
+          "fact": "Government memo advances clocks one hour at midnight March28/29.",
+          "url": "https://pcm.gov.lb/arabic/subpg.aspx?pageid=26984",
+          "mechanism": "Clock effects should shift the hour profile. They cannot explain a March28 daytime spike that preceded the change.",
+          "missing": "Timestamp/timezone semantics; religious event also overlaps."
+        }
+      ],
+      "attribution_status": "unresolved: event occurrence is verified; sales cause is not identified"
+    },
+    {
+      "date": "2026-04-03",
+      "orders": 231.0,
+      "expected_orders": 193.17952388969653,
+      "residual_pct": 19.57789073540659,
+      "approx_q_bh": 0.9884140304164767,
+      "profit_gap": 190.5038653503177,
+      "branches": [
+        {
+          "Branch": "Garden",
+          "orders": 71.0,
+          "expected_orders": 64.453538990848,
+          "residual_pct": 10.15686820561017,
+          "profit_gap": -2.955524426687248
+        },
+        {
+          "Branch": "Harbour",
+          "orders": 115.0,
+          "expected_orders": 91.48342328625674,
+          "residual_pct": 25.705833766362886,
+          "profit_gap": 162.91613927758215
+        },
+        {
+          "Branch": "Uptown",
+          "orders": 45.0,
+          "expected_orders": 37.24474879881767,
+          "residual_pct": 20.822401684257088,
+          "profit_gap": 32.31049915408792
+        }
+      ],
+      "dayparts": [
+        {
+          "daypart": "before12",
+          "orders": 37.0,
+          "expected_orders": 34.633247171400335,
+          "residual_pct": 6.833759528485972
+        },
+        {
+          "daypart": "12to18",
+          "orders": 82.0,
+          "expected_orders": 57.55315131789955,
+          "residual_pct": 42.47699408685075
+        },
+        {
+          "daypart": "18plus",
+          "orders": 112.0,
+          "expected_orders": 101.07328567837958,
+          "residual_pct": 10.81068479003422
+        }
+      ],
+      "external_candidates": [
+        {
+          "id": "good_friday",
+          "date": "2026-04-03",
+          "known_at": null,
+          "family": "Religious calendar / school closure",
+          "fact": "Western Good Friday is on the official holiday calendar.",
+          "url": "https://www.bdl.gov.lb/bankingholidays.php",
+          "mechanism": "Holiday footfall or meal timing, not an assumed customer religion.",
+          "missing": "School/store catchments and hours; event occurs once."
+        }
+      ],
+      "attribution_status": "unresolved: event occurrence is verified; sales cause is not identified"
+    },
+    {
+      "date": "2026-05-01",
+      "orders": 252.0,
+      "expected_orders": 207.112896963626,
+      "residual_pct": 21.672770597312073,
+      "approx_q_bh": 0.9865642592490407,
+      "profit_gap": 257.34535732952304,
+      "branches": [
+        {
+          "Branch": "Garden",
+          "orders": 67.0,
+          "expected_orders": 68.61652064320774,
+          "residual_pct": -2.355876730639439,
+          "profit_gap": -20.14764939340182
+        },
+        {
+          "Branch": "Harbour",
+          "orders": 149.0,
+          "expected_orders": 99.99503319805726,
+          "residual_pct": 49.00740090248286,
+          "profit_gap": 312.83262744579133
+        },
+        {
+          "Branch": "Uptown",
+          "orders": 36.0,
+          "expected_orders": 38.500728600955334,
+          "residual_pct": -6.495276042368925,
+          "profit_gap": -34.52507184396143
+        }
+      ],
+      "dayparts": [
+        {
+          "daypart": "before12",
+          "orders": 45.0,
+          "expected_orders": 35.43179471146335,
+          "residual_pct": 27.004574186700815
+        },
+        {
+          "daypart": "12to18",
+          "orders": 73.0,
+          "expected_orders": 62.734622763350416,
+          "residual_pct": 16.363176798516776
+        },
+        {
+          "daypart": "18plus",
+          "orders": 134.0,
+          "expected_orders": 109.0532033835016,
+          "residual_pct": 22.875803591728825
+        }
+      ],
+      "external_candidates": [
+        {
+          "id": "labour",
+          "date": "2026-05-01",
+          "known_at": null,
+          "family": "Civic holiday",
+          "fact": "Labour Day is on the official 2026 calendar.",
+          "url": "https://www.bdl.gov.lb/bankingholidays.php",
+          "mechanism": "Leisure/commuting mix may shift; inspect branches and dayparts.",
+          "missing": "Opening hours and verified branch catchments."
+        }
+      ],
+      "attribution_status": "unresolved: event occurrence is verified; sales cause is not identified"
+    },
+    {
+      "date": "2026-05-14",
+      "orders": 172.0,
+      "expected_orders": 204.92223447286415,
+      "residual_pct": -16.065721007557975,
+      "approx_q_bh": 0.9884140304164767,
+      "profit_gap": -187.5912255637661,
+      "branches": [
+        {
+          "Branch": "Garden",
+          "orders": 53.0,
+          "expected_orders": 66.98682182130592,
+          "residual_pct": -20.87996032804359,
+          "profit_gap": -65.16700377256092
+        },
+        {
+          "Branch": "Harbour",
+          "orders": 88.0,
+          "expected_orders": 98.29870157069298,
+          "residual_pct": -10.476945683037853,
+          "profit_gap": -65.28620500089983
+        },
+        {
+          "Branch": "Uptown",
+          "orders": 31.0,
+          "expected_orders": 39.633005832605605,
+          "residual_pct": -21.782364600525284,
+          "profit_gap": -57.01091805949588
+        }
+      ],
+      "dayparts": [
+        {
+          "daypart": "before12",
+          "orders": 25.0,
+          "expected_orders": 38.158533600861226,
+          "residual_pct": -34.483855534124196
+        },
+        {
+          "daypart": "12to18",
+          "orders": 71.0,
+          "expected_orders": 59.67495627710633,
+          "residual_pct": 18.977883570294974
+        },
+        {
+          "daypart": "18plus",
+          "orders": 76.0,
+          "expected_orders": 107.16870449770633,
+          "residual_pct": -29.0837746371875
+        }
+      ],
+      "external_candidates": [
+        {
+          "id": "may13_access",
+          "date": "2026-05-14",
+          "known_at": "2026-05-13",
+          "family": "Transport disruption / conflict",
+          "fact": "Reuters reported strikes on cars on May13, including a highway south of Beirut; May14 sales decline follows this.",
+          "url": "https://au.marketscreener.com/news/israeli-airstrikes-kill-eight-people-on-highway-south-of-beirut-lebanon-s-health-ministry-says-ce7f5bdfd08ef022",
+          "mechanism": "Next-day access or confidence effect requires route exposure and timing.",
+          "missing": "No route-to-store link; no separate estimate of exam vs conflict cause."
+        }
+      ],
+      "attribution_status": "unresolved: event occurrence is verified; sales cause is not identified"
+    },
+    {
+      "date": "2026-05-21",
+      "orders": 231.0,
+      "expected_orders": 204.67023897284432,
+      "residual_pct": 12.864479544898133,
+      "approx_q_bh": 1.0,
+      "profit_gap": 215.37384577022658,
+      "branches": [
+        {
+          "Branch": "Garden",
+          "orders": 75.0,
+          "expected_orders": 66.95241723910159,
+          "residual_pct": 12.019853939191982,
+          "profit_gap": 58.0338787160415
+        },
+        {
+          "Branch": "Harbour",
+          "orders": 118.0,
+          "expected_orders": 98.6817738434346,
+          "residual_pct": 19.576285877486455,
+          "profit_gap": 173.8891575064847
+        },
+        {
+          "Branch": "Uptown",
+          "orders": 38.0,
+          "expected_orders": 39.029278528296146,
+          "residual_pct": -2.637195887569177,
+          "profit_gap": -17.133370505394794
+        }
+      ],
+      "dayparts": [
+        {
+          "daypart": "before12",
+          "orders": 46.0,
+          "expected_orders": 37.799456719553184,
+          "residual_pct": 21.694870752480355
+        },
+        {
+          "daypart": "12to18",
+          "orders": 73.0,
+          "expected_orders": 60.65796473520332,
+          "residual_pct": 20.346932704838807
+        },
+        {
+          "daypart": "18plus",
+          "orders": 112.0,
+          "expected_orders": 106.27112255345747,
+          "residual_pct": 5.390812959240865
+        }
+      ],
+      "external_candidates": [],
+      "attribution_status": "unresolved: event occurrence is verified; sales cause is not identified"
+    },
+    {
+      "date": "2026-05-23",
+      "orders": 137.0,
+      "expected_orders": 148.79548369760678,
+      "residual_pct": -7.927312983220947,
+      "approx_q_bh": 1.0,
+      "profit_gap": -44.814731725776596,
+      "branches": [
+        {
+          "Branch": "Garden",
+          "orders": 43.0,
+          "expected_orders": 48.25277175527684,
+          "residual_pct": -10.885948235092647,
+          "profit_gap": -23.386221388715086
+        },
+        {
+          "Branch": "Harbour",
+          "orders": 64.0,
+          "expected_orders": 71.6064094486649,
+          "residual_pct": -10.622525982283737,
+          "profit_gap": -31.740755626270754
+        },
+        {
+          "Branch": "Uptown",
+          "orders": 30.0,
+          "expected_orders": 28.928365292673718,
+          "residual_pct": 3.704442668931862,
+          "profit_gap": 9.506236162387069
+        }
+      ],
+      "dayparts": [
+        {
+          "daypart": "before12",
+          "orders": 25.0,
+          "expected_orders": 26.89838164110744,
+          "residual_pct": -7.057605421904789
+        },
+        {
+          "daypart": "12to18",
+          "orders": 49.0,
+          "expected_orders": 46.45123145736845,
+          "residual_pct": 5.486977336587362
+        },
+        {
+          "daypart": "18plus",
+          "orders": 63.0,
+          "expected_orders": 75.42921380420299,
+          "residual_pct": -16.477984029458913
+        }
+      ],
+      "external_candidates": [
+        {
+          "id": "one_run",
+          "date": "2026-05-23",
+          "known_at": "2026-05-22",
+          "family": "Sport event / road closures",
+          "fact": "ISF announces One Run Global waterfront race from 06:30 to 12:00, May23.",
+          "url": "https://isf.gov.lb/ar/news/%D8%AA%D8%AF%D8%A7%D8%A8%D9%8A%D8%B1-%D8%B3%D9%8A%D8%B1-%D9%8A%D9%88%D9%85-%D8%BA%D8%AF-%D8%A7%D9%84%D8%B3%D8%A8%D8%AA-%D8%A8%D9%85%D9%86%D8%A7%D8%B3%D8%A8%D8%A9-%D8%A5%D9%82%D8%A7%D9%85%D8%A9-%D9%85/",
+          "mechanism": "Morning increase near runners or decrease behind blocked roads; useful non-peak event comparison.",
+          "missing": "Branch distances and route exposure; includes both possible directions."
+        }
+      ],
+      "attribution_status": "unresolved: event occurrence is verified; sales cause is not identified"
+    },
+    {
+      "date": "2026-06-05",
+      "orders": 259.0,
+      "expected_orders": 232.6224971535382,
+      "residual_pct": 11.339188242421706,
+      "approx_q_bh": 1.0,
+      "profit_gap": 136.43312846547587,
+      "branches": [
+        {
+          "Branch": "Garden",
+          "orders": 75.0,
+          "expected_orders": 77.31315452585234,
+          "residual_pct": -2.9919287862958166,
+          "profit_gap": -22.80057094608003
+        },
+        {
+          "Branch": "Harbour",
+          "orders": 134.0,
+          "expected_orders": 113.08849976612974,
+          "residual_pct": 18.491270356504707,
+          "profit_gap": 107.22688667157877
+        },
+        {
+          "Branch": "Uptown",
+          "orders": 50.0,
+          "expected_orders": 42.24505001538128,
+          "residual_pct": 18.357061908543535,
+          "profit_gap": 51.104304517520575
+        }
+      ],
+      "dayparts": [
+        {
+          "daypart": "before12",
+          "orders": 43.0,
+          "expected_orders": 41.05785388752607,
+          "residual_pct": 4.7302669978665834
+        },
+        {
+          "daypart": "12to18",
+          "orders": 78.0,
+          "expected_orders": 71.07912173002187,
+          "residual_pct": 9.736865202507051
+        },
+        {
+          "daypart": "18plus",
+          "orders": 138.0,
+          "expected_orders": 120.49911102434068,
+          "residual_pct": 14.52366646267138
+        }
+      ],
+      "external_candidates": [
+        {
+          "id": "aub_graduation",
+          "date": "2026-06-05",
+          "known_at": null,
+          "family": "Graduation / family visits",
+          "fact": "AUB graduate ceremony was scheduled for 19:30 June5; guests were invited from18:30.",
+          "url": "https://www.aub.edu.lb/commencement/Pages/graduate-ceremony.aspx",
+          "additional_source": "https://www.haigazian.edu.lb/2026/06/08/class-of-2026-bids-farewell-to-haigazian-university-president-haidostian-you-are-what-you-count-in-life/",
+          "additional_fact": "Haigazian also held commencement June5, reported June8; retrospective evidence only.",
+          "mechanism": "Near-campus evening sales should rise more than morning sales if graduation is the driver.",
+          "missing": "Campus-to-branch mapping, event exposure and announcement vintage."
+        }
+      ],
+      "attribution_status": "unresolved: event occurrence is verified; sales cause is not identified"
+    },
+    {
+      "date": "2026-06-24",
+      "orders": 198.0,
+      "expected_orders": 234.05618381012872,
+      "residual_pct": -15.404926809956986,
+      "approx_q_bh": 0.9884140304164767,
+      "profit_gap": -239.7839109420413,
+      "branches": [
+        {
+          "Branch": "Garden",
+          "orders": 63.0,
+          "expected_orders": 75.81980068949706,
+          "residual_pct": -16.90824899685198,
+          "profit_gap": -91.87952452658652
+        },
+        {
+          "Branch": "Harbour",
+          "orders": 109.0,
+          "expected_orders": 115.38769227423464,
+          "residual_pct": -5.535852349879233,
+          "profit_gap": -58.33319564252372
+        },
+        {
+          "Branch": "Uptown",
+          "orders": 26.0,
+          "expected_orders": 42.88814504854144,
+          "residual_pct": -39.37718693458807,
+          "profit_gap": -91.53684168725954
+        }
+      ],
+      "dayparts": [
+        {
+          "daypart": "before12",
+          "orders": 33.0,
+          "expected_orders": 45.53572770650483,
+          "residual_pct": -27.529433124034796
+        },
+        {
+          "daypart": "12to18",
+          "orders": 63.0,
+          "expected_orders": 73.02823794885768,
+          "residual_pct": -13.732000429587998
+        },
+        {
+          "daypart": "18plus",
+          "orders": 102.0,
+          "expected_orders": 115.49918203913114,
+          "residual_pct": -11.687686268252195
+        }
+      ],
+      "external_candidates": [
+        {
+          "id": "return_flows",
+          "date": "2026-06-24",
+          "known_at": "2026-06-24",
+          "family": "Population movement / waterfront access",
+          "fact": "Reuters footage records instructions to dismantle Beirut waterfront tents on June24.",
+          "url": "https://www.reutersconnect.com/item/displaced-families-told-to-dismantle-beirut-tents-as-governor-says-shelters-secured/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX1ZBMTk4MzI0MDYyMDI2UlAx",
+          "mechanism": "Receiving-area demand may change; this is not a uniform national war effect.",
+          "missing": "No verified branch exposure; neither customers nor movement can be inferred from IDs."
+        }
+      ],
+      "attribution_status": "unresolved: event occurrence is verified; sales cause is not identified"
+    }
+  ],
+  "caveats": [
+    "Count tail probabilities omit parameter uncertainty and may be miscalibrated; they are screening aids, not causal tests.",
+    "Profit gap is actual contribution minus expected contribution from historical order economics; it is not recoverable profit.",
+    "Search includes transport, public events, graduation, clock change, movement, conflict, weather, holidays and operations. No exhaustive claim is made.",
+    "No verified date-specific external explanation found is recorded as unresolved, not filled with a plausible story.",
+    "Monthly fuel, CPI and airport totals were not joined as daily causes: temporal granularity/provenance insufficient.",
+    "POS downtime, paid campaigns, app rankings, competitor promotions and opening hours are unobserved alternative causes."
+  ]
+}

@@ -1,0 +1,1149 @@
+{
+  "sales_target": "Only Stories product quantities",
+  "protocol": "Jan-Mar training, March11-31 internal selection, frozen coefficients on Apr-Jun test.",
+  "region": "Beirut proxy fixed for this mix comparison, not selected by test performance",
+  "selection": [
+    {
+      "category": "Bakery",
+      "selected": {
+        "family": "branch_only",
+        "C": 0.01,
+        "validation_log_loss": 2.0463697977751725,
+        "validation_contribution": 1186.5342234357602,
+        "validation_fill_rate": 0.9382518043303929
+      },
+      "profit_selected": {
+        "family": "calendar_weather_mix",
+        "C": 0.01,
+        "validation_log_loss": 2.05699454715189,
+        "validation_contribution": 1224.9577230831078,
+        "validation_fill_rate": 0.9350441058540497
+      },
+      "profit_guard_feasible": true,
+      "candidates": [
+        {
+          "family": "frozen_training_share",
+          "C": null,
+          "validation_log_loss": 2.047299056703491,
+          "validation_contribution": 1187.6513608868258,
+          "validation_fill_rate": 0.9398556535685646
+        },
+        {
+          "family": "branch_only",
+          "C": 0.01,
+          "validation_log_loss": 2.0463697977751725,
+          "validation_contribution": 1186.5342234357602,
+          "validation_fill_rate": 0.9382518043303929
+        },
+        {
+          "family": "branch_only",
+          "C": 0.1,
+          "validation_log_loss": 2.047095452700593,
+          "validation_contribution": 1187.6513608868258,
+          "validation_fill_rate": 0.9398556535685646
+        },
+        {
+          "family": "branch_only",
+          "C": 1.0,
+          "validation_log_loss": 2.0472613277494203,
+          "validation_contribution": 1185.911360886826,
+          "validation_fill_rate": 0.9398556535685646
+        },
+        {
+          "family": "calendar_mix",
+          "C": 0.01,
+          "validation_log_loss": 2.049830269573747,
+          "validation_contribution": 1211.5148500245232,
+          "validation_fill_rate": 0.9390537289494787
+        },
+        {
+          "family": "calendar_mix",
+          "C": 0.1,
+          "validation_log_loss": 2.058001549699485,
+          "validation_contribution": 1175.146577865511,
+          "validation_fill_rate": 0.9334402566158782
+        },
+        {
+          "family": "calendar_mix",
+          "C": 1.0,
+          "validation_log_loss": 2.061225148464514,
+          "validation_contribution": 1189.7643198265641,
+          "validation_fill_rate": 0.9334402566158782
+        },
+        {
+          "family": "weather_mix",
+          "C": 0.01,
+          "validation_log_loss": 2.0508608566778523,
+          "validation_contribution": 1197.8491901553978,
+          "validation_fill_rate": 0.9390537289494787
+        },
+        {
+          "family": "weather_mix",
+          "C": 0.1,
+          "validation_log_loss": 2.0592429915835733,
+          "validation_contribution": 1172.473240526498,
+          "validation_fill_rate": 0.9350441058540497
+        },
+        {
+          "family": "weather_mix",
+          "C": 1.0,
+          "validation_log_loss": 2.0681037564674423,
+          "validation_contribution": 1149.080487958005,
+          "validation_fill_rate": 0.9326383319967922
+        },
+        {
+          "family": "calendar_weather_mix",
+          "C": 0.01,
+          "validation_log_loss": 2.05699454715189,
+          "validation_contribution": 1224.9577230831078,
+          "validation_fill_rate": 0.9350441058540497
+        },
+        {
+          "family": "calendar_weather_mix",
+          "C": 0.1,
+          "validation_log_loss": 2.0816662878187056,
+          "validation_contribution": 1166.2076508767009,
+          "validation_fill_rate": 0.9262229350441058
+        },
+        {
+          "family": "calendar_weather_mix",
+          "C": 1.0,
+          "validation_log_loss": 2.095811382106877,
+          "validation_contribution": 1130.37160663318,
+          "validation_fill_rate": 0.917401764234162
+        }
+      ],
+      "test_log_loss": 2.050306530307215,
+      "internal_mix_test_log_loss": 2.050306530307215,
+      "control_test_log_loss": 2.051333541308209
+    },
+    {
+      "category": "Breakfast",
+      "selected": {
+        "family": "branch_only",
+        "C": 0.01,
+        "validation_log_loss": 1.0793156987076542,
+        "validation_contribution": 10.535372530315627,
+        "validation_fill_rate": 0.8969072164948454
+      },
+      "profit_selected": {
+        "family": "branch_only",
+        "C": 0.01,
+        "validation_log_loss": 1.0793156987076542,
+        "validation_contribution": 10.535372530315627,
+        "validation_fill_rate": 0.8969072164948454
+      },
+      "profit_guard_feasible": false,
+      "candidates": [
+        {
+          "family": "frozen_training_share",
+          "C": null,
+          "validation_log_loss": 1.0793230109743328,
+          "validation_contribution": 3.0459564719214853,
+          "validation_fill_rate": 0.8934707903780069
+        },
+        {
+          "family": "branch_only",
+          "C": 0.01,
+          "validation_log_loss": 1.0793156987076542,
+          "validation_contribution": 10.535372530315627,
+          "validation_fill_rate": 0.8969072164948454
+        },
+        {
+          "family": "branch_only",
+          "C": 0.1,
+          "validation_log_loss": 1.0793910592779428,
+          "validation_contribution": 8.735372530315644,
+          "validation_fill_rate": 0.8969072164948454
+        },
+        {
+          "family": "branch_only",
+          "C": 1.0,
+          "validation_log_loss": 1.0794698376642373,
+          "validation_contribution": 0.055956471921476236,
+          "validation_fill_rate": 0.8934707903780069
+        },
+        {
+          "family": "calendar_mix",
+          "C": 0.01,
+          "validation_log_loss": 1.0824744523483585,
+          "validation_contribution": 8.07471281408246,
+          "validation_fill_rate": 0.8900343642611683
+        },
+        {
+          "family": "calendar_mix",
+          "C": 0.1,
+          "validation_log_loss": 1.1012370500138104,
+          "validation_contribution": -38.8050413009919,
+          "validation_fill_rate": 0.8797250859106529
+        },
+        {
+          "family": "calendar_mix",
+          "C": 1.0,
+          "validation_log_loss": 1.1182715717986216,
+          "validation_contribution": -37.77504130099189,
+          "validation_fill_rate": 0.8797250859106529
+        },
+        {
+          "family": "weather_mix",
+          "C": 0.01,
+          "validation_log_loss": 1.0875357986416498,
+          "validation_contribution": 12.13861436665833,
+          "validation_fill_rate": 0.8865979381443299
+        },
+        {
+          "family": "weather_mix",
+          "C": 0.1,
+          "validation_log_loss": 1.098440677870107,
+          "validation_contribution": -13.612930485943622,
+          "validation_fill_rate": 0.8865979381443299
+        },
+        {
+          "family": "weather_mix",
+          "C": 1.0,
+          "validation_log_loss": 1.109238546745526,
+          "validation_contribution": -32.89864477165793,
+          "validation_fill_rate": 0.8831615120274914
+        },
+        {
+          "family": "calendar_weather_mix",
+          "C": 0.01,
+          "validation_log_loss": 1.0882504759435216,
+          "validation_contribution": 0.8286143666582859,
+          "validation_fill_rate": 0.8865979381443299
+        },
+        {
+          "family": "calendar_weather_mix",
+          "C": 0.1,
+          "validation_log_loss": 1.1181702671728166,
+          "validation_contribution": -49.24289356386063,
+          "validation_fill_rate": 0.8797250859106529
+        },
+        {
+          "family": "calendar_weather_mix",
+          "C": 1.0,
+          "validation_log_loss": 1.1498390253239286,
+          "validation_contribution": -71.12548615645322,
+          "validation_fill_rate": 0.8762886597938144
+        }
+      ],
+      "test_log_loss": 1.0767559865320981,
+      "internal_mix_test_log_loss": 1.0767559865320981,
+      "control_test_log_loss": 1.0814776726759583
+    },
+    {
+      "category": "Cold Coffee",
+      "selected": {
+        "family": "branch_only",
+        "C": 0.01,
+        "validation_log_loss": 1.5517027842539342,
+        "validation_contribution": 1900.414298089213,
+        "validation_fill_rate": 0.9143179255918827
+      },
+      "profit_selected": {
+        "family": "branch_only",
+        "C": 0.01,
+        "validation_log_loss": 1.5517027842539342,
+        "validation_contribution": 1900.414298089213,
+        "validation_fill_rate": 0.9143179255918827
+      },
+      "profit_guard_feasible": true,
+      "candidates": [
+        {
+          "family": "frozen_training_share",
+          "C": null,
+          "validation_log_loss": 1.5518821110377095,
+          "validation_contribution": 1895.2272809742985,
+          "validation_fill_rate": 0.9120631341600902
+        },
+        {
+          "family": "branch_only",
+          "C": 0.01,
+          "validation_log_loss": 1.5517027842539342,
+          "validation_contribution": 1900.414298089213,
+          "validation_fill_rate": 0.9143179255918827
+        },
+        {
+          "family": "branch_only",
+          "C": 0.1,
+          "validation_log_loss": 1.5519031355994708,
+          "validation_contribution": 1899.9257895317555,
+          "validation_fill_rate": 0.9131905298759865
+        },
+        {
+          "family": "branch_only",
+          "C": 1.0,
+          "validation_log_loss": 1.5519168219665154,
+          "validation_contribution": 1896.1380846137229,
+          "validation_fill_rate": 0.9120631341600902
+        },
+        {
+          "family": "calendar_mix",
+          "C": 0.01,
+          "validation_log_loss": 1.5587464803875144,
+          "validation_contribution": 1863.8670704839674,
+          "validation_fill_rate": 0.9064261555806088
+        },
+        {
+          "family": "calendar_mix",
+          "C": 0.1,
+          "validation_log_loss": 1.5734755433292391,
+          "validation_contribution": 1858.0963074725162,
+          "validation_fill_rate": 0.9007891770011274
+        },
+        {
+          "family": "calendar_mix",
+          "C": 1.0,
+          "validation_log_loss": 1.5790837159668532,
+          "validation_contribution": 1846.7721037907172,
+          "validation_fill_rate": 0.8974069898534386
+        },
+        {
+          "family": "weather_mix",
+          "C": 0.01,
+          "validation_log_loss": 1.5632219472935305,
+          "validation_contribution": 1869.9278646704597,
+          "validation_fill_rate": 0.910935738444194
+        },
+        {
+          "family": "weather_mix",
+          "C": 0.1,
+          "validation_log_loss": 1.5737637929120227,
+          "validation_contribution": 1884.5713234194482,
+          "validation_fill_rate": 0.9131905298759865
+        },
+        {
+          "family": "weather_mix",
+          "C": 1.0,
+          "validation_log_loss": 1.5773589429927395,
+          "validation_contribution": 1888.1052503595056,
+          "validation_fill_rate": 0.910935738444194
+        },
+        {
+          "family": "calendar_weather_mix",
+          "C": 0.01,
+          "validation_log_loss": 1.5659596824053676,
+          "validation_contribution": 1886.613339199878,
+          "validation_fill_rate": 0.9052987598647125
+        },
+        {
+          "family": "calendar_weather_mix",
+          "C": 0.1,
+          "validation_log_loss": 1.598750761461311,
+          "validation_contribution": 1844.0149367020385,
+          "validation_fill_rate": 0.8962795941375423
+        },
+        {
+          "family": "calendar_weather_mix",
+          "C": 1.0,
+          "validation_log_loss": 1.6146053311266788,
+          "validation_contribution": 1853.2593766258374,
+          "validation_fill_rate": 0.8928974069898534
+        }
+      ],
+      "test_log_loss": 1.5431892449560904,
+      "internal_mix_test_log_loss": 1.5431892449560904,
+      "control_test_log_loss": 1.5459790794067614
+    },
+    {
+      "category": "Cold Drinks",
+      "selected": {
+        "family": "branch_only",
+        "C": 0.01,
+        "validation_log_loss": 1.602926579852235,
+        "validation_contribution": 412.12067808953583,
+        "validation_fill_rate": 0.9439728353140917
+      },
+      "profit_selected": {
+        "family": "branch_only",
+        "C": 0.01,
+        "validation_log_loss": 1.602926579852235,
+        "validation_contribution": 412.12067808953583,
+        "validation_fill_rate": 0.9439728353140917
+      },
+      "profit_guard_feasible": true,
+      "candidates": [
+        {
+          "family": "frozen_training_share",
+          "C": null,
+          "validation_log_loss": 1.6037752390211364,
+          "validation_contribution": 414.5106780895359,
+          "validation_fill_rate": 0.9439728353140917
+        },
+        {
+          "family": "branch_only",
+          "C": 0.01,
+          "validation_log_loss": 1.602926579852235,
+          "validation_contribution": 412.12067808953583,
+          "validation_fill_rate": 0.9439728353140917
+        },
+        {
+          "family": "branch_only",
+          "C": 0.1,
+          "validation_log_loss": 1.6034811071615707,
+          "validation_contribution": 417.1206780895359,
+          "validation_fill_rate": 0.9439728353140917
+        },
+        {
+          "family": "branch_only",
+          "C": 1.0,
+          "validation_log_loss": 1.6037505356480994,
+          "validation_contribution": 418.89067808953587,
+          "validation_fill_rate": 0.9439728353140917
+        },
+        {
+          "family": "calendar_mix",
+          "C": 0.01,
+          "validation_log_loss": 1.6030367054711792,
+          "validation_contribution": 415.5087553065782,
+          "validation_fill_rate": 0.9422750424448217
+        },
+        {
+          "family": "calendar_mix",
+          "C": 0.1,
+          "validation_log_loss": 1.6063930735732475,
+          "validation_contribution": 430.8205284887485,
+          "validation_fill_rate": 0.9422750424448217
+        },
+        {
+          "family": "calendar_mix",
+          "C": 1.0,
+          "validation_log_loss": 1.6077463177564182,
+          "validation_contribution": 425.5405284887485,
+          "validation_fill_rate": 0.9422750424448217
+        },
+        {
+          "family": "weather_mix",
+          "C": 0.01,
+          "validation_log_loss": 1.6116121708662645,
+          "validation_contribution": 413.8007857945897,
+          "validation_fill_rate": 0.9405772495755518
+        },
+        {
+          "family": "weather_mix",
+          "C": 0.1,
+          "validation_log_loss": 1.6148837323838185,
+          "validation_contribution": 415.52008752840356,
+          "validation_fill_rate": 0.9371816638370118
+        },
+        {
+          "family": "weather_mix",
+          "C": 1.0,
+          "validation_log_loss": 1.6254777420110773,
+          "validation_contribution": 431.0449184000794,
+          "validation_fill_rate": 0.933786078098472
+        },
+        {
+          "family": "calendar_weather_mix",
+          "C": 0.01,
+          "validation_log_loss": 1.6149686265308423,
+          "validation_contribution": 419.3525226377968,
+          "validation_fill_rate": 0.9371816638370118
+        },
+        {
+          "family": "calendar_weather_mix",
+          "C": 0.1,
+          "validation_log_loss": 1.6262312571762887,
+          "validation_contribution": 427.2036659050651,
+          "validation_fill_rate": 0.9303904923599321
+        },
+        {
+          "family": "calendar_weather_mix",
+          "C": 1.0,
+          "validation_log_loss": 1.639145938826918,
+          "validation_contribution": 446.1446513526686,
+          "validation_fill_rate": 0.9320882852292021
+        }
+      ],
+      "test_log_loss": 1.6104914964959685,
+      "internal_mix_test_log_loss": 1.6104914964959685,
+      "control_test_log_loss": 1.617989942866165
+    },
+    {
+      "category": "Desserts",
+      "selected": {
+        "family": "branch_only",
+        "C": 0.1,
+        "validation_log_loss": 1.3830701291085155,
+        "validation_contribution": -9.731499980244351,
+        "validation_fill_rate": 0.8905660377358491
+      },
+      "profit_selected": {
+        "family": "branch_only",
+        "C": 0.1,
+        "validation_log_loss": 1.3830701291085155,
+        "validation_contribution": -9.731499980244351,
+        "validation_fill_rate": 0.8905660377358491
+      },
+      "profit_guard_feasible": false,
+      "candidates": [
+        {
+          "family": "frozen_training_share",
+          "C": null,
+          "validation_log_loss": 1.3830701448467506,
+          "validation_contribution": -14.233029392009058,
+          "validation_fill_rate": 0.8924528301886793
+        },
+        {
+          "family": "branch_only",
+          "C": 0.01,
+          "validation_log_loss": 1.383070818954173,
+          "validation_contribution": -18.672664001408393,
+          "validation_fill_rate": 0.8886792452830189
+        },
+        {
+          "family": "branch_only",
+          "C": 0.1,
+          "validation_log_loss": 1.3830701291085155,
+          "validation_contribution": -9.731499980244351,
+          "validation_fill_rate": 0.8905660377358491
+        },
+        {
+          "family": "branch_only",
+          "C": 1.0,
+          "validation_log_loss": 1.3830920146863501,
+          "validation_contribution": -17.193029392009052,
+          "validation_fill_rate": 0.8924528301886793
+        },
+        {
+          "family": "calendar_mix",
+          "C": 0.01,
+          "validation_log_loss": 1.3854973710924465,
+          "validation_contribution": -15.967345560913124,
+          "validation_fill_rate": 0.8962264150943396
+        },
+        {
+          "family": "calendar_mix",
+          "C": 0.1,
+          "validation_log_loss": 1.3883876662056283,
+          "validation_contribution": -23.530667499249063,
+          "validation_fill_rate": 0.8962264150943396
+        },
+        {
+          "family": "calendar_mix",
+          "C": 1.0,
+          "validation_log_loss": 1.3898815244823566,
+          "validation_contribution": -19.09066749924908,
+          "validation_fill_rate": 0.8962264150943396
+        },
+        {
+          "family": "weather_mix",
+          "C": 0.01,
+          "validation_log_loss": 1.3852693271946004,
+          "validation_contribution": -47.86411149095301,
+          "validation_fill_rate": 0.8962264150943396
+        },
+        {
+          "family": "weather_mix",
+          "C": 0.1,
+          "validation_log_loss": 1.3889714386047023,
+          "validation_contribution": -46.46939725801404,
+          "validation_fill_rate": 0.8962264150943396
+        },
+        {
+          "family": "weather_mix",
+          "C": 1.0,
+          "validation_log_loss": 1.3904934038852366,
+          "validation_contribution": -43.042098615480114,
+          "validation_fill_rate": 0.8962264150943396
+        },
+        {
+          "family": "calendar_weather_mix",
+          "C": 0.01,
+          "validation_log_loss": 1.3839678727106461,
+          "validation_contribution": -59.04502050276368,
+          "validation_fill_rate": 0.8943396226415095
+        },
+        {
+          "family": "calendar_weather_mix",
+          "C": 0.1,
+          "validation_log_loss": 1.389203629587736,
+          "validation_contribution": -62.643110921117255,
+          "validation_fill_rate": 0.8981132075471698
+        },
+        {
+          "family": "calendar_weather_mix",
+          "C": 1.0,
+          "validation_log_loss": 1.3914458369452172,
+          "validation_contribution": -54.72123592111727,
+          "validation_fill_rate": 0.8962264150943396
+        }
+      ],
+      "test_log_loss": 1.381566875614742,
+      "internal_mix_test_log_loss": 1.381566875614742,
+      "control_test_log_loss": 1.3815749821134833
+    },
+    {
+      "category": "Hot Coffee",
+      "selected": {
+        "family": "branch_only",
+        "C": 0.01,
+        "validation_log_loss": 1.9342905979050624,
+        "validation_contribution": 1438.4242664571311,
+        "validation_fill_rate": 0.9452054794520548
+      },
+      "profit_selected": {
+        "family": "branch_only",
+        "C": 0.01,
+        "validation_log_loss": 1.9342905979050624,
+        "validation_contribution": 1438.4242664571311,
+        "validation_fill_rate": 0.9452054794520548
+      },
+      "profit_guard_feasible": true,
+      "candidates": [
+        {
+          "family": "frozen_training_share",
+          "C": null,
+          "validation_log_loss": 1.9373707509435003,
+          "validation_contribution": 1434.1503594521596,
+          "validation_fill_rate": 0.946259220231823
+        },
+        {
+          "family": "branch_only",
+          "C": 0.01,
+          "validation_log_loss": 1.9342905979050624,
+          "validation_contribution": 1438.4242664571311,
+          "validation_fill_rate": 0.9452054794520548
+        },
+        {
+          "family": "branch_only",
+          "C": 0.1,
+          "validation_log_loss": 1.9369363584443484,
+          "validation_contribution": 1435.291978157196,
+          "validation_fill_rate": 0.946259220231823
+        },
+        {
+          "family": "branch_only",
+          "C": 1.0,
+          "validation_log_loss": 1.93764799375831,
+          "validation_contribution": 1433.0303594521597,
+          "validation_fill_rate": 0.946259220231823
+        },
+        {
+          "family": "calendar_mix",
+          "C": 0.01,
+          "validation_log_loss": 1.9444535846460589,
+          "validation_contribution": 1405.3172999807941,
+          "validation_fill_rate": 0.9420442571127503
+        },
+        {
+          "family": "calendar_mix",
+          "C": 0.1,
+          "validation_log_loss": 1.963444853971463,
+          "validation_contribution": 1382.5358962483072,
+          "validation_fill_rate": 0.9367755532139094
+        },
+        {
+          "family": "calendar_mix",
+          "C": 1.0,
+          "validation_log_loss": 1.970628812491471,
+          "validation_contribution": 1386.304859434332,
+          "validation_fill_rate": 0.9336143308746049
+        },
+        {
+          "family": "weather_mix",
+          "C": 0.01,
+          "validation_log_loss": 1.9456048551609122,
+          "validation_contribution": 1397.9051188522549,
+          "validation_fill_rate": 0.9430979978925185
+        },
+        {
+          "family": "weather_mix",
+          "C": 0.1,
+          "validation_log_loss": 1.9584434494172087,
+          "validation_contribution": 1384.9053658526723,
+          "validation_fill_rate": 0.9420442571127503
+        },
+        {
+          "family": "weather_mix",
+          "C": 1.0,
+          "validation_log_loss": 1.9687251183579648,
+          "validation_contribution": 1390.8437265901234,
+          "validation_fill_rate": 0.9388830347734457
+        },
+        {
+          "family": "calendar_weather_mix",
+          "C": 0.01,
+          "validation_log_loss": 1.9494559130836788,
+          "validation_contribution": 1398.9639339860987,
+          "validation_fill_rate": 0.9430979978925185
+        },
+        {
+          "family": "calendar_weather_mix",
+          "C": 0.1,
+          "validation_log_loss": 1.9737085308541613,
+          "validation_contribution": 1370.6261355910387,
+          "validation_fill_rate": 0.9357218124341412
+        },
+        {
+          "family": "calendar_weather_mix",
+          "C": 1.0,
+          "validation_log_loss": 1.9891436100413795,
+          "validation_contribution": 1336.5097000345118,
+          "validation_fill_rate": 0.9304531085353003
+        }
+      ],
+      "test_log_loss": 1.9220889190336126,
+      "internal_mix_test_log_loss": 1.9220889190336126,
+      "control_test_log_loss": 1.9326448884594658
+    },
+    {
+      "category": "Matcha & Tea",
+      "selected": {
+        "family": "weather_mix",
+        "C": 0.01,
+        "validation_log_loss": 1.6679007658990075,
+        "validation_contribution": 1855.3754292284925,
+        "validation_fill_rate": 0.9342672413793104
+      },
+      "profit_selected": {
+        "family": "weather_mix",
+        "C": 0.01,
+        "validation_log_loss": 1.6679007658990075,
+        "validation_contribution": 1855.3754292284925,
+        "validation_fill_rate": 0.9342672413793104
+      },
+      "profit_guard_feasible": true,
+      "candidates": [
+        {
+          "family": "frozen_training_share",
+          "C": null,
+          "validation_log_loss": 1.6683052860349223,
+          "validation_contribution": 1867.71216207707,
+          "validation_fill_rate": 0.9364224137931034
+        },
+        {
+          "family": "branch_only",
+          "C": 0.01,
+          "validation_log_loss": 1.6680694085347094,
+          "validation_contribution": 1852.1004141109154,
+          "validation_fill_rate": 0.9331896551724138
+        },
+        {
+          "family": "branch_only",
+          "C": 0.1,
+          "validation_log_loss": 1.6681494100092347,
+          "validation_contribution": 1865.9387613417757,
+          "validation_fill_rate": 0.9364224137931034
+        },
+        {
+          "family": "branch_only",
+          "C": 1.0,
+          "validation_log_loss": 1.668480795148,
+          "validation_contribution": 1866.35216207707,
+          "validation_fill_rate": 0.9364224137931034
+        },
+        {
+          "family": "calendar_mix",
+          "C": 0.01,
+          "validation_log_loss": 1.6686254811884529,
+          "validation_contribution": 1847.922911471398,
+          "validation_fill_rate": 0.9364224137931034
+        },
+        {
+          "family": "calendar_mix",
+          "C": 0.1,
+          "validation_log_loss": 1.6750647007958694,
+          "validation_contribution": 1873.4159019614222,
+          "validation_fill_rate": 0.9331896551724138
+        },
+        {
+          "family": "calendar_mix",
+          "C": 1.0,
+          "validation_log_loss": 1.6803106973447157,
+          "validation_contribution": 1865.6198244131995,
+          "validation_fill_rate": 0.9288793103448276
+        },
+        {
+          "family": "weather_mix",
+          "C": 0.01,
+          "validation_log_loss": 1.6679007658990075,
+          "validation_contribution": 1855.3754292284925,
+          "validation_fill_rate": 0.9342672413793104
+        },
+        {
+          "family": "weather_mix",
+          "C": 0.1,
+          "validation_log_loss": 1.6768418437160437,
+          "validation_contribution": 1833.6872066186143,
+          "validation_fill_rate": 0.9321120689655172
+        },
+        {
+          "family": "weather_mix",
+          "C": 1.0,
+          "validation_log_loss": 1.6829777097642347,
+          "validation_contribution": 1863.2261169312053,
+          "validation_fill_rate": 0.9342672413793104
+        },
+        {
+          "family": "calendar_weather_mix",
+          "C": 0.01,
+          "validation_log_loss": 1.6713495435604726,
+          "validation_contribution": 1854.4041663559644,
+          "validation_fill_rate": 0.9342672413793104
+        },
+        {
+          "family": "calendar_weather_mix",
+          "C": 0.1,
+          "validation_log_loss": 1.6872963557301977,
+          "validation_contribution": 1858.7019357435615,
+          "validation_fill_rate": 0.9299568965517241
+        },
+        {
+          "family": "calendar_weather_mix",
+          "C": 1.0,
+          "validation_log_loss": 1.6985227083619698,
+          "validation_contribution": 1847.3157771555377,
+          "validation_fill_rate": 0.9288793103448276
+        }
+      ],
+      "test_log_loss": 1.6705291368901658,
+      "internal_mix_test_log_loss": 1.670351952585773,
+      "control_test_log_loss": 1.675821173063733
+    },
+    {
+      "category": "Meals",
+      "selected": {
+        "family": "branch_only",
+        "C": 0.01,
+        "validation_log_loss": 1.098656336338991,
+        "validation_contribution": -721.5202888346746,
+        "validation_fill_rate": 0.9490445859872612
+      },
+      "profit_selected": {
+        "family": "branch_only",
+        "C": 0.01,
+        "validation_log_loss": 1.098656336338991,
+        "validation_contribution": -721.5202888346746,
+        "validation_fill_rate": 0.9490445859872612
+      },
+      "profit_guard_feasible": true,
+      "candidates": [
+        {
+          "family": "frozen_training_share",
+          "C": null,
+          "validation_log_loss": 1.1104404410361004,
+          "validation_contribution": -715.567696242082,
+          "validation_fill_rate": 0.9426751592356688
+        },
+        {
+          "family": "branch_only",
+          "C": 0.01,
+          "validation_log_loss": 1.098656336338991,
+          "validation_contribution": -721.5202888346746,
+          "validation_fill_rate": 0.9490445859872612
+        },
+        {
+          "family": "branch_only",
+          "C": 0.1,
+          "validation_log_loss": 1.107013386615292,
+          "validation_contribution": -722.987696242082,
+          "validation_fill_rate": 0.9426751592356688
+        },
+        {
+          "family": "branch_only",
+          "C": 1.0,
+          "validation_log_loss": 1.110365279038153,
+          "validation_contribution": -723.647696242082,
+          "validation_fill_rate": 0.9426751592356688
+        },
+        {
+          "family": "calendar_mix",
+          "C": 0.01,
+          "validation_log_loss": 1.105406613765541,
+          "validation_contribution": -785.4186221680079,
+          "validation_fill_rate": 0.9426751592356688
+        },
+        {
+          "family": "calendar_mix",
+          "C": 0.1,
+          "validation_log_loss": 1.132516592986238,
+          "validation_contribution": -788.7624447668779,
+          "validation_fill_rate": 0.9363057324840764
+        },
+        {
+          "family": "calendar_mix",
+          "C": 1.0,
+          "validation_log_loss": 1.1504173889136933,
+          "validation_contribution": -767.124262948696,
+          "validation_fill_rate": 0.9299363057324841
+        },
+        {
+          "family": "weather_mix",
+          "C": 0.01,
+          "validation_log_loss": 1.1136911357914276,
+          "validation_contribution": -712.1099781002113,
+          "validation_fill_rate": 0.9363057324840764
+        },
+        {
+          "family": "weather_mix",
+          "C": 0.1,
+          "validation_log_loss": 1.1393642015279637,
+          "validation_contribution": -705.2099781002112,
+          "validation_fill_rate": 0.9363057324840764
+        },
+        {
+          "family": "weather_mix",
+          "C": 1.0,
+          "validation_log_loss": 1.1446856818795903,
+          "validation_contribution": -694.5241781002112,
+          "validation_fill_rate": 0.9426751592356688
+        },
+        {
+          "family": "calendar_weather_mix",
+          "C": 0.01,
+          "validation_log_loss": 1.1136999874293432,
+          "validation_contribution": -756.9699781002114,
+          "validation_fill_rate": 0.9363057324840764
+        },
+        {
+          "family": "calendar_weather_mix",
+          "C": 0.1,
+          "validation_log_loss": 1.141637835548145,
+          "validation_contribution": -753.4257781002112,
+          "validation_fill_rate": 0.9299363057324841
+        },
+        {
+          "family": "calendar_weather_mix",
+          "C": 1.0,
+          "validation_log_loss": 1.1565250609037032,
+          "validation_contribution": -753.4257781002112,
+          "validation_fill_rate": 0.9235668789808917
+        }
+      ],
+      "test_log_loss": 1.0937995004427363,
+      "internal_mix_test_log_loss": 1.0937995004427363,
+      "control_test_log_loss": 1.0982776937095402
+    },
+    {
+      "category": "Sandwiches",
+      "selected": {
+        "family": "branch_only",
+        "C": 0.01,
+        "validation_log_loss": 1.3703189392879536,
+        "validation_contribution": -320.35388187452645,
+        "validation_fill_rate": 0.9537712895377128
+      },
+      "profit_selected": {
+        "family": "calendar_weather_mix",
+        "C": 0.01,
+        "validation_log_loss": 1.383568105574711,
+        "validation_contribution": -290.20766822446683,
+        "validation_fill_rate": 0.9513381995133819
+      },
+      "profit_guard_feasible": true,
+      "candidates": [
+        {
+          "family": "frozen_training_share",
+          "C": null,
+          "validation_log_loss": 1.3718154746815758,
+          "validation_contribution": -308.6438818745264,
+          "validation_fill_rate": 0.9537712895377128
+        },
+        {
+          "family": "branch_only",
+          "C": 0.01,
+          "validation_log_loss": 1.3703189392879536,
+          "validation_contribution": -320.35388187452645,
+          "validation_fill_rate": 0.9537712895377128
+        },
+        {
+          "family": "branch_only",
+          "C": 0.1,
+          "validation_log_loss": 1.371474761327797,
+          "validation_contribution": -313.97388187452646,
+          "validation_fill_rate": 0.9537712895377128
+        },
+        {
+          "family": "branch_only",
+          "C": 1.0,
+          "validation_log_loss": 1.371759044017294,
+          "validation_contribution": -305.0638818745264,
+          "validation_fill_rate": 0.9537712895377128
+        },
+        {
+          "family": "calendar_mix",
+          "C": 0.01,
+          "validation_log_loss": 1.3808035832155192,
+          "validation_contribution": -315.21612593590964,
+          "validation_fill_rate": 0.948905109489051
+        },
+        {
+          "family": "calendar_mix",
+          "C": 0.1,
+          "validation_log_loss": 1.3843350723642505,
+          "validation_contribution": -364.26913063074534,
+          "validation_fill_rate": 0.948905109489051
+        },
+        {
+          "family": "calendar_mix",
+          "C": 1.0,
+          "validation_log_loss": 1.385577739901475,
+          "validation_contribution": -377.3258708904856,
+          "validation_fill_rate": 0.948905109489051
+        },
+        {
+          "family": "weather_mix",
+          "C": 0.01,
+          "validation_log_loss": 1.3800541134041244,
+          "validation_contribution": -360.8335532360288,
+          "validation_fill_rate": 0.948905109489051
+        },
+        {
+          "family": "weather_mix",
+          "C": 0.1,
+          "validation_log_loss": 1.3932828627481626,
+          "validation_contribution": -379.3901639914705,
+          "validation_fill_rate": 0.948905109489051
+        },
+        {
+          "family": "weather_mix",
+          "C": 1.0,
+          "validation_log_loss": 1.4009715151481088,
+          "validation_contribution": -387.8421769784835,
+          "validation_fill_rate": 0.9513381995133819
+        },
+        {
+          "family": "calendar_weather_mix",
+          "C": 0.01,
+          "validation_log_loss": 1.383568105574711,
+          "validation_contribution": -290.20766822446683,
+          "validation_fill_rate": 0.9513381995133819
+        },
+        {
+          "family": "calendar_weather_mix",
+          "C": 0.1,
+          "validation_log_loss": 1.3996311765940528,
+          "validation_contribution": -344.55594564657525,
+          "validation_fill_rate": 0.9537712895377128
+        },
+        {
+          "family": "calendar_weather_mix",
+          "C": 1.0,
+          "validation_log_loss": 1.4103591835205769,
+          "validation_contribution": -353.31332527542,
+          "validation_fill_rate": 0.9440389294403893
+        }
+      ],
+      "test_log_loss": 1.375047830166236,
+      "internal_mix_test_log_loss": 1.375047830166236,
+      "control_test_log_loss": 1.3807911810835172
+    }
+  ],
+  "metrics": [
+    {
+      "method": "selected_mix_experts",
+      "scope": "all_sku",
+      "wape_pct": 52.67095558616571,
+      "mae_units": 1.3032899535272815,
+      "bias_pct": 3.6545405006881873,
+      "poisson_deviance": 1.2843229066581698
+    },
+    {
+      "method": "selected_mix_experts",
+      "scope": "perishable_sku",
+      "wape_pct": 51.70630607320282,
+      "mae_units": 1.2731693486927829,
+      "bias_pct": -0.5512124387801854,
+      "poisson_deviance": 1.2518514684206354
+    },
+    {
+      "method": "profit_selected_mix",
+      "scope": "all_sku",
+      "wape_pct": 52.772334130568545,
+      "mae_units": 1.3057984638998963,
+      "bias_pct": 3.6545405006881855,
+      "poisson_deviance": 1.2897571233648184
+    },
+    {
+      "method": "profit_selected_mix",
+      "scope": "perishable_sku",
+      "wape_pct": 51.94759208892136,
+      "mae_units": 1.2791105574700283,
+      "bias_pct": -0.5512124387801882,
+      "poisson_deviance": 1.2647219816732242
+    },
+    {
+      "method": "internal_mix_control",
+      "scope": "all_sku",
+      "wape_pct": 52.69555072009392,
+      "mae_units": 1.3038985354411192,
+      "bias_pct": 3.654540500688187,
+      "poisson_deviance": 1.2841941397497763
+    },
+    {
+      "method": "internal_mix_control",
+      "scope": "perishable_sku",
+      "wape_pct": 51.70630607320282,
+      "mae_units": 1.2731693486927829,
+      "bias_pct": -0.5512124387801854,
+      "poisson_deviance": 1.2518514684206354
+    },
+    {
+      "method": "frozen_share_control",
+      "scope": "all_sku",
+      "wape_pct": 53.26777508990504,
+      "mae_units": 1.318057653384561,
+      "bias_pct": 3.654540500688182,
+      "poisson_deviance": 1.3070645711981446
+    },
+    {
+      "method": "frozen_share_control",
+      "scope": "perishable_sku",
+      "wape_pct": 52.03184682515006,
+      "mae_units": 1.2811851699456651,
+      "bias_pct": -0.5512124387801898,
+      "poisson_deviance": 1.261845802588761
+    }
+  ],
+  "finance": [
+    {
+      "method": "frozen_share_control",
+      "Quantity": 12772.0,
+      "prepare_units": 20691,
+      "sold_units": 11762.0,
+      "unsold_units": 8929.0,
+      "unmet_units": 1010.0,
+      "contribution": 10934.289261754182,
+      "fill_rate_pct": 92.09207641716254
+    },
+    {
+      "method": "internal_mix_control",
+      "Quantity": 12772.0,
+      "prepare_units": 20739,
+      "sold_units": 11768.0,
+      "unsold_units": 8971.0,
+      "unmet_units": 1004.0,
+      "contribution": 10817.659601137231,
+      "fill_rate_pct": 92.13905418102098
+    },
+    {
+      "method": "profit_selected_mix",
+      "Quantity": 12772.0,
+      "prepare_units": 20738,
+      "sold_units": 11755.0,
+      "unsold_units": 8983.0,
+      "unmet_units": 1017.0,
+      "contribution": 10560.9820020254,
+      "fill_rate_pct": 92.03726902599436
+    },
+    {
+      "method": "selected_mix_experts",
+      "Quantity": 12772.0,
+      "prepare_units": 20739,
+      "sold_units": 11768.0,
+      "unsold_units": 8971.0,
+      "unmet_units": 1004.0,
+      "contribution": 10817.659601137231,
+      "fill_rate_pct": 92.13905418102098
+    }
+  ],
+  "caveats": [
+    "Previously explored dataset; this is exploratory model development, not a fresh confirmatory test.",
+    "Predictive selector uses training-period log score. Profit selector uses training-period contribution with90% realized validation fulfillment when feasible; failure to find a feasible candidate is disclosed. Neither selects using test outcomes.",
+    "Internal-only fitted mix controls isolate the effect of external features from simply pooling more training history.",
+    "Probabilities only redistribute a fixed internal category forecast; they do not inflate predicted category volume.",
+    "All menu features describe public calendars; no personal religion or fasting inference.",
+    "One-batch90% expected unit-fill, zero salvage, sales-as-demand and training economics; no actual labor/waste/current-policy comparison."
+  ]
+}
