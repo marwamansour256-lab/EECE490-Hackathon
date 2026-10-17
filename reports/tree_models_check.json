@@ -1,0 +1,420 @@
+{
+  "question": "Do a decision tree or a random forest beat the Poisson preparation model on the same frozen split?",
+  "level": "branch x category x day",
+  "train": "2026-01-01 to 2026-03-31",
+  "test": "2026-04-01 to 2026-06-30",
+  "selection": "settings chosen by Poisson deviance on the last 21 training dates; April-June scored once",
+  "results": {
+    "decision_tree": {
+      "selected": {
+        "max_depth": "none",
+        "min_samples_leaf": 5
+      },
+      "validation_deviance": 1.6640146283061235,
+      "test": {
+        "wape_pct": 28.550177434396794,
+        "mae_units": 3.532227487386218,
+        "bias_pct": -10.919041509623126,
+        "poisson_deviance": 1.8697828102117917
+      }
+    },
+    "decision_tree_on_poisson": {
+      "selected": {
+        "max_depth": 8,
+        "min_samples_leaf": 50
+      },
+      "validation_deviance": 1.402665869239853,
+      "test": {
+        "wape_pct": 26.506605318834318,
+        "mae_units": 3.279396778518216,
+        "bias_pct": 8.130711293928337,
+        "poisson_deviance": 1.4738872928005713
+      }
+    },
+    "random_forest": {
+      "selected": {
+        "max_depth": 12,
+        "min_samples_leaf": 5,
+        "n_estimators": 300
+      },
+      "validation_deviance": 1.5179980282081074,
+      "test": {
+        "wape_pct": 28.041635930425894,
+        "mae_units": 3.4693107407940023,
+        "bias_pct": -12.290551224082098,
+        "poisson_deviance": 1.7242765294602764
+      }
+    },
+    "random_forest_on_poisson": {
+      "selected": {
+        "max_depth": 8,
+        "min_samples_leaf": 20,
+        "n_estimators": 300
+      },
+      "validation_deviance": 1.4242550457750913,
+      "test": {
+        "wape_pct": 26.2982725414751,
+        "mae_units": 3.253621850694994,
+        "bias_pct": 7.486469609676602,
+        "poisson_deviance": 1.456352291953325
+      }
+    },
+    "poisson (original)": {
+      "selected_alpha": 0.001,
+      "test": {
+        "wape_pct": 25.207654591328055,
+        "mae_units": 3.11869061565808,
+        "bias_pct": 3.654540500688182,
+        "poisson_deviance": 1.3803785370111645
+      }
+    },
+    "poisson v2 (selected)": {
+      "selected_alpha": 0.001,
+      "calibration": 0.9417094549137961,
+      "test": {
+        "wape_pct": 24.73676293114075,
+        "mae_units": 3.06043190712583,
+        "bias_pct": -2.387539165756931,
+        "poisson_deviance": 1.3714135294319945
+      }
+    }
+  },
+  "tuning": [
+    {
+      "method": "decision_tree",
+      "max_depth": 4,
+      "min_samples_leaf": 5,
+      "wape_pct": 38.67796380563398,
+      "mae_units": 4.08540256140991,
+      "bias_pct": -9.009846234276859,
+      "poisson_deviance": 2.8762933024681465
+    },
+    {
+      "method": "decision_tree",
+      "max_depth": 4,
+      "min_samples_leaf": 20,
+      "wape_pct": 38.755777117841696,
+      "mae_units": 4.093621678284902,
+      "bias_pct": -9.072142005470797,
+      "poisson_deviance": 2.880065369930806
+    },
+    {
+      "method": "decision_tree",
+      "max_depth": 4,
+      "min_samples_leaf": 50,
+      "wape_pct": 38.54356431381702,
+      "mae_units": 4.071206466939157,
+      "bias_pct": -9.884673284420646,
+      "poisson_deviance": 2.8591470010391298
+    },
+    {
+      "method": "decision_tree",
+      "max_depth": 8,
+      "min_samples_leaf": 5,
+      "wape_pct": 31.21573193567634,
+      "mae_units": 3.2971960945814045,
+      "bias_pct": -6.444595135815683,
+      "poisson_deviance": 1.8506492650494475
+    },
+    {
+      "method": "decision_tree",
+      "max_depth": 8,
+      "min_samples_leaf": 20,
+      "wape_pct": 31.870849198683935,
+      "mae_units": 3.3663935776176026,
+      "bias_pct": -7.341827021871906,
+      "poisson_deviance": 1.8779450325386764
+    },
+    {
+      "method": "decision_tree",
+      "max_depth": 8,
+      "min_samples_leaf": 50,
+      "wape_pct": 32.10359958254099,
+      "mae_units": 3.3909780934715688,
+      "bias_pct": -8.154560506446638,
+      "poisson_deviance": 1.961965676750488
+    },
+    {
+      "method": "decision_tree",
+      "max_depth": 12,
+      "min_samples_leaf": 5,
+      "wape_pct": 30.334932826584186,
+      "mae_units": 3.204160717785056,
+      "bias_pct": 1.4655240957628661,
+      "poisson_deviance": 1.6740403343756098
+    },
+    {
+      "method": "decision_tree",
+      "max_depth": 12,
+      "min_samples_leaf": 20,
+      "wape_pct": 29.765105887911492,
+      "mae_units": 3.143972119271639,
+      "bias_pct": -3.004390517388485,
+      "poisson_deviance": 1.669430635529713
+    },
+    {
+      "method": "decision_tree",
+      "max_depth": 12,
+      "min_samples_leaf": 50,
+      "wape_pct": 30.33302830893028,
+      "mae_units": 3.203959551008527,
+      "bias_pct": -7.73906613307897,
+      "poisson_deviance": 1.8047255757851433
+    },
+    {
+      "method": "decision_tree",
+      "max_depth": "none",
+      "min_samples_leaf": 5,
+      "wape_pct": 30.224353112982268,
+      "mae_units": 3.192480613644635,
+      "bias_pct": 2.3116586758263162,
+      "poisson_deviance": 1.6640146283061235
+    },
+    {
+      "method": "decision_tree",
+      "max_depth": "none",
+      "min_samples_leaf": 20,
+      "wape_pct": 29.765105887911492,
+      "mae_units": 3.143972119271639,
+      "bias_pct": -3.004390517388485,
+      "poisson_deviance": 1.669430635529713
+    },
+    {
+      "method": "decision_tree",
+      "max_depth": "none",
+      "min_samples_leaf": 50,
+      "wape_pct": 30.33302830893028,
+      "mae_units": 3.203959551008527,
+      "bias_pct": -7.73906613307897,
+      "poisson_deviance": 1.8047255757851433
+    },
+    {
+      "method": "decision_tree_on_poisson",
+      "max_depth": 4,
+      "min_samples_leaf": 5,
+      "wape_pct": 27.710508171969103,
+      "mae_units": 2.9269529707570188,
+      "bias_pct": 5.147074174363507,
+      "poisson_deviance": 1.4125031905442555
+    },
+    {
+      "method": "decision_tree_on_poisson",
+      "max_depth": 4,
+      "min_samples_leaf": 20,
+      "wape_pct": 27.834155146666184,
+      "mae_units": 2.940013318754564,
+      "bias_pct": 5.1130402643063935,
+      "poisson_deviance": 1.4092800512170298
+    },
+    {
+      "method": "decision_tree_on_poisson",
+      "max_depth": 4,
+      "min_samples_leaf": 50,
+      "wape_pct": 27.800733096762166,
+      "mae_units": 2.9364830778925683,
+      "bias_pct": 4.645339399556739,
+      "poisson_deviance": 1.4026658692398537
+    },
+    {
+      "method": "decision_tree_on_poisson",
+      "max_depth": 8,
+      "min_samples_leaf": 5,
+      "wape_pct": 27.852917512999536,
+      "mae_units": 2.941995114380145,
+      "bias_pct": 5.699576633660805,
+      "poisson_deviance": 1.4149513350461613
+    },
+    {
+      "method": "decision_tree_on_poisson",
+      "max_depth": 8,
+      "min_samples_leaf": 20,
+      "wape_pct": 27.862910040224396,
+      "mae_units": 2.9430505860829617,
+      "bias_pct": 5.107092353817125,
+      "poisson_deviance": 1.410788818731353
+    },
+    {
+      "method": "decision_tree_on_poisson",
+      "max_depth": 8,
+      "min_samples_leaf": 50,
+      "wape_pct": 27.80073309676216,
+      "mae_units": 2.936483077892567,
+      "bias_pct": 4.645339399556705,
+      "poisson_deviance": 1.402665869239853
+    },
+    {
+      "method": "decision_tree_on_poisson",
+      "max_depth": 12,
+      "min_samples_leaf": 5,
+      "wape_pct": 28.297094948057072,
+      "mae_units": 2.988911845571672,
+      "bias_pct": 6.611134164488956,
+      "poisson_deviance": 1.4336413557223104
+    },
+    {
+      "method": "decision_tree_on_poisson",
+      "max_depth": 12,
+      "min_samples_leaf": 20,
+      "wape_pct": 27.862910040224392,
+      "mae_units": 2.9430505860829608,
+      "bias_pct": 5.107092353817115,
+      "poisson_deviance": 1.4107888187313529
+    },
+    {
+      "method": "decision_tree_on_poisson",
+      "max_depth": 12,
+      "min_samples_leaf": 50,
+      "wape_pct": 27.80073309676216,
+      "mae_units": 2.936483077892567,
+      "bias_pct": 4.645339399556705,
+      "poisson_deviance": 1.402665869239853
+    },
+    {
+      "method": "decision_tree_on_poisson",
+      "max_depth": "none",
+      "min_samples_leaf": 5,
+      "wape_pct": 28.313252530451464,
+      "mae_units": 2.990618508022466,
+      "bias_pct": 7.183957796597721,
+      "poisson_deviance": 1.4331722357050731
+    },
+    {
+      "method": "decision_tree_on_poisson",
+      "max_depth": "none",
+      "min_samples_leaf": 20,
+      "wape_pct": 27.862910040224392,
+      "mae_units": 2.9430505860829608,
+      "bias_pct": 5.107092353817115,
+      "poisson_deviance": 1.4107888187313529
+    },
+    {
+      "method": "decision_tree_on_poisson",
+      "max_depth": "none",
+      "min_samples_leaf": 50,
+      "wape_pct": 27.80073309676216,
+      "mae_units": 2.936483077892567,
+      "bias_pct": 4.645339399556705,
+      "poisson_deviance": 1.402665869239853
+    },
+    {
+      "method": "random_forest",
+      "max_depth": 8,
+      "min_samples_leaf": 5,
+      "n_estimators": 300,
+      "wape_pct": 30.3653132138229,
+      "mae_units": 3.2073696796752267,
+      "bias_pct": -3.3332124974617696,
+      "poisson_deviance": 1.6850603575820018
+    },
+    {
+      "method": "random_forest",
+      "max_depth": 8,
+      "min_samples_leaf": 20,
+      "n_estimators": 300,
+      "wape_pct": 30.39200002992525,
+      "mae_units": 3.210188504042722,
+      "bias_pct": -6.444733586129376,
+      "poisson_deviance": 1.7470197630498494
+    },
+    {
+      "method": "random_forest",
+      "max_depth": 12,
+      "min_samples_leaf": 5,
+      "n_estimators": 300,
+      "wape_pct": 28.668099832364227,
+      "mae_units": 3.028099645432617,
+      "bias_pct": 2.150443896358833,
+      "poisson_deviance": 1.5179980282081074
+    },
+    {
+      "method": "random_forest",
+      "max_depth": 12,
+      "min_samples_leaf": 20,
+      "n_estimators": 300,
+      "wape_pct": 29.0040381316142,
+      "mae_units": 3.0635834985932533,
+      "bias_pct": -4.610367417209999,
+      "poisson_deviance": 1.6209605165913865
+    },
+    {
+      "method": "random_forest",
+      "max_depth": "none",
+      "min_samples_leaf": 5,
+      "n_estimators": 300,
+      "wape_pct": 28.794102157723884,
+      "mae_units": 3.041408779940182,
+      "bias_pct": 2.510817322855749,
+      "poisson_deviance": 1.5209820343544982
+    },
+    {
+      "method": "random_forest",
+      "max_depth": "none",
+      "min_samples_leaf": 20,
+      "n_estimators": 300,
+      "wape_pct": 29.000390267803144,
+      "mae_units": 3.063198188957196,
+      "bias_pct": -4.617310113482201,
+      "poisson_deviance": 1.6208884065308253
+    },
+    {
+      "method": "random_forest_on_poisson",
+      "max_depth": 8,
+      "min_samples_leaf": 5,
+      "n_estimators": 300,
+      "wape_pct": 28.210231111712215,
+      "mae_units": 2.979736757108368,
+      "bias_pct": 5.715128635370963,
+      "poisson_deviance": 1.4246686002911693
+    },
+    {
+      "method": "random_forest_on_poisson",
+      "max_depth": 8,
+      "min_samples_leaf": 20,
+      "n_estimators": 300,
+      "wape_pct": 28.160044570672476,
+      "mae_units": 2.9744357483907837,
+      "bias_pct": 6.010326254543595,
+      "poisson_deviance": 1.4242550457750913
+    },
+    {
+      "method": "random_forest_on_poisson",
+      "max_depth": 12,
+      "min_samples_leaf": 5,
+      "n_estimators": 300,
+      "wape_pct": 28.2984054082115,
+      "mae_units": 2.989050264369994,
+      "bias_pct": 5.527224211946133,
+      "poisson_deviance": 1.4340582761715985
+    },
+    {
+      "method": "random_forest_on_poisson",
+      "max_depth": 12,
+      "min_samples_leaf": 20,
+      "n_estimators": 300,
+      "wape_pct": 28.201719548494456,
+      "mae_units": 2.9788377138612576,
+      "bias_pct": 6.176392503895687,
+      "poisson_deviance": 1.4264807813916636
+    },
+    {
+      "method": "random_forest_on_poisson",
+      "max_depth": "none",
+      "min_samples_leaf": 5,
+      "n_estimators": 300,
+      "wape_pct": 28.3226422855703,
+      "mae_units": 2.991610311257152,
+      "bias_pct": 5.729176726952486,
+      "poisson_deviance": 1.4322021427821205
+    },
+    {
+      "method": "random_forest_on_poisson",
+      "max_depth": "none",
+      "min_samples_leaf": 20,
+      "n_estimators": 300,
+      "wape_pct": 28.194681300919445,
+      "mae_units": 2.9780942912029373,
+      "bias_pct": 6.168518235176724,
+      "poisson_deviance": 1.4257758254842576
+    }
+  ]
+}
