@@ -28,7 +28,7 @@ The complete 20-candidate share search is reproducible with `python src/audit_it
 
 The conditional seven-day block resampling interval for the $1,019 difference is approximately $770-$1,276. It does not include missing operational costs, model-selection uncertainty or future ROI. Independent artifact verification reconciles 49,140 item-day-method records (four methods, including v2) and reproduces forecasts from the saved model, including the v2 calibration.
 
-Sixteen tests pass, including test-label independence of the frozen model and baselines, training economics, posterior math, stockout censoring and inventory/cash conservation. This dataset was explored before the new protocol was requested; do not claim a newly untouched test set or established future ROI.
+These checks are part of the 44-test suite run by `python src/verify_submission.py`, including test-label independence of the frozen model and baselines, training economics, posterior math, stockout censoring and inventory/cash conservation. This dataset was explored before the new protocol was requested; do not claim a newly untouched test set or established future ROI.
 
 ```bash
 python src/strict_model.py
@@ -107,7 +107,7 @@ python -m unittest discover -s tests -v
 
 `src/intraday_model.py` creates feature, prediction, selection, replay and decision-card artifacts. `src/bayesian_policy.py` implements the joint demand distribution, censored update and dynamic program. `src/adaptive_recommend.py` returns the historical plan and posterior explanation; it accepts cost and service settings.
 
-Sixteen tests currently pass across the primary and supplemental models, including conjugate-posterior agreement, shared-state covariance, censored-versus-exact observations, the zero-stock observation, agreement with the earlier Poisson optimizer, inventory/cash accounting and the inability of the late action to see true lost or future demand.
+The 44-test suite (`python src/verify_submission.py`) covers the primary and supplemental models, including conjugate-posterior agreement, shared-state covariance, censored-versus-exact observations, the zero-stock observation, agreement with the earlier Poisson optimizer, inventory/cash accounting and the inability of the late action to see true lost or future demand.
 
 ## Limits and deployment gate
 
