@@ -7,6 +7,7 @@ Generated results and team documents. Most files are written by a script in `src
 | File | What it is | Owner |
 |---|---|---|
 | `company_information_request.md` | Questions for Stories (branch locations, costs, Tuesdays, shared IDs, counter layout) | Omar (teammate 1) |
+| `analysis_details.md` | Supporting analysis moved from the README (why drivers, metric definitions, customers, prices, notebooks) | Marwa |
 | `metric_reconciliation.md` | One agreed definition for each disputed number | Marwa, agreed with Omar |
 | `source_reconciliation.md` | Official sources for event dates | Charbel |
 | `handoff_teammate2_to_teammate1.md` | Tasks Marwa handed to Omar | Marwa |
