@@ -60,3 +60,35 @@ The notebook compares the period before the 2026 Lebanon war (Jan 1 to Feb 28), 
 ## Holidays and Ramadan (notebook 03)
 
 The notebook compares each of the 17 Lebanese national holidays (Jan to Jun 2026) with a normal day on the same weekday and at the same point in the growth trend, split by branch. On average, holidays are normal days (about 0%), and time of day, order value, takeaway share and product mix don't change. Ramadan shows no daytime drop and no spike after iftar. **Harbour is the exception:** 5 of its 17 holidays were unusual (where about 1 would be expected by chance), mostly busier on civic and Christian holidays, such as Labour Day (+48%) and St Maroun (+35%). The holiday dates are a list (`HOLIDAYS`) at the top of the notebook.
+
+## The pitch: demand is a habit, so fix the price list
+
+```bash
+python src/pitch_visuals.py --save   # writes reports/figures/pitch_*.png
+```
+
+**Conclusion.** Stories' demand behaves like a habit, not a reaction. Weekday plus a steady trend explain 93% of daily orders, and growth comes from the same ~3,500 loyal customers visiting more often (91% retained, almost no new ones by June). That makes the price list the lever, not promotions. Garden pays ~43% more per product than Harbour yet charges ~5% less, Uptown charges ~9% less, and a 15% promo at Harbour bought no extra volume. Fixing Garden's supply costs, aligning Garden and Uptown prices to Harbour, stopping untargeted discounts and adding a till add-on is worth **about $65k a year of gross profit**, mostly from the price list. A 4-week price test at Garden should come first (details below).
+
+| # | Claim | Evidence | Chart |
+|---|---|---|---|
+| 1 | Demand follows the calendar, not the news | Weekday + trend: R² = 93%. Beirut weather vs leftover demand: corr. −0.07 (temp), +0.02 (rain). War start (2 Mar) −1% vs expected; deadliest day (8 Apr, ~357 killed) −1%; only Eid al-Fitr dips (−16%). | `pitch_1_demand_is_habit.png` |
+| 1b | Mix does not react either | Beirut +11°C Jan→Jun, iced-drink share flat at ~31%. Takeaway share 41% before, during and after the war. Ramadan daytime share 36.0% vs 35.8%. | `pitch_1b_mix_does_not_react.png` |
+| 2 | Growth = same customers, more visits | New identified customers 1,979 (Jan) → 20 (Jun). Visits per active customer 1.45 → 1.75. | `pitch_2_loyal_base.png` |
+| 3 | The price list is backwards | Garden: cost ×1.43, price ×0.95 vs Harbour on all 45 products (margin 47% vs 65%). Uptown: price ×0.91, cost ×0.96. | `pitch_3_price_list.png` |
+| 4 | Price cuts buy no volume | Harbour 15% off Cold Coffee + Desserts (12–19 Mar, 12–19 May): units/day 33.9 → 33.8, gross profit/day $130 → $100. Control branches moved ±10%. | `pitch_4_promo_no_lift.png` |
+| 5 | Basket upside, but not personalised | 51% of orders are one item. Customers' top-product share (15%) matches random ordering (17%), so there is no personal "usual" to target. | `pitch_5_basket_upside.png` |
+| 6 | Value | Garden costs $31.8k, Garden prices $9.9k, Uptown prices $10.4k, discounts $4.4k, add-on $9.0k per year. | `pitch_6_value.png` |
+
+**Measured vs estimated.** The Garden cost gap and discount spend are measured from the data. The price gains assume no volume loss. They still pay off unless volume falls more than 10% (Garden) or 13% (Uptown). The add-on assumes 1 in 10 single-item orders accepts a pastry ($2.60 gross profit each).
+
+**Data quality finding: the sales do not react to real 2026 events.** A war started in Lebanon on 2 March 2026 with repeated strikes on Beirut, yet orders rose and nothing in the mix changed. Together with the `SYN-` IDs and flat per-branch multipliers, this means the dataset follows a generated pattern. So we only rely on its internal structure (prices, costs, promo response, customer counts) and do not claim anything about crisis or weather behaviour.
+
+**Assumptions that could change the recommendation.**
+- Uptown's lower prices may reflect a lower-income area. If so, aligning its prices is riskier than aligning Garden's.
+- The promo covered two categories for 8 days and we do not know if it was advertised. "No lift" may partly mean "nobody knew".
+- Prices never changed within a branch, so price sensitivity cannot be estimated directly.
+- Some of Garden's extra cost may be justified (rent, smaller deliveries).
+
+**Test before rollout.** Raise Garden prices 5% for 4 weeks, with Harbour and Uptown as controls. Track orders/day and gross profit/day. Stop if Garden orders fall more than ~8% vs the controls, which is safely inside the 10% break-even. In parallel, ask Garden's suppliers for Harbour's price list.
+
+**External data.** Beirut daily weather from the [Open-Meteo archive](https://open-meteo.com/) (`data/external/beirut_weather_2026H1.json`). Event dates from Wikipedia's [2026 in Lebanon](https://en.wikipedia.org/wiki/2026_in_Lebanon) and [Timeline of the 2026 Lebanon war](https://en.wikipedia.org/wiki/Timeline_of_the_2026_Lebanon_war).
