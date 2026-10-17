@@ -1,8 +1,12 @@
 # Stories trained demand and preparation model
 
-## Primary experiment: frozen chronological half/half
+**Current scope:** external context may predict Stories sales. Another business's sales must not replace Stories test targets. The earlier transaction-only model is retained as the control; it is not a user-imposed limit on features. See [EXTERNAL_CONTEXT.md](EXTERNAL_CONTEXT.md) for the active multi-head extension and every-day evidence engine. It includes an internal category-volume head, externally conditioned order-count head, category-specific item-mix experts and the preparation optimizer, with explicit evidence/source gates.
 
-The user's latest requirement is a transaction-only model trained on the earlier half and tested on the later half. The primary implementation is now `src/strict_model.py`, with reusable artifact `models/strict_half_model.joblib` and prediction CLI `src/predict_strict.py`. Earlier rolling and Bayesian models below remain supplemental research; their results must not be relabeled as strict half/half results.
+The new traffic head's training-selected month-cycle expert reduces April-June branch-order WAPE from 9.4644% to 9.2658%. The volume expert selected on training slightly worsens category WAPE (25.2262% vs 25.2077%), so there is no claim of a general volume improvement. Item-mix experts improve all-item WAPE from 53.2678% to 52.6710%; most of that gain is internal pooling, not external features. Their perishable contribution is $10,817.66 vs the control's $10,934.29 at similar service. The profit-selected experimental mix is worse still ($10,560.98). These candidates are retained for review, not declared superior business policies. Twenty-three tests pass across all stages. A separate national reachability audit adds measurement/access hypotheses without inferring a store outage.
+
+## Transaction-only control: frozen chronological half/half
+
+This retained control trains on the earlier half and tests on the later half, using transaction-only features. Its implementation is `src/strict_model.py`, with reusable artifact `models/strict_half_model.joblib` and prediction CLI `src/predict_strict.py`. External features are allowed in the active extension; all sales targets remain Stories. Earlier rolling and Bayesian models below remain supplemental research; their results must not be relabeled as strict half/half results.
 
 **Model:** pooled L2-regularized Poisson regression with branch/category effects, category-weekday and branch-weekday interactions, linear growth and category-specific growth terms. Allocate category demand to items using smoothed item shares from the last 28 training days. A preparation optimizer converts demand and training-period economics into quantities. Features come only from identifiers, dates and transactions in the supplied CSV.
 

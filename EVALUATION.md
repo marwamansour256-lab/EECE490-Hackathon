@@ -1,4 +1,6 @@
-# Primary evaluation: chronological half/half, transaction data only
+# Transaction-only control evaluation: chronological half/half
+
+**User clarification:** external contextual inputs are permitted; external SALES targets are not requested. The no-external-feature restriction was an assistant misunderstanding. This document preserves the original transaction-only CONTROL. The active extension is documented in [EXTERNAL_CONTEXT.md](EXTERNAL_CONTEXT.md): it keeps Stories-only targets and January-March model fitting, but permits externally supplied features. Issued daily weather forecasts imply a day-ahead information set, unlike this control's complete March31-origin forecast. Actual weather, air archives and forecast errors remain retrospective diagnostics.
 
 ## Boundary
 
