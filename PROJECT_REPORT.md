@@ -29,7 +29,7 @@ Stories' data team already knows how many lattes each branch sells, so a sales s
 | 6. Decision | Turned forecasts into opening and 16:00 quantities, and tested whether a second batch pays at different labour costs. | `src/profit_policy.py`, [MODEL_CARD.md](MODEL_CARD.md) |
 | 7. Add-on offer and display test | Recommender evaluated on 8,801 April–June orders against popularity baselines. Display layouts scored as an experiment, not as a result. | [reports/recommendation_evaluation.md](reports/recommendation_evaluation.md), [WEJHA_PILOT.md](WEJHA_PILOT.md) |
 | 8. Usable tools | Offline pages for staff and managers, a pilot log and pilot reports. | [app/README.md](app/README.md) |
-| 9. Verification | Recorded 44-test numerical suite and artifact reconciliation; frontend/Python parity is recorded separately. Final saved-evidence and UI checks are documented with their scope and environment limitations. | [SUBMISSION_AUDIT.md](SUBMISSION_AUDIT.md), `python src/verify_submission.py`, `node app/check_ui.js --cli` |
+| 9. Verification | Recorded 44-test numerical suite and artifact reconciliation; final saved-evidence checks and all 144 saved frontend/Python parity cases pass. Verification scope and reproduction commands are documented. | [SUBMISSION_AUDIT.md](SUBMISSION_AUDIT.md), `python src/verify_submission.py`, `node app/check_ui.js --cli` |
 
 ## 3. Findings
 
