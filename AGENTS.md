@@ -9,6 +9,7 @@ Build the Stories Profit Planner described in README.md: actionable preparation 
 - Codex teammate owns src/strict_model.py, src/predict_strict.py and the saved artifact, plus src/demand_model.py, src/profit_policy.py, src/recommend.py, src/intraday_model.py, src/bayesian_policy.py, src/adaptive_recommend.py, tests and generated numerical results. Read MODEL_CARD.md for which results belong to each protocol.
 - Claude Code teammate 1 (Omar Al-Aghbari, confirmed) owns external evidence, geographic exposure verification and event/forecast provenance.
 - Claude Code teammate 2 owns the presentation/demo interface and pilot logging built on the established data contracts.
+- **Open handoff for teammate 1:** read [reports/handoff_teammate2_to_teammate1.md](reports/handoff_teammate2_to_teammate1.md) (metric definitions to agree, ANALYSIS.md updates, running the event list through the held-out test, the Tuesday question for Stories).
 - These are collaboration boundaries, not permission to overwrite another person's uncommitted work. Coordinate contract changes. Do not launch agents or services just because this file describes multiple teammates.
 
 ## Repository and data discipline
@@ -41,6 +42,8 @@ Build the Stories Profit Planner described in README.md: actionable preparation 
 - reports/two_stage_replay.csv: scenario and forecast identifiers, branch/product/date, opening/replenished/sold/unsold/unmet units and both policy contributions.
 - reports/decision_cards.json: historical date, forecast, branch, category, product, forecast means, prices/costs, opening units and remaining-stock-to-topup lookup. Do not expose replay actuals as decision inputs.
 - src/recommend.py: stable CLI interface for historical cards or explicit custom scenario inputs. Any UI must display historical/scenario status and cost assumptions.
+- data/pilot/pilot_log_template.csv (teammate 2): one row per branch/product/day with date, branch, product, arm (planner/current/shadow), recommended_opening, prepared_opening, remaining_at_16, recommended_topup, prepared_topup, sold, unsold_end, sold_out_time, unit_price, unit_cost, setup_usd_per_batch, extra_usd_per_topup_unit, card_source, override_reason, notes, logged_at. Written by app/planner.html, read by src/pilot_report.py. Unmet demand is not a column because a pilot cannot observe it.
+- reports/external_factor_test.json (teammate 2): held-out half/half factor tests (both directions, circular-shift placebo, Holm correction, planted-effect positive control). Retrospective association evidence only; never a forecast input.
 
 ### Frontend contract while model files are pending publication
 

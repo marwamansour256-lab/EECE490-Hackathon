@@ -1,0 +1,204 @@
+a,b,measure,all,Jan-Mar,Apr-Jun,stable
+branch,margin,eta,0.7107,0.7116,0.7100,True
+has Sandwiches,revenue,eta,0.4162,0.4191,0.4140,True
+has Desserts,margin,eta,0.3225,0.3340,0.3137,True
+has Sandwiches,gross_profit,eta,0.3062,0.3129,0.3010,True
+has Meals,revenue,eta,0.3023,0.2965,0.3068,True
+branch,gross_profit,eta,0.2860,0.2780,0.2931,True
+revenue,margin,Spearman rho,-0.2855,-0.2854,-0.2856,True
+daypart,order_type,Cramer's V,0.2642,0.2706,0.2594,True
+has Sandwiches,margin,eta,0.2519,0.2484,0.2546,True
+has Meals,gross_profit,eta,0.2486,0.2421,0.2535,True
+has Breakfast,revenue,eta,0.2414,0.2537,0.2316,True
+has Bakery,lines,eta,0.2354,0.2358,0.2352,True
+order_type,hour,eta,0.2285,0.2355,0.2231,True
+has Matcha & Tea,gross_profit,eta,0.2229,0.2246,0.2216,True
+has Bakery,items,eta,0.2116,0.2111,0.2121,True
+has Hot Coffee,margin,eta,0.2066,0.2064,0.2068,True
+has Matcha & Tea,lines,eta,0.2040,0.2031,0.2047,True
+has Breakfast,gross_profit,eta,0.1964,0.2095,0.1860,True
+has Matcha & Tea,revenue,eta,0.1925,0.1899,0.1945,True
+has Cold Coffee,margin,eta,0.1907,0.1848,0.1952,True
+has Hot Coffee,lines,eta,0.1888,0.1853,0.1916,True
+has Matcha & Tea,items,eta,0.1842,0.1818,0.1861,True
+has Bakery,has Cold Drinks,Cramer's V,0.1751,0.1755,0.1747,True
+has Hot Coffee,items,eta,0.1692,0.1633,0.1738,True
+has Hot Coffee,has Matcha & Tea,Cramer's V,0.1596,0.1589,0.1602,True
+has Bakery,has Desserts,Cramer's V,0.1565,0.1624,0.1519,True
+has Cold Coffee,lines,eta,0.1540,0.1433,0.1625,True
+has Cold Coffee,has Matcha & Tea,Cramer's V,0.1520,0.1543,0.1503,True
+has Cold Drinks,lines,eta,0.1498,0.1596,0.1419,True
+has Sandwiches,lines,eta,0.1493,0.1545,0.1452,True
+has Cold Coffee,gross_profit,eta,0.1484,0.1421,0.1532,True
+has Cold Coffee,has Hot Coffee,Cramer's V,0.1480,0.1553,0.1422,True
+has Cold Coffee,items,eta,0.1435,0.1332,0.1516,True
+has Cold Drinks,items,eta,0.1388,0.1486,0.1311,True
+has Sandwiches,items,eta,0.1367,0.1431,0.1318,True
+has Bakery,has Cold Coffee,Cramer's V,0.1358,0.1423,0.1307,True
+has Bakery,has Sandwiches,Cramer's V,0.1348,0.1273,0.1405,True
+daypart,has Hot Coffee,Cramer's V,0.1336,0.1280,0.1385,True
+has Hot Coffee,hour,eta,0.1330,0.1245,0.1395,True
+has Breakfast,margin,eta,0.1286,0.1284,0.1289,True
+has Bakery,has Hot Coffee,Cramer's V,0.1257,0.1220,0.1285,True
+has Cold Drinks,has Matcha & Tea,Cramer's V,0.1209,0.1202,0.1214,True
+has Desserts,revenue,eta,0.1183,0.1205,0.1166,True
+has Meals,margin,eta,0.1147,0.1141,0.1151,True
+has Cold Coffee,has Cold Drinks,Cramer's V,0.1126,0.1049,0.1186,True
+has Desserts,has Hot Coffee,Cramer's V,0.1111,0.1098,0.1121,True
+has Bakery,has Breakfast,Cramer's V,0.1106,0.1145,0.1076,True
+discounted,lines,eta,0.1101,0.1182,0.1038,True
+daypart,has Desserts,Cramer's V,0.1090,0.1136,0.1061,True
+has Desserts,hour,eta,0.1087,0.1133,0.1052,True
+has Cold Drinks,has Hot Coffee,Cramer's V,0.1072,0.1068,0.1075,True
+has Desserts,has Matcha & Tea,Cramer's V,0.1049,0.1098,0.1011,True
+has Meals,lines,eta,0.1017,0.1021,0.1017,True
+discounted,items,eta,0.1013,0.1107,0.0940,True
+has Matcha & Tea,has Sandwiches,Cramer's V,0.0980,0.0997,0.0967,True
+daypart,has Matcha & Tea,Cramer's V,0.0980,0.0923,0.1024,True
+has Matcha & Tea,hour,eta,0.0973,0.0905,0.1026,True
+has Desserts,lines,eta,0.0965,0.0956,0.0972,True
+has Meals,items,eta,0.0935,0.0996,0.0891,True
+has Cold Coffee,has Desserts,Cramer's V,0.0933,0.0944,0.0925,True
+has Desserts,items,eta,0.0901,0.0884,0.0915,True
+has Breakfast,lines,eta,0.0887,0.0946,0.0839,True
+has Hot Coffee,has Sandwiches,Cramer's V,0.0884,0.0886,0.0881,True
+has Hot Coffee,gross_profit,eta,0.0883,0.0840,0.0917,True
+has Cold Coffee,has Sandwiches,Cramer's V,0.0874,0.0829,0.0908,True
+has Cold Drinks,has Desserts,Cramer's V,0.0833,0.0828,0.0836,True
+daypart,has Breakfast,Cramer's V,0.0831,0.0877,0.0796,True
+daypart,has Cold Coffee,Cramer's V,0.0829,0.0800,0.0852,True
+has Breakfast,items,eta,0.0820,0.0894,0.0761,True
+has Bakery,has Meals,Cramer's V,0.0816,0.0822,0.0812,True
+has Breakfast,has Matcha & Tea,Cramer's V,0.0798,0.0896,0.0722,True
+has Breakfast,hour,eta,0.0794,0.0838,0.0760,True
+has Cold Coffee,hour,eta,0.0765,0.0721,0.0799,True
+has Cold Coffee,revenue,eta,0.0760,0.0737,0.0778,True
+branch,has Desserts,Cramer's V,0.0723,0.0812,0.0662,True
+has Breakfast,has Hot Coffee,Cramer's V,0.0679,0.0677,0.0680,True
+branch,has Sandwiches,Cramer's V,0.0678,0.0759,0.0617,True
+has Breakfast,has Cold Coffee,Cramer's V,0.0676,0.0647,0.0699,True
+has Desserts,has Sandwiches,Cramer's V,0.0655,0.0638,0.0668,True
+discounted,has Cold Coffee,Cramer's V,0.0652,0.0621,0.0675,True
+daypart,has Bakery,Cramer's V,0.0640,0.0683,0.0611,True
+has Matcha & Tea,has Meals,Cramer's V,0.0621,0.0587,0.0645,True
+gross_profit,margin,Spearman rho,0.0608,0.0594,0.0620,True
+discounted,margin,eta,0.0598,0.0564,0.0624,True
+lines,margin,Spearman rho,-0.0564,-0.0599,-0.0536,True
+has Matcha & Tea,margin,eta,0.0512,0.0559,0.0476,True
+items,margin,Spearman rho,-0.0506,-0.0573,-0.0454,True
+has Breakfast,has Cold Drinks,Cramer's V,0.0504,0.0441,0.0555,True
+has Hot Coffee,has Meals,Cramer's V,0.0500,0.0475,0.0519,True
+has Bakery,hour,eta,0.0494,0.0525,0.0470,True
+has Breakfast,has Desserts,Cramer's V,0.0484,0.0473,0.0492,True
+discounted,has Desserts,Cramer's V,0.0472,0.0511,0.0442,True
+branch,discounted,Cramer's V,0.0465,0.0520,0.0429,True
+has Cold Coffee,has Meals,Cramer's V,0.0451,0.0422,0.0473,True
+daypart,has Meals,Cramer's V,0.0444,0.0415,0.0467,True
+has Bakery,has Matcha & Tea,Cramer's V,0.0435,0.0378,0.0479,True
+has Breakfast,has Sandwiches,Cramer's V,0.0428,0.0307,0.0523,True
+branch,revenue,eta,0.0401,0.0209,0.0553,False
+discounted,revenue,eta,0.0391,0.0480,0.0322,True
+has Bakery,margin,eta,0.0375,0.0398,0.0357,True
+has Bakery,revenue,eta,0.0373,0.0382,0.0366,True
+has Desserts,has Meals,Cramer's V,0.0360,0.0344,0.0372,True
+daypart,has Cold Drinks,Cramer's V,0.0345,0.0396,0.0308,True
+order_type,has Breakfast,Cramer's V,0.0333,0.0313,0.0350,True
+daypart,margin,eta,0.0327,0.0283,0.0366,True
+hour,revenue,Spearman rho,0.0324,0.0345,0.0307,True
+daypart,revenue,eta,0.0317,0.0299,0.0331,True
+has Meals,has Sandwiches,Cramer's V,0.0314,0.0341,0.0294,True
+order_type,has Hot Coffee,Cramer's V,0.0312,0.0289,0.0330,True
+order_type,has Matcha & Tea,Cramer's V,0.0286,0.0247,0.0316,True
+order_type,has Desserts,Cramer's V,0.0264,0.0321,0.0220,True
+hour,gross_profit,Spearman rho,0.0254,0.0257,0.0252,True
+order_type,has Cold Coffee,Cramer's V,0.0250,0.0315,0.0200,True
+hour,margin,Spearman rho,-0.0249,-0.0252,-0.0246,True
+daypart,gross_profit,eta,0.0242,0.0245,0.0243,True
+daypart,has Sandwiches,Cramer's V,0.0235,0.0308,0.0193,True
+has Breakfast,has Meals,Cramer's V,0.0233,0.0221,0.0241,True
+discounted,gross_profit,eta,0.0224,0.0318,0.0152,True
+branch,has Bakery,Cramer's V,0.0218,0.0252,0.0199,True
+has Cold Drinks,margin,eta,0.0211,0.0223,0.0201,True
+has Desserts,gross_profit,eta,0.0187,0.0161,0.0208,True
+weekday,identified customer,Cramer's V,0.0178,0.0255,0.0230,True
+branch,has Cold Coffee,Cramer's V,0.0173,0.0088,0.0242,True
+weekday,has Cold Drinks,Cramer's V,0.0169,0.0290,0.0194,True
+weekday,has Hot Coffee,Cramer's V,0.0169,0.0174,0.0219,True
+weekday,gross_profit,eta,0.0167,0.0288,0.0168,True
+weekday,items,eta,0.0167,0.0264,0.0184,True
+has Meals,hour,eta,0.0163,0.0152,0.0171,True
+has Hot Coffee,revenue,eta,0.0163,0.0128,0.0189,True
+weekday,revenue,eta,0.0160,0.0262,0.0176,True
+weekday,order_type,Cramer's V,0.0160,0.0187,0.0244,True
+weekday,lines,eta,0.0160,0.0207,0.0189,True
+weekday,has Cold Coffee,Cramer's V,0.0154,0.0143,0.0258,True
+weekday,discounted,Cramer's V,0.0154,0.0218,0.0185,True
+identified customer,hour,eta,0.0154,0.0111,0.0186,True
+daypart,discounted,Cramer's V,0.0138,0.0099,0.0185,True
+weekday,hour,eta,0.0129,0.0174,0.0152,True
+daypart,identified customer,Cramer's V,0.0128,0.0087,0.0168,True
+weekday,has Sandwiches,Cramer's V,0.0127,0.0193,0.0170,True
+discounted,hour,eta,0.0126,0.0092,0.0152,True
+weekday,daypart,Cramer's V,0.0124,0.0196,0.0150,True
+discounted,has Hot Coffee,Cramer's V,0.0116,0.0207,0.0045,True
+branch,order_type,Cramer's V,0.0114,0.0078,0.0144,True
+order_type,identified customer,Cramer's V,0.0112,0.0112,0.0112,True
+weekday,has Breakfast,Cramer's V,0.0112,0.0175,0.0167,True
+weekday,has Meals,Cramer's V,0.0106,0.0156,0.0212,True
+has Bakery,gross_profit,eta,0.0105,0.0114,0.0098,True
+branch,hour,eta,0.0104,0.0095,0.0126,True
+daypart,lines,eta,0.0098,0.0092,0.0120,True
+daypart,items,eta,0.0097,0.0085,0.0118,True
+order_type,has Sandwiches,Cramer's V,0.0094,0.0062,0.0118,True
+branch,has Hot Coffee,Cramer's V,0.0093,0.0086,0.0155,True
+has Cold Drinks,revenue,eta,0.0092,0.0009,0.0157,True
+weekday,has Bakery,Cramer's V,0.0089,0.0206,0.0151,True
+weekday,has Matcha & Tea,Cramer's V,0.0087,0.0185,0.0224,True
+hour,lines,Spearman rho,0.0087,0.0077,0.0095,True
+hour,items,Spearman rho,0.0085,0.0064,0.0102,True
+discounted,has Matcha & Tea,Cramer's V,0.0083,0.0120,0.0055,True
+discounted,has Bakery,Cramer's V,0.0083,0.0077,0.0087,True
+order_type,has Bakery,Cramer's V,0.0082,0.0154,0.0026,True
+has Cold Drinks,hour,eta,0.0081,0.0130,0.0043,True
+identified customer,margin,eta,0.0077,0.0031,0.0113,True
+branch,weekday,Cramer's V,0.0077,0.0158,0.0204,True
+weekday,has Desserts,Cramer's V,0.0073,0.0082,0.0133,True
+branch,has Meals,Cramer's V,0.0073,0.0186,0.0010,True
+discounted,has Meals,Cramer's V,0.0073,0.0074,0.0072,True
+weekday,margin,eta,0.0070,0.0193,0.0218,True
+order_type,has Cold Drinks,Cramer's V,0.0070,0.0144,0.0012,True
+branch,daypart,Cramer's V,0.0067,0.0074,0.0091,True
+discounted,has Sandwiches,Cramer's V,0.0067,0.0051,0.0079,True
+has Cold Drinks,gross_profit,eta,0.0067,0.0144,0.0006,True
+branch,has Matcha & Tea,Cramer's V,0.0063,0.0141,0.0065,True
+branch,has Cold Drinks,Cramer's V,0.0061,0.0013,0.0099,True
+has Cold Drinks,has Meals,Cramer's V,0.0060,0.0012,0.0113,True
+branch,lines,eta,0.0059,0.0176,0.0170,True
+order_type,discounted,Cramer's V,0.0056,0.0082,0.0036,True
+identified customer,has Bakery,Cramer's V,0.0052,0.0075,0.0034,True
+identified customer,items,eta,0.0050,0.0086,0.0022,True
+identified customer,has Desserts,Cramer's V,0.0048,0.0130,0.0016,True
+branch,has Breakfast,Cramer's V,0.0046,0.0019,0.0092,True
+identified customer,has Cold Drinks,Cramer's V,0.0046,0.0118,0.0009,True
+branch,identified customer,Cramer's V,0.0045,0.0038,0.0052,True
+identified customer,has Matcha & Tea,Cramer's V,0.0044,0.0024,0.0060,True
+order_type,items,eta,0.0043,0.0081,0.0014,True
+identified customer,has Breakfast,Cramer's V,0.0043,0.0049,0.0115,True
+discounted,has Breakfast,Cramer's V,0.0043,0.0053,0.0035,True
+identified customer,has Hot Coffee,Cramer's V,0.0043,0.0069,0.0022,True
+branch,items,eta,0.0042,0.0156,0.0172,True
+discounted,has Cold Drinks,Cramer's V,0.0041,0.0031,0.0050,True
+identified customer,lines,eta,0.0037,0.0074,0.0008,True
+order_type,has Meals,Cramer's V,0.0037,0.0081,0.0004,True
+order_type,gross_profit,eta,0.0036,0.0086,0.0003,True
+identified customer,revenue,eta,0.0026,0.0080,0.0017,True
+identified customer,has Cold Coffee,Cramer's V,0.0023,0.0053,0.0001,True
+order_type,lines,eta,0.0023,0.0047,0.0004,True
+order_type,revenue,eta,0.0019,0.0082,0.0029,True
+has Sandwiches,hour,eta,0.0019,0.0094,0.0106,True
+identified customer,gross_profit,eta,0.0010,0.0073,0.0040,True
+order_type,margin,eta,0.0008,0.0025,0.0005,True
+has Cold Drinks,has Sandwiches,Cramer's V,0.0006,0.0022,0.0006,True
+identified customer,has Meals,Cramer's V,0.0004,0.0065,0.0041,True
+identified customer,discounted,Cramer's V,0.0003,0.0003,0.0003,True
+identified customer,has Sandwiches,Cramer's V,0.0002,0.0007,0.0008,True

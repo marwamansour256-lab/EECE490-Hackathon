@@ -1,0 +1,156 @@
+{
+  "run_date": "2026-10-17",
+  "status": "proposed by teammate 2, pending teammate 1 agreement",
+  "proposals": {
+    "single_item": {
+      "title": "Single-item orders",
+      "proposed_variant": "one distinct product, any quantity (notebook 06: '47% contain two or more different products')",
+      "value_raw": 0.5387316670109481,
+      "value_dedup": 0.5387316670109481,
+      "wording": "Share of orders that contain only one distinct product (any quantity). This is the audience for a different-product add-on. Report as '54% of orders contain only one product'. The one-line (53.6%) and one-unit (50.6%) figures answer different questions; do not use them as the headline."
+    },
+    "retention": {
+      "title": "Retention",
+      "proposed_variant": "month-to-month repeat: active in month m who are active again in m+1 (mean of Jan-Feb ... May-Jun)",
+      "value_raw": 0.6555613169902959,
+      "value_dedup": 0.6555613169902959,
+      "wording": "Month-to-month repeat rate of identified customers: of those who ordered in a month, the share who order again the next month (66% on average). Call the 91% figure 'overlap between Jan-Feb and May-Jun customers', never 'retention'. 'New' customers are first OBSERVED, not first ever (README)."
+    },
+    "promo": {
+      "title": "Promotion profit effect",
+      "proposed_variant": "PROPOSED gross profit: difference-in-differences vs Garden+Uptown, promo vs other March+May days",
+      "value_raw": -0.14579969469777798,
+      "value_dedup": -0.14401252524681668,
+      "wording": "Harbour promo-category gross profit per day during the 16 promo days vs the other days of March and May, minus the same change at Garden and Uptown: -15%. Report it together with the units version and the $471 discount given away, and say it is 16 days, two categories and one branch, so it is not an elasticity."
+    },
+    "tuesday": {
+      "title": "Tuesday effect",
+      "proposed_variant": "per-day orders, Tuesday / mean of Mon,Wed-Fri (why_drivers.py: 1.53)",
+      "value_raw": 1.53475924734975,
+      "value_dedup": 1.53475924734975,
+      "wording": "Orders per Tuesday divided by the average orders per day on Monday and Wednesday-Friday: 1.53x ('Tuesday is about 53% busier than a normal weekday'). Comparing with weekdays keeps the weekend dip out of the Tuesday effect. ANALYSIS.md's 1.66x is also correct but compares with all six other days, including the quiet weekend; if it is used, say 'than the average of the other six days'. Use per-day rates: the period has 25 Wednesdays and 26 of every other weekday."
+    },
+    "discount10": {
+      "title": "Standing 10% discount",
+      "proposed_variant": "share of LINES with 10% (notebook 07, ANALYSIS.md: '5.6% of lines')",
+      "value_raw": 0.05590401938370752,
+      "value_dedup": 0.056028994024880006,
+      "wording": "Always say lines: '5.6% of product lines get 10% off'. The order-level figure (8.3% of orders contain a 10% line) is a different unit; give it only with the word 'orders'. Notebook 01's 'about 6% of orders' does not match its own table (0.08)."
+    },
+    "growth": {
+      "title": "Order growth",
+      "proposed_variant": "orders per day, Jan -> Jun",
+      "value_raw": 0.5701210121012099,
+      "value_dedup": 0.5701210121012099,
+      "wording": "Orders per day, January vs June: +57%. Monthly totals (+52%) understate it slightly because January has 31 days and June 30."
+    }
+  },
+  "all_variants": {
+    "raw lines (AGENTS.md rule)": {
+      "single_item": {
+        "one product line (notebook 01: '54% of orders contain a single line')": 0.5363413698468439,
+        "one unit in total (pitch_visuals.py: '51% of orders are a single item')": 0.5061528019594534,
+        "one distinct product, any quantity (notebook 06: '47% contain two or more different products')": 0.5387316670109481
+      },
+      "retention": {
+        "Jan-Feb customers seen again in May-Jun (pitch / README: 91%)": 0.9124734231041814,
+        "January first-seen cohort active in June (notebook 04 cohort heatmap, Jan row, Jun column)": 0.7074279939363315,
+        "month-to-month repeat: active in month m who are active again in m+1 (mean of Jan-Feb ... May-Jun)": 0.6555613169902959,
+        "month-to-month repeat by month": [
+          0.567,
+          0.6397,
+          0.6489,
+          0.6986,
+          0.7236
+        ]
+      },
+      "promo": {
+        "promo-category units/day, Harbour, promo vs other March+May days (notebook 07: '+1%')": 0.008576051779935145,
+        "promo-category units/day, Harbour, promo vs 2 weeks before (pitch: 33.9 -> 33.8)": -0.0005268703898841931,
+        "promo-category gross profit/day, Harbour, promo vs 2 weeks before (pitch: '$130 -> $100, -23%')": -0.22493142166937685,
+        "whole-store gross profit/day, Harbour, promo vs other March+May days (notebook 01: 'about -4%')": -0.038723137370036964,
+        "PROPOSED units: difference-in-differences vs Garden+Uptown, promo vs other March+May days": 0.08665238185545449,
+        "PROPOSED gross profit: difference-in-differences vs Garden+Uptown, promo vs other March+May days": -0.14579969469777798,
+        "check, 2-week windows: units DiD": 0.03921232532757235,
+        "check, 2-week windows: gross profit DiD": -0.18539693074785996,
+        "discount given away, USD (notebook 07 / pitch: about $470)": 472.0785
+      },
+      "tuesday": {
+        "per-day orders, Tuesday / mean of the other six days incl. the weekend (ANALYSIS.md: 1.66)": 1.6640175143953937,
+        "ratio of weekday TOTALS, Tuesday / mean of Mon,Wed-Fri totals (closest to notebooks 01, 03: '+55%')": 1.5497250589159466,
+        "per-day orders, Tuesday / mean of Mon,Wed-Fri (why_drivers.py: 1.53)": 1.53475924734975,
+        "days of each weekday in the data": {
+          "0": 26,
+          "1": 26,
+          "2": 25,
+          "3": 26,
+          "4": 26,
+          "5": 26,
+          "6": 26
+        }
+      },
+      "discount10": {
+        "share of LINES with 10% (notebook 07, ANALYSIS.md: '5.6% of lines')": 0.05590401938370752,
+        "share of ORDERS with any 10% line (notebook 01 text says 'about 6% of orders'; its own table shows 0.08)": 0.08277510549768348,
+        "10% + 15% discount given away per year, USD (notebook 07: about $4,400)": 4358.713000000001
+      },
+      "growth": {
+        "monthly order totals, Jan -> Jun (notebooks: 'about +50%')": 0.5194719471947196,
+        "orders per day, Jan -> Jun": 0.5701210121012099
+      }
+    },
+    "132 repeated lines dropped (notebook 01 rule)": {
+      "single_item": {
+        "one product line (notebook 01: '54% of orders contain a single line')": 0.5381709800218373,
+        "one unit in total (pitch_visuals.py: '51% of orders are a single item')": 0.5079824121344468,
+        "one distinct product, any quantity (notebook 06: '47% contain two or more different products')": 0.5387316670109481
+      },
+      "retention": {
+        "Jan-Feb customers seen again in May-Jun (pitch / README: 91%)": 0.9124734231041814,
+        "January first-seen cohort active in June (notebook 04 cohort heatmap, Jan row, Jun column)": 0.7074279939363315,
+        "month-to-month repeat: active in month m who are active again in m+1 (mean of Jan-Feb ... May-Jun)": 0.6555613169902959,
+        "month-to-month repeat by month": [
+          0.567,
+          0.6397,
+          0.6489,
+          0.6986,
+          0.7236
+        ]
+      },
+      "promo": {
+        "promo-category units/day, Harbour, promo vs other March+May days (notebook 07: '+1%')": 0.00746268656716409,
+        "promo-category units/day, Harbour, promo vs 2 weeks before (pitch: 33.9 -> 33.8)": -0.0031645569620252223,
+        "promo-category gross profit/day, Harbour, promo vs 2 weeks before (pitch: '$130 -> $100, -23%')": -0.22676694359663707,
+        "whole-store gross profit/day, Harbour, promo vs other March+May days (notebook 01: 'about -4%')": -0.0395717120342004,
+        "PROPOSED units: difference-in-differences vs Garden+Uptown, promo vs other March+May days": 0.08766457660152838,
+        "PROPOSED gross profit: difference-in-differences vs Garden+Uptown, promo vs other March+May days": -0.14401252524681668,
+        "check, 2-week windows: units DiD": 0.03837078575523312,
+        "check, 2-week windows: gross profit DiD": -0.18530817821230877,
+        "discount given away, USD (notebook 07 / pitch: about $470)": 470.62949999999995
+      },
+      "tuesday": {
+        "per-day orders, Tuesday / mean of the other six days incl. the weekend (ANALYSIS.md: 1.66)": 1.6640175143953937,
+        "ratio of weekday TOTALS, Tuesday / mean of Mon,Wed-Fri totals (closest to notebooks 01, 03: '+55%')": 1.5497250589159466,
+        "per-day orders, Tuesday / mean of Mon,Wed-Fri (why_drivers.py: 1.53)": 1.53475924734975,
+        "days of each weekday in the data": {
+          "0": 26,
+          "1": 26,
+          "2": 25,
+          "3": 26,
+          "4": 26,
+          "5": 26,
+          "6": 26
+        }
+      },
+      "discount10": {
+        "share of LINES with 10% (notebook 07, ANALYSIS.md: '5.6% of lines')": 0.056028994024880006,
+        "share of ORDERS with any 10% line (notebook 01 text says 'about 6% of orders'; its own table shows 0.08)": 0.08277510549768348,
+        "10% + 15% discount given away per year, USD (notebook 07: about $4,400)": 4354.5650000000005
+      },
+      "growth": {
+        "monthly order totals, Jan -> Jun (notebooks: 'about +50%')": 0.5194719471947196,
+        "orders per day, Jan -> Jun": 0.5701210121012099
+      }
+    }
+  }
+}

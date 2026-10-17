@@ -1,0 +1,246 @@
+{
+  "split": "2026-04-01",
+  "halves": [
+    "Jan-Mar",
+    "Apr-Jun"
+  ],
+  "n_orders": 33887,
+  "n_lines": 51177,
+  "raw_lines_retained": true,
+  "stable_rule": "|H1 - H2| < 0.03 for pair measures",
+  "note": "Associations only. Product price vs volume is cross-sectional, not elasticity.",
+  "findings": {
+    "takeaway share by daypart": {
+      "Jan-Mar": {
+        "afternoon 11-17": 0.537,
+        "evening 18-23": 0.275,
+        "morning 7-10": 0.55
+      },
+      "Apr-Jun": {
+        "afternoon 11-17": 0.541,
+        "evening 18-23": 0.284,
+        "morning 7-10": 0.532
+      },
+      "all": {
+        "afternoon 11-17": 0.539,
+        "evening 18-23": 0.28,
+        "morning 7-10": 0.54
+      }
+    },
+    "category share of items by daypart": {
+      "morning 7-10": {
+        "Bakery": 0.27,
+        "Breakfast": 0.073,
+        "Cold Coffee": 0.107,
+        "Cold Drinks": 0.091,
+        "Desserts": 0.036,
+        "Hot Coffee": 0.237,
+        "Matcha & Tea": 0.107,
+        "Meals": 0.015,
+        "Sandwiches": 0.065
+      },
+      "afternoon 11-17": {
+        "Bakery": 0.211,
+        "Breakfast": 0.054,
+        "Cold Coffee": 0.126,
+        "Cold Drinks": 0.112,
+        "Desserts": 0.078,
+        "Hot Coffee": 0.182,
+        "Matcha & Tea": 0.125,
+        "Meals": 0.033,
+        "Sandwiches": 0.079
+      },
+      "evening 18-23": {
+        "Bakery": 0.204,
+        "Breakfast": 0.033,
+        "Cold Coffee": 0.166,
+        "Cold Drinks": 0.097,
+        "Desserts": 0.107,
+        "Hot Coffee": 0.121,
+        "Matcha & Tea": 0.175,
+        "Meals": 0.028,
+        "Sandwiches": 0.07
+      }
+    },
+    "category share by order type": {
+      "Dine-in": {
+        "Bakery": 0.214,
+        "Breakfast": 0.041,
+        "Cold Coffee": 0.148,
+        "Cold Drinks": 0.101,
+        "Desserts": 0.091,
+        "Hot Coffee": 0.151,
+        "Matcha & Tea": 0.155,
+        "Meals": 0.028,
+        "Sandwiches": 0.07
+      },
+      "Takeaway": {
+        "Bakery": 0.219,
+        "Breakfast": 0.053,
+        "Cold Coffee": 0.136,
+        "Cold Drinks": 0.103,
+        "Desserts": 0.08,
+        "Hot Coffee": 0.17,
+        "Matcha & Tea": 0.137,
+        "Meals": 0.027,
+        "Sandwiches": 0.075
+      }
+    },
+    "two-line orders that are 1 drink + 1 food": {
+      "Jan-Mar": {
+        "actual": 0.588,
+        "shuffled_mean": 0.495
+      },
+      "Apr-Jun": {
+        "actual": 0.589,
+        "shuffled_mean": 0.495
+      }
+    },
+    "category pair lift in multi-category orders (1 = chance)": [
+      {
+        "pair": "Cold Drinks + Sandwiches",
+        "orders": 532,
+        "Jan-Mar": 1.03,
+        "Apr-Jun": 1.1
+      },
+      {
+        "pair": "Bakery + Matcha & Tea",
+        "orders": 1994,
+        "Jan-Mar": 1.01,
+        "Apr-Jun": 0.96
+      },
+      {
+        "pair": "Cold Drinks + Meals",
+        "orders": 192,
+        "Jan-Mar": 0.99,
+        "Apr-Jun": 0.9
+      },
+      {
+        "pair": "Bakery + Hot Coffee",
+        "orders": 1580,
+        "Jan-Mar": 0.8,
+        "Apr-Jun": 0.77
+      },
+      {
+        "pair": "Bakery + Cold Coffee",
+        "orders": 1323,
+        "Jan-Mar": 0.72,
+        "Apr-Jun": 0.75
+      },
+      {
+        "pair": "Breakfast + Sandwiches",
+        "orders": 132,
+        "Jan-Mar": 0.71,
+        "Apr-Jun": 0.48
+      },
+      {
+        "pair": "Cold Coffee + Desserts",
+        "orders": 468,
+        "Jan-Mar": 0.69,
+        "Apr-Jun": 0.69
+      },
+      {
+        "pair": "Breakfast + Cold Drinks",
+        "orders": 188,
+        "Jan-Mar": 0.69,
+        "Apr-Jun": 0.59
+      }
+    ],
+    "hourly profile correlation between branches": {
+      "Garden": {
+        "Garden": 1.0,
+        "Harbour": 0.996,
+        "Uptown": 0.992
+      },
+      "Harbour": {
+        "Garden": 0.996,
+        "Harbour": 1.0,
+        "Uptown": 0.995
+      },
+      "Uptown": {
+        "Garden": 0.992,
+        "Harbour": 0.995,
+        "Uptown": 1.0
+      }
+    },
+    "peak hour by branch": {
+      "Garden": 21,
+      "Harbour": 21,
+      "Uptown": 21
+    },
+    "Tuesday vs Mon/Wed-Fri": {
+      "Garden": {
+        "Apr-Jun": 1.54,
+        "Jan-Mar": 1.59
+      },
+      "Harbour": {
+        "Apr-Jun": 1.53,
+        "Jan-Mar": 1.52
+      },
+      "Uptown": {
+        "Apr-Jun": 1.49,
+        "Jan-Mar": 1.56
+      }
+    },
+    "Saturday vs Mon/Wed-Fri": {
+      "Garden": {
+        "Apr-Jun": 0.72,
+        "Jan-Mar": 0.68
+      },
+      "Harbour": {
+        "Apr-Jun": 0.68,
+        "Jan-Mar": 0.7
+      },
+      "Uptown": {
+        "Apr-Jun": 0.68,
+        "Jan-Mar": 0.72
+      }
+    },
+    "Sunday vs Mon/Wed-Fri": {
+      "Garden": {
+        "Apr-Jun": 0.83,
+        "Jan-Mar": 0.86
+      },
+      "Harbour": {
+        "Apr-Jun": 0.82,
+        "Jan-Mar": 0.87
+      },
+      "Uptown": {
+        "Apr-Jun": 0.88,
+        "Jan-Mar": 0.79
+      }
+    },
+    "customer-level Spearman": {
+      "visits": {
+        "visits": 1.0,
+        "spend_per_visit": 0.037,
+        "branches": 0.488,
+        "takeaway_share": 0.026
+      },
+      "spend_per_visit": {
+        "visits": 0.037,
+        "spend_per_visit": 1.0,
+        "branches": 0.007,
+        "takeaway_share": 0.019
+      },
+      "branches": {
+        "visits": 0.488,
+        "spend_per_visit": 0.007,
+        "branches": 1.0,
+        "takeaway_share": -0.011
+      },
+      "takeaway_share": {
+        "visits": 0.026,
+        "spend_per_visit": 0.019,
+        "branches": -0.011,
+        "takeaway_share": 1.0
+      }
+    },
+    "branches per customer: actual vs shuffled": {
+      "actual": 2.497,
+      "shuffled": 2.511
+    },
+    "across products: price vs units sold (Spearman)": -0.305,
+    "across products: margin vs units sold (Spearman)": 0.212
+  }
+}

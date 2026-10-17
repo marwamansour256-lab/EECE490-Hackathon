@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stories Prep Planner</title>
+<!--
+  Stories Profit Planner: presentation/demo interface and pilot log (Claude Code teammate 2).
+  Open this file directly in a browser. No server, no network calls, no build step.
+
+  Data contracts (AGENTS.md):
+    - Decision cards: reports/decision_cards.json (list) or one JSON object printed by
+      python src/predict_strict.py ... / python src/recommend.py ...  -> load with "Load cards".
+    - Built-in cards are ONLY the two checked examples quoted in AGENTS.md. Nothing else is invented.
+    - Pilot log rows are kept in this browser (localStorage) and exported as CSV in the schema of
+      data/pilot/pilot_log_template.csv, summarised by src/pilot_report.py.
+-->
+<style>
+:root {
+  --bg: #fcfcfb; --surface: #ffffff; --ink: #0b0b0b; --ink2: #52514e; --line: #e6e5e0;
+  --accent: #2a78d6; --accent-soft: #e5effb; --warn: #b4521b; --warn-soft: #fbeee4;
+  --ok: #1b8a5f; --ok-soft: #e3f4ec; --bad: #c43c3c;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141413; --surface: #1d1d1b; --ink: #f2f1ec; --ink2: #b0aea6; --line: #33322f;
+    --accent: #6da7ec; --accent-soft: #1c2a3b; --warn: #f0a26b; --warn-soft: #3a2a1f;
+    --ok: #5fcf9c; --ok-soft: #1a3329; --bad: #f07a7a;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141413; --surface: #1d1d1b; --ink: #f2f1ec; --ink2: #b0aea6; --line: #33322f;
+  --accent: #6da7ec; --accent-soft: #1c2a3b; --warn: #f0a26b; --warn-soft: #3a2a1f;
+  --ok: #5fcf9c; --ok-soft: #1a3329; --bad: #f07a7a;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink);
+  font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+header, main { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+header { padding-top: 24px; }
+h1 { font-size: 24px; margin: 0 0 4px; }
+h2 { font-size: 17px; margin: 0 0 12px; }
+h3 { font-size: 14px; margin: 16px 0 6px; color: var(--ink2); text-transform: uppercase; letter-spacing: .04em; }
+p { margin: 0 0 8px; }
+.sub { color: var(--ink2); margin-bottom: 16px; }
+nav { display: flex; gap: 4px; border-bottom: 1px solid var(--line); margin-bottom: 20px; flex-wrap: wrap; }
+nav button { border: 0; background: none; color: var(--ink2); padding: 10px 14px; font: inherit; cursor: pointer;
+  border-bottom: 2px solid transparent; }
+nav button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); font-weight: 600; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px; margin-bottom: 16px; }
+.banner { background: var(--warn-soft); color: var(--warn); border-radius: 8px; padding: 10px 14px; margin-bottom: 16px; font-weight: 600; }
+.grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.kpi { font-size: 34px; font-weight: 700; line-height: 1.1; }
+.kpi small { font-size: 14px; font-weight: 500; color: var(--ink2); }
+.label { color: var(--ink2); font-size: 13px; }
+label { display: block; font-size: 13px; color: var(--ink2); margin-bottom: 4px; }
+select, input, textarea { width: 100%; font: inherit; color: var(--ink); background: var(--bg);
+  border: 1px solid var(--line); border-radius: 6px; padding: 7px 9px; }
+input[type="file"] { padding: 5px; }
+.row { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); margin-bottom: 12px; }
+.btn { border: 1px solid var(--accent); background: var(--accent); color: #fff; border-radius: 6px;
+  padding: 8px 14px; font: inherit; cursor: pointer; }
+.btn.ghost { background: transparent; color: var(--accent); }
+.btn.danger { border-color: var(--bad); color: var(--bad); background: transparent; }
+.big-action { background: var(--accent-soft); border-radius: 8px; padding: 14px; margin-top: 12px; font-size: 17px; }
+.big-action b { font-size: 26px; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--ink2); font-weight: 600; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+tr.hit td { background: var(--accent-soft); font-weight: 600; }
+.scroll { overflow-x: auto; }
+.pill { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 12px; background: var(--line); color: var(--ink2); }
+.pill.ok { background: var(--ok-soft); color: var(--ok); }
+.pill.no { background: var(--warn-soft); color: var(--warn); }
+.muted { color: var(--ink2); font-size: 13px; }
+.hidden { display: none; }
+.toolbar { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.bar-row { display: grid; grid-template-columns: minmax(150px, 260px) 1fr; gap: 10px; align-items: center; margin: 6px 0; }
+.bar-label { font-size: 14px; }
+.bar-track { position: relative; height: 22px; }
+.bar { position: absolute; top: 0; height: 10px; border-radius: 3px; background: var(--accent); }
+.bar.b2 { top: 11px; background: var(--accent-soft); border: 1px solid var(--accent); }
+.bar.hot { background: var(--warn); }
+.bar-val { position: absolute; top: 2px; font-size: 12px; color: var(--ink2); white-space: nowrap; }
+.lead { font-size: 17px; }
+footer { max-width: 1080px; margin: 24px auto; padding: 0 16px 32px; color: var(--ink2); font-size: 12px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Stories Prep Planner</h1>
+  <p class="sub">How much of each fresh item to prepare at opening, and how much more to make at 16:00 based on what is left.</p>
+  <nav role="tablist">
+    <button role="tab" data-tab="why" aria-selected="true">1 · Why</button>
+    <button role="tab" data-tab="plan" aria-selected="false">2 · Today's plan</button>
+    <button role="tab" data-tab="evidence" aria-selected="false">3 · Evidence</button>
+    <button role="tab" data-tab="pilot" aria-selected="false">4 · Pilot log</button>
+  </nav>
+</header>
+
+<main>
+<!-- ============ WHY ============ -->
+<section id="tab-why">
+  <p class="banner hidden" id="why-missing"></p>
+  <div class="card">
+    <h2>Why is profit growing?</h2>
+    <p id="why-growth-lead"></p>
+    <div id="why-growth"></div>
+    <p class="muted">Exact breakdown of gross profit = orders × items per order × price per item × margin. Bars: Jan→Mar (dark) and Apr→Jun (light). The same split in both halves means it is a stable pattern, not a one-off.</p>
+  </div>
+  <div class="card">
+    <h2>Why does Garden earn less than Harbour?</h2>
+    <p id="why-garden-lead"></p>
+    <div id="why-garden"></div>
+    <p class="muted">Garden's own sales, re-priced at Harbour's prices, then at Harbour's costs. Identical in Jan–Mar and Apr–Jun. Next step: compare Garden's supplier invoices with Harbour's.</p>
+  </div>
+  <div class="card">
+    <h2>Why do daily sales go up and down?</h2>
+    <p id="why-daily-lead"></p>
+    <div id="why-daily"></div>
+    <p class="muted">Each model is fitted on Jan–Mar and scored on Apr–Jun, which it never saw. The ceiling is the most any model can explain, because individual customers arrive at random even when the expected rate is known. The gap between the last step and the ceiling is all the room left for weather, events or anything else.</p>
+  </div>
+  <div class="card">
+    <h2>What is different about Tuesday?</h2>
+    <p id="why-tuesday-lead"></p>
+    <div class="scroll"><table id="why-tuesday"></table></div>
+    <p class="muted">The data cannot name the cause. A uniform lift points to something chain-wide (a calendar pattern, a standing offer, operations or how sales are recorded) rather than a type of customer or product. Ask Stories, then try to copy it on Saturdays (about 0.7× a normal weekday).</p>
+  </div>
+  <p class="muted">Source: <code>src/why_drivers.py</code> → <code>app/why_data.js</code>, <code>reports/why_drivers.json</code>. These are accounting breakdowns and held-out fits, not causal effects.</p>
+</section>
+
+<!-- ============ PLAN ============ -->
+<section id="tab-plan" class="hidden">
+  <div class="banner" id="status-banner">Historical replay; verify production inputs</div>
+
+  <div class="card">
+    <div class="row">
+      <div><label for="card-select">Decision card</label><select id="card-select"></select></div>
+      <div><label for="card-file">Load cards (decision_cards.json or CLI output)</label>
+        <input type="file" id="card-file" accept=".json,application/json"></div>
+    </div>
+    <p class="muted" id="card-source"></p>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="label">Forecast demand</div>
+      <div class="kpi" id="k-forecast">–</div>
+      <div class="muted" id="k-forecast-note"></div>
+    </div>
+    <div class="card">
+      <div class="label">Prepare at opening</div>
+      <div class="kpi" id="k-opening">–</div>
+      <div class="muted" id="k-onebatch"></div>
+    </div>
+    <div class="card">
+      <div class="label">Item</div>
+      <div style="font-size:18px;font-weight:600" id="k-item">–</div>
+      <div class="muted" id="k-meta"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>At 16:00: how many are left?</h2>
+    <div class="row">
+      <div><label for="remaining">Units remaining on the shelf</label>
+        <input type="number" id="remaining" min="0" step="1" value="0"></div>
+    </div>
+    <div class="big-action" id="topup-action">–</div>
+    <h3>Full lookup table</h3>
+    <div class="scroll"><table id="topup-table"></table></div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Cost assumptions</h2>
+      <table id="assumptions"></table>
+      <p class="muted" style="margin-top:8px">These are scenario settings, not measured Stories costs. Change them in the model run, not here.</p>
+    </div>
+    <div class="card">
+      <h2>Event adjustment</h2>
+      <p id="event-adj">–</p>
+      <p class="muted">Outside events (weather, holidays, conflict) are shown as review alerts only. They change the forecast only after exposure and held-out predictive value are shown. See the Evidence tab.</p>
+    </div>
+  </div>
+  <details class="card"><summary>Raw card JSON</summary><pre id="raw" class="scroll" style="font-size:12px"></pre></details>
+</section>
+
+<!-- ============ EVIDENCE ============ -->
+<section id="tab-evidence" class="hidden">
+  <div class="card">
+    <h2>Why the plan uses no outside factors (yet)</h2>
+    <p>We tested whether weather, holidays, Ramadan, the war period and Beirut strike days help predict sales on days the model never saw.
+       Each factor was added to a transactions-only model trained on one half of the timeline and scored on the other half, in both directions,
+       against 154 placebo versions with the factor moved to the wrong dates, with a correction for testing many factors.</p>
+    <div class="grid" style="margin-top:12px">
+      <div><div class="kpi" id="e-pass">0 <small>of 33</small></div><div class="label">factor tests pass</div></div>
+      <div><div class="kpi" id="e-big">~20%</div><div class="label">drop on rainy days or holidays that the test catches every time</div></div>
+      <div><div class="kpi" id="e-small">~10%</div><div class="label" id="e-small-label">drop it catches only 40–50% of the time</div></div>
+    </div>
+    <p class="muted" style="margin-top:12px">Meaning: no outside factor improves the forecast out of sample, and any rainy-day or holiday effect larger than about 20% would have been found.
+       Smaller effects cannot be ruled out. Weather is realised weather (a retrospective test), branch locations are unverified, and conflict dates were picked after the fact.
+       Source: <code>src/external_factor_test.py</code>, <code>reports/external_factor_test.json</code>.</p>
+    <div class="toolbar" style="margin-top:8px">
+      <label class="btn ghost" style="margin:0;color:var(--accent)">Load external_factor_test.json
+        <input type="file" id="ext-file" accept=".json" style="display:none"></label>
+    </div>
+    <div class="scroll" style="margin-top:12px"><table id="ext-table"></table></div>
+  </div>
+  <div class="card">
+    <h2>Model status</h2>
+    <p>Primary model: frozen chronological half/half Poisson model (train Jan–Mar, test Apr–Jun), transactions only. Read <code>EVALUATION.md</code> and <code>MODEL_CARD.md</code>.
+       Replay results are simulations, not measured savings, and not a comparison with Stories' current practice. Real waste, stockouts, prep times and capacity are missing, which is why the pilot below exists.</p>
+  </div>
+</section>
+
+<!-- ============ PILOT ============ -->
+<section id="tab-pilot" class="hidden">
+  <div class="card">
+    <h2>Log one branch · product · day</h2>
+    <p class="muted">Shadow or randomized pilot. One row per item per day. Rows stay in this browser until you export them.</p>
+    <form id="pilot-form">
+      <div class="row">
+        <div><label>Date</label><input name="date" type="date" required></div>
+        <div><label>Branch</label><input name="branch" required placeholder="Harbour"></div>
+        <div><label>Product</label><input name="product" required placeholder="Turkey & Cheese Sandwich"></div>
+        <div><label>Arm</label><select name="arm"><option value="planner">planner</option><option value="current">current practice</option><option value="shadow">shadow (logged, not used)</option></select></div>
+      </div>
+      <div class="row">
+        <div><label>Recommended opening</label><input name="recommended_opening" type="number" min="0" step="1"></div>
+        <div><label>Actually prepared at opening</label><input name="prepared_opening" type="number" min="0" step="1" required></div>
+        <div><label>Remaining at 16:00</label><input name="remaining_at_16" type="number" min="0" step="1"></div>
+        <div><label>Recommended top-up</label><input name="recommended_topup" type="number" min="0" step="1"></div>
+        <div><label>Actually prepared at 16:00</label><input name="prepared_topup" type="number" min="0" step="1" value="0"></div>
+      </div>
+      <div class="row">
+        <div><label>Units sold</label><input name="sold" type="number" min="0" step="1" required></div>
+        <div><label>Units left at close (waste)</label><input name="unsold_end" type="number" min="0" step="1" required></div>
+        <div><label>Sold out at (HH:MM, blank if never)</label><input name="sold_out_time" type="time"></div>
+        <div><label>Unit price (USD)</label><input name="unit_price" type="number" min="0" step="0.01"></div>
+        <div><label>Unit cost (USD)</label><input name="unit_cost" type="number" min="0" step="0.01"></div>
+      </div>
+      <div class="row">
+        <div><label>Override reason (if prepared ≠ recommended)</label><input name="override_reason" placeholder="e.g. delivery late, catering order"></div>
+        <div><label>Notes</label><input name="notes"></div>
+      </div>
+      <div class="toolbar">
+        <button class="btn" type="submit">Add row</button>
+        <button class="btn ghost" type="button" id="prefill">Fill recommendations from current card</button>
+        <span class="muted" id="form-msg"></span>
+      </div>
+    </form>
+  </div>
+
+  <div class="card">
+    <h2>Pilot summary by arm</h2>
+    <div class="scroll"><table id="pilot-summary"></table></div>
+    <p class="muted" style="margin-top:8px">Contribution = sold × price − prepared × cost − batch costs (card assumptions). Unmet demand is not observed, so service is shown as sell-out rate and time.
+       Decide with a pre-agreed randomized design and guardrails, not from a handful of rows. <code>src/pilot_report.py</code> produces the same summary from an exported CSV.</p>
+  </div>
+
+  <div class="card">
+    <div class="toolbar" style="justify-content:space-between">
+      <h2 style="margin:0">Logged rows</h2>
+      <div class="toolbar">
+        <button class="btn ghost" id="export">Export CSV</button>
+        <label class="btn ghost" style="margin:0;color:var(--accent)">Import CSV<input type="file" id="import" accept=".csv" style="display:none"></label>
+        <button class="btn danger" id="clear">Clear all</button>
+      </div>
+    </div>
+    <div class="scroll" style="margin-top:12px"><table id="pilot-table"></table></div>
+  </div>
+</section>
+</main>
+<footer>Historical and scenario outputs only. Not a live recommendation service. Gross contribution is not net profit.</footer>
+
+<!-- Generated data files (optional: the page still works if they are missing) -->
+<script src="why_data.js"></script>
+<script src="evidence_data.js"></script>
+<script>
+"use strict";
+// ---------- Built-in cards: ONLY the checked examples quoted in AGENTS.md ----------
+const BUILTIN = [
+  {
+    _label: "Primary strict model · Harbour · Turkey & Cheese Sandwich · 2026-06-30",
+    _source: "AGENTS.md checked primary example (src/predict_strict.py). Only remaining = 0 is published; run the CLI with --remaining N for other values.",
+    status: "Historical replay; verify production inputs",
+    date: "2026-06-30", branch: "Harbour", product: "Turkey & Cheese Sandwich", category: "Sandwiches",
+    method: "strict half/half Poisson (trained through 2026-03-31)",
+    trained_through: "2026-03-31", external_model_inputs: [], test_sales_used_in_forecast: false,
+    forecast_mean_units: 4.03997, opening_prepare_units: 4,
+    at16_topup_by_remaining_stock: { "0": 4 },
+    event_adjustment: "None: exposure and predictive value unverified"
+  },
+  {
+    _label: "Illustrative seasonal-planner card · Harbour · Turkey & Cheese Sandwich · 2026-06-30",
+    _source: "AGENTS.md illustrative structure (checked existing seasonal-planner card, earlier rolling protocol). Not the primary model.",
+    status: "Historical replay; verify production inputs",
+    date: "2026-06-30", branch: "Harbour", product: "Turkey & Cheese Sandwich",
+    forecast: "strong_baseline",
+    forecast_mean_units: 4.933234421364985, opening_prepare_units: 5, one_batch_comparator_units: 6,
+    at16_topup_by_remaining_stock: { "0": 4, "1": 3, "2": 2, "3": 1, "4": 0, "5": 0 },
+    assumptions: { setup_usd_per_sku: 0.25, extra_usd_per_topup_unit: 0.10, expected_fill_floor: 0.90,
+                   immediate_second_batch: true, capacity_unconstrained: true },
+    event_adjustment: "None: exposure and predictive value unverified"
+  }
+];
+let cards = BUILTIN.slice();
+let current = cards[0];
+
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const fmt = (v, d = 2) => (typeof v === "number" && isFinite(v) ? v.toFixed(d) : "–");
+const pct = (v, d = 0) => (100 * v).toFixed(d) + "%";
+
+function store(key, val) { try { localStorage.setItem(key, JSON.stringify(val)); } catch (e) {} }
+function load(key, dflt) { try { const v = localStorage.getItem(key); return v ? JSON.parse(v) : dflt; } catch (e) { return dflt; } }
+
+// ---------- Tabs ----------
+document.querySelectorAll("nav button").forEach((b) => b.addEventListener("click", () => {
+  document.querySelectorAll("nav button").forEach((x) => x.setAttribute("aria-selected", x === b));
+  ["why", "plan", "evidence", "pilot"].forEach((t) => $("tab-" + t).classList.toggle("hidden", t !== b.dataset.tab));
+  store("tab", b.dataset.tab);
+}));
+{ const t = load("tab", "why"); const btn = document.querySelector(`nav button[data-tab="${t}"]`); if (btn) btn.click(); }
+
+// ---------- Cards ----------
+function cardLabel(c, i) {
+  return c._label || [c.date, c.branch, c.product, c.forecast || c.method || c.candidate].filter(Boolean).join(" · ") || "Card " + (i + 1);
+}
+function fillSelect() {
+  $("card-select").innerHTML = cards.map((c, i) => `<option value="${i}">${esc(cardLabel(c, i))}</option>`).join("");
+}
+function lookup(c) {
+  const t = c.at16_topup_by_remaining_stock || {};
+  return Object.keys(t).map(Number).filter((k) => !isNaN(k)).sort((a, b) => a - b).map((k) => [k, t[String(k)]]);
+}
+function topupFor(c, rem) {
+  if (typeof c.prepare_at16_units === "number" && c._remaining === rem) return c.prepare_at16_units;
+  const rows = lookup(c);
+  if (!rows.length) return null;
+  const exact = rows.find(([k]) => k === rem);
+  if (exact) return exact[1];
+  const maxK = rows[rows.length - 1][0];
+  if (rem > maxK && rows[rows.length - 1][1] === 0) return 0; // table already reached zero
+  return null;
+}
+function renderCard() {
+  const c = current;
+  $("status-banner").textContent = c.status || "Historical replay; verify production inputs";
+  $("card-source").textContent = c._source || "Loaded from file.";
+  $("k-forecast").innerHTML = `${fmt(c.forecast_mean_units, 1)} <small>units</small>`;
+  $("k-forecast-note").textContent = c.trained_through ? `Model trained through ${c.trained_through}; no test sales used.` : (c.forecast ? `Forecast: ${c.forecast}` : "");
+  $("k-opening").innerHTML = `${c.opening_prepare_units ?? "–"} <small>units</small>`;
+  $("k-onebatch").textContent = c.one_batch_comparator_units != null ? `One-batch comparator would prepare ${c.one_batch_comparator_units}` : "";
+  $("k-item").textContent = c.product || "–";
+  $("k-meta").textContent = [c.branch, c.category, c.date].filter(Boolean).join(" · ");
+  $("event-adj").textContent = c.event_adjustment || "None: exposure and predictive value unverified";
+  const a = c.assumptions || {};
+  const rowsA = Object.keys(a).length ? Object.entries(a) : [["(not included in this card)", "see MODEL_CARD.md"]];
+  $("assumptions").innerHTML = rowsA.map(([k, v]) => `<tr><td>${esc(k.replace(/_/g, " "))}</td><td class="num">${esc(typeof v === "number" ? v : String(v))}</td></tr>`).join("");
+  const rows = lookup(c);
+  $("topup-table").innerHTML = "<tr><th>Remaining at 16:00</th><th class='num'>Prepare more</th></tr>" +
+    (rows.length ? rows.map(([k, v]) => `<tr data-k="${k}"><td>${k}</td><td class="num">${v}</td></tr>`).join("") : "<tr><td colspan=2>No lookup table in this card.</td></tr>");
+  $("raw").textContent = JSON.stringify(Object.fromEntries(Object.entries(c).filter(([k]) => !k.startsWith("_"))), null, 2);
+  renderTopup();
+}
+function renderTopup() {
+  const rem = Math.max(0, parseInt($("remaining").value || "0", 10));
+  const v = topupFor(current, rem);
+  document.querySelectorAll("#topup-table tr[data-k]").forEach((tr) => tr.classList.toggle("hit", Number(tr.dataset.k) === rem));
+  $("topup-action").innerHTML = v == null
+    ? `No published value for <b>${rem}</b> remaining. Run <code>python src/predict_strict.py --date ${esc(current.date)} --branch ${esc(current.branch)} --product "${esc(current.product)}" --remaining ${rem}</code> and load its output.`
+    : `${rem} left → prepare <b>${v}</b> more ${v === 1 ? "unit" : "units"} now.`;
+}
+$("card-select").addEventListener("change", (e) => { current = cards[+e.target.value]; renderCard(); });
+$("remaining").addEventListener("input", renderTopup);
+$("card-file").addEventListener("change", async (e) => {
+  const f = e.target.files[0]; if (!f) return;
+  try {
+    let data = JSON.parse(await f.text());
+    if (!Array.isArray(data)) data = data.cards || data.decision_cards || [data];
+    const ok = data.filter((c) => c && typeof c === "object" && ("opening_prepare_units" in c || "forecast_mean_units" in c));
+    if (!ok.length) throw new Error("no decision cards found (need opening_prepare_units or forecast_mean_units)");
+    ok.forEach((c) => { c._source = `Loaded from ${f.name}`; if (typeof c.prepare_at16_units === "number" && c.remaining != null) c._remaining = Number(c.remaining); });
+    cards = ok.concat(BUILTIN);
+    fillSelect(); current = cards[0]; $("card-select").value = "0"; renderCard();
+  } catch (err) { alert("Could not read cards: " + err.message); }
+});
+fillSelect(); renderCard();
+
+// ---------- Evidence: optional load of external_factor_test.json ----------
+function renderExt(meta) {
+  const rows = (meta.results || []).slice().sort((a, b) => a.p_holm - b.p_holm);
+  $("e-pass").innerHTML = `${rows.filter((r) => r.passes).length} <small>of ${rows.length}</small>`;
+  const pc = (meta.positive_control || []).filter((r) => !/strike/i.test(r.factor));
+  if (pc.length) {
+    const sizes = [...new Set(pc.map((r) => r.planted_drop))].sort((a, b) => a - b);
+    const rate = (s) => pc.filter((r) => r.planted_drop === s).map((r) => r.detection_rate);
+    const always = sizes.find((s) => Math.min(...rate(s)) >= 0.95);
+    if (always != null) $("e-big").textContent = pct(always);
+    const mid = sizes.find((s) => Math.max(...rate(s)) > 0 && Math.min(...rate(s)) < 0.95);
+    if (mid != null) {
+      $("e-small").textContent = pct(mid);
+      $("e-small-label").textContent = `drop it catches only ${pct(Math.min(...rate(mid)))}–${pct(Math.max(...rate(mid)))} of the time`;
+    }
+  }
+  $("ext-table").innerHTML = "<tr><th>Factor</th><th>Target</th><th class='num'>Gain Jan–Mar→Apr–Jun</th><th class='num'>Gain Apr–Jun→Jan–Mar</th><th class='num'>Holm p</th><th>Result</th></tr>" +
+    rows.map((r) => `<tr><td>${esc(r.factor)}</td><td>${esc(r.target.replace(/_/g, " "))}</td><td class="num">${(100 * r.gain_fwd).toFixed(1)}%</td><td class="num">${(100 * r.gain_rev).toFixed(1)}%</td><td class="num">${r.p_holm.toFixed(2)}</td><td>${r.passes ? '<span class="pill ok">passes</span>' : '<span class="pill no">not supported</span>'}</td></tr>`).join("");
+}
+$("ext-file").addEventListener("change", async (e) => {
+  const f = e.target.files[0]; if (!f) return;
+  try { renderExt(JSON.parse(await f.text())); } catch (err) { alert("Could not read file: " + err.message); }
+});
+if (window.EVIDENCE_DATA) renderExt(window.EVIDENCE_DATA);
+
+// ---------- Why tab (window.WHY_DATA from why_data.js) ----------
+function bars(rows, max, opts = {}) {
+  // rows: [{label, a, b?, hot?, fmt?}]; `max` is in the same units as the values.
+  // Negative values are drawn faded so a small negative share is not mistaken for a positive one.
+  return rows.map((r) => {
+    const w = (v) => Math.min(100, Math.max(0.5, (100 * Math.abs(v)) / max));
+    const f = r.fmt || ((v) => pct(v));
+    const one = (v, cls) => v == null ? "" :
+      `<div class="bar ${cls}" style="left:0;width:${w(v)}%;${v < 0 ? "opacity:.35" : ""}"></div><span class="bar-val" style="left:calc(${w(v)}% + 6px);top:${cls === "b2" ? 11 : 0}px">${f(v)}</span>`;
+    return `<div class="bar-row"><div class="bar-label">${esc(r.label)}</div><div class="bar-track">${one(r.a, r.hot ? "hot" : "")}${one(r.b, "b2")}</div></div>`;
+  }).join("");
+}
+function renderWhy(W) {
+  const g1 = W.growth["Jan->Mar"], g2 = W.growth["Apr->Jun"], gt = W.growth["Jan->Jun"];
+  const names = Object.keys(gt.share_of_growth);
+  const people = names.slice(0, 3).reduce((s, k) => s + gt.share_of_growth[k], 0);
+  $("why-growth-lead").innerHTML = `<span class="lead">Gross profit rose <b>${pct(gt.growth)}</b> from January to June. <b>${pct(people)}</b> of that came from more people and more visits; bigger baskets, prices and margins added about <b>0%</b>.</span>`;
+  $("why-growth").innerHTML = bars(names.map((k) => ({ label: k, a: g1.share_of_growth[k], b: g2.share_of_growth[k] })), 0.45);
+  const G = W.branch_margin_gap.Garden.all;
+  $("why-garden-lead").innerHTML = `<span class="lead">Garden's margin is <b>${pct(G.branch_margin)}</b> vs Harbour's <b>${pct(G.reference_margin)}</b>. <b>${pct(G.cost_effect_pts / G.gap_pts)}</b> of the ${Math.abs(G.gap_pts).toFixed(1)}-point gap is Garden's higher unit costs.</span>`;
+  const pts = (v) => Math.abs(v).toFixed(1) + " pts";
+  $("why-garden").innerHTML = bars([
+    { label: "Higher unit costs", a: -G.cost_effect_pts, hot: true, fmt: pts },
+    { label: "Lower prices", a: -G.price_effect_pts, fmt: pts },
+    { label: "Different product mix", a: -G.mix_effect_pts, fmt: pts },
+    { label: "Total gap", a: -G.gap_pts, fmt: pts }], -G.gap_pts * 1.25);
+  const D = W.daily_variation["Jan-Mar -> Apr-Jun"], last = D.steps[D.steps.length - 1];
+  $("why-daily-lead").innerHTML = `<span class="lead">On months it never saw, branch + growth + weekday explain <b>${pct(last.heldout_r2, 1)}</b> of daily ups and downs. The most any model could explain is <b>${pct(D.ceiling_r2_if_rest_is_noise, 1)}</b>, which leaves under <b>${pct(D.room_left_for_other_factors_r2 + 0.005, 0)}</b> for weather, events or anything else.</span>`;
+  $("why-daily").innerHTML = bars(D.steps.map((s) => ({ label: s.model, a: s.heldout_r2, fmt: (v) => pct(v, 1) }))
+    .concat([{ label: "Ceiling (rest is chance)", a: D.ceiling_r2_if_rest_is_noise, hot: true, fmt: (v) => pct(v, 1) }]), 1.1);
+  const T = W.tuesday;
+  $("why-tuesday-lead").innerHTML = `<span class="lead">Every one of the ${esc(T.tuesdays_above_every_other_day_median.split(" of ")[1])} Tuesdays beat the typical day. The lift is <b>${T.range_of_multipliers[0].toFixed(2)}–${T.range_of_multipliers[1].toFixed(2)}×</b> in every slice, with the same order value ($${T.avg_order_value.Tuesday} vs $${T.avg_order_value["other weekdays"]}).</span>`;
+  const sl = [["Branch", T.by_branch], ["Half of year", T.by_half], ["Time of day", T.by_daypart], ["Order type", T.by_order_type], ["Customer", T.by_customer_type]];
+  $("why-tuesday").innerHTML = "<tr><th>Slice</th><th>Tuesday ÷ average Mon, Wed–Fri</th></tr>" +
+    sl.map(([n, o]) => `<tr><td>${n}</td><td>${Object.entries(o).map(([k, v]) => `${esc(k)} <b>${v.toFixed(2)}×</b>`).join(" · ")}</td></tr>`).join("");
+}
+if (window.WHY_DATA) renderWhy(window.WHY_DATA);
+else { $("why-missing").textContent = "app/why_data.js not found. Run python src/why_drivers.py."; $("why-missing").classList.remove("hidden"); }
+
+// ---------- Pilot log ----------
+const COLS = ["date", "branch", "product", "arm", "recommended_opening", "prepared_opening", "remaining_at_16",
+  "recommended_topup", "prepared_topup", "sold", "unsold_end", "sold_out_time", "unit_price", "unit_cost",
+  "setup_usd_per_batch", "extra_usd_per_topup_unit", "card_source", "override_reason", "notes", "logged_at"];
+let log = load("pilot_log", []);
+
+function num(v) { const n = parseFloat(v); return isFinite(n) ? n : null; }
+function contribution(r) {
+  const price = num(r.unit_price), cost = num(r.unit_cost);
+  if (price == null || cost == null) return null;
+  const prepared = (num(r.prepared_opening) || 0) + (num(r.prepared_topup) || 0);
+  const batches = 1 + ((num(r.prepared_topup) || 0) > 0 ? 1 : 0);
+  return (num(r.sold) || 0) * price - prepared * cost - batches * (num(r.setup_usd_per_batch) || 0)
+    - (num(r.prepared_topup) || 0) * (num(r.extra_usd_per_topup_unit) || 0);
+}
+function renderLog() {
+  store("pilot_log", log);
+  const shown = ["date", "branch", "product", "arm", "recommended_opening", "prepared_opening", "remaining_at_16", "prepared_topup", "sold", "unsold_end", "sold_out_time", "override_reason"];
+  $("pilot-table").innerHTML = `<tr>${shown.map((c) => `<th>${esc(c.replace(/_/g, " "))}</th>`).join("")}<th class="num">contribution</th><th></th></tr>` +
+    (log.length ? log.map((r, i) => `<tr>${shown.map((c) => `<td>${esc(r[c])}</td>`).join("")}<td class="num">${fmt(contribution(r))}</td><td><button class="btn ghost" data-del="${i}" style="padding:2px 8px">×</button></td></tr>`).join("")
+      : `<tr><td colspan="${shown.length + 2}" class="muted">No rows yet.</td></tr>`);
+  const arms = {};
+  log.forEach((r) => {
+    const a = (arms[r.arm] ||= { rows: 0, prepared: 0, sold: 0, waste: 0, soldout: 0, contrib: 0, contribRows: 0, overrides: 0 });
+    a.rows++; a.prepared += (num(r.prepared_opening) || 0) + (num(r.prepared_topup) || 0);
+    a.sold += num(r.sold) || 0; a.waste += num(r.unsold_end) || 0; a.soldout += r.sold_out_time ? 1 : 0;
+    a.overrides += r.override_reason ? 1 : 0;
+    const c = contribution(r); if (c != null) { a.contrib += c; a.contribRows++; }
+  });
+  const names = Object.keys(arms);
+  $("pilot-summary").innerHTML = "<tr><th>Arm</th><th class='num'>Item-days</th><th class='num'>Prepared</th><th class='num'>Sold</th><th class='num'>Waste</th><th class='num'>Waste %</th><th class='num'>Sold-out days</th><th class='num'>Overrides</th><th class='num'>Contribution / item-day</th></tr>" +
+    (names.length ? names.map((n) => { const a = arms[n]; return `<tr><td>${esc(n)}</td><td class="num">${a.rows}</td><td class="num">${a.prepared}</td><td class="num">${a.sold}</td><td class="num">${a.waste}</td><td class="num">${a.prepared ? (100 * a.waste / a.prepared).toFixed(1) + "%" : "–"}</td><td class="num">${a.soldout} (${(100 * a.soldout / a.rows).toFixed(0)}%)</td><td class="num">${a.overrides}</td><td class="num">${a.contribRows ? "$" + (a.contrib / a.contribRows).toFixed(2) : "–"}</td></tr>`; }).join("")
+      : "<tr><td colspan=9 class='muted'>Log rows to see the comparison.</td></tr>");
+}
+$("pilot-table").addEventListener("click", (e) => {
+  const i = e.target.dataset.del; if (i == null) return;
+  if (confirm("Delete this row?")) { log.splice(+i, 1); renderLog(); }
+});
+$("pilot-form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const fd = new FormData(e.target); const r = {};
+  COLS.forEach((c) => (r[c] = fd.get(c) ?? ""));
+  const a = current.assumptions || {};
+  r.setup_usd_per_batch = a.setup_usd_per_sku ?? "";
+  r.extra_usd_per_topup_unit = a.extra_usd_per_topup_unit ?? "";
+  r.card_source = cardLabel(current, 0);
+  r.logged_at = new Date().toISOString();
+  if ((num(r.sold) || 0) + (num(r.unsold_end) || 0) > (num(r.prepared_opening) || 0) + (num(r.prepared_topup) || 0)) {
+    $("form-msg").textContent = "Check: sold + left at close is more than was prepared."; return;
+  }
+  log.push(r); renderLog(); $("form-msg").textContent = "Row added.";
+  e.target.reset();
+});
+$("prefill").addEventListener("click", () => {
+  const f = $("pilot-form");
+  f.date.value = current.date || ""; f.branch.value = current.branch || ""; f.product.value = current.product || "";
+  f.recommended_opening.value = current.opening_prepare_units ?? "";
+  const rem = num(f.remaining_at_16.value);
+  if (rem != null) { const t = topupFor(current, rem); if (t != null) f.recommended_topup.value = t; }
+  $("form-msg").textContent = "Recommendations filled from the selected card. Enter what actually happened.";
+});
+function toCSV(rows) {
+  const q = (v) => { const s = String(v ?? ""); return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
+  return [COLS.join(","), ...rows.map((r) => COLS.map((c) => q(r[c])).join(","))].join("\n");
+}
+function parseCSV(text) {
+  const out = []; let row = [], cell = "", inQ = false;
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    if (inQ) { if (ch === '"' && text[i + 1] === '"') { cell += '"'; i++; } else if (ch === '"') inQ = false; else cell += ch; }
+    else if (ch === '"') inQ = true;
+    else if (ch === ",") { row.push(cell); cell = ""; }
+    else if (ch === "\n" || ch === "\r") { if (ch === "\r" && text[i + 1] === "\n") i++; row.push(cell); out.push(row); row = []; cell = ""; }
+    else cell += ch;
+  }
+  if (cell || row.length) { row.push(cell); out.push(row); }
+  const [head, ...body] = out.filter((r) => r.some((c) => c !== ""));
+  return body.map((r) => Object.fromEntries(head.map((h, i) => [h.trim(), r[i] ?? ""])));
+}
+$("export").addEventListener("click", () => {
+  const blob = new Blob([toCSV(log)], { type: "text/csv" });
+  const a = document.createElement("a"); a.href = URL.createObjectURL(blob);
+  a.download = `pilot_log_${new Date().toISOString().slice(0, 10)}.csv`; a.click(); URL.revokeObjectURL(a.href);
+});
+$("import").addEventListener("change", async (e) => {
+  const f = e.target.files[0]; if (!f) return;
+  const rows = parseCSV(await f.text());
+  if (!rows.length || !("prepared_opening" in rows[0])) { alert("Not a pilot log CSV (missing prepared_opening column)."); return; }
+  log = log.concat(rows); renderLog();
+});
+$("clear").addEventListener("click", () => { if (confirm("Delete all logged rows in this browser? Export first if you need them.")) { log = []; renderLog(); } });
+renderLog();
+</script>
+</body>
+</html>

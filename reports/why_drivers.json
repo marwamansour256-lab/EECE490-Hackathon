@@ -1,0 +1,256 @@
+{
+  "run_date": "2026-10-17",
+  "split": "2026-04-01",
+  "raw_lines_retained": true,
+  "growth": {
+    "Jan->Jun": {
+      "from_month": 1,
+      "to_month": 6,
+      "gp_from": 24111.7,
+      "gp_to": 36774.99,
+      "growth": 0.5251927487485328,
+      "share_of_growth": {
+        "More identified customers active": 0.3668222509562842,
+        "More visits per identified customer": 0.28005672961226025,
+        "More walk-in orders": 0.3442185360585375,
+        "More items per order": 0.004776544364935595,
+        "Higher price / richer mix per item": -0.00013740157179098483,
+        "Higher margin %": 0.004263340579773642
+      }
+    },
+    "Jan->Mar": {
+      "from_month": 1,
+      "to_month": 3,
+      "gp_from": 24111.7,
+      "gp_to": 29791.98,
+      "growth": 0.23558189592604406,
+      "share_of_growth": {
+        "More identified customers active": 0.3620981450887387,
+        "More visits per identified customer": 0.3030564566455183,
+        "More walk-in orders": 0.345171392204313,
+        "More items per order": 0.03823743322486859,
+        "Higher price / richer mix per item": -0.054131002579898294,
+        "Higher margin %": 0.0055675754164603965
+      }
+    },
+    "Apr->Jun": {
+      "from_month": 4,
+      "to_month": 6,
+      "gp_from": 30402.28,
+      "gp_to": 36774.99,
+      "growth": 0.20961289745374367,
+      "share_of_growth": {
+        "More identified customers active": 0.3368272661536776,
+        "More visits per identified customer": 0.30437750017501014,
+        "More walk-in orders": 0.3214351166271081,
+        "More items per order": 0.012545448540851108,
+        "Higher price / richer mix per item": 0.01691502470582226,
+        "Higher margin %": 0.007899643797532222
+      }
+    },
+    "monthly": [
+      {
+        "month": 1,
+        "gp": 24111.7,
+        "orders": 4545,
+        "active": 1979,
+        "visits": 1.4507,
+        "walkin": 1674,
+        "items_per_order": 1.5912,
+        "margin": 0.586
+      },
+      {
+        "month": 2,
+        "gp": 24493.14,
+        "orders": 4619,
+        "active": 1965,
+        "visits": 1.5074,
+        "walkin": 1657,
+        "items_per_order": 1.6084,
+        "margin": 0.5859
+      },
+      {
+        "month": 3,
+        "gp": 29791.98,
+        "orders": 5628,
+        "active": 2233,
+        "visits": 1.605,
+        "walkin": 2044,
+        "items_per_order": 1.6041,
+        "margin": 0.5867
+      },
+      {
+        "month": 4,
+        "gp": 30402.28,
+        "orders": 5750,
+        "active": 2283,
+        "visits": 1.5953,
+        "walkin": 2108,
+        "items_per_order": 1.5906,
+        "margin": 0.5862
+      },
+      {
+        "month": 5,
+        "gp": 33856.4,
+        "orders": 6439,
+        "active": 2435,
+        "visits": 1.6686,
+        "walkin": 2376,
+        "items_per_order": 1.5905,
+        "margin": 0.5869
+      },
+      {
+        "month": 6,
+        "gp": 36774.99,
+        "orders": 6906,
+        "active": 2525,
+        "visits": 1.7473,
+        "walkin": 2494,
+        "items_per_order": 1.5944,
+        "margin": 0.5871
+      }
+    ]
+  },
+  "branch_margin_gap": {
+    "Garden": {
+      "all": {
+        "branch_margin": 0.47206669295330367,
+        "reference_margin": 0.6525999314023478,
+        "gap_pts": -18.05332384490442,
+        "price_effect_pts": -2.513241280387113,
+        "cost_effect_pts": -15.119397748631174,
+        "mix_effect_pts": -0.4206848158861298
+      },
+      "Jan-Mar": {
+        "branch_margin": 0.47219275692352897,
+        "reference_margin": 0.6533253581763869,
+        "gap_pts": -18.113260125285795,
+        "price_effect_pts": -2.5127266833423256,
+        "cost_effect_pts": -15.115328637481957,
+        "mix_effect_pts": -0.48520480446151426
+      },
+      "Apr-Jun": {
+        "branch_margin": 0.47196720785127944,
+        "reference_margin": 0.6520538729248044,
+        "gap_pts": -18.0086665073525,
+        "price_effect_pts": -2.5136473526151226,
+        "cost_effect_pts": -15.122608952986505,
+        "mix_effect_pts": -0.37241020175087236
+      }
+    },
+    "Uptown": {
+      "all": {
+        "branch_margin": 0.6284764695843054,
+        "reference_margin": 0.6525999314023478,
+        "gap_pts": -2.412346181804248,
+        "price_effect_pts": -3.1889936066574087,
+        "cost_effect_pts": 1.424323346450751,
+        "mix_effect_pts": -0.6476759215975902
+      },
+      "Jan-Mar": {
+        "branch_margin": 0.6285357374764418,
+        "reference_margin": 0.6533253581763869,
+        "gap_pts": -2.478962069994517,
+        "price_effect_pts": -3.1883464383717697,
+        "cost_effect_pts": 1.4233882322622127,
+        "mix_effect_pts": -0.71400386388496
+      },
+      "Apr-Jun": {
+        "branch_margin": 0.6284278039816948,
+        "reference_margin": 0.6520538729248044,
+        "gap_pts": -2.362606894310959,
+        "price_effect_pts": -3.189525036762708,
+        "cost_effect_pts": 1.425091174628812,
+        "mix_effect_pts": -0.5981730321770629
+      }
+    }
+  },
+  "daily_variation": {
+    "Jan-Mar -> Apr-Jun": {
+      "steps": [
+        {
+          "model": "Branch",
+          "heldout_r2": 0.35856178455183163
+        },
+        {
+          "model": "+ growth trend",
+          "heldout_r2": 0.6302067603219984
+        },
+        {
+          "model": "+ weekday",
+          "heldout_r2": 0.9270403191627227
+        }
+      ],
+      "residual_variance": 78.30262137711105,
+      "poisson_noise_variance": 71.04052565193898,
+      "residual_over_noise": 1.1022246901825095,
+      "ceiling_r2_if_rest_is_noise": 0.9338068893873204,
+      "room_left_for_other_factors_r2": 0.006766570224597747
+    },
+    "Apr-Jun -> Jan-Mar": {
+      "steps": [
+        {
+          "model": "Branch",
+          "heldout_r2": 0.1563626418193712
+        },
+        {
+          "model": "+ growth trend",
+          "heldout_r2": 0.6128240809773547
+        },
+        {
+          "model": "+ weekday",
+          "heldout_r2": 0.9005871967378405
+        }
+      ],
+      "residual_variance": 63.44287277128075,
+      "poisson_noise_variance": 55.67184647425944,
+      "residual_over_noise": 1.1395862862320245,
+      "ceiling_r2_if_rest_is_noise": 0.912764128119809,
+      "room_left_for_other_factors_r2": 0.012176931381968566
+    }
+  },
+  "tuesday": {
+    "by_branch": {
+      "Garden": 1.556,
+      "Harbour": 1.527,
+      "Uptown": 1.518
+    },
+    "by_half": {
+      "Apr-Jun": 1.51,
+      "Jan-Mar": 1.567
+    },
+    "by_daypart": {
+      "afternoon": 1.568,
+      "evening": 1.515,
+      "morning": 1.523
+    },
+    "by_order_type": {
+      "Dine-in": 1.514,
+      "Takeaway": 1.565
+    },
+    "by_customer_type": {
+      "identified": 1.556,
+      "walk-in": 1.498
+    },
+    "by_category": {
+      "Bakery": 1.518,
+      "Breakfast": 1.43,
+      "Cold Coffee": 1.467,
+      "Cold Drinks": 1.563,
+      "Desserts": 1.528,
+      "Hot Coffee": 1.602,
+      "Matcha & Tea": 1.573,
+      "Meals": 1.648,
+      "Sandwiches": 1.521
+    },
+    "avg_order_value": {
+      "Tuesday": 9.03,
+      "other weekdays": 8.98
+    },
+    "tuesdays_above_every_other_day_median": "26 of 26",
+    "range_of_multipliers": [
+      1.43,
+      1.648
+    ]
+  }
+}
