@@ -12,6 +12,8 @@
 
 **Run the integrated demo:** open [`app/wejha.html`](app/wejha.html) in a browser for basket recommendations, availability controls, three display arrangements and an editable incremental-profit scenario. [`app/planner.html`](app/planner.html) links to it and retains preparation planning and the every-day diagnostic. Both pages work offline with the committed generated scripts.
 
+**Offer → stock → profit integration is implemented:** `python src/growth_plan.py --branch Harbour --item Espresso --daypart morning --output reports/growth_demo.json` produces complementary food offers, the frozen preparation plan for each food item, an explicit zero-default incremental-profit scenario, and a separately labeled retrospective daily diagnostic. It loads committed artifacts and adds no invented offer uplift to demand. `python src/growth_plan.py --export-preparation` produces 57 historical perishable cards in `app/preparation_data.js`. [Integration contract and optional UI additions](GROWTH_INTEGRATION.md). **36 total tests pass.** The complementary filter is a business rule; the evaluation numbers below belong to unrestricted ranking.
+
 ```bash
 pip install -r requirements.txt
 python src/basket_recommender.py recommend --branch Harbour --item "Butter Croissant" --daypart morning

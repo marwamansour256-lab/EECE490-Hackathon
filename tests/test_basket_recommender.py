@@ -62,6 +62,16 @@ class BasketTests(unittest.TestCase):
                     self.assertLessEqual(r["conditional_probability"],1)
                     self.assertTrue(np.isfinite(r["score"]))
 
+    def test_complementary_mode_is_explicit_business_filter(self):
+        raw,orders = example()
+        raw.loc[raw.Product.eq("a"),"Category"]="Hot Coffee"
+        raw.loc[raw.Product.eq("b"),"Category"]="Cold Coffee"
+        payload=export_model(fit(raw,orders))
+        rows=recommend(payload,"A",["a"],mode="complementary")["recommendations"]
+        self.assertEqual({r["product"] for r in rows},{"c","d"})
+        rows=recommend(payload,"A",["c"],mode="complementary")["recommendations"]
+        self.assertEqual({r["product"] for r in rows},{"a","b"})
+
     def test_regular_definition_uses_distinct_dates_and_no_exported_ids(self):
         raw,orders = example()
         repeated = pd.concat([orders.iloc[[0]]]*10,ignore_index=True)

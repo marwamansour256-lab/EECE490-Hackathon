@@ -23,6 +23,7 @@ VALID_START = pd.Timestamp("2026-03-11")
 DAYPARTS = ["all", "morning", "midday", "evening"]
 REGULAR_DATES = 6
 CONTEXT_PRIOR = 200.0
+DRINK_CATEGORIES = {"Hot Coffee", "Cold Coffee", "Cold Drinks", "Matcha & Tea"}
 
 
 def daypart(time):
@@ -208,7 +209,17 @@ def export_model(model):
     return payload
 
 
-def recommend(payload, branch, basket=(), part="all", cohort="all", unavailable=(), limit=3):
+def complementary_exclusions(payload, basket):
+    """Optional business rule, not a learned dietary or individual preference."""
+    categories = {p["product"]: p["category"] for p in payload["products"]}
+    groups = {"drink" if categories[p] in DRINK_CATEGORIES else "food" for p in basket if p in categories}
+    if len(groups) != 1:
+        return set()
+    group = next(iter(groups))
+    return {p for p,c in categories.items() if ("drink" if c in DRINK_CATEGORIES else "food") == group}
+
+
+def recommend(payload, branch, basket=(), part="all", cohort="all", unavailable=(), limit=3, mode="unrestricted"):
     if branch not in payload["branches"]:
         raise ValueError(f"Unknown branch {branch}")
     key = f"{branch}|{part}|{cohort}"
@@ -218,6 +229,10 @@ def recommend(payload, branch, basket=(), part="all", cohort="all", unavailable=
     context = payload["contexts"][key]
     lists = [context["by_anchor"].get(p, context["baseline"]) for p in basket] if basket else [context["baseline"]]
     excluded = set(basket) | set(unavailable)
+    if mode not in {"unrestricted", "complementary"}:
+        raise ValueError("Unknown offer mode")
+    if mode == "complementary":
+        excluded |= complementary_exclusions(payload, basket)
     best = {}
     for candidates in lists:
         for candidate in candidates:
@@ -227,7 +242,7 @@ def recommend(payload, branch, basket=(), part="all", cohort="all", unavailable=
     ranked = sorted(best.values(), key=lambda r: (-r["score"], r["product"]))[:limit]
     return dict(status=payload["status"], trained_through=payload["trained_through"],
         method=payload["selected_method"], context=key, context_fallback=fallback,
-        pooling=context["fallback"], basket=list(basket), recommendations=ranked,
+        pooling=context["fallback"], basket=list(basket), offer_mode=mode, recommendations=ranked,
         money_interpretation="Score ranks historical relevance/margin, not incremental profit or acceptance probability")
 
 
@@ -350,12 +365,14 @@ def main():
     r.add_argument("--unavailable", action="append", default=[])
     r.add_argument("--daypart", default="all", choices=DAYPARTS)
     r.add_argument("--cohort", default="all", choices=["all", "regular"])
+    r.add_argument("--mode", default="unrestricted", choices=["unrestricted", "complementary"],
+                   help="Optional food-after-drink/drink-after-food rule; reported frozen test metrics use unrestricted ranking")
     args = parser.parse_args()
     if args.command == "train":
         train(args.data)
     else:
         payload = json.loads((ROOT/"models/basket_recommender.json").read_text(encoding="utf-8"))
-        print(json.dumps(recommend(payload, args.branch, args.item, args.daypart, args.cohort, args.unavailable), indent=2))
+        print(json.dumps(recommend(payload, args.branch, args.item, args.daypart, args.cohort, args.unavailable, mode=args.mode), indent=2))
 
 
 if __name__ == "__main__":
