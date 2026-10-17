@@ -1,5 +1,5 @@
 {
-  "created_utc": "2026-10-17T14:00:15+00:00",
+  "created_utc": "2026-10-17T14:04:58+00:00",
   "owner": "Claude Code teammate 2 (Marwa)",
   "python": "3.13.7",
   "platform": "Windows-11-10.0.26300-SP0",
@@ -9,57 +9,57 @@
     "matplotlib": "3.11.2"
   },
   "inputs": {
-    "data/stories_transactions.csv": "8375e91c2bebf84261e2b92b67ebf76c42f1af434322a7f2ac2b7f1ab3bb5c71",
+    "data/stories_transactions.csv": "f1672e728c28295b2b802d878fd38a158ba039827b429355e8438ee0463237a1",
     "data/external/beirut_weather_2026H1.json": "d02a4e2c651c2ca9423e70022b5e9c28eeedc8da9bbf6ac458f5d8cfd1bef781",
     "data/external/batroun_weather_2026H1.json": "0d21d0ddef8965d973aaf13cfa222896be180513a6b2f7f75ab5df3f00f993b2",
     "data/external/broummana_weather_2026H1.json": "6dc7b41d22d475ac781976f93d55c48d1d0382a2c3b87c5ada12795b8ad31116",
-    "data/external/external_events.json": "15e083b26d6f04da5cf9d74c4ce0d6f22250c6bf18440fbe82fef05333abbb4f"
+    "data/external/external_events.json": "053a6940f3064fbb3879e9a960def3b4b90c585880f2a4acee32b3fe28401de9"
   },
   "steps": [
     {
       "command": "python src/external_factor_test.py",
       "outputs": {
-        "reports/external_factor_test.csv": "78136538b4f9a23ee38323acf7ba89b4957dc8e66c7407aa72e8cb4ce8ff8f44",
-        "reports/external_factor_test.json": "58b1bd05025ff0f1e5fb6f541051828b06c8e36566f0e3329da2f8c308ba77a7",
-        "reports/figures/external_factor_holdout.png": "b2ebdca878a332b469006f5fadabf9b5c566659e472610b05741b85a3cf712d5",
-        "app/evidence_data.js": "e3ff4d5137fdabdfff5fbff29367af3b5baa81faa7652e1dc7c137720a2ccebf"
+        "reports/external_factor_test.csv": "19ad573594612566f34a4b125ef1bcd70537a265ee3e41cae0424daa51713fd5",
+        "reports/external_factor_test.json": "d08f8f82c85c02f72259473075da2c4aeb733c55a0bae25d30f3c38117806d4a",
+        "reports/figures/external_factor_holdout.png": "5dc21d4f09cb61aded9e53d0f33e4d2d5cc5813e2757fc35745d3c22a448e6a0",
+        "app/evidence_data.js": "81977fa409889a1abce1cf0e3b9edbd5819bd4e0d8c2eb17867837d2809bec11"
       }
     },
     {
       "command": "python src/why_drivers.py",
       "outputs": {
-        "reports/why_drivers.json": "187e92a8907c7d0f3e6e1e8a27e0f7f337f1f52801e82363f2201d15cd807b0d",
-        "app/why_data.js": "ef0c86afbb75a1e41f6785b9b8d97770a3f3ed1cb40c17bc0d2b298d6d353b9c",
+        "reports/why_drivers.json": "200e5b74f2aa0605d1c0e88fdb0b212ce57d5359fe25464fb512067f3986a173",
+        "app/why_data.js": "91b2ea59ad005408ca91e997384a1922a7009994c7f3562e106c49dcfa75afe8",
         "reports/figures/why_drivers.png": "017abecdc47faf6568089cf99b22f895e110e5085329f09a327a7d9a2be52908"
       }
     },
     {
       "command": "python src/correlation_scan.py",
       "outputs": {
-        "reports/correlation_scan_pairs.csv": "44df48e88533c92a0928724e0fc4c4bd0f8875e25fd4e7bedc3122f24632f48d",
-        "reports/correlation_scan.json": "427c47365d912ca84ce4872f3bedb8bcf36a2b64552ec9143d5a7252ca9561a6",
+        "reports/correlation_scan_pairs.csv": "e2bbba835f3c78a407019c1fce34add9c8bf0a9a29989d77378b75c130f61038",
+        "reports/correlation_scan.json": "5ab89c197529ea4354b5dd6f75cb26ea3a14a2741d68c606d1f3243a267b46a8",
         "reports/figures/correlation_scan.png": "8280043890a65eee1766b0acde9cd70d37ca96499451e2595d42650c26b4bdf9"
       }
     },
     {
       "command": "python src/metric_reconciliation.py",
       "outputs": {
-        "reports/metric_reconciliation.md": "5a09e0009902d64f4b26ed8645bb7e83dcdb1714e1c41e04c1ec78af5c1c5bca",
-        "reports/metric_reconciliation.json": "b2fa1b2ee5f5afb623e2ea9a1b5335e22e942d1be8b4c747d3a4bb038ef89483"
+        "reports/metric_reconciliation.md": "783e76d6028cf30d6cf36b0d43d6f64e9cff4b7f723e48a8049f610a52f6147e",
+        "reports/metric_reconciliation.json": "1d1b67146d34797bde9da5f278373f9b874fd8cb9693e752f9e3f4d008af527f"
       }
     },
     {
       "command": "python src/day_ledger.py",
       "outputs": {
-        "app/day_data.js": "f149483c4a65ae835d6f030012f035a035058efd00620cc1950abf3b13418600",
-        "reports/day_ledger.csv": "5097981a4f133dbda0a23664726aa6eb0649d867d8252be1ff7b45a751e62d3c"
+        "app/day_data.js": "c22cb84601161550322af8d81e7186cbb299a342c084999e3bf815a0d44159fa",
+        "reports/day_ledger.csv": "899139b71f3a7718c2c44df0fb1c00c365d292afca4337794072cc58cafecc0d"
       }
     }
   ],
   "static_files": {
-    "app/planner.html": "a0bed49182dc78db647621e98a6c70fd6499b8b5ad5044f177f58ac21a17b5d4",
-    "src/pilot_report.py": "18e1e500bae9dbeb092c80ae06f3a01496e1294af5107ce327b49c6bd7a0226b",
-    "data/pilot/pilot_log_template.csv": "f4db8e4e355868de9c484ba48c1d9c207f52f6b18f2c886eacf82303497374cd"
+    "app/planner.html": "47855946e1bd3655821d12ba188c8ecadaf26df190253c918f3518317522d717",
+    "src/pilot_report.py": "bef28cf6f12065315da1102718e530bd6ef79d63775f46b3d9240d498c004eab",
+    "data/pilot/pilot_log_template.csv": "fe344f0c73e0d742d676de9d90de53f99a82ecf8bb13e2aa106da8a789019895"
   },
   "runs": [
     {

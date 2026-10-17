@@ -336,7 +336,8 @@ meta = {
     "positive_control": power.to_dict(orient="records"),
     "provenance": {
         "run_date": str(date.today()),
-        "transactions_sha256": hashlib.sha256(DATA.read_bytes()).hexdigest(),
+        # line endings normalised so the hash is the same on Windows (CRLF checkout) and elsewhere
+        "transactions_sha256": hashlib.sha256(DATA.read_bytes().replace(b"\r\n", b"\n")).hexdigest(),
         "weather_source": "Open-Meteo historical archive API (daily), files in data/external/",
         "event_sources": ["https://en.wikipedia.org/wiki/2026_in_Lebanon",
                           "https://en.wikipedia.org/wiki/Timeline_of_the_2026_Lebanon_war"],
