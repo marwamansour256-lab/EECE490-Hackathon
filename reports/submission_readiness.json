@@ -1,0 +1,16 @@
+{
+  "checked_at_utc": "2026-10-17T14:59:47.969422+00:00",
+  "commit": "7765552c025737cec354656bdd380586520ec31a",
+  "python": "3.12.11",
+  "status": "Saved-evidence checks passed",
+  "checks_passed": [
+    "51177 raw lines / 33887 complete orders; line economics and 22395/28782 chronological split reconcile",
+    "Saved preparation artifact, model source, input and output hashes match the recorded numerical verification",
+    "49140 prediction rows conserve demand, stock and contribution; category sums and four finance comparisons reconcile",
+    "8801 multi-product test orders and selected recommendation relevance/margin-proxy metrics reconcile",
+    "All three generated browser payloads equal their saved JSON artifacts",
+    "Submission entrypoint documents have no missing local file links",
+    "Pilot template explicitly reports no observed incremental-profit result"
+  ],
+  "scope": "Standard-library evidence audit; does not execute saved sklearn models or replace the 44-test numerical suite"
+}

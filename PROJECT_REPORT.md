@@ -5,13 +5,7 @@
 
 ## Conclusion (one paragraph)
 
-Stories' growth from January to June came entirely from **more orders**. Profit grew 52.5% through more customers and more visits, while basket size, prices and margins added about 0%, and 54% of orders contain a single product. The money is therefore in two places: **preparing the right amount of fresh food every day**, and **turning single-item orders into two-item orders**.
-
-We built a preparation model (v2) that learns each branch's normal level, its weekday pattern and its growth from Jan–Mar. On Apr–Jun, which it never saw, it was the most accurate of 12 approaches we compared (24.74% category error, against 26.64% for a seasonal baseline). It tells staff how many items to make at opening and how many more to make at 16:00 from what is left. In simulation it earns $1,010 more than our first version over April–June while serving more than 90% of recorded demand.
-
-The biggest single fix is outside the model. **Garden's margin is 18 points below Harbour's, and 84% of that gap is unit cost.** At Harbour's recorded costs Garden would have earned about $16k more gross profit in six months; this is a scenario until Stories confirms how costs are recorded.
-
-Outside events (weather, holidays, the war period) did not improve forecasts on unseen days, so we keep them as manager alerts, not forecast rules. All money figures except recorded spend are simulations or scenarios. The next step is a randomised branch-day pilot that measures waste, sell-outs and contribution against current practice.
+Stories' recorded January-to-June gross-profit growth of 52.5% came almost entirely from more orders, while 54% of orders contained one product. We built tools to test two repeatable decisions: **how much fresh food to prepare** and **which add-on to offer**. Fitted on Jan–Mar, v2 achieved 24.74% category WAPE on Apr–Jun versus 26.64% for the seasonal-growth baseline. Under a common one-batch policy it simulated $11,944 contribution versus $9,915, with recorded-demand fulfilment of 90.92% versus 92.19%; these are assumptions-based results, not company savings. Separate opening/16:00 recommendations require cheap, feasible replenishment. Garden's recorded unit costs explain 84% of its margin gap with Harbour; matching Harbour's costs gives an approximately $16k six-month scenario requiring invoice verification. No factor passed the strict 39-test external-event screen; a separate monthly-calendar traffic model improved WAPE slightly, without establishing preparation-profit gains. The dataset was explored before this frozen evaluation, so a randomised prospective pilot must confirm value.
 
 ---
 
@@ -35,7 +29,7 @@ Stories' data team already knows how many lattes each branch sells, so a sales s
 | 6. Decision | Turned forecasts into opening and 16:00 quantities, and tested whether a second batch pays at different labour costs. | `src/profit_policy.py`, [MODEL_CARD.md](MODEL_CARD.md) |
 | 7. Add-on offer and display test | Recommender evaluated on 8,801 April–June orders against popularity baselines. Display layouts scored as an experiment, not as a result. | [reports/recommendation_evaluation.md](reports/recommendation_evaluation.md), [WEJHA_PILOT.md](WEJHA_PILOT.md) |
 | 8. Usable tools | Offline pages for staff and managers, a pilot log and pilot reports. | [app/README.md](app/README.md) |
-| 9. Verification | 44 unit tests, artifact reconciliation, and UI checks against the Python model (27/27 baskets identical). | `python src/verify_submission.py`, `node app/check_ui.js --cli` |
+| 9. Verification | Recorded 44-test numerical suite and artifact reconciliation; frontend/Python parity is recorded separately. Final saved-evidence and UI checks are documented with their scope and environment limitations. | [SUBMISSION_AUDIT.md](SUBMISSION_AUDIT.md), `python src/verify_submission.py`, `node app/check_ui.js --cli` |
 
 ## 3. Findings
 
@@ -43,10 +37,10 @@ The ten insights, each with its evidence and recommended action, are in [README.
 
 - **Garden's margin gap broken into parts:** 84% unit cost, 14% price, 2% mix, identical in both halves. It is not just "Garden earns less".
 - **Tuesday:** 1.53× a normal weekday in every slice (branch, hour, category, customer type, dine-in or takeaway) with the same order value. A lift this uniform points to a chain-wide cause, such as a standing offer, operations or how sales are recorded, rather than a type of customer. We added the question to the [information request for Stories](reports/company_information_request.md).
-- **How much is left to explain:** on unseen months, calendar and growth explain 92.7% of daily order swings, against a 93.4% benchmark under random arrivals. This explains *why* weather and event features add little to daily totals. It is a benchmark under a stated assumption, not a hard limit.
+- **How much is left to explain:** on held-out months, calendar and growth explain 92.7% of daily order swings, against a 93.4% benchmark under random arrivals. This contextualises the small tested aggregate gains; it does not establish why external effects are small or rule out local effects. The benchmark assumes a particular arrival model and is not a hard limit.
 - **The obvious pairing is not an affinity:** "pastry + matcha" is common because both are popular (lift about 1.0). All 28 pastry display pairs have lift below 1. What *is* real is drink + food (59% vs 50% by chance). This changes the offer we recommend: a generic food-after-drink offer, not a matcha bundle.
 - **Costs never moved while inflation was about 10%**, so recorded profit after March may be overstated by about $9k (scenario).
-- **The 16:00 second batch** only pays below about $4.56 of extra overhead per branch-day.
+- **The 16:00 second batch:** in the earlier June seasonal-baseline replay, the low-cost scenario leaves $4.56 per branch-day for additional overhead after charging $0.25 per SKU batch and $0.10 per top-up unit. This is conditional on that scenario, not a universal labour-cost threshold.
 
 ## 4. The model, the baselines and the held-out test
 
@@ -100,7 +94,7 @@ The ten insights, each with its evidence and recommended action, are in [README.
 | "Customers have a usual order" | Top-product share equals that of random shuffles | **Rejected**; generic add-on, no "your usual" |
 | "Matcha + pastry is the bundle" | Pair lift about 1.0 in both halves | **Rejected**; drink + food offer instead |
 | "91% retention" | It is the overlap between Jan–Feb and May–Jun customers | **Replaced** by 65.6% month-to-month repeat |
-| Weather, holidays or the war drive sales | 39 held-out tests with placebo dates, Holm correction and planted-effect controls: 0 pass | **Not used** as forecast inputs; kept as alerts |
+| Weather, holidays or the war drive sales | 39 held-out tests with placebo dates, Holm correction and planted-effect controls: 0 pass | No supported automatic event adjustment from this screen. External features remain allowed in the separate context models; the selected monthly-calendar traffic head improves WAPE from 9.46% to 9.27%, without established preparation-profit gains. |
 | Promotion lift | Difference-in-differences against the other branches, plus placebo windows | No measurable volume lift; gross profit −14.6% |
 | More complex forecast models (XGBoost, random forest, trees, linear) | Same frozen split | **Rejected**: all less accurate than v2 |
 | Picking the most profitable baseline | Four-weekday baseline | **Rejected**: lower service |
@@ -112,7 +106,7 @@ The ten insights, each with its evidence and recommended action, are in [README.
 | Recorded unit costs are comparable between branches | The Garden recommendation could shrink: part of the gap may be rent or delivery costs booked as product cost |
 | Recorded costs are what Stories actually paid | If costs rose with inflation, profits are overstated and a price test becomes more urgent |
 | Recorded sales equal demand (no hidden sell-outs) | If items sold out, true demand is higher, and the planner should prepare more |
-| A second batch can be made at 16:00 at low cost | Above about $1 per batch, the second batch loses money; use one batch |
+| A second batch can be made at 16:00 at low cost | The tested $1 per SKU batch plus $0.25 per top-up unit scenario loses about $486 versus one batch in June; actual lead times, capacity and both cost components determine whether replenishment pays |
 | Branch locations are unknown | Weather and event exposure can't be assigned to branches; event effects remain unverified |
 | The 132 repeated lines are real items | If they are double records, revenue falls by $741 and gross profit by $436; conclusions don't change |
 

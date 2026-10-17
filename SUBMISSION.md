@@ -4,6 +4,8 @@
 
 The repository includes model source, trained artifacts, the original Stories CSV, cached external features, generated evaluations and an offline application. No retraining or network service is needed to open the demo.
 
+**Final brief-to-evidence checklist and verification scope:** [SUBMISSION_AUDIT.md](SUBMISSION_AUDIT.md). A standard-library-only inspection is available with `python src/verify_submission_readiness.py`; the full numerical suite still requires the locked scientific environment.
+
 ## Run
 
 1. Pull `main`: `git pull --ff-only origin main` after preserving any local edits.
