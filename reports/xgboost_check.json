@@ -1,0 +1,299 @@
+{
+  "question": "Does XGBoost beat the Poisson preparation model on the same frozen split?",
+  "level": "branch x category x day",
+  "train": "2026-01-01 to 2026-03-31",
+  "test": "2026-04-01 to 2026-06-30",
+  "selection": "settings chosen by Poisson deviance on the last 21 training dates; April-June scored once",
+  "xgboost_version": "3.4.1",
+  "results": {
+    "xgb_poisson": {
+      "selected": {
+        "max_depth": 2,
+        "learning_rate": 0.1,
+        "n_estimators": 600
+      },
+      "validation_deviance": 1.3580527948008272,
+      "test": {
+        "wape_pct": 27.391180142939692,
+        "mae_units": 3.38883636135564,
+        "bias_pct": -10.49934809902356,
+        "poisson_deviance": 1.681167359311242
+      }
+    },
+    "xgb_on_poisson": {
+      "selected": {
+        "max_depth": 2,
+        "learning_rate": 0.1,
+        "n_estimators": 600
+      },
+      "validation_deviance": 1.40007980187106,
+      "test": {
+        "wape_pct": 27.08398637132226,
+        "mae_units": 3.350830352932251,
+        "bias_pct": -0.7570219083839094,
+        "poisson_deviance": 1.6117836391186262
+      }
+    },
+    "poisson (original)": {
+      "selected_alpha": 0.001,
+      "test": {
+        "wape_pct": 25.207654591328055,
+        "mae_units": 3.11869061565808,
+        "bias_pct": 3.654540500688182,
+        "poisson_deviance": 1.3803785370111645
+      }
+    },
+    "poisson v2 (selected)": {
+      "selected_alpha": 0.001,
+      "calibration": 0.9417094549137961,
+      "test": {
+        "wape_pct": 24.73676293114075,
+        "mae_units": 3.06043190712583,
+        "bias_pct": -2.387539165756931,
+        "poisson_deviance": 1.3714135294319945
+      }
+    }
+  },
+  "tuning": [
+    {
+      "method": "xgb_poisson",
+      "max_depth": 2,
+      "learning_rate": 0.03,
+      "n_estimators": 200,
+      "wape_pct": 37.42370904039353,
+      "mae_units": 3.95292051927543,
+      "bias_pct": -9.22871661476827,
+      "poisson_deviance": 2.525550179252263
+    },
+    {
+      "method": "xgb_poisson",
+      "max_depth": 2,
+      "learning_rate": 0.03,
+      "n_estimators": 600,
+      "wape_pct": 28.388050860884114,
+      "mae_units": 2.9985191641240734,
+      "bias_pct": -0.16043979589360688,
+      "poisson_deviance": 1.506980556100217
+    },
+    {
+      "method": "xgb_poisson",
+      "max_depth": 2,
+      "learning_rate": 0.1,
+      "n_estimators": 200,
+      "wape_pct": 28.058883900593827,
+      "mae_units": 2.9637505411050515,
+      "bias_pct": 1.4520111814885213,
+      "poisson_deviance": 1.473888532874851
+    },
+    {
+      "method": "xgb_poisson",
+      "max_depth": 2,
+      "learning_rate": 0.1,
+      "n_estimators": 600,
+      "wape_pct": 26.612237991047017,
+      "mae_units": 2.8109469722818443,
+      "bias_pct": 0.9556420738339961,
+      "poisson_deviance": 1.3580527948008272
+    },
+    {
+      "method": "xgb_poisson",
+      "max_depth": 4,
+      "learning_rate": 0.03,
+      "n_estimators": 200,
+      "wape_pct": 30.798298784320632,
+      "mae_units": 3.253104257835913,
+      "bias_pct": -2.3035419427168193,
+      "poisson_deviance": 1.7471933482578919
+    },
+    {
+      "method": "xgb_poisson",
+      "max_depth": 4,
+      "learning_rate": 0.03,
+      "n_estimators": 600,
+      "wape_pct": 28.44721319719634,
+      "mae_units": 3.0047682511112677,
+      "bias_pct": 4.743223284655928,
+      "poisson_deviance": 1.489363027353851
+    },
+    {
+      "method": "xgb_poisson",
+      "max_depth": 4,
+      "learning_rate": 0.1,
+      "n_estimators": 200,
+      "wape_pct": 28.354356049655337,
+      "mae_units": 2.9949601125464866,
+      "bias_pct": 4.758491283626305,
+      "poisson_deviance": 1.498009848655296
+    },
+    {
+      "method": "xgb_poisson",
+      "max_depth": 4,
+      "learning_rate": 0.1,
+      "n_estimators": 600,
+      "wape_pct": 29.42743661069655,
+      "mae_units": 3.1083054296554082,
+      "bias_pct": 3.247238931243458,
+      "poisson_deviance": 1.5956371049800195
+    },
+    {
+      "method": "xgb_poisson",
+      "max_depth": 6,
+      "learning_rate": 0.03,
+      "n_estimators": 200,
+      "wape_pct": 29.36431615574369,
+      "mae_units": 3.101638262023791,
+      "bias_pct": 3.386787409614414,
+      "poisson_deviance": 1.5977373726994348
+    },
+    {
+      "method": "xgb_poisson",
+      "max_depth": 6,
+      "learning_rate": 0.03,
+      "n_estimators": 600,
+      "wape_pct": 30.23845641775031,
+      "mae_units": 3.19397029075673,
+      "bias_pct": 4.951643297878882,
+      "poisson_deviance": 1.6423260358083587
+    },
+    {
+      "method": "xgb_poisson",
+      "max_depth": 6,
+      "learning_rate": 0.1,
+      "n_estimators": 200,
+      "wape_pct": 30.86327100401232,
+      "mae_units": 3.2599670201592557,
+      "bias_pct": 5.448220022573835,
+      "poisson_deviance": 1.6882244611752422
+    },
+    {
+      "method": "xgb_poisson",
+      "max_depth": 6,
+      "learning_rate": 0.1,
+      "n_estimators": 600,
+      "wape_pct": 32.611248738619615,
+      "mae_units": 3.444599095160368,
+      "bias_pct": 3.730517297381052,
+      "poisson_deviance": 1.87746557856505
+    },
+    {
+      "method": "xgb_on_poisson",
+      "max_depth": 2,
+      "learning_rate": 0.03,
+      "n_estimators": 200,
+      "wape_pct": 28.171213086408972,
+      "mae_units": 2.9756154351764255,
+      "bias_pct": 6.3526301993852385,
+      "poisson_deviance": 1.4267691064838222
+    },
+    {
+      "method": "xgb_on_poisson",
+      "max_depth": 2,
+      "learning_rate": 0.03,
+      "n_estimators": 600,
+      "wape_pct": 27.83287612518856,
+      "mae_units": 2.9398782207011336,
+      "bias_pct": 4.911361303566732,
+      "poisson_deviance": 1.4096928971525824
+    },
+    {
+      "method": "xgb_on_poisson",
+      "max_depth": 2,
+      "learning_rate": 0.1,
+      "n_estimators": 200,
+      "wape_pct": 28.078788667195706,
+      "mae_units": 2.9658530040182556,
+      "bias_pct": 5.6244674718604895,
+      "poisson_deviance": 1.4266042721589722
+    },
+    {
+      "method": "xgb_on_poisson",
+      "max_depth": 2,
+      "learning_rate": 0.1,
+      "n_estimators": 600,
+      "wape_pct": 27.613317289701147,
+      "mae_units": 2.916687076684659,
+      "bias_pct": 3.8192710507829672,
+      "poisson_deviance": 1.40007980187106
+    },
+    {
+      "method": "xgb_on_poisson",
+      "max_depth": 4,
+      "learning_rate": 0.03,
+      "n_estimators": 200,
+      "wape_pct": 27.931369612941083,
+      "mae_units": 2.9502817039136535,
+      "bias_pct": 5.34244135238627,
+      "poisson_deviance": 1.4199031345999973
+    },
+    {
+      "method": "xgb_on_poisson",
+      "max_depth": 4,
+      "learning_rate": 0.03,
+      "n_estimators": 600,
+      "wape_pct": 28.00134281061949,
+      "mae_units": 2.957672700049385,
+      "bias_pct": 4.2067420026817715,
+      "poisson_deviance": 1.4354658409511527
+    },
+    {
+      "method": "xgb_on_poisson",
+      "max_depth": 4,
+      "learning_rate": 0.1,
+      "n_estimators": 200,
+      "wape_pct": 28.085589297408152,
+      "mae_units": 2.9665713280807307,
+      "bias_pct": 3.8856107616567876,
+      "poisson_deviance": 1.4487722770613483
+    },
+    {
+      "method": "xgb_on_poisson",
+      "max_depth": 4,
+      "learning_rate": 0.1,
+      "n_estimators": 600,
+      "wape_pct": 29.34762751604285,
+      "mae_units": 3.099875506059623,
+      "bias_pct": 3.2301524780612296,
+      "poisson_deviance": 1.5836149539813489
+    },
+    {
+      "method": "xgb_on_poisson",
+      "max_depth": 6,
+      "learning_rate": 0.03,
+      "n_estimators": 200,
+      "wape_pct": 28.14367920394174,
+      "mae_units": 2.9727071384904247,
+      "bias_pct": 4.66037290007508,
+      "poisson_deviance": 1.444395010510779
+    },
+    {
+      "method": "xgb_on_poisson",
+      "max_depth": 6,
+      "learning_rate": 0.03,
+      "n_estimators": 600,
+      "wape_pct": 29.038961348897487,
+      "mae_units": 3.0672723019144104,
+      "bias_pct": 3.3419244097118725,
+      "poisson_deviance": 1.5399524554730817
+    },
+    {
+      "method": "xgb_on_poisson",
+      "max_depth": 6,
+      "learning_rate": 0.1,
+      "n_estimators": 200,
+      "wape_pct": 29.42774794419792,
+      "mae_units": 3.1083383145996715,
+      "bias_pct": 2.8824833661969707,
+      "poisson_deviance": 1.5797399911290335
+    },
+    {
+      "method": "xgb_on_poisson",
+      "max_depth": 6,
+      "learning_rate": 0.1,
+      "n_estimators": 600,
+      "wape_pct": 31.309826956465677,
+      "mae_units": 3.3071349848725387,
+      "bias_pct": 1.8068666489181227,
+      "poisson_deviance": 1.790675964439382
+    }
+  ]
+}
