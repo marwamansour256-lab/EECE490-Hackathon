@@ -14,7 +14,8 @@ EECE490-Hackathon/
 │   ├── 03_holidays.ipynb           # public holidays and Ramadan, by branch
 │   ├── 04_regular_customers.ipynb  # who comes regularly, their value, and who is at risk
 │   ├── 05_weather.ipynb            # weather and seasons (winter, spring, summer), by branch
-│   └── 06_regulars_products.ipynb  # what regular customers buy vs other customers
+│   ├── 06_regulars_products.ipynb  # what regular customers buy vs other customers
+│   └── 07_discounts.ipynb          # how discounts and the 15% promo change demand
 ├── src/
 │   ├── eda_visuals.py              # script that draws the key-finding charts
 │   └── pitch_visuals.py            # charts backing the pitch
@@ -88,6 +89,16 @@ Uses the same segments as notebook 04 and checks each result against a shuffle t
 - **No reliable gateway product:** the first purchase barely predicts becoming a regular (41 of 45 products within chance; cold drinks and Chocolate Croissant slightly higher, a weak lead).
 - **No "usual":** a regular's favorite product is in 24% of their orders, the same as random; they try about 11 products in 9 visits.
 - **They don't trade up on their own:** order value and mix are flat from the 1st to the 7th+ visit. Their favorite pairing is matcha or iced latte + pastry, the same at every branch.
+
+## Discounts and demand (notebook 07)
+
+Two discounts exist: a standing **10% off** on about 6% of lines everywhere, and a **15% promo** at Harbour on Cold Coffee and Desserts (Mar 12–19, May 12–19). Prices never change otherwise, so these are the only price changes to learn from.
+
+- **The 10% discount is random:** about 5.6% of lines in every branch, category, hour, day, month and customer type; its spread across customers matches a random hand-out.
+- **It doesn't make orders bigger:** discounted orders look bigger ($9.60 vs $8.94) only because bigger orders have more lines that could be discounted. Per line, the rate is the same in 1-, 2- and 3-line orders, and quantities don't rise.
+- **It doesn't change product choice or bring customers back:** same mix and item price; 65% return within 30 days either way, even within the same customer.
+- **The 15% promo had no measurable lift:** promo units at Harbour +1%; against the control branches, the March and May windows beat only 76% and 58% of 101 fake 8-day windows (about 95% would be needed).
+- **Cost:** about $4,400 a year ($3,400 from the 10% discount). Recommendation: stop untargeted discounts, redirect the budget to frequency rewards and bundles, and test any future offer at one branch against the others.
 
 ## The pitch: demand is a habit, so fix the price list
 
