@@ -33,7 +33,12 @@ We are building a preparation planner from Stories' January–June 2026 transact
 
 ## E. Customers
 
-16. **Customer ID:** is it a loyalty card, phone number or account? When did the program start, and can a customer have more than one ID? (We see new IDs drop from about 2,000 in January to 20 in June.)
+16. **Customer ID:** is it a loyalty card, phone number or account? When did the program start, and can a customer have more than one ID? (We see new IDs drop from about 2,000 in January to 20 in June.) Can one person appear both with a Customer ID and as a walk-in?
+17. **Shared IDs:** can several people use the same Customer ID (for example a family phone number), and do staff ever enter a default ID? We see 14 IDs with orders at two different branches less than 15 minutes apart (the closest 1.2 minutes) and 40 within an hour, which is hard to explain unless the ID is shared or the branches are very close together.
+
+## F. Tuesdays and Saturdays
+
+18. **Tuesdays:** every Tuesday (26 of 26) has about 1.5× the orders of a normal weekday, at all three branches, at every hour, for every category, for loyalty customers and walk-ins alike, with the same order value. What happens on Tuesdays (a standing offer, a market or university day, a delivery or stock day, or how sales are recorded or batched)? Saturdays run at about 0.7×. Are branches open shorter hours on Saturdays, or busy with something not in the till data?
 
 ---
 
