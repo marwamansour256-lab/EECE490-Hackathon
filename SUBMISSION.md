@@ -15,6 +15,7 @@ python src/basket_recommender.py recommend --branch Harbour --item "Butter Crois
 python src/growth_plan.py --branch Harbour --item Espresso --daypart morning --output reports/growth_demo.json
 python src/predict_strict.py --date 2026-06-30 --branch Harbour --product "Turkey & Cheese Sandwich" --remaining 0
 python src/explain_day.py --date 2026-06-24 --branch "All branches"
+python src/basket_pilot_report.py data/pilot/basket_pilot_template.csv
 ```
 
 ## What each model does
@@ -52,3 +53,5 @@ Display placement has no observed treatment labels. Its weighted distance scores
 Git LF/CRLF changes are tolerated for text-source hashes; changes to data values and binary artifacts are not. Exact dependencies are recorded in `requirements-lock.txt`; cached sources permit offline numerical reproduction.
 
 Before operating in a real shop, confirm branch coordinates, storage/food-safety rules, current layout and service flow, product availability, preparation capacity/lead times, waste/labor costs and prospective pilot design. All three team members' names/student IDs have been confirmed in TEAM.md.
+
+The separate [basket/layout pilot](WEJHA_PILOT.md) and order-level template are implemented. `src/basket_pilot_report.py` reports measured order contribution and whole-branch-day comparisons, including declined/no-offer orders. It checks duplicate orders, consistent assignment, recorded costs and acceptance. The empty template explicitly reports no observed outcomes. The complete suite now has **44 tests**, four artifact-reconciliation scripts and this pilot-template smoke check. No controlled company pilot has been run.

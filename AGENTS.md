@@ -2,6 +2,8 @@
 
 Confirmed members: Charbel Manih (202502099, mastercoder67; Codex/backend), Omar Al Aghbari (202514349, aghbar11; Claude evidence/pilot), Marwa Mansour (202505788, marwamansour256-lab; Claude interface). Read [TEAM.md](TEAM.md). Use these exact confirmed names/IDs in submission materials.
 
+**Final business handoff:** WEJHA_PILOT.md, data/pilot/basket_pilot_template.csv, reports/wejha_business_review.md and src/basket_pilot_report.py are implemented. Keep the existing preparation pilot schema unchanged. User clarification: layout weights use items bought together in the same order across customers, not a per-person counter arrangement. The current complete suite has 44 tests, four artifact checks and a pilot-template smoke check; no live profit uplift is observed yet. Prior stage test counts below are historical.
+
 ## Objective and ownership
 
 **Immediate deadline sprint:** read [WEJHA_BUILD_PLAN.md](WEJHA_BUILD_PLAN.md) first. The user now requests a basket recommendation system and a front-display ("wejha") placement experiment, connected to the preparation/evidence tools. Codex owns the new backend, evaluation and generated recommendation/layout assets; Marwa owns new `app/wejha.html` and its planner link; Omar owns new `WEJHA_PILOT.md`, the separate basket-pilot schema and business/physical-feasibility review. The build plan specifies exact filenames, output contracts, evaluation rules and acceptance criteria. Those new interfaces are planned until their implementation commit is published. Do not duplicate another owner's files or invent pending results.

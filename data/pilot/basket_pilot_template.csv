@@ -1,0 +1,1 @@
+experiment_id,experiment_type,date,branch,arm,order_id,eligible,offer_shown,offer_item,accepted,order_revenue_usd,order_cost_usd,discount_usd,waste_cost_allocated_usd,extra_labor_allocated_usd,other_cost_allocated_usd,service_seconds,stock_available,assignment_probability,override_reason
