@@ -68,8 +68,8 @@
       "category": "Sandwiches",
       "status": "Historical scenario",
       "trained_through": "2026-03-31",
-      "method": "regularized_poisson",
-      "forecast_mean_units": 4.355588053909317,
+      "method": "regularized_poisson_v2",
+      "forecast_mean_units": 4.070448758879783,
       "recommendation_uplift_added_to_forecast": false,
       "test_sales_used_in_forecast": false,
       "preparation_applicable": true,
@@ -89,8 +89,8 @@
         "3": 1,
         "4": 0
       },
-      "expected_two_stage_contribution": 17.009587580045604,
-      "expected_one_batch_contribution": 14.857575696700582
+      "expected_two_stage_contribution": 14.980114536410632,
+      "expected_one_batch_contribution": 12.446186744707372
     },
     {
       "date": "2026-06-30",
@@ -99,8 +99,8 @@
       "category": "Bakery",
       "status": "Historical scenario",
       "trained_through": "2026-03-31",
-      "method": "regularized_poisson",
-      "forecast_mean_units": 7.024919880982005,
+      "method": "regularized_poisson_v2",
+      "forecast_mean_units": 7.21518335838529,
       "recommendation_uplift_added_to_forecast": false,
       "test_sales_used_in_forecast": false,
       "preparation_applicable": true,
@@ -112,7 +112,7 @@
         "capacity_unconstrained": true
       },
       "opening_prepare_units": 7,
-      "one_batch_comparator_units": 8,
+      "one_batch_comparator_units": 9,
       "at16_topup_by_remaining_stock": {
         "0": 6,
         "1": 5,
@@ -123,8 +123,8 @@
         "6": 0,
         "7": 0
       },
-      "expected_two_stage_contribution": 16.066604902758357,
-      "expected_one_batch_contribution": 16.384565828992805
+      "expected_two_stage_contribution": 16.763868045538906,
+      "expected_one_batch_contribution": 16.35079486871129
     },
     {
       "date": "2026-06-30",
@@ -133,8 +133,8 @@
       "category": "Bakery",
       "status": "Historical scenario",
       "trained_through": "2026-03-31",
-      "method": "regularized_poisson",
-      "forecast_mean_units": 10.950610402707243,
+      "method": "regularized_poisson_v2",
+      "forecast_mean_units": 10.67680311992274,
       "recommendation_uplift_added_to_forecast": false,
       "test_sales_used_in_forecast": false,
       "preparation_applicable": true,
@@ -146,7 +146,7 @@
         "capacity_unconstrained": true
       },
       "opening_prepare_units": 11,
-      "one_batch_comparator_units": 13,
+      "one_batch_comparator_units": 12,
       "at16_topup_by_remaining_stock": {
         "0": 8,
         "1": 7,
@@ -161,8 +161,8 @@
         "10": 0,
         "11": 0
       },
-      "expected_two_stage_contribution": 25.233652557923513,
-      "expected_one_batch_contribution": 24.677969668653567
+      "expected_two_stage_contribution": 24.489811319012095,
+      "expected_one_batch_contribution": 24.028048061777206
     }
   ],
   "profit_scenario_for_top_offer": {

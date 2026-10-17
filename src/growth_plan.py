@@ -18,7 +18,7 @@ import pandas as pd
 from basket_recommender import recommend
 from demand_model import PERISHABLES
 from profit_policy import optimize
-from strict_model import features, baseline_predict
+from strict_model import category_mean, share_column
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -40,11 +40,7 @@ def prep_card(date, branch, product, setup=.25, premium=.10, fill_floor=.90, art
     row = selected.iloc[0]
     frame = pd.DataFrame([dict(Date=stamp, Branch=branch, Category=row.Category)])
     method = artifact["selected_method"]
-    if method == "regularized_poisson":
-        category_mean = float(artifact["model"].predict(features(frame,artifact["start"],artifact["categories"])[0])[0])
-    else:
-        category_mean = float(baseline_predict(frame,artifact["baseline"],artifact["start"],method=="seasonal_growth")[0])
-    mean = category_mean * float(row.item_share)
+    mean = float(category_mean(artifact, frame, method)[0]) * float(row[share_column(method)])
     card = dict(date=str(stamp.date()),branch=branch,product=product,category=row.Category,
         status="Historical scenario" if stamp <= pd.Timestamp("2026-06-30") else "Extrapolation beyond observed window; not a validated operational forecast",
         trained_through=artifact["train_end"],method=method,forecast_mean_units=mean,

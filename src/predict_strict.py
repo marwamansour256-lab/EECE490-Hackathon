@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 import joblib
 import pandas as pd
-from strict_model import features, baseline_predict
+from strict_model import category_mean, share_column, V2_METHOD
 from profit_policy import optimize
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -15,7 +15,11 @@ def main():
     p.add_argument('--date', default='2026-06-30')
     p.add_argument('--branch', default='Harbour')
     p.add_argument('--product', default='Turkey & Cheese Sandwich')
-    p.add_argument('--method', choices=['selected', 'regularized_poisson', 'seasonal_frozen', 'seasonal_growth'], default='selected')
+    p.add_argument('--method', choices=['selected', 'regularized_poisson', V2_METHOD, 'seasonal_frozen', 'seasonal_growth'], default='selected')
+    # Recommendation scenarios (ANALYSIS.md): assumptions, not measured effects. Demand is held constant.
+    p.add_argument('--cost-multiplier', type=float, default=1.0, help='e.g. 1.10 if real ingredient costs rose 10 percent (ANALYSIS.md item 1)')
+    p.add_argument('--price-multiplier', type=float, default=1.0, help='e.g. 1.05 for the proposed +5 percent price test (item 3)')
+    p.add_argument('--no-discount', action='store_true', help='use the list price instead of the training average paid price (item 4)')
     p.add_argument('--remaining', type=int)
     p.add_argument('--setup', type=float, default=.25)
     p.add_argument('--premium', type=float, default=.10)
@@ -38,13 +42,14 @@ def main():
     row = matches.iloc[0]
     frame = pd.DataFrame([dict(Date=date, Branch=args.branch, Category=row.Category)])
     method = artifact['selected_method'] if args.method == 'selected' else args.method
-    if method == 'regularized_poisson':
-        category_mean = float(artifact['model'].predict(features(frame, artifact['start'], artifact['categories'])[0])[0])
-    else:
-        category_mean = float(baseline_predict(frame, artifact['baseline'], artifact['start'], method == 'seasonal_growth')[0])
-    mean = category_mean*float(row.item_share)
+    if method == V2_METHOD and 'v2_calibration' not in artifact:
+        p.error('Retrain the artifact (python src/strict_model.py) to use the v2 method')
+    mean = float(category_mean(artifact, frame, method)[0])*float(row[share_column(method)])
+    base_price = float(row['list_price']) if args.no_discount and 'list_price' in row.index else float(row.price)
+    price = base_price*args.price_multiplier
+    cost = float(row.cost)*args.cost_multiplier
     try:
-        policy = optimize(mean, float(row.early_share), float(row.price), float(row.cost),
+        policy = optimize(mean, float(row.early_share), price, cost,
                           setup=args.setup, premium=args.premium, fill_floor=args.fill_floor)
     except ValueError as exc:
         p.error(str(exc))
@@ -57,6 +62,9 @@ def main():
                   at16_topup_by_remaining_stock={str(i): int(q) for i, q in enumerate(policy['replenish_by_remaining_stock']) if i <= opening},
                   expected_two_stage_contribution=policy['expected_two_stage_contribution'],
                   expected_one_batch_contribution=policy['expected_one_batch_contribution'],
+                  scenario=dict(cost_multiplier=args.cost_multiplier, price_multiplier=args.price_multiplier,
+                                no_discount=args.no_discount, price_used=price, cost_used=cost,
+                                note='Recommendation scenarios hold demand constant; customer response to price is not estimated.'),
                   assumptions=dict(setup_usd_per_sku=args.setup, extra_usd_per_topup_unit=args.premium,
                                    expected_fill_floor=args.fill_floor, instant_replenishment=True, capacity_unconstrained=True))
     if args.remaining is not None:

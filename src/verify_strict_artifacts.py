@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 import joblib
 import numpy as np
 import pandas as pd
-from strict_model import features
+from strict_model import features, V2_METHOD
 from provenance import matches_recorded_sha256
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -27,7 +27,7 @@ def main():
     assert result['test']['start'] == '2026-04-01' and result['test']['days'] == 91
     assert result['inner_validation']['end'] <= result['train']['end']
     detail = pd.read_csv(ROOT/'reports/strict_half_predictions.csv', parse_dates=['Date'])
-    assert len(detail) == 3*91*135
+    assert len(detail) == 4*91*135
     assert not detail.duplicated(['Date', 'Branch', 'Product', 'method']).any()
     assert detail.Date.min() == pd.Timestamp('2026-04-01')
     assert detail.Date.max() == pd.Timestamp('2026-06-30')
@@ -42,16 +42,21 @@ def main():
     frame = ml[['Date','Branch','Category']]
     expected = artifact['model'].predict(features(frame, artifact['start'], artifact['categories'])[0])
     np.testing.assert_allclose(expected, ml.predicted_category_units)
+    # v2 = the same serialized model times the inner-validation calibration factor.
+    v2 = detail[detail.method.eq(V2_METHOD)].drop_duplicates(['Date','Branch','Category'])
+    np.testing.assert_allclose(artifact['model'].predict(features(v2[['Date','Branch','Category']], artifact['start'],
+                               artifact['categories'])[0])*artifact['v2_calibration'], v2.predicted_category_units)
+    assert abs(result['v2']['calibration_factor']-artifact['v2_calibration']) < 1e-12
     # All learned economics and item shares must remain fixed through test dates.
     for field in ['price', 'cost', 'item_share', 'early_share']:
-        assert detail.groupby(['Branch','Product'])[field].nunique().max() == 1
+        assert detail.groupby(['method','Branch','Product'])[field].nunique().max() == 1
     files = ['data/stories_transactions.csv', 'src/strict_model.py', 'src/predict_strict.py',
              'models/strict_half_model.joblib', 'reports/strict_half_results.json',
              'reports/strict_half_predictions.csv', 'tests/test_strict_model.py']
     checks = ['Single transaction CSV raw input; no external predictive files',
               'Frozen March 31 artifact and disjoint April-June test dates',
-              '36855 unique item-day-method predictions; 91 dates and 135 branch-items per method',
-              'Category-to-item forecasts reconcile; serialized model reproduces saved forecasts',
+              '49140 unique item-day-method predictions (4 methods incl. regularized_poisson_v2); 91 dates and 135 branch-items per method',
+              'Category-to-item forecasts reconcile; serialized model reproduces saved forecasts, including v2 calibration',
               'Demand, stock and contribution reconcile for every saved record',
               'Item shares, price, cost and intraday proportions remain constant through testing']
     manifest = dict(verified_at_utc=datetime.now(timezone.utc).isoformat(),

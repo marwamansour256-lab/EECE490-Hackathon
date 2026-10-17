@@ -24,7 +24,9 @@ class GrowthPlanTests(unittest.TestCase):
 
     def test_prep_bridge_reproduces_committed_model_example(self):
         card=prep_card("2026-06-30","Harbour","Turkey & Cheese Sandwich")
-        self.assertAlmostEqual(card["forecast_mean_units"],4.039965731162265,places=7)
+        # Committed artifact selects regularized_poisson_v2 (calibrated level, full-training item shares).
+        self.assertEqual(card["method"],"regularized_poisson_v2")
+        self.assertAlmostEqual(card["forecast_mean_units"],3.669136909412762,places=7)
         self.assertEqual(card["opening_prepare_units"],4)
         self.assertEqual(card["at16_topup_by_remaining_stock"]["0"],4)
         self.assertFalse(card["test_sales_used_in_forecast"])
