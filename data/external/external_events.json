@@ -41,9 +41,10 @@
       "mechanism": "Mass-casualty strikes at rush hour without warning (357 killed per the cited infobox); fear of movement",
       "affected_daypart": "all (strikes reported during rush hour)",
       "affected_category": "all",
-      "validation_status": "event_verified",
-      "association_in_data": "Notebook 09: -1% vs expected for all branches; strongest cell Garden evening -31%; nothing survives the false-discovery correction (q = 0.83). README (Codex screen): about -1%.",
-      "notes": "No advance warning, so not a forecast-time feature."
+      "validation_status": "event_verified; held_out: not_supported",
+      "association_in_data": "Notebook 09: -1% vs expected for all branches; strongest cell Garden evening -31%; nothing survives the false-discovery correction (q = 0.83). README (Codex screen): about -1%. Held-out test (src/external_factor_test.py, 2026-10-17): not supported. All flagged days fall in April-June, so the half/half test cannot score this event on unseen flagged days; detectable size: not detectable under this protocol (for comparison, an 11-day strike flag spread across both halves is detected reliably only at a 20% drop).",
+      "notes": "No advance warning, so not a forecast-time feature.",
+      "held_out_test": "Held-out test (src/external_factor_test.py, 2026-10-17): not supported. All flagged days fall in April-June, so the half/half test cannot score this event on unseen flagged days; detectable size: not detectable under this protocol (for comparison, an 11-day strike flag spread across both halves is detected reliably only at a 20% drop)."
     },
     {
       "event_id": "CEASEFIRE-2026-04-17",
@@ -63,9 +64,10 @@
       "mechanism": "Reduced security risk; possible return of displaced people",
       "affected_daypart": "all",
       "affected_category": "all",
-      "validation_status": "event_verified",
-      "association_in_data": "Notebook 02: orders after the ceasefire stayed near the pre-war trend overall; Garden further below its own trend. Notebook 09: April 17 itself 0% vs expected (q = 0.98).",
-      "notes": "Announced by the US on Thursday April 16; effective 17:00 EST April 16 = 00:00 April 17 Beirut time. Sources disagree slightly on the exact UTC time (21:00 vs 22:00 GMT). 10-day initial period, then extended (see the next events)."
+      "validation_status": "event_verified; held_out: not_supported",
+      "association_in_data": "Notebook 02: orders after the ceasefire stayed near the pre-war trend overall; Garden further below its own trend. Notebook 09: April 17 itself 0% vs expected (q = 0.98). Held-out test (src/external_factor_test.py, 2026-10-17): not supported. All flagged days fall in April-June, so the half/half test cannot score this event on unseen flagged days; detectable size: not detectable under this protocol (for comparison, an 11-day strike flag spread across both halves is detected reliably only at a 20% drop).",
+      "notes": "Announced by the US on Thursday April 16; effective 17:00 EST April 16 = 00:00 April 17 Beirut time. Sources disagree slightly on the exact UTC time (21:00 vs 22:00 GMT). 10-day initial period, then extended (see the next events).",
+      "held_out_test": "Held-out test (src/external_factor_test.py, 2026-10-17): not supported. All flagged days fall in April-June, so the half/half test cannot score this event on unseen flagged days; detectable size: not detectable under this protocol (for comparison, an 11-day strike flag spread across both halves is detected reliably only at a 20% drop)."
     },
     {
       "event_id": "CEASEFIRE-2026-04-23-EXTENSION",
@@ -174,9 +176,10 @@
       "mechanism": "Large evening gatherings of graduates and families near AUB",
       "affected_daypart": "evening",
       "affected_category": "unknown",
-      "validation_status": "event_verified",
-      "association_in_data": "Notebook 09: June 5 +12% (evening +15%), June 6 -1% vs expected, all branches; neither survives the false-discovery correction. README: June 5 network +11.3%, evening +14.5%.",
-      "notes": "June 5: honorary doctorate and graduate ceremony, 19:30. June 6: undergraduate ceremony, 19:30. The end time is an estimate. Published schedule date not captured, but commencement dates are announced well in advance. Haigazian graduation (cited in the README) not verified by teammate 1."
+      "validation_status": "event_verified; held_out: not_supported",
+      "association_in_data": "Notebook 09: June 5 +12% (evening +15%), June 6 -1% vs expected, all branches; neither survives the false-discovery correction. README: June 5 network +11.3%, evening +14.5%. Held-out test (src/external_factor_test.py, 2026-10-17): not supported. All flagged days fall in April-June, so the half/half test cannot score this event on unseen flagged days; detectable size: not detectable under this protocol (for comparison, an 11-day strike flag spread across both halves is detected reliably only at a 20% drop).",
+      "notes": "June 5: honorary doctorate and graduate ceremony, 19:30. June 6: undergraduate ceremony, 19:30. The end time is an estimate. Published schedule date not captured, but commencement dates are announced well in advance. Haigazian graduation (cited in the README) not verified by teammate 1.",
+      "held_out_test": "Held-out test (src/external_factor_test.py, 2026-10-17): not supported. All flagged days fall in April-June, so the half/half test cannot score this event on unseen flagged days; detectable size: not detectable under this protocol (for comparison, an 11-day strike flag spread across both halves is detected reliably only at a 20% drop)."
     },
     {
       "event_id": "ROADS-2026-02-14-ISF-CLOSURES",
@@ -227,9 +230,10 @@
       "mechanism": "Clocks move forward one hour; could shift recorded transaction hours if timestamps are local time",
       "affected_daypart": "all",
       "affected_category": "all",
-      "validation_status": "event_verified",
-      "association_in_data": "The README notes the clock change cannot explain the March 28 daytime spike (it starts the following day).",
-      "notes": "Council of Ministers Secretariat memo 64/M dated 16 March 2026: clocks forward one hour at midnight between 28 and 29 March (Decision 5 of 20 August 1998). Source found by the Codex teammate and checked by teammate 1 on 2026-10-17. Relevant to whether transaction timestamps follow daylight saving time (question 4 in reports/company_information_request.md)."
+      "validation_status": "event_verified; held_out: not_supported",
+      "association_in_data": "The README notes the clock change cannot explain the March 28 daytime spike (it starts the following day). Held-out test (src/external_factor_test.py, 2026-10-17): not supported. All flagged days fall in January-March, so the half/half test cannot score this event on unseen flagged days; detectable size: not detectable under this protocol (for comparison, an 11-day strike flag spread across both halves is detected reliably only at a 20% drop).",
+      "notes": "Council of Ministers Secretariat memo 64/M dated 16 March 2026: clocks forward one hour at midnight between 28 and 29 March (Decision 5 of 20 August 1998). Source found by the Codex teammate and checked by teammate 1 on 2026-10-17. Relevant to whether transaction timestamps follow daylight saving time (question 4 in reports/company_information_request.md).",
+      "held_out_test": "Held-out test (src/external_factor_test.py, 2026-10-17): not supported. All flagged days fall in January-March, so the half/half test cannot score this event on unseen flagged days; detectable size: not detectable under this protocol (for comparison, an 11-day strike flag spread across both halves is detected reliably only at a 20% drop)."
     },
     {
       "event_id": "PRICES-2026-03-INFLATION-SHOCK",
@@ -267,9 +271,10 @@
       "mechanism": "Public holiday and extended public-administration closure",
       "affected_daypart": "all",
       "affected_category": "all",
-      "validation_status": "partially_verified",
-      "association_in_data": "Notebook 03: March 20 -14% and March 21 -17% vs expected. Notebook 09: -15% and -16% (all branches); neither survives the false-discovery correction.",
-      "notes": "A secondary source cites Prime Minister Memorandum 6 of March 19, 2026, closing public administrations through March 23 (two days longer than the holiday list). Not checked against the Official Gazette. Lunar date, so announced only shortly before."
+      "validation_status": "partially_verified; held_out: not_supported",
+      "association_in_data": "Notebook 03: March 20 -14% and March 21 -17% vs expected. Notebook 09: -15% and -16% (all branches); neither survives the false-discovery correction. Held-out test (src/external_factor_test.py, 2026-10-17): not supported. All flagged days fall in January-March, so the half/half test cannot score this event on unseen flagged days; detectable size: not detectable under this protocol (for comparison, an 11-day strike flag spread across both halves is detected reliably only at a 20% drop).",
+      "notes": "A secondary source cites Prime Minister Memorandum 6 of March 19, 2026, closing public administrations through March 23 (two days longer than the holiday list). Not checked against the Official Gazette. Lunar date, so announced only shortly before.",
+      "held_out_test": "Held-out test (src/external_factor_test.py, 2026-10-17): not supported. All flagged days fall in January-March, so the half/half test cannot score this event on unseen flagged days; detectable size: not detectable under this protocol (for comparison, an 11-day strike flag spread across both halves is detected reliably only at a 20% drop)."
     },
     {
       "event_id": "HOLIDAYS-2026-H1-NATIONAL",

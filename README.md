@@ -275,21 +275,22 @@ Specific category pairs do *not* go together beyond chance: the strongest lift i
 
 This checks whether an outside factor predicts sales on days the model never saw. In-sample correlations are not enough.
 
-- **Factors:** temperature, rain, rainy-day flag and wind at Beirut, Batroun and Broummana; public holidays (the notebook 03 list); Ramadan; the war period (March 2-April 16); and 11 Beirut strike days.
-- **Targets:** each factor is tested only on targets with a plausible mechanism (orders, iced/hot drink units, takeaway orders), giving 33 tests.
+- **Factors:** temperature, rain, rainy-day flag and wind at Beirut, Batroun and Broummana; public holidays (the notebook 03 list); Ramadan; the war period (March 2-April 16); 11 Beirut strike days; and five short events from teammate 1's event list (`data/external/external_events.json`): the April 8 strikes, the first ceasefire day, AUB commencement (June 5-6), the March 29 clock change and the Eid al-Fitr closure (March 20-23).
+- **Targets:** each factor is tested only on targets with a plausible mechanism (orders, iced/hot drink units, takeaway orders, evening orders), giving 39 tests.
 - **Gain:** the baseline is a transactions-only Poisson model of branch × weekday + branch growth, fitted on Jan-Mar and scored on Apr-Jun (the EVALUATION.md split), then the reverse. Gain is the reduction in held-out Poisson deviance when the factor is added.
-- **Placebo:** the gain must beat versions of the factor shifted to the wrong dates (154 circular shifts of 14-167 days), with a Holm correction across all 33 tests.
+- **Placebo:** the gain must beat versions of the factor shifted to the wrong dates (154 circular shifts of 14-167 days), with a Holm correction across all 39 tests.
 - **Positive control:** a known drop is planted in the real counts, and we record how often the test detects it.
 
 | Result | Value |
 |---|---|
-| Tests passing (gain in both directions, Holm p < 0.05) | **0 of 33** |
-| Strongest candidate | Broummana max temperature → orders: +2.2% / +1.7% held-out gain, raw p 0.006 / 0.019, **Holm p 0.64** |
+| Tests passing (gain in both directions, Holm p < 0.05) | **0 of 39** |
+| Strongest candidate | Broummana max temperature → orders: +2.2% / +1.7% held-out gain, raw p 0.006 / 0.019, **Holm p 0.75** |
 | War period → orders | −16.5% held-out gain forward (it hurts the forecast), +1.8% reverse; not supported |
 | Planted drop detected (rainy days, holidays) | −20%: 100% · −10%: 38-51% · −5%: 0% |
 | Planted drop detected (11 strike days) | −20%: 100% · −10%: 1% |
+| Event-list factors (5 events, 6 tests) | Not testable by this rule: each event's days fall in one half only, so it can't be scored on unseen flagged days. The in-sample screen with a false-discovery correction is in notebook 09 |
 
-**Interpretation:** none of these factors passes this particular two-direction/Holm rule. The planted controls show high detection for the specified 20% scenarios, not a guarantee of power against every real 20% effect; smaller, local, menu or timing effects remain possible. The strongest single result disappears after correcting for 33 tests. The expanded [context research](EXTERNAL_CONTEXT.md) tests different mechanisms and keeps its associations and forward predictive comparisons separate from this stronger pass rule.
+**Interpretation:** none of these factors passes this particular two-direction/Holm rule. The planted controls show high detection for the specified 20% scenarios, not a guarantee of power against every real 20% effect; smaller, local, menu or timing effects remain possible. The strongest single result disappears after correcting for 39 tests. The expanded [context research](EXTERNAL_CONTEXT.md) tests different mechanisms and keeps its associations and forward predictive comparisons separate from this stronger pass rule.
 
 **Limits:** weather is realized weather, so this is a retrospective test with perfect weather knowledge. Branch locations are unverified. Conflict dates were chosen after the fact. Factor effects are shared across branches, with no branch interactions. Passing would show predictive association, not causation. None of these factors enter the strict model. Outputs: `reports/external_factor_test.{csv,json}` and `reports/figures/external_factor_holdout.png`. Run `python src/external_factor_test.py`, or add `--quick` for a quick run. The external-evidence teammate can add a factor by adding one daily series to `factors` and its targets to `PLAN`.
 

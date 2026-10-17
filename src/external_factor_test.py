@@ -98,6 +98,7 @@ TARGETS = {
     "cold_drink_units": daily(raw[raw["Category"].isin(COLD)], "units"),
     "hot_coffee_units": daily(raw[raw["Category"].isin(HOT)], "units"),
     "takeaway_orders": daily(raw[raw["Order Type"] == "Takeaway"], "orders"),
+    "evening_orders": daily(raw[pd.to_datetime(raw["Time"], format="%H:%M:%S").dt.hour >= 18], "orders"),
 }
 
 
@@ -119,6 +120,24 @@ factors["Ramadan"] = pd.Series(((DAYS >= RAMADAN[0]) & (DAYS <= RAMADAN[1])).ast
 factors["War period (2 Mar-16 Apr)"] = pd.Series(((DAYS >= WAR[0]) & (DAYS <= WAR[1])).astype(float), DAYS)
 factors["Beirut strike day"] = pd.Series(DAYS.isin(pd.to_datetime(BEIRUT_STRIKES)).astype(float), DAYS)
 
+# Teammate 1 event list (data/external/external_events.json). Only short events are tested: long windows
+# (displacement, all holidays, the inflation shock) cover most of a half and are confounded with the trend.
+# Not-found events stay alerts and are not tested.
+EVENTS_FILE = EXT / "external_events.json"
+TESTABLE_EVENTS = ["WAR-2026-04-08-STRIKES", "CEASEFIRE-2026-04-17", "AUB-COMMENCEMENT-2026-06-05",
+                   "DST-2026-03-29", "HOLIDAY-EID-AL-FITR-2026-GOV-CLOSURE"]
+EVENT_TARGETS = {}
+_events = {e["event_id"]: e for e in json.loads(EVENTS_FILE.read_text(encoding="utf-8"))["events"]}
+for eid in TESTABLE_EVENTS:
+    e = _events[eid]
+    start = pd.Timestamp(e["event_start"][:10])
+    end = pd.Timestamp((e["event_end"] or e["event_start"])[:10])
+    if eid == "CEASEFIRE-2026-04-17":
+        end = start  # the first day of the ceasefire; the 10-day window is in the event list
+    name = f"Event: {eid}"
+    factors[name] = pd.Series(((DAYS >= start) & (DAYS <= end)).astype(float), DAYS)
+    EVENT_TARGETS[name] = ["orders", "evening_orders"] if e.get("affected_daypart") == "evening" else ["orders"]
+
 # Which targets each factor is tested on (a mechanism, not a fishing trip).
 PLAN = {}
 for name in factors:
@@ -128,6 +147,8 @@ for name in factors:
         PLAN[name] = ["orders", "takeaway_orders"]
     elif name in ("War period (2 Mar-16 Apr)", "Beirut strike day"):
         PLAN[name] = ["orders", "takeaway_orders"]
+    elif name in EVENT_TARGETS:
+        PLAN[name] = EVENT_TARGETS[name]
     else:
         PLAN[name] = ["orders"]
 
@@ -220,7 +241,9 @@ null_cache = {}
 for fname, series in factors.items():
     for tname in PLAN[fname]:
         y = TARGETS[tname].to_numpy()
-        rec = {"factor": fname, "target": tname}
+        rec = {"factor": fname, "target": tname,
+               "flagged_days_jan_mar": int(((series.index < SPLIT) & (series > 0)).sum()) if series.isin([0, 1]).all() else None,
+               "flagged_days_apr_jun": int(((series.index >= SPLIT) & (series > 0)).sum()) if series.isin([0, 1]).all() else None}
         for direction in HALF:
             g, coef = gain(tname, y, factor_column(series), direction)
             null = np.array([gain(tname, y, factor_column(shifted(series, k)), direction)[0] for k in SHIFTS])
@@ -302,6 +325,12 @@ meta = {
         "Passing shows predictive association, not causation; failing does not prove zero effect "
         "(see positive_control for detectable sizes).",
         "These factors are not inputs to the strict model (src/strict_model.py).",
+        "Event-list factors whose flagged days all fall in one half cannot pass by construction: the factor is "
+        "all zeros in either the training or the test half, so the factor cannot be scored on unseen flagged days. "
+        "A non-zero gain for such a factor only reflects how removing its training days changes the baseline fit "
+        "(for example the March 29 and Eid rows), not prediction. Their rows record that the test cannot see them, "
+        "not that the event had no effect (see notebooks/09_event_checks.ipynb "
+        "for the in-sample screen with a false-discovery correction).",
     ],
     "results": res.to_dict(orient="records"),
     "positive_control": power.to_dict(orient="records"),
@@ -312,6 +341,7 @@ meta = {
         "event_sources": ["https://en.wikipedia.org/wiki/2026_in_Lebanon",
                           "https://en.wikipedia.org/wiki/Timeline_of_the_2026_Lebanon_war"],
         "holiday_source": "notebooks/03_holidays.ipynb HOLIDAYS list",
+        "event_list": "data/external/external_events.json (teammate 1), events: " + ", ".join(TESTABLE_EVENTS),
         "quick_mode": QUICK,
         "numpy": np.__version__, "pandas": pd.__version__,
     },
