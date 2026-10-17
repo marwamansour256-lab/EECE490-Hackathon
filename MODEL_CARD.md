@@ -12,6 +12,8 @@ The user's latest requirement is a transaction-only model trained on the earlier
 
 Test category WAPE is **25.21%**, versus **26.64%** for a seasonal baseline with training-only growth and **28.22%** for a frozen seasonal baseline. Perishable-item WAPE is **52.03%**, versus **53.58%** and **53.75%**. Under a common one-batch 90% expected unit-fill rule, contribution is **$10,934.29**, versus **$9,915.15** and **$13,409.52**, respectively. Realized fulfillment is **92.09%**, **92.19%**, and **88.22%**. The contribution difference versus the growth baseline is $1,019.13; the frozen baseline's higher contribution trades away fulfillment. Simulated preparation is not measured company behavior.
 
+The conditional seven-day block resampling interval for the $1,019 difference is approximately $770-$1,276. It does not include missing operational costs, model-selection uncertainty or future ROI. Independent artifact verification reconciles 36,855 item-day-method records and reproduces forecasts from the saved model.
+
 Sixteen tests pass, including test-label independence of the frozen model and baselines, training economics, posterior math, stockout censoring and inventory/cash conservation. This dataset was explored before the new protocol was requested; do not claim a newly untouched test set or established future ROI.
 
 ```bash

@@ -35,6 +35,8 @@ The operational replenishment demonstration can accept observed remaining stock 
 
 WAPE = sum of absolute forecast errors divided by total actual units. The model reduces category WAPE by 1.44 percentage points versus the growth baseline. In the one-batch scenario it improves contribution by $1,019.13, reduces unsold stock by 240 units and fulfills 13 fewer units. Fulfillment differs by about 0.10 percentage points.
 
+A circular seven-day block resampling of test-day contribution differences gives an approximate 95% interval of **$770-$1,276** for the difference versus the growth baseline. This describes uncertainty conditional on fixed forecasts and hypothetical costs, not uncertainty in missing stockouts, real labor costs, model selection or future company ROI. It does not turn the previously explored test period into independent confirmation.
+
 The frozen seasonal baseline earns higher contribution while fulfilling only 88.22% of recorded demand. That tradeoff must remain visible; it cannot be presented as equally good service. The common inventory constraint is 90% forecast expected unit fill, not guaranteed actual fulfillment or a 90% probability of no stockout.
 
 All finance assumes recorded sales equal demand, no salvage, training-period economics, one preparation batch and no capacity, substitution or additional labor expense. Actual stockouts, preparation, discard quantities and current company policy are unavailable. These results do not show measured savings, net profit or superiority over current company operations.
@@ -45,6 +47,8 @@ All finance assumes recorded sales equal demand, no salvage, training-period eco
 pip install -r requirements.txt
 python src/strict_model.py
 python src/predict_strict.py --date 2026-06-30 --remaining 0
+python src/verify_strict_artifacts.py
+python src/strict_visuals.py
 python -m unittest discover -s tests -v
 ```
 
@@ -52,8 +56,10 @@ python -m unittest discover -s tests -v
 - `reports/strict_half_results.json`: protocol, training-only selection, metrics and assumptions.
 - `reports/strict_half_predictions.csv`: all branch-item test predictions and the one-batch scenario.
 - `reports/strict_half_metrics.csv` and `reports/strict_half_finance.csv`: comparisons.
+- `reports/strict_half_manifest.json`: package versions, artifact/input/source hashes and reconciliation checks.
+- `reports/figures/strict_half_profit_service.png`: presentation figure showing accuracy and the service/profit tradeoff.
 
-These implementation artifacts are in the Codex working copy; Markdown publication precedes separate code publication. Tests verify that changing test labels does not change the frozen model/baseline predictions and check economics, mathematical inference and inventory accounting.
+These implementation artifacts are in the Codex working copy; Markdown publication precedes separate code publication. Tests verify that changing test labels does not change the frozen model/baseline predictions and check economics, mathematical inference and inventory accounting. Independent verification reconciles all **36,855** item-day-method records, category-to-item forecast sums, stock/demand/cash accounting, fixed test-period economics and predictions freshly produced from the saved model.
 
 ## Interpretation limits
 
