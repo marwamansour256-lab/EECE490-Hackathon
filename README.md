@@ -4,6 +4,8 @@
 
 We analysed Stories' January–June 2026 transactions from three branches: Harbour, Garden and Uptown, with 33,887 orders and 51,177 product lines. The implemented system ranks an add-on for the current basket, compares front-display arrangements, and tells each branch **how many of each fresh item to prepare at opening and at 16:00**. Models are fitted on earlier dates and evaluated chronologically; previously explored findings remain exploratory.
 
+**Conclusion.** Stories grew only through **more orders**: profit rose 52.5% from January to June, while basket size, prices and margins added about 0%, and 54% of orders contain one product. The money is in **preparing the right amount of fresh food each day** and **turning single-item orders into two-item orders**. Our v2 model learns each branch's level, weekday pattern and growth from Jan–Mar. On unseen Apr–Jun it is the most accurate of 12 approaches (24.74% error vs 26.64% for a seasonal baseline), and it tells staff how many items to make at opening and at 16:00. Separately, **84% of Garden's 18-point margin gap is unit cost**, worth about $16k of gross profit in six months at Harbour's recorded costs (a scenario until costs are confirmed). Outside events did not improve forecasts on unseen days. Money figures are simulations or scenarios, to be confirmed by the randomised pilot in section 3. **Full explanation of everything we did, mapped to the brief: [PROJECT_REPORT.md](PROJECT_REPORT.md).**
+
 - **Main model:** the **v2 preparation model**. It is the most accurate of the 12 approaches we compared on unseen months. Other demand models are retained as comparisons; the recommender, display optimizer and pilot reporter solve connected business tasks.
 - **Demo:** open [`app/planner.html`](app/planner.html) (preparation plan) and [`app/wejha.html`](app/wejha.html) (add-on offers and display test) in a browser. No install or internet is needed.
 - **Honesty rule:** results measured on held-out data are labelled as measured. Money figures that depend on assumptions are labelled as scenarios. Nothing here is a measured company saving; that needs the pilot at the end.
@@ -110,5 +112,6 @@ python src/verify_submission.py               # all 44 unit tests + artifact che
 | [MODEL_CARD.md](MODEL_CARD.md) · [EVALUATION.md](EVALUATION.md) | Model details, every comparison and the test protocol |
 | [ANALYSIS.md](ANALYSIS.md) · [reports/analysis_details.md](reports/analysis_details.md) | Business recommendations and supporting analysis |
 | [EXTERNAL_CONTEXT.md](EXTERNAL_CONTEXT.md) | Weather, events and external-context models |
+| [PROJECT_REPORT.md](PROJECT_REPORT.md) | Everything we did, measured vs estimated, rejected approaches, and a checklist against the brief |
 | [SUBMISSION.md](SUBMISSION.md) · [WEJHA_PILOT.md](WEJHA_PILOT.md) | Quickstart and verification · add-on/display pilot design |
 | [TEAM.md](TEAM.md) · [AGENTS.md](AGENTS.md) | Team and the shared work rules |

@@ -187,3 +187,123 @@ python src/demand_model.py
 python src/holiday_robustness.py
 python src/build_analysis_report.py
 ```
+
+
+# Appendix: previous README overview, kept word for word
+
+The README was shortened on 2026-10-17 to the business insights and the main v2 model. The text below is the earlier README's overview, model section and project tree, unchanged, so nothing is lost. Some status lines describe the team's work in progress at that time (for example test counts that have since grown).
+
+## Stories Profit Planner | EECE490 Hackathon
+
+**Team:** Charbel Manih (202502099, mastercoder67), Omar Al Aghbari (202514349, aghbar11), Marwa Mansour (202505788, marwamansour256-lab). [Team and responsibilities](TEAM.md).
+
+**A working sales and preparation decision system for Stories Coffee.** Basket Growth recommends relevant add-ons, Wejha Lab compares product-display arrangements, and the preparation model turns demand into opening batches and replenishment actions. The display experiment separates paired products so customers may encounter more of the counter; placement-induced sales growth still requires a pilot. Source code, trained artifacts and generated offline demo data are committed. [Submission quickstart](SUBMISSION.md), [shared team contract](WEJHA_BUILD_PLAN.md).
+
+| Start immediately | Owner | Deliverable and status |
+|---|---|---|
+| Model and backend | Codex teammate | **Implemented and published:** frozen basket recommender, five candidate comparisons, offer/preparation integration, external-context models, constrained layout optimizer and generated comparisons; all 39 tests pass. |
+| Offline interface | Claude Code teammate 2 / Marwa | New `app/wejha.html`, linked from the existing planner. Load `window.STORIES_RECOMMENDATIONS` and `window.STORIES_WEJHA`; contracts are in the build plan. Own these UI files. |
+| Business validation and experiment | Claude Code teammate 1 / Omar | New `WEJHA_PILOT.md`, separate `data/pilot/basket_pilot_template.csv`, and `reports/wejha_business_review.md`. Check browsing/service feasibility, pair evidence, margin assumptions and controlled profit measurement. Own these files. |
+
+**Sync rule:** the latest user instruction authorizes ongoing pushes of code, generated artifacts and documentation. Each owner pulls safely, preserves others' work and pushes usable milestones. Planned filenames are not evidence of a completed implementation. Existing preparation cards, pilot schemas, baseline results and the newly pulled Day Explorer remain supported.
+
+**Basket/layout pilot is ready:** [WEJHA_PILOT.md](WEJHA_PILOT.md), a separate [order-level CSV template](data/pilot/basket_pilot_template.csv), and `python src/basket_pilot_report.py <observed_export.csv> --control popular` measure recorded contribution after sold-item costs, allocated waste, extra labor and other costs. The reporter preserves declined/no-offer orders, checks branch-day assignment and duplicate orders, and reports branch-day uncertainty. It does not subtract discounts twice or invent outcomes for the empty template. [Business review](reports/wejha_business_review.md). **44 tests now pass.** The layout remains based on pooled same-order co-purchases, as clarified by the user; it is not a per-person rearrangement.
+
+**Run the integrated demo:** open [`app/wejha.html`](app/wejha.html) in a browser for basket recommendations, availability controls, three display arrangements and an editable incremental-profit scenario. [`app/planner.html`](app/planner.html) links to it and retains preparation planning and the every-day diagnostic. Both pages work offline with the committed generated scripts.
+
+**Offer → stock → profit integration is implemented:** `python src/growth_plan.py --branch Harbour --item Espresso --daypart morning --output reports/growth_demo.json` produces complementary food offers, the frozen preparation plan for each food item, an explicit zero-default incremental-profit scenario, and a separately labeled retrospective daily diagnostic. It loads committed artifacts and adds no invented offer uplift to demand. `python src/growth_plan.py --export-preparation` produces 57 historical perishable cards in `app/preparation_data.js`. [Integration contract and optional UI additions](GROWTH_INTEGRATION.md). **39 total tests pass.** The complementary filter is a business rule; the evaluation numbers below belong to unrestricted ranking.
+
+```bash
+pip install -r requirements.txt
+python src/verify_submission.py
+python src/basket_recommender.py recommend --branch Harbour --item "Butter Croissant" --daypart morning
+python src/basket_recommender.py train
+python src/wejha_layout.py
+python -m unittest discover -s tests -v
+```
+
+**Trained recommendation model:** empirical-Bayes shrinkage of conditional item co-purchases toward pooled popularity, with branch/daypart/aggregate regular-customer contexts and unit-margin ranking. March validation selects strength 500; all parameters/economics freeze on March 31. In **8,801 April–June multi-product orders**, the recovered-item margin@3 proxy is **$0.5080/order versus $0.4956** for margin-weighted popularity, a **2.51% relative gain**. The paired seven-day block interval for the difference is **$0.0028–$0.0251/order**. This metric rewards recovering an item that was already bought; it is **not additional sales or company profit**. Hit@3 is **13.29%**, versus **12.90%** for the margin baseline and **13.74%** for plain popularity. [Full evaluation](reports/recommendation_evaluation.md), [generated results and cohort denominators](reports/recommendation_results.json).
+
+**Wejha Lab:** exact enumeration of all arrangements of eight bakery candidates compares adjacent, separated and random-reference layouts. Weighted pair distance is **0.373 / 0.511 / 0.425** respectively. These are geometric exposure scores; higher distance is the user's testable mechanism, not proven sales uplift. Fixed positions and compatible storage zones are supported through a constraints JSON. Real counter dimensions, current placement and customer paths are unobserved. [Layouts and assumptions](reports/wejha_layouts.json). The frozen six-training-date regular cohort accounts for **3.10% of test revenue**; this specific definition does not support the premise that most revenue comes from loyal customers.
+
+**Data scope:** outside weather, calendar, access and other context are allowed as features. Training and test **sales targets remain Stories' own sales**. The transaction-only model below is the control. See [EXTERNAL_CONTEXT.md](EXTERNAL_CONTEXT.md) for expanded research, external models and the every-day evidence ledger.
+
+The published external-context implementation includes nine cached hourly weather/forecast/air-quality streams, six months of IODA internet reachability, 73 daily context columns plus the separate internet audit, **2,337 exploratory test rows** and **724 day/branch dossiers covering all 181 dates**. A separate externally conditioned order-count head improves test WAPE from **9.46% to 9.27%**; daily product-volume gains are not established, and improved item forecast error did not improve simulated profit. No external sales dataset is used. [Source reconciliation](reports/source_reconciliation.md) supplies primary URLs missing from the teammate event registry.
+
+Analysis of January-June 2026 transactions from three anonymized branches: Harbour, Garden and Uptown. The goal is to identify decisions that improve gross profit, validate external demand signals, and distinguish measured results from business assumptions.
+
+**Published implementation:** demand, inventory, external-context, recommendation and layout code, saved models, browser assets and numerical audits are in the repository. `python src/verify_submission.py` runs all 39 tests and four artifact-verification scripts. Browser script/schema/ranking checks are recorded in `reports/ui_contract_qa.json`; the committed UI screenshots in reports/figures/ui were visually inspected; this Codex session had no connected live browser. The **frozen chronological half/half transaction-only model** remains the control, and earlier rolling/Bayesian comparisons remain separate experiments. [Evaluation protocols](EVALUATION.md), [model card](MODEL_CARD.md).
+
+### Transaction-only control: chronological half/half
+
+The model is an **L2-regularized pooled Poisson regression**, followed by item allocation and a profit-aware preparation rule. It learns branch/category demand, weekday patterns and growth using only `stories_transactions.csv`. It uses no weather, holiday, war, news or external data files as model inputs.
+
+- **Training:** Jan 1-Mar 31, 90 dates and 22,395 product lines.
+- **Testing:** Apr 1-Jun 30, 91 dates and 28,782 product lines.
+- **Selection:** the last 21 training dates select regularization; the selected alpha is 0.001. Refit on the 90 training dates, then freeze everything.
+- **Strict boundary:** the whole test period is forecast at March 31. No test sales lags, refits, item shares, prices, costs or intraday splits enter the model. Half means half of the daily timeline, keeping complete dates/orders together; growing transaction volume makes row counts unequal.
+
+| Frozen model, April-June test | Category WAPE | Perishable item WAPE | Simulated contribution | Actual recorded units fulfilled |
+|---|---:|---:|---:|---:|
+| **Improved model (v2, selected on inner validation)** | **24.74%** | **51.57%** | **$11,944.21** | **90.92%** |
+| Trained Poisson model (original) | 25.21% | 52.03% | $10,934.29 | 92.09% |
+| Seasonal baseline with training-only growth | 26.64% | 53.58% | $9,915.15 | 92.19% |
+| Frozen four-weekday baseline | 28.22% | 53.75% | $13,409.52 | 88.22% |
+
+**v2 (teammate 1):** the same engine and alpha, plus two changes chosen only on the last 21 training dates: (1) a level calibration factor of 0.942 (inner-validation actual ÷ predicted, correcting a +6.2% over-forecast) and (2) item shares from all 90 training dates with smoothing 10 instead of the last 28 days with smoothing 1 (best of 20 window/smoothing settings on inner-validation item deviance). On April-June it improves category WAPE (25.21% → 24.74%), all-item WAPE (53.27% → 52.09%) and perishable WAPE (52.03% → 51.57%), and adds **$1,009.92** simulated contribution versus the original model (7-day block interval about $884-$1,126) with 528 fewer unsold units, while realized fulfillment stays above 90% (90.92%). The artifact now selects v2; the original rows are kept for comparison. Upgrades to the category engine itself (branch × category × weekday terms, per-series trends, recency weighting) were tried and lost on inner validation, so they are not used. `python src/predict_strict.py` also accepts `--cost-multiplier`, `--price-multiplier` and `--no-discount` to run the ANALYSIS.md cost, price-test and discount scenarios; these hold demand constant and do not estimate customer response.
+
+The original model improves simulated contribution by **$1,019.13 versus the growth baseline**, with 240 fewer unsold units and 13 fewer fulfilled units. The frozen baseline earns more simulated contribution while fulfilling fewer recorded units; selecting it solely for profit would conceal that service tradeoff. All use the same one-batch rule with a 90% **expected** unit-fill constraint, which does not guarantee 90% realized fulfillment. These are conditional inventory simulations, not measured savings or a comparison with Stories' actual operating policy. This dataset had already been explored before the new split was requested; the clean computational boundary does not make it a newly untouched test set.
+
+```bash
+pip install -r requirements.txt
+python src/strict_model.py
+python src/predict_strict.py --date 2026-06-30 --branch Harbour --product "Turkey & Cheese Sandwich" --remaining 0
+python -m unittest discover -s tests -v
+```
+
+Training saves a reusable artifact at `models/strict_half_model.joblib`; prediction loads that artifact without reading transaction or external data. With the selected v2 method, the example forecasts about **3.67 Turkey & Cheese Sandwiches at Harbour**, prepares **4 at opening**, and prepares **4 more at 16:00 if none remain** (the original method forecast 4.04), under stated low replenishment costs. This second-batch example is a decision-model scenario; the table above evaluates the simpler one-batch policy. Committed test predictions, finance and metadata are in `reports/strict_half_predictions.csv`, `reports/strict_half_finance.csv` and `reports/strict_half_results.json`.
+
+
+### Project structure
+
+Everything below is committed. Start with [SUBMISSION.md](SUBMISSION.md) to run the demo. Each folder with many files has its own index: [reports/README.md](reports/README.md), [notebooks/README.md](notebooks/README.md), [data/external/README.md](data/external/README.md), [app/README.md](app/README.md).
+
+```text
+Documentation (repo root)
+  README.md                 Project overview, results and commands (this file)
+  SUBMISSION.md             How to run the demo and verify the submission (start here)
+  AGENTS.md / CLAUDE.md     Shared three-person work contract and rules
+  MODEL_CARD.md             Demand and preparation model, including v2
+  EVALUATION.md             Frozen half/half evaluation protocol and results
+  EXTERNAL_CONTEXT.md       External-context models and evidence
+  GROWTH_INTEGRATION.md     How offers connect to preparation and profit scenarios
+  WEJHA_BUILD_PLAN.md       Basket recommender and display-layout sprint contract
+  ANALYSIS.md               Business recommendations and next actions (teammate 1)
+
+app/                        Offline demo pages (open in a browser, no server): see app/README.md
+  wejha.html                Basket Growth and display layouts (teammate 2)
+  planner.html              Preparation, day explorer, evidence, pilot log (teammate 2)
+  *_data.js                 Generated by the Python scripts; do not edit by hand
+
+data/
+  stories_transactions.csv  Raw Stories product lines (never edited; all rows kept)
+  external/                 Weather, CPI, events, context features: see data/external/README.md
+  pilot/                    Pilot-log templates
+
+models/                     Saved trained models (preparation, basket recommender, context heads)
+notebooks/                  Analysis notebooks 01-09: see notebooks/README.md
+src/                        All model, analysis and verification code; src/verify_submission.py runs every check
+tests/                      Unit tests (python -m unittest discover -s tests)
+reports/                    Generated results, evidence and team documents: see reports/README.md
+  figures/                  Saved charts (figures/ui/ holds demo screenshots)
+output/pdf/                 First-stage analysis report (PDF)
+requirements.txt / requirements-lock.txt   Dependencies (use the lock file to load saved models)
+```
+
+To reproduce the team's original visualizations:
+
+```bash
+python src/eda_visuals.py --save
+python src/pitch_visuals.py --save
+```
+
