@@ -2,9 +2,35 @@
 
 Analysis of January-June 2026 transactions from three anonymized branches: Harbour, Garden and Uptown. The goal is to identify decisions that improve gross profit, validate external demand signals, and distinguish measured results from business assumptions.
 
-**Team synchronization, October 17:** the documentation is being published first so all three contributors can work concurrently. The analysis/model artifacts described below have been implemented and checked in the Codex working copy; files not yet present on GitHub are pending a separate code publication. The next Codex extension is an **intraday Bayesian demand update with stockout-censoring handling**, followed by a comparison against the existing planner. It is work in progress, with no claimed improvement yet. The two Claude Code contributors can begin from the interfaces and acceptance criteria below and in AGENTS.md.
+**Team synchronization, October 17:** Markdown is published first so all three contributors can work concurrently. Code, trained artifacts and numerical files described below are implemented and checked in the Codex working copy; files not yet present on GitHub await separate code publication. The user's latest training requirement makes the **frozen chronological half/half model using only transactions** the primary experiment. Earlier rolling and Bayesian comparisons are supplemental experiments with different protocols. Sixteen tests pass. Read [EVALUATION.md](EVALUATION.md) for the strict protocol and [MODEL_CARD.md](MODEL_CARD.md) for architecture and results.
 
-## What we are building
+## Primary trained model: transactions only, chronological half/half
+
+The model is an **L2-regularized pooled Poisson regression**, followed by item allocation and a profit-aware preparation rule. It learns branch/category demand, weekday patterns and growth using only `stories_transactions.csv`. It uses no weather, holiday, war, news or external data files as model inputs.
+
+- **Training:** Jan 1-Mar 31, 90 dates and 22,395 product lines.
+- **Testing:** Apr 1-Jun 30, 91 dates and 28,782 product lines.
+- **Selection:** the last 21 training dates select regularization; the selected alpha is 0.001. Refit on the 90 training dates, then freeze everything.
+- **Strict boundary:** the whole test period is forecast at March 31. No test sales lags, refits, item shares, prices, costs or intraday splits enter the model. Half means half of the daily timeline, keeping complete dates/orders together; growing transaction volume makes row counts unequal.
+
+| Frozen model, April-June test | Category WAPE | Perishable item WAPE | Simulated contribution | Actual recorded units fulfilled |
+|---|---:|---:|---:|---:|
+| **Trained Poisson model** | **25.21%** | **52.03%** | **$10,934.29** | **92.09%** |
+| Seasonal baseline with training-only growth | 26.64% | 53.58% | $9,915.15 | 92.19% |
+| Frozen four-weekday baseline | 28.22% | 53.75% | $13,409.52 | 88.22% |
+
+The model improves simulated contribution by **$1,019.13 versus the growth baseline**, with 240 fewer unsold units and 13 fewer fulfilled units. The frozen baseline earns more simulated contribution while fulfilling fewer recorded units; selecting it solely for profit would conceal that service tradeoff. All use the same one-batch rule with a 90% **expected** unit-fill constraint, which does not guarantee 90% realized fulfillment. These are conditional inventory simulations, not measured savings or a comparison with Stories' actual operating policy. This dataset had already been explored before the new split was requested; the clean computational boundary does not make it a newly untouched test set.
+
+```bash
+pip install -r requirements.txt
+python src/strict_model.py
+python src/predict_strict.py --date 2026-06-30 --branch Harbour --product "Turkey & Cheese Sandwich" --remaining 0
+python -m unittest discover -s tests -v
+```
+
+Training saves a reusable artifact at `models/strict_half_model.joblib`; prediction loads that artifact without reading transaction or external data. The example forecasts about **4.04 Turkey & Cheese Sandwiches at Harbour**, prepares **4 at opening**, and prepares **4 more at 16:00 if none remain**, under stated low replenishment costs. This second-batch example is a decision-model scenario; the table above evaluates the simpler one-batch policy. Test predictions, finance and metadata are in `reports/strict_half_predictions.csv`, `reports/strict_half_finance.csv` and `reports/strict_half_results.json` once code/artifacts are published.
+
+## Business application and supplemental experiments
 
 **A branch-and-item preparation planner that chooses an opening batch and a second batch at 16:00, prices the extra work, and reports its service and profit tradeoffs.** External-event research supplies evidence-linked review alerts. It changes numerical forecasts only after exposure and predictive value are established.
 
@@ -12,7 +38,7 @@ The implemented decision model is a **two-stage stochastic inventory dynamic pro
 
 The forecasting candidates are a regularized pooled Poisson regression and a strong seasonal baseline: the preceding four matching weekdays at branch/category level, allocated to items using prior 28-day shares. The complex forecast wins the original category accuracy comparison but **loses the new service-constrained profit comparison**. The demo defaults to the transparent baseline; this choice is exploratory and needs a future prospective evaluation. We do not claim complexity itself creates value.
 
-### Run the working demo
+### Earlier rolling-planner demo
 
 ```bash
 pip install -r requirements.txt
@@ -62,11 +88,11 @@ Across the original external-driver models, calendar and available weather featu
 
 | Owner | Concrete responsibility | Acceptance condition |
 |---|---|---|
-| Codex teammate | Forecast/replay engine, profit optimizer, intraday Bayesian update and stockout handling, leakage/accounting tests, canonical metrics | Reproducible output, honest strong-baseline comparison, costs and service visible |
+| Codex teammate | Primary frozen half/half model, saved artifact and prediction CLI; profit optimizer; supplemental Bayesian and stockout experiments; validation | Transaction-only primary model; training-only selection; strict test boundary; costs and service visible |
 | Claude Code teammate 1 | External evidence and branch exposure; confirm event timing, coordinates and weather provenance | Every usable feature has a source, known-at time, geography and future validation; unresolved events remain alerts |
 | Claude Code teammate 2 | Presentation/demo interface and pilot logging using the existing JSON/CSV contracts | Show opening plan, remaining-stock input, replenishment action, cost sensitivity, service and evidence; never present historical cards as live recommendations |
 
-**Implemented:** both forecasting candidates; external association and robustness checks; outlier dossiers; two-stage optimizer; six cost/service scenarios; CLI demo; decision JSON; six mathematical/accounting tests. **Still needed for live operation:** verified operational inputs, UI integration, capacity/lead-time handling and a controlled prospective pilot. Full team names must be added before submission; this repository does not establish all three identities.
+**Implemented in the working copy:** primary trained half/half model and saved artifact; forecast baselines; external research; outlier dossiers; two-stage optimizer; six cost/service scenarios; supplemental intraday Gamma-Poisson/NB comparisons and stockout-censored decisions; CLI demos; decision JSON; 16 mathematical/accounting/boundary tests. **Still needed for live operation:** verified operational inputs, UI integration, capacity/lead-time handling and a controlled prospective pilot. Full team names must be added before submission; this repository does not establish all three identities.
 
 Start the company pilot with shadow decisions and measured preparation, waste, stockouts and batch labor. Then randomize eligible branch-days within branch and weekday between current practice and the planner, after safety and service rules are agreed. Choose the duration using baseline profit variance and a business-relevant minimum detectable gain; do not claim three branches automatically provide sufficient power. Evaluate incremental contribution after waste and extra labor, customer fulfillment and overrides. Freeze the policy before the pilot. The [build plan](reports/deeper_research_and_build_plan.txt) gives the data contract and demo narrative; [AGENTS.md](AGENTS.md) is the shared work contract for all three contributors.
 

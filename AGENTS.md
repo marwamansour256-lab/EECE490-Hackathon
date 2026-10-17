@@ -4,7 +4,9 @@
 
 Build the Stories Profit Planner described in README.md: actionable preparation decisions, external evidence with verified exposure, and prospective incremental contribution measurement. Read README.md and, once published, reports/deeper_research_and_build_plan.txt before changing the model or claims. Markdown is being published ahead of the local model artifacts; a missing pending artifact is not permission to invent its outputs.
 
-- Codex teammate owns src/demand_model.py, src/profit_policy.py, src/recommend.py, the new src/intraday_model.py and src/bayesian_policy.py, policy tests and generated numerical results. The intraday extension is in progress: posterior afternoon demand from observed earlier sales, with sold-out observations treated as censored. No improvement is claimed before evaluation.
+**Latest protocol:** the primary model is `src/strict_model.py` and prediction CLI `src/predict_strict.py`: first 90 dates train, last 91 test; only transaction CSV inputs; inner validation within training; final parameters and all learned shares/economics frozen at March 31. No test lags or external predictors. Read EVALUATION.md. Earlier rolling/Bayesian results are supplemental and must not be described as strict half/half results. The model, artifact and 16 tests are complete locally; GitHub code publication is separate from the authorized ongoing Markdown pushes.
+
+- Codex teammate owns src/strict_model.py, src/predict_strict.py and the saved artifact, plus src/demand_model.py, src/profit_policy.py, src/recommend.py, src/intraday_model.py, src/bayesian_policy.py, src/adaptive_recommend.py, tests and generated numerical results. Read MODEL_CARD.md for which results belong to each protocol.
 - Claude Code teammate 1 owns external evidence, geographic exposure verification and event/forecast provenance.
 - Claude Code teammate 2 owns the presentation/demo interface and pilot logging built on the established data contracts.
 - These are collaboration boundaries, not permission to overwrite another person's uncommitted work. Coordinate contract changes. Do not launch agents or services just because this file describes multiple teammates.
@@ -16,12 +18,13 @@ Build the Stories Profit Planner described in README.md: actionable preparation 
 - Preserve data/stories_transactions.csv. The brief describes real transactions with replacement IDs. SYN identifiers do not establish synthetic data. Branch aliases do not identify real neighborhoods.
 - Retain repeated raw lines unless a genuine line ID or documented deduplication rule resolves them. Keep sensitivity analysis separate.
 - Do not infer customer religion, acquisition date, price elasticity or causal war effects from the existing fields.
-- Keep notebooks 01-07 as the team's original work unless assigned to modify one. Correct old claims in the shared audit and README. The original PDF is first-stage analysis; do not present it as covering the new policy. Notebook 05 now uses Batroun with Broummana/Beirut sensitivity; treat the North-region assumption as requiring company provenance, not inferred from aliases.
+- Keep notebooks 01-08 as the team's original work unless assigned to modify one. Correct old claims in the shared audit and README. The original PDF is first-stage analysis; do not present it as covering the new policy. Notebook 05 now uses Batroun with Broummana/Beirut sensitivity; treat the North-region assumption as requiring company provenance, not inferred from aliases. Notebook 08 and its CPI sources are contextual research, not inputs to the strict model.
 
 ## Validation and financial claims
 
 - Use chronological splits, shifted features and known-at timestamps. No random train/test split for this time series; no realized future weather or retrospectively selected conflict labels in an operational forecast.
 - Preserve the original Jan-Mar training, Apr-May selection, June rolling evaluation record. New policy/event choices made after examining June are retrospective exploratory work. A new future period is needed for confirmation.
+- For the PRIMARY half/half experiment, all model selection occurs in the last 21 dates of Jan-Mar; refit once on Jan-Mar; April-June is forecast without any test outcomes. Preserve the earlier rolling record as a separate experiment. Never combine metrics from the two splits or call the previously explored dataset newly untouched.
 - Compare forecasts under the same inventory policy and compare policies under the same forecast. Separate forecast value from the value of allowing replenishment.
 - Strong baseline: preceding four matching weekdays at branch/category level, allocated using prior 28-day smoothed item shares. Do not replace it with a weaker baseline to improve the headline.
 - Report contribution, fulfillment, unsold stock, unmet recorded demand, replenishment count and labor/cost assumptions together. Gross profit is not net profit; simulated savings are not measured company savings.
@@ -41,6 +44,8 @@ Build the Stories Profit Planner described in README.md: actionable preparation 
 
 ### Frontend contract while model files are pending publication
 
+**Primary frontend command:** `python src/predict_strict.py --date 2026-06-30 --branch Harbour --product "Turkey & Cheese Sandwich" --remaining 0`. It reads only the saved model artifact. Output includes `status`, `date`, `branch`, `product`, `category`, `method`, `trained_through`, `external_model_inputs`, `test_sales_used_in_forecast`, `forecast_mean_units`, `opening_prepare_units`, `one_batch_comparator_units`, `at16_topup_by_remaining_stock`, expected contribution fields, assumptions and (if requested) `prepare_at16_units`. The checked primary example has forecast 4.03997 units, opening 4 units and topup 4 when remaining is zero. Do not mix these with the earlier rolling example below. Display strict-model results as the main model; offer Bayesian experiments separately.
+
 Build against this illustrative structure, not invented model outcomes:
 
 ```json
@@ -59,7 +64,9 @@ Build against this illustrative structure, not invented model outcomes:
 }
 ```
 
-This example is the checked existing seasonal-planner card, not output of the new Bayesian extension. Show cost settings, historical status, predicted demand, opening quantity and the remaining-stock input. Keep the calculation backend replaceable. For the intraday extension, reserve fields for observed early sales, stockout flag, posterior mean/interval, chosen policy and comparison status; final schema will be documented after validation.
+This example is the checked existing seasonal-planner card, not output of the Bayesian extension. Show cost settings, historical status, predicted demand, opening quantity and the remaining-stock input. Keep the calculation backend replaceable.
+
+The intraday CLI is `python src/adaptive_recommend.py --candidate selected --remaining 0`. Candidate choices are `selected`, `best-adaptive`, and `seasonal-control`. Its output includes `candidate`, `adaptive_signal_enabled`, `opening_prepare_units`, `prior_late_mean_units`, `at16_topup_by_remaining_stock`, expected contributions, assumptions and comparison status. When remaining stock is supplied it adds `observed_early_sales_units`, `early_stock_exhausted`, `observation_interpretation`, `posterior_late_mean_units`, `posterior_p10_units`, `posterior_p90_units` and `prepare_at16_units`. All are historical/scenario outputs. Do not label the adaptive option as the selected winner; April-May selected the static NB candidate. See MODEL_CARD.md for results and limits.
 
 External-evidence teammate: use a JSON list with event_id, event_start/end, published_at (timezone or null), source_url, affected_geography, branch_exposure (verified/unknown), mechanism, affected_daypart/category, and validation_status. Prioritize company-confirmed branch locations and store hours before more generic national event flags. Sources published after an event are retrospective evidence, never forecast-time features.
 
