@@ -41,6 +41,33 @@ We analysed Stories' January–June 2026 transactions from three branches: Harbo
 | 9 | **A second batch at 16:00 only pays when it is cheap to make.** In a June replay, two-stage preparation earns **+$411** when a second batch costs $0.25 per product batch plus $0.10 per extra unit, but **−$486** at $1 per batch plus $0.25 per unit. | Simulated replay of 1,710 branch-item-days ([MODEL_CARD](MODEL_CARD.md)) | Measure the real labour cost of an afternoon batch before rolling it out. |
 | 10 | **More frequent visits explain the main recorded spend difference for regulars.** The exploratory checks found little difference in per-visit spending or product mix; shared IDs across branches require confirmation. | [Notebooks 04 and 06](notebooks/README.md) | Test a visit-based card valid at all branches, not spend-based rewards. |
 
+### Everything we tested that did not help predict or explain sales
+
+These were tested and **not** supported. "Not supported" means the data showed no measurable, robust effect; it is not proof that the factor has no effect, especially because branch locations are unconfirmed and one-day events are hard to detect.
+
+| Factor tested | How we tested it | Result | Where |
+|---|---|---|---|
+| **War period** (Mar 2–Apr 16) | Orders vs the pre-war trend, by branch; held-out two-direction test | Orders **+2.8%** vs trend (no drop); Garden −2.9%. Held-out test: not supported (it made forecasts worse) | [Notebook 02](notebooks/02_war_impact.ipynb), `reports/external_factor_test.json` |
+| **Strike days** (April 8 and 11 Beirut strike days) | Day vs expected, by branch and time of day; held-out test | April 8: **−1%** for the network. Not supported | [Notebook 09](notebooks/09_event_checks.ipynb) |
+| **Ceasefire** (April 17) | Day vs expected; after-ceasefire trend | **0%** on the day; sales stayed on trend | Notebooks 02 and 09 |
+| **17 public holidays** | Each holiday vs a normal day with the same weekday and trend | Average **about 0%**. Harbour's Labour Day (+46%) is the strongest lead but does not survive a multiple-testing correction in notebook 09 (q = 0.13) | [Notebook 03](notebooks/03_holidays.ipynb) |
+| **Eid al-Fitr** (Mar 20–21) | Same as holidays | −15% and −16%, not significant after correction | Notebooks 03 and 09 |
+| **Ramadan** | Daily trend; daytime vs evening share; iftar hour | On trend; **no daytime drop and no iftar spike** | Notebook 03 |
+| **Weather** (temperature, rain, wind) in Batroun, Broummana and Beirut | Correlation with demand after growth and weekday; rainy vs dry days; held-out test | Correlations between **−0.12 and +0.13**; rainy days within about 3% of dry days; 0 of 27 weather tests pass | [Notebook 05](notebooks/05_weather.ipynb) |
+| **Seasons** (winter, spring, summer) | Orders vs expected; iced-drink share | Every season within **about 2%** of expected; iced drinks **about 57% of drinks in every season**, even with June about 10°C warmer | Notebook 05 |
+| **Inflation** (CPI +9.8% Jan–Jun) | Prices, costs and demand trend vs CPI | Demand trend unchanged; recorded prices and costs never moved | [Notebook 08](notebooks/08_lebanon_prices.ipynb) |
+| **Specific events**: AUB commencement, Feb 14 road closures, May 23 waterfront run, March 29 clock change | Day vs expected by branch and time of day, with a false-discovery correction; held-out test | None survives the correction; one-day events cannot be scored by the held-out test | Notebook 09, `data/external/external_events.json` |
+| **12 flagged unusual days** | 2,896 day/branch/time combinations with a false-discovery correction | **None** of the checked days survives | Notebook 09 |
+| **The 10% discount** | Quantity per line, product choice, return within 30 days (also within the same customer) | No detected change in any of them | [Notebook 07](notebooks/07_discounts.ipynb) |
+| **The 15% Harbour promotion** | Units vs control branches, with placebo windows | Promoted units **+0.9%**; the gain vs the control branches is within the range of placebo windows | Notebook 07 |
+| **"Gateway" first purchases** | Whether a customer's first product predicts becoming a regular, vs chance | 41 of 45 products within chance; only a weak lead | [Notebook 06](notebooks/06_regulars_products.ipynb) |
+| **What regulars buy** | Regulars' product mix vs other customers, with shuffle tests | Same mix: only 1 of 45 products outside chance | Notebook 06 |
+| **A personal "usual" order** | Share of orders with each customer's favorite product vs random | 24%, the same as random | Notebook 06 |
+| **Specific product pairs** (for example matcha + pastry) | Pair lift vs chance | No distinctive pair beyond chance (insight 6) | `src/correlation_scan.py` |
+| **Branch switching** | Order of branches visited vs a shuffled order | Matches random (62% vs 62%): no branch habit or migration | Exploratory check |
+| **Other model types** | Linear regression, decision tree, random forest, XGBoost and two hybrids, same split | All **worse** than the v2 Poisson model (25.7%–28.6% vs 24.7% error) | [MODEL_CARD](MODEL_CARD.md) |
+| **More detailed model features** | Branch×category×weekday terms, per-line growth, recency weighting | Lost on the training-period validation, so not used | MODEL_CARD |
+
 Wording and numbers follow the agreed [metric definitions](reports/metric_reconciliation.md). [ANALYSIS.md](ANALYSIS.md) has the recommendations in more detail, and [reports/analysis_details.md](reports/analysis_details.md) has the supporting analysis.
 
 ---
