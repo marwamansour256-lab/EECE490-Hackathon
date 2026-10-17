@@ -373,4 +373,88 @@ ax.set_title("Most common product pairs in the same order")
 ax.grid(axis="y", visible=False)
 finish(fig, "8_cross_sell")
 
+# %% Feature heatmaps: how the features relate to each other
+# Left: Pearson correlation between numeric and yes/no features (one row per product line).
+# Right: Cramér's V between categorical features (0 = unrelated, 1 = one fully determines the other).
+dt = pd.to_datetime(df["Date"])
+num = pd.DataFrame({
+    "Quantity": df["Quantity"],
+    "Unit price": df["Unit Price (USD)"],
+    "Unit cost": df["Unit Cost (USD)"],
+    "Discount rate": df["Discount Rate"],
+    "Revenue": df[R],
+    "Gross profit": df[GP],
+    "Margin %": df[GP] / df[R],
+    "Hour": df["hour"],
+    "Weekday (Mon=0)": dt.dt.dayofweek,
+    "Month": dt.dt.month,
+    "Weekend": (dt.dt.dayofweek >= 5).astype(int),
+    "Takeaway": (df["Order Type"] == "Takeaway").astype(int),
+    "Known customer": df["Customer ID"].notna().astype(int),
+    "Garden branch": (df["Branch"] == "Garden").astype(int),
+})
+corr = num.corr()
+
+
+def cramers_v(a, b):
+    """Bias-corrected Cramér's V between two categorical columns."""
+    table = pd.crosstab(a, b).to_numpy()
+    n = table.sum()
+    expected = table.sum(1, keepdims=True) * table.sum(0, keepdims=True) / n
+    chi2 = ((table - expected) ** 2 / expected).sum()
+    r, k = table.shape
+    phi2 = max(0, chi2 / n - (k - 1) * (r - 1) / (n - 1))
+    r_c, k_c = r - (r - 1) ** 2 / (n - 1), k - (k - 1) ** 2 / (n - 1)
+    return np.sqrt(phi2 / max(1e-12, min(k_c - 1, r_c - 1)))
+
+
+cat_feats = pd.DataFrame({
+    "Branch": df["Branch"],
+    "Category": df["Category"],
+    "Order type": df["Order Type"],
+    "Daypart": df["daypart"].astype(str),
+    "Weekday": df["dow"].astype(str),
+    "Discount": df["Discount Rate"].astype(str),
+    "Known customer": df["Customer ID"].notna(),
+})
+cv = pd.DataFrame([[cramers_v(cat_feats[a], cat_feats[b]) for b in cat_feats] for a in cat_feats],
+                  index=cat_feats.columns, columns=cat_feats.columns)
+
+print("\n=== Strongest correlations (excluding a feature with itself) ===")
+pairs_corr = corr.where(np.triu(np.ones(corr.shape, dtype=bool), 1)).stack()
+print(pairs_corr.reindex(pairs_corr.abs().sort_values(ascending=False).index).head(10).round(2))
+print("\n=== Cramer's V between categorical features ===")
+print(cv.round(2))
+
+# Diverging scale: red (negative) - gray (zero) - blue (positive)
+DIV = LinearSegmentedColormap.from_list("div", ["#a8302f", "#e34948", "#f0efec", "#2a78d6", "#184f95"])
+
+fig, axes = plt.subplots(1, 2, figsize=(17, 7.2), gridspec_kw={"width_ratios": [1.45, 1]})
+for ax, mat, cmap, vmin, title, fmt in [
+    (axes[0], corr, DIV, -1, "Correlation between numeric features", "{:+.2f}"),
+    (axes[1], cv, LinearSegmentedColormap.from_list("seq", SEQ), 0, "Association between categorical features (Cramér's V)", "{:.2f}"),
+]:
+    # Lower triangle without the diagonal: drop the first row and last column, which would be empty
+    shown = mat.where(np.tril(np.ones(mat.shape, dtype=bool), -1)).iloc[1:, :-1]
+    im = ax.imshow(shown, cmap=cmap, vmin=vmin, vmax=1)
+    n = len(mat)
+    ax.set_xticks(range(n - 1), shown.columns, rotation=45, ha="right")
+    ax.set_yticks(range(n - 1), shown.index)
+    ax.grid(False)
+    for s in ax.spines.values():
+        s.set_visible(False)
+    for i in range(n - 1):
+        for j in range(i + 1):
+            v = shown.iloc[i, j]
+            strong = abs(v) >= 0.55
+            ax.text(j, i, fmt.format(v).replace("+0.00", "0").replace("-0.00", "0"), ha="center", va="center",
+                    fontsize=7.5 if n > 10 else 9, color="white" if strong else (INK if abs(v) >= 0.1 else MUTED))
+    cb = fig.colorbar(im, ax=ax, fraction=0.04, pad=0.02)
+    cb.outline.set_visible(False)
+    ax.set_title(title)
+fig.subplots_adjust(bottom=0.2)
+fig.text(0.01, 0.005, "Correlation only captures straight-line relationships: the Tuesday spike, for example, "
+         "does not show up in 'Weekday (Mon=0)'.", color=INK2, fontsize=9)
+finish(fig, "9_feature_heatmaps")
+
 print("\nDone.")
