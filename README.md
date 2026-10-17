@@ -12,7 +12,8 @@ EECE490-Hackathon/
 │   ├── 01_eda.ipynb                # full exploratory analysis with notes
 │   ├── 02_war_impact.ipynb         # before / during / after the 2026 Lebanon war, by branch
 │   ├── 03_holidays.ipynb           # public holidays and Ramadan, by branch
-│   └── 04_regular_customers.ipynb  # who comes regularly, their value, and who is at risk
+│   ├── 04_regular_customers.ipynb  # who comes regularly, their value, and who is at risk
+│   └── 05_weather.ipynb            # weather and seasons (winter, spring, summer), by branch
 ├── src/
 │   ├── eda_visuals.py              # script that draws the key-finding charts
 │   └── pitch_visuals.py            # charts backing the pitch
@@ -72,6 +73,10 @@ Identified customers are split by visits per month since their first visit: **Re
 - **They aren't rewarded:** discounted on about 9% of orders, the same as other segments.
 - **They're brand-loyal, not branch-loyal:** 98-100% use two or three branches. Regulars bring in 26-27% of revenue at every branch.
 - **157 regulars (15%) are overdue** (no visit for more than twice their usual gap and at least 3 weeks), worth about $12k so far. They're a natural target for a "we miss you" offer.
+
+## Weather and seasons (notebook 05)
+
+The notebook uses daily Beirut weather (`data/external/beirut_weather_2026H1.json`) and splits the period into winter (Jan–Feb), spring (Mar–May) and summer (Jun), by branch. The weather swung for real: about 18°C → 21°C → 28°C maximum, with 27 → 36 → 0 rainy days. **Sales don't react at any branch.** After removing growth and weekday, every season is within about 2% of expected. Temperature, rain and wind correlate with leftover demand between −0.12 and +0.11. Rainy days are within about 3% of dry days overall. The iced share of drinks stays at about 57% in every season, even though June was about 10°C warmer than January, which is the clearest sign the data was generated without weather. Seasons and the rainy-day threshold are parameters at the top of the notebook.
 
 ## The pitch: demand is a habit, so fix the price list
 
