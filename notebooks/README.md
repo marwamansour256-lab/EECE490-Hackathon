@@ -14,5 +14,6 @@ Per [AGENTS.md](../AGENTS.md), notebooks 01–07 are kept as the team's original
 | [06_regulars_products](06_regulars_products.ipynb) | What regular customers buy, with shuffle tests | Partly | Same segment caveats as 04 |
 | [07_discounts](07_discounts.ipynb) | Discounts, the 15% promotion, placebo windows | Partly | No detected lift is not proof of zero effect; discount assignment is unknown |
 | [08_lebanon_prices](08_lebanon_prices.ipynb) | Lebanon CPI vs the café's recorded prices and costs | Yes | Keeps all rows; no elasticity or causal claims; cost-increase figures are scenarios |
+| [09_event_checks](09_event_checks.ipynb) | Flagged and event days vs expected sales, by branch and time of day, with a false-discovery correction | Yes | Teammate 1. None of the 12 checked days survives the correction; associations only, exposure unknown |
 
 The business recommendations drawn from these notebooks are in [ANALYSIS.md](../ANALYSIS.md). External data sources are documented in [data/external/README.md](../data/external/README.md).

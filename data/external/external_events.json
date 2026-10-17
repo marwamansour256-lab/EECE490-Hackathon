@@ -16,14 +16,16 @@
       "published_at": "2026-03-02",
       "known_before_event": false,
       "source_url": "https://en.wikipedia.org/wiki/2026_Lebanon_war",
-      "additional_sources": ["https://en.wikipedia.org/wiki/Timeline_of_the_2026_Lebanon_war"],
+      "additional_sources": [
+        "https://en.wikipedia.org/wiki/Timeline_of_the_2026_Lebanon_war"
+      ],
       "affected_geography": "National; heaviest in South Lebanon, the Bekaa and Beirut's southern suburbs",
       "branch_exposure": "unknown",
       "mechanism": "Security risk and fear of movement, displacement, supply disruption and cost increases",
       "affected_daypart": "all",
       "affected_category": "all",
       "validation_status": "event_verified",
-      "association_in_data": "Notebook 02 and the README reconciliation: orders +2.8% vs the pre-war trend (all branches), Garden -2.9%. No negative association detected; exposure unknown.",
+      "association_in_data": "Notebook 02 and the README reconciliation: orders +2.8% vs the pre-war trend (all branches), Garden -2.9%. Notebook 09: March 2 itself -1% (Harbour evening -42%, q = 0.11). No negative association detected; exposure unknown.",
       "notes": "End date is the last full day before the cessation of hostilities took effect (00:00 Beirut time on April 17). Hostilities continued at lower intensity afterwards."
     },
     {
@@ -40,7 +42,7 @@
       "affected_daypart": "all (strikes reported during rush hour)",
       "affected_category": "all",
       "validation_status": "event_verified",
-      "association_in_data": "README (Codex screen): about -1% vs expected for the network on the day. Not checked by branch until locations are known.",
+      "association_in_data": "Notebook 09: -1% vs expected for all branches; strongest cell Garden evening -31%; nothing survives the false-discovery correction (q = 0.83). README (Codex screen): about -1%.",
       "notes": "No advance warning, so not a forecast-time feature."
     },
     {
@@ -50,14 +52,19 @@
       "published_at": "2026-04-16",
       "known_before_event": true,
       "source_url": "https://news.un.org/en/story/2026/04/1167318",
-      "additional_sources": ["https://www.aljazeera.com/news/2026/4/17/celebrations-in-lebanon-as-10-day-ceasefire-with-israel-begins", "https://www.aljazeera.com/news/2026/4/17/what-we-know-about-the-israel-lebanon-ceasefire", "https://www.state.gov/releases/office-of-the-spokesperson/2026/04/ten-day-cessation-of-hostilities-to-enable-peace-negotiations-between-israel-and-lebanon", "https://en.wikipedia.org/wiki/2026_Israel%E2%80%93Lebanon_ceasefire"],
+      "additional_sources": [
+        "https://www.aljazeera.com/news/2026/4/17/celebrations-in-lebanon-as-10-day-ceasefire-with-israel-begins",
+        "https://www.aljazeera.com/news/2026/4/17/what-we-know-about-the-israel-lebanon-ceasefire",
+        "https://www.state.gov/releases/office-of-the-spokesperson/2026/04/ten-day-cessation-of-hostilities-to-enable-peace-negotiations-between-israel-and-lebanon",
+        "https://en.wikipedia.org/wiki/2026_Israel%E2%80%93Lebanon_ceasefire"
+      ],
       "affected_geography": "National",
       "branch_exposure": "unknown",
       "mechanism": "Reduced security risk; possible return of displaced people",
       "affected_daypart": "all",
       "affected_category": "all",
       "validation_status": "event_verified",
-      "association_in_data": "Notebook 02: orders after the ceasefire stayed near the pre-war trend overall; Garden further below its own trend.",
+      "association_in_data": "Notebook 02: orders after the ceasefire stayed near the pre-war trend overall; Garden further below its own trend. Notebook 09: April 17 itself 0% vs expected (q = 0.98).",
       "notes": "Announced by the US on Thursday April 16; effective 17:00 EST April 16 = 00:00 April 17 Beirut time. Sources disagree slightly on the exact UTC time (21:00 vs 22:00 GMT). 10-day initial period, then extended (see the next events)."
     },
     {
@@ -118,7 +125,10 @@
       "published_at": "2026-06-04",
       "known_before_event": false,
       "source_url": "https://www.aljazeera.com/news/2026/6/4/israel-and-lebanon-agree-to-conditional-ceasefire",
-      "additional_sources": ["https://www.npr.org/2026/06/04/g-s1-125942/israel-lebanon-ceasefire", "https://en.wikipedia.org/wiki/2026_Israel%E2%80%93Lebanon_ceasefire"],
+      "additional_sources": [
+        "https://www.npr.org/2026/06/04/g-s1-125942/israel-lebanon-ceasefire",
+        "https://en.wikipedia.org/wiki/2026_Israel%E2%80%93Lebanon_ceasefire"
+      ],
       "affected_geography": "National",
       "branch_exposure": "unknown",
       "mechanism": "Political uncertainty: Israel and Lebanon agreed a conditional ceasefire; Hezbollah rejected it on June 4",
@@ -135,14 +145,18 @@
       "published_at": null,
       "known_before_event": false,
       "source_url": "https://www.lbcgroup.tv/news/lebanon-news/933357/lebanese-authorities-begin-relocating-displaced-people-from-beirut-wat/en",
-      "additional_sources": ["https://euronews.com/2026/03/26/lebanons-displaced-endure-squalid-conditions-in-tents-on-beirut-waterfront", "https://www.middleeasteye.net/live-blog/live-blog-update/displaced-families-sheltering-beirut-express-scepticism-over-truce", "https://www.aljazeera.com/features/2026/6/29/lebanons-displaced-begin-to-return-home-but-some-have-nowhere-to-go"],
+      "additional_sources": [
+        "https://euronews.com/2026/03/26/lebanons-displaced-endure-squalid-conditions-in-tents-on-beirut-waterfront",
+        "https://www.middleeasteye.net/live-blog/live-blog-update/displaced-families-sheltering-beirut-express-scepticism-over-truce",
+        "https://www.aljazeera.com/features/2026/6/29/lebanons-displaced-begin-to-return-home-but-some-have-nowhere-to-go"
+      ],
       "affected_geography": "Beirut waterfront",
       "branch_exposure": "unknown",
       "mechanism": "Tent camp of displaced families on the waterfront (reported from March), relocated to a municipal plot in May, only a few dozen tents left by about June 25",
       "affected_daypart": "unknown",
       "affected_category": "unknown",
       "validation_status": "partially_verified",
-      "association_in_data": "The README links the June 24 dip (Uptown -39.4%) to waterfront changes as a candidate mechanism. Teammate 1 found a Reuters-sourced report dated June 23 and a Reuters photo dated June 25, not a June 24 Reuters article.",
+      "association_in_data": "Notebook 09: June 24 -14% all branches, Uptown -38% (evening -50%); does not survive the correction (q = 0.33). Teammate 1 found a Reuters-sourced report dated June 23 and a Reuters photo dated June 25, not a June 24 Reuters article.",
       "notes": "Start and end are the reporting window, not exact dates. Candidate mechanism only; not a verified cause at any branch."
     },
     {
@@ -152,14 +166,16 @@
       "published_at": null,
       "known_before_event": true,
       "source_url": "https://www.aub.edu.lb/commencement/Pages/default.aspx",
-      "additional_sources": ["https://www.aub.edu.lb/commencement/Pages/undergraduate-ceremony.aspx"],
+      "additional_sources": [
+        "https://www.aub.edu.lb/commencement/Pages/undergraduate-ceremony.aspx"
+      ],
       "affected_geography": "AUB campus, Ras Beirut (Green Field)",
       "branch_exposure": "unknown",
       "mechanism": "Large evening gatherings of graduates and families near AUB",
       "affected_daypart": "evening",
       "affected_category": "unknown",
       "validation_status": "event_verified",
-      "association_in_data": "README: June 5 network +11.3%, evening +14.5% vs expected. June 6 (undergraduate ceremony, same 19:30 start) not yet checked.",
+      "association_in_data": "Notebook 09: June 5 +12% (evening +15%), June 6 -1% vs expected, all branches; neither survives the false-discovery correction. README: June 5 network +11.3%, evening +14.5%.",
       "notes": "June 5: honorary doctorate and graduate ceremony, 19:30. June 6: undergraduate ceremony, 19:30. The end time is an estimate. Published schedule date not captured, but commencement dates are announced well in advance. Haigazian graduation (cited in the README) not verified by teammate 1."
     },
     {
@@ -176,7 +192,7 @@
       "affected_daypart": "unknown",
       "affected_category": "all",
       "validation_status": "not_found",
-      "association_in_data": "README: network -18.5%, Harbour -28.9%, Uptown +1.5% vs expected.",
+      "association_in_data": "Notebook 09: -12% all branches, Harbour -21%, Garden morning -81%; does not survive the false-discovery correction (q = 0.23). README: network -18.5%, Harbour -28.9%.",
       "notes": "Teammate 1 searches found no ISF notice for February 14, 2026; found protests blocking Beirut roads on February 17, 2026 (https://www.pbs.org/newshour/world/drivers-block-beirut-roads-in-protest-of-new-taxes-that-raise-fuel-prices). February 14 is also the Rafik Hariri memorial day and a Saturday. Keep as an alert until the Codex registry's source is published and checked."
     },
     {
@@ -193,7 +209,7 @@
       "affected_daypart": "morning",
       "affected_category": "unknown",
       "validation_status": "not_found",
-      "association_in_data": "README: network -7.9%, evening -16.5% vs expected.",
+      "association_in_data": "Notebook 09: -6% all branches, evening -15%; does not survive the correction (q = 0.90). README: network -7.9%, evening -16.5%.",
       "notes": "Teammate 1 searches found no Beirut race on May 23, 2026. The Beirut Marathon Association lists Run the City (10K) on July 5 and the Beirut Marathon on November 29, 2026 (https://www.beirutmarathon.org/run-the-city-info.php). Keep as an alert until the Codex registry's source is published and checked."
     },
     {
@@ -220,7 +236,10 @@
       "published_at": null,
       "known_before_event": false,
       "source_url": "https://economics.creditlibanais.com/Article/213277",
-      "additional_sources": ["https://tradingeconomics.com/lebanon/inflation-cpi/news/552692", "https://today.lorientlejour.com/article/1497179/were-tired-we-just-want-peace-from-flour-to-fuel-war-pressures-beiruts-supermarkets.html"],
+      "additional_sources": [
+        "https://tradingeconomics.com/lebanon/inflation-cpi/news/552692",
+        "https://today.lorientlejour.com/article/1497179/were-tired-we-just-want-peace-from-flour-to-fuel-war-pressures-beiruts-supermarkets.html"
+      ],
       "affected_geography": "National (regional April changes: North +2.54%, Mount Lebanon +2.71%, Beirut +2.02%)",
       "branch_exposure": "unknown",
       "mechanism": "CPI +4.91% in March and +3.04% in April; food +18-19% year-on-year; fuel and transport costs up sharply. Likely raises ingredient and operating costs",
@@ -237,14 +256,17 @@
       "published_at": "2026-03-19",
       "known_before_event": true,
       "source_url": "https://calendarific.com/holiday/lebanon/eid-ul-fitr-4",
-      "additional_sources": ["https://bdl.gov.lb/bankingholidays.php", "https://www.officeholidays.com/countries/lebanon/2026"],
+      "additional_sources": [
+        "https://bdl.gov.lb/bankingholidays.php",
+        "https://www.officeholidays.com/countries/lebanon/2026"
+      ],
       "affected_geography": "National",
       "branch_exposure": "unknown",
       "mechanism": "Public holiday and extended public-administration closure",
       "affected_daypart": "all",
       "affected_category": "all",
       "validation_status": "partially_verified",
-      "association_in_data": "Notebook 03: March 20 -14% and March 21 -17% vs expected (all branches); the only holiday dip the README flags as notable.",
+      "association_in_data": "Notebook 03: March 20 -14% and March 21 -17% vs expected. Notebook 09: -15% and -16% (all branches); neither survives the false-discovery correction.",
       "notes": "A secondary source cites Prime Minister Memorandum 6 of March 19, 2026, closing public administrations through March 23 (two days longer than the holiday list). Not checked against the Official Gazette. Lunar date, so announced only shortly before."
     },
     {
@@ -254,14 +276,17 @@
       "published_at": null,
       "known_before_event": true,
       "source_url": "https://www.officeholidays.com/countries/lebanon/2026",
-      "additional_sources": ["https://bdl.gov.lb/bankingholidays.php", "https://www.calendarlabs.com/holidays/lebanon/2026"],
+      "additional_sources": [
+        "https://bdl.gov.lb/bankingholidays.php",
+        "https://www.calendarlabs.com/holidays/lebanon/2026"
+      ],
       "affected_geography": "National",
       "branch_exposure": "unknown",
       "mechanism": "Public holidays: Jan 1, Jan 6, Feb 9, Feb 14, Mar 20-21, Mar 25, Apr 3, Apr 5, Apr 10, Apr 12, May 1, May 25, May 27, May 29, Jun 16, Jun 26",
       "affected_daypart": "all",
       "affected_category": "all",
       "validation_status": "partially_verified",
-      "association_in_data": "Notebook 03: holidays average about 0% vs expected; Harbour has 5 of 17 outside its normal range (Labour Day +48%). README: only Harbour on May 1 survives the multiple-testing screen (q = 0.023).",
+      "association_in_data": "Notebook 03: holidays average about 0% vs expected; Harbour has 5 of 17 outside its normal range (Labour Day +48%). README: only Harbour on May 1 survives the multiple-testing screen (q = 0.023). Notebook 09: Harbour on May 1 +46% vs expected is the strongest checked cell but does not survive this notebook's correction (q = 0.13).",
       "notes": "Fixed-date holidays are known well in advance. Lunar holidays (Eid al-Fitr, Eid al-Adha, Hijri New Year, Ashura) are marked tentative by Banque du Liban and sources differ by a day (for example Ashura June 25 or 26, second Eid al-Adha day May 28 or 29). Per-holiday detail is in notebook 03."
     }
   ]

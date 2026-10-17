@@ -150,6 +150,7 @@ notebooks/
   README.md                           Index of notebooks 01-08 with status and caveats
   01_eda ... 04_regular_customers     Original exploratory, war, holiday and customer analyses
   05_weather ... 08_lebanon_prices    Weather by branch, regulars' products, discounts, Lebanon prices
+  09_event_checks                     Flagged and event days, by branch and time of day (teammate 1)
 
 src/
   eda_visuals.py                      Original descriptive charts
