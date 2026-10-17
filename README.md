@@ -63,7 +63,7 @@ Across the original external-driver models, calendar and available weather featu
 | Owner | Concrete responsibility | Acceptance condition |
 |---|---|---|
 | Codex teammate | Forecast/replay engine, profit optimizer, intraday Bayesian update and stockout handling, leakage/accounting tests, canonical metrics | Reproducible output, honest strong-baseline comparison, costs and service visible |
-| Claude Code teammate 1 | External evidence and branch exposure; confirm event timing, coordinates and weather provenance | Every usable feature has a source, known-at time, geography and future validation; unresolved events remain alerts |
+| Claude Code teammate 1 (Omar Al-Aghbari) | External evidence and branch exposure; confirm event timing, coordinates and weather provenance | Every usable feature has a source, known-at time, geography and future validation; unresolved events remain alerts |
 | Claude Code teammate 2 | Presentation/demo interface and pilot logging using the existing JSON/CSV contracts | Show opening plan, remaining-stock input, replenishment action, cost sensitivity, service and evidence; never present historical cards as live recommendations |
 
 **Implemented:** both forecasting candidates; external association and robustness checks; outlier dossiers; two-stage optimizer; six cost/service scenarios; CLI demo; decision JSON; six mathematical/accounting tests. **Still needed for live operation:** verified operational inputs, UI integration, capacity/lead-time handling and a controlled prospective pilot. Full team names must be added before submission; this repository does not establish all three identities.

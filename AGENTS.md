@@ -5,7 +5,7 @@
 Build the Stories Profit Planner described in README.md: actionable preparation decisions, external evidence with verified exposure, and prospective incremental contribution measurement. Read README.md and, once published, reports/deeper_research_and_build_plan.txt before changing the model or claims. Markdown is being published ahead of the local model artifacts; a missing pending artifact is not permission to invent its outputs.
 
 - Codex teammate owns src/demand_model.py, src/profit_policy.py, src/recommend.py, the new src/intraday_model.py and src/bayesian_policy.py, policy tests and generated numerical results. The intraday extension is in progress: posterior afternoon demand from observed earlier sales, with sold-out observations treated as censored. No improvement is claimed before evaluation.
-- Claude Code teammate 1 owns external evidence, geographic exposure verification and event/forecast provenance.
+- Claude Code teammate 1 (Omar Al-Aghbari, confirmed) owns external evidence, geographic exposure verification and event/forecast provenance.
 - Claude Code teammate 2 owns the presentation/demo interface and pilot logging built on the established data contracts.
 - These are collaboration boundaries, not permission to overwrite another person's uncommitted work. Coordinate contract changes. Do not launch agents or services just because this file describes multiple teammates.
 
