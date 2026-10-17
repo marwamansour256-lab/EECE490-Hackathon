@@ -1,12 +1,22 @@
 # Stories Profit Planner | EECE490 Hackathon
 
+**Current submission sprint: Basket Growth + Wejha Lab.** We are extending the planner with a trained add-on recommender and a display-layout experiment based on items bought together. The user's idea is to separate paired display items so customers encounter more of the counter. The system will compare this candidate with alternatives; placement-induced sales growth requires a pilot. [Read the shared build instructions and exact interface contracts](WEJHA_BUILD_PLAN.md) before starting work.
+
+| Start immediately | Owner | Deliverable and status |
+|---|---|---|
+| Model and backend | Codex teammate | Train/evaluate basket completion against popularity and margin baselines; generate offline recommendation/layout data; publish checked existing model work. **Implementation in progress; no new results claimed yet.** |
+| Offline interface | Claude Code teammate 2 / Marwa | New `app/wejha.html`, linked from the existing planner. Load `window.STORIES_RECOMMENDATIONS` and `window.STORIES_WEJHA`; contracts are in the build plan. Own these UI files. |
+| Business validation and experiment | Claude Code teammate 1 / Omar | New `WEJHA_PILOT.md`, separate `data/pilot/basket_pilot_template.csv`, and `reports/wejha_business_review.md`. Check browsing/service feasibility, pair evidence, margin assumptions and controlled profit measurement. Own these files. |
+
+**Sync rule:** the latest user instruction authorizes ongoing pushes of code, generated artifacts and documentation. Each owner pulls safely, preserves others' work and pushes usable milestones. Planned filenames are not evidence of a completed implementation. Existing preparation cards, pilot schemas, baseline results and the newly pulled Day Explorer remain supported.
+
 **Scope correction from the user:** outside weather, calendar, access and other context are allowed as features. Training and test **sales targets must remain Stories' own sales**. The earlier transaction-only restriction was an assistant misunderstanding. The transaction-only model below is now the control. See [EXTERNAL_CONTEXT.md](EXTERNAL_CONTEXT.md) for the expanded research, external models and every-day evidence ledger.
 
 The new working-copy implementation adds nine cached hourly weather/forecast/air-quality streams, six months of IODA internet reachability, 73 daily context columns plus the separate internet audit, **2,337 exploratory test rows** and **724 day/branch dossiers covering all 181 dates**. A separate externally conditioned order-count head improves test WAPE from **9.46% to 9.27%**; daily product-volume gains are not established, and improved item forecast error did not improve simulated profit. **23 tests pass.** No external sales dataset is used. [Source reconciliation](reports/source_reconciliation.md) supplies primary URLs missing from the teammate event registry.
 
 Analysis of January-June 2026 transactions from three anonymized branches: Harbour, Garden and Uptown. The goal is to identify decisions that improve gross profit, validate external demand signals, and distinguish measured results from business assumptions.
 
-**Team synchronization, October 17:** Markdown is published first so all three contributors can work concurrently. Code, trained artifacts and numerical files described below are implemented and checked in the Codex working copy; files not yet present on GitHub await separate code publication. The **frozen chronological half/half model using only transactions** is the control. External-context heads are the active extension, and earlier rolling/Bayesian comparisons remain separate experiments. Read [EXTERNAL_CONTEXT.md](EXTERNAL_CONTEXT.md), [EVALUATION.md](EVALUATION.md) and [MODEL_CARD.md](MODEL_CARD.md) for the applicable protocols and results.
+**Team synchronization, October 17:** all task-related code, trained artifacts and documentation may now be published continuously under the user's latest instruction. Previously checked working-copy artifacts are being integrated alongside the new recommendation sprint; files not yet on GitHub remain pending until their implementation commit. The **frozen chronological half/half model using only transactions** is the control. External-context heads remain available, and earlier rolling/Bayesian comparisons remain separate experiments. Read [WEJHA_BUILD_PLAN.md](WEJHA_BUILD_PLAN.md), [EXTERNAL_CONTEXT.md](EXTERNAL_CONTEXT.md), [EVALUATION.md](EVALUATION.md) and [MODEL_CARD.md](MODEL_CARD.md) for the applicable protocols and results.
 
 ## Transaction-only control: chronological half/half
 
