@@ -11,9 +11,11 @@ EECE490-Hackathon/
 ├── notebooks/
 │   ├── 01_eda.ipynb                # full exploratory analysis with notes
 │   ├── 02_war_impact.ipynb         # before / during / after the 2026 Lebanon war, by branch
-│   └── 03_holidays.ipynb           # public holidays and Ramadan, by branch
+│   ├── 03_holidays.ipynb           # public holidays and Ramadan, by branch
+│   └── 04_regular_customers.ipynb  # who comes regularly, their value, and who is at risk
 ├── src/
-│   └── eda_visuals.py              # script that draws the key-finding charts
+│   ├── eda_visuals.py              # script that draws the key-finding charts
+│   └── pitch_visuals.py            # charts backing the pitch
 ├── reports/
 │   └── figures/                    # saved charts (PNG)
 ├── requirements.txt
@@ -60,6 +62,16 @@ The notebook compares the period before the 2026 Lebanon war (Jan 1 to Feb 28), 
 ## Holidays and Ramadan (notebook 03)
 
 The notebook compares each of the 17 Lebanese national holidays (Jan to Jun 2026) with a normal day on the same weekday and at the same point in the growth trend, split by branch. On average, holidays are normal days (about 0%), and time of day, order value, takeaway share and product mix don't change. Ramadan shows no daytime drop and no spike after iftar. **Harbour is the exception:** 5 of its 17 holidays were unusual (where about 1 would be expected by chance), mostly busier on civic and Christian holidays, such as Labour Day (+48%) and St Maroun (+35%). The holiday dates are a list (`HOLIDAYS`) at the top of the notebook.
+
+## Regular customers (notebook 04)
+
+Identified customers are split by visits per month since their first visit: **Regular** (1.5 or more), **Occasional** (0.75 to 1.5), **Rare** (below 0.75) and **New** (first visit in the last 45 days). The thresholds are parameters at the top of the notebook.
+
+- **Regulars are 30% of identified customers but 41% of identified revenue** (about $78 each vs $51 for occasional). They come about every 13 days.
+- **Their value is frequency, not basket size:** same order value (about $9.00), items and product mix as everyone else.
+- **They aren't rewarded:** discounted on about 9% of orders, the same as other segments.
+- **They're brand-loyal, not branch-loyal:** 98-100% use two or three branches. Regulars bring in 26-27% of revenue at every branch.
+- **157 regulars (15%) are overdue** (no visit for more than twice their usual gap and at least 3 weeks), worth about $12k so far. They're a natural target for a "we miss you" offer.
 
 ## The pitch: demand is a habit, so fix the price list
 
