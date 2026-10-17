@@ -346,6 +346,7 @@ function prepBlock(branch, r) {
       <dt>One-batch comparator</dt><dd>${esc(card.one_batch_comparator_units ?? "–")}</dd>
     </dl>
     <p class="muted" style="margin:6px 0 2px">At 16:00, left on shelf → prepare more: ${Object.keys(t).map(Number).sort((x, y) => x - y).map((k) => `${k}→${t[k]}`).join(" · ") || "–"}</p>
+    <p class="muted">Cost scenario: ${usd(a.setup_usd_per_sku)} per SKU replenishment + ${usd(a.extra_usd_per_topup_unit)} per top-up unit; ${pct(a.expected_fill_floor, 0)} expected unit-fill floor. This is not a guarantee of realized service.</p>
     <p class="muted">${esc(card.status || P.status)} · trained through ${esc(card.trained_through)} · no offer uplift added to the forecast${a.instant_replenishment ? " · assumes instant replenishment" : ""}${a.capacity_unconstrained ? ", unconstrained capacity" : ""}.</p>`;
 }
 

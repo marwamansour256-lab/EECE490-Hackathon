@@ -42,14 +42,15 @@
     "  ok   all layouts use the same products",
     "  ok   pair rows have the contract fields",
     "3. Page ranking rule (function taken from wejha.html)",
-    "  ok   recommend() found in wejha.html",
+    "  ok   recommend() and the complementary rule found in wejha.html",
     "  ok   72 queries: ≤3 rows, no basket/unavailable items, no duplicates, sorted by score then name",
     "  ok   absent context falls back to branch|all|all and says so",
     "  ok   unknown anchor falls back to baseline and says so",
+    "  ok   complementary: food after drinks, drinks after food, mixed basket unchanged",
+    "  ok   preparation_data.js has 57 cards",
+    "  ok   preparation cards keyed branch|product",
+    "  ok   applicable cards have forecast, opening units and a 16:00 top-up table",
+    "  ok   no offer uplift added to any forecast",
     "\nall checks passed"
-  ],
-  "python_frontend_parity": {
-    "cases": 72,
-    "failures": 0
-  }
+  ]
 }

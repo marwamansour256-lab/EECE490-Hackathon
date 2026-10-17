@@ -1,5 +1,7 @@
 # Shared instructions for the three-person Stories project
 
+Confirmed members: Charbel Manih (202502099, mastercoder67; Codex/backend), Omar Al Aghbari (202514349, aghbar11; Claude evidence/pilot), Marwa Mansour (202505788, marwamansour256-lab; Claude interface). Read [TEAM.md](TEAM.md). Use these exact confirmed names/IDs in submission materials.
+
 ## Objective and ownership
 
 **Immediate deadline sprint:** read [WEJHA_BUILD_PLAN.md](WEJHA_BUILD_PLAN.md) first. The user now requests a basket recommendation system and a front-display ("wejha") placement experiment, connected to the preparation/evidence tools. Codex owns the new backend, evaluation and generated recommendation/layout assets; Marwa owns new `app/wejha.html` and its planner link; Omar owns new `WEJHA_PILOT.md`, the separate basket-pilot schema and business/physical-feasibility review. The build plan specifies exact filenames, output contracts, evaluation rules and acceptance criteria. Those new interfaces are planned until their implementation commit is published. Do not duplicate another owner's files or invent pending results.

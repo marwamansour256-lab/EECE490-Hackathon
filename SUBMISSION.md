@@ -1,5 +1,7 @@
 # Stories: submission and demo quickstart
 
+**Charbel Manih — 202502099 · Omar Al Aghbari — 202514349 · Marwa Mansour — 202505788.** [GitHub accounts and responsibilities](TEAM.md).
+
 The repository includes model source, trained artifacts, the original Stories CSV, cached external features, generated evaluations and an offline application. No retraining or network service is needed to open the demo.
 
 ## Run
@@ -49,4 +51,4 @@ Display placement has no observed treatment labels. Its weighted distance scores
 
 Git LF/CRLF changes are tolerated for text-source hashes; changes to data values and binary artifacts are not. Exact dependencies are recorded in `requirements-lock.txt`; cached sources permit offline numerical reproduction.
 
-Before operating in a real shop, confirm branch coordinates, storage/food-safety rules, current layout and service flow, product availability, preparation capacity/lead times, waste/labor costs and prospective pilot design. Confirm all three team members' full names/student IDs before handing in the academic submission; the repository does not establish them all.
+Before operating in a real shop, confirm branch coordinates, storage/food-safety rules, current layout and service flow, product availability, preparation capacity/lead times, waste/labor costs and prospective pilot design. All three team members' names/student IDs have been confirmed in TEAM.md.
