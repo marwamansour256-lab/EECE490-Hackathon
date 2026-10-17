@@ -43,7 +43,7 @@ We analysed Stories' January–June 2026 transactions from three branches: Harbo
 
 ### Everything we tested that did not help predict or explain sales
 
-These were tested and **not** supported. "Not supported" means the data showed no measurable, robust effect; it is not proof that the factor has no effect, especially because branch locations are unconfirmed and one-day events are hard to detect.
+The table records unsuccessful findings under the **specific tests listed**, rather than a conclusion that these factors never matter. The expanded context research also retains exploratory associations and a small monthly-calendar traffic improvement; see [EXTERNAL_CONTEXT.md](EXTERNAL_CONTEXT.md). Six months cannot establish annual seasonality, and the first purchase seen in this dataset is not a customer's acquisition date. Unknown branch exposure, sparse events and limited power constrain negative findings.
 
 | Factor tested | How we tested it | Result | Where |
 |---|---|---|---|
