@@ -32,20 +32,20 @@ python src/explain_day.py --date 2026-06-24 --branch "All branches"
 - Select Harbour and morning in Basket Growth, add Butter Croissant, and inspect the ranked add-ons, margins, support and smoothed probabilities. Mark the top item unavailable to see the recommendation change.
 - In Wejha Lab, select a pastry pair and compare its distance in three arrangements. The separated layout is the proposed experiment, not a measured profit result.
 - In the profit tab, keep incremental acceptance at zero first. Enter a clearly labeled assumption and costs to see the break-even requirement. Accuracy is not acceptance.
-- In the planner, load a preparation card or use the CLI example. For Turkey & Cheese Sandwich, the frozen June30 scenario forecasts 4.04 units, prepares 4 at opening and tops up 4 at 16:00 when none remain.
+- In the planner, load a preparation card or use the CLI example. For Turkey & Cheese Sandwich, the frozen June 30 scenario (selected v2 method) forecasts 3.67 units, prepares 4 at opening and tops up 4 at 16:00 when none remain. The planner's built-in example card still shows the original method's 4.04.
 - In Day Explorer, compare an unusual day's traffic, basket and margin changes; inspect external-event evidence and unresolved geography. Accounting changes are not causal event attribution.
 
 ## Evidence the submission can defend
 
 The recommendation model is selected within Jan–Mar and frozen for Apr–Jun. In 8,801 multi-product test orders, recovered-item margin@3 is $0.5080/order versus $0.4956 for margin-popularity (+2.51%). Hit@3 is 13.29%; plain popularity is better at 13.74%. These are masked-basket relevance metrics, not measured incremental purchases.
 
-The preparation control improves a conditional one-batch contribution simulation by $1,019.13 versus a seasonal-growth baseline at similar realized service. Another frozen baseline earns more but serves fewer units. Inventory, waste, capacity and actual operating policy are unobserved; do not call the simulation achieved savings.
+The preparation control improves a conditional one-batch contribution simulation by $1,019.13 versus a seasonal-growth baseline at similar realized service. The selected v2 version (level calibration and full-training item shares, both chosen on the last 21 training dates) improves category WAPE from 25.21% to 24.74% and adds a further $1,010 (interval about $884-$1,126) with 528 fewer unsold units, while realized fulfillment stays above 90% (90.9%). Another frozen baseline earns more but serves fewer units. Inventory, waste, capacity and actual operating policy are unobserved; do not call the simulation achieved savings.
 
 Display placement has no observed treatment labels. Its weighted distance scores compare the proposed mechanism; the profit effect must be measured against the company's current arrangement. Public holidays/weather/war/access evidence is sourced but branch aliases do not establish real exposure or customer religion.
 
 ## Checks and remaining company inputs
 
-`python src/verify_submission.py` runs 38 unit tests and four artifact-reconciliation scripts. `node app/check_ui.js` checks the actual frontend ranking code, schemas and JavaScript syntax; the recorded run passed 72 query checks. Python/frontend parity cases are also exported. Visual browser review was unavailable in the Codex session; no visual check is claimed.
+`python src/verify_submission.py` runs 39 unit tests and four artifact-reconciliation scripts. `node app/check_ui.js` checks the actual frontend ranking code, schemas and JavaScript syntax; the recorded run passed 72 query checks. Python/frontend parity cases are also exported. Visual browser review was unavailable in the Codex session; no visual check is claimed.
 
 Git LF/CRLF changes are tolerated for text-source hashes; changes to data values and binary artifacts are not. Exact dependencies are recorded in `requirements-lock.txt`; cached sources permit offline numerical reproduction.
 

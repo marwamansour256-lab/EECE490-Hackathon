@@ -33,9 +33,12 @@ The operational replenishment demonstration can accept observed remaining stock 
 
 | Model | Category WAPE | Perishable item WAPE | Contribution scenario | Fulfillment |
 |---|---:|---:|---:|---:|
-| Trained Poisson | 25.2077% | 52.0318% | $10,934.29 | 92.0921% |
+| **Trained Poisson v2 (selected)** | **24.7368%** | **51.5707%** | **$11,944.21** | **90.9176%** |
+| Trained Poisson (original) | 25.2077% | 52.0318% | $10,934.29 | 92.0921% |
 | Seasonal plus training-only growth | 26.6435% | 53.5775% | $9,915.15 | 92.1939% |
 | Frozen seasonal | 28.2181% | 53.7521% | $13,409.52 | 88.2164% |
+
+v2 multiplies the original forecast by a level calibration factor (0.942, inner-validation actual / predicted) and allocates categories to items with shares from all 90 training dates (smoothing 10). Both were chosen on the last 21 training dates before scoring April-June; see MODEL_CARD.md.
 
 WAPE = sum of absolute forecast errors divided by total actual units. The model reduces category WAPE by 1.44 percentage points versus the growth baseline. In the one-batch scenario it improves contribution by $1,019.13, reduces unsold stock by 240 units and fulfills 13 fewer units. Fulfillment differs by about 0.10 percentage points.
 
