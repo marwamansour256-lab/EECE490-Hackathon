@@ -6,7 +6,7 @@
 
 | Start immediately | Owner | Deliverable and status |
 |---|---|---|
-| Model and backend | Codex teammate | **Implemented and published:** frozen basket recommender, five candidate comparisons, offer/preparation integration, external-context models, constrained layout optimizer and generated comparisons; all 39 tests pass. |
+| Model and backend | Codex teammate | **Implemented and published:** frozen basket recommender, five candidate comparisons, offer/preparation integration, external-context models, constrained layout optimizer and generated comparisons; all 44 tests pass. |
 | Offline interface | Claude Code teammate 2 / Marwa | New `app/wejha.html`, linked from the existing planner. Load `window.STORIES_RECOMMENDATIONS` and `window.STORIES_WEJHA`; contracts are in the build plan. Own these UI files. |
 | Business validation and experiment | Claude Code teammate 1 / Omar | New `WEJHA_PILOT.md`, separate `data/pilot/basket_pilot_template.csv`, and `reports/wejha_business_review.md`. Check browsing/service feasibility, pair evidence, margin assumptions and controlled profit measurement. Own these files. |
 
@@ -16,7 +16,7 @@
 
 **Run the integrated demo:** open [`app/wejha.html`](app/wejha.html) in a browser for basket recommendations, availability controls, three display arrangements and an editable incremental-profit scenario. [`app/planner.html`](app/planner.html) links to it and retains preparation planning and the every-day diagnostic. Both pages work offline with the committed generated scripts.
 
-**Offer → stock → profit integration is implemented:** `python src/growth_plan.py --branch Harbour --item Espresso --daypart morning --output reports/growth_demo.json` produces complementary food offers, the frozen preparation plan for each food item, an explicit zero-default incremental-profit scenario, and a separately labeled retrospective daily diagnostic. It loads committed artifacts and adds no invented offer uplift to demand. `python src/growth_plan.py --export-preparation` produces 57 historical perishable cards in `app/preparation_data.js`. [Integration contract and optional UI additions](GROWTH_INTEGRATION.md). **39 total tests pass.** The complementary filter is a business rule; the evaluation numbers below belong to unrestricted ranking.
+**Offer → stock → profit integration is implemented:** `python src/growth_plan.py --branch Harbour --item Espresso --daypart morning --output reports/growth_demo.json` produces complementary food offers, the frozen preparation plan for each food item, an explicit zero-default incremental-profit scenario, and a separately labeled retrospective daily diagnostic. It loads committed artifacts and adds no invented offer uplift to demand. `python src/growth_plan.py --export-preparation` produces 57 historical perishable cards in `app/preparation_data.js`. [Integration contract and optional UI additions](GROWTH_INTEGRATION.md). **44 total tests pass.** The complementary filter is a business rule; the evaluation numbers below belong to unrestricted ranking.
 
 ```bash
 pip install -r requirements.txt
@@ -37,7 +37,7 @@ The published external-context implementation includes nine cached hourly weathe
 
 Analysis of January-June 2026 transactions from three anonymized branches: Harbour, Garden and Uptown. The goal is to identify decisions that improve gross profit, validate external demand signals, and distinguish measured results from business assumptions.
 
-**Published implementation:** demand, inventory, external-context, recommendation and layout code, saved models, browser assets and numerical audits are in the repository. `python src/verify_submission.py` runs all 39 tests and four artifact-verification scripts. Browser script/schema/ranking checks are recorded in `reports/ui_contract_qa.json`; the committed UI screenshots in reports/figures/ui were visually inspected; this Codex session had no connected live browser. The **frozen chronological half/half transaction-only model** remains the control, and earlier rolling/Bayesian comparisons remain separate experiments. [Evaluation protocols](EVALUATION.md), [model card](MODEL_CARD.md).
+**Published implementation:** demand, inventory, external-context, recommendation and layout code, saved models, browser assets and numerical audits are in the repository. `python src/verify_submission.py` runs all 44 tests and four artifact-verification scripts. Browser script/schema/ranking checks are recorded in `reports/ui_contract_qa.json`; the committed UI screenshots in reports/figures/ui were visually inspected; this Codex session had no connected live browser. The **frozen chronological half/half transaction-only model** remains the control, and earlier rolling/Bayesian comparisons remain separate experiments. [Evaluation protocols](EVALUATION.md), [model card](MODEL_CARD.md).
 
 ## Transaction-only control: chronological half/half
 
@@ -130,7 +130,7 @@ Across the original external-driver models, calendar and available weather featu
 | Claude Code teammate 1 (Omar Al-Aghbari) | External evidence and branch exposure; confirm event timing, coordinates and weather provenance | Every usable feature has a source, known-at time, geography and future validation; unresolved events remain alerts |
 | Claude Code teammate 2 | Presentation/demo interface and pilot logging using the existing JSON/CSV contracts | Show opening plan, remaining-stock input, replenishment action, cost sensitivity, service and evidence; never present historical cards as live recommendations |
 
-**Implemented and committed:** trained half/half model and saved artifact; forecast baselines; external-context traffic/volume/mix models; every-day dossiers; two-stage optimizer; cost/service scenarios; supplemental intraday Gamma-Poisson/NB comparisons; basket recommender; display optimizer; CLI integration; offline UI and decision data; 39 tests plus artifact/frontend checks. **Still needed for live operation:** verified operational inputs, capacity/lead-time handling and a controlled prospective profit pilot. Confirmed team identities are in [TEAM.md](TEAM.md).
+**Implemented and committed:** trained half/half model and saved artifact; forecast baselines; external-context traffic/volume/mix models; every-day dossiers; two-stage optimizer; cost/service scenarios; supplemental intraday Gamma-Poisson/NB comparisons; basket recommender; display optimizer; CLI integration; offline UI and decision data; 44 tests plus artifact/frontend checks. **Still needed for live operation:** verified operational inputs, capacity/lead-time handling and a controlled prospective profit pilot. Confirmed team identities are in [TEAM.md](TEAM.md).
 
 Start the company pilot with shadow decisions and measured preparation, waste, stockouts and batch labor. Then randomize eligible branch-days within branch and weekday between current practice and the planner, after safety and service rules are agreed. Choose the duration using baseline profit variance and a business-relevant minimum detectable gain; do not claim three branches automatically provide sufficient power. Evaluate incremental contribution after waste and extra labor, customer fulfillment and overrides. Freeze the policy before the pilot. The [build plan](reports/deeper_research_and_build_plan.txt) gives the data contract and demo narrative; [AGENTS.md](AGENTS.md) is the shared work contract for all three contributors.
 
@@ -294,9 +294,9 @@ Specific category pairs do *not* go together beyond chance: the strongest lift i
 This checks whether an outside factor predicts sales on days the model never saw. In-sample correlations are not enough.
 
 - **Factors:** temperature, rain, rainy-day flag and wind at Beirut, Batroun and Broummana; public holidays (the notebook 03 list); Ramadan; the war period (March 2-April 16); 11 Beirut strike days; and five short events from teammate 1's event list (`data/external/external_events.json`): the April 8 strikes, the first ceasefire day, AUB commencement (June 5-6), the March 29 clock change and the Eid al-Fitr closure (March 20-23).
-- **Targets:** each factor is tested only on targets with a plausible mechanism (orders, iced/hot drink units, takeaway orders, evening orders), giving 39 tests.
+- **Targets:** each factor is tested only on targets with a plausible mechanism (orders, iced/hot drink units, takeaway orders, evening orders), giving 44 tests.
 - **Gain:** the baseline is a transactions-only Poisson model of branch × weekday + branch growth, fitted on Jan-Mar and scored on Apr-Jun (the EVALUATION.md split), then the reverse. Gain is the reduction in held-out Poisson deviance when the factor is added.
-- **Placebo:** the gain must beat versions of the factor shifted to the wrong dates (154 circular shifts of 14-167 days), with a Holm correction across all 39 tests.
+- **Placebo:** the gain must beat versions of the factor shifted to the wrong dates (154 circular shifts of 14-167 days), with a Holm correction across all 44 tests.
 - **Positive control:** a known drop is planted in the real counts, and we record how often the test detects it.
 
 | Result | Value |
@@ -308,7 +308,7 @@ This checks whether an outside factor predicts sales on days the model never saw
 | Planted drop detected (11 strike days) | −20%: 100% · −10%: 1% |
 | Event-list factors (5 events, 6 tests) | Not testable by this rule: each event's days fall in one half only, so it can't be scored on unseen flagged days. The in-sample screen with a false-discovery correction is in notebook 09 |
 
-**Interpretation:** none of these factors passes this particular two-direction/Holm rule. The planted controls show high detection for the specified 20% scenarios, not a guarantee of power against every real 20% effect; smaller, local, menu or timing effects remain possible. The strongest single result disappears after correcting for 39 tests. The expanded [context research](EXTERNAL_CONTEXT.md) tests different mechanisms and keeps its associations and forward predictive comparisons separate from this stronger pass rule.
+**Interpretation:** none of these factors passes this particular two-direction/Holm rule. The planted controls show high detection for the specified 20% scenarios, not a guarantee of power against every real 20% effect; smaller, local, menu or timing effects remain possible. The strongest single result disappears after correcting for 44 tests. The expanded [context research](EXTERNAL_CONTEXT.md) tests different mechanisms and keeps its associations and forward predictive comparisons separate from this stronger pass rule.
 
 **Limits:** weather is realized weather, so this is a retrospective test with perfect weather knowledge. Branch locations are unverified. Conflict dates were chosen after the fact. Factor effects are shared across branches, with no branch interactions. Passing would show predictive association, not causation. None of these factors enter the strict model. Outputs: `reports/external_factor_test.{csv,json}` and `reports/figures/external_factor_holdout.png`. Run `python src/external_factor_test.py`, or add `--quick` for a quick run. The external-evidence teammate can add a factor by adding one daily series to `factors` and its targets to `PLAN`.
 

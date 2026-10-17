@@ -48,9 +48,11 @@ Display placement has no observed treatment labels. Its weighted distance scores
 
 ## Checks and remaining company inputs
 
-`python src/verify_submission.py` runs 39 unit tests and four artifact-reconciliation scripts. `node app/check_ui.js` checks the actual frontend ranking code, schemas and JavaScript syntax; the recorded run passed 72 query checks. Python/frontend parity also passes all **144 queries across both offer modes**. `python src/audit_item_share_selection.py` reproduces the v2 model's 20-candidate training-only share search. The committed UI screenshots in reports/figures/ui were visually inspected. This Codex session had no connected live browser; screenshot review and code-level checks are distinguished from live interaction testing.
+`python src/verify_submission.py` runs 44 unit tests and four artifact-reconciliation scripts. `node app/check_ui.js` checks the actual frontend ranking code, schemas and JavaScript syntax; the recorded run passed 72 query checks. Python/frontend parity also passes all **144 queries across both offer modes**. `python src/audit_item_share_selection.py` reproduces the v2 model's 20-candidate training-only share search. The committed UI screenshots in reports/figures/ui were visually inspected. This Codex session had no connected live browser; screenshot review and code-level checks are distinguished from live interaction testing.
 
 Git LF/CRLF changes are tolerated for text-source hashes; changes to data values and binary artifacts are not. Exact dependencies are recorded in `requirements-lock.txt`; cached sources permit offline numerical reproduction.
+
+Additional linear, tree, random-forest and XGBoost comparisons are committed as experimental checks. XGBoost is not used by the selected models or core verification; install `requirements-experiments.txt` only to reproduce that optional comparison (its recorded version is 3.4.1). Existing comparison reports are available without retraining.
 
 Before operating in a real shop, confirm branch coordinates, storage/food-safety rules, current layout and service flow, product availability, preparation capacity/lead times, waste/labor costs and prospective pilot design. All three team members' names/student IDs have been confirmed in TEAM.md.
 

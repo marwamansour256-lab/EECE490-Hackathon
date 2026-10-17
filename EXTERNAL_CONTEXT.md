@@ -15,7 +15,7 @@ The question for every date is: **what changed financially, which external mecha
 - **724 reconciled daily dossiers:** all 181 dates, network plus Garden/Harbour/Uptown. Includes sources, counterchecks, uncertainty/status, possible actions and unexplained demand.
 - **23 tests pass**, including target isolation, source-stream separation, fasting exceptions, missing-sample handling and exact accounting/model reconciliation. Independent verification also reconciles 49,140 item/day/method predictions and every dossier.
 
-Implementation source, trained artifacts, cached external inputs and generated audit outputs are committed to GitHub. A clone can run these scripts without retrieving fresh external data. `python src/verify_submission.py` checks the complete implementation; the current suite has 39 tests plus four artifact-verification scripts.
+Implementation source, trained artifacts, cached external inputs and generated audit outputs are committed to GitHub. A clone can run these scripts without retrieving fresh external data. `python src/verify_submission.py` checks the complete implementation; the current suite has 44 tests plus four artifact-verification scripts.
 
 ## Mechanisms beyond generic weather/holiday labels
 

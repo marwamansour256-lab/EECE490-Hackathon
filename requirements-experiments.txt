@@ -1,0 +1,4 @@
+# Optional comparison scripts; the core offline demo and verification do not need XGBoost.
+-r requirements-lock.txt
+# Version recorded in the teammate's reports/xgboost_check.json experiment.
+xgboost==3.4.1
