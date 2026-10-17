@@ -12,6 +12,20 @@ We analysed Stories' January–June 2026 transactions from three branches: Harbo
 
 ---
 
+> ### Where is the model?
+>
+> | What | File |
+> |---|---|
+> | **Train the model** (Jan–Mar data, tested on Apr–Jun) | [`src/strict_model.py`](src/strict_model.py) → `python src/strict_model.py` |
+> | **Use the model** (forecast + how many to prepare) | [`src/predict_strict.py`](src/predict_strict.py) → `python src/predict_strict.py --branch Harbour --product "Turkey & Cheese Sandwich" --remaining 0` |
+> | **The trained model file** | [`models/strict_half_model.joblib`](models/strict_half_model.joblib) (selected method: `regularized_poisson_v2`) |
+> | **Its results** | [`reports/strict_half_results.json`](reports/strict_half_results.json) and [`reports/strict_half_metrics.csv`](reports/strict_half_metrics.csv) |
+> | **How it works, in words** | [`MODEL_CARD.md`](MODEL_CARD.md) |
+> | **Models it beat** (linear regression, decision tree, random forest, XGBoost) | [`src/linear_baseline_check.py`](src/linear_baseline_check.py), [`src/tree_models_check.py`](src/tree_models_check.py), [`src/xgboost_check.py`](src/xgboost_check.py) |
+> | **Add-on recommender** (second model) | [`src/basket_recommender.py`](src/basket_recommender.py), trained file [`models/basket_recommender.json`](models/basket_recommender.json) |
+>
+> Every saved model is listed in [`models/README.md`](models/README.md).
+
 ## 1. Business insights
 
 | # | What we found | Evidence | What Stories should do |
