@@ -1,11 +1,11 @@
 {
-  "verified_at_utc": "2026-10-17T14:27:44.155168+00:00",
+  "verified_at_utc": "2026-10-17T14:35:04.120459+00:00",
   "packages": {
-    "numpy": "2.5.1",
-    "pandas": "3.0.3",
-    "scipy": "1.18.0",
-    "scikit-learn": "1.9.0",
-    "joblib": "1.5.3"
+    "numpy": "2.4.6",
+    "pandas": "3.0.6",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0"
   },
   "hash_convention": "SHA256 of LF-normalized text; binary bytes unchanged",
   "sha256": {
@@ -16,10 +16,10 @@
     "models/basket_recommender.json": "5b1d6fa5907d30f0c42b9e09e6fc7eaff97e55322718803c1c20cce42baaac42",
     "app/recommendation_data.js": "d6ebaa19e6c249906bc06875cb0552e1b3b923f8e023d8a109bafe325ac6e607",
     "app/wejha_data.js": "388048c9fc2de2dc8bb045a310630f8f16e2e8f9614d1fa0a19523d9507a6f33",
-    "app/preparation_data.js": "e78819f2ac8128836802f541c24ac6e606a394081fc537413dd469128529c62b",
+    "app/preparation_data.js": "4b5a67534eddf3292eacc18b71bb40946d805f1ef329e43bb2f397aa08384328",
     "reports/recommendation_results.json": "a440ff102e29a3e0c564549ebbe11d0116d15098e9b21bdc99d9b93236284dde",
     "reports/wejha_layouts.json": "26643daf1b1445d669c68b1c33ce6749668d79b0108f5c656892833c2a6a9b35",
-    "reports/growth_demo.json": "d5a9d619699f350796054384e8a9853be095f659504b8b0001087f29135ccf54"
+    "reports/growth_demo.json": "ef431f2541a514ad23d1de606666453f435a63e9e0689c129bf2e9f62be08de3"
   },
   "checks_passed": [
     "Training-only selection and frozen Jan-Mar artifact metadata",

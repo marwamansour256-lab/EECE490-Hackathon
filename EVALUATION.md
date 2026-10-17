@@ -40,7 +40,7 @@ The operational replenishment demonstration can accept observed remaining stock 
 
 v2 multiplies the original forecast by a level calibration factor (0.942, inner-validation actual / predicted) and allocates categories to items with shares from all 90 training dates (smoothing 10). Both were chosen on the last 21 training dates before scoring April-June; see MODEL_CARD.md.
 
-WAPE = sum of absolute forecast errors divided by total actual units. The model reduces category WAPE by 1.44 percentage points versus the growth baseline. In the one-batch scenario it improves contribution by $1,019.13, reduces unsold stock by 240 units and fulfills 13 fewer units. Fulfillment differs by about 0.10 percentage points.
+WAPE = sum of absolute forecast errors divided by total actual units. The original model reduces category WAPE by 1.44 percentage points versus the growth baseline. In the one-batch scenario the original improves contribution by $1,019.13, reduces unsold stock by 240 units and fulfills 13 fewer units. Selected v2 improves category WAPE further but fulfills 150 fewer units than the original (90.92% versus 92.09%); its additional $1,009.92 simulated contribution must be read with that service tradeoff.
 
 A circular seven-day block resampling of test-day contribution differences gives an approximate 95% interval of **$770-$1,276** for the difference versus the growth baseline. This describes uncertainty conditional on fixed forecasts and hypothetical costs, not uncertainty in missing stockouts, real labor costs, model selection or future company ROI. It does not turn the previously explored test period into independent confirmation.
 
@@ -66,7 +66,7 @@ python -m unittest discover -s tests -v
 - `reports/strict_half_manifest.json`: package versions, artifact/input/source hashes and reconciliation checks.
 - `reports/figures/strict_half_profit_service.png`: presentation figure showing accuracy and the service/profit tradeoff.
 
-These implementation artifacts are committed to GitHub, including the preparation-model source and saved joblib artifact. Tests verify that changing test labels does not change the frozen model/baseline predictions and check economics, mathematical inference and inventory accounting. Independent verification reconciles all **36,855** item-day-method records, category-to-item forecast sums, stock/demand/cash accounting, fixed test-period economics and predictions freshly produced from the saved model. `python src/verify_submission.py` runs all 38 tests and four artifact checks. Text-source provenance accepts only Git LF/CRLF conversion; binary models require exact bytes.
+These implementation artifacts are committed to GitHub, including the preparation-model source and saved joblib artifact. Tests verify that changing test labels does not change the frozen model/baseline predictions and check economics, mathematical inference and inventory accounting. Independent verification reconciles all **49,140** item-day-method records across four methods, retaining the original three comparisons, category-to-item forecast sums, stock/demand/cash accounting, fixed test-period economics and predictions freshly produced from the saved model. `python src/verify_submission.py` runs all 39 tests and four artifact checks. Text-source provenance accepts only Git LF/CRLF conversion; binary models require exact bytes.
 
 ## Interpretation limits
 

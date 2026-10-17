@@ -1,27 +1,27 @@
 {
-  "generated_at_utc": "2026-10-17T14:27:39.033146+00:00",
-  "base_commit": "31ee5b085f60360c90ee1125132e196171115112",
-  "python": "3.14.6",
+  "generated_at_utc": "2026-10-17T14:34:00.572329+00:00",
+  "base_commit": "8abdd9da7d933c522ef4e5931c26bdd3c093814b",
+  "python": "3.11.9",
   "packages": {
-    "pandas": "3.0.3",
-    "numpy": "2.5.1",
-    "scipy": "1.18.0",
-    "scikit-learn": "1.9.0",
+    "pandas": "3.0.6",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.1",
     "statsmodels": "0.15.0",
-    "matplotlib": "3.11.0"
+    "matplotlib": "3.11.2"
   },
   "sha256": {
-    "data/stories_transactions.csv": "f1672e728c28295b2b802d878fd38a158ba039827b429355e8438ee0463237a1",
+    "data/stories_transactions.csv": "8375e91c2bebf84261e2b92b67ebf76c42f1af434322a7f2ac2b7f1ab3bb5c71",
     "data/external/outlier_event_registry.json": "66c7b45d2a29c0f08088583a5277c62b919d1754df7b79018c6484994a815dcc",
-    "data/external/macro_context_audit.json": "e46283529d4f3ad365312f1220a70f35cc86189b15a9217d5f0fde5abb93775b",
-    "src/profit_policy.py": "1e5e6a9861a120782bc867c0c5e9bc4492d7c15fe0bbaf2c46c2d3503fc6cb78",
-    "src/outlier_forensics.py": "461e9341a7af989093b653a7731b6b2d3b616facf8d1e980a6d5279faf76fb19",
-    "src/recommend.py": "2703630686bf0e70dafdf9fb77315ccd86c6233d44b52bc85120834073192c98",
-    "src/demand_model.py": "ea32c70cd72a9cd8e3a3897a1e2933dfb710969478b9b2865a636be5ee42f58e",
+    "data/external/macro_context_audit.json": "ceafd12629c1b6ffa16be3ab378ceb7bd2de38ea561c19019391a8a4d4028519",
+    "src/profit_policy.py": "c2a032f12f0af5985ce4a453eb662a813627363428391563f76e8a43a2ede221",
+    "src/outlier_forensics.py": "437c6970fe2b48d0404b01983aeaa1b3936194d493895e2cd3ef2073d857244a",
+    "src/recommend.py": "dff264f15d5e050762892af3ff5c2d70632049c5d539099e03b1dc6c04c9d380",
+    "src/demand_model.py": "7803ddb0204acd52b22d7b62a23d91feb9bc6f193c56bf3cec64b5991f785aa7",
     "reports/two_stage_replay.csv": "666e2c5cb72437d235cbeddf4881de140e8014e6a7b3cd30071807459a530f61",
     "reports/two_stage_results.json": "05b41de1dc976869431f3bdd8ea0565f3a4606c335467ec01262a52955c8e25f",
     "reports/decision_cards.json": "8d0f912f22c3943ce777454cf0f36da89e21c5e52ef8ede2fd6a2d2ff4085b9e",
-    "tests/test_profit_policy.py": "0a1daff0d2c4aca38b159c17c9644ececf4c64cff4b45bf50c5d3c15e8c17ced"
+    "tests/test_profit_policy.py": "d9c7d83a4aec937830de8ec105529e2cf520014d4c6d650e6927de1d4739c6a9"
   },
   "assertions_passed": [
     "20520 unique scenario/forecast/item/day replay records",

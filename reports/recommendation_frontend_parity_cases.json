@@ -7,6 +7,22 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Iced Latte",
+      "Classic Matcha",
+      "Cold Brew"
+    ]
+  },
+  {
+    "branch": "Garden",
+    "daypart": "all",
+    "cohort": "all",
+    "basket": [],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
@@ -23,10 +39,28 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
       "Vanilla Latte"
+    ]
+  },
+  {
+    "branch": "Garden",
+    "daypart": "all",
+    "cohort": "all",
+    "basket": [
+      "Espresso"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
+    "expected": [
+      "Butter Croissant",
+      "Chicken Pesto Sandwich",
+      "Cinnamon Roll"
     ]
   },
   {
@@ -40,6 +74,25 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Classic Matcha",
+      "Iced Latte",
+      "Strawberry Matcha"
+    ]
+  },
+  {
+    "branch": "Garden",
+    "daypart": "all",
+    "cohort": "all",
+    "basket": [
+      "Butter Croissant",
+      "Chocolate Cookie"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Classic Matcha",
       "Iced Latte",
@@ -54,6 +107,22 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Iced Latte",
+      "Classic Matcha",
+      "Cold Brew"
+    ]
+  },
+  {
+    "branch": "Garden",
+    "daypart": "all",
+    "cohort": "regular",
+    "basket": [],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
@@ -70,10 +139,28 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
       "Vanilla Latte"
+    ]
+  },
+  {
+    "branch": "Garden",
+    "daypart": "all",
+    "cohort": "regular",
+    "basket": [
+      "Espresso"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
+    "expected": [
+      "Butter Croissant",
+      "Chicken Pesto Sandwich",
+      "Cinnamon Roll"
     ]
   },
   {
@@ -87,6 +174,25 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Classic Matcha",
+      "Iced Latte",
+      "Cold Brew"
+    ]
+  },
+  {
+    "branch": "Garden",
+    "daypart": "all",
+    "cohort": "regular",
+    "basket": [
+      "Butter Croissant",
+      "Chocolate Cookie"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Classic Matcha",
       "Iced Latte",
@@ -101,6 +207,22 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Iced Latte",
+      "Avocado Toast",
+      "Vanilla Latte"
+    ]
+  },
+  {
+    "branch": "Garden",
+    "daypart": "morning",
+    "cohort": "all",
+    "basket": [],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Iced Latte",
       "Avocado Toast",
@@ -117,9 +239,45 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
+      "Vanilla Latte"
+    ]
+  },
+  {
+    "branch": "Garden",
+    "daypart": "morning",
+    "cohort": "all",
+    "basket": [
+      "Espresso"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
+    "expected": [
+      "Butter Croissant",
+      "Chicken Pesto Sandwich",
+      "Cinnamon Roll"
+    ]
+  },
+  {
+    "branch": "Garden",
+    "daypart": "morning",
+    "cohort": "all",
+    "basket": [
+      "Butter Croissant",
+      "Chocolate Cookie"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "unrestricted",
+    "expected": [
+      "Classic Matcha",
+      "Iced Latte",
       "Vanilla Latte"
     ]
   },
@@ -134,6 +292,7 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "complementary",
     "expected": [
       "Classic Matcha",
       "Iced Latte",
@@ -148,6 +307,22 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Classic Matcha",
+      "Iced Latte",
+      "Caramel Latte"
+    ]
+  },
+  {
+    "branch": "Garden",
+    "daypart": "morning",
+    "cohort": "regular",
+    "basket": [],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Classic Matcha",
       "Iced Latte",
@@ -164,10 +339,28 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
       "Vanilla Latte"
+    ]
+  },
+  {
+    "branch": "Garden",
+    "daypart": "morning",
+    "cohort": "regular",
+    "basket": [
+      "Espresso"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
+    "expected": [
+      "Butter Croissant",
+      "Chicken Pesto Sandwich",
+      "Cinnamon Roll"
     ]
   },
   {
@@ -181,6 +374,25 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Classic Matcha",
+      "Iced Latte",
+      "Cold Brew"
+    ]
+  },
+  {
+    "branch": "Garden",
+    "daypart": "morning",
+    "cohort": "regular",
+    "basket": [
+      "Butter Croissant",
+      "Chocolate Cookie"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Classic Matcha",
       "Iced Latte",
@@ -195,6 +407,22 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Iced Latte",
+      "Cappuccino",
+      "Classic Matcha"
+    ]
+  },
+  {
+    "branch": "Garden",
+    "daypart": "midday",
+    "cohort": "all",
+    "basket": [],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Iced Latte",
       "Cappuccino",
@@ -211,10 +439,28 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
       "Vanilla Latte"
+    ]
+  },
+  {
+    "branch": "Garden",
+    "daypart": "midday",
+    "cohort": "all",
+    "basket": [
+      "Espresso"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
+    "expected": [
+      "Butter Croissant",
+      "Chicken Pesto Sandwich",
+      "Cinnamon Roll"
     ]
   },
   {
@@ -228,6 +474,25 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Classic Matcha",
+      "Iced Latte",
+      "Cold Brew"
+    ]
+  },
+  {
+    "branch": "Garden",
+    "daypart": "midday",
+    "cohort": "all",
+    "basket": [
+      "Butter Croissant",
+      "Chocolate Cookie"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Classic Matcha",
       "Iced Latte",
@@ -242,6 +507,22 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Iced Latte",
+      "Classic Matcha",
+      "Cold Brew"
+    ]
+  },
+  {
+    "branch": "Garden",
+    "daypart": "midday",
+    "cohort": "regular",
+    "basket": [],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
@@ -258,10 +539,28 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
       "Vanilla Latte"
+    ]
+  },
+  {
+    "branch": "Garden",
+    "daypart": "midday",
+    "cohort": "regular",
+    "basket": [
+      "Espresso"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
+    "expected": [
+      "Butter Croissant",
+      "Chicken Pesto Sandwich",
+      "Egg Sandwich"
     ]
   },
   {
@@ -275,6 +574,25 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Classic Matcha",
+      "Iced Latte",
+      "Cold Brew"
+    ]
+  },
+  {
+    "branch": "Garden",
+    "daypart": "midday",
+    "cohort": "regular",
+    "basket": [
+      "Butter Croissant",
+      "Chocolate Cookie"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Classic Matcha",
       "Iced Latte",
@@ -289,6 +607,22 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Iced Latte",
+      "Classic Matcha",
+      "Cold Brew"
+    ]
+  },
+  {
+    "branch": "Garden",
+    "daypart": "evening",
+    "cohort": "all",
+    "basket": [],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
@@ -305,10 +639,28 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
       "Vanilla Latte"
+    ]
+  },
+  {
+    "branch": "Garden",
+    "daypart": "evening",
+    "cohort": "all",
+    "basket": [
+      "Espresso"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
+    "expected": [
+      "Butter Croissant",
+      "Egg Sandwich",
+      "Chicken Pesto Sandwich"
     ]
   },
   {
@@ -322,6 +674,25 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Classic Matcha",
+      "Iced Latte",
+      "Cold Brew"
+    ]
+  },
+  {
+    "branch": "Garden",
+    "daypart": "evening",
+    "cohort": "all",
+    "basket": [
+      "Butter Croissant",
+      "Chocolate Cookie"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Classic Matcha",
       "Iced Latte",
@@ -336,6 +707,22 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Iced Latte",
+      "Iced Mocha",
+      "Classic Matcha"
+    ]
+  },
+  {
+    "branch": "Garden",
+    "daypart": "evening",
+    "cohort": "regular",
+    "basket": [],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Iced Latte",
       "Iced Mocha",
@@ -352,10 +739,28 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
       "Vanilla Latte"
+    ]
+  },
+  {
+    "branch": "Garden",
+    "daypart": "evening",
+    "cohort": "regular",
+    "basket": [
+      "Espresso"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
+    "expected": [
+      "Butter Croissant",
+      "Chicken Pesto Sandwich",
+      "Egg Sandwich"
     ]
   },
   {
@@ -369,6 +774,25 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Classic Matcha",
+      "Iced Latte",
+      "Cold Brew"
+    ]
+  },
+  {
+    "branch": "Garden",
+    "daypart": "evening",
+    "cohort": "regular",
+    "basket": [
+      "Butter Croissant",
+      "Chocolate Cookie"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Classic Matcha",
       "Iced Latte",
@@ -383,6 +807,22 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Iced Latte",
+      "Classic Matcha",
+      "Strawberry Matcha"
+    ]
+  },
+  {
+    "branch": "Harbour",
+    "daypart": "all",
+    "cohort": "all",
+    "basket": [],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
@@ -399,10 +839,28 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
       "Vanilla Latte"
+    ]
+  },
+  {
+    "branch": "Harbour",
+    "daypart": "all",
+    "cohort": "all",
+    "basket": [
+      "Espresso"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
+    "expected": [
+      "Chicken Pesto Sandwich",
+      "Butter Croissant",
+      "Cinnamon Roll"
     ]
   },
   {
@@ -416,6 +874,25 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Classic Matcha",
+      "Iced Latte",
+      "Strawberry Matcha"
+    ]
+  },
+  {
+    "branch": "Harbour",
+    "daypart": "all",
+    "cohort": "all",
+    "basket": [
+      "Butter Croissant",
+      "Chocolate Cookie"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Classic Matcha",
       "Iced Latte",
@@ -430,6 +907,22 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Iced Latte",
+      "Classic Matcha",
+      "Strawberry Matcha"
+    ]
+  },
+  {
+    "branch": "Harbour",
+    "daypart": "all",
+    "cohort": "regular",
+    "basket": [],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
@@ -446,10 +939,28 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
       "Chicken Pesto Sandwich"
+    ]
+  },
+  {
+    "branch": "Harbour",
+    "daypart": "all",
+    "cohort": "regular",
+    "basket": [
+      "Espresso"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
+    "expected": [
+      "Chicken Pesto Sandwich",
+      "Butter Croissant",
+      "Avocado Toast"
     ]
   },
   {
@@ -463,6 +974,25 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Classic Matcha",
+      "Iced Latte",
+      "Strawberry Matcha"
+    ]
+  },
+  {
+    "branch": "Harbour",
+    "daypart": "all",
+    "cohort": "regular",
+    "basket": [
+      "Butter Croissant",
+      "Chocolate Cookie"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Classic Matcha",
       "Iced Latte",
@@ -477,6 +1007,22 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Avocado Toast",
+      "Iced Latte",
+      "Cappuccino"
+    ]
+  },
+  {
+    "branch": "Harbour",
+    "daypart": "morning",
+    "cohort": "all",
+    "basket": [],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Avocado Toast",
       "Iced Latte",
@@ -493,10 +1039,28 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
       "Chicken Pesto Sandwich"
+    ]
+  },
+  {
+    "branch": "Harbour",
+    "daypart": "morning",
+    "cohort": "all",
+    "basket": [
+      "Espresso"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
+    "expected": [
+      "Chicken Pesto Sandwich",
+      "Cinnamon Roll",
+      "Butter Croissant"
     ]
   },
   {
@@ -510,6 +1074,25 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Classic Matcha",
+      "Iced Latte",
+      "Strawberry Matcha"
+    ]
+  },
+  {
+    "branch": "Harbour",
+    "daypart": "morning",
+    "cohort": "all",
+    "basket": [
+      "Butter Croissant",
+      "Chocolate Cookie"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Classic Matcha",
       "Iced Latte",
@@ -524,6 +1107,22 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Classic Matcha",
+      "Iced Latte",
+      "Butter Croissant"
+    ]
+  },
+  {
+    "branch": "Harbour",
+    "daypart": "morning",
+    "cohort": "regular",
+    "basket": [],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Classic Matcha",
       "Iced Latte",
@@ -540,10 +1139,28 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
       "Chicken Pesto Sandwich"
+    ]
+  },
+  {
+    "branch": "Harbour",
+    "daypart": "morning",
+    "cohort": "regular",
+    "basket": [
+      "Espresso"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
+    "expected": [
+      "Chicken Pesto Sandwich",
+      "Butter Croissant",
+      "Avocado Toast"
     ]
   },
   {
@@ -557,6 +1174,25 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Classic Matcha",
+      "Iced Latte",
+      "Strawberry Matcha"
+    ]
+  },
+  {
+    "branch": "Harbour",
+    "daypart": "morning",
+    "cohort": "regular",
+    "basket": [
+      "Butter Croissant",
+      "Chocolate Cookie"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Classic Matcha",
       "Iced Latte",
@@ -571,6 +1207,22 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Iced Latte",
+      "Classic Matcha",
+      "Cappuccino"
+    ]
+  },
+  {
+    "branch": "Harbour",
+    "daypart": "midday",
+    "cohort": "all",
+    "basket": [],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
@@ -587,10 +1239,28 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
       "Vanilla Latte"
+    ]
+  },
+  {
+    "branch": "Harbour",
+    "daypart": "midday",
+    "cohort": "all",
+    "basket": [
+      "Espresso"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
+    "expected": [
+      "Chicken Pesto Sandwich",
+      "Butter Croissant",
+      "Avocado Toast"
     ]
   },
   {
@@ -604,6 +1274,25 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Classic Matcha",
+      "Iced Latte",
+      "Strawberry Matcha"
+    ]
+  },
+  {
+    "branch": "Harbour",
+    "daypart": "midday",
+    "cohort": "all",
+    "basket": [
+      "Butter Croissant",
+      "Chocolate Cookie"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Classic Matcha",
       "Iced Latte",
@@ -618,6 +1307,22 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Iced Latte",
+      "Classic Matcha",
+      "Cappuccino"
+    ]
+  },
+  {
+    "branch": "Harbour",
+    "daypart": "midday",
+    "cohort": "regular",
+    "basket": [],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
@@ -634,6 +1339,7 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
@@ -645,12 +1351,48 @@
     "daypart": "midday",
     "cohort": "regular",
     "basket": [
+      "Espresso"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
+    "expected": [
+      "Chicken Pesto Sandwich",
+      "Butter Croissant",
+      "Cinnamon Roll"
+    ]
+  },
+  {
+    "branch": "Harbour",
+    "daypart": "midday",
+    "cohort": "regular",
+    "basket": [
       "Butter Croissant",
       "Chocolate Cookie"
     ],
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Classic Matcha",
+      "Iced Latte",
+      "Strawberry Matcha"
+    ]
+  },
+  {
+    "branch": "Harbour",
+    "daypart": "midday",
+    "cohort": "regular",
+    "basket": [
+      "Butter Croissant",
+      "Chocolate Cookie"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Classic Matcha",
       "Iced Latte",
@@ -665,6 +1407,22 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Iced Latte",
+      "Classic Matcha",
+      "Strawberry Matcha"
+    ]
+  },
+  {
+    "branch": "Harbour",
+    "daypart": "evening",
+    "cohort": "all",
+    "basket": [],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
@@ -681,10 +1439,28 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
       "Vanilla Latte"
+    ]
+  },
+  {
+    "branch": "Harbour",
+    "daypart": "evening",
+    "cohort": "all",
+    "basket": [
+      "Espresso"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
+    "expected": [
+      "Chicken Pesto Sandwich",
+      "Butter Croissant",
+      "Cinnamon Roll"
     ]
   },
   {
@@ -698,6 +1474,25 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Classic Matcha",
+      "Iced Latte",
+      "Cold Brew"
+    ]
+  },
+  {
+    "branch": "Harbour",
+    "daypart": "evening",
+    "cohort": "all",
+    "basket": [
+      "Butter Croissant",
+      "Chocolate Cookie"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Classic Matcha",
       "Iced Latte",
@@ -712,6 +1507,22 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Iced Latte",
+      "Classic Matcha",
+      "Strawberry Matcha"
+    ]
+  },
+  {
+    "branch": "Harbour",
+    "daypart": "evening",
+    "cohort": "regular",
+    "basket": [],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
@@ -728,10 +1539,28 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
       "Chicken Pesto Sandwich"
+    ]
+  },
+  {
+    "branch": "Harbour",
+    "daypart": "evening",
+    "cohort": "regular",
+    "basket": [
+      "Espresso"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
+    "expected": [
+      "Chicken Pesto Sandwich",
+      "Butter Croissant",
+      "Cinnamon Roll"
     ]
   },
   {
@@ -745,6 +1574,25 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Classic Matcha",
+      "Iced Latte",
+      "Strawberry Matcha"
+    ]
+  },
+  {
+    "branch": "Harbour",
+    "daypart": "evening",
+    "cohort": "regular",
+    "basket": [
+      "Butter Croissant",
+      "Chocolate Cookie"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Classic Matcha",
       "Iced Latte",
@@ -759,6 +1607,22 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Iced Latte",
+      "Halloumi Wrap",
+      "Chicken Pesto Sandwich"
+    ]
+  },
+  {
+    "branch": "Uptown",
+    "daypart": "all",
+    "cohort": "all",
+    "basket": [],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Iced Latte",
       "Halloumi Wrap",
@@ -775,6 +1639,7 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
     "expected": [
       "Iced Latte",
       "Chicken Pesto Sandwich",
@@ -786,12 +1651,48 @@
     "daypart": "all",
     "cohort": "all",
     "basket": [
+      "Espresso"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
+    "expected": [
+      "Chicken Pesto Sandwich",
+      "Butter Croissant",
+      "Cinnamon Roll"
+    ]
+  },
+  {
+    "branch": "Uptown",
+    "daypart": "all",
+    "cohort": "all",
+    "basket": [
       "Butter Croissant",
       "Chocolate Cookie"
     ],
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Classic Matcha",
+      "Iced Latte",
+      "Strawberry Matcha"
+    ]
+  },
+  {
+    "branch": "Uptown",
+    "daypart": "all",
+    "cohort": "all",
+    "basket": [
+      "Butter Croissant",
+      "Chocolate Cookie"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Classic Matcha",
       "Iced Latte",
@@ -806,6 +1707,22 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Halloumi Wrap",
+      "Iced Latte",
+      "Classic Matcha"
+    ]
+  },
+  {
+    "branch": "Uptown",
+    "daypart": "all",
+    "cohort": "regular",
+    "basket": [],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Halloumi Wrap",
       "Iced Latte",
@@ -822,10 +1739,28 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
       "Chicken Pesto Sandwich"
+    ]
+  },
+  {
+    "branch": "Uptown",
+    "daypart": "all",
+    "cohort": "regular",
+    "basket": [
+      "Espresso"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
+    "expected": [
+      "Chicken Pesto Sandwich",
+      "Butter Croissant",
+      "Cinnamon Roll"
     ]
   },
   {
@@ -839,6 +1774,25 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Classic Matcha",
+      "Iced Latte",
+      "Strawberry Matcha"
+    ]
+  },
+  {
+    "branch": "Uptown",
+    "daypart": "all",
+    "cohort": "regular",
+    "basket": [
+      "Butter Croissant",
+      "Chocolate Cookie"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Classic Matcha",
       "Iced Latte",
@@ -853,6 +1807,22 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Avocado Toast",
+      "Iced Latte",
+      "Egg Sandwich"
+    ]
+  },
+  {
+    "branch": "Uptown",
+    "daypart": "morning",
+    "cohort": "all",
+    "basket": [],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Avocado Toast",
       "Iced Latte",
@@ -869,10 +1839,28 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
       "Chicken Pesto Sandwich"
+    ]
+  },
+  {
+    "branch": "Uptown",
+    "daypart": "morning",
+    "cohort": "all",
+    "basket": [
+      "Espresso"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
+    "expected": [
+      "Chicken Pesto Sandwich",
+      "Butter Croissant",
+      "Cinnamon Roll"
     ]
   },
   {
@@ -886,6 +1874,25 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Classic Matcha",
+      "Iced Latte",
+      "Strawberry Matcha"
+    ]
+  },
+  {
+    "branch": "Uptown",
+    "daypart": "morning",
+    "cohort": "all",
+    "basket": [
+      "Butter Croissant",
+      "Chocolate Cookie"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Classic Matcha",
       "Iced Latte",
@@ -900,6 +1907,22 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Iced Latte",
+      "Classic Matcha",
+      "Halloumi Wrap"
+    ]
+  },
+  {
+    "branch": "Uptown",
+    "daypart": "morning",
+    "cohort": "regular",
+    "basket": [],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
@@ -916,10 +1939,28 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
       "Chicken Pesto Sandwich"
+    ]
+  },
+  {
+    "branch": "Uptown",
+    "daypart": "morning",
+    "cohort": "regular",
+    "basket": [
+      "Espresso"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
+    "expected": [
+      "Chicken Pesto Sandwich",
+      "Butter Croissant",
+      "Cinnamon Roll"
     ]
   },
   {
@@ -933,6 +1974,25 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Classic Matcha",
+      "Iced Latte",
+      "Strawberry Matcha"
+    ]
+  },
+  {
+    "branch": "Uptown",
+    "daypart": "morning",
+    "cohort": "regular",
+    "basket": [
+      "Butter Croissant",
+      "Chocolate Cookie"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Classic Matcha",
       "Iced Latte",
@@ -947,6 +2007,22 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Halloumi Wrap",
+      "Chicken Pesto Sandwich",
+      "Iced Latte"
+    ]
+  },
+  {
+    "branch": "Uptown",
+    "daypart": "midday",
+    "cohort": "all",
+    "basket": [],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Halloumi Wrap",
       "Chicken Pesto Sandwich",
@@ -963,10 +2039,28 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
       "Chicken Pesto Sandwich"
+    ]
+  },
+  {
+    "branch": "Uptown",
+    "daypart": "midday",
+    "cohort": "all",
+    "basket": [
+      "Espresso"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
+    "expected": [
+      "Chicken Pesto Sandwich",
+      "Butter Croissant",
+      "Halloumi Wrap"
     ]
   },
   {
@@ -980,6 +2074,25 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Classic Matcha",
+      "Iced Latte",
+      "Strawberry Matcha"
+    ]
+  },
+  {
+    "branch": "Uptown",
+    "daypart": "midday",
+    "cohort": "all",
+    "basket": [
+      "Butter Croissant",
+      "Chocolate Cookie"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Classic Matcha",
       "Iced Latte",
@@ -994,6 +2107,22 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Iced Latte",
+      "Halloumi Wrap",
+      "Classic Matcha"
+    ]
+  },
+  {
+    "branch": "Uptown",
+    "daypart": "midday",
+    "cohort": "regular",
+    "basket": [],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Iced Latte",
       "Halloumi Wrap",
@@ -1010,10 +2139,28 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
       "Chicken Pesto Sandwich"
+    ]
+  },
+  {
+    "branch": "Uptown",
+    "daypart": "midday",
+    "cohort": "regular",
+    "basket": [
+      "Espresso"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
+    "expected": [
+      "Chicken Pesto Sandwich",
+      "Butter Croissant",
+      "Cinnamon Roll"
     ]
   },
   {
@@ -1027,6 +2174,25 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Classic Matcha",
+      "Iced Latte",
+      "Strawberry Matcha"
+    ]
+  },
+  {
+    "branch": "Uptown",
+    "daypart": "midday",
+    "cohort": "regular",
+    "basket": [
+      "Butter Croissant",
+      "Chocolate Cookie"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Classic Matcha",
       "Iced Latte",
@@ -1041,6 +2207,22 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Iced Latte",
+      "Classic Matcha",
+      "Chicken Pesto Sandwich"
+    ]
+  },
+  {
+    "branch": "Uptown",
+    "daypart": "evening",
+    "cohort": "all",
+    "basket": [],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
@@ -1057,10 +2239,28 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
       "Chicken Pesto Sandwich"
+    ]
+  },
+  {
+    "branch": "Uptown",
+    "daypart": "evening",
+    "cohort": "all",
+    "basket": [
+      "Espresso"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
+    "expected": [
+      "Chicken Pesto Sandwich",
+      "Butter Croissant",
+      "Cinnamon Roll"
     ]
   },
   {
@@ -1074,6 +2274,25 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Classic Matcha",
+      "Iced Latte",
+      "Strawberry Matcha"
+    ]
+  },
+  {
+    "branch": "Uptown",
+    "daypart": "evening",
+    "cohort": "all",
+    "basket": [
+      "Butter Croissant",
+      "Chocolate Cookie"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Classic Matcha",
       "Iced Latte",
@@ -1088,6 +2307,22 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Halloumi Wrap",
+      "Iced Latte",
+      "Classic Matcha"
+    ]
+  },
+  {
+    "branch": "Uptown",
+    "daypart": "evening",
+    "cohort": "regular",
+    "basket": [],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Halloumi Wrap",
       "Iced Latte",
@@ -1104,10 +2339,28 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
     "expected": [
       "Iced Latte",
       "Classic Matcha",
       "Chicken Pesto Sandwich"
+    ]
+  },
+  {
+    "branch": "Uptown",
+    "daypart": "evening",
+    "cohort": "regular",
+    "basket": [
+      "Espresso"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
+    "expected": [
+      "Chicken Pesto Sandwich",
+      "Butter Croissant",
+      "Cinnamon Roll"
     ]
   },
   {
@@ -1121,6 +2374,25 @@
     "unavailable": [
       "Iced Matcha"
     ],
+    "mode": "unrestricted",
+    "expected": [
+      "Classic Matcha",
+      "Iced Latte",
+      "Strawberry Matcha"
+    ]
+  },
+  {
+    "branch": "Uptown",
+    "daypart": "evening",
+    "cohort": "regular",
+    "basket": [
+      "Butter Croissant",
+      "Chocolate Cookie"
+    ],
+    "unavailable": [
+      "Iced Matcha"
+    ],
+    "mode": "complementary",
     "expected": [
       "Classic Matcha",
       "Iced Latte",

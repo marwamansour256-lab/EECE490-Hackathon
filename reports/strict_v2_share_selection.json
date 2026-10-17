@@ -1,0 +1,147 @@
+{
+  "fit_dates": [
+    "2026-01-01",
+    "2026-03-10"
+  ],
+  "validation_dates": [
+    "2026-03-11",
+    "2026-03-31"
+  ],
+  "outer_test_sales_used": false,
+  "alpha": 0.001,
+  "calibration_factor": 0.9417094549137961,
+  "candidates": [
+    {
+      "window_days": 14,
+      "smoothing": 0.5,
+      "sku_poisson_deviance": 1.3532535021019962,
+      "sku_wape_pct": 58.47715919933394
+    },
+    {
+      "window_days": 14,
+      "smoothing": 1,
+      "sku_poisson_deviance": 1.3506443236887122,
+      "sku_wape_pct": 58.43280127293888
+    },
+    {
+      "window_days": 14,
+      "smoothing": 3,
+      "sku_poisson_deviance": 1.3430515028868415,
+      "sku_wape_pct": 58.290029244046714
+    },
+    {
+      "window_days": 14,
+      "smoothing": 10,
+      "sku_poisson_deviance": 1.3344132424702537,
+      "sku_wape_pct": 58.093666739861355
+    },
+    {
+      "window_days": 28,
+      "smoothing": 0.5,
+      "sku_poisson_deviance": 1.3240624175930709,
+      "sku_wape_pct": 57.76499099896777
+    },
+    {
+      "window_days": 28,
+      "smoothing": 1,
+      "sku_poisson_deviance": 1.3230575556105626,
+      "sku_wape_pct": 57.74543376715501
+    },
+    {
+      "window_days": 28,
+      "smoothing": 3,
+      "sku_poisson_deviance": 1.3197697308396183,
+      "sku_wape_pct": 57.680184669856246
+    },
+    {
+      "window_days": 28,
+      "smoothing": 10,
+      "sku_poisson_deviance": 1.314316919737927,
+      "sku_wape_pct": 57.560451793173506
+    },
+    {
+      "window_days": 42,
+      "smoothing": 0.5,
+      "sku_poisson_deviance": 1.3172910370720896,
+      "sku_wape_pct": 57.560864678553465
+    },
+    {
+      "window_days": 42,
+      "smoothing": 1,
+      "sku_poisson_deviance": 1.3166802216973972,
+      "sku_wape_pct": 57.548822905282115
+    },
+    {
+      "window_days": 42,
+      "smoothing": 3,
+      "sku_poisson_deviance": 1.3145648661848972,
+      "sku_wape_pct": 57.50554848620843
+    },
+    {
+      "window_days": 42,
+      "smoothing": 10,
+      "sku_poisson_deviance": 1.310222848944393,
+      "sku_wape_pct": 57.418833346364735
+    },
+    {
+      "window_days": 56,
+      "smoothing": 0.5,
+      "sku_poisson_deviance": 1.3101219773579078,
+      "sku_wape_pct": 57.41162308027213
+    },
+    {
+      "window_days": 56,
+      "smoothing": 1,
+      "sku_poisson_deviance": 1.3097779418273323,
+      "sku_wape_pct": 57.40608033319992
+    },
+    {
+      "window_days": 56,
+      "smoothing": 3,
+      "sku_poisson_deviance": 1.3085703093842513,
+      "sku_wape_pct": 57.38571130177816
+    },
+    {
+      "window_days": 56,
+      "smoothing": 10,
+      "sku_poisson_deviance": 1.3060080897277928,
+      "sku_wape_pct": 57.3399015871792
+    },
+    {
+      "window_days": "all",
+      "smoothing": 0.5,
+      "sku_poisson_deviance": 1.3039098615003157,
+      "sku_wape_pct": 57.301268174957436
+    },
+    {
+      "window_days": "all",
+      "smoothing": 1,
+      "sku_poisson_deviance": 1.3036685374855592,
+      "sku_wape_pct": 57.296823848356354
+    },
+    {
+      "window_days": "all",
+      "smoothing": 3,
+      "sku_poisson_deviance": 1.3028151156463124,
+      "sku_wape_pct": 57.282613632042874
+    },
+    {
+      "window_days": "all",
+      "smoothing": 10,
+      "sku_poisson_deviance": 1.300967881046269,
+      "sku_wape_pct": 57.2487078338733
+    }
+  ],
+  "best_on_inner_validation": {
+    "window_days": "all",
+    "smoothing": 10,
+    "sku_poisson_deviance": 1.300967881046269,
+    "sku_wape_pct": 57.2487078338733
+  },
+  "committed_choice": {
+    "window_days": "all",
+    "smoothing": 10
+  },
+  "committed_choice_matches_audit": true,
+  "caveat": "Calibration itself is estimated on the inner validation window. This is model selection, not an unbiased validation of that calibration. Previously explored outer test still requires future confirmation."
+}

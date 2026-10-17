@@ -75,10 +75,10 @@
     {
       "method": "seasonal_growth",
       "alpha": null,
-      "wape_pct": 30.521290444122073,
-      "mae_units": 3.22384494655815,
-      "bias_pct": 4.682771182272922,
-      "poisson_deviance": 1.7039878280866105
+      "wape_pct": 30.521290444122087,
+      "mae_units": 3.223844946558151,
+      "bias_pct": 4.682771182272978,
+      "poisson_deviance": 1.7039878280866114
     }
   ],
   "v2": {
@@ -154,25 +154,25 @@
     {
       "method": "seasonal_growth",
       "level": "branch_category",
-      "wape_pct": 26.64354255859622,
-      "mae_units": 3.296338651592218,
-      "bias_pct": 3.5494285145732563,
-      "poisson_deviance": 1.5462558814620315
+      "wape_pct": 26.6435425585962,
+      "mae_units": 3.2963386515922153,
+      "bias_pct": 3.54942851457313,
+      "poisson_deviance": 1.5462558814620304
     },
     {
       "method": "seasonal_growth",
       "level": "all_sku",
-      "wape_pct": 53.96788346025804,
-      "mae_units": 1.3353811326210205,
-      "bias_pct": 3.5494285145732563,
-      "poisson_deviance": 1.340240040088318
+      "wape_pct": 53.967883460258015,
+      "mae_units": 1.3353811326210199,
+      "bias_pct": 3.5494285145731306,
+      "poisson_deviance": 1.3402400400883179
     },
     {
       "method": "seasonal_growth",
       "level": "perishable_sku",
-      "wape_pct": 53.57751713497547,
-      "mae_units": 1.3192443586811389,
-      "bias_pct": 1.450056043894945,
+      "wape_pct": 53.577517134975444,
+      "mae_units": 1.3192443586811382,
+      "bias_pct": 1.450056043894822,
       "poisson_deviance": 1.3194575958306183
     },
     {
@@ -291,5 +291,5 @@
     "Single-batch 90% expected unit-fill floor; demand Poisson; hypothetical preparation, not measured current practice."
   ],
   "artifact": "models/strict_half_model.joblib",
-  "input_sha256": "f1672e728c28295b2b802d878fd38a158ba039827b429355e8438ee0463237a1"
+  "input_sha256": "8375e91c2bebf84261e2b92b67ebf76c42f1af434322a7f2ac2b7f1ab3bb5c71"
 }

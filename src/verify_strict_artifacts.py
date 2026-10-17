@@ -26,6 +26,10 @@ def main():
     assert result['train']['end'] == artifact['train_end'] == '2026-03-31'
     assert result['test']['start'] == '2026-04-01' and result['test']['days'] == 91
     assert result['inner_validation']['end'] <= result['train']['end']
+    share_audit = json.loads((ROOT/'reports/strict_v2_share_selection.json').read_text(encoding='utf-8'))
+    assert len(share_audit['candidates']) == 20 and share_audit['outer_test_sales_used'] is False
+    assert share_audit['committed_choice_matches_audit'] is True
+    assert result['v2']['share_smoothing'] == share_audit['best_on_inner_validation']['smoothing']
     detail = pd.read_csv(ROOT/'reports/strict_half_predictions.csv', parse_dates=['Date'])
     assert len(detail) == 4*91*135
     assert not detail.duplicated(['Date', 'Branch', 'Product', 'method']).any()
@@ -51,6 +55,7 @@ def main():
     for field in ['price', 'cost', 'item_share', 'early_share']:
         assert detail.groupby(['method','Branch','Product'])[field].nunique().max() == 1
     files = ['data/stories_transactions.csv', 'src/strict_model.py', 'src/predict_strict.py',
+             'src/audit_item_share_selection.py', 'reports/strict_v2_share_selection.json',
              'models/strict_half_model.joblib', 'reports/strict_half_results.json',
              'reports/strict_half_predictions.csv', 'tests/test_strict_model.py']
     checks = ['Single transaction CSV raw input; no external predictive files',

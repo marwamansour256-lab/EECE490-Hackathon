@@ -1,5 +1,5 @@
 {
-  "verification": "JavaScript parse, schema and actual frontend ranking checks; no visual browser review",
+  "verification": "JavaScript syntax, schemas and actual frontend ranking; screenshots reviewed separately",
   "exit_code": 0,
   "checks": [
     "1. Page scripts",
@@ -52,5 +52,30 @@
     "  ok   applicable cards have forecast, opening units and a 16:00 top-up table",
     "  ok   no offer uplift added to any forecast",
     "\nall checks passed"
-  ]
+  ],
+  "python_frontend_parity": {
+    "cases": 144,
+    "failures": 0,
+    "modes": [
+      "unrestricted",
+      "complementary"
+    ]
+  },
+  "visual_review": {
+    "source": "Committed teammate screenshots in reports/figures/ui",
+    "reviewed": [
+      "wejha_1_recommender_complementary.png",
+      "wejha_3_layouts.png",
+      "wejha_4_evaluation.png"
+    ],
+    "live_browser_in_this_session": false
+  },
+  "sha256_lf_text": {
+    "app/wejha.html": "8fadcf822a65cba85dac515a53d1c619ff19b201f3ad748451600b9838ab38d5",
+    "app/planner.html": "2b053c57fc64ac34b590e345fae52ad45f932c8cf35a1c073e40a5516ff2c09c",
+    "app/check_ui.js": "1dadb515c76b787541bf326d9e0eb48c03496355440ffc43c1b664ad1bd16125",
+    "app/recommendation_data.js": "d6ebaa19e6c249906bc06875cb0552e1b3b923f8e023d8a109bafe325ac6e607",
+    "app/preparation_data.js": "4b5a67534eddf3292eacc18b71bb40946d805f1ef329e43bb2f397aa08384328",
+    "app/wejha_data.js": "388048c9fc2de2dc8bb045a310630f8f16e2e8f9614d1fa0a19523d9507a6f33"
+  }
 }

@@ -50,10 +50,11 @@ def main():
         branch,part,cohort=key.split("|")
         for basket in [[],["Espresso"],["Butter Croissant","Chocolate Cookie"]]:
             unavailable=["Iced Matcha"]
-            output=recommend(model,branch,basket,part,cohort,unavailable)
-            assert all(r["product"] not in set(basket+unavailable) for r in output["recommendations"])
-            parity.append(dict(branch=branch,daypart=part,cohort=cohort,basket=basket,unavailable=unavailable,
-                expected=[r["product"] for r in output["recommendations"]]))
+            for mode in ["unrestricted","complementary"]:
+                output=recommend(model,branch,basket,part,cohort,unavailable,mode=mode)
+                assert all(r["product"] not in set(basket+unavailable) for r in output["recommendations"])
+                parity.append(dict(branch=branch,daypart=part,cohort=cohort,basket=basket,unavailable=unavailable,mode=mode,
+                    expected=[r["product"] for r in output["recommendations"]]))
     assert '"customer"' not in json.dumps(model) and '"regular_ids"' not in json.dumps(model)
     raw,orders=load_orders(ROOT/"data/stories_transactions.csv")
     train=orders[orders.date.le("2026-03-31")]

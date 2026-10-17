@@ -223,7 +223,7 @@
         "4": 0
       },
       "expected_two_stage_contribution": 3.168237129305063,
-      "expected_one_batch_contribution": 2.6769162651353966
+      "expected_one_batch_contribution": 2.6769162651354037
     },
     "Garden|Pistachio Cookie": {
       "date": "2026-06-30",
@@ -376,7 +376,7 @@
         "6": 0
       },
       "expected_two_stage_contribution": 1.6151304120537286,
-      "expected_one_batch_contribution": 2.7171633556599986
+      "expected_one_batch_contribution": 2.7171633556599915
     },
     "Garden|Cheesecake Slice": {
       "date": "2026-06-30",
@@ -408,7 +408,7 @@
         "5": 0
       },
       "expected_two_stage_contribution": 3.103028533888498,
-      "expected_one_batch_contribution": 3.7112159345565416
+      "expected_one_batch_contribution": 3.7112159345565274
     },
     "Garden|Frozen Yoghurt Cup": {
       "date": "2026-06-30",
@@ -440,7 +440,7 @@
         "5": 0
       },
       "expected_two_stage_contribution": 5.0818541812686036,
-      "expected_one_batch_contribution": 3.494662913453787
+      "expected_one_batch_contribution": 3.4946629134537943
     },
     "Garden|Tiramisu Cup": {
       "date": "2026-06-30",
@@ -624,8 +624,8 @@
         "5": 0,
         "6": 0
       },
-      "expected_two_stage_contribution": 12.605049436735017,
-      "expected_one_batch_contribution": 12.580290594363445
+      "expected_two_stage_contribution": 12.605049436735015,
+      "expected_one_batch_contribution": 12.580290594363449
     },
     "Harbour|Banana Bread": {
       "date": "2026-06-30",
@@ -658,7 +658,7 @@
         "6": 0
       },
       "expected_two_stage_contribution": 14.539676989325917,
-      "expected_one_batch_contribution": 14.314584964892797
+      "expected_one_batch_contribution": 14.314584964892804
     },
     "Harbour|Blueberry Muffin": {
       "date": "2026-06-30",
@@ -727,7 +727,7 @@
         "10": 0,
         "11": 0
       },
-      "expected_two_stage_contribution": 24.489811319012095,
+      "expected_two_stage_contribution": 24.48981131901209,
       "expected_one_batch_contribution": 24.028048061777206
     },
     "Harbour|Chocolate Cookie": {
@@ -763,7 +763,7 @@
         "8": 0
       },
       "expected_two_stage_contribution": 15.87627080874972,
-      "expected_one_batch_contribution": 15.530509347733181
+      "expected_one_batch_contribution": 15.530509347733185
     },
     "Harbour|Chocolate Croissant": {
       "date": "2026-06-30",
@@ -797,7 +797,7 @@
         "7": 0
       },
       "expected_two_stage_contribution": 15.391669591224423,
-      "expected_one_batch_contribution": 14.896880066498525
+      "expected_one_batch_contribution": 14.896880066498522
     },
     "Harbour|Cinnamon Roll": {
       "date": "2026-06-30",
@@ -927,7 +927,7 @@
         "4": 0,
         "5": 0
       },
-      "expected_two_stage_contribution": 15.296215988050044,
+      "expected_two_stage_contribution": 15.29621598805004,
       "expected_one_batch_contribution": 15.004387555106657
     },
     "Harbour|Granola Yoghurt": {
@@ -989,7 +989,7 @@
         "4": 1,
         "5": 0
       },
-      "expected_two_stage_contribution": 9.786874214892354,
+      "expected_two_stage_contribution": 9.786874214892348,
       "expected_one_batch_contribution": 8.725724858849137
     },
     "Harbour|Cheesecake Slice": {
@@ -1023,7 +1023,7 @@
         "6": 0
       },
       "expected_two_stage_contribution": 12.94977945212831,
-      "expected_one_batch_contribution": 13.309411170508582
+      "expected_one_batch_contribution": 13.309411170508575
     },
     "Harbour|Frozen Yoghurt Cup": {
       "date": "2026-06-30",
@@ -1055,7 +1055,7 @@
         "5": 0
       },
       "expected_two_stage_contribution": 10.639961369052475,
-      "expected_one_batch_contribution": 10.609937723619424
+      "expected_one_batch_contribution": 10.609937723619417
     },
     "Harbour|Tiramisu Cup": {
       "date": "2026-06-30",
@@ -1117,7 +1117,7 @@
         "3": 1,
         "4": 0
       },
-      "expected_two_stage_contribution": 14.980114536410632,
+      "expected_two_stage_contribution": 14.980114536410635,
       "expected_one_batch_contribution": 12.446186744707372
     },
     "Harbour|Halloumi Wrap": {
@@ -1332,7 +1332,7 @@
         "5": 0
       },
       "expected_two_stage_contribution": 6.462129380324948,
-      "expected_one_batch_contribution": 6.672432516566739
+      "expected_one_batch_contribution": 6.6724325165667375
     },
     "Uptown|Chocolate Cookie": {
       "date": "2026-06-30",
@@ -1422,7 +1422,7 @@
         "2": 1,
         "3": 0
       },
-      "expected_two_stage_contribution": 3.1568655453551857,
+      "expected_two_stage_contribution": 3.156865545355185,
       "expected_one_batch_contribution": 3.18780418840708
     },
     "Uptown|Pistachio Cookie": {
@@ -1481,7 +1481,7 @@
         "1": 1,
         "2": 0
       },
-      "expected_two_stage_contribution": 1.5805431648194732,
+      "expected_two_stage_contribution": 1.580543164819474,
       "expected_one_batch_contribution": 0.698588823677829
     },
     "Uptown|Egg Sandwich": {
@@ -1689,7 +1689,7 @@
         "2": 1,
         "3": 0
       },
-      "expected_two_stage_contribution": 6.75093341269565,
+      "expected_two_stage_contribution": 6.750933412695646,
       "expected_one_batch_contribution": 6.144731909045131
     },
     "Uptown|Halloumi Wrap": {
@@ -1719,7 +1719,7 @@
         "2": 1,
         "3": 0
       },
-      "expected_two_stage_contribution": 8.78073319397325,
+      "expected_two_stage_contribution": 8.780733193973246,
       "expected_one_batch_contribution": 8.255541190933789
     },
     "Uptown|Tuna Sandwich": {
