@@ -10,7 +10,8 @@ EECE490-Hackathon/
 │   └── stories_transactions.csv   # raw data: one row per product line, Transaction ID = order
 ├── notebooks/
 │   ├── 01_eda.ipynb                # full exploratory analysis with notes
-│   └── 02_war_impact.ipynb         # before / during / after the 2026 Lebanon war
+│   ├── 02_war_impact.ipynb         # before / during / after the 2026 Lebanon war, by branch
+│   └── 03_holidays.ipynb           # public holidays and Ramadan, by branch
 ├── src/
 │   └── eda_visuals.py              # script that draws the key-finding charts
 ├── reports/
@@ -54,4 +55,8 @@ For the full walkthrough, open `notebooks/01_eda.ipynb` in VS Code or Jupyter. I
 
 ## War impact (notebook 02)
 
-The notebook compares the period before the 2026 Lebanon war (Jan 1 to Feb 28), the war (Mar 1 to Apr 15) and the period after the Apr 16 ceasefire. The data shows **no measurable war effect**: orders stayed about 3% above the pre-war growth trend, and order value, margin, product mix, time of day and takeaway share did not change. Because the data is synthetic, this doesn't show how a real café was affected. The end date is a parameter (`WAR_END`) at the top of the notebook.
+The notebook compares the period before the 2026 Lebanon war (Jan 1 to Feb 28), the war (Mar 1 to Apr 15) and the period after the Apr 16 ceasefire. The data shows **no measurable war effect**: orders stayed about 3% above the pre-war growth trend, and order value, margin, product mix, time of day and takeaway share did not change. Because the data is synthetic, this doesn't show how a real café was affected. The end date is a parameter (`WAR_END`) at the top of the notebook. Every section is split by branch. All three branches grew through the war; Garden ran slightly below its own trend, but the gap widened after the ceasefire, so it's likely unrelated to the war.
+
+## Holidays and Ramadan (notebook 03)
+
+The notebook compares each of the 17 Lebanese national holidays (Jan to Jun 2026) with a normal day on the same weekday and at the same point in the growth trend, split by branch. On average, holidays are normal days (about 0%), and time of day, order value, takeaway share and product mix don't change. Ramadan shows no daytime drop and no spike after iftar. **Harbour is the exception:** 5 of its 17 holidays were unusual (where about 1 would be expected by chance), mostly busier on civic and Christian holidays, such as Labour Day (+48%) and St Maroun (+35%). The holiday dates are a list (`HOLIDAYS`) at the top of the notebook.
