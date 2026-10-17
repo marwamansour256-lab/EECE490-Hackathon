@@ -129,26 +129,39 @@ python src/build_analysis_report.py
 
 ## Project structure
 
+Files marked *(pending)* are described here but not yet published to GitHub.
+
 ```text
-data/stories_transactions.csv       Raw product lines; Transaction ID identifies an order
-data/external/                      External weather and event inputs
-notebooks/01_eda.ipynb               Original exploratory analysis
-notebooks/02_war_impact.ipynb        Original before/during/after comparisons
-notebooks/03_holidays.ipynb          Original holiday and Ramadan comparisons
-notebooks/04_regular_customers.ipynb Original customer descriptions and targeting rules
-notebooks/05_weather.ipynb           Team weather and season analysis by branch
-notebooks/06_regulars_products.ipynb Team product-mix and regular-customer shuffle checks
-notebooks/07_discounts.ipynb         Team discount and placebo-window comparisons
-notebooks/08_lebanon_prices.ipynb    Lebanon CPI 2026 vs the café's recorded prices and costs
-src/eda_visuals.py                  Original descriptive charts
-src/pitch_visuals.py                Original pitch charts, subject to the audit
-src/external_analysis.py            External-driver analysis
-src/demand_model.py                 Forecast comparison and validation
-reports/methodology_audit.txt       Corrections to original claims
-ANALYSIS.md                         Business recommendations and next actions (teammate 1)
-output/pdf/deep_analysis_report.pdf New findings, model and business decision plan
-reports/external_evidence.json     External source registry
-reports/figures/                    Saved charts
+Documentation (repo root)
+  README.md                           Project overview, results and commands (this file)
+  AGENTS.md / CLAUDE.md               Shared three-person work contract and rules
+  MODEL_CARD.md                       Trained demand and preparation model
+  EVALUATION.md                       Frozen half/half evaluation protocol and results
+  ANALYSIS.md                         Business recommendations and next actions (teammate 1)
+
+data/
+  stories_transactions.csv            Raw product lines; Transaction ID identifies an order
+  external/README.md                  Source, location, period and retrieval date of every external file
+  external/*_weather_2026H1.json      Open-Meteo daily weather: Beirut, Batroun (North), Broummana (Jabal)
+  external/lebanon_cpi_2026H1.json    Lebanon CPI Jan-Jun 2026 with sources
+  external/outlier_event_registry.json  Event registry (pending)
+
+notebooks/
+  README.md                           Index of notebooks 01-08 with status and caveats
+  01_eda ... 04_regular_customers     Original exploratory, war, holiday and customer analyses
+  05_weather ... 08_lebanon_prices    Weather by branch, regulars' products, discounts, Lebanon prices
+
+src/
+  eda_visuals.py                      Original descriptive charts
+  pitch_visuals.py                    Original pitch charts, subject to the audit
+  external_analysis.py, demand_model.py, strict_model.py, ...   Model and analysis code (pending)
+
+reports/
+  figures/                            Saved charts (1_ to 9_ from eda_visuals.py, pitch_* from pitch_visuals.py)
+  methodology_audit.txt               Corrections to original claims (pending)
+  external_evidence.json              External source registry (pending)
+
+output/pdf/deep_analysis_report.pdf   First-stage analysis report (pending)
 ```
 
 To reproduce the team's original visualizations:
