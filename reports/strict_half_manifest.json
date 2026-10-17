@@ -1,28 +1,28 @@
 {
-  "verified_at_utc": "2026-10-17T14:22:37.290825+00:00",
-  "base_commit": "5d8d533ceeb5c0280e7b43419eb2afd3b3254d88",
-  "python": "3.11.9",
+  "verified_at_utc": "2026-10-17T14:27:37.985823+00:00",
+  "base_commit": "31ee5b085f60360c90ee1125132e196171115112",
+  "python": "3.14.6",
   "packages": {
-    "pandas": "3.0.6",
-    "numpy": "2.4.6",
-    "scipy": "1.17.1",
-    "scikit-learn": "1.9.1",
-    "joblib": "1.6.0"
+    "pandas": "3.0.3",
+    "numpy": "2.5.1",
+    "scipy": "1.18.0",
+    "scikit-learn": "1.9.0",
+    "joblib": "1.5.3"
   },
   "sha256": {
-    "data/stories_transactions.csv": "8375e91c2bebf84261e2b92b67ebf76c42f1af434322a7f2ac2b7f1ab3bb5c71",
-    "src/strict_model.py": "fa5ef32723974c1442fb9719dbfbeb09bfc02ad86db945c1150f0197c1259763",
-    "src/predict_strict.py": "774d92bbffec37029105164adde6a918da20d7c3c7a3c793935bc18ce62610da",
-    "models/strict_half_model.joblib": "d02b2fe22d3d26176d861db7b4b7c73a69854fe8bd22554cb060d36baa265192",
-    "reports/strict_half_results.json": "7cb98ac8508e034e96a92b417166500c74e18adbfa06caff6e21793ad8c64e23",
-    "reports/strict_half_predictions.csv": "8bbf1fe03475e406723a1c466a8097d8a1546273d99731368c2c2d8d011220a8",
-    "tests/test_strict_model.py": "52538c797d6dd145f97b7c9901f03b8f0325c5b03c7ac1e0bb756bc5aca0f4fe"
+    "data/stories_transactions.csv": "f1672e728c28295b2b802d878fd38a158ba039827b429355e8438ee0463237a1",
+    "src/strict_model.py": "683de4d6b26fed7cc752fca75e2faeedaa29a380cb3ede9f886cfe26d050ab3f",
+    "src/predict_strict.py": "a21e5f955b3b0f3ffa9b00b15c84dcbd17d470daceeb2e9114b5bad69cd5a817",
+    "models/strict_half_model.joblib": "118795cff0bbb8b3d7e8aeaa0ba5dff77e638066cf1ef4ea5b6e9c3c8ff84f43",
+    "reports/strict_half_results.json": "bb460203a9fa0a8362c0ab7f1bfb0579416c7d4924e431e771dc91a063a42aa7",
+    "reports/strict_half_predictions.csv": "9bc2f6bfc76dcae0dceb789936cd246f3202420b5845ffc0fd88db03abcdc365",
+    "tests/test_strict_model.py": "8d0159487d8babcea044e17c9adccb984d4bffedd53d1012613c40aa19d391de"
   },
   "checks_passed": [
     "Single transaction CSV raw input; no external predictive files",
     "Frozen March 31 artifact and disjoint April-June test dates",
-    "36855 unique item-day-method predictions; 91 dates and 135 branch-items per method",
-    "Category-to-item forecasts reconcile; serialized model reproduces saved forecasts",
+    "49140 unique item-day-method predictions (4 methods incl. regularized_poisson_v2); 91 dates and 135 branch-items per method",
+    "Category-to-item forecasts reconcile; serialized model reproduces saved forecasts, including v2 calibration",
     "Demand, stock and contribution reconcile for every saved record",
     "Item shares, price, cost and intraday proportions remain constant through testing"
   ],

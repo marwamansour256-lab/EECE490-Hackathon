@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]/'src'))
-from strict_model import features, fit_engine, fit_baseline, baseline_predict, sku_parameters
+from strict_model import features, fit_engine, fit_baseline, baseline_predict, sku_parameters, category_mean, share_column, V2_METHOD
 
 
 class StrictModelTests(unittest.TestCase):
@@ -40,6 +40,23 @@ class StrictModelTests(unittest.TestCase):
         self.assertAlmostEqual(result.loc['X', 'price'], 5.)
         self.assertAlmostEqual(result.loc['Y', 'cost'], 3.)
         self.assertAlmostEqual(result.loc['X', 'early_share'], .4)
+
+    def test_v2_is_calibrated_original_with_full_training_shares(self):
+        dates = pd.date_range('2026-01-01', periods=90)
+        train = pd.DataFrame({'Date': dates, 'Branch': 'A', 'Category': 'Bakery', 'actual': 10+np.arange(90)//15})
+        model = fit_engine(train, .01, '2026-01-01', ['Bakery'])
+        artifact = dict(model=model, start='2026-01-01', categories=['Bakery'], baseline=fit_baseline(train),
+                        selected_method=V2_METHOD, v2_calibration=.9)
+        future = pd.DataFrame({'Date': pd.date_range('2026-04-01', periods=5), 'Branch': 'A', 'Category': 'Bakery'})
+        np.testing.assert_allclose(category_mean(artifact, future), .9*category_mean(artifact, future, 'regularized_poisson'))
+        self.assertEqual(share_column(V2_METHOD), 'item_share_v2')
+        self.assertEqual(share_column('regularized_poisson'), 'item_share')
+        raw = pd.DataFrame([
+            {'Date': pd.Timestamp('2026-01-05'), 'Time': '10:00:00', 'Branch': 'A', 'Category': 'Bakery', 'Product': 'X', 'Quantity': 8, 'Unit Cost (USD)': 2., 'Line Revenue (USD)': 40.},
+            {'Date': pd.Timestamp('2026-03-21'), 'Time': '18:00:00', 'Branch': 'A', 'Category': 'Bakery', 'Product': 'Y', 'Quantity': 2, 'Unit Cost (USD)': 3., 'Line Revenue (USD)': 12.}])
+        params = sku_parameters(raw).set_index('Product')
+        self.assertAlmostEqual(params.item_share_v2.sum(), 1.)
+        self.assertAlmostEqual(params.loc['X', 'item_share_v2'], (8+10)/(10+20))
 
 
 if __name__ == '__main__':

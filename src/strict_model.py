@@ -24,6 +24,11 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT/'reports'
 ALPHAS = [0., .001, .01, .1, 1.]
 CATEGORICAL = ['series', 'category_weekday', 'branch_weekday']
+# v2 (teammate 1): item shares from all training dates with stronger smoothing, chosen on the inner
+# validation window from windows {14, 28, 42, 56, all} x smoothing {0.5, 1, 3, 10}; plus a level
+# calibration factor = inner-validation actual / predicted category units. Both use training dates only.
+V2_SHARE_SMOOTHING = 10.
+V2_METHOD = 'regularized_poisson_v2'
 
 
 def daily_panel(raw, catalog, dates):
@@ -93,6 +98,10 @@ def sku_parameters(train):
     econ = econ.merge(recent, on=['Branch', 'Product'], how='left').fillna({'recent_units': 0})
     groups = econ.groupby(['Branch', 'Category'])
     econ['item_share'] = (econ.recent_units+1)/(groups.recent_units.transform('sum')+groups.Product.transform('size'))
+    econ['item_share_v2'] = (econ.units+V2_SHARE_SMOOTHING)/(groups.units.transform('sum')+V2_SHARE_SMOOTHING*groups.Product.transform('size'))
+    if 'Unit Price (USD)' in t:
+        list_price = t.groupby(['Branch', 'Product'])['Unit Price (USD)'].max().rename('list_price').reset_index()
+        econ = econ.merge(list_price, on=['Branch', 'Product'], how='left')
     early = t[t.Time.str[:2].astype(int).lt(16)].groupby(['Branch', 'Category']).Quantity.sum().rename('early_units').reset_index()
     total = t.groupby(['Branch', 'Category']).Quantity.sum().rename('total_units').reset_index().merge(early, on=['Branch', 'Category'], how='left').fillna({'early_units': 0})
     total['early_share'] = total.early_units/total.total_units
@@ -103,6 +112,19 @@ def metric(y, mean):
     y, mean = np.asarray(y), np.maximum(np.asarray(mean), 1e-8)
     return dict(wape_pct=float(100*np.abs(y-mean).sum()/max(y.sum(), 1)), mae_units=float(np.abs(y-mean).mean()),
                 bias_pct=float(100*(mean-y).sum()/max(y.sum(), 1)), poisson_deviance=float(mean_poisson_deviance(y, mean)))
+
+
+def share_column(method):
+    return 'item_share_v2' if method == V2_METHOD else 'item_share'
+
+
+def category_mean(artifact, frame, method=None):
+    """Frozen category-level forecast for any method stored in the artifact."""
+    method = method or artifact['selected_method']
+    if method in ('regularized_poisson', V2_METHOD):
+        pred = artifact['model'].predict(features(frame, artifact['start'], artifact['categories'])[0])
+        return pred*artifact.get('v2_calibration', 1.) if method == V2_METHOD else pred
+    return baseline_predict(frame, artifact['baseline'], artifact['start'], method == 'seasonal_growth')
 
 
 def main():
@@ -136,18 +158,31 @@ def main():
         pred = baseline_predict(inner_valid, inner_baseline, start, growth)
         tuning.append(dict(method='seasonal_growth' if growth else 'seasonal_frozen', alpha=None, **metric(inner_valid.actual, pred)))
     validation_winner = min(tuning, key=lambda r: r['poisson_deviance'])['method']
+    # v2: calibration and item-share choice use the inner validation window only (no April-June data).
+    inner_model = fit_engine(inner_train, best_alpha, start, categories)
+    inner_pred = inner_model.predict(features(inner_valid, start, categories)[0])
+    v2_calibration = float(inner_valid.actual.sum()/inner_pred.sum())
+    inner_params = sku_parameters(training[training.Date.lt(inner_cut)])
+    inner_obs = training[training.Date.ge(inner_cut)].groupby(['Date', 'Branch', 'Product']).Quantity.sum().rename('actual').reset_index()
+    inner_cat = inner_valid[['Date', 'Branch', 'Category']].assign(pred=inner_pred)
+    inner_item = inner_cat.merge(inner_params, on=['Branch', 'Category']).merge(inner_obs, on=['Date', 'Branch', 'Product'], how='left').fillna({'actual': 0})
+    v2_inner = dict(original=metric(inner_item.actual, inner_item.pred*inner_item.item_share),
+                    v2=metric(inner_item.actual, inner_item.pred*v2_calibration*inner_item.item_share_v2))
+    if v2_inner['v2']['poisson_deviance'] < v2_inner['original']['poisson_deviance'] and validation_winner == 'regularized_poisson':
+        validation_winner = V2_METHOD
     model = fit_engine(outer_train, best_alpha, start, categories)
     baseline = fit_baseline(outer_train)
     predictions = dict(regularized_poisson=model.predict(features(outer_test, start, categories)[0]),
                        seasonal_frozen=baseline_predict(outer_test, baseline, start, False),
                        seasonal_growth=baseline_predict(outer_test, baseline, start, True))
+    predictions[V2_METHOD] = predictions['regularized_poisson']*v2_calibration
     params = sku_parameters(training)
     comparisons, all_sku = [], []
     for name, pred in predictions.items():
         comparisons.append(dict(method=name, level='branch_category', **metric(outer_test.actual, pred)))
         cat = outer_test[['Date', 'Branch', 'Category']].copy()
         cat['predicted_category_units'] = pred
-        item = cat.merge(params[['Branch', 'Category', 'Product', 'item_share', 'price', 'cost', 'early_share']], on=['Branch', 'Category'], validate='many_to_many')
+        item = cat.merge(params[['Branch', 'Category', 'Product', share_column(name), 'price', 'cost', 'early_share']].rename(columns={share_column(name): 'item_share'}), on=['Branch', 'Category'], validate='many_to_many')
         observed = testing.groupby(['Date', 'Branch', 'Product']).Quantity.sum().rename('actual').reset_index()
         item = item.merge(observed, on=['Date', 'Branch', 'Product'], how='left').fillna({'actual': 0})
         item['predicted_mean_units'] = item.predicted_category_units*item.item_share
@@ -175,18 +210,20 @@ def main():
     daily_profit = perishable.groupby(['Date', 'method']).simulated_contribution.sum().unstack()
     rng = np.random.default_rng(490)
     uncertainty = []
-    for comparator in ['seasonal_growth', 'seasonal_frozen']:
-        delta = (daily_profit.regularized_poisson-daily_profit[comparator]).to_numpy()
+    for leader, comparator in [('regularized_poisson', 'seasonal_growth'), ('regularized_poisson', 'seasonal_frozen'),
+                               (V2_METHOD, 'regularized_poisson'), (V2_METHOD, 'seasonal_frozen')]:
+        delta = (daily_profit[leader]-daily_profit[comparator]).to_numpy()
         count = len(delta)
         starts = rng.integers(0, count, size=(3000, int(np.ceil(count/7))))
         indices = (starts[:, :, None]+np.arange(7)[None, None, :]) % count
         draws = delta[indices.reshape(3000, -1)[:, :count]].sum(axis=1)
-        uncertainty.append(dict(comparison='regularized_poisson minus '+comparator,
+        uncertainty.append(dict(comparison=leader+' minus '+comparator,
             contribution_difference_usd=float(delta.sum()),
             conditional_circular_7day_block_interval_95=[float(v) for v in np.quantile(draws, [.025, .975])],
             warning='Retrospective uncertainty conditional on fixed forecasts and hypothetical inventory costs; not future ROI or uncertainty over missing operations.'))
     artifact = dict(model=model, start=start, categories=categories, catalog=catalog, sku_parameters=params,
                     baseline=baseline, selected_alpha=best_alpha, selected_method=validation_winner,
+                    v2_calibration=v2_calibration,
                     train_end=str(train_dates.max().date()), input_sha256=hashlib.sha256(path.read_bytes()).hexdigest())
     (ROOT/'models').mkdir(exist_ok=True)
     joblib.dump(artifact, ROOT/'models/strict_half_model.joblib')
@@ -196,6 +233,11 @@ def main():
         test=dict(start=str(test_dates.min().date()), end=str(test_dates.max().date()), days=len(test_dates), rows=len(testing)),
         inner_validation=dict(start=str(inner_cut.date()), end=str(train_dates.max().date()), days=21),
         chosen_alpha=best_alpha, selected_method_on_inner_validation=validation_winner, tuning=tuning,
+        v2=dict(method=V2_METHOD, description='Same engine and alpha; item shares from all training dates with smoothing 10; '
+                'category level multiplied by the inner-validation calibration factor (actual/predicted).',
+                calibration_factor=v2_calibration, share_smoothing=V2_SHARE_SMOOTHING,
+                inner_validation_sku=v2_inner, selection_rule='Use v2 if its inner-validation SKU Poisson deviance beats the '
+                'original allocation; chosen before scoring April-June.'),
         metrics=comparisons, perishable_one_batch_scenario=finance.to_dict('records'),
         conditional_contribution_uncertainty=uncertainty,
         feature_contract=['Only branch/category/product identifiers and dates from the transaction file.',

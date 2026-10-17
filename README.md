@@ -48,11 +48,14 @@ The model is an **L2-regularized pooled Poisson regression**, followed by item a
 
 | Frozen model, April-June test | Category WAPE | Perishable item WAPE | Simulated contribution | Actual recorded units fulfilled |
 |---|---:|---:|---:|---:|
-| **Trained Poisson model** | **25.21%** | **52.03%** | **$10,934.29** | **92.09%** |
+| **Improved model (v2, selected on inner validation)** | **24.74%** | **51.57%** | **$11,944.21** | **90.92%** |
+| Trained Poisson model (original) | 25.21% | 52.03% | $10,934.29 | 92.09% |
 | Seasonal baseline with training-only growth | 26.64% | 53.58% | $9,915.15 | 92.19% |
 | Frozen four-weekday baseline | 28.22% | 53.75% | $13,409.52 | 88.22% |
 
-The model improves simulated contribution by **$1,019.13 versus the growth baseline**, with 240 fewer unsold units and 13 fewer fulfilled units. The frozen baseline earns more simulated contribution while fulfilling fewer recorded units; selecting it solely for profit would conceal that service tradeoff. All use the same one-batch rule with a 90% **expected** unit-fill constraint, which does not guarantee 90% realized fulfillment. These are conditional inventory simulations, not measured savings or a comparison with Stories' actual operating policy. This dataset had already been explored before the new split was requested; the clean computational boundary does not make it a newly untouched test set.
+**v2 (teammate 1):** the same engine and alpha, plus two changes chosen only on the last 21 training dates: (1) a level calibration factor of 0.942 (inner-validation actual ÷ predicted, correcting a +6.2% over-forecast) and (2) item shares from all 90 training dates with smoothing 10 instead of the last 28 days with smoothing 1 (best of 20 window/smoothing settings on inner-validation item deviance). On April-June it improves category WAPE (25.21% → 24.74%), all-item WAPE (53.27% → 52.09%) and perishable WAPE (52.03% → 51.57%), and adds **$1,009.92** simulated contribution versus the original model (7-day block interval about $884-$1,126) with 528 fewer unsold units, while realized fulfillment stays above 90% (90.92%). The artifact now selects v2; the original rows are kept for comparison. Upgrades to the category engine itself (branch × category × weekday terms, per-series trends, recency weighting) were tried and lost on inner validation, so they are not used. `python src/predict_strict.py` also accepts `--cost-multiplier`, `--price-multiplier` and `--no-discount` to run the ANALYSIS.md cost, price-test and discount scenarios; these hold demand constant and do not estimate customer response.
+
+The original model improves simulated contribution by **$1,019.13 versus the growth baseline**, with 240 fewer unsold units and 13 fewer fulfilled units. The frozen baseline earns more simulated contribution while fulfilling fewer recorded units; selecting it solely for profit would conceal that service tradeoff. All use the same one-batch rule with a 90% **expected** unit-fill constraint, which does not guarantee 90% realized fulfillment. These are conditional inventory simulations, not measured savings or a comparison with Stories' actual operating policy. This dataset had already been explored before the new split was requested; the clean computational boundary does not make it a newly untouched test set.
 
 ```bash
 pip install -r requirements.txt
